@@ -1,5 +1,5 @@
 import XCTest
-@testable import AppModule
+@testable import AppFeature
 
 /// Unit tests for the FSRS-6 mathematics that drive scheduling. These are pure,
 /// deterministic functions and form the correctness backbone of the app.

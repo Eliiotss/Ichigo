@@ -40,17 +40,26 @@ let package = Package(
         )
     ],
     targets: [
-        .executableTarget(
-            name: "AppModule",
-            path: "Sources/AppModule",
+        // All app logic and UI lives in a library target so it can be imported
+        // by both the app executable and the XCTest target. (An executable target
+        // that carries `@main` cannot be `@testable import`-ed under xcodebuild.)
+        .target(
+            name: "AppFeature",
+            path: "Sources/AppFeature",
             resources: [
                 .process("Resources")
             ]
         ),
+        // Thin executable that hosts the library's RootView; this is the app.
+        .executableTarget(
+            name: "AppModule",
+            dependencies: ["AppFeature"],
+            path: "Sources/AppModule"
+        ),
         .testTarget(
-            name: "AppModuleTests",
-            dependencies: ["AppModule"],
-            path: "Tests/AppModuleTests"
+            name: "AppFeatureTests",
+            dependencies: ["AppFeature"],
+            path: "Tests/AppFeatureTests"
         )
     ]
 )

@@ -1,5 +1,5 @@
 import XCTest
-@testable import AppModule
+@testable import AppFeature
 
 /// Behavioural tests for ``FlashcardReviewEngine`` — the state machine that moves
 /// a card between new / learning / review / relearning and schedules its next due

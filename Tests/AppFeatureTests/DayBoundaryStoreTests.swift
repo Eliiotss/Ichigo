@@ -1,5 +1,5 @@
 import XCTest
-@testable import AppModule
+@testable import AppFeature
 
 /// Tests for ``FlashcardDayBoundaryStore`` streak accounting. The store persists
 /// to `UserDefaults.standard`, so each test clears the relevant keys first to stay

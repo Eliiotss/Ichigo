@@ -1,5 +1,5 @@
 import XCTest
-@testable import AppModule
+@testable import AppFeature
 
 /// Tests for the value types and helpers that surround scheduling: progress
 /// flags, the day-key used for streaks, the retention validator, analytics and

@@ -1,5 +1,5 @@
 import XCTest
-@testable import AppModule
+@testable import AppFeature
 
 /// Tests for ``FlashcardDeckQueueBuilder`` — the logic that assembles a study
 /// session from due cards plus a capped number of brand-new cards.
