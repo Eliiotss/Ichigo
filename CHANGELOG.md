@@ -13,9 +13,10 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - **Unit test suite** (`Tests/AppModuleTests`) covering the FSRS-6 math, the
   review-engine state machine, the session queue builder, day-boundary/streak
   accounting, the retention validator, analytics and deck-card mapping.
-- **Bundled learning datasets** that the app previously referenced but were
-  missing: full `Hiragana.json` and `Katakana.json` (gojūon, dakuten/handakuten,
-  yōon), `KanjiN5.json`, `VocabN5.json` and `GrammarN5.json`.
+- **Datasets folder** (`Sources/AppFeature/Resources/`) documented as the drop-in
+  location for the maintainer's JSON datasets (kana, kanji, vocabulary, grammar),
+  with the expected schemas in its `README.md`. The datasets themselves are
+  supplied separately by the maintainer.
 - **Unified logging** via `os.Logger` (`Log` with `resources`, `flashcards` and
   `notifications` categories).
 - **Shared `ResourceLoader`** that centralises JSON array decoding and error
