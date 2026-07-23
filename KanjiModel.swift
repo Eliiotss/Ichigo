@@ -1,0 +1,73 @@
+import SwiftUI
+
+// MARK: - Kanji Model
+struct KanjiItem: Identifiable, Codable {
+    let id: String
+    let kanji: String
+    let onyomi: String
+    let kunyomi: String
+    let romaji: String
+    let meaning: String
+    let examples: [KanjiExample]
+    
+    enum CodingKeys: String, CodingKey { case id, kanji, onyomi, kunyomi, romaji, meaning, examples }
+}
+
+struct KanjiExample: Codable {
+    let word: String
+    let reading: String
+    let romaji: String
+    let meaning: String
+    let sentence: String?
+    let sentenceFurigana: String?
+    let sentenceMeaning: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case word, reading, romaji, meaning
+        case sentence
+        case sentenceFurigana = "sentence_furigana"
+        case sentenceMeaning = "sentence_meaning"
+    }
+    
+    init(word: String, reading: String, romaji: String, meaning: String, sentence: String? = nil, sentenceFurigana: String? = nil, sentenceMeaning: String? = nil) {
+        self.word = word
+        self.reading = reading
+        self.romaji = romaji
+        self.meaning = meaning
+        self.sentence = sentence
+        self.sentenceFurigana = sentenceFurigana
+        self.sentenceMeaning = sentenceMeaning
+    }
+}
+
+// MARK: - JLPT Level Model
+struct JLPTLevel: Identifiable {
+    let id: String
+    let name: String
+    let description: String
+    let totalKanji: Int
+    let color: Color
+    let bgColor: Color
+    let isLocked: Bool
+    let jsonFile: String
+}
+
+let jlptLevels: [JLPTLevel] = [
+    JLPTLevel(id: "N5", name: "Beginner", description: "120 Essential Kanji", totalKanji: 120, color: .green, bgColor: Color.green.opacity(0.15), isLocked: false, jsonFile: "KanjiN5"),
+    JLPTLevel(id: "N4", name: "Elementary", description: "181 Essential Kanji", totalKanji: 181, color: .blue, bgColor: Color.blue.opacity(0.15), isLocked: false, jsonFile: "KanjiN4"),
+    JLPTLevel(id: "N3", name: "Intermediate", description: "580 Essential Kanji", totalKanji: 580, color: .orange, bgColor: Color.orange.opacity(0.15), isLocked: false, jsonFile: "KanjiN3"),
+    JLPTLevel(id: "N2", name: "Pre-Advanced (Coming Soon)", description: "1,000+ Complex Kanji", totalKanji: 1000, color: .pink, bgColor: Color.pink.opacity(0.15), isLocked: true, jsonFile: "KanjiN2"),
+    JLPTLevel(id: "N1", name: "Advanced (Coming Soon)", description: "2,000+ Master Kanji", totalKanji: 2000, color: .red, bgColor: Color.red.opacity(0.15), isLocked: true, jsonFile: "KanjiN1")
+]
+
+// MARK: - JSON Loader
+class KanjiLoader {
+    static func load(from filename: String) -> [KanjiItem] {
+        do {
+            return try JSONResourceCache.shared.decode([KanjiItem].self, filename: filename)
+        } catch {
+            print("❌ Gagal load \(filename).json: \(error.localizedDescription)")
+            return []
+        }
+    }
+}
