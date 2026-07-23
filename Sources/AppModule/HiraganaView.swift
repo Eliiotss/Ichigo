@@ -29,24 +29,18 @@ struct KanaGroupJSON: Codable {
 }
 
 // MARK: - Kana Loader
-class KanaLoader {
+enum KanaLoader {
     static func load(from filename: String) -> [KanaGroup] {
-        do {
-            let decoded = try JSONResourceCache.shared.decode([KanaGroupJSON].self, filename: filename)
-            return decoded.map { group in
-                KanaGroup(
-                    title: group.title,
-                    subtitle: group.subtitle,
-                    items: group.rows.map { row in row.map { item in item.map { KanaItem(kana: $0.kana, romaji: $0.romaji) } } },
-                    columns: group.columns
-                )
-            }
-        } catch {
-            print("❌ Gagal decode \(filename).json: \(error)")
-            return []
+        ResourceLoader.loadArray(KanaGroupJSON.self, from: filename).map { group in
+            KanaGroup(
+                title: group.title,
+                subtitle: group.subtitle,
+                items: group.rows.map { row in row.map { item in item.map { KanaItem(kana: $0.kana, romaji: $0.romaji) } } },
+                columns: group.columns
+            )
         }
     }
-    
+
     static func flatItems(from groups: [KanaGroup]) -> [KanaItem] {
         groups.flatMap { $0.items.flatMap { $0.compactMap { $0 } } }
     }

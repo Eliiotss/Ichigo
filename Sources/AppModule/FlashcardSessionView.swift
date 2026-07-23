@@ -110,16 +110,17 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
         guard !isSubmitting, isRevealed, !isGraded, let cardItem = currentCard else { return }
         isSubmitting = true
         
-        let stateBefore = store.deckProgress(for: cardItem, levelKey: levelKey).state
         let current = store.deckProgress(for: cardItem, levelKey: levelKey)
-        
-        // 1. ALGORITMA SRS - TIDAK DIUBAH SAMA SEKALI
+        let stateBefore = current.state
+
+        // Run the FSRS scheduler for this grade.
         let result = engine.review(card: current, grade: grade, settings: store.settings)
         let stateAfter = result.0.state
-        
-        // 2. UI UPDATE - SYNCHRONOUS, terjadi SAAT INI JUGA (sebelum simpan ke storage)
+
+        // Update the per-session bucket counters synchronously so the UI reflects
+        // the new state immediately, before the card is persisted.
         applyBucketDelta(cardId: cardItem.id, stateAfter: stateAfter)
-        
+
         switch grade {
         case .again:
             sessionWrong += 1
@@ -128,8 +129,8 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
             sessionCorrect += 1
         }
         isGraded = true
-        
-        // 3. PERSISTENCE - terpisah, tidak menahan UI (fire-and-forget)
+
+        // Persist progress, review log and streak.
         if stateBefore == .new {
             store.newCardTracker.markStudied(cardId: cardItem.id, levelKey: levelKey)
         }

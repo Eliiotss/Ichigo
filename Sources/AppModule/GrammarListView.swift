@@ -97,15 +97,14 @@ struct GrammarListView: View {
         .navigationTitle("Tata Bahasa \(level.id)")
         .navigationBarTitleDisplayMode(.large)
         .background(bgColor)
-        .onAppear {
+        .task {
             guard items.isEmpty else { return }
-            DispatchQueue.global(qos: .userInitiated).async {
-                let loaded = GrammarLoader.load(from: level.jsonFile)
-                DispatchQueue.main.async {
-                    items = loaded
-                    isLoading = false
-                }
-            }
+            let jsonFile = level.jsonFile
+            let loaded = await Task.detached(priority: .userInitiated) {
+                GrammarLoader.load(from: jsonFile)
+            }.value
+            items = loaded
+            isLoading = false
         }
     }
 }

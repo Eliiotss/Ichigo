@@ -121,7 +121,7 @@ struct SettingsView: View {
             .alert("Izin notifikasi ditolak", isPresented: $showPermissionDeniedAlert) {
                 Button("OK", role: .cancel) {}
             } message: {
-                Text("Aktifkan izin notifikasi di Pengaturan iPhone > Notifikasi > Nihongo Master untuk menggunakan fitur pengingat.")
+                Text("Aktifkan izin notifikasi di Pengaturan iPhone > Notifikasi > Ichigo untuk menggunakan fitur pengingat.")
             }
             .onAppear {
                 notificationManager.checkAuthorization()

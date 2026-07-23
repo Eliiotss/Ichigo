@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct MyApp: App {
+struct IchigoApp: App {
     @StateObject private var loadingState = AppLoadingState()
     
     var body: some Scene {
@@ -54,8 +54,8 @@ final class AppLoadingState: ObservableObject {
     private func preloadCoreResources() async {
         await Task.detached(priority: .userInitiated) {
             _ = try? JSONResourceCache.shared.decode([KanjiItem].self, filename: "KanjiN5")
+            _ = try? JSONResourceCache.shared.decode([VocabularyItem].self, filename: "VocabN5")
             _ = try? JSONResourceCache.shared.decode([GrammarItem].self, filename: "GrammarN5")
-            _ = try? JSONResourceCache.shared.decode([FlashcardItem].self, filename: "FlashcardN5")
             _ = try? JSONResourceCache.shared.decode([KanaGroupJSON].self, filename: "Hiragana")
             _ = try? JSONResourceCache.shared.decode([KanaGroupJSON].self, filename: "Katakana")
         }.value
@@ -79,7 +79,7 @@ private struct SplashView: View {
                     .font(.system(size: 58))
                 
                 VStack(spacing: 6) {
-                    Text("NihongoMaster")
+                    Text("Ichigo")
                         .font(.system(size: 29, weight: .black))
                         .foregroundColor(.white)
                     

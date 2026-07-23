@@ -61,13 +61,8 @@ let jlptLevels: [JLPTLevel] = [
 ]
 
 // MARK: - JSON Loader
-class KanjiLoader {
+enum KanjiLoader {
     static func load(from filename: String) -> [KanjiItem] {
-        do {
-            return try JSONResourceCache.shared.decode([KanjiItem].self, filename: filename)
-        } catch {
-            print("❌ Gagal load \(filename).json: \(error.localizedDescription)")
-            return []
-        }
+        ResourceLoader.loadArray(KanjiItem.self, from: filename)
     }
 }

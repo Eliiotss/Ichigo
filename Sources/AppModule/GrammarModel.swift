@@ -145,56 +145,8 @@ let grammarLevels: [GrammarLevel] = [
 ]
 
 // MARK: - Grammar JSON Loader
-final class GrammarLoader {
+enum GrammarLoader {
     static func load(from filename: String) -> [GrammarItem] {
-        if let items = loadUsingResourceCache(filename: filename) {
-            return items
-        }
-        
-        if let items = loadDirectlyFromBundle(filename: filename) {
-            return items
-        }
-        
-        print("❌ Grammar file benar-benar tidak bisa dibaca: \(filename).json")
-        return []
-    }
-    
-    private static func loadUsingResourceCache(filename: String) -> [GrammarItem]? {
-        do {
-            let items = try JSONResourceCache.shared.decode([GrammarItem].self, filename: filename)
-            print("✅ Loaded \(items.count) grammar items from cache: \(filename).json")
-            return items
-        } catch {
-            print("⚠️ Cache gagal load \(filename).json")
-            print("📌 Cache error: \(error)")
-            return nil
-        }
-    }
-    
-    private static func loadDirectlyFromBundle(filename: String) -> [GrammarItem]? {
-        let urls: [URL?] = [
-            Bundle.main.url(forResource: filename, withExtension: "json"),
-            Bundle.main.url(forResource: filename, withExtension: "json", subdirectory: "Resources"),
-            Bundle.main.url(forResource: filename, withExtension: "json", subdirectory: "Sources/AppModule/Resources")
-        ]
-        
-        guard let url = urls.compactMap({ $0 }).first else {
-            print("❌ File tidak ditemukan di Bundle.main: \(filename).json")
-            print("📌 Pastikan nama file persis: \(filename).json")
-            print("📌 Pastikan file masuk target/resource Swift Playgrounds")
-            return nil
-        }
-        
-        do {
-            let data = try Data(contentsOf: url)
-            let items = try JSONDecoder().decode([GrammarItem].self, from: data)
-            print("✅ Loaded \(items.count) grammar items directly from bundle: \(url.lastPathComponent)")
-            return items
-        } catch {
-            print("❌ Gagal decode langsung: \(filename).json")
-            print("📌 URL: \(url)")
-            print("📌 Decode error: \(error)")
-            return nil
-        }
+        ResourceLoader.loadArray(GrammarItem.self, from: filename)
     }
 }

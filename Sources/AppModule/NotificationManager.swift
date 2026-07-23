@@ -1,5 +1,6 @@
 import Foundation
 import UserNotifications
+import os
 
 // MARK: - Notification Manager (pengingat belajar harian)
 @MainActor
@@ -46,24 +47,16 @@ final class NotificationManager: ObservableObject {
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         let request = UNNotificationRequest(identifier: reminderId, content: content, trigger: trigger)
-        
-        center.add(request)
+
+        center.add(request) { error in
+            if let error {
+                Log.notifications.error("Failed to schedule daily reminder: \(error.localizedDescription, privacy: .public)")
+            }
+        }
     }
-    
+
     func cancelReminder() {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [reminderId])
-    }
-    
-    /// Panggil ini saat app dibuka: kalau target hari ini SUDAH tercapai, batalkan notif jam ini saja
-    /// (biar tidak diganggu notif kalau memang sudah belajar), lalu notif tetap akan muncul besok karena repeats: true
-    func skipTodayIfTargetMet(studiedToday: Int, dailyTarget: Int) {
-        guard studiedToday >= dailyTarget else { return }
-        let center = UNUserNotificationCenter.current()
-        center.getPendingNotificationRequests { requests in
-            guard requests.contains(where: { $0.identifier == self.reminderId }) else { return }
-            // Notifikasi tetap terjadwal untuk besok (repeats), tidak perlu unschedule permanen.
-            // Kalau mau benar-benar skip notif HARI INI saja, perlu one-shot request terpisah per hari.
-        }
     }
 }
 

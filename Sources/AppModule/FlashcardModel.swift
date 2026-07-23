@@ -1,21 +1,6 @@
 import SwiftUI
 import Foundation
 
-// MARK: - Flashcard Item (legacy, masih dipakai FlashcardProgress)
-struct FlashcardItem: Identifiable, Codable, Hashable {
-    let id: String
-    let word: String
-    let furigana: String
-    let romaji: String
-    let type: String
-    let meaning: String
-    let example_jp: String
-    let example_id: String
-    
-    var front: String { word }
-    var back: String { meaning }
-}
-
 enum FlashcardLoadState: Equatable {
     case idle, loading, loaded, empty, comingSoon, failed(String)
 }
@@ -72,22 +57,6 @@ struct FlashcardProgress: Codable {
     var lastReview: Date?
     var scheduledDays: Int
     var learningStepIndex: Int
-    
-    init(item: FlashcardItem, level: String) {
-        id = item.id
-        self.level = level
-        front = item.front
-        back = item.back
-        state = .new
-        dueDate = Date()
-        stability = 0.1
-        difficulty = 5.0
-        reps = 0
-        lapses = 0
-        lastReview = nil
-        scheduledDays = 0
-        learningStepIndex = 0
-    }
     
     init(id: String, level: String, front: String, back: String, state: FlashcardCardState, dueDate: Date, stability: Double, difficulty: Double, reps: Int, lapses: Int, lastReview: Date?, scheduledDays: Int, learningStepIndex: Int) {
         self.id = id
@@ -432,11 +401,8 @@ private extension Array {
 @MainActor
 final class FlashcardStore: ObservableObject {
     struct LevelStats { let total: Int; let mastered: Int; let due: Int; let progress: Double }
-    
-    // Storage lama (dibiarkan agar tidak breaking, walau tidak dipakai lagi)
-    @Published private(set) var itemsPerLevel: [String: [FlashcardItem]] = [:]
-    
-    // Storage baru: deck dari Vocabulary/Grammar
+
+    // Decks built from the Vocabulary / Grammar datasets.
     @Published private(set) var deckItemsPerLevel: [String: [FlashcardDeckCard]] = [:]
     @Published private(set) var deckLevelStats: [String: LevelStats] = [:]
     @Published var deckStateByLevel: [String: FlashcardLoadState] = [:]

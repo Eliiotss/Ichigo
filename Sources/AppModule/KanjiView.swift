@@ -3,25 +3,14 @@ import SwiftUI
 // MARK: - Kanji Level List View
 struct KanjiView: View {
     @Environment(\.colorScheme) var colorScheme
-    @State private var isLoading = true
-    
+
     var bgColor: Color {
         colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground)
     }
-    
+
     var body: some View {
         Group {
-            if isLoading {
-                VStack(spacing: 14) {
-                    ProgressView()
-                        .scaleEffect(1.1)
-                    Text("Memuat kanji...")
-                        .font(.system(size: 14, weight: .medium))
-                        .foregroundColor(.secondary)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(bgColor)
-            } else if jlptLevels.isEmpty {
+            if jlptLevels.isEmpty {
                 VStack(spacing: 12) {
                     Image(systemName: "character.book.closed")
                         .font(.system(size: 42))
@@ -55,12 +44,6 @@ struct KanjiView: View {
         }
         .navigationTitle("Kanji")
         .navigationBarTitleDisplayMode(.large)
-        .task {
-            if isLoading {
-                try? await Task.sleep(nanoseconds: 250_000_000)
-                isLoading = false
-            }
-        }
     }
 }
 
@@ -101,6 +84,8 @@ struct UnlockedLevelCard: View {
                 Text(level.description)
                     .font(.system(size: 13))
                     .foregroundColor(.secondary)
+
+                Text("\(level.totalKanji) Kanji")
                     .font(.system(size: 11, weight: .semibold))
                     .foregroundColor(level.color)
             }

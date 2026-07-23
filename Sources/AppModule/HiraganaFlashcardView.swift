@@ -324,12 +324,12 @@ struct HiraganaFlashcardView: View {
     // MARK: - Logic
     func makeQuestion(for card: KanaItem) -> FlashQuestion {
         let correct = card.romaji
-        let wrongPool = Array(Set(deckFlat.map(\.romaji).filter { $0 != correct }))
-        var choices = Array(wrongPool.shuffled().prefix(3)) + [correct]
-        while choices.count < 4 {
-            choices.append(correct)
-        }
-        choices.shuffle()
+        // Distinct distractors only: padding with copies of `correct` would create
+        // duplicate identifiers in the answer grid and render several "correct"
+        // buttons. With fewer than three distractors we simply show fewer choices.
+        let wrongPool = Set(deckFlat.map(\.romaji)).subtracting([correct])
+        let distractors = wrongPool.shuffled().prefix(3)
+        let choices = (distractors + [correct]).shuffled()
         return FlashQuestion(card: card, choices: choices, correctAnswer: correct)
     }
     

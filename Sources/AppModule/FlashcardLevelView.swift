@@ -3,8 +3,8 @@ import SwiftUI
 // MARK: - Pilihan Mode (Vocabulary / Grammar)
 struct FlashcardTypeSelectionView: View {
     @Environment(\.colorScheme) var colorScheme
-    @StateObject private var store = FlashcardStore()
-    
+    @ObservedObject var store: FlashcardStore
+
     var bgColor: Color {
         colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground)
     }
@@ -209,6 +209,6 @@ struct FlashcardLockedLevelCard: View {
 }
 
 #Preview {
-    NavigationView { FlashcardTypeSelectionView() }
+    NavigationView { FlashcardTypeSelectionView(store: FlashcardStore()) }
 }
 

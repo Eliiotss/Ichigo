@@ -1,19 +1,5 @@
 import SwiftUI
 
-// MARK: - App State
-final class AppState: ObservableObject {
-    @Published var completedCards: Int = 0
-    @Published var totalCards: Int = 0
-    @Published var dueToday: Int = 0
-    
-    @MainActor
-    func sync(from store: FlashcardStore) {
-        completedCards = store.masteredTotal
-        dueToday = store.dueTodayGrandTotal
-        totalCards = store.deckItemsPerLevel.values.reduce(0) { $0 + $1.count }
-    }
-}
-
 // MARK: - MenuItem
 struct MenuItem {
     let id: String
@@ -25,21 +11,19 @@ struct MenuItem {
 
 // MARK: - Content View
 struct ContentView: View {
-    @StateObject private var appState = AppState()
     @StateObject private var flashcardStore = FlashcardStore()
     @State private var selectedTab = 0
-    
+
     var body: some View {
         TabView(selection: $selectedTab) {
             HomeView(selectedTab: $selectedTab, flashcardStore: flashcardStore)
-                .environmentObject(appState)
                 .tabItem { Image(systemName: "house.fill"); Text("Home") }
                 .tag(0)
-            
+
             ProfileView(flashcardStore: flashcardStore)
                 .tabItem { Image(systemName: "person.fill"); Text("Profile") }
                 .tag(1)
-            
+
             SettingsView()
                 .tabItem { Image(systemName: "gearshape.fill"); Text("Pengaturan") }
                 .tag(2)
@@ -47,25 +31,23 @@ struct ContentView: View {
         .accentColor(.blue)
         .task { await preloadHomeStats() }
     }
-    
+
     private func preloadHomeStats() async {
         for mode in FlashcardMode.allCases {
             for level in mode.levels() where !level.isLocked {
                 await flashcardStore.loadDeck(mode: mode, levelId: level.id, jsonFile: level.jsonFile)
             }
         }
-        appState.sync(from: flashcardStore)
     }
 }
 
 // MARK: - Home View
 struct HomeView: View {
-    @EnvironmentObject var appState: AppState
     @Binding var selectedTab: Int
     @ObservedObject var flashcardStore: FlashcardStore
     @Environment(\.colorScheme) var colorScheme
-    
-    // WAJIB pakai key yang sama persis dengan SettingsView: "user_name"
+
+    // Shares the "user_name" / "daily_target" keys with SettingsView.
     @AppStorage("user_name") private var userName = "User123"
     @AppStorage("daily_target") private var dailyTarget = 20
     
@@ -95,12 +77,11 @@ struct HomeView: View {
                 VStack(spacing: 0) {
                     VStack(spacing: 12) {
                         HStack {
-                            Text("NihongoMaster")
+                            Text("Ichigo")
                                 .font(.system(size: titleSize, weight: .black))
                             Spacer()
                             HStack(spacing: 6) {
                                 Image(systemName: "person.fill").foregroundColor(.blue)
-                                // BENAR - pakai binding userName, bukan teks statis
                                 Text(userName)
                                     .font(.system(size: isIPad ? 15 : 12, weight: .medium))
                                     .foregroundColor(.secondary)
@@ -163,7 +144,7 @@ struct HomeView: View {
         case "kanji":
             NavigationLink(destination: KanjiView()) { MenuCardView(item: item, isIPad: isIPad) }.buttonStyle(.plain)
         case "flashcard":
-            NavigationLink(destination: FlashcardTypeSelectionView()) { MenuCardView(item: item, isIPad: isIPad) }.buttonStyle(.plain)
+            NavigationLink(destination: FlashcardTypeSelectionView(store: flashcardStore)) { MenuCardView(item: item, isIPad: isIPad) }.buttonStyle(.plain)
         case "vocabulary":
             NavigationLink(destination: VocabularyView()) { MenuCardView(item: item, isIPad: isIPad) }.buttonStyle(.plain)
         case "grammar":

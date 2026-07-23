@@ -1,22 +1,59 @@
-# This workflow will build a Swift project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+# Builds and tests the Ichigo iOS app package.
+#
+# Ichigo is a SwiftUI iOS application defined as a Swift Playgrounds / Xcode app
+# package (see Package.swift). Because its sources depend on the iOS SDK
+# (SwiftUI / UIKit), it must be built with `xcodebuild` against an iOS Simulator
+# destination — the plain `swift build` command targets the host platform and
+# cannot compile UIKit.
+#
+# The simulator device / OS names below match the Xcode version pinned in the
+# "Select Xcode" step; update them together if the runner image changes.
 
-name: Swift
+name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-test:
+    name: Build & Test (iOS Simulator)
+    runs-on: macos-14
 
-    runs-on: macos-latest
+    env:
+      SCHEME: Ichigo
+      DESTINATION: "platform=iOS Simulator,name=iPhone 15"
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode 15
+        run: sudo xcode-select -s /Applications/Xcode_15.4.app
+
+      - name: Environment
+        run: |
+          xcodebuild -version
+          swift --version
+
+      - name: Build
+        run: |
+          xcodebuild build \
+            -scheme "$SCHEME" \
+            -destination "$DESTINATION" \
+            -skipPackagePluginValidation \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Test
+        run: |
+          xcodebuild test \
+            -scheme "$SCHEME" \
+            -destination "$DESTINATION" \
+            -skipPackagePluginValidation \
+            CODE_SIGNING_ALLOWED=NO

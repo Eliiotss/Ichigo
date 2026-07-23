@@ -31,14 +31,9 @@ let vocabularyLevels: [VocabularyLevel] = [
 ]
 
 // MARK: - Loader
-class VocabularyLoader {
+enum VocabularyLoader {
     static func load(from filename: String) -> [VocabularyItem] {
-        do {
-            return try JSONResourceCache.shared.decode([VocabularyItem].self, filename: filename)
-        } catch {
-            print("Gagal load \(filename).json: \(error.localizedDescription)")
-            return []
-        }
+        ResourceLoader.loadArray(VocabularyItem.self, from: filename)
     }
 }
 
