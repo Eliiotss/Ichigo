@@ -39,14 +39,21 @@ models, and non-throwing loaders that degrade to a graceful empty state.
 
 ## Folder structure
 
+The app is split into a thin executable (`AppModule`, the `@main` entry) and a
+library (`AppFeature`) that holds all logic and UI. The library is what the test
+target imports — an executable target carrying `@main` cannot be
+`@testable import`-ed under `xcodebuild`.
+
 ```
 Ichigo/
-├─ Package.swift                 # iOSApplication product + AppModule + test target
+├─ Package.swift                 # iOSApplication product + AppFeature lib + AppModule exe + tests
 ├─ .swiftlint.yml                # local lint configuration
 ├─ .github/workflows/swift.yml   # CI: xcodebuild build + test on an iOS Simulator
 ├─ Sources/
-│  └─ AppModule/
-│     ├─ IchigoApp.swift         # @main App, splash screen, resource preloading
+│  ├─ AppModule/
+│  │  └─ IchigoApp.swift         # @main App — hosts AppFeature.RootView in a WindowGroup
+│  └─ AppFeature/                # library target (imported by the app and the tests)
+│     ├─ RootView.swift          # public app root: splash screen + resource preloading
 │     │
 │     ├─ ContentView.swift       # TabView shell (Home / Profile / Settings)
 │     ├─ HomeStatsCard.swift     # home dashboard widgets
@@ -87,7 +94,7 @@ Ichigo/
 │        ├─ VocabN5.json
 │        └─ GrammarN5.json
 └─ Tests/
-   └─ AppModuleTests/            # FSRS, engine, queue, day-boundary, model tests
+   └─ AppFeatureTests/           # FSRS, engine, queue, day-boundary, model tests
 ```
 
 ## Spaced repetition (FSRS-6)

@@ -46,7 +46,7 @@ swiftlint analyze    # requires a compilation log; catches unused code/imports
   or is reused.
 - **Domain logic:** keep scheduling/business logic free of SwiftUI so it stays
   unit-testable. New logic in `FlashcardModel.swift` (or a new domain file)
-  should come with tests in `Tests/AppModuleTests`.
+  should come with tests in `Tests/AppFeatureTests`.
 - **Logging:** use the `Log` categories (`Log.resources`, `Log.flashcards`,
   `Log.notifications`) instead of `print`.
 - **No secrets:** never commit credentials, tokens, API keys, or team
@@ -71,7 +71,7 @@ Example: `feat(kanji): add N4 kanji dataset`.
 
 ## Adding learning content
 
-All content is JSON in `Sources/AppModule/Resources/`. The filename must match
+All content is JSON in `Sources/AppFeature/Resources/`. The filename must match
 the `jsonFile` referenced by the level definition in the corresponding model.
 
 - **Kanji** (`KanjiN4.json`, …) — array of `KanjiItem`
@@ -91,7 +91,7 @@ After adding a dataset, unlock its level by setting `isLocked: false` in the
 matching `*Level` array. Validate the JSON before committing:
 
 ```bash
-python3 -c "import json; json.load(open('Sources/AppModule/Resources/KanjiN4.json'))"
+python3 -c "import json; json.load(open('Sources/AppFeature/Resources/KanjiN4.json'))"
 ```
 
 Keep readings and meanings accurate — correctness matters more than volume for a

@@ -87,7 +87,7 @@ xcodebuild test \
   -destination 'platform=iOS Simulator,name=iPhone 15'
 ```
 
-The unit tests (`Tests/AppModuleTests`) cover the FSRS math, the review-engine
+The unit tests (`Tests/AppFeatureTests`) cover the FSRS math, the review-engine
 state machine, the session queue builder, streak accounting and the data-model
 helpers. CI runs the same commands on every push and pull request
 (see [`.github/workflows/swift.yml`](.github/workflows/swift.yml)).
@@ -99,15 +99,18 @@ helpers. CI runs the same commands on every push and pull request
 ```
 Ichigo/
 ├─ Package.swift                     # iOS app package manifest
-├─ Sources/AppModule/
-│  ├─ IchigoApp.swift                # @main entry + splash / preloading
-│  ├─ *View.swift                    # SwiftUI screens
-│  ├─ *Model.swift                   # data models + loaders
-│  ├─ FlashcardModel.swift           # FSRS-6 engine, stores, analytics
-│  ├─ JSONResourceCache.swift        # cached, thread-safe resource loading
-│  ├─ ResourceLoader.swift, Logging.swift
-│  └─ Resources/*.json               # kana, kanji, vocabulary, grammar datasets
-└─ Tests/AppModuleTests/             # unit tests
+├─ Sources/
+│  ├─ AppModule/
+│  │  └─ IchigoApp.swift             # thin @main executable, hosts RootView
+│  └─ AppFeature/                    # library: all app logic + UI (importable by tests)
+│     ├─ RootView.swift              # public app root: splash / preloading
+│     ├─ *View.swift                 # SwiftUI screens
+│     ├─ *Model.swift                # data models + loaders
+│     ├─ FlashcardModel.swift        # FSRS-6 engine, stores, analytics
+│     ├─ JSONResourceCache.swift     # cached, thread-safe resource loading
+│     ├─ ResourceLoader.swift, Logging.swift
+│     └─ Resources/*.json            # kana, kanji, vocabulary, grammar datasets
+└─ Tests/AppFeatureTests/            # unit tests
 ```
 
 A detailed description lives in [`ARCHITECTURE.md`](ARCHITECTURE.md).

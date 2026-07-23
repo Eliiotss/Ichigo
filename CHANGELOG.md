@@ -25,7 +25,10 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 - **Project restructured** from a flat pile of files at the repository root into
-  `Sources/AppModule/` (source) and `Sources/AppModule/Resources/` (data).
+  a library (`Sources/AppFeature/`, all logic + UI + `Resources/`) plus a thin
+  `@main` executable (`Sources/AppModule/`). The library split lets the XCTest
+  target import the code, which an executable target carrying `@main` cannot
+  provide under `xcodebuild`.
 - **CI** now builds and tests the app with `xcodebuild` against an iOS Simulator
   destination instead of the previous `swift build`/`swift test`, which could not
   compile a UIKit/SwiftUI iOS app.
