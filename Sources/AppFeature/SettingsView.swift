@@ -8,10 +8,12 @@ struct SettingsView: View {
     @AppStorage("notif_hour") private var notifHour = 20
     
     @StateObject private var notificationManager = NotificationManager.shared
+    @StateObject private var backup = DriveBackupManager()
     @State private var showResetAlert = false
     @State private var resetDone = false
     @State private var showPermissionDeniedAlert = false
-    
+    @State private var showRestoreConfirm = false
+
     var body: some View {
         NavigationView {
             List {
@@ -97,10 +99,12 @@ struct SettingsView: View {
                     Text("Data Belajar")
                 }
                 
+                // MARK: - Cadangan (Google Drive)
+                backupSection
+
                 // MARK: - Roadmap
                 Section {
-                    Label("Sync akun ke cloud (coming soon)", systemImage: "icloud")
-                    Label("Backup/restore lokal (coming soon)", systemImage: "externaldrive")
+                    Label("Sinkronisasi otomatis (coming soon)", systemImage: "icloud")
                 } header: {
                     Text("Roadmap")
                 }
@@ -123,9 +127,89 @@ struct SettingsView: View {
             } message: {
                 Text("Aktifkan izin notifikasi di Pengaturan iPhone > Notifikasi > Ichigo untuk menggunakan fitur pengingat.")
             }
+            .alert("Pulihkan dari Google Drive?", isPresented: $showRestoreConfirm) {
+                Button("Batal", role: .cancel) {}
+                Button("Pulihkan", role: .destructive) { Task { await backup.restoreNow() } }
+            } message: {
+                Text("Progres lokal saat ini akan ditimpa oleh cadangan dari Drive. Tindakan ini tidak bisa dibatalkan.")
+            }
             .onAppear {
                 notificationManager.checkAuthorization()
             }
+        }
+    }
+
+    // MARK: - Backup section
+
+    @ViewBuilder private var backupSection: some View {
+        Section {
+            if !backup.isConfigured {
+                Label("Belum dikonfigurasi", systemImage: "exclamationmark.triangle")
+                    .foregroundColor(.secondary)
+                Text("Tambahkan file GoogleOAuth.plist berisi CLIENT_ID OAuth iOS Anda untuk mengaktifkan backup. Panduan: docs/GoogleDriveBackup.md.")
+                    .font(.footnote)
+                    .foregroundColor(.secondary)
+            } else if !backup.isSignedIn {
+                Button {
+                    Task { await backup.signIn() }
+                } label: {
+                    Label("Masuk dengan Google", systemImage: "person.crop.circle.badge.plus")
+                }
+                .disabled(backup.isBusy)
+            } else {
+                Button {
+                    Task { await backup.backupNow() }
+                } label: {
+                    Label("Backup sekarang", systemImage: "arrow.up.doc")
+                }
+                .disabled(backup.isBusy)
+
+                Button {
+                    showRestoreConfirm = true
+                } label: {
+                    Label("Pulihkan dari Drive", systemImage: "arrow.down.doc")
+                }
+                .disabled(backup.isBusy)
+
+                if let date = backup.lastBackupDate {
+                    Text("Cadangan terakhir: \(date.formatted(date: .abbreviated, time: .shortened))")
+                        .font(.footnote)
+                        .foregroundColor(.secondary)
+                }
+
+                Button(role: .destructive) {
+                    backup.signOut()
+                } label: {
+                    Label("Keluar dari Google", systemImage: "rectangle.portrait.and.arrow.right")
+                }
+                .disabled(backup.isBusy)
+            }
+
+            backupStatusRow
+        } header: {
+            Text("Cadangan (Google Drive)")
+        } footer: {
+            Text("Backup manual progres belajar ke folder khusus aplikasi (appDataFolder) di Google Drive Anda — hanya aplikasi ini yang bisa mengaksesnya.")
+        }
+    }
+
+    @ViewBuilder private var backupStatusRow: some View {
+        switch backup.phase {
+        case .idle:
+            EmptyView()
+        case .working(let message):
+            HStack(spacing: 8) {
+                ProgressView()
+                Text(message).font(.footnote).foregroundColor(.secondary)
+            }
+        case .success(let message):
+            Label(message, systemImage: "checkmark.circle.fill")
+                .font(.footnote)
+                .foregroundColor(.green)
+        case .failure(let message):
+            Label(message, systemImage: "xmark.octagon.fill")
+                .font(.footnote)
+                .foregroundColor(.red)
         }
     }
 }

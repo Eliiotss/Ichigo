@@ -7,6 +7,14 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Manual Google Drive backup & restore** (Settings → *Cadangan*). Dependency-free
+  OAuth 2.0 + PKCE via `ASWebAuthenticationSession`, tokens in the Keychain, and
+  `URLSession` REST scoped to the Drive `appDataFolder`. Backs up the local
+  progress snapshot (`BackupService`/`BackupPayload`) to a single
+  `ichigo-backup.json`. The feature stays off until an OAuth client ID is supplied
+  via a git-ignored `GoogleOAuth.plist`; see `docs/GoogleDriveBackup.md`. Replaces
+  the previous "Backup/restore (coming soon)" placeholder.
+
 - **Swift package manifest** (`Package.swift`) defining the iOS application
   product, the `AppModule` target and an `AppModuleTests` test target — the
   project now has a canonical, buildable structure.

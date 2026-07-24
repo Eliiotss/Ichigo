@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Template for enabling Google Drive backup.
+
+  1. Copy this file to: Sources/AppFeature/Resources/GoogleOAuth.plist
+  2. Replace the placeholder below with your OAuth 2.0 iOS client ID from the
+     Google Cloud Console (it looks like 1234567890-abcdef.apps.googleusercontent.com).
+  3. The real GoogleOAuth.plist is git-ignored; this .example file is only a template.
+
+  See docs/GoogleDriveBackup.md for the full setup walkthrough.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CLIENT_ID</key>
+    <string>YOUR_IOS_CLIENT_ID.apps.googleusercontent.com</string>
+</dict>
+</plist>

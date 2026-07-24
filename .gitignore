@@ -60,3 +60,6 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Google Drive backup — user-specific OAuth client ID (do not commit)
+Sources/AppFeature/Resources/GoogleOAuth.plist
