@@ -24,14 +24,23 @@ struct GoogleDriveConfig: Equatable {
     /// backups, never the user's other Drive files.
     static let scope = "https://www.googleapis.com/auth/drive.appdata"
 
-    static func load(bundle: Bundle = .module) -> GoogleDriveConfig? {
-        guard let url = bundle.url(forResource: "GoogleOAuth", withExtension: "plist"),
-              let dict = NSDictionary(contentsOf: url),
-              let clientID = dict["CLIENT_ID"] as? String,
-              !clientID.isEmpty,
-              !clientID.hasPrefix("YOUR_") else {
-            return nil
+    /// Loads the config from `GoogleOAuth.plist`. Searches the main bundle and this
+    /// module's framework bundle (not `Bundle.module`, which is unavailable in the
+    /// Swift Playgrounds build system). Pass an explicit `bundle` in tests.
+    static func load(bundle: Bundle? = nil) -> GoogleDriveConfig? {
+        let searchBundles = bundle.map { [$0] } ?? [.main, Bundle(for: BundleToken.self)]
+        for candidate in searchBundles {
+            guard let url = candidate.url(forResource: "GoogleOAuth", withExtension: "plist"),
+                  let dict = NSDictionary(contentsOf: url),
+                  let clientID = dict["CLIENT_ID"] as? String,
+                  !clientID.isEmpty,
+                  !clientID.hasPrefix("YOUR_") else {
+                continue
+            }
+            return GoogleDriveConfig(clientID: clientID)
         }
-        return GoogleDriveConfig(clientID: clientID)
+        return nil
     }
 }
+
+private final class BundleToken {}

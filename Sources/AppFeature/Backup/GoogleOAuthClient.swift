@@ -196,10 +196,12 @@ final class GoogleOAuthClient: NSObject {
 extension GoogleOAuthClient: ASWebAuthenticationPresentationContextProviding {
     nonisolated func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
         MainActor.assumeIsolated {
-            let windowScenes = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
-            let window = windowScenes.flatMap(\.windows).first(where: \.isKeyWindow)
-                ?? windowScenes.first?.windows.first
-            return window ?? ASPresentationAnchor()
+            let scenes = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
+            let windows = scenes.flatMap(\.windows)
+            if let keyWindow = windows.first(where: \.isKeyWindow) { return keyWindow }
+            if let anyWindow = windows.first { return anyWindow }
+            if let scene = scenes.first { return UIWindow(windowScene: scene) }
+            return UIWindow(frame: .zero)
         }
     }
 }
