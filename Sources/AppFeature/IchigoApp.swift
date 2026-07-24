@@ -1,5 +1,4 @@
 import SwiftUI
-import AppFeature
 
 @main
 struct IchigoApp: App {

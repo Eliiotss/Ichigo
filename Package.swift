@@ -2,14 +2,16 @@
 
 // Ichigo — a Japanese (JLPT) learning app built with SwiftUI.
 //
-// This is a Swift Playgrounds / Xcode App package (`.swiftpm` style). The whole
-// app is a single iOS application product backed by the `AppModule` target, which
-// bundles the app's source and its JSON datasets under `Resources`. A separate
-// `AppModuleTests` target holds the pure-logic unit tests.
+// This is a Swift Playgrounds / Xcode App package (`.swiftpm` style). It is a
+// single-target app: the `@main` entry, the SwiftUI screens and the JSON datasets
+// (under `Resources`) all live in one `AppFeature` target. Swift Playgrounds
+// requires the `@main` app entry to live in the application target itself — a
+// split into a separate library + thin executable fails to link `_main` there —
+// so the app is kept in one target.
 //
-// Build & test with Xcode 15+ (the SwiftUI/UIKit sources require the iOS SDK):
+// Build with Xcode 15+ (the SwiftUI/UIKit sources require the iOS SDK):
 //   xcodebuild -scheme Ichigo -destination 'platform=iOS Simulator,name=iPhone 15' build
-//   xcodebuild -scheme Ichigo -destination 'platform=iOS Simulator,name=iPhone 15' test
+// or open Package.swift in Xcode / the folder in Swift Playgrounds and Run.
 
 import PackageDescription
 import AppleProductTypes
@@ -22,7 +24,7 @@ let package = Package(
     products: [
         .iOSApplication(
             name: "Ichigo",
-            targets: ["AppModule"],
+            targets: ["AppFeature"],
             bundleIdentifier: "com.ichigo.app",
             teamIdentifier: "",
             displayVersion: "1.0",
@@ -40,26 +42,13 @@ let package = Package(
         )
     ],
     targets: [
-        // All app logic and UI lives in a library target so it can be imported
-        // by both the app executable and the XCTest target. (An executable target
-        // that carries `@main` cannot be `@testable import`-ed under xcodebuild.)
-        .target(
+        // The whole app: @main entry, SwiftUI screens and bundled JSON datasets.
+        .executableTarget(
             name: "AppFeature",
             path: "Sources/AppFeature",
             resources: [
                 .process("Resources")
             ]
-        ),
-        // Thin executable that hosts the library's RootView; this is the app.
-        .executableTarget(
-            name: "AppModule",
-            dependencies: ["AppFeature"],
-            path: "Sources/AppModule"
-        ),
-        .testTarget(
-            name: "AppFeatureTests",
-            dependencies: ["AppFeature"],
-            path: "Tests/AppFeatureTests"
         )
     ]
 )
