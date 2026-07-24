@@ -9,7 +9,7 @@ Expected files and their schemas:
 
 | File | Type (see) | Shape |
 | --- | --- | --- |
-| `Hiragana.json`, `Katakana.json` | `KanaGroupJSON` (`HiraganaView.swift`) | `[ { title, subtitle, columns[], rows[][] } ]`, each cell `{ kana, romaji }` or `null` |
+| `Hiragana.json` | `KanaGroupJSON` (`HiraganaView.swift`) | `[ { title, subtitle, columns[], rows[][] } ]`, each cell `{ kana, romaji }` or `null`. Holds **both** hiragana and katakana groups; the view splits them by Unicode block into the two tabs. |
 | `KanjiN5.json` … | `KanjiItem` (`KanjiModel.swift`) | `[ { id, kanji, onyomi, kunyomi, romaji, meaning, examples[] } ]` |
 | `VocabN5.json` … | `VocabularyItem` (`VocabModel.swift`) | `[ { id, kanji, hiragana, arti, jenisKata } ]` |
 | `GrammarN5.json` … | `GrammarItem` (`GrammarModel.swift`) | `[ { id, pattern, romaji, meaning, level, … } ]` |

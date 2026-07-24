@@ -61,7 +61,6 @@ final class AppLoadingState: ObservableObject {
             _ = try? JSONResourceCache.shared.decode([VocabularyItem].self, filename: "VocabN5")
             _ = try? JSONResourceCache.shared.decode([GrammarItem].self, filename: "GrammarN5")
             _ = try? JSONResourceCache.shared.decode([KanaGroupJSON].self, filename: "Hiragana")
-            _ = try? JSONResourceCache.shared.decode([KanaGroupJSON].self, filename: "Katakana")
         }.value
     }
 }

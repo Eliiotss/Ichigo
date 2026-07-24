@@ -81,11 +81,12 @@ the `jsonFile` referenced by the level definition in the corresponding model.
   (`id, kanji, hiragana, arti, jenisKata`). See `VocabModel.swift`.
 - **Grammar** (`GrammarN4.json`, …) — array of `GrammarItem` (see
   `GrammarModel.swift`; most fields have safe defaults so partial entries decode).
-- **Kana** (`Hiragana.json`, `Katakana.json`) — array of `KanaGroupJSON`
+- **Kana** (`Hiragana.json`) — array of `KanaGroupJSON`
   (`title, subtitle, columns, rows[][]`), where each cell is
-  `{ "kana", "romaji" }` or `null`. Group titles containing "Yōon" / "Gabungan"
-  are treated as the advanced set that unlocks after the base set is half
-  mastered.
+  `{ "kana", "romaji" }` or `null`. This single file holds **both** hiragana and
+  katakana groups; `HiraganaView` splits them by Unicode block into the two tabs.
+  Group titles containing "Yōon" / "Gabungan" are treated as the advanced set
+  that unlocks after the base set is half mastered.
 
 After adding a dataset, unlock its level by setting `isLocked: false` in the
 matching `*Level` array. Validate the JSON before committing:

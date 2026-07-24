@@ -89,7 +89,7 @@ Ichigo/
 │     ├─ ResourceLoader.swift    # shared array-decode helper
 │     ├─ Logging.swift           # os.Logger categories
 │     └─ Resources/
-│        ├─ Hiragana.json, Katakana.json
+│        ├─ Hiragana.json          # hiragana + katakana (split by script at runtime)
 │        ├─ KanjiN5.json
 │        ├─ VocabN5.json
 │        └─ GrammarN5.json

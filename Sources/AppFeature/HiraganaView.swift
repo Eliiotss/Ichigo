@@ -46,6 +46,22 @@ enum KanaLoader {
     }
 }
 
+extension KanaGroup {
+    /// Classifies a group by the Unicode block of its characters. The kana
+    /// dataset ships hiragana and katakana in a single file, so this is used to
+    /// route each group to the correct tab.
+    var isKatakanaScript: Bool {
+        for row in items {
+            for case let item? in row {
+                guard let value = item.kana.unicodeScalars.first?.value else { continue }
+                if value >= 0x30A0 && value <= 0x30FF { return true }  // Katakana block
+                if value >= 0x3040 && value <= 0x309F { return false } // Hiragana block
+            }
+        }
+        return false
+    }
+}
+
 // MARK: - Main View
 struct HiraganaView: View {
     @StateObject private var store = HiraganaStore()
@@ -203,18 +219,17 @@ struct HiraganaView: View {
             )
         }
         .task {
-            guard hiraganaGroups.isEmpty else { return }
-            
-            let result = await Task.detached(priority: .userInitiated) {
-                (
-                    KanaLoader.load(from: "Hiragana"),
-                    KanaLoader.load(from: "Katakana")
-                )
+            guard hiraganaGroups.isEmpty && katakanaGroups.isEmpty else { return }
+
+            // Hiragana.json contains both scripts; split it into the two tabs
+            // by character block instead of loading a separate Katakana file.
+            let allGroups = await Task.detached(priority: .userInitiated) {
+                KanaLoader.load(from: "Hiragana")
             }.value
-            
+
             await MainActor.run {
-                hiraganaGroups = result.0
-                katakanaGroups = result.1
+                hiraganaGroups = allGroups.filter { !$0.isKatakanaScript }
+                katakanaGroups = allGroups.filter { $0.isKatakanaScript }
                 isLoading = false
             }
         }
