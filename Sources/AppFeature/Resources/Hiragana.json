@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Vokal Dasar",
+    "subtitle": "",
+    "columns": ["A","I","U","E","O"],
+    "rows": [
+      [{"kana":"あ","romaji":"A"},{"kana":"い","romaji":"I"},{"kana":"う","romaji":"U"},{"kana":"え","romaji":"E"},{"kana":"お","romaji":"O"}]
+    ]
+  },
+  {
+    "title": "Ka-Ro",
+    "subtitle": "",
+    "columns": ["A","I","U","E","O"],
+    "rows": [
+      [{"kana":"か","romaji":"KA"},{"kana":"き","romaji":"KI"},{"kana":"く","romaji":"KU"},{"kana":"け","romaji":"KE"},{"kana":"こ","romaji":"KO"}],
+      [{"kana":"さ","romaji":"SA"},{"kana":"し","romaji":"SHI"},{"kana":"す","romaji":"SU"},{"kana":"せ","romaji":"SE"},{"kana":"そ","romaji":"SO"}],
+      [{"kana":"た","romaji":"TA"},{"kana":"ち","romaji":"CHI"},{"kana":"つ","romaji":"TSU"},{"kana":"て","romaji":"TE"},{"kana":"と","romaji":"TO"}],
+      [{"kana":"な","romaji":"NA"},{"kana":"に","romaji":"NI"},{"kana":"ぬ","romaji":"NU"},{"kana":"ね","romaji":"NE"},{"kana":"の","romaji":"NO"}],
+      [{"kana":"は","romaji":"HA"},{"kana":"ひ","romaji":"HI"},{"kana":"ふ","romaji":"FU"},{"kana":"へ","romaji":"HE"},{"kana":"ほ","romaji":"HO"}],
+      [{"kana":"ま","romaji":"MA"},{"kana":"み","romaji":"MI"},{"kana":"む","romaji":"MU"},{"kana":"め","romaji":"ME"},{"kana":"も","romaji":"MO"}],
+      [{"kana":"や","romaji":"YA"},null,{"kana":"ゆ","romaji":"YU"},null,{"kana":"よ","romaji":"YO"}],
+      [{"kana":"ら","romaji":"RA"},{"kana":"り","romaji":"RI"},{"kana":"る","romaji":"RU"},{"kana":"れ","romaji":"RE"},{"kana":"ろ","romaji":"RO"}],
+      [{"kana":"わ","romaji":"WA"},null,null,null,{"kana":"を","romaji":"WO"}],
+      [{"kana":"ん","romaji":"N"},null,null,null,null]
+    ]
+  },
+  {
+    "title": "Dakuten & Handakuten",
+    "subtitle": "Menambahkan tanda (゛) atau (゜) untuk mengubah bunyi huruf.",
+    "columns": ["A","I","U","E","O"],
+    "rows": [
+      [{"kana":"が","romaji":"GA"},{"kana":"ぎ","romaji":"GI"},{"kana":"ぐ","romaji":"GU"},{"kana":"げ","romaji":"GE"},{"kana":"ご","romaji":"GO"}],
+      [{"kana":"ざ","romaji":"ZA"},{"kana":"じ","romaji":"JI"},{"kana":"ず","romaji":"ZU"},{"kana":"ぜ","romaji":"ZE"},{"kana":"ぞ","romaji":"ZO"}],
+      [{"kana":"だ","romaji":"DA"},{"kana":"ぢ","romaji":"JI"},{"kana":"づ","romaji":"ZU"},{"kana":"で","romaji":"DE"},{"kana":"ど","romaji":"DO"}],
+      [{"kana":"ば","romaji":"BA"},{"kana":"び","romaji":"BI"},{"kana":"ぶ","romaji":"BU"},{"kana":"べ","romaji":"BE"},{"kana":"ぼ","romaji":"BO"}],
+      [{"kana":"ぱ","romaji":"PA"},{"kana":"ぴ","romaji":"PI"},{"kana":"ぷ","romaji":"PU"},{"kana":"ぺ","romaji":"PE"},{"kana":"ぽ","romaji":"PO"}]
+    ]
+  },
+  {
+    "title": "Yōon (Gabungan)",
+    "subtitle": "Menambahkan ya, yu, yo (や、ゆ、よ) kecil untuk membentuk suku kata baru.",
+    "columns": ["YA","YU","YO"],
+    "rows": [
+      [{"kana":"きゃ","romaji":"KYA"},{"kana":"きゅ","romaji":"KYU"},{"kana":"きょ","romaji":"KYO"}],
+      [{"kana":"しゃ","romaji":"SHA"},{"kana":"しゅ","romaji":"SHU"},{"kana":"しょ","romaji":"SHO"}],
+      [{"kana":"ちゃ","romaji":"CHA"},{"kana":"ちゅ","romaji":"CHU"},{"kana":"ちょ","romaji":"CHO"}],
+      [{"kana":"にゃ","romaji":"NYA"},{"kana":"にゅ","romaji":"NYU"},{"kana":"にょ","romaji":"NYO"}],
+      [{"kana":"ひゃ","romaji":"HYA"},{"kana":"ひゅ","romaji":"HYU"},{"kana":"ひょ","romaji":"HYO"}],
+      [{"kana":"みゃ","romaji":"MYA"},{"kana":"みゅ","romaji":"MYU"},{"kana":"みょ","romaji":"MYO"}],
+      [{"kana":"りゃ","romaji":"RYA"},{"kana":"りゅ","romaji":"RYU"},{"kana":"りょ","romaji":"RYO"}]
+    ]
+  }
+]
