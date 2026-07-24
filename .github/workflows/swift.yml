@@ -42,18 +42,26 @@ jobs:
           xcodebuild -version
           swift --version
 
+      # `-sdk iphonesimulator` pins every target (including the AppFeature
+      # library and the test bundle) to the iOS Simulator SDK. Without it,
+      # xcodebuild can fall back to building for "My Mac", which fails because
+      # the code is iOS-only (UIKit / SwiftUI availability).
       - name: Build
         run: |
+          set -o pipefail
           xcodebuild build \
             -scheme "$SCHEME" \
+            -sdk iphonesimulator \
             -destination "$DESTINATION" \
             -skipPackagePluginValidation \
             CODE_SIGNING_ALLOWED=NO
 
       - name: Test
         run: |
+          set -o pipefail
           xcodebuild test \
             -scheme "$SCHEME" \
+            -sdk iphonesimulator \
             -destination "$DESTINATION" \
             -skipPackagePluginValidation \
             CODE_SIGNING_ALLOWED=NO
