@@ -39,22 +39,23 @@ models, and non-throwing loaders that degrade to a graceful empty state.
 
 ## Folder structure
 
-The app is split into a thin executable (`AppModule`, the `@main` entry) and a
-library (`AppFeature`) that holds all logic and UI. The library is what the test
-target imports — an executable target carrying `@main` cannot be
-`@testable import`-ed under `xcodebuild`.
+The app is a **single target** (`AppFeature`) that carries the `@main` entry, all
+SwiftUI screens and the bundled datasets. Swift Playgrounds requires the `@main`
+App entry to live in the application target itself — splitting it into a separate
+library plus a thin executable fails to link `_main` there — so the app is kept
+in one target.
 
 ```
 Ichigo/
-├─ Package.swift                 # iOSApplication product + AppFeature lib + AppModule exe + tests
+├─ Package.swift                 # single-target iOSApplication product
 ├─ .swiftlint.yml                # local lint configuration
-├─ .github/workflows/swift.yml   # CI: xcodebuild build + test on an iOS Simulator
+├─ .github/workflows/swift.yml   # CI: xcodebuild build on an iOS Simulator
 ├─ Sources/
-│  ├─ AppModule/
-│  │  └─ IchigoApp.swift         # @main App — hosts AppFeature.RootView in a WindowGroup
-│  └─ AppFeature/                # library target (imported by the app and the tests)
-│     ├─ RootView.swift          # public app root: splash screen + resource preloading
+│  └─ AppFeature/                # the whole app (single target)
+│     ├─ IchigoApp.swift         # @main App — hosts RootView in a WindowGroup
+│     ├─ RootView.swift          # app root: splash screen + resource preloading
 │     │
+│     ├─ Backup/                 # Google Drive manual backup (OAuth + Drive REST)
 │     ├─ ContentView.swift       # TabView shell (Home / Profile / Settings)
 │     ├─ HomeStatsCard.swift     # home dashboard widgets
 │     │

@@ -69,28 +69,30 @@ product).
 
 ---
 
-## Building & testing from the command line
+## Building from the command line
 
 Because the app depends on the iOS SDK, build it with `xcodebuild` against a
 simulator destination (plain `swift build` targets macOS and cannot compile
 UIKit):
 
 ```bash
-# Build
 xcodebuild build \
   -scheme Ichigo \
-  -destination 'platform=iOS Simulator,name=iPhone 15'
-
-# Run the unit test suite
-xcodebuild test \
-  -scheme Ichigo \
+  -sdk iphonesimulator \
   -destination 'platform=iOS Simulator,name=iPhone 15'
 ```
 
-The unit tests (`Tests/AppFeatureTests`) cover the FSRS math, the review-engine
-state machine, the session queue builder, streak accounting and the data-model
-helpers. CI runs the same commands on every push and pull request
+CI runs this build on every push and pull request
 (see [`.github/workflows/swift.yml`](.github/workflows/swift.yml)).
+
+### Tests
+
+Unit tests live in `Tests/AppFeatureTests` (FSRS math, review-engine state
+machine, session queue builder, streak accounting, backup round-trip, and
+data-model helpers). Because the app is a single Swift Playgrounds-style target
+that carries `@main` — which an XCTest target cannot `@testable import` under
+`xcodebuild` — the tests are not wired into the package manifest; run them from
+an Xcode project with an app-hosted test target.
 
 ---
 
@@ -98,19 +100,19 @@ helpers. CI runs the same commands on every push and pull request
 
 ```
 Ichigo/
-├─ Package.swift                     # iOS app package manifest
+├─ Package.swift                     # single-target iOS app package manifest
 ├─ Sources/
-│  ├─ AppModule/
-│  │  └─ IchigoApp.swift             # thin @main executable, hosts RootView
-│  └─ AppFeature/                    # library: all app logic + UI (importable by tests)
-│     ├─ RootView.swift              # public app root: splash / preloading
+│  └─ AppFeature/                    # the whole app (single target)
+│     ├─ IchigoApp.swift             # @main entry
+│     ├─ RootView.swift              # app root: splash / preloading
 │     ├─ *View.swift                 # SwiftUI screens
 │     ├─ *Model.swift                # data models + loaders
 │     ├─ FlashcardModel.swift        # FSRS-6 engine, stores, analytics
+│     ├─ Backup/                     # Google Drive manual backup (OAuth + REST)
 │     ├─ JSONResourceCache.swift     # cached, thread-safe resource loading
 │     ├─ ResourceLoader.swift, Logging.swift
 │     └─ Resources/*.json            # kana, kanji, vocabulary, grammar datasets
-└─ Tests/AppFeatureTests/            # unit tests
+└─ Tests/AppFeatureTests/            # unit tests (run via an Xcode test host)
 ```
 
 A detailed description lives in [`ARCHITECTURE.md`](ARCHITECTURE.md).

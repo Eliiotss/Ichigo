@@ -18,16 +18,21 @@ open Package.swift
 
 ## Building and testing
 
-Always run the test suite before opening a pull request:
+Always confirm the app builds before opening a pull request:
 
 ```bash
-xcodebuild test \
+xcodebuild build \
   -scheme Ichigo \
+  -sdk iphonesimulator \
   -destination 'platform=iOS Simulator,name=iPhone 15'
 ```
 
 Adjust the simulator name to a device installed with your Xcode version
 (`xcrun simctl list devices available`).
+
+The unit tests in `Tests/AppFeatureTests` are not wired into the package manifest
+— an XCTest target cannot `@testable import` a single `@main` app target under
+`xcodebuild`. Run them from an Xcode project with an app-hosted test target.
 
 If you have SwiftLint installed, lint from the repository root:
 
