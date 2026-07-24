@@ -39,7 +39,7 @@ struct SettingsView: View {
                 } header: {
                     Text("Akun")
                 } footer: {
-                    Text("Nama akan tampil di halaman utama. Email digunakan untuk sinkronisasi dan menyimpan progress belajar kamu (segera hadir).")
+                    Text("Nama akan tampil di halaman utama. Email bersifat opsional untuk identitas profil. Cadangan progres tersedia lewat Google Drive di bagian bawah.")
                 }
                 
                 // MARK: - Preferensi

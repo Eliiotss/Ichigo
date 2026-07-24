@@ -22,11 +22,10 @@ struct KanjiExample: Codable {
     let sentenceFurigana: String?
     let sentenceMeaning: String?
     
+    // Keys match the dataset (KanjiN5/N4/N3.json), which uses camelCase.
     enum CodingKeys: String, CodingKey {
         case word, reading, romaji, meaning
-        case sentence
-        case sentenceFurigana = "sentence_furigana"
-        case sentenceMeaning = "sentence_meaning"
+        case sentence, sentenceFurigana, sentenceMeaning
     }
     
     init(word: String, reading: String, romaji: String, meaning: String, sentence: String? = nil, sentenceFurigana: String? = nil, sentenceMeaning: String? = nil) {

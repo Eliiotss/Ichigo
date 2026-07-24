@@ -103,42 +103,18 @@ struct KanjiDetailView: View {
                 }
                 .shadow(color: Color.black.opacity(colorScheme == .dark ? 0.2 : 0.04), radius: 4, x: 0, y: 1)
                 
-                // Contoh Kata
+                // Contoh Kata & Kalimat
                 if !item.examples.isEmpty {
                     VStack(alignment: .leading, spacing: 10) {
-                        Text("Contoh Kata")
+                        Text("Contoh Kata & Kalimat")
                             .font(.system(size: 18, weight: .bold))
                             .foregroundColor(.primary)
-                        
+
                         VStack(spacing: 0) {
                             ForEach(item.examples.indices, id: \.self) { idx in
-                                VStack(spacing: 0) {
-                                    HStack {
-                                        VStack(alignment: .leading, spacing: 4) {
-                                            HStack(spacing: 6) {
-                                                Text(item.examples[idx].word)
-                                                    .font(.system(size: 17, weight: .semibold))
-                                                    .foregroundColor(.primary)
-                                                Text("(\(item.examples[idx].reading))")
-                                                    .font(.system(size: 13))
-                                                    .foregroundColor(.secondary)
-                                            }
-                                            Text("\(item.examples[idx].romaji) — \(item.examples[idx].meaning)")
-                                                .font(.system(size: 13))
-                                                .foregroundColor(.secondary)
-                                        }
-                                        Spacer()
-                                        Image(systemName: "chevron.right")
-                                            .font(.system(size: 12))
-                                            .foregroundColor(Color.secondary.opacity(0.5))
-                                    }
-                                    .padding(.vertical, 14)
-                                    .padding(.horizontal, 16)
-                                    
-                                    if idx < item.examples.count - 1 {
-                                        Divider()
-                                            .padding(.leading, 16)
-                                    }
+                                KanjiExampleRow(example: item.examples[idx])
+                                if idx < item.examples.count - 1 {
+                                    Divider().padding(.leading, 16)
                                 }
                             }
                         }
@@ -153,6 +129,62 @@ struct KanjiDetailView: View {
         .background(bgColor)
         .navigationTitle("Detail Kanji")
         .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+// MARK: - Kanji Example Row
+struct KanjiExampleRow: View {
+    let example: KanjiExample
+
+    private var displaySentence: String? {
+        if let furigana = example.sentenceFurigana, !furigana.isEmpty { return furigana }
+        if let sentence = example.sentence, !sentence.isEmpty { return sentence }
+        return nil
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 6) {
+                Text(example.word)
+                    .font(.system(size: 17, weight: .semibold))
+                    .foregroundColor(.primary)
+                Text("(\(example.reading))")
+                    .font(.system(size: 13))
+                    .foregroundColor(.secondary)
+                Spacer()
+                Button {
+                    AudioSpeechHelper.shared.speak(example.sentence ?? example.word)
+                } label: {
+                    Image(systemName: "speaker.wave.2.fill")
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundColor(.orange)
+                }
+                .buttonStyle(.plain)
+            }
+
+            Text("\(example.romaji) — \(example.meaning)")
+                .font(.system(size: 13))
+                .foregroundColor(.secondary)
+
+            if let sentence = displaySentence {
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(sentence)
+                        .font(.system(size: 14, weight: .medium))
+                        .foregroundColor(.primary)
+                        .fixedSize(horizontal: false, vertical: true)
+                    if let meaning = example.sentenceMeaning, !meaning.isEmpty {
+                        Text(meaning)
+                            .font(.system(size: 12))
+                            .foregroundColor(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+                .padding(.top, 2)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.vertical, 14)
+        .padding(.horizontal, 16)
     }
 }
 

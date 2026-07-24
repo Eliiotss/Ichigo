@@ -63,6 +63,31 @@ struct GrammarDetailView: View {
                     }
                 }
                 
+                if !item.commonMistakes.isEmpty {
+                    GrammarInfoSection(title: "Kesalahan Umum", systemImage: "exclamationmark.triangle", accentColor: accentColor) {
+                        VStack(alignment: .leading, spacing: 10) {
+                            ForEach(item.commonMistakes, id: \.self) { mistake in
+                                HStack(alignment: .top, spacing: 10) {
+                                    Image(systemName: "xmark.circle.fill")
+                                        .font(.system(size: 13))
+                                        .foregroundColor(.red)
+                                        .padding(.top, 2)
+
+                                    Text(mistake)
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.primary)
+                                        .lineSpacing(4)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                }
+                                .padding(12)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(softCardColor)
+                                .cornerRadius(12)
+                            }
+                        }
+                    }
+                }
+
                 if !item.examples.isEmpty {
                     GrammarInfoSection(title: "Contoh Kalimat", systemImage: "text.quote", accentColor: accentColor) {
                         VStack(spacing: 10) {
