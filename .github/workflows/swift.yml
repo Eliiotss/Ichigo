@@ -22,8 +22,27 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Structural checks that need no toolchain. They run on Linux in seconds and
+  # give an exact filename for the two failure modes whose compiler diagnostics
+  # are least actionable: an unbalanced brace (reported at end-of-file) and a
+  # reference to a design token or view type that does not exist.
+  static-checks:
+    name: Static checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check bracket balance
+        run: python3 scripts/check_braces.py
+
+      - name: Check symbol references
+        run: python3 scripts/check_symbols.py
+
   build-and-test:
     name: Build & Test (iOS Simulator)
+    needs: static-checks
     runs-on: macos-14
 
     env:
