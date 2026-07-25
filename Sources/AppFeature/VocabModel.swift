@@ -15,6 +15,8 @@ struct VocabularyLevel: Identifiable {
     let id: String
     let name: String
     let description: String
+    /// Number of words in the bundled dataset. Locked levels carry 0 because
+    /// their dataset has not shipped yet; the card only shows a non-zero count.
     let totalWords: Int
     let color: Color
     let bgColor: Color
@@ -23,11 +25,11 @@ struct VocabularyLevel: Identifiable {
 }
 
 let vocabularyLevels: [VocabularyLevel] = [
-    VocabularyLevel(id: "N5", name: "Beginner", description: "~800 Kosakata Dasar", totalWords: 800, color: AppTheme.levelColor("N5"), bgColor: AppTheme.levelBackground("N5"), isLocked: false, jsonFile: "VocabN5"),
-    VocabularyLevel(id: "N4", name: "Elementary", description: "~1500 Kosakata", totalWords: 1500, color: AppTheme.levelColor("N4"), bgColor: AppTheme.levelBackground("N4"), isLocked: false, jsonFile: "VocabN4"),
-    VocabularyLevel(id: "N3", name: "Intermediate", description: "~3750 Kosakata", totalWords: 3750, color: AppTheme.levelColor("N3"), bgColor: AppTheme.levelBackground("N3"), isLocked: false, jsonFile: "VocabN3"),
-    VocabularyLevel(id: "N2", name: "Pre-Advanced", description: "~6000 Kosakata", totalWords: 6000, color: AppTheme.levelColor("N2"), bgColor: AppTheme.levelBackground("N2"), isLocked: true, jsonFile: "VocabN2"),
-    VocabularyLevel(id: "N1", name: "Advanced", description: "~10000 Kosakata", totalWords: 10000, color: AppTheme.levelColor("N1"), bgColor: AppTheme.levelBackground("N1"), isLocked: true, jsonFile: "VocabN1")
+    VocabularyLevel(id: "N5", name: "Beginner", description: "Kosakata Dasar", totalWords: 800, color: AppTheme.levelColor("N5"), bgColor: AppTheme.levelBackground("N5"), isLocked: false, jsonFile: "VocabN5"),
+    VocabularyLevel(id: "N4", name: "Elementary", description: "Kosakata Dasar+", totalWords: 700, color: AppTheme.levelColor("N4"), bgColor: AppTheme.levelBackground("N4"), isLocked: false, jsonFile: "VocabN4"),
+    VocabularyLevel(id: "N3", name: "Intermediate", description: "Kosakata Menengah", totalWords: 1110, color: AppTheme.levelColor("N3"), bgColor: AppTheme.levelBackground("N3"), isLocked: false, jsonFile: "VocabN3"),
+    VocabularyLevel(id: "N2", name: "Pre-Advanced", description: "Kosakata Lanjutan", totalWords: 0, color: AppTheme.levelColor("N2"), bgColor: AppTheme.levelBackground("N2"), isLocked: true, jsonFile: "VocabN2"),
+    VocabularyLevel(id: "N1", name: "Advanced", description: "Kosakata Master", totalWords: 0, color: AppTheme.levelColor("N1"), bgColor: AppTheme.levelBackground("N1"), isLocked: true, jsonFile: "VocabN1")
 ]
 
 // MARK: - Loader
