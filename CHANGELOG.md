@@ -20,13 +20,13 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     dividers; native controls retained.
   - **Browsing screens** (Vocabulary / Kanji / Grammar): pinned `ScreenHeader`,
     pill `SearchField` and `FilterChipRow` that stay fixed while content scrolls.
-- **Manual Google Drive backup & restore** (Settings → *Cadangan*). Dependency-free
-  OAuth 2.0 + PKCE via `ASWebAuthenticationSession`, tokens in the Keychain, and
-  `URLSession` REST scoped to the Drive `appDataFolder`. Backs up the local
-  progress snapshot (`BackupService`/`BackupPayload`) to a single
-  `ichigo-backup.json`. The feature stays off until an OAuth client ID is supplied
-  via a git-ignored `GoogleOAuth.plist`; see `docs/GoogleDriveBackup.md`. Replaces
-  the previous "Backup/restore (coming soon)" placeholder.
+- **Google Drive backup & restore implementation** (`Sources/AppFeature/Backup/`):
+  dependency-free OAuth 2.0 + PKCE via `ASWebAuthenticationSession`, tokens in the
+  Keychain, and `URLSession` REST scoped to the Drive `appDataFolder`, plus the
+  local progress snapshot (`BackupService`/`BackupPayload`). **Parked for a later
+  release** — Settings advertises Akun, Cadangkan & Pulihkan and Sinkronisasi
+  otomatis under "SEGERA HADIR" rather than exposing the controls. Setup notes for
+  when it ships: `docs/GoogleDriveBackup.md`.
 
 - **Swift package manifest** (`Package.swift`) defining the single-target iOS
   application — the project now has a canonical, buildable structure.

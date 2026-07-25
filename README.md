@@ -19,7 +19,7 @@ interface is in Bahasa Indonesia.
 | **Vocabulary** | Level-based vocabulary lists with search and part-of-speech filtering. |
 | **Grammar** | Grammar pattern explorer with structure, usage notes, nuance, and example sentences. |
 | **Flashcard** | A full FSRS-6 scheduler over the Vocabulary and Grammar decks — learning steps, due-card queues, daily new-card limits, streaks and analytics. |
-| **Profile & Settings** | Daily target, streak, mastery and accuracy stats; configurable study reminder (local notification); progress reset. |
+| **Profile & Settings** | Daily target, streak, mastery and accuracy stats; configurable study reminder (local notification); progress reset. Account, cloud backup and sync are listed as upcoming. |
 
 Additional platform features: light/dark mode, iPhone/iPad responsive layouts,
 Japanese text-to-speech (`AVSpeechSynthesizer`), and offline-first data (all
