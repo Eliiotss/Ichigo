@@ -8,10 +8,28 @@ struct GrammarListView: View {
     @Environment(\.colorScheme) var colorScheme
 
     @State private var items: [GrammarItem] = []
+    @State private var searchText: String = ""
+    @State private var debouncedSearchText: String = ""
     @State private var loadState: ViewLoadState = .loading
 
     var bgColor: Color { AppTheme.screenBackground(colorScheme) }
     var cardColor: Color { AppTheme.surface(colorScheme) }
+
+    /// Hasil penyaringan berdasarkan kata kunci. Pencarian mencakup pola,
+    /// artinya, romaji, kategori, penjelasan, dan tag supaya pengguna bisa
+    /// menemukan pola baik dari tulisan Jepangnya maupun dari arti Indonesianya.
+    var filtered: [GrammarItem] {
+        let query = debouncedSearchText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !query.isEmpty else { return items }
+        return items.filter { item in
+            item.pattern.contains(query) ||
+            item.romaji.localizedCaseInsensitiveContains(query) ||
+            item.meaning.localizedCaseInsensitiveContains(query) ||
+            item.treeCategory.localizedCaseInsensitiveContains(query) ||
+            item.explanation.localizedCaseInsensitiveContains(query) ||
+            item.tags.contains { $0.localizedCaseInsensitiveContains(query) }
+        }
+    }
 
     var body: some View {
         Group {
@@ -33,19 +51,30 @@ struct GrammarListView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(bgColor)
             } else {
-                // Header tetap di tempatnya, hanya daftarnya yang menggulir.
+                // Header dan kolom pencarian tetap di tempatnya, hanya daftarnya
+                // yang menggulir.
                 VStack(spacing: 14) {
                     ScreenHeader(title: "Grammar")
+
+                    SearchField(placeholder: "Cari pola tata bahasa", text: $searchText)
+                        .padding(.horizontal, 20)
 
                     // Daftar pola. Pakai LazyVStack supaya level dengan 160 pola
                     // hanya membangun baris yang terlihat di layar.
                     ScrollView {
                         LazyVStack(spacing: 12) {
-                            ForEach(items) { item in
-                                NavigationLink(destination: GrammarDetailView(item: item)) {
-                                    GrammarListCard(item: item, levelId: level.id, cardColor: cardColor)
+                            if filtered.isEmpty {
+                                Text("Tidak ditemukan")
+                                    .font(AppTheme.rounded(15, .medium))
+                                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                                    .padding(.top, 60)
+                            } else {
+                                ForEach(filtered) { item in
+                                    NavigationLink(destination: GrammarDetailView(item: item)) {
+                                        GrammarListCard(item: item, levelId: level.id, cardColor: cardColor)
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
                                 }
-                                .buttonStyle(PlainButtonStyle())
                             }
                         }
                         .padding(.horizontal, 20)
@@ -70,6 +99,16 @@ struct GrammarListView: View {
                 loadState = loaded.isEmpty ? .empty : .loaded
             } catch {
                 loadState = .failed(error.localizedDescription)
+            }
+        }
+        // Tunda penyaringan 250 md sejak ketikan terakhir supaya daftar tidak
+        // dihitung ulang pada setiap huruf yang diketik.
+        .onChange(of: searchText) { _, newValue in
+            Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 250_000_000)
+                if searchText == newValue {
+                    debouncedSearchText = newValue
+                }
             }
         }
     }
