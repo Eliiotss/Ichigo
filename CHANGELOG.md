@@ -28,12 +28,12 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   via a git-ignored `GoogleOAuth.plist`; see `docs/GoogleDriveBackup.md`. Replaces
   the previous "Backup/restore (coming soon)" placeholder.
 
-- **Swift package manifest** (`Package.swift`) defining the iOS application
-  product, the `AppModule` target and an `AppModuleTests` test target — the
-  project now has a canonical, buildable structure.
-- **Unit test suite** (`Tests/AppModuleTests`) covering the FSRS-6 math, the
+- **Swift package manifest** (`Package.swift`) defining the single-target iOS
+  application — the project now has a canonical, buildable structure.
+- **Unit test suite** (`Tests/AppFeatureTests`) covering the FSRS-6 math, the
   review-engine state machine, the session queue builder, day-boundary/streak
-  accounting, the retention validator, analytics and deck-card mapping.
+  accounting, the retention validator, analytics, deck-card mapping, the backup
+  round-trip, PKCE and the account store.
 - **Datasets folder** (`Sources/AppFeature/Resources/`) documented as the drop-in
   location for the maintainer's JSON datasets (kana, kanji, vocabulary, grammar),
   with the expected schemas in its `README.md`. The datasets themselves are
@@ -50,9 +50,9 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   a single `Sources/AppFeature/` app target (all logic, UI, `@main` entry and the
   `Resources/` datasets). A single target is required by Swift Playgrounds, which
   cannot link `@main` when the app is split into a separate library and executable.
-- **CI** now builds and tests the app with `xcodebuild` against an iOS Simulator
-  destination instead of the previous `swift build`/`swift test`, which could not
-  compile a UIKit/SwiftUI iOS app.
+- **CI** now builds the app with `xcodebuild` against an iOS Simulator
+  destination (`-sdk iphonesimulator`) instead of the previous `swift build`,
+  which could not compile a UIKit/SwiftUI iOS app.
 - **Consistent branding:** the app entry point was renamed `MyApp` → `IchigoApp`
   and stray "NihongoMaster" / "Nihongo Master" strings are now "Ichigo".
 - **Consistent filenames:** `ProfilView.swift` → `ProfileView.swift`,
@@ -87,8 +87,8 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Leftover review-note comments in the source.
 
 ### Known limitations / next steps
-- Content currently covers JLPT **N5** plus full kana; N4–N1 datasets are the
-  recommended next expansion (levels remain gated until their data is added).
+- Content covers JLPT **N5–N3** plus kana; N2/N1 datasets are the recommended
+  next expansion (those levels stay gated until their data is added).
 - Some deprecated SwiftUI APIs (`NavigationView`, `foregroundColor`,
   `accentColor`) are still in use; migrating to `NavigationStack` /
   `foregroundStyle` / `tint` is a recommended follow-up that needs on-device
