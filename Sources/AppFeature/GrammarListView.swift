@@ -9,12 +9,8 @@ struct GrammarListView: View {
     @State private var searchText: String = ""
     @State private var isLoading: Bool = true
     
-    var bgColor: Color {
-        colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground)
-    }
-    var cardColor: Color {
-        colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-    }
+    var bgColor: Color { AppTheme.screenBackground(colorScheme) }
+    var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var filtered: [GrammarItem] {
         let query = searchText.trimmingCharacters(in: .whitespaces)
@@ -49,26 +45,11 @@ struct GrammarListView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(bgColor)
             } else {
-                VStack(spacing: 0) {
-                    // Search bar
-                    HStack(spacing: 10) {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.secondary)
-                        TextField("Cari tata bahasa...", text: $searchText)
-                            .font(.system(size: 15))
-                        if !searchText.isEmpty {
-                            Button(action: { searchText = "" }) {
-                                Image(systemName: "xmark.circle.fill")
-                                    .foregroundColor(.secondary)
-                            }
-                        }
-                    }
-                    .padding(12)
-                    .background(cardColor)
-                    .cornerRadius(12)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 10)
-                    .background(bgColor)
+                VStack(spacing: 14) {
+                    ScreenHeader(title: "Tata Bahasa \(level.id)")
+
+                    SearchField(placeholder: "Cari tata bahasa...", text: $searchText)
+                        .padding(.horizontal, 20)
                     
                     // List grammar
                     ScrollView {
@@ -94,8 +75,8 @@ struct GrammarListView: View {
                 }
             }
         }
-        .navigationTitle("Tata Bahasa \(level.id)")
-        .navigationBarTitleDisplayMode(.large)
+        .navigationBarBackButtonHidden(true)
+        .toolbar(.hidden, for: .navigationBar)
         .background(bgColor)
         .task {
             guard items.isEmpty else { return }

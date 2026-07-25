@@ -21,6 +21,27 @@ enum AppTheme {
     /// Primary brand / accent colour.
     static let accent = blue
 
+    // MARK: - Surfaces
+    /// Warm off-white page background (dark mode falls back to the system colour).
+    static func screenBackground(_ scheme: ColorScheme) -> Color {
+        scheme == .dark ? Color(UIColor.systemBackground) : Color(red: 0.969, green: 0.961, blue: 0.973)
+    }
+
+    /// Raised surface for cards, the search field and filter chips.
+    static func surface(_ scheme: ColorScheme) -> Color {
+        scheme == .dark ? Color(UIColor.secondarySystemBackground) : .white
+    }
+
+    static func softShadow(_ scheme: ColorScheme) -> Color {
+        Color.black.opacity(scheme == .dark ? 0.28 : 0.06)
+    }
+
+    // MARK: - Typography
+    /// The UI uses SF Pro Rounded throughout for a friendly, approachable feel.
+    static func rounded(_ size: CGFloat, _ weight: Font.Weight = .regular) -> Font {
+        .system(size: size, weight: weight, design: .rounded)
+    }
+
     // MARK: - JLPT level scale (N5 light → N1 deep)
     static func levelColor(_ id: String) -> Color {
         switch id {

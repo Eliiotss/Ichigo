@@ -11,12 +11,8 @@ struct KanjiListView: View {
     @State private var debouncedSearchText: String = ""
     @State private var loadState: ViewLoadState = .loading
     
-    var bgColor: Color {
-        colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground)
-    }
-    var cardColor: Color {
-        colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-    }
+    var bgColor: Color { AppTheme.screenBackground(colorScheme) }
+    var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var filtered: [KanjiItem] {
         let query = debouncedSearchText.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -61,27 +57,11 @@ struct KanjiListView: View {
             } else if loadState == .empty {
                 EmptyStateView(title: "Coming soon", subtitle: "Konten level ini belum tersedia.", icon: "folder").frame(maxWidth: .infinity, maxHeight: .infinity).background(bgColor)
             } else {
-                VStack(spacing: 0) {
-                    
-                    // Search bar
-                    HStack(spacing: 10) {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.secondary)
-                        TextField("Cari Kanji (contoh: 日)", text: $searchText)
-                            .font(.system(size: 15))
-                        if !searchText.isEmpty {
-                            Button(action: { searchText = "" }) {
-                                Image(systemName: "xmark.circle.fill")
-                                    .foregroundColor(.secondary)
-                            }
-                        }
-                    }
-                    .padding(12)
-                    .background(cardColor)
-                    .cornerRadius(12)
-                    .padding(.horizontal, 16)
-                    .padding(.vertical, 10)
-                    .background(bgColor)
+                VStack(spacing: 14) {
+                    ScreenHeader(title: "JLPT \(level.id) Kanji")
+
+                    SearchField(placeholder: "Cari Kanji (contoh: 日)", text: $searchText)
+                        .padding(.horizontal, 20)
                     
                     // Grid kanji
                     ScrollView {
@@ -109,8 +89,8 @@ struct KanjiListView: View {
                 }
             }
         }
-        .navigationTitle("JLPT \(level.id) Kanji")
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar(.hidden, for: .navigationBar)
         .task {
             guard kanjiItems.isEmpty else { return }
             let items = await Task.detached(priority: .userInitiated) {

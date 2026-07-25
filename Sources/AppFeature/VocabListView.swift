@@ -11,12 +11,8 @@ struct VocabularyListView: View {
     @State private var loadState: ViewLoadState = .loading
     @State private var selectedFilter: String = "Semua"
     
-    var bgColor: Color {
-        colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground)
-    }
-    var cardColor: Color {
-        colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-    }
+    var bgColor: Color { AppTheme.screenBackground(colorScheme) }
+    var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var availableFilters: [String] {
         var seen = Set<String>()
@@ -53,54 +49,20 @@ struct VocabularyListView: View {
             } else if loadState == .empty {
                 EmptyStateView(title: "Coming soon", subtitle: "Konten level ini belum tersedia.", icon: "folder")
             } else {
-                VStack(spacing: 0) {
-                    // Search bar
-                    HStack(spacing: 10) {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.secondary)
-                        TextField("Cari kosakata", text: $searchText)
-                            .font(.system(size: 15))
-                        if !searchText.isEmpty {
-                            Button(action: { searchText = "" }) {
-                                Image(systemName: "xmark.circle.fill")
-                                    .foregroundColor(.secondary)
-                            }
-                        }
-                    }
-                    .padding(12)
-                    .background(cardColor)
-                    .cornerRadius(12)
-                    .padding(.horizontal, 16)
-                    .padding(.top, 10)
-                    
-                    // Filter tab jenis kata
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 8) {
-                            ForEach(availableFilters, id: \.self) { filter in
-                                Button {
-                                    selectedFilter = filter
-                                } label: {
-                                    Text(filter)
-                                        .font(.system(size: 13, weight: .semibold))
-                                        .foregroundColor(selectedFilter == filter ? .white : .primary)
-                                        .padding(.horizontal, 14)
-                                        .padding(.vertical, 8)
-                                        .background(selectedFilter == filter ? AppTheme.accent : cardColor)
-                                        .cornerRadius(20)
-                                }
-                                .buttonStyle(.plain)
-                            }
-                        }
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 10)
-                    }
-                    
-                    // List kartu detail langsung (tanpa klik masuk halaman baru)
+                // Header, search and filters stay pinned; only the list scrolls.
+                VStack(spacing: 14) {
+                    ScreenHeader(title: "JLPT \(level.id) Vocabulary")
+
+                    SearchField(placeholder: "Cari kosakata", text: $searchText)
+                        .padding(.horizontal, 20)
+
+                    FilterChipRow(filters: availableFilters, selection: $selectedFilter)
+
                     ScrollView {
-                        LazyVStack(spacing: 10) {
+                        LazyVStack(spacing: 12) {
                             if filtered.isEmpty {
                                 Text("Tidak ditemukan")
-                                    .font(.system(size: 15))
+                                    .font(AppTheme.rounded(15, .medium))
                                     .foregroundColor(.secondary)
                                     .padding(.top, 60)
                             } else {
@@ -109,15 +71,17 @@ struct VocabularyListView: View {
                                 }
                             }
                         }
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 10)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 4)
+                        .padding(.bottom, 20)
                     }
                 }
+                .padding(.top, 4)
             }
         }
-        .background(bgColor)
-        .navigationTitle("JLPT \(level.id) Vocabulary")
-        .navigationBarTitleDisplayMode(.inline)
+        .background(bgColor.ignoresSafeArea())
+        .navigationBarBackButtonHidden(true)
+        .toolbar(.hidden, for: .navigationBar)
         .task {
             guard words.isEmpty else { return }
             let jsonFile = level.jsonFile
@@ -148,7 +112,7 @@ struct VocabularyInlineCard: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
                 Text("JLPT \(levelId)")
-                    .font(.system(size: 10, weight: .bold))
+                    .font(AppTheme.rounded(10, .bold))
                     .foregroundColor(.white)
                     .padding(.horizontal, 8)
                     .padding(.vertical, 3)
@@ -167,24 +131,25 @@ struct VocabularyInlineCard: View {
             }
             
             Text(item.kanji)
-                .font(.system(size: 32, weight: .bold))
+                .font(AppTheme.rounded(32, .bold))
                 .foregroundColor(.primary)
-            
+
             Text(item.hiragana)
-                .font(.system(size: 15))
+                .font(AppTheme.rounded(15, .medium))
                 .foregroundColor(.secondary)
-            
+
             Text(item.jenisKata)
-                .font(.system(size: 13, weight: .semibold))
+                .font(AppTheme.rounded(13, .bold))
                 .foregroundColor(AppTheme.ocean)
-            
+
             Text(item.arti)
-                .font(.system(size: 16))
+                .font(AppTheme.rounded(16, .medium))
                 .foregroundColor(.primary)
         }
-        .padding(16)
+        .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(cardColor)
-        .cornerRadius(16)
+        .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+        .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 3)
     }
 }
