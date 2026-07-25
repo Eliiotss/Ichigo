@@ -70,6 +70,57 @@ struct SettingsView: View {
         .padding(.top, 14)
     }
 
+    // MARK: - Preferensi
+
+    private var preferencesCard: some View {
+        SettingsCard {
+            SettingsRow(icon: "bell.fill", colors: [AppTheme.indigo, AppTheme.indigoDeep], title: "Pengingat Belajar") {
+                Toggle("", isOn: $notifEnabled)
+                    .labelsHidden()
+                    .tint(AppTheme.accent)
+                    .onChange(of: notifEnabled) { _, isOn in
+                        if isOn {
+                            notificationManager.requestPermission { granted in
+                                if granted {
+                                    notificationManager.scheduleDailyReminder(hour: notifHour)
+                                } else {
+                                    notifEnabled = false
+                                    showPermissionDeniedAlert = true
+                                }
+                            }
+                        } else {
+                            notificationManager.cancelReminder()
+                        }
+                    }
+            }
+
+            if notifEnabled {
+                SettingsRow(icon: "clock.fill", colors: [AppTheme.teal, AppTheme.tealDeep], title: "Waktu pengingat") {
+                    Stepper("jam \(notifHour):00", value: $notifHour, in: 6...23)
+                        .font(AppTheme.rounded(14, .semibold))
+                        .foregroundColor(AppTheme.secondaryText(scheme))
+                        .fixedSize()
+                        .onChange(of: notifHour) { _, newHour in
+                            notificationManager.scheduleDailyReminder(hour: newHour)
+                        }
+                }
+            }
+
+            SettingsRow(icon: "target", colors: [AppTheme.violet, AppTheme.violetDeep], title: "Target Harian") {
+                Stepper("\(dailyTarget) kartu", value: $dailyTarget, in: 5...200, step: 5)
+                    .font(AppTheme.rounded(14, .semibold))
+                    .foregroundColor(AppTheme.secondaryText(scheme))
+                    .fixedSize()
+            }
+
+            SettingsRow(icon: "globe", colors: [AppTheme.blue, AppTheme.indigoDeep], title: "Bahasa", showsDivider: false) {
+                Text("Bahasa Indonesia")
+                    .font(AppTheme.rounded(16, .semibold))
+                    .foregroundColor(AppTheme.secondaryText(scheme))
+            }
+        }
+    }
+
     // MARK: - Data belajar
 
     private var dataCard: some View {
