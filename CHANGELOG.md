@@ -20,6 +20,10 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     dividers; native controls retained.
   - **Browsing screens** (Vocabulary / Kanji / Grammar): pinned `ScreenHeader`,
     pill `SearchField` and `FilterChipRow` that stay fixed while content scrolls.
+  - **Level lists** (Vocabulary / Kanji / Grammar) now render from one shared
+    card layout — same 52pt level chip, name + chevron, description and item
+    count, and the same locked-card treatment — so the three screens are no
+    longer three slightly different designs.
   - **App-wide type ramp**: every screen now draws its fonts from
     `AppTheme.rounded(...)` and its text colours, surfaces and shadows from the
     theme tokens, so the flashcard, kana, kanji, vocabulary and grammar screens
@@ -72,6 +76,12 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   now stateless enums routed through `ResourceLoader`.
 
 ### Fixed
+- **Level counts contradicted the bundled datasets.** Kanji N3 advertised "580
+  Essential Kanji" against a 214-entry dataset, Vocabulary N4 claimed ~1500
+  words against 700, and Vocabulary N3 claimed ~3750 against 1110. Every count
+  is now the real number of entries in the shipped JSON (Kanji 120/181/214,
+  Vocabulary 800/700/1110, Grammar 84/131/160), and locked levels carry `0` so
+  no figure is advertised for data that has not shipped.
 - **Level cards** for Kanji, Vocabulary and Grammar had duplicated SwiftUI
   modifiers that silently overrode the description styling and hid the item
   count; the intended two-line layout (description + count) is restored, and the
@@ -82,6 +92,10 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - **Notification scheduling** now logs failures from `UNUserNotificationCenter`.
 
 ### Removed
+- **Level search field on the Vocabulary screen.** It filtered a fixed list of
+  five levels, which the Kanji and Grammar screens never had; the three level
+  lists are now identical. Search remains where it does work — inside a level,
+  over that level's actual entries.
 - Dead code: the unused `AppState` observable object, the legacy `FlashcardItem`
   type and its initializer, the unused `itemsPerLevel` storage, and the no-op
   `NotificationManager.skipTodayIfTargetMet` method.
