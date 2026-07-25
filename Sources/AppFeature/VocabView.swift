@@ -4,9 +4,7 @@ struct VocabularyView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var searchText = ""
 
-    var bgColor: Color {
-        colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground)
-    }
+    var bgColor: Color { AppTheme.screenBackground(colorScheme) }
     
     var filteredLevels: [VocabularyLevel] {
         let q = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -44,7 +42,7 @@ struct VocabularyView: View {
                                 .disableAutocorrection(true)
                         }
                         .padding(12)
-                        .background(Color(UIColor.secondarySystemBackground))
+                        .background(AppTheme.surface(colorScheme))
                         .cornerRadius(14)
                         
                         ForEach(filteredLevels) { level in
@@ -72,9 +70,7 @@ struct VocabularyUnlockedCard: View {
     let level: VocabularyLevel
     @Environment(\.colorScheme) var colorScheme
     
-    var cardColor: Color {
-        colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-    }
+    var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var body: some View {
         HStack(spacing: 14) {
@@ -108,8 +104,8 @@ struct VocabularyUnlockedCard: View {
         }
         .padding(16)
         .background(cardColor)
-        .cornerRadius(18)
-        .shadow(color: Color.black.opacity(colorScheme == .dark ? 0.25 : 0.05), radius: 6, x: 0, y: 2)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius, style: .continuous))
+        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 9, x: 0, y: 6)
     }
 }
 
@@ -117,9 +113,7 @@ struct VocabularyLockedCard: View {
     let level: VocabularyLevel
     @Environment(\.colorScheme) var colorScheme
     
-    var cardColor: Color {
-        colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-    }
+    var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var body: some View {
         HStack(spacing: 14) {

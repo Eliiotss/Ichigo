@@ -5,13 +5,9 @@ struct GrammarDetailView: View {
     let item: GrammarItem
     @Environment(\.colorScheme) var colorScheme
     
-    var bgColor: Color {
-        colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground)
-    }
+    var bgColor: Color { AppTheme.screenBackground(colorScheme) }
     
-    var cardColor: Color {
-        colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-    }
+    var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var softCardColor: Color {
         colorScheme == .dark ? Color(UIColor.tertiarySystemBackground) : Color(UIColor.secondarySystemGroupedBackground)
@@ -225,7 +221,7 @@ struct GrammarInfoSection<Content: View, Trailing: View>: View {
             content
         }
         .padding(16)
-        .background(Color(UIColor.secondarySystemBackground))
+        .background(AppTheme.surface(colorScheme))
         .cornerRadius(18)
     }
 }
@@ -249,7 +245,7 @@ struct GrammarMiniInfoCard: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(14)
-        .background(Color(UIColor.secondarySystemBackground))
+        .background(AppTheme.surface(colorScheme))
         .cornerRadius(16)
     }
 }

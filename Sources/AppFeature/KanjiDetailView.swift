@@ -6,12 +6,8 @@ struct KanjiDetailView: View {
     let levelId: String
     @Environment(\.colorScheme) var colorScheme
     
-    var bgColor: Color {
-        colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground)
-    }
-    var cardColor: Color {
-        colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-    }
+    var bgColor: Color { AppTheme.screenBackground(colorScheme) }
+    var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var body: some View {
         ScrollView {

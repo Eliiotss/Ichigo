@@ -189,8 +189,8 @@ struct FlashcardSessionView: View {
         _vm = StateObject(wrappedValue: FlashcardDeckSessionViewModel(mode: mode, level: level, store: store))
     }
     
-    private var bgColor: Color { colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground) }
-    private var cardColor: Color { colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white }
+    private var bgColor: Color { AppTheme.screenBackground(colorScheme) }
+    private var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var body: some View {
         Group {

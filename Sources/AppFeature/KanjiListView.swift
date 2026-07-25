@@ -116,9 +116,7 @@ struct KanjiCard: View {
     let item: KanjiItem
     @Environment(\.colorScheme) var colorScheme
     
-    var cardColor: Color {
-        colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-    }
+    var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var body: some View {
         VStack(spacing: 6) {

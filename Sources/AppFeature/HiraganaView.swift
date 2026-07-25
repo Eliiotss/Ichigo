@@ -103,13 +103,9 @@ struct HiraganaView: View {
         isYoonUnlocked ? currentFlat : mainFlat
     }
     
-    var bgColor: Color {
-        colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground)
-    }
+    var bgColor: Color { AppTheme.screenBackground(colorScheme) }
     
-    var cardColor: Color {
-        colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-    }
+    var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var masteredCount: Int {
         store.masteredCount(flat: currentFlat, isKatakana: isKatakana)

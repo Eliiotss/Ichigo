@@ -5,12 +5,8 @@ struct FlashcardTypeSelectionView: View {
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var store: FlashcardStore
 
-    var bgColor: Color {
-        colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground)
-    }
-    var cardColor: Color {
-        colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-    }
+    var bgColor: Color { AppTheme.screenBackground(colorScheme) }
+    var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var body: some View {
         ScrollView {
@@ -58,8 +54,8 @@ struct FlashcardModeCard: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 28)
         .background(cardColor)
-        .cornerRadius(22)
-        .shadow(color: Color.black.opacity(colorScheme == .dark ? 0.25 : 0.06), radius: 6, x: 0, y: 2)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius, style: .continuous))
+        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 9, x: 0, y: 6)
     }
 }
 
@@ -69,9 +65,7 @@ struct FlashcardLevelView: View {
     @ObservedObject var store: FlashcardStore
     @Environment(\.colorScheme) var colorScheme
     
-    var bgColor: Color {
-        colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground)
-    }
+    var bgColor: Color { AppTheme.screenBackground(colorScheme) }
     
     var body: some View {
         ScrollView {
@@ -109,9 +103,7 @@ struct FlashcardUnlockedLevelCard: View {
     @ObservedObject var store: FlashcardStore
     @Environment(\.colorScheme) var colorScheme
     
-    var cardColor: Color {
-        colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-    }
+    var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var stats: FlashcardStore.LevelStats? { store.deckStats(mode: mode, levelId: level.id) }
     var totalText: String { stats.map { "\($0.total)" } ?? "-" }
@@ -159,8 +151,8 @@ struct FlashcardUnlockedLevelCard: View {
         }
         .padding(16)
         .background(cardColor)
-        .cornerRadius(16)
-        .shadow(color: Color.black.opacity(colorScheme == .dark ? 0.25 : 0.06), radius: 6, x: 0, y: 2)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius, style: .continuous))
+        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 9, x: 0, y: 6)
     }
 }
 
@@ -169,9 +161,7 @@ struct FlashcardLockedLevelCard: View {
     let level: FlashcardLevelInfo
     @Environment(\.colorScheme) var colorScheme
     
-    var cardColor: Color {
-        colorScheme == .dark ? Color(UIColor.secondarySystemBackground) : Color.white
-    }
+    var cardColor: Color { AppTheme.surface(colorScheme) }
     
     var body: some View {
         HStack(spacing: 14) {

@@ -60,13 +60,6 @@ struct ProfileView: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
 
-                if !account.email.isEmpty {
-                    Text(account.email)
-                        .font(AppTheme.rounded(12, .semibold))
-                        .foregroundColor(.white.opacity(0.85))
-                        .lineLimit(1)
-                }
-
                 Text("JLPT Learner")
                     .font(AppTheme.rounded(12, .heavy))
                     .foregroundColor(AppTheme.blue)
