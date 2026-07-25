@@ -7,8 +7,8 @@ struct GrammarListView: View {
     
     @State private var items: [GrammarItem] = []
     @State private var searchText: String = ""
-    @State private var isLoading: Bool = true
-    
+    @State private var loadState: ViewLoadState = .loading
+
     var bgColor: Color { AppTheme.screenBackground(colorScheme) }
     var cardColor: Color { AppTheme.surface(colorScheme) }
     
@@ -25,7 +25,7 @@ struct GrammarListView: View {
     
     var body: some View {
         Group {
-            if isLoading {
+            if loadState == .loading {
                 VStack(spacing: 12) {
                     ProgressView()
                     Text("Memuat tata bahasa...")
@@ -34,16 +34,14 @@ struct GrammarListView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(bgColor)
-            } else if items.isEmpty {
-                VStack(spacing: 12) {
-                    Text("📂").font(AppTheme.rounded(48))
-                    Text("File \(level.jsonFile).json belum ditambahkan")
-                        .font(AppTheme.rounded(14, .semibold))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
-                        .multilineTextAlignment(.center)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(bgColor)
+            } else if case .failed(let message) = loadState {
+                ErrorStateView(message: message)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(bgColor)
+            } else if loadState == .empty {
+                EmptyStateView(title: "Coming soon", subtitle: "Konten level ini belum tersedia.", icon: "folder")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(bgColor)
             } else {
                 VStack(spacing: 14) {
                     ScreenHeader(title: "Tata Bahasa \(level.id)")
@@ -51,9 +49,11 @@ struct GrammarListView: View {
                     SearchField(placeholder: "Cari tata bahasa...", text: $searchText)
                         .padding(.horizontal, 20)
                     
-                    // List grammar
+                    // List grammar. Lazy so a 160-pattern level only builds the
+                    // rows that are on screen, matching the kanji and vocabulary
+                    // lists.
                     ScrollView {
-                        VStack(spacing: 10) {
+                        LazyVStack(spacing: 10) {
                             if filtered.isEmpty {
                                 Text("Tidak ditemukan")
                                     .font(AppTheme.rounded(15))
@@ -68,7 +68,7 @@ struct GrammarListView: View {
                                 }
                             }
                         }
-                        .padding(.horizontal, 16)
+                        .padding(.horizontal, 20)
                         .padding(.vertical, 8)
                     }
                     .background(bgColor)
@@ -81,11 +81,15 @@ struct GrammarListView: View {
         .task {
             guard items.isEmpty else { return }
             let jsonFile = level.jsonFile
-            let loaded = await Task.detached(priority: .userInitiated) {
-                GrammarLoader.load(from: jsonFile)
-            }.value
-            items = loaded
-            isLoading = false
+            do {
+                let loaded = try await Task.detached(priority: .userInitiated) {
+                    try GrammarLoader.load(from: jsonFile)
+                }.value
+                items = loaded
+                loadState = loaded.isEmpty ? .empty : .loaded
+            } catch {
+                loadState = .failed(error.localizedDescription)
+            }
         }
     }
 }
