@@ -20,6 +20,10 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     dividers; native controls retained.
   - **Browsing screens** (Vocabulary / Kanji / Grammar): pinned `ScreenHeader`,
     pill `SearchField` and `FilterChipRow` that stay fixed while content scrolls.
+  - **App-wide type ramp**: every screen now draws its fonts from
+    `AppTheme.rounded(...)` and its text colours, surfaces and shadows from the
+    theme tokens, so the flashcard, kana, kanji, vocabulary and grammar screens
+    match Home/Profile/Settings.
 - **Google Drive backup & restore implementation** (`Sources/AppFeature/Backup/`):
   dependency-free OAuth 2.0 + PKCE via `ASWebAuthenticationSession`, tokens in the
   Keychain, and `URLSession` REST scoped to the Drive `appDataFolder`, plus the
