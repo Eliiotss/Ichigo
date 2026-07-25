@@ -55,7 +55,7 @@ struct KanjiListView: View {
             } else if case .failed(let message) = loadState {
                 ErrorStateView(message: message).frame(maxWidth: .infinity, maxHeight: .infinity).background(bgColor)
             } else if loadState == .empty {
-                EmptyStateView(title: "Coming soon", subtitle: "Konten level ini belum tersedia.", icon: "folder").frame(maxWidth: .infinity, maxHeight: .infinity).background(bgColor)
+                EmptyStateView(title: "Belum tersedia", subtitle: "Konten level ini belum tersedia.", icon: "folder").frame(maxWidth: .infinity, maxHeight: .infinity).background(bgColor)
             } else {
                 VStack(spacing: 14) {
                     ScreenHeader(title: "JLPT \(level.id) Kanji")

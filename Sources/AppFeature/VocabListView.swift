@@ -1,6 +1,9 @@
-
 import SwiftUI
 
+// MARK: - Daftar Kosakata
+
+/// Daftar seluruh kosakata pada satu level JLPT, lengkap dengan pencarian dan
+/// penyaring jenis kata.
 struct VocabularyListView: View {
     let level: VocabularyLevel
     @Environment(\.colorScheme) var colorScheme
@@ -43,13 +46,22 @@ struct VocabularyListView: View {
     var body: some View {
         Group {
             if loadState == .loading {
-                ProgressView("Memuat vocabulary \(level.id)...")
+                VStack(spacing: 12) {
+                    ProgressView()
+                    Text("Memuat kosakata \(level.id)...")
+                        .font(AppTheme.rounded(14))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else if case .failed(let message) = loadState {
                 ErrorStateView(message: message)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else if loadState == .empty {
-                EmptyStateView(title: "Coming soon", subtitle: "Konten level ini belum tersedia.", icon: "folder")
+                EmptyStateView(title: "Belum tersedia", subtitle: "Konten level ini belum tersedia.", icon: "folder")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
-                // Header, search and filters stay pinned; only the list scrolls.
+                // Header, pencarian, dan penyaring tetap diam; hanya daftarnya
+                // yang menggulir.
                 VStack(spacing: 14) {
                     ScreenHeader(title: "JLPT \(level.id) Vocabulary")
 
@@ -106,54 +118,64 @@ struct VocabularyListView: View {
     }
 }
 
-// MARK: - Kartu Vocab Inline (detail lengkap tanpa klik)
+// MARK: - Kartu Kosakata
+
+/// Kartu satu kosakata. Seluruh detailnya tampil langsung di daftar sehingga
+/// pengguna tidak perlu membuka halaman lain: lencana level dan tombol suara di
+/// baris atas, lalu kanji, cara baca, jenis kata, dan artinya.
 struct VocabularyInlineCard: View {
     let item: VocabularyItem
     let levelId: String
     let cardColor: Color
+    @Environment(\.colorScheme) private var colorScheme
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
                 Text("JLPT \(levelId)")
-                    .font(AppTheme.rounded(10, .bold))
+                    .font(AppTheme.rounded(11, .bold))
                     .foregroundColor(.white)
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 3)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
                     .background(AppTheme.accent)
-                    .cornerRadius(6)
+                    .clipShape(Capsule())
+
                 Spacer()
+
                 Button(action: { AudioSpeechHelper.shared.speak(item.kanji) }) {
                     Image(systemName: "speaker.wave.2.fill")
                         .font(AppTheme.rounded(15, .semibold))
                         .foregroundColor(AppTheme.accent)
-                        .padding(8)
+                        .padding(10)
                         .background(AppTheme.accent.opacity(0.12))
                         .clipShape(Circle())
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("Dengarkan pelafalan \(item.kanji)")
             }
 
             Text(item.kanji)
-                .font(AppTheme.rounded(32, .bold))
-                .foregroundColor(.primary)
+                .font(AppTheme.rounded(34, .bold))
+                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .fixedSize(horizontal: false, vertical: true)
 
             Text(item.hiragana)
-                .font(AppTheme.rounded(15, .medium))
-                .foregroundColor(.secondary)
+                .font(AppTheme.rounded(14, .medium))
+                .foregroundColor(AppTheme.secondaryText(colorScheme))
 
             Text(item.jenisKata)
                 .font(AppTheme.rounded(13, .bold))
-                .foregroundColor(AppTheme.ocean)
+                .foregroundColor(AppTheme.accent)
 
             Text(item.arti)
-                .font(AppTheme.rounded(16, .medium))
-                .foregroundColor(.primary)
+                .font(AppTheme.rounded(17, .medium))
+                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .fixedSize(horizontal: false, vertical: true)
         }
         .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(cardColor)
-        .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
-        .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 3)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius, style: .continuous))
+        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 8, x: 0, y: 3)
     }
 }
