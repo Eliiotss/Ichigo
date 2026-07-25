@@ -63,7 +63,7 @@ let jlptLevels: [JLPTLevel] = [
 
 // MARK: - JSON Loader
 enum KanjiLoader {
-    static func load(from filename: String) -> [KanjiItem] {
-        ResourceLoader.loadArray(KanjiItem.self, from: filename)
+    static func load(from filename: String) throws -> [KanjiItem] {
+        try ResourceLoader.loadArray(KanjiItem.self, from: filename)
     }
 }

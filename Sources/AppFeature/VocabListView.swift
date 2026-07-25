@@ -85,11 +85,15 @@ struct VocabularyListView: View {
         .task {
             guard words.isEmpty else { return }
             let jsonFile = level.jsonFile
-            let items = await Task.detached(priority: .userInitiated) {
-                VocabularyLoader.load(from: jsonFile)
-            }.value
-            words = items
-            loadState = items.isEmpty ? .empty : .loaded
+            do {
+                let items = try await Task.detached(priority: .userInitiated) {
+                    try VocabularyLoader.load(from: jsonFile)
+                }.value
+                words = items
+                loadState = items.isEmpty ? .empty : .loaded
+            } catch {
+                loadState = .failed(error.localizedDescription)
+            }
         }
         .onChange(of: searchText) { _, newValue in
             Task { @MainActor in

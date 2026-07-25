@@ -596,12 +596,18 @@ struct FlashcardDeckCard: Identifiable, Hashable {
 }
 
 enum FlashcardDeckLoader {
+    /// A deck that cannot be read is reported to the caller as an empty deck: the
+    /// review screen already has a state for "nothing to review", and the reason
+    /// is logged by `ResourceLoader`. Browsing screens, which must distinguish a
+    /// missing file from an empty level, use the throwing loaders directly.
     static func load(mode: FlashcardMode, jsonFile: String) -> [FlashcardDeckCard] {
         switch mode {
         case .vocabulary:
-            return VocabularyLoader.load(from: jsonFile).map { FlashcardDeckCard(vocab: $0) }
+            return ResourceLoader.loadArrayOrEmpty(VocabularyItem.self, from: jsonFile)
+                .map { FlashcardDeckCard(vocab: $0) }
         case .grammar:
-            return GrammarLoader.load(from: jsonFile).map { FlashcardDeckCard(grammar: $0) }
+            return ResourceLoader.loadArrayOrEmpty(GrammarItem.self, from: jsonFile)
+                .map { FlashcardDeckCard(grammar: $0) }
         }
     }
 }

@@ -149,7 +149,7 @@ let grammarLevels: [GrammarLevel] = [
 
 // MARK: - Grammar JSON Loader
 enum GrammarLoader {
-    static func load(from filename: String) -> [GrammarItem] {
-        ResourceLoader.loadArray(GrammarItem.self, from: filename)
+    static func load(from filename: String) throws -> [GrammarItem] {
+        try ResourceLoader.loadArray(GrammarItem.self, from: filename)
     }
 }

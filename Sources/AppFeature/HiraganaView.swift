@@ -31,7 +31,7 @@ struct KanaGroupJSON: Codable {
 // MARK: - Kana Loader
 enum KanaLoader {
     static func load(from filename: String) -> [KanaGroup] {
-        ResourceLoader.loadArray(KanaGroupJSON.self, from: filename).map { group in
+        ResourceLoader.loadArrayOrEmpty(KanaGroupJSON.self, from: filename).map { group in
             KanaGroup(
                 title: group.title,
                 subtitle: group.subtitle,

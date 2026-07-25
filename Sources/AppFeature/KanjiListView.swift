@@ -93,11 +93,16 @@ struct KanjiListView: View {
         .toolbar(.hidden, for: .navigationBar)
         .task {
             guard kanjiItems.isEmpty else { return }
-            let items = await Task.detached(priority: .userInitiated) {
-                KanjiLoader.load(from: level.jsonFile)
-            }.value
-            kanjiItems = items
-            loadState = items.isEmpty ? .empty : .loaded
+            let jsonFile = level.jsonFile
+            do {
+                let items = try await Task.detached(priority: .userInitiated) {
+                    try KanjiLoader.load(from: jsonFile)
+                }.value
+                kanjiItems = items
+                loadState = items.isEmpty ? .empty : .loaded
+            } catch {
+                loadState = .failed(error.localizedDescription)
+            }
         }
         .onChange(of: searchText) { _, newValue in
             Task { @MainActor in

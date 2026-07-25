@@ -34,8 +34,8 @@ let vocabularyLevels: [VocabularyLevel] = [
 
 // MARK: - Loader
 enum VocabularyLoader {
-    static func load(from filename: String) -> [VocabularyItem] {
-        ResourceLoader.loadArray(VocabularyItem.self, from: filename)
+    static func load(from filename: String) throws -> [VocabularyItem] {
+        try ResourceLoader.loadArray(VocabularyItem.self, from: filename)
     }
 }
 
