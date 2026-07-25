@@ -24,12 +24,16 @@ final class DriveBackupManager: ObservableObject {
     private let account: AccountStore
     private let lastBackupKey = "drive_last_backup_at"
 
+    /// `AccountStore.shared` is main-actor isolated, so it cannot be a default
+    /// argument (those are evaluated in a nonisolated context — an error under
+    /// the Swift 6 language mode). Resolve it inside the isolated initialiser
+    /// instead, keeping the store injectable for tests.
     init(defaults: UserDefaults = .standard,
          drive: GoogleDriveClient = GoogleDriveClient(),
-         account: AccountStore = .shared) {
+         account: AccountStore? = nil) {
         self.defaults = defaults
         self.drive = drive
-        self.account = account
+        self.account = account ?? AccountStore.shared
         if let config = GoogleDriveConfig.load() {
             self.oauth = GoogleOAuthClient(config: config)
             self.isConfigured = true
