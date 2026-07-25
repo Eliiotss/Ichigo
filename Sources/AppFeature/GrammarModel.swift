@@ -137,11 +137,11 @@ struct GrammarLevel: Identifiable {
 }
 
 let grammarLevels: [GrammarLevel] = [
-    GrammarLevel(id: "N5", name: "Beginner", description: "Tata Bahasa Dasar", color: .green, bgColor: Color.green.opacity(0.15), isLocked: false, jsonFile: "GrammarN5"),
-    GrammarLevel(id: "N4", name: "Elementary", description: "Tata Bahasa Dasar+", color: .blue, bgColor: Color.blue.opacity(0.15), isLocked: false, jsonFile: "GrammarN4"),
-    GrammarLevel(id: "N3", name: "Intermediate", description: "Tata Bahasa Menengah", color: .orange, bgColor: Color.orange.opacity(0.15), isLocked: false, jsonFile: "GrammarN3"),
-    GrammarLevel(id: "N2", name: "Pre-Advanced", description: "Tata Bahasa Lanjutan", color: .pink, bgColor: Color.pink.opacity(0.15), isLocked: true, jsonFile: "GrammarN2"),
-    GrammarLevel(id: "N1", name: "Advanced", description: "Tata Bahasa Master", color: .red, bgColor: Color.red.opacity(0.15), isLocked: true, jsonFile: "GrammarN1")
+    GrammarLevel(id: "N5", name: "Beginner", description: "Tata Bahasa Dasar", color: AppTheme.levelColor("N5"), bgColor: AppTheme.levelBackground("N5"), isLocked: false, jsonFile: "GrammarN5"),
+    GrammarLevel(id: "N4", name: "Elementary", description: "Tata Bahasa Dasar+", color: AppTheme.levelColor("N4"), bgColor: AppTheme.levelBackground("N4"), isLocked: false, jsonFile: "GrammarN4"),
+    GrammarLevel(id: "N3", name: "Intermediate", description: "Tata Bahasa Menengah", color: AppTheme.levelColor("N3"), bgColor: AppTheme.levelBackground("N3"), isLocked: false, jsonFile: "GrammarN3"),
+    GrammarLevel(id: "N2", name: "Pre-Advanced", description: "Tata Bahasa Lanjutan", color: AppTheme.levelColor("N2"), bgColor: AppTheme.levelBackground("N2"), isLocked: true, jsonFile: "GrammarN2"),
+    GrammarLevel(id: "N1", name: "Advanced", description: "Tata Bahasa Master", color: AppTheme.levelColor("N1"), bgColor: AppTheme.levelBackground("N1"), isLocked: true, jsonFile: "GrammarN1")
 ]
 
 // MARK: - Grammar JSON Loader

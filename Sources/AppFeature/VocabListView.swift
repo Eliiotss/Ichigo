@@ -85,7 +85,7 @@ struct VocabularyListView: View {
                                         .foregroundColor(selectedFilter == filter ? .white : .primary)
                                         .padding(.horizontal, 14)
                                         .padding(.vertical, 8)
-                                        .background(selectedFilter == filter ? Color.blue : cardColor)
+                                        .background(selectedFilter == filter ? AppTheme.accent : cardColor)
                                         .cornerRadius(20)
                                 }
                                 .buttonStyle(.plain)
@@ -152,15 +152,15 @@ struct VocabularyInlineCard: View {
                     .foregroundColor(.white)
                     .padding(.horizontal, 8)
                     .padding(.vertical, 3)
-                    .background(Color.blue)
+                    .background(AppTheme.accent)
                     .cornerRadius(6)
                 Spacer()
                 Button(action: { AudioSpeechHelper.shared.speak(item.kanji) }) {
                     Image(systemName: "speaker.wave.2.fill")
                         .font(.system(size: 15, weight: .semibold))
-                        .foregroundColor(.blue)
+                        .foregroundColor(AppTheme.accent)
                         .padding(8)
-                        .background(Color.blue.opacity(0.12))
+                        .background(AppTheme.accent.opacity(0.12))
                         .clipShape(Circle())
                 }
                 .buttonStyle(.plain)
@@ -176,7 +176,7 @@ struct VocabularyInlineCard: View {
             
             Text(item.jenisKata)
                 .font(.system(size: 13, weight: .semibold))
-                .foregroundColor(.blue)
+                .foregroundColor(AppTheme.ocean)
             
             Text(item.arti)
                 .font(.system(size: 16))

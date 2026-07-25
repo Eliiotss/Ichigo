@@ -151,7 +151,7 @@ struct KanjiCard: View {
             // Onyomi / Kunyomi kecil
             Text("\(item.onyomi) / \(item.kunyomi)")
                 .font(.system(size: 10))
-                .foregroundColor(.blue)
+                .foregroundColor(AppTheme.ocean)
                 .lineLimit(1)
                 .minimumScaleFactor(0.6)
                 .padding(.horizontal, 4)

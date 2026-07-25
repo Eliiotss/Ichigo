@@ -27,7 +27,7 @@ struct ProfileView: View {
                     VStack(spacing: 12) {
                         ZStack {
                             Circle()
-                                .fill(LinearGradient(colors: [.blue, .purple], startPoint: .topLeading, endPoint: .bottomTrailing))
+                                .fill(LinearGradient(colors: [AppTheme.sky, AppTheme.indigo], startPoint: .topLeading, endPoint: .bottomTrailing))
                                 .frame(width: 84, height: 84)
                             Text(initials(from: userName))
                                 .font(.system(size: 30, weight: .black))
@@ -44,10 +44,10 @@ struct ProfileView: View {
                             }
                             Text("JLPT Learner")
                                 .font(.system(size: 13, weight: .semibold))
-                                .foregroundColor(.blue)
+                                .foregroundColor(AppTheme.accent)
                                 .padding(.horizontal, 12)
                                 .padding(.vertical, 4)
-                                .background(Color.blue.opacity(0.12))
+                                .background(AppTheme.accent.opacity(0.12))
                                 .clipShape(Capsule())
                         }
                     }
@@ -70,7 +70,7 @@ struct ProfileView: View {
                                     .fill(Color.gray.opacity(0.16))
                                     .frame(height: 8)
                                 RoundedRectangle(cornerRadius: 5)
-                                    .fill(Color.blue)
+                                    .fill(AppTheme.accent)
                                     .frame(width: bar.size.width * CGFloat(targetProgress), height: 8)
                             }
                         }
@@ -82,10 +82,10 @@ struct ProfileView: View {
                     
                     // Statistik grid
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
-                        ProfileStatTile(title: "Due", value: "\(dueTodayTotal)", subtitle: "hari ini", color: .blue, icon: "clock.fill")
-                        ProfileStatTile(title: "Belajar", value: "\(flashcardStore.studiedTodayTotal)", subtitle: "kartu", color: .green, icon: "checkmark.circle.fill")
+                        ProfileStatTile(title: "Due", value: "\(dueTodayTotal)", subtitle: "hari ini", color: AppTheme.blue, icon: "clock.fill")
+                        ProfileStatTile(title: "Belajar", value: "\(flashcardStore.studiedTodayTotal)", subtitle: "kartu", color: AppTheme.teal, icon: "checkmark.circle.fill")
                         ProfileStatTile(title: "Streak", value: "\(flashcardStore.currentStreak)", subtitle: "hari", color: .orange, icon: "flame.fill")
-                        ProfileStatTile(title: "Mastered", value: "\(flashcardStore.masteredTotal)", subtitle: "kartu", color: .purple, icon: "star.fill")
+                        ProfileStatTile(title: "Mastered", value: "\(flashcardStore.masteredTotal)", subtitle: "kartu", color: AppTheme.indigo, icon: "star.fill")
                     }
                     
                     // Ringkasan akurasi
@@ -97,7 +97,7 @@ struct ProfileView: View {
                         HStack(spacing: 12) {
                             accuracyPill(label: "Ulang", count: summary.againCount, color: .red)
                             accuracyPill(label: "Susah", count: summary.hardCount, color: .orange)
-                            accuracyPill(label: "Bagus", count: summary.goodCount, color: .blue)
+                            accuracyPill(label: "Bagus", count: summary.goodCount, color: AppTheme.blue)
                             accuracyPill(label: "Mudah", count: summary.easyCount, color: .green)
                         }
                         

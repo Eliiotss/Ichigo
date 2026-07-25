@@ -530,8 +530,8 @@ enum FlashcardMode: String, CaseIterable, Identifiable {
     
     var color: Color {
         switch self {
-        case .vocabulary: return .blue
-        case .grammar: return .green
+        case .vocabulary: return AppTheme.blue
+        case .grammar: return AppTheme.teal
         }
     }
     

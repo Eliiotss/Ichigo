@@ -27,7 +27,7 @@ struct KanjiDetailView: View {
                             .foregroundColor(.white)
                             .padding(.horizontal, 10)
                             .padding(.vertical, 5)
-                            .background(Color.orange)
+                            .background(AppTheme.accent)
                             .cornerRadius(8)
                         Spacer()
                     }
@@ -43,9 +43,9 @@ struct KanjiDetailView: View {
                         Button(action: { AudioSpeechHelper.shared.speak(item.kanji) }) {
                             Image(systemName: "speaker.wave.2.fill")
                                 .font(.system(size: 16, weight: .semibold))
-                                .foregroundColor(.orange)
+                                .foregroundColor(AppTheme.accent)
                                 .padding(10)
-                                .background(Color.orange.opacity(0.12))
+                                .background(AppTheme.accent.opacity(0.12))
                                 .clipShape(Circle())
                         }
                         .buttonStyle(.plain)
@@ -76,7 +76,7 @@ struct KanjiDetailView: View {
                             .kerning(1.2)
                         Text(item.onyomi)
                             .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(.blue)
+                            .foregroundColor(AppTheme.ocean)
                             .lineLimit(2)
                             .minimumScaleFactor(0.8)
                     }
@@ -92,7 +92,7 @@ struct KanjiDetailView: View {
                             .kerning(1.2)
                         Text(item.kunyomi)
                             .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(.blue)
+                            .foregroundColor(AppTheme.ocean)
                             .lineLimit(2)
                             .minimumScaleFactor(0.8)
                     }
@@ -157,7 +157,7 @@ struct KanjiExampleRow: View {
                 } label: {
                     Image(systemName: "speaker.wave.2.fill")
                         .font(.system(size: 13, weight: .semibold))
-                        .foregroundColor(.orange)
+                        .foregroundColor(AppTheme.accent)
                 }
                 .buttonStyle(.plain)
             }

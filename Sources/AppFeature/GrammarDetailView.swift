@@ -17,7 +17,7 @@ struct GrammarDetailView: View {
         colorScheme == .dark ? Color(UIColor.tertiarySystemBackground) : Color(UIColor.secondarySystemGroupedBackground)
     }
     
-    var accentColor: Color { .indigo }
+    var accentColor: Color { AppTheme.indigo }
     
     var body: some View {
         ScrollView {

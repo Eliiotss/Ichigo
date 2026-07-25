@@ -52,11 +52,11 @@ struct JLPTLevel: Identifiable {
 }
 
 let jlptLevels: [JLPTLevel] = [
-    JLPTLevel(id: "N5", name: "Beginner", description: "120 Essential Kanji", totalKanji: 120, color: .green, bgColor: Color.green.opacity(0.15), isLocked: false, jsonFile: "KanjiN5"),
-    JLPTLevel(id: "N4", name: "Elementary", description: "181 Essential Kanji", totalKanji: 181, color: .blue, bgColor: Color.blue.opacity(0.15), isLocked: false, jsonFile: "KanjiN4"),
-    JLPTLevel(id: "N3", name: "Intermediate", description: "580 Essential Kanji", totalKanji: 580, color: .orange, bgColor: Color.orange.opacity(0.15), isLocked: false, jsonFile: "KanjiN3"),
-    JLPTLevel(id: "N2", name: "Pre-Advanced (Coming Soon)", description: "1,000+ Complex Kanji", totalKanji: 1000, color: .pink, bgColor: Color.pink.opacity(0.15), isLocked: true, jsonFile: "KanjiN2"),
-    JLPTLevel(id: "N1", name: "Advanced (Coming Soon)", description: "2,000+ Master Kanji", totalKanji: 2000, color: .red, bgColor: Color.red.opacity(0.15), isLocked: true, jsonFile: "KanjiN1")
+    JLPTLevel(id: "N5", name: "Beginner", description: "120 Essential Kanji", totalKanji: 120, color: AppTheme.levelColor("N5"), bgColor: AppTheme.levelBackground("N5"), isLocked: false, jsonFile: "KanjiN5"),
+    JLPTLevel(id: "N4", name: "Elementary", description: "181 Essential Kanji", totalKanji: 181, color: AppTheme.levelColor("N4"), bgColor: AppTheme.levelBackground("N4"), isLocked: false, jsonFile: "KanjiN4"),
+    JLPTLevel(id: "N3", name: "Intermediate", description: "580 Essential Kanji", totalKanji: 580, color: AppTheme.levelColor("N3"), bgColor: AppTheme.levelBackground("N3"), isLocked: false, jsonFile: "KanjiN3"),
+    JLPTLevel(id: "N2", name: "Pre-Advanced (Coming Soon)", description: "1,000+ Complex Kanji", totalKanji: 1000, color: AppTheme.levelColor("N2"), bgColor: AppTheme.levelBackground("N2"), isLocked: true, jsonFile: "KanjiN2"),
+    JLPTLevel(id: "N1", name: "Advanced (Coming Soon)", description: "2,000+ Master Kanji", totalKanji: 2000, color: AppTheme.levelColor("N1"), bgColor: AppTheme.levelBackground("N1"), isLocked: true, jsonFile: "KanjiN1")
 ]
 
 // MARK: - JSON Loader

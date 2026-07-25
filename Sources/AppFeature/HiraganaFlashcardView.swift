@@ -99,7 +99,7 @@ struct HiraganaFlashcardView: View {
     
     let sessionSize = 25
     
-    var accentColor: Color { isKatakana ? .purple : .blue }
+    var accentColor: Color { isKatakana ? AppTheme.indigo : AppTheme.blue }
     
     var progressValue: Double {
         guard !deck.isEmpty else { return 0 }
@@ -113,11 +113,11 @@ struct HiraganaFlashcardView: View {
     var cardBgColors: [Color] {
         if isKatakana {
             return colorScheme == .dark
-            ? [Color.purple.opacity(0.25), Color(red: 0.1, green: 0.05, blue: 0.25)]
+            ? [AppTheme.indigo.opacity(0.28), Color(red: 0.08, green: 0.09, blue: 0.24)]
             : [Color(red: 0.95, green: 0.92, blue: 1.0), Color(red: 0.88, green: 0.82, blue: 1.0)]
         } else {
             return colorScheme == .dark
-            ? [Color.blue.opacity(0.25), Color(red: 0.05, green: 0.1, blue: 0.3)]
+            ? [AppTheme.blue.opacity(0.28), Color(red: 0.05, green: 0.10, blue: 0.28)]
             : [Color(red: 0.92, green: 0.96, blue: 1.0), Color(red: 0.8, green: 0.9, blue: 1.0)]
         }
     }

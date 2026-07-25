@@ -26,21 +26,21 @@ struct HomeStatsCard: View {
                 Spacer()
                 Text("\(studiedToday)/\(dailyTarget)")
                     .font(.system(size: isIPad ? 13 : 11, weight: .bold))
-                    .foregroundColor(.blue)
+                    .foregroundColor(AppTheme.accent)
             }
             
             GeometryReader { geo in
                 ZStack(alignment: .leading) {
                     Capsule().fill(Color.gray.opacity(0.15)).frame(height: 5)
-                    Capsule().fill(Color.blue).frame(width: geo.size.width * CGFloat(progress), height: 5)
+                    Capsule().fill(AppTheme.accent).frame(width: geo.size.width * CGFloat(progress), height: 5)
                 }
             }
             .frame(height: 5)
             
             HStack(spacing: isIPad ? 12 : 8) {
-                MiniStat(label: "Due", value: "\(dueToday)", color: .blue, isIPad: isIPad)
+                MiniStat(label: "Due", value: "\(dueToday)", color: AppTheme.blue, isIPad: isIPad)
                 MiniStat(label: "Streak", value: "\(streak)", color: .orange, isIPad: isIPad)
-                MiniStat(label: "Mastered", value: "\(mastered)", color: .purple, isIPad: isIPad)
+                MiniStat(label: "Mastered", value: "\(mastered)", color: AppTheme.indigo, isIPad: isIPad)
             }
         }
         .padding(isIPad ? 14 : 10)

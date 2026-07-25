@@ -28,7 +28,7 @@ struct ContentView: View {
                 .tabItem { Image(systemName: "gearshape.fill"); Text("Pengaturan") }
                 .tag(2)
         }
-        .accentColor(.blue)
+        .accentColor(AppTheme.accent)
         .task { await preloadHomeStats() }
     }
 
@@ -52,12 +52,12 @@ struct HomeView: View {
     @AppStorage("daily_target") private var dailyTarget = 20
     
     let menuItems: [MenuItem] = [
-        MenuItem(id: "huruf", label: "Huruf", sub: "Kana", icon: "character", gradientColors: [.orange, Color(red: 0.9, green: 0.4, blue: 0.1)]),
-        MenuItem(id: "kanji", label: "Kanji", sub: "Aksara", icon: "character.book.closed", gradientColors: [.purple, Color(red: 0.5, green: 0.1, blue: 0.9)]),
-        MenuItem(id: "flashcard", label: "Flashcard", sub: "Review Cepat", icon: "rectangle.stack.fill", gradientColors: [.pink, Color(red: 0.9, green: 0.2, blue: 0.4)]),
-        MenuItem(id: "vocabulary", label: "Vocabulary", sub: "Kosakata", icon: "book.fill", gradientColors: [.blue, Color(red: 0.1, green: 0.5, blue: 0.9)]),
-        MenuItem(id: "grammar", label: "Grammar", sub: "Tata Bahasa", icon: "text.book.closed.fill", gradientColors: [.green, Color(red: 0.1, green: 0.7, blue: 0.5)]),
-        MenuItem(id: "lainnya", label: "Lainnya", sub: "Fitur Lain", icon: "square.grid.2x2.fill", gradientColors: [.gray, Color(red: 0.3, green: 0.3, blue: 0.4)])
+        MenuItem(id: "huruf", label: "Huruf", sub: "Kana", icon: "character", gradientColors: AppTheme.tileGradient("huruf")),
+        MenuItem(id: "kanji", label: "Kanji", sub: "Aksara", icon: "character.book.closed", gradientColors: AppTheme.tileGradient("kanji")),
+        MenuItem(id: "flashcard", label: "Flashcard", sub: "Review Cepat", icon: "rectangle.stack.fill", gradientColors: AppTheme.tileGradient("flashcard")),
+        MenuItem(id: "vocabulary", label: "Vocabulary", sub: "Kosakata", icon: "book.fill", gradientColors: AppTheme.tileGradient("vocabulary")),
+        MenuItem(id: "grammar", label: "Grammar", sub: "Tata Bahasa", icon: "text.book.closed.fill", gradientColors: AppTheme.tileGradient("grammar")),
+        MenuItem(id: "lainnya", label: "Lainnya", sub: "Fitur Lain", icon: "square.grid.2x2.fill", gradientColors: AppTheme.tileGradient("lainnya"))
     ]
     
     var bgColor: Color { colorScheme == .dark ? Color(UIColor.systemBackground) : Color(UIColor.systemGroupedBackground) }
@@ -81,7 +81,7 @@ struct HomeView: View {
                                 .font(.system(size: titleSize, weight: .black))
                             Spacer()
                             HStack(spacing: 6) {
-                                Image(systemName: "person.fill").foregroundColor(.blue)
+                                Image(systemName: "person.fill").foregroundColor(AppTheme.accent)
                                 Text(userName)
                                     .font(.system(size: isIPad ? 15 : 12, weight: .medium))
                                     .foregroundColor(.secondary)

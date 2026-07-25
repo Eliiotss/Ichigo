@@ -153,8 +153,8 @@ struct HiraganaView: View {
                                             .fill(
                                                 LinearGradient(
                                                     colors: isKatakana
-                                                    ? [Color(red: 0.5, green: 0.1, blue: 0.9), Color.purple]
-                                                    : [Color(red: 0.2, green: 0.6, blue: 1.0), Color.blue],
+                                                    ? [AppTheme.indigo, AppTheme.navy]
+                                                    : [AppTheme.sky, AppTheme.blue],
                                                     startPoint: .leading,
                                                     endPoint: .trailing
                                                 )
@@ -200,9 +200,9 @@ struct HiraganaView: View {
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
-                    .background(isKatakana ? Color.purple : Color.blue)
+                    .background(isKatakana ? AppTheme.indigo : AppTheme.blue)
                     .cornerRadius(16)
-                    .shadow(color: (isKatakana ? Color.purple : Color.blue).opacity(0.4), radius: 10, x: 0, y: 4)
+                    .shadow(color: (isKatakana ? AppTheme.indigo : AppTheme.blue).opacity(0.4), radius: 10, x: 0, y: 4)
                 }
                 .padding(.horizontal, 16)
                 .padding(.bottom, 20)
@@ -304,7 +304,7 @@ struct KanaCellView: View {
     let cardColor: Color
     
     var accentColor: Color {
-        isKatakana ? .purple : .blue
+        isKatakana ? AppTheme.indigo : AppTheme.blue
     }
     
     var body: some View {
