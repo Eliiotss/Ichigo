@@ -19,7 +19,7 @@ struct ScreenHeader: View {
             } label: {
                 Image(systemName: "chevron.left")
                     .font(AppTheme.rounded(17, .bold))
-                    .foregroundColor(.primary)
+                    .foregroundColor(AppTheme.primaryText(scheme))
                     .frame(width: 44, height: 44)
                     .background(AppTheme.surface(scheme))
                     .clipShape(Circle())
@@ -30,7 +30,7 @@ struct ScreenHeader: View {
 
             Text(title)
                 .font(AppTheme.rounded(24, .heavy))
-                .foregroundColor(.primary)
+                .foregroundColor(AppTheme.primaryText(scheme))
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
 
@@ -102,7 +102,7 @@ struct FilterChipRow: View {
                     } label: {
                         Text(filter)
                             .font(AppTheme.rounded(15, .bold))
-                            .foregroundColor(isSelected ? .white : .secondary)
+                            .foregroundColor(isSelected ? .white : AppTheme.secondaryText(scheme))
                             .padding(.horizontal, 22)
                             .frame(height: 46)
                             .background(isSelected ? AppTheme.accent : AppTheme.surface(scheme))
