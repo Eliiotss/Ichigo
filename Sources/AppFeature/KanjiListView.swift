@@ -146,7 +146,7 @@ struct KanjiCard: View {
         .padding(.horizontal, 8)
         .background(cardColor)
         .cornerRadius(14)
-        .shadow(color: Color.black.opacity(colorScheme == .dark ? 0.2 : 0.05), radius: 4, x: 0, y: 2)
+        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 4, x: 0, y: 2)
     }
     
 }

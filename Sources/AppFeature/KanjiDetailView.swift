@@ -50,7 +50,7 @@ struct KanjiDetailView: View {
                 .padding(20)
                 .background(cardColor)
                 .cornerRadius(18)
-                .shadow(color: Color.black.opacity(colorScheme == .dark ? 0.2 : 0.05), radius: 6, x: 0, y: 2)
+                .shadow(color: AppTheme.cardShadow(colorScheme), radius: 6, x: 0, y: 2)
                 
                 // Romaji + Arti
                 VStack(spacing: 4) {
@@ -97,7 +97,7 @@ struct KanjiDetailView: View {
                     .background(cardColor)
                     .cornerRadius(14)
                 }
-                .shadow(color: Color.black.opacity(colorScheme == .dark ? 0.2 : 0.04), radius: 4, x: 0, y: 1)
+                .shadow(color: AppTheme.cardShadow(colorScheme), radius: 4, x: 0, y: 1)
                 
                 // Contoh Kata & Kalimat
                 if !item.examples.isEmpty {
@@ -116,7 +116,7 @@ struct KanjiDetailView: View {
                         }
                         .background(cardColor)
                         .cornerRadius(14)
-                        .shadow(color: Color.black.opacity(colorScheme == .dark ? 0.2 : 0.04), radius: 4, x: 0, y: 1)
+                        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 4, x: 0, y: 1)
                     }
                 }
             }

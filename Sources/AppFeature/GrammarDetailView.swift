@@ -163,7 +163,7 @@ struct GrammarDetailView: View {
         .padding(20)
         .background(cardColor)
         .cornerRadius(22)
-        .shadow(color: Color.black.opacity(colorScheme == .dark ? 0.22 : 0.06), radius: 8, x: 0, y: 3)
+        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 8, x: 0, y: 3)
     }
     
     private var infoGrid: some View {
