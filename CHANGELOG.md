@@ -76,6 +76,15 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   now stateless enums routed through `ResourceLoader`.
 
 ### Fixed
+- **Dataset failures were swallowed.** `ResourceLoader` caught every error and
+  returned an empty array, so a missing or corrupt JSON file was reported to the
+  user as "Coming soon — konten level ini belum tersedia" and the `.failed`
+  state was never assigned, leaving `ErrorStateView` unreachable. The kanji,
+  vocabulary and grammar loaders now throw and their screens surface the real
+  reason; callers with a genuine fallback use the explicit `loadArrayOrEmpty`.
+- **Grammar list built every card eagerly**, constructing all 160 N3 rows on
+  open where the kanji and vocabulary lists build only what is on screen; it is
+  now a `LazyVStack` and shares the same load-state branches and 20pt inset.
 - **Level counts contradicted the bundled datasets.** Kanji N3 advertised "580
   Essential Kanji" against a 214-entry dataset, Vocabulary N4 claimed ~1500
   words against 700, and Vocabulary N3 claimed ~3750 against 1110. Every count
