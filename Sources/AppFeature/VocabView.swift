@@ -47,39 +47,37 @@ struct VocabularyView: View {
 struct VocabularyUnlockedCard: View {
     let level: VocabularyLevel
     @Environment(\.colorScheme) var colorScheme
-    
+
     var cardColor: Color { AppTheme.surface(colorScheme) }
-    
+
     var body: some View {
         HStack(spacing: 14) {
             ZStack {
                 RoundedRectangle(cornerRadius: 12)
                     .fill(level.bgColor)
                     .frame(width: 52, height: 52)
+
                 Text(level.id)
                     .font(AppTheme.rounded(18, .black))
                     .foregroundColor(level.color)
             }
-            
+
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text(level.name)
                         .font(AppTheme.rounded(17, .bold))
                         .foregroundColor(AppTheme.primaryText(colorScheme))
+
                     Spacer()
+
                     Image(systemName: "chevron.right")
                         .font(AppTheme.rounded(13, .semibold))
                         .foregroundColor(AppTheme.secondaryText(colorScheme))
                 }
+
                 Text(level.description)
                     .font(AppTheme.rounded(13))
                     .foregroundColor(AppTheme.secondaryText(colorScheme))
-
-                if level.totalWords > 0 {
-                    Text("\(level.totalWords) Kosakata")
-                        .font(AppTheme.rounded(11, .semibold))
-                        .foregroundColor(level.color)
-                }
             }
         }
         .padding(16)
@@ -92,26 +90,29 @@ struct VocabularyUnlockedCard: View {
 struct VocabularyLockedCard: View {
     let level: VocabularyLevel
     @Environment(\.colorScheme) var colorScheme
-    
+
     var cardColor: Color { AppTheme.surface(colorScheme) }
-    
+
     var body: some View {
         HStack(spacing: 14) {
             ZStack {
                 RoundedRectangle(cornerRadius: 12)
                     .fill(Color.gray.opacity(0.1))
                     .frame(width: 52, height: 52)
+
                 Text(level.id)
                     .font(AppTheme.rounded(18, .black))
                     .foregroundColor(AppTheme.secondaryText(colorScheme))
             }
-            
+
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text(level.name)
                         .font(AppTheme.rounded(17, .bold))
                         .foregroundColor(AppTheme.secondaryText(colorScheme))
+
                     Spacer()
+
                     HStack(spacing: 4) {
                         Image(systemName: "lock.fill")
                             .font(AppTheme.rounded(12))
@@ -120,6 +121,7 @@ struct VocabularyLockedCard: View {
                     }
                     .foregroundColor(AppTheme.secondaryText(colorScheme))
                 }
+
                 Text(level.description)
                     .font(AppTheme.rounded(13))
                     .foregroundColor(Color.secondary.opacity(0.6))

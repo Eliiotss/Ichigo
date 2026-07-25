@@ -20,13 +20,13 @@ struct GrammarItem: Identifiable, Codable {
     let usage: [String]
     let examples: [GrammarExample]
     let bunpouPersamaan: [String]
-    
+
     enum CodingKeys: String, CodingKey {
         case id, pattern, romaji, meaning, level, difficulty, structure, tags
         case treeCategory, relatedGrammarIds, nuance, frequency, commonMistakes
         case explanation, usage, examples, bunpouPersamaan
     }
-    
+
     init(
         id: String,pattern: String,romaji: String,meaning: String,level: String,difficulty: Int,
         structure: String,tags: [String],treeCategory: String,relatedGrammarIds: [String],
@@ -51,7 +51,7 @@ struct GrammarItem: Identifiable, Codable {
         self.examples = examples
         self.bunpouPersamaan = bunpouPersamaan
     }
-    
+
     init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         id = try c.decodeIfPresent(String.self, forKey: .id) ?? UUID().uuidString
@@ -78,17 +78,17 @@ struct GrammarExample: Codable {
     let japanese: String
     let romaji: String
     let translation: String
-    
+
     enum CodingKeys: String, CodingKey {
         case japanese, romaji, translation
     }
-    
+
     init(japanese: String, romaji: String, translation: String) {
         self.japanese = japanese
         self.romaji = romaji
         self.translation = translation
     }
-    
+
     init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         japanese = try c.decodeIfPresent(String.self, forKey: .japanese) ?? ""
@@ -129,10 +129,11 @@ extension GrammarItem {
 struct GrammarLevel: Identifiable {
     let id: String
     let name: String
+    /// Subtitle shown under the level name, in the same shape as the kanji and
+    /// vocabulary levels: an unlocked level opens with the exact number of
+    /// patterns in `jsonFile`. The locked levels carry no figure because no
+    /// pattern count for them has been settled on yet.
     let description: String
-    /// Number of patterns in the bundled dataset. Locked levels carry 0 because
-    /// their dataset has not shipped yet; the card only shows a non-zero count.
-    let totalPatterns: Int
     let color: Color
     let bgColor: Color
     let isLocked: Bool
@@ -140,11 +141,11 @@ struct GrammarLevel: Identifiable {
 }
 
 let grammarLevels: [GrammarLevel] = [
-    GrammarLevel(id: "N5", name: "Beginner", description: "Tata Bahasa Dasar", totalPatterns: 84, color: AppTheme.levelColor("N5"), bgColor: AppTheme.levelBackground("N5"), isLocked: false, jsonFile: "GrammarN5"),
-    GrammarLevel(id: "N4", name: "Elementary", description: "Tata Bahasa Dasar+", totalPatterns: 131, color: AppTheme.levelColor("N4"), bgColor: AppTheme.levelBackground("N4"), isLocked: false, jsonFile: "GrammarN4"),
-    GrammarLevel(id: "N3", name: "Intermediate", description: "Tata Bahasa Menengah", totalPatterns: 160, color: AppTheme.levelColor("N3"), bgColor: AppTheme.levelBackground("N3"), isLocked: false, jsonFile: "GrammarN3"),
-    GrammarLevel(id: "N2", name: "Pre-Advanced", description: "Tata Bahasa Lanjutan", totalPatterns: 0, color: AppTheme.levelColor("N2"), bgColor: AppTheme.levelBackground("N2"), isLocked: true, jsonFile: "GrammarN2"),
-    GrammarLevel(id: "N1", name: "Advanced", description: "Tata Bahasa Master", totalPatterns: 0, color: AppTheme.levelColor("N1"), bgColor: AppTheme.levelBackground("N1"), isLocked: true, jsonFile: "GrammarN1")
+    GrammarLevel(id: "N5", name: "Beginner", description: "84 Pola Tata Bahasa Dasar", color: AppTheme.levelColor("N5"), bgColor: AppTheme.levelBackground("N5"), isLocked: false, jsonFile: "GrammarN5"),
+    GrammarLevel(id: "N4", name: "Elementary", description: "131 Pola Tata Bahasa Dasar+", color: AppTheme.levelColor("N4"), bgColor: AppTheme.levelBackground("N4"), isLocked: false, jsonFile: "GrammarN4"),
+    GrammarLevel(id: "N3", name: "Intermediate", description: "160 Pola Tata Bahasa Menengah", color: AppTheme.levelColor("N3"), bgColor: AppTheme.levelBackground("N3"), isLocked: false, jsonFile: "GrammarN3"),
+    GrammarLevel(id: "N2", name: "Pre-Advanced", description: "Pola Tata Bahasa Lanjutan", color: AppTheme.levelColor("N2"), bgColor: AppTheme.levelBackground("N2"), isLocked: true, jsonFile: "GrammarN2"),
+    GrammarLevel(id: "N1", name: "Advanced", description: "Pola Tata Bahasa Master", color: AppTheme.levelColor("N1"), bgColor: AppTheme.levelBackground("N1"), isLocked: true, jsonFile: "GrammarN1")
 ]
 
 // MARK: - Grammar JSON Loader
