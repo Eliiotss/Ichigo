@@ -7,6 +7,19 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Ichigo v2 visual design** across the app: a central `AppTheme` carrying the
+  design's exact tokens (warm beige `#E7E0DC` page, white cards, plum `#2B2029`
+  ink, muted `#B0A199`, blue `#2E7BFF` accent with its gradient pairs) and a
+  rounded type ramp.
+  - **Home**: "Okaeri 🍓" greeting, tappable gradient avatar, blue hero card
+    (daily progress + Due / Streak / Mastered) and a tile grid with per-tile
+    gradients.
+  - **Profile**: rounded gradient header with ringed avatar and "JLPT Learner"
+    badge, daily-target card, 2×2 stat grid and the answer-summary pills.
+  - **Settings**: sectioned white cards with gradient icon chips and inset
+    dividers; native controls retained.
+  - **Browsing screens** (Vocabulary / Kanji / Grammar): pinned `ScreenHeader`,
+    pill `SearchField` and `FilterChipRow` that stay fixed while content scrolls.
 - **Manual Google Drive backup & restore** (Settings → *Cadangan*). Dependency-free
   OAuth 2.0 + PKCE via `ASWebAuthenticationSession`, tokens in the Keychain, and
   `URLSession` REST scoped to the Drive `appDataFolder`. Backs up the local
