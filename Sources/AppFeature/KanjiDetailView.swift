@@ -19,7 +19,7 @@ struct KanjiDetailView: View {
                     // Badge level
                     HStack {
                         Text("JLPT \(levelId)")
-                            .font(.system(size: 12, weight: .bold))
+                            .font(AppTheme.rounded(12, .bold))
                             .foregroundColor(.white)
                             .padding(.horizontal, 10)
                             .padding(.vertical, 5)
@@ -31,14 +31,14 @@ struct KanjiDetailView: View {
                     // Kanji besar + tombol audio
                     ZStack(alignment: .topTrailing) {
                         Text(item.kanji)
-                            .font(.system(size: 110, weight: .light))
-                            .foregroundColor(.primary)
+                            .font(AppTheme.rounded(110, .light))
+                            .foregroundColor(AppTheme.primaryText(colorScheme))
                             .frame(maxWidth: .infinity)
                             .frame(height: 130)
                         
                         Button(action: { AudioSpeechHelper.shared.speak(item.kanji) }) {
                             Image(systemName: "speaker.wave.2.fill")
-                                .font(.system(size: 16, weight: .semibold))
+                                .font(AppTheme.rounded(16, .semibold))
                                 .foregroundColor(AppTheme.accent)
                                 .padding(10)
                                 .background(AppTheme.accent.opacity(0.12))
@@ -55,11 +55,11 @@ struct KanjiDetailView: View {
                 // Romaji + Arti
                 VStack(spacing: 4) {
                     Text(item.romaji)
-                        .font(.system(size: 28, weight: .black))
-                        .foregroundColor(.primary)
+                        .font(AppTheme.rounded(28, .black))
+                        .foregroundColor(AppTheme.primaryText(colorScheme))
                     Text(item.meaning)
-                        .font(.system(size: 16))
-                        .foregroundColor(.secondary)
+                        .font(AppTheme.rounded(16))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                 }
                 .padding(.vertical, 4)
                 
@@ -67,11 +67,11 @@ struct KanjiDetailView: View {
                 HStack(spacing: 12) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("ONYOMI")
-                            .font(.system(size: 10, weight: .bold))
-                            .foregroundColor(.secondary)
+                            .font(AppTheme.rounded(10, .bold))
+                            .foregroundColor(AppTheme.secondaryText(colorScheme))
                             .kerning(1.2)
                         Text(item.onyomi)
-                            .font(.system(size: 16, weight: .semibold))
+                            .font(AppTheme.rounded(16, .semibold))
                             .foregroundColor(AppTheme.ocean)
                             .lineLimit(2)
                             .minimumScaleFactor(0.8)
@@ -83,11 +83,11 @@ struct KanjiDetailView: View {
                     
                     VStack(alignment: .leading, spacing: 8) {
                         Text("KUNYOMI")
-                            .font(.system(size: 10, weight: .bold))
-                            .foregroundColor(.secondary)
+                            .font(AppTheme.rounded(10, .bold))
+                            .foregroundColor(AppTheme.secondaryText(colorScheme))
                             .kerning(1.2)
                         Text(item.kunyomi)
-                            .font(.system(size: 16, weight: .semibold))
+                            .font(AppTheme.rounded(16, .semibold))
                             .foregroundColor(AppTheme.ocean)
                             .lineLimit(2)
                             .minimumScaleFactor(0.8)
@@ -103,8 +103,8 @@ struct KanjiDetailView: View {
                 if !item.examples.isEmpty {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("Contoh Kata & Kalimat")
-                            .font(.system(size: 18, weight: .bold))
-                            .foregroundColor(.primary)
+                            .font(AppTheme.rounded(18, .bold))
+                            .foregroundColor(AppTheme.primaryText(colorScheme))
 
                         VStack(spacing: 0) {
                             ForEach(item.examples.indices, id: \.self) { idx in
@@ -142,35 +142,35 @@ struct KanjiExampleRow: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 6) {
                 Text(example.word)
-                    .font(.system(size: 17, weight: .semibold))
+                    .font(AppTheme.rounded(17, .semibold))
                     .foregroundColor(.primary)
                 Text("(\(example.reading))")
-                    .font(.system(size: 13))
+                    .font(AppTheme.rounded(13))
                     .foregroundColor(.secondary)
                 Spacer()
                 Button {
                     AudioSpeechHelper.shared.speak(example.sentence ?? example.word)
                 } label: {
                     Image(systemName: "speaker.wave.2.fill")
-                        .font(.system(size: 13, weight: .semibold))
+                        .font(AppTheme.rounded(13, .semibold))
                         .foregroundColor(AppTheme.accent)
                 }
                 .buttonStyle(.plain)
             }
 
             Text("\(example.romaji) — \(example.meaning)")
-                .font(.system(size: 13))
+                .font(AppTheme.rounded(13))
                 .foregroundColor(.secondary)
 
             if let sentence = displaySentence {
                 VStack(alignment: .leading, spacing: 3) {
                     Text(sentence)
-                        .font(.system(size: 14, weight: .medium))
+                        .font(AppTheme.rounded(14, .medium))
                         .foregroundColor(.primary)
                         .fixedSize(horizontal: false, vertical: true)
                     if let meaning = example.sentenceMeaning, !meaning.isEmpty {
                         Text(meaning)
-                            .font(.system(size: 12))
+                            .font(AppTheme.rounded(12))
                             .foregroundColor(.secondary)
                             .fixedSize(horizontal: false, vertical: true)
                     }

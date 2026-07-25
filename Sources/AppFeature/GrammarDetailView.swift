@@ -27,8 +27,8 @@ struct GrammarDetailView: View {
                 if !item.explanation.isEmpty {
                     GrammarInfoSection(title: "Arti", systemImage: "character.book.closed", accentColor: accentColor) {
                         Text(item.explanation)
-                            .font(.system(size: 15))
-                            .foregroundColor(.primary)
+                            .font(AppTheme.rounded(15))
+                            .foregroundColor(AppTheme.primaryText(colorScheme))
                             .lineSpacing(5)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
@@ -45,8 +45,8 @@ struct GrammarDetailView: View {
                                         .padding(.top, 7)
                                     
                                     Text(point)
-                                        .font(.system(size: 14))
-                                        .foregroundColor(.primary)
+                                        .font(AppTheme.rounded(14))
+                                        .foregroundColor(AppTheme.primaryText(colorScheme))
                                         .lineSpacing(4)
                                         .fixedSize(horizontal: false, vertical: true)
                                 }
@@ -65,13 +65,13 @@ struct GrammarDetailView: View {
                             ForEach(item.commonMistakes, id: \.self) { mistake in
                                 HStack(alignment: .top, spacing: 10) {
                                     Image(systemName: "xmark.circle.fill")
-                                        .font(.system(size: 13))
+                                        .font(AppTheme.rounded(13))
                                         .foregroundColor(.red)
                                         .padding(.top, 2)
 
                                     Text(mistake)
-                                        .font(.system(size: 14))
-                                        .foregroundColor(.primary)
+                                        .font(AppTheme.rounded(14))
+                                        .foregroundColor(AppTheme.primaryText(colorScheme))
                                         .lineSpacing(4)
                                         .fixedSize(horizontal: false, vertical: true)
                                 }
@@ -93,7 +93,7 @@ struct GrammarDetailView: View {
                         }
                     } trailing: {
                         Text("\(item.examples.count) kalimat")
-                            .font(.system(size: 11, weight: .bold))
+                            .font(AppTheme.rounded(11, .bold))
                             .foregroundColor(accentColor)
                             .padding(.horizontal, 10)
                             .padding(.vertical, 5)
@@ -113,7 +113,7 @@ struct GrammarDetailView: View {
         VStack(alignment: .leading, spacing: 18) {
             HStack(alignment: .top) {
                 Text("JLPT \(item.level)")
-                    .font(.system(size: 11, weight: .black))
+                    .font(AppTheme.rounded(11, .black))
                     .foregroundColor(.white)
                     .padding(.horizontal, 12)
                     .padding(.vertical, 6)
@@ -124,7 +124,7 @@ struct GrammarDetailView: View {
                 
                 if !item.structure.isEmpty {
                     Text(item.structure)
-                        .font(.system(size: 11, weight: .semibold))
+                        .font(AppTheme.rounded(11, .semibold))
                         .foregroundColor(accentColor)
                         .padding(.horizontal, 10)
                         .padding(.vertical, 6)
@@ -137,20 +137,20 @@ struct GrammarDetailView: View {
             
             VStack(alignment: .leading, spacing: 8) {
                 Text(item.pattern)
-                    .font(.system(size: 36, weight: .black))
-                    .foregroundColor(.primary)
+                    .font(AppTheme.rounded(36, .black))
+                    .foregroundColor(AppTheme.primaryText(colorScheme))
                     .lineLimit(3)
                     .minimumScaleFactor(0.7)
                     .fixedSize(horizontal: false, vertical: true)
                 
                 if !item.romaji.isEmpty {
                     Text(item.romaji)
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(.secondary)
+                        .font(AppTheme.rounded(14, .semibold))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                 }
                 
                 Text(item.meaning)
-                    .font(.system(size: 17, weight: .bold))
+                    .font(AppTheme.rounded(17, .bold))
                     .foregroundColor(accentColor)
                     .fixedSize(horizontal: false, vertical: true)
             }
@@ -207,15 +207,15 @@ struct GrammarInfoSection<Content: View, Trailing: View>: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(spacing: 8) {
                 Image(systemName: systemImage)
-                    .font(.system(size: 15, weight: .semibold))
+                    .font(AppTheme.rounded(15, .semibold))
                     .foregroundColor(accentColor)
                     .frame(width: 24, height: 24)
                     .background(accentColor.opacity(0.1))
                     .clipShape(Circle())
                 
                 Text(title)
-                    .font(.system(size: 18, weight: .bold))
-                    .foregroundColor(.primary)
+                    .font(AppTheme.rounded(18, .bold))
+                    .foregroundColor(AppTheme.primaryText(colorScheme))
                 
                 Spacer()
                 trailing
@@ -238,12 +238,12 @@ struct GrammarMiniInfoCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 7) {
             Text(title)
-                .font(.system(size: 10, weight: .black))
-                .foregroundColor(.secondary)
+                .font(AppTheme.rounded(10, .black))
+                .foregroundColor(AppTheme.secondaryText(colorScheme))
                 .kerning(1.1)
             
             Text(value)
-                .font(.system(size: 15, weight: .semibold))
+                .font(AppTheme.rounded(15, .semibold))
                 .foregroundColor(accentColor)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -262,7 +262,7 @@ struct GrammarTagFlow: View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 92), spacing: 8)], alignment: .leading, spacing: 8) {
             ForEach(tags, id: \.self) { tag in
                 Text(tag)
-                    .font(.system(size: 11, weight: .bold))
+                    .font(AppTheme.rounded(11, .bold))
                     .foregroundColor(accentColor)
                     .lineLimit(1)
                     .minimumScaleFactor(0.75)
@@ -285,14 +285,14 @@ struct GrammarExampleCard: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .top, spacing: 10) {
                 Text("\(number)")
-                    .font(.system(size: 11, weight: .black))
+                    .font(AppTheme.rounded(11, .black))
                     .foregroundColor(.white)
                     .frame(width: 24, height: 24)
                     .background(accentColor)
                     .clipShape(Circle())
                 
                 Text(example.japanese)
-                    .font(.system(size: 18, weight: .semibold))
+                    .font(AppTheme.rounded(18, .semibold))
                     .foregroundColor(.primary)
                     .lineSpacing(4)
                     .fixedSize(horizontal: false, vertical: true)
@@ -300,7 +300,7 @@ struct GrammarExampleCard: View {
             
             if !example.romaji.isEmpty {
                 Text(example.romaji)
-                    .font(.system(size: 13))
+                    .font(AppTheme.rounded(13))
                     .foregroundColor(.secondary)
                     .lineSpacing(3)
                     .padding(.leading, 34)
@@ -308,7 +308,7 @@ struct GrammarExampleCard: View {
             
             if !example.translation.isEmpty {
                 Text(example.translation)
-                    .font(.system(size: 14, weight: .semibold))
+                    .font(AppTheme.rounded(14, .semibold))
                     .foregroundColor(.primary)
                     .lineSpacing(3)
                     .padding(.leading, 34)

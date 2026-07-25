@@ -38,16 +38,16 @@ struct FlashcardModeCard: View {
                     .fill(mode.color.opacity(0.15))
                     .frame(width: 64, height: 64)
                 Image(systemName: mode.icon)
-                    .font(.system(size: 28, weight: .bold))
+                    .font(AppTheme.rounded(28, .bold))
                     .foregroundColor(mode.color)
             }
             VStack(spacing: 4) {
                 Text(mode.title)
-                    .font(.system(size: 17, weight: .black))
-                    .foregroundColor(.primary)
+                    .font(AppTheme.rounded(17, .black))
+                    .foregroundColor(AppTheme.primaryText(colorScheme))
                 Text(mode.subtitle)
-                    .font(.system(size: 12))
-                    .foregroundColor(.secondary)
+                    .font(AppTheme.rounded(12))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
                     .multilineTextAlignment(.center)
             }
         }
@@ -116,19 +116,19 @@ struct FlashcardUnlockedLevelCard: View {
                     .fill(level.bgColor)
                     .frame(width: 52, height: 52)
                 Text(level.id)
-                    .font(.system(size: 18, weight: .black))
+                    .font(AppTheme.rounded(18, .black))
                     .foregroundColor(level.color)
             }
             
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text(level.name)
-                        .font(.system(size: 17, weight: .bold))
-                        .foregroundColor(.primary)
+                        .font(AppTheme.rounded(17, .bold))
+                        .foregroundColor(AppTheme.primaryText(colorScheme))
                     Spacer()
                     if due > 0 {
                         Text("\(due) due")
-                            .font(.system(size: 11, weight: .bold))
+                            .font(AppTheme.rounded(11, .bold))
                             .foregroundColor(.white)
                             .padding(.horizontal, 8)
                             .padding(.vertical, 3)
@@ -136,16 +136,16 @@ struct FlashcardUnlockedLevelCard: View {
                             .cornerRadius(10)
                     }
                     Image(systemName: "chevron.right")
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundColor(.secondary)
+                        .font(AppTheme.rounded(13, .semibold))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                 }
                 
                 Text(level.description)
-                    .font(.system(size: 13))
-                    .foregroundColor(.secondary)
+                    .font(AppTheme.rounded(13))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
                 
                 Text("\(totalText) kartu • bebas pilih deck")
-                    .font(.system(size: 11, weight: .semibold))
+                    .font(AppTheme.rounded(11, .semibold))
                     .foregroundColor(level.color)
             }
         }
@@ -170,24 +170,24 @@ struct FlashcardLockedLevelCard: View {
                     .fill(Color.gray.opacity(0.1))
                     .frame(width: 52, height: 52)
                 Text(level.id)
-                    .font(.system(size: 18, weight: .black))
-                    .foregroundColor(.secondary)
+                    .font(AppTheme.rounded(18, .black))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
             }
             
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text(level.name)
-                        .font(.system(size: 17, weight: .bold))
-                        .foregroundColor(.secondary)
+                        .font(AppTheme.rounded(17, .bold))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                     Spacer()
                     HStack(spacing: 4) {
-                        Image(systemName: "lock.fill").font(.system(size: 12))
-                        Text("Terkunci").font(.system(size: 11, weight: .semibold))
+                        Image(systemName: "lock.fill").font(AppTheme.rounded(12))
+                        Text("Terkunci").font(AppTheme.rounded(11, .semibold))
                     }
-                    .foregroundColor(.secondary)
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
                 }
                 Text(level.description)
-                    .font(.system(size: 13))
+                    .font(AppTheme.rounded(13))
                     .foregroundColor(Color.secondary.opacity(0.6))
             }
         }

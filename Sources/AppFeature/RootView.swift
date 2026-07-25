@@ -79,15 +79,15 @@ private struct SplashView: View {
 
             VStack(spacing: 16) {
                 Text("🇯🇵")
-                    .font(.system(size: 58))
+                    .font(AppTheme.rounded(58))
 
                 VStack(spacing: 6) {
                     Text("Ichigo")
-                        .font(.system(size: 29, weight: .black))
+                        .font(AppTheme.rounded(29, .black))
                         .foregroundColor(.white)
 
                     Text(progressText)
-                        .font(.system(size: 13, weight: .semibold))
+                        .font(AppTheme.rounded(13, .semibold))
                         .foregroundColor(.white.opacity(0.65))
                 }
 

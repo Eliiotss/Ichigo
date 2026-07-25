@@ -55,7 +55,7 @@ struct SearchField: View {
         HStack(spacing: 12) {
             Image(systemName: "magnifyingglass")
                 .font(AppTheme.rounded(17, .semibold))
-                .foregroundColor(.secondary)
+                .foregroundColor(AppTheme.secondaryText(scheme))
 
             TextField(placeholder, text: $text)
                 .font(AppTheme.rounded(16, .medium))
@@ -68,7 +68,7 @@ struct SearchField: View {
                 } label: {
                     Image(systemName: "xmark.circle.fill")
                         .font(AppTheme.rounded(16))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(AppTheme.secondaryText(scheme))
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Hapus pencarian")

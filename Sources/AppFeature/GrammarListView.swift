@@ -29,17 +29,17 @@ struct GrammarListView: View {
                 VStack(spacing: 12) {
                     ProgressView()
                     Text("Memuat tata bahasa...")
-                        .font(.system(size: 14))
-                        .foregroundColor(.secondary)
+                        .font(AppTheme.rounded(14))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(bgColor)
             } else if items.isEmpty {
                 VStack(spacing: 12) {
-                    Text("📂").font(.system(size: 48))
+                    Text("📂").font(AppTheme.rounded(48))
                     Text("File \(level.jsonFile).json belum ditambahkan")
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(.secondary)
+                        .font(AppTheme.rounded(14, .semibold))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                         .multilineTextAlignment(.center)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -56,8 +56,8 @@ struct GrammarListView: View {
                         VStack(spacing: 10) {
                             if filtered.isEmpty {
                                 Text("Tidak ditemukan")
-                                    .font(.system(size: 15))
-                                    .foregroundColor(.secondary)
+                                    .font(AppTheme.rounded(15))
+                                    .foregroundColor(AppTheme.secondaryText(colorScheme))
                                     .padding(.top, 60)
                             } else {
                                 ForEach(filtered) { item in
@@ -102,17 +102,17 @@ struct GrammarListCard: View {
                 VStack(alignment: .leading, spacing: 4) {
                     // Pola grammar
                     Text(item.pattern)
-                        .font(.system(size: 20, weight: .bold))
-                        .foregroundColor(.primary)
+                        .font(AppTheme.rounded(20, .bold))
+                        .foregroundColor(AppTheme.primaryText(colorScheme))
                     // Arti singkat
                     Text(item.meaning)
-                        .font(.system(size: 13))
-                        .foregroundColor(.secondary)
+                        .font(AppTheme.rounded(13))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                 }
                 Spacer()
                 Image(systemName: "chevron.right")
-                    .font(.system(size: 12))
-                    .foregroundColor(.secondary)
+                    .font(AppTheme.rounded(12))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
             }
         }
         .padding(16)

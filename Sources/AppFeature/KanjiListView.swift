@@ -47,8 +47,8 @@ struct KanjiListView: View {
                     ProgressView()
                         .scaleEffect(1.2)
                     Text("Memuat kanji \(level.id)...")
-                        .font(.system(size: 14))
-                        .foregroundColor(.secondary)
+                        .font(AppTheme.rounded(14))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(bgColor)
@@ -68,8 +68,8 @@ struct KanjiListView: View {
                         if filtered.isEmpty {
                             VStack(spacing: 8) {
                                 Text("Tidak ditemukan")
-                                    .font(.system(size: 15))
-                                    .foregroundColor(.secondary)
+                                    .font(AppTheme.rounded(15))
+                                    .foregroundColor(AppTheme.secondaryText(colorScheme))
                             }
                             .frame(maxWidth: .infinity)
                             .padding(.top, 60)
@@ -122,13 +122,13 @@ struct KanjiCard: View {
         VStack(spacing: 6) {
             // Kanji besar
             Text(item.kanji)
-                .font(.system(size: 52, weight: .light))
-                .foregroundColor(.primary)
+                .font(AppTheme.rounded(52, .light))
+                .foregroundColor(AppTheme.primaryText(colorScheme))
                 .frame(height: 65)
             
             // Onyomi / Kunyomi kecil
             Text("\(item.onyomi) / \(item.kunyomi)")
-                .font(.system(size: 10))
+                .font(AppTheme.rounded(10))
                 .foregroundColor(AppTheme.ocean)
                 .lineLimit(1)
                 .minimumScaleFactor(0.6)
@@ -136,8 +136,8 @@ struct KanjiCard: View {
             
             // Arti
             Text(item.meaning)
-                .font(.system(size: 13, weight: .semibold))
-                .foregroundColor(.primary)
+                .font(AppTheme.rounded(13, .semibold))
+                .foregroundColor(AppTheme.primaryText(colorScheme))
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)
         }

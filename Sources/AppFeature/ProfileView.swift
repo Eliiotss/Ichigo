@@ -199,7 +199,7 @@ struct ProfileStatTile: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Image(systemName: icon)
-                .font(.system(size: 14, weight: .bold))
+                .font(AppTheme.rounded(14, .bold))
                 .foregroundColor(iconTint)
                 .frame(width: 32, height: 32)
                 .background(chip)

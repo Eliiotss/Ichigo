@@ -206,7 +206,7 @@ struct SettingsIcon: View {
 
     var body: some View {
         Image(systemName: systemName)
-            .font(.system(size: 14, weight: .semibold))
+            .font(AppTheme.rounded(14, .semibold))
             .foregroundColor(.white)
             .frame(width: 29, height: 29)
             .background(LinearGradient(colors: colors, startPoint: .topLeading, endPoint: .bottomTrailing))

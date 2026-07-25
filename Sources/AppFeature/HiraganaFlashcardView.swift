@@ -150,13 +150,13 @@ struct HiraganaFlashcardView: View {
     var emptyStateView: some View {
         VStack(spacing: 14) {
             Image(systemName: "tray")
-                .font(.system(size: 42, weight: .semibold))
-                .foregroundColor(.secondary)
+                .font(AppTheme.rounded(42, .semibold))
+                .foregroundColor(AppTheme.secondaryText(colorScheme))
             Text("Belum ada data huruf")
-                .font(.system(size: 18, weight: .bold))
+                .font(AppTheme.rounded(18, .bold))
             Text("Cek file JSON Hiragana/Katakana atau sumber deck flashcard.")
-                .font(.system(size: 13))
-                .foregroundColor(.secondary)
+                .font(AppTheme.rounded(13))
+                .foregroundColor(AppTheme.secondaryText(colorScheme))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 28)
         }
@@ -168,11 +168,11 @@ struct HiraganaFlashcardView: View {
             VStack(spacing: 10) {
                 HStack {
                     Text("Kartu \(currentIndex + 1) / \(deck.count)")
-                        .font(.system(size: 11, weight: .semibold))
-                        .foregroundColor(.secondary)
+                        .font(AppTheme.rounded(11, .semibold))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                     Spacer()
                     Text("\(sessionCorrect) benar")
-                        .font(.system(size: 11, weight: .semibold))
+                        .font(AppTheme.rounded(11, .semibold))
                         .foregroundColor(accentColor)
                 }
                 
@@ -193,8 +193,8 @@ struct HiraganaFlashcardView: View {
                 
                 HStack {
                     Text("Total Hafalan")
-                        .font(.system(size: 10, weight: .semibold))
-                        .foregroundColor(.secondary)
+                        .font(AppTheme.rounded(10, .semibold))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                     Spacer()
                 }
                 GeometryReader { geo in
@@ -224,14 +224,14 @@ struct HiraganaFlashcardView: View {
                     .frame(height: 180)
                     .overlay(
                         Text(question.card.kana)
-                            .font(.system(size: 90, weight: .medium))
-                            .foregroundColor(.primary)
+                            .font(AppTheme.rounded(90, .medium))
+                            .foregroundColor(AppTheme.primaryText(colorScheme))
                     )
                     .padding(.horizontal, 24)
                 
                 Text("Pilih bacaan yang benar")
-                    .font(.system(size: 13))
-                    .foregroundColor(.secondary)
+                    .font(AppTheme.rounded(13))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
                 
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                     ForEach(question.choices, id: \.self) { choice in
@@ -251,7 +251,7 @@ struct HiraganaFlashcardView: View {
                 if isAnswered {
                     Button(action: nextCard) {
                         Text(currentIndex + 1 >= deck.count ? "Selesai" : "Lanjut →")
-                            .font(.system(size: 15, weight: .bold))
+                            .font(AppTheme.rounded(15, .bold))
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 14)
@@ -274,19 +274,19 @@ struct HiraganaFlashcardView: View {
     var finishedView: some View {
         VStack(spacing: 24) {
             Spacer()
-            Text("🎉").font(.system(size: 72))
+            Text("🎉").font(AppTheme.rounded(72))
             Text("Sesi Selesai!")
-                .font(.system(size: 28, weight: .black))
+                .font(AppTheme.rounded(28, .black))
             Text("Kamu menjawab benar \(sessionCorrect) dari \(deck.count) soal.")
-                .font(.system(size: 15))
-                .foregroundColor(.secondary)
+                .font(AppTheme.rounded(15))
+                .foregroundColor(AppTheme.secondaryText(colorScheme))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
             
             VStack(spacing: 8) {
                 Text("Total Huruf Dikuasai")
-                    .font(.system(size: 12, weight: .semibold))
-                    .foregroundColor(.secondary)
+                    .font(AppTheme.rounded(12, .semibold))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
                 GeometryReader { geo in
                     ZStack(alignment: .leading) {
                         RoundedRectangle(cornerRadius: 6).fill(Color.gray.opacity(0.15)).frame(height: 10)
@@ -298,8 +298,8 @@ struct HiraganaFlashcardView: View {
                 }
                 .frame(height: 10)
                 Text("\(store.masteredCount(flat: progressFlat, isKatakana: isKatakana)) dari \(progressFlat.count) huruf dikuasai")
-                    .font(.system(size: 12))
-                    .foregroundColor(.secondary)
+                    .font(AppTheme.rounded(12))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
                     .multilineTextAlignment(.center)
             }
             .padding(.horizontal, 32)
@@ -308,7 +308,7 @@ struct HiraganaFlashcardView: View {
             
             Button(action: { dismiss() }) {
                 Text("Kembali ke Huruf")
-                    .font(.system(size: 16, weight: .bold))
+                    .font(AppTheme.rounded(16, .bold))
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
@@ -418,7 +418,7 @@ struct ChoiceButton: View {
     var body: some View {
         Button(action: action) {
             Text(label)
-                .font(.system(size: 18, weight: .bold))
+                .font(AppTheme.rounded(18, .bold))
                 .foregroundColor(textColor)
                 .frame(maxWidth: .infinity)
                 .frame(height: 64)

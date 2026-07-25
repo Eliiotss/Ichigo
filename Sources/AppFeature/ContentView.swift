@@ -231,7 +231,7 @@ struct MenuCardView: View {
                     .fill(LinearGradient(colors: item.gradientColors, startPoint: .topLeading, endPoint: .bottomTrailing))
                     .frame(width: 48, height: 48)
                 Image(systemName: item.icon)
-                    .font(.system(size: 21, weight: .bold))
+                    .font(AppTheme.rounded(21, .bold))
                     .foregroundColor(.white)
             }
 
@@ -262,7 +262,7 @@ struct ComingSoonView: View {
     var body: some View {
         VStack(spacing: 14) {
             Image(systemName: "hammer.fill")
-                .font(.system(size: 44, weight: .semibold))
+                .font(AppTheme.rounded(44, .semibold))
                 .foregroundColor(AppTheme.secondaryText(colorScheme))
             Text("\(featureName) Segera Hadir")
                 .font(AppTheme.rounded(22, .heavy))

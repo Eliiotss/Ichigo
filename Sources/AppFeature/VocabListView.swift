@@ -63,7 +63,7 @@ struct VocabularyListView: View {
                             if filtered.isEmpty {
                                 Text("Tidak ditemukan")
                                     .font(AppTheme.rounded(15, .medium))
-                                    .foregroundColor(.secondary)
+                                    .foregroundColor(AppTheme.secondaryText(colorScheme))
                                     .padding(.top, 60)
                             } else {
                                 ForEach(filtered) { item in
@@ -121,7 +121,7 @@ struct VocabularyInlineCard: View {
                 Spacer()
                 Button(action: { AudioSpeechHelper.shared.speak(item.kanji) }) {
                     Image(systemName: "speaker.wave.2.fill")
-                        .font(.system(size: 15, weight: .semibold))
+                        .font(AppTheme.rounded(15, .semibold))
                         .foregroundColor(AppTheme.accent)
                         .padding(8)
                         .background(AppTheme.accent.opacity(0.12))

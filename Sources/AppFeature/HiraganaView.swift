@@ -136,8 +136,8 @@ struct HiraganaView: View {
                         VStack(alignment: .leading, spacing: 24) {
                             VStack(alignment: .leading, spacing: 8) {
                                 Text("Progres Hafalan")
-                                    .font(.system(size: 12, weight: .semibold))
-                                    .foregroundColor(.secondary)
+                                    .font(AppTheme.rounded(12, .semibold))
+                                    .foregroundColor(AppTheme.secondaryText(colorScheme))
                                 
                                 GeometryReader { geo in
                                     ZStack(alignment: .leading) {
@@ -162,8 +162,8 @@ struct HiraganaView: View {
                                 .frame(height: 8)
                                 
                                 Text("\(masteredCount) dari \(currentFlat.count) huruf dikuasai")
-                                    .font(.system(size: 11))
-                                    .foregroundColor(.secondary)
+                                    .font(AppTheme.rounded(11))
+                                    .foregroundColor(AppTheme.secondaryText(colorScheme))
                             }
                             .padding(.horizontal, 16)
                             .padding(.top, 8)
@@ -188,10 +188,10 @@ struct HiraganaView: View {
                 Button(action: { showFlashcard = true }) {
                     HStack(spacing: 10) {
                         Image(systemName: "rectangle.on.rectangle")
-                            .font(.system(size: 16, weight: .bold))
+                            .font(AppTheme.rounded(16, .bold))
                         
                         Text("Flashcard \(isKatakana ? "Katakana" : "Hiragana")")
-                            .font(.system(size: 16, weight: .bold))
+                            .font(AppTheme.rounded(16, .bold))
                     }
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
@@ -243,13 +243,13 @@ struct KanaGroupSection: View {
         VStack(alignment: .leading, spacing: 12) {
             VStack(alignment: .leading, spacing: 4) {
                 Text(group.title)
-                    .font(.system(size: 18, weight: .bold))
+                    .font(AppTheme.rounded(18, .bold))
                     .foregroundColor(.primary)
                     .padding(.horizontal, 16)
                 
                 if !group.subtitle.isEmpty {
                     Text(group.subtitle)
-                        .font(.system(size: 13))
+                        .font(AppTheme.rounded(13))
                         .foregroundColor(.secondary)
                         .padding(.horizontal, 16)
                 }
@@ -258,7 +258,7 @@ struct KanaGroupSection: View {
             HStack(spacing: 0) {
                 ForEach(group.columns, id: \.self) { col in
                     Text(col)
-                        .font(.system(size: 10, weight: .bold))
+                        .font(AppTheme.rounded(10, .bold))
                         .foregroundColor(.secondary)
                         .frame(maxWidth: .infinity)
                 }
@@ -306,11 +306,11 @@ struct KanaCellView: View {
     var body: some View {
         VStack(spacing: 2) {
             Text(item.kana)
-                .font(.system(size: 24, weight: .medium))
+                .font(AppTheme.rounded(24, .medium))
                 .foregroundColor(.primary)
             
             Text(item.romaji)
-                .font(.system(size: 9, weight: .bold))
+                .font(AppTheme.rounded(9, .bold))
                 .foregroundColor(.secondary)
                 .kerning(0.5)
             
