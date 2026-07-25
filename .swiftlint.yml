@@ -9,7 +9,7 @@ included:
   - Tests
 
 excluded:
-  - Sources/AppModule/Resources
+  - Sources/AppFeature/Resources
 
 analyzer_rules:
   - unused_declaration
@@ -26,9 +26,6 @@ opt_in_rules:
   - redundant_nil_coalescing
   - toggle_bool
   - unneeded_parentheses_in_closure_argument
-
-disabled_rules:
-  - trailing_whitespace
 
 line_length:
   warning: 160

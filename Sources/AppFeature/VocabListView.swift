@@ -4,16 +4,16 @@ import SwiftUI
 struct VocabularyListView: View {
     let level: VocabularyLevel
     @Environment(\.colorScheme) var colorScheme
-    
+
     @State private var words: [VocabularyItem] = []
     @State private var searchText: String = ""
     @State private var debouncedSearchText: String = ""
     @State private var loadState: ViewLoadState = .loading
     @State private var selectedFilter: String = "Semua"
-    
+
     var bgColor: Color { AppTheme.screenBackground(colorScheme) }
     var cardColor: Color { AppTheme.surface(colorScheme) }
-    
+
     var availableFilters: [String] {
         var seen = Set<String>()
         var ordered: [String] = ["Semua"]
@@ -22,15 +22,15 @@ struct VocabularyListView: View {
         }
         return ordered
     }
-    
+
     var filtered: [VocabularyItem] {
         let q = debouncedSearchText.trimmingCharacters(in: .whitespacesAndNewlines)
         var result = words
-        
+
         if selectedFilter != "Semua" {
             result = result.filter { $0.jenisKata == selectedFilter }
         }
-        
+
         guard !q.isEmpty else { return result }
         return result.filter {
             $0.kanji.contains(q) ||
@@ -39,7 +39,7 @@ struct VocabularyListView: View {
             $0.jenisKata.localizedCaseInsensitiveContains(q)
         }
     }
-    
+
     var body: some View {
         Group {
             if loadState == .loading {
@@ -111,7 +111,7 @@ struct VocabularyInlineCard: View {
     let item: VocabularyItem
     let levelId: String
     let cardColor: Color
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
@@ -133,7 +133,7 @@ struct VocabularyInlineCard: View {
                 }
                 .buttonStyle(.plain)
             }
-            
+
             Text(item.kanji)
                 .font(AppTheme.rounded(32, .bold))
                 .foregroundColor(.primary)

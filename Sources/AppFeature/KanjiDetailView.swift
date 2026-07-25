@@ -5,17 +5,17 @@ struct KanjiDetailView: View {
     let item: KanjiItem
     let levelId: String
     @Environment(\.colorScheme) var colorScheme
-    
+
     var bgColor: Color { AppTheme.screenBackground(colorScheme) }
     var cardColor: Color { AppTheme.surface(colorScheme) }
-    
+
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
-                
+
                 // Kartu Kanji Utama
                 VStack(spacing: 10) {
-                    
+
                     // Badge level
                     HStack {
                         Text("JLPT \(levelId)")
@@ -27,7 +27,7 @@ struct KanjiDetailView: View {
                             .cornerRadius(8)
                         Spacer()
                     }
-                    
+
                     // Kanji besar + tombol audio
                     ZStack(alignment: .topTrailing) {
                         Text(item.kanji)
@@ -35,7 +35,7 @@ struct KanjiDetailView: View {
                             .foregroundColor(AppTheme.primaryText(colorScheme))
                             .frame(maxWidth: .infinity)
                             .frame(height: 130)
-                        
+
                         Button(action: { AudioSpeechHelper.shared.speak(item.kanji) }) {
                             Image(systemName: "speaker.wave.2.fill")
                                 .font(AppTheme.rounded(16, .semibold))
@@ -51,7 +51,7 @@ struct KanjiDetailView: View {
                 .background(cardColor)
                 .cornerRadius(18)
                 .shadow(color: AppTheme.cardShadow(colorScheme), radius: 6, x: 0, y: 2)
-                
+
                 // Romaji + Arti
                 VStack(spacing: 4) {
                     Text(item.romaji)
@@ -62,7 +62,7 @@ struct KanjiDetailView: View {
                         .foregroundColor(AppTheme.secondaryText(colorScheme))
                 }
                 .padding(.vertical, 4)
-                
+
                 // Onyomi & Kunyomi
                 HStack(spacing: 12) {
                     VStack(alignment: .leading, spacing: 8) {
@@ -80,7 +80,7 @@ struct KanjiDetailView: View {
                     .padding(14)
                     .background(cardColor)
                     .cornerRadius(14)
-                    
+
                     VStack(alignment: .leading, spacing: 8) {
                         Text("KUNYOMI")
                             .font(AppTheme.rounded(10, .bold))
@@ -98,7 +98,7 @@ struct KanjiDetailView: View {
                     .cornerRadius(14)
                 }
                 .shadow(color: AppTheme.cardShadow(colorScheme), radius: 4, x: 0, y: 1)
-                
+
                 // Contoh Kata & Kalimat
                 if !item.examples.isEmpty {
                     VStack(alignment: .leading, spacing: 10) {

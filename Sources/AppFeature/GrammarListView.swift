@@ -4,14 +4,14 @@ import SwiftUI
 struct GrammarListView: View {
     let level: GrammarLevel
     @Environment(\.colorScheme) var colorScheme
-    
+
     @State private var items: [GrammarItem] = []
     @State private var searchText: String = ""
     @State private var loadState: ViewLoadState = .loading
 
     var bgColor: Color { AppTheme.screenBackground(colorScheme) }
     var cardColor: Color { AppTheme.surface(colorScheme) }
-    
+
     var filtered: [GrammarItem] {
         let query = searchText.trimmingCharacters(in: .whitespaces)
         if query.isEmpty { return items }
@@ -22,7 +22,7 @@ struct GrammarListView: View {
             $0.tags.contains(where: { $0.localizedCaseInsensitiveContains(query) })
         }
     }
-    
+
     var body: some View {
         Group {
             if loadState == .loading {
@@ -48,7 +48,7 @@ struct GrammarListView: View {
 
                     SearchField(placeholder: "Cari tata bahasa...", text: $searchText)
                         .padding(.horizontal, 20)
-                    
+
                     // List grammar. Lazy so a 160-pattern level only builds the
                     // rows that are on screen, matching the kanji and vocabulary
                     // lists.
@@ -99,7 +99,7 @@ struct GrammarListCard: View {
     let item: GrammarItem
     let cardColor: Color
     @Environment(\.colorScheme) var colorScheme
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {

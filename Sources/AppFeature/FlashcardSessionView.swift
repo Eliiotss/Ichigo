@@ -21,7 +21,7 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
     @Published private(set) var sessionCorrect = 0
     @Published private(set) var sessionWrong = 0
     @Published private(set) var isSubmitting = false
-    
+
     let mode: FlashcardMode
     let level: FlashcardLevelInfo
     let levelKey: String
@@ -29,22 +29,22 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
     private let engine = FlashcardReviewEngine()
     private let builder = FlashcardDeckQueueBuilder()
     private var retryCardIds: Set<String> = []
-    
+
     // Bucket asal tiap kartu untuk SESI HARI INI (bukan state SRS global).
     // Begitu kartu keluar dari peta ini, dia dianggap "selesai" untuk hari ini.
     private var cardBucket: [String: SessionBucket] = [:]
-    
+
     init(mode: FlashcardMode, level: FlashcardLevelInfo, store: FlashcardStore) {
         self.mode = mode
         self.level = level
         self.levelKey = flashcardLevelKey(mode: mode, levelId: level.id)
         self.store = store
     }
-    
+
     var currentCard: FlashcardDeckCard? { currentIndex < queue.count ? queue[currentIndex] : nil }
     var progressText: String { sessionTotal == 0 ? "0/0" : "\(min(currentIndex + 1, sessionTotal))/\(sessionTotal)" }
     var progressValue: Double { sessionTotal == 0 ? 0 : Double(min(currentIndex + 1, sessionTotal)) / Double(sessionTotal) }
-    
+
     func loadDeck() async {
         if case .loaded = loadState { return }
         loadState = .loading
@@ -53,11 +53,11 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
             loadState = .failed("Data tidak ditemukan"); return
         }
         if items.isEmpty { loadState = .empty; return }
-        
+
         let progressSnapshot = store.progressMap
         let settingsSnapshot = store.settings
         let usedToday = store.newCardTracker.studiedTodayCount(levelKey: levelKey)
-        
+
         let built = builder.build(
             levelKey: levelKey,
             items: items,
@@ -65,10 +65,10 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
             settings: settingsSnapshot,
             newCardsAlreadyStudiedToday: usedToday
         )
-        
+
         queue = built
         sessionTotal = queue.count
-        
+
         // Assign bucket AWAL per kartu untuk sesi hari ini (sekali saja, saat deck dibangun)
         cardBucket.removeAll()
         remainingNew = 0
@@ -89,7 +89,7 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
             }
             cardBucket[card.id] = bucket
         }
-        
+
         retryCardIds.removeAll()
         currentIndex = 0
         sessionCorrect = 0
@@ -100,16 +100,16 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
         finished = queue.isEmpty
         loadState = queue.isEmpty ? .empty : .loaded
     }
-    
+
     func reveal() {
         guard !isRevealed else { return }
         withAnimation(.easeInOut(duration: 0.2)) { isRevealed = true }
     }
-    
+
     func submit(grade: FlashcardGrade) {
         guard !isSubmitting, isRevealed, !isGraded, let cardItem = currentCard else { return }
         isSubmitting = true
-        
+
         let current = store.deckProgress(for: cardItem, levelKey: levelKey)
         let stateBefore = current.state
 
@@ -139,13 +139,13 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
         store.updateStreakIfNeeded()
         store.refreshDeckStats(key: levelKey)
     }
-    
+
     // MARK: - Aturan Universal Counter (sama untuk semua kategori, seperti Anki)
     // Kalau kartu LULUS ke review (selesai untuk hari ini) -> keluar dari bucket asalnya, tidak masuk ke mana pun.
     // Kalau kartu MASIH perlu diulang hari ini (learning/relearning) -> pindah/menetap di bucket "Learning".
     private func applyBucketDelta(cardId: String, stateAfter: FlashcardCardState) {
         guard let bucket = cardBucket[cardId] else { return }
-        
+
         if stateAfter == .review {
             // Selesai untuk hari ini, keluar dari bucket manapun dia berasal
             decrement(bucket)
@@ -160,7 +160,7 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
             // Kalau sudah di .learning sebelumnya -> tidak ada perubahan angka (masih siklus di bucket sama)
         }
     }
-    
+
     private func decrement(_ bucket: SessionBucket) {
         switch bucket {
         case .new: remainingNew = max(0, remainingNew - 1)
@@ -168,7 +168,7 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
         case .review: remainingReview = max(0, remainingReview - 1)
         }
     }
-    
+
     func next() {
         guard isGraded else { return }
         isSubmitting = false
@@ -184,14 +184,14 @@ struct FlashcardSessionView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.colorScheme) private var colorScheme
     @StateObject private var vm: FlashcardDeckSessionViewModel
-    
+
     init(mode: FlashcardMode, level: FlashcardLevelInfo, store: FlashcardStore) {
         _vm = StateObject(wrappedValue: FlashcardDeckSessionViewModel(mode: mode, level: level, store: store))
     }
-    
+
     private var bgColor: Color { AppTheme.screenBackground(colorScheme) }
     private var cardColor: Color { AppTheme.surface(colorScheme) }
-    
+
     var body: some View {
         Group {
             switch vm.loadState {
@@ -210,7 +210,7 @@ struct FlashcardSessionView: View {
         .navigationBarTitleDisplayMode(.inline)
         .background(bgColor.ignoresSafeArea())
     }
-    
+
     // MARK: - Review (tap kartu untuk reveal, seperti versi sebelumnya)
     private func reviewView(_ item: FlashcardDeckCard) -> some View {
         VStack(spacing: 18) {
@@ -220,7 +220,7 @@ struct FlashcardSessionView: View {
                     Spacer()
                 }
                 ProgressView(value: vm.progressValue).tint(vm.level.color)
-                
+
                 // Counter 3 bagian ala Anki: Baru / Belajar-Ulang / Review
                 HStack(spacing: 0) {
                     Spacer()
@@ -233,15 +233,15 @@ struct FlashcardSessionView: View {
                 }
                 .padding(.top, 4)
             }.padding(.horizontal, 20)
-            
+
             Spacer()
-            
+
             VStack(spacing: 16) {
                 Text(item.front)
                     .font(AppTheme.rounded(40, .black))
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
-                
+
                 if vm.isRevealed {
                     if !item.revealedTitle.isEmpty {
                         Text(item.revealedTitle)
@@ -275,9 +275,9 @@ struct FlashcardSessionView: View {
             .contentShape(Rectangle())
             .onTapGesture { vm.reveal() }
             .padding(.horizontal, 20)
-            
+
             Spacer()
-            
+
             if vm.isRevealed && !vm.isGraded {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                     ForEach(FlashcardGrade.allCases, id: \.self) { grade in
@@ -319,7 +319,7 @@ struct FlashcardSessionView: View {
         }
         .padding(.vertical, 16)
     }
-    
+
     private func counterBadge(count: Int, color: Color) -> some View {
         HStack(spacing: 4) {
             Circle().fill(color).frame(width: 8, height: 8)
@@ -328,7 +328,7 @@ struct FlashcardSessionView: View {
                 .foregroundColor(color)
         }
     }
-    
+
     private func color(for grade: FlashcardGrade) -> Color {
         switch grade {
         case .again: return .red
@@ -337,7 +337,7 @@ struct FlashcardSessionView: View {
         case .easy: return .green
         }
     }
-    
+
     private var finishedView: some View {
         VStack(spacing: 18) {
             Spacer()
@@ -362,7 +362,7 @@ struct FlashcardSessionView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .contentShape(Rectangle())
     }
-    
+
     private func emptyState(_ title: String, _ subtitle: String) -> some View {
         VStack(spacing: 12) {
             Image(systemName: "tray").font(AppTheme.rounded(42)).foregroundColor(AppTheme.secondaryText(colorScheme))

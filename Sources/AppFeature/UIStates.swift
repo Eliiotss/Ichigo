@@ -12,7 +12,7 @@ struct EmptyStateView: View {
     let title: String
     let subtitle: String
     var icon: String = "tray"
-    
+
     var body: some View {
         VStack(spacing: 10) {
             Image(systemName: icon).font(AppTheme.rounded(42))

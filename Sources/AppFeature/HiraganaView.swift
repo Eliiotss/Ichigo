@@ -71,50 +71,50 @@ struct HiraganaView: View {
     @State private var katakanaGroups: [KanaGroup] = []
     @State private var isLoading = true
     @Environment(\.colorScheme) var colorScheme
-    
+
     var isKatakana: Bool { selectedTab == 1 }
     var currentGroups: [KanaGroup] { isKatakana ? katakanaGroups : hiraganaGroups }
     var currentFlat: [KanaItem] { KanaLoader.flatItems(from: currentGroups) }
-    
+
     var mainGroups: [KanaGroup] {
         currentGroups.filter { group in
             !group.title.localizedCaseInsensitiveContains("Yōon") &&
             !group.title.localizedCaseInsensitiveContains("Gabungan")
         }
     }
-    
+
     var mainFlat: [KanaItem] {
         KanaLoader.flatItems(from: mainGroups)
     }
-    
+
     var yoonUnlockThreshold: Int {
         Int((Double(mainFlat.count) * 0.5).rounded(.up))
     }
-    
+
     var masteredMainCount: Int {
         store.masteredCount(flat: mainFlat, isKatakana: isKatakana)
     }
-    
+
     var isYoonUnlocked: Bool {
         masteredMainCount >= yoonUnlockThreshold
     }
-    
+
     var flashcardFlat: [KanaItem] {
         isYoonUnlocked ? currentFlat : mainFlat
     }
-    
+
     var bgColor: Color { AppTheme.screenBackground(colorScheme) }
-    
+
     var cardColor: Color { AppTheme.surface(colorScheme) }
-    
+
     var masteredCount: Int {
         store.masteredCount(flat: currentFlat, isKatakana: isKatakana)
     }
-    
+
     var progressValue: Double {
         store.progressPercent(flat: currentFlat, isKatakana: isKatakana)
     }
-    
+
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack(spacing: 0) {
@@ -126,7 +126,7 @@ struct HiraganaView: View {
                 .padding(.horizontal, 16)
                 .padding(.vertical, 10)
                 .background(bgColor)
-                
+
                 if isLoading {
                     Spacer()
                     ProgressView("Memuat huruf...")
@@ -138,13 +138,13 @@ struct HiraganaView: View {
                                 Text("Progres Hafalan")
                                     .font(AppTheme.rounded(12, .semibold))
                                     .foregroundColor(AppTheme.secondaryText(colorScheme))
-                                
+
                                 GeometryReader { geo in
                                     ZStack(alignment: .leading) {
                                         RoundedRectangle(cornerRadius: 6)
                                             .fill(Color.gray.opacity(0.15))
                                             .frame(height: 8)
-                                        
+
                                         RoundedRectangle(cornerRadius: 6)
                                             .fill(
                                                 LinearGradient(
@@ -160,14 +160,14 @@ struct HiraganaView: View {
                                     }
                                 }
                                 .frame(height: 8)
-                                
+
                                 Text("\(masteredCount) dari \(currentFlat.count) huruf dikuasai")
                                     .font(AppTheme.rounded(11))
                                     .foregroundColor(AppTheme.secondaryText(colorScheme))
                             }
                             .padding(.horizontal, 16)
                             .padding(.top, 8)
-                            
+
                             ForEach(currentGroups) { group in
                                 KanaGroupSection(
                                     group: group,
@@ -176,20 +176,20 @@ struct HiraganaView: View {
                                     cardColor: cardColor
                                 )
                             }
-                            
+
                             Spacer().frame(height: 90)
                         }
                     }
                     .background(bgColor)
                 }
             }
-            
+
             if !isLoading {
                 Button(action: { showFlashcard = true }) {
                     HStack(spacing: 10) {
                         Image(systemName: "rectangle.on.rectangle")
                             .font(AppTheme.rounded(16, .bold))
-                        
+
                         Text("Flashcard \(isKatakana ? "Katakana" : "Hiragana")")
                             .font(AppTheme.rounded(16, .bold))
                     }
@@ -238,7 +238,7 @@ struct KanaGroupSection: View {
     let store: HiraganaStore
     let isKatakana: Bool
     let cardColor: Color
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             VStack(alignment: .leading, spacing: 4) {
@@ -246,7 +246,7 @@ struct KanaGroupSection: View {
                     .font(AppTheme.rounded(18, .bold))
                     .foregroundColor(.primary)
                     .padding(.horizontal, 16)
-                
+
                 if !group.subtitle.isEmpty {
                     Text(group.subtitle)
                         .font(AppTheme.rounded(13))
@@ -254,7 +254,7 @@ struct KanaGroupSection: View {
                         .padding(.horizontal, 16)
                 }
             }
-            
+
             HStack(spacing: 0) {
                 ForEach(group.columns, id: \.self) { col in
                     Text(col)
@@ -264,7 +264,7 @@ struct KanaGroupSection: View {
                 }
             }
             .padding(.horizontal, 16)
-            
+
             VStack(spacing: 4) {
                 ForEach(0..<group.items.count, id: \.self) { rowIdx in
                     HStack(spacing: 4) {
@@ -298,28 +298,28 @@ struct KanaCellView: View {
     let isMastered: Bool
     let isKatakana: Bool
     let cardColor: Color
-    
+
     var accentColor: Color {
         isKatakana ? AppTheme.indigo : AppTheme.blue
     }
-    
+
     var body: some View {
         VStack(spacing: 2) {
             Text(item.kana)
                 .font(AppTheme.rounded(24, .medium))
                 .foregroundColor(.primary)
-            
+
             Text(item.romaji)
                 .font(AppTheme.rounded(9, .bold))
                 .foregroundColor(.secondary)
                 .kerning(0.5)
-            
+
             GeometryReader { geo in
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: 2)
                         .fill(Color.gray.opacity(0.2))
                         .frame(height: 3)
-                    
+
                     RoundedRectangle(cornerRadius: 2)
                         .fill(isMastered ? Color.green : accentColor)
                         .frame(width: geo.size.width * CGFloat(barProgress), height: 3)

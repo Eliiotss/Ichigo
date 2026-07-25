@@ -49,7 +49,7 @@ struct HomeView: View {
 
     @ObservedObject private var account = AccountStore.shared
     @AppStorage("daily_target") private var dailyTarget = 20
-    
+
     let menuItems: [MenuItem] = [
         MenuItem(id: "huruf", label: "Huruf", sub: "Kana", icon: "character", gradientColors: AppTheme.tileGradient("huruf")),
         MenuItem(id: "kanji", label: "Kanji", sub: "Aksara", icon: "character.book.closed", gradientColors: AppTheme.tileGradient("kanji")),
@@ -58,9 +58,9 @@ struct HomeView: View {
         MenuItem(id: "grammar", label: "Grammar", sub: "Tata Bahasa", icon: "text.book.closed.fill", gradientColors: AppTheme.tileGradient("grammar")),
         MenuItem(id: "lainnya", label: "Lainnya", sub: "Fitur Lain", icon: "square.grid.2x2.fill", gradientColors: AppTheme.tileGradient("lainnya"))
     ]
-    
+
     var dueTodayTotal: Int { flashcardStore.dueTodayGrandTotal }
-    
+
     var body: some View {
         GeometryReader { geo in
             let isIPad = geo.size.width > 600

@@ -14,7 +14,7 @@ enum FlashcardGrade: Int, Codable, CaseIterable {
     case hard = 2
     case good = 3
     case easy = 4
-    
+
     var title: String {
         switch self {
         case .again: return "Ulang"
@@ -57,7 +57,7 @@ struct FlashcardProgress: Codable {
     var lastReview: Date?
     var scheduledDays: Int
     var learningStepIndex: Int
-    
+
     init(id: String, level: String, front: String, back: String, state: FlashcardCardState, dueDate: Date, stability: Double, difficulty: Double, reps: Int, lapses: Int, lastReview: Date?, scheduledDays: Int, learningStepIndex: Int) {
         self.id = id
         self.level = level
@@ -73,7 +73,7 @@ struct FlashcardProgress: Codable {
         self.scheduledDays = scheduledDays
         self.learningStepIndex = learningStepIndex
     }
-    
+
     var isDue: Bool { dueDate <= Date() }
     var isMastered: Bool { state == .review && scheduledDays >= 21 }
 }
@@ -92,7 +92,7 @@ final class FlashcardProgressStore {
     private let key = "flashcard_progress_v1"
     private let legacyKey = "flashcardSRS_v2"
     private let corruptKey = "flashcard_progress_corrupt_backup_v1"
-    
+
     func load() -> [String: FlashcardProgress] {
         guard let data = UserDefaults.standard.data(forKey: key) else { return [:] }
         do {
@@ -103,12 +103,12 @@ final class FlashcardProgressStore {
             return [:]
         }
     }
-    
+
     func save(_ progress: [String: FlashcardProgress]) {
         guard let encoded = try? JSONEncoder().encode(progress) else { return }
         UserDefaults.standard.set(encoded, forKey: key)
     }
-    
+
     func loadLegacy() -> [String: FlashcardProgress] {
         guard let data = UserDefaults.standard.data(forKey: legacyKey),
               let decoded = try? JSONDecoder().decode([String: FlashcardProgress].self, from: data) else {
@@ -116,9 +116,9 @@ final class FlashcardProgressStore {
         }
         return decoded
     }
-    
+
     func clearLegacy() { UserDefaults.standard.removeObject(forKey: legacyKey) }
-    
+
     func reset() {
         UserDefaults.standard.removeObject(forKey: key)
         UserDefaults.standard.removeObject(forKey: legacyKey)
@@ -127,7 +127,7 @@ final class FlashcardProgressStore {
 
 final class FlashcardSettingsStore {
     private let key = "flashcard_settings_v1"
-    
+
     func load() -> FlashcardSettings {
         guard let data = UserDefaults.standard.data(forKey: key),
               let decoded = try? JSONDecoder().decode(FlashcardSettings.self, from: data) else {
@@ -135,12 +135,12 @@ final class FlashcardSettingsStore {
         }
         return decoded
     }
-    
+
     func save(_ settings: FlashcardSettings) {
         guard let encoded = try? JSONEncoder().encode(settings) else { return }
         UserDefaults.standard.set(encoded, forKey: key)
     }
-    
+
     func reset() { UserDefaults.standard.removeObject(forKey: key) }
 }
 
@@ -148,7 +148,7 @@ final class FlashcardReviewStore {
     private let key = "flashcard_reviews_v1"
     private let corruptKey = "flashcard_reviews_corrupt_backup_v1"
     private let maxStoredLogs = 20_000
-    
+
     func load() -> [FlashcardReviewLog] {
         guard let data = UserDefaults.standard.data(forKey: key) else { return [] }
         do {
@@ -159,7 +159,7 @@ final class FlashcardReviewStore {
             return []
         }
     }
-    
+
     func append(_ log: FlashcardReviewLog) {
         var logs = load()
         logs.append(log)
@@ -167,13 +167,13 @@ final class FlashcardReviewStore {
         guard let encoded = try? JSONEncoder().encode(logs) else { return }
         UserDefaults.standard.set(encoded, forKey: key)
     }
-    
+
     func todayCount(levelId: String) -> Int {
         let calendar = Calendar.current
         let now = Date()
         return load().filter { $0.levelId == levelId && calendar.isDate($0.reviewedAt, inSameDayAs: now) }.count
     }
-    
+
     func reset() { UserDefaults.standard.removeObject(forKey: key) }
 }
 
@@ -196,29 +196,29 @@ enum FSRSMath {
         guard w.count > 20 else { return -0.5 } // fallback v4.5 kalau array kependekan
         return -max(w[20], 0.1)
     }
-    
+
     private static func factor(_ w: [Double]) -> Double {
         let d = decay(w)
         return pow(0.9, 1.0 / d) - 1
     }
-    
+
     // Retrievability: probabilitas kartu masih diingat setelah t hari
     static func retrievability(elapsedDays: Double, stability: Double, w: [Double]) -> Double {
         guard stability > 0 else { return 0 }
         return pow(1 + factor(w) * elapsedDays / stability, decay(w))
     }
-    
+
     // Initial Stability - stability awal saat kartu baru pertama kali dinilai
     static func initialStability(grade: FlashcardGrade, w: [Double]) -> Double {
         max(w[grade.rawValue - 1], 0.1)
     }
-    
+
     // Initial Difficulty - difficulty awal saat kartu baru pertama kali dinilai
     static func initialDifficulty(grade: FlashcardGrade, w: [Double]) -> Double {
         let d = w[4] - (exp(w[5] * Double(grade.rawValue - 1)) - 1)
         return clamp(d, min: 1, max: 10)
     }
-    
+
     // Difficulty Update - mean reversion ke arah "easy", dipakai tiap review
     static func nextDifficulty(current: Double, grade: FlashcardGrade, w: [Double]) -> Double {
         let delta = current - w[6] * (Double(grade.rawValue) - 3)
@@ -226,7 +226,7 @@ enum FSRSMath {
         let reverted = w[7] * easyD0 + (1 - w[7]) * delta
         return clamp(reverted, min: 1, max: 10)
     }
-    
+
     // Stability after Recall - stability baru setelah berhasil ingat (grade Hard/Good/Easy)
     static func nextStabilityOnRecall(stability: Double, difficulty: Double, retrievability: Double, grade: FlashcardGrade, w: [Double]) -> Double {
         let hardPenalty = grade == .hard ? w[15] : 1.0
@@ -234,13 +234,13 @@ enum FSRSMath {
         let increase = exp(w[8]) * (11 - difficulty) * pow(stability, -w[9]) * (exp((1 - retrievability) * w[10]) - 1) * hardPenalty * easyBonus
         return max(stability * (1 + increase), 0.1)
     }
-    
+
     // Stability after Forget - stability baru setelah lupa (grade Again, dari state review)
     static func nextStabilityOnForget(stability: Double, difficulty: Double, retrievability: Double, w: [Double]) -> Double {
         let s = w[11] * pow(difficulty, -w[12]) * (pow(stability + 1, w[13]) - 1) * exp((1 - retrievability) * w[14])
         return max(s, 0.1)
     }
-    
+
     // Same-day Review: kalau kartu direview lagi di HARI YANG SAMA (elapsedDays == 0),
     // retrievability dianggap 1 (baru saja diingat), jadi stability increase dari recall
     // formula tetap valid tanpa perlu cabang khusus - retrievability(0, S) = (1+0)^decay = 1 secara alami.
@@ -248,7 +248,7 @@ enum FSRSMath {
     static func isSameDayReview(elapsedDays: Double) -> Bool {
         elapsedDays <= 0
     }
-    
+
     // Interval Calculation - interval berikutnya (hari) berdasarkan target retention
     static func nextInterval(stability: Double, desiredRetention: Double, maximumDays: Int, w: [Double]) -> Int {
         let d = decay(w)
@@ -256,7 +256,7 @@ enum FSRSMath {
         let interval = (stability / f) * (pow(desiredRetention, 1.0 / d) - 1)
         return min(max(Int(interval.rounded()), 1), maximumDays)
     }
-    
+
     private static func clamp(_ value: Double, min minValue: Double, max maxValue: Double) -> Double {
         Swift.max(minValue, Swift.min(value, maxValue))
     }
@@ -268,17 +268,17 @@ final class FlashcardReviewEngine {
         let now = Date()
         let w = settings.fsrsWeights
         let elapsedDays = Double(elapsedReviewDays(from: card.lastReview, to: now))
-        
+
         updated.reps += 1
         updated.lastReview = now
-        
+
         switch card.state {
-            
+
             // MARK: Kartu baru - masuk learning steps (kecuali Easy = langsung lulus)
         case .new:
             updated.stability = FSRSMath.initialStability(grade: grade, w: w)
             updated.difficulty = FSRSMath.initialDifficulty(grade: grade, w: w)
-            
+
             if grade == .easy {
                 graduateWithStability(&updated, settings: settings, now: now)
             } else {
@@ -286,22 +286,22 @@ final class FlashcardReviewEngine {
                 // -1 = belum pernah masuk step; treat sebagai awal
                 advanceStep(&updated, currentIndex: -1, steps: settings.learningStepsMinutes, grade: grade, settings: settings, now: now)
             }
-            
+
             // MARK: Kartu learning (sedang di Merah, step berjalan di background)
         case .learning:
             updated.stability = FSRSMath.initialStability(grade: grade, w: w)
             updated.difficulty = FSRSMath.initialDifficulty(grade: grade, w: w)
-            
+
             if grade == .easy {
                 graduateWithStability(&updated, settings: settings, now: now)
             } else {
                 advanceStep(&updated, currentIndex: card.learningStepIndex, steps: settings.learningStepsMinutes, grade: grade, settings: settings, now: now)
             }
-            
+
             // MARK: Kartu review - FSRS penuh berlaku di sini
         case .review:
             let r = FSRSMath.retrievability(elapsedDays: elapsedDays, stability: card.stability, w: w)
-            
+
             if grade == .again {
                 updated.lapses += 1
                 updated.stability = FSRSMath.nextStabilityOnForget(stability: card.stability, difficulty: card.difficulty, retrievability: r, w: w)
@@ -314,7 +314,7 @@ final class FlashcardReviewEngine {
                 // Tetap Hijau, interval baru dihitung ulang
                 graduateWithStability(&updated, settings: settings, now: now)
             }
-            
+
             // MARK: Kartu relearning (Merah setelah lupa dari Hijau)
         case .relearning:
             if grade == .easy {
@@ -324,11 +324,11 @@ final class FlashcardReviewEngine {
                 advanceStep(&updated, currentIndex: card.learningStepIndex, steps: settings.relearningStepsMinutes, grade: grade, settings: settings, now: now)
             }
         }
-        
+
         if updated.lapses >= settings.leechThreshold {
             updated.difficulty = 10
         }
-        
+
         let log = FlashcardReviewLog(
             id: UUID(),
             cardId: updated.id,
@@ -338,10 +338,10 @@ final class FlashcardReviewEngine {
             nextDueDate: updated.dueDate,
             state: updated.state
         )
-        
+
         return (updated, log)
     }
-    
+
     // MARK: - Step Progression (persis mekanisme Anki: Again/Hard/Good/Easy)
     // currentIndex: -1 berarti kartu baru pertama kali masuk step
     private func advanceStep(_ updated: inout FlashcardProgress, currentIndex: Int, steps: [Double], grade: FlashcardGrade, settings: FlashcardSettings, now: Date) {
@@ -351,14 +351,14 @@ final class FlashcardReviewEngine {
             updated.learningStepIndex = 0
             updated.dueDate = now.addingTimeInterval((steps[safe: 0] ?? 1) * 60)
             updated.scheduledDays = 0
-            
+
         case .hard:
             // Diam di step yang sama (kalau baru pertama kali, mulai dari step 0)
             let idx = max(currentIndex, 0)
             updated.learningStepIndex = idx
             updated.dueDate = now.addingTimeInterval((steps[safe: idx] ?? 1) * 60)
             updated.scheduledDays = 0
-            
+
         case .good:
             // Maju satu step. Kalau sudah habis step -> lulus ke Hijau
             let nextIdx = currentIndex + 1
@@ -369,13 +369,13 @@ final class FlashcardReviewEngine {
                 updated.dueDate = now.addingTimeInterval(steps[nextIdx] * 60)
                 updated.scheduledDays = 0
             }
-            
+
         case .easy:
             // Selalu langsung lulus (ditangani sebelum manggil fungsi ini, fallback jaga-jaga)
             graduateWithStability(&updated, settings: settings, now: now)
         }
     }
-    
+
     // Lulus ke state .review, interval dihitung dari stability (FSRS-6 formula)
     private func graduateWithStability(_ updated: inout FlashcardProgress, settings: FlashcardSettings, now: Date) {
         let days = FSRSMath.nextInterval(stability: updated.stability, desiredRetention: settings.desiredRetention, maximumDays: settings.maximumIntervalDays, w: settings.fsrsWeights)
@@ -384,7 +384,7 @@ final class FlashcardReviewEngine {
         updated.scheduledDays = days
         updated.dueDate = Calendar.current.date(byAdding: .day, value: days, to: now) ?? now
     }
-    
+
     private func elapsedReviewDays(from lastReview: Date?, to now: Date) -> Int {
         guard let lastReview else { return 0 }
         return max(0, Calendar.current.dateComponents([.day], from: lastReview, to: now).day ?? 0)
@@ -406,9 +406,9 @@ final class FlashcardStore: ObservableObject {
     @Published private(set) var deckItemsPerLevel: [String: [FlashcardDeckCard]] = [:]
     @Published private(set) var deckLevelStats: [String: LevelStats] = [:]
     @Published var deckStateByLevel: [String: FlashcardLoadState] = [:]
-    
+
     @Published var lastError: String?
-    
+
     let progressStore = FlashcardProgressStore()
     let reviewStore = FlashcardReviewStore()
     let settingsStore = FlashcardSettingsStore()
@@ -416,11 +416,11 @@ final class FlashcardStore: ObservableObject {
     let syncMetadataStore = FlashcardSyncMetadataStore()
     let dayBoundaryStore = FlashcardDayBoundaryStore()
     let newCardTracker = FlashcardDailyNewCardTracker()
-    
+
     private let retentionValidator = FSRSRetentionValidator()
     private(set) var progressMap: [String: FlashcardProgress]
     var settings: FlashcardSettings
-    
+
     init() {
         progressMap = progressStore.load()
         if progressMap.isEmpty {
@@ -433,7 +433,7 @@ final class FlashcardStore: ObservableObject {
         }
         settings = settingsStore.load()
     }
-    
+
     // MARK: - Deck loading (Vocabulary / Grammar)
     func loadDeck(mode: FlashcardMode, levelId: String, jsonFile: String) async {
         _ = dayBoundaryStore.markDailyResetIfNeeded()
@@ -447,11 +447,11 @@ final class FlashcardStore: ObservableObject {
         deckStateByLevel[key] = items.isEmpty ? .empty : .loaded
         refreshDeckStats(key: key)
     }
-    
+
     func deckStats(mode: FlashcardMode, levelId: String) -> LevelStats? {
         deckLevelStats[flashcardLevelKey(mode: mode, levelId: levelId)]
     }
-    
+
     func refreshDeckStats(key: String) {
         guard let items = deckItemsPerLevel[key] else { return }
         let total = items.count
@@ -459,11 +459,11 @@ final class FlashcardStore: ObservableObject {
         let due = items.filter { (progressMap[$0.id] ?? FlashcardProgress(deckCard: $0, levelKey: key)).isDue }.count
         deckLevelStats[key] = LevelStats(total: total, mastered: mastered, due: due, progress: total == 0 ? 0 : Double(mastered) / Double(total))
     }
-    
+
     func deckProgress(for card: FlashcardDeckCard, levelKey: String) -> FlashcardProgress {
         progressMap[card.id] ?? FlashcardProgress(deckCard: card, levelKey: levelKey)
     }
-    
+
     // MARK: - Shared progress logic
     func saveProgress(_ progress: FlashcardProgress) {
         let validation = retentionValidator.validate(progress: progress)
@@ -472,27 +472,27 @@ final class FlashcardStore: ObservableObject {
         progressStore.save(progressMap)
         syncMetadataStore.markUpdated(cardId: progress.id, levelId: progress.level)
     }
-    
+
     func appendReviewLog(_ log: FlashcardReviewLog) {
         reviewStore.append(log)
         analyticsStore.record(log)
     }
-    
+
     func updateStreakIfNeeded() { dayBoundaryStore.registerStudy() }
     var currentStreak: Int { dayBoundaryStore.currentStreak }
     var analyticsSummary: FlashcardAnalyticsSummary { analyticsStore.loadSummary() }
     var masteredTotal: Int { progressMap.values.filter(\.isMastered).count }
-    
+
     var studiedTodayTotal: Int {
         FlashcardMode.allCases.reduce(0) { total, mode in
             total + mode.levels().reduce(0) { $0 + reviewStore.todayCount(levelId: flashcardLevelKey(mode: mode, levelId: $1.id)) }
         }
     }
-    
+
     func dueTodayTotal(mode: FlashcardMode, levelId: String) -> Int {
         deckStats(mode: mode, levelId: levelId)?.due ?? 0
     }
-    
+
     var dueTodayGrandTotal: Int {
         FlashcardMode.allCases.reduce(0) { total, mode in
             total + mode.levels().reduce(0) { $0 + (deckStats(mode: mode, levelId: $1.id)?.due ?? 0) }
@@ -504,37 +504,37 @@ final class FlashcardStore: ObservableObject {
 enum FlashcardMode: String, CaseIterable, Identifiable {
     case vocabulary
     case grammar
-    
+
     var id: String { rawValue }
-    
+
     var title: String {
         switch self {
         case .vocabulary: return "Vocabulary"
         case .grammar: return "Grammar"
         }
     }
-    
+
     var subtitle: String {
         switch self {
         case .vocabulary: return "Hafalkan kosakata"
         case .grammar: return "Hafalkan pola kalimat"
         }
     }
-    
+
     var icon: String {
         switch self {
         case .vocabulary: return "book.fill"
         case .grammar: return "text.book.closed.fill"
         }
     }
-    
+
     var color: Color {
         switch self {
         case .vocabulary: return AppTheme.blue
         case .grammar: return AppTheme.teal
         }
     }
-    
+
     func levels() -> [FlashcardLevelInfo] {
         switch self {
         case .vocabulary:
@@ -575,7 +575,7 @@ struct FlashcardDeckCard: Identifiable, Hashable {
     let revealedTitle: String  // Hiragana (vocab) / Arti singkat (grammar)
     let revealedBody: String   // Arti (vocab) / Penjelasan (grammar)
     let revealedTag: String    // Jenis kata (vocab) / Struktur (grammar)
-    
+
     init(vocab item: VocabularyItem) {
         id = item.id
         mode = .vocabulary
@@ -584,7 +584,7 @@ struct FlashcardDeckCard: Identifiable, Hashable {
         revealedBody = item.arti
         revealedTag = item.jenisKata
     }
-    
+
     init(grammar item: GrammarItem) {
         id = item.id
         mode = .grammar
@@ -636,7 +636,7 @@ final class FlashcardDeckQueueBuilder {
     func build(levelKey: String, items: [FlashcardDeckCard], progress: [String: FlashcardProgress], settings: FlashcardSettings, newCardsAlreadyStudiedToday: Int = 0) -> [FlashcardDeckCard] {
         let now = Date()
         var seen = Set<String>()
-        
+
         let dueItems = items
             .filter { item in
                 guard let card = progress[item.id] else { return false }
@@ -651,15 +651,15 @@ final class FlashcardDeckQueueBuilder {
                 return (left?.lapses ?? 0) > (right?.lapses ?? 0)
             }
             .prefix(settings.maxReviewsPerDay)
-        
+
         var queue: [FlashcardDeckCard] = []
         for item in dueItems where seen.insert(item.id).inserted { queue.append(item) }
-        
+
         // Limit KARTU BARU strict 35/hari, dikurangi yang sudah dipelajari hari ini di sesi lain
         let newLimit = max(0, settings.newCardsPerDay - newCardsAlreadyStudiedToday)
         let newItems = items.filter { progress[$0.id] == nil }.prefix(newLimit)
         for item in newItems where seen.insert(item.id).inserted { queue.append(item) }
-        
+
         return queue
     }
 }
@@ -670,7 +670,7 @@ struct FlashcardDayKey: Codable, Equatable, Hashable {
     let month: Int
     let day: Int
     let timezoneIdentifier: String
-    
+
     static func today(calendar: Calendar = .current, date: Date = Date()) -> FlashcardDayKey {
         let components = calendar.dateComponents([.year, .month, .day], from: date)
         return FlashcardDayKey(
@@ -680,7 +680,7 @@ struct FlashcardDayKey: Codable, Equatable, Hashable {
             timezoneIdentifier: calendar.timeZone.identifier
         )
     }
-    
+
     var compact: String {
         let m = String(format: "%02d", month)
         let d = String(format: "%02d", day)
@@ -692,23 +692,23 @@ final class FlashcardDayBoundaryStore {
     private let lastStudyDayKey = "flashcard_last_study_day_key_v1"
     private let lastResetDayKey = "flashcard_last_reset_day_key_v1"
     private let streakKey = "flashcard_streak_v1"
-    
+
     func registerStudy(date: Date = Date(), calendar: Calendar = .current) {
         let today = FlashcardDayKey.today(calendar: calendar, date: date)
         let previous = UserDefaults.standard.string(forKey: lastStudyDayKey)
-        
+
         if previous == today.compact { return }
-        
+
         if let previous, isYesterday(previousKey: previous, today: today, calendar: calendar) {
             UserDefaults.standard.set(currentStreak + 1, forKey: streakKey)
         } else {
             UserDefaults.standard.set(1, forKey: streakKey)
         }
-        
+
         UserDefaults.standard.set(today.compact, forKey: lastStudyDayKey)
         UserDefaults.standard.set(date, forKey: "flashcard_last_study_date")
     }
-    
+
     func markDailyResetIfNeeded(date: Date = Date(), calendar: Calendar = .current) -> Bool {
         let today = FlashcardDayKey.today(calendar: calendar, date: date)
         let lastReset = UserDefaults.standard.string(forKey: lastResetDayKey)
@@ -716,11 +716,11 @@ final class FlashcardDayBoundaryStore {
         UserDefaults.standard.set(today.compact, forKey: lastResetDayKey)
         return true
     }
-    
+
     var currentStreak: Int {
         UserDefaults.standard.integer(forKey: streakKey)
     }
-    
+
     private func isYesterday(previousKey: String, today: FlashcardDayKey, calendar: Calendar) -> Bool {
         let parts = previousKey.split(separator: "-")
         guard parts.count >= 3,
@@ -729,18 +729,18 @@ final class FlashcardDayBoundaryStore {
               let day = Int(parts[2]) else {
             return false
         }
-        
+
         var dateComponents = DateComponents()
         dateComponents.year = year
         dateComponents.month = month
         dateComponents.day = day
-        
+
         guard let previousDate = calendar.date(from: dateComponents),
               let todayDate = calendar.date(from: DateComponents(year: today.year, month: today.month, day: today.day)),
               let yesterday = calendar.date(byAdding: .day, value: -1, to: todayDate) else {
             return false
         }
-        
+
         return calendar.isDate(previousDate, inSameDayAs: yesterday)
     }
 }
@@ -753,7 +753,7 @@ struct FlashcardAnalyticsSummary: Codable {
     var goodCount: Int
     var easyCount: Int
     var lastReviewedAt: Date?
-    
+
     var accuracy: Double {
         guard totalReviews > 0 else { return 0 }
         let success = hardCount + goodCount + easyCount
@@ -764,23 +764,23 @@ struct FlashcardAnalyticsSummary: Codable {
 final class FlashcardAnalyticsStore {
     private let summaryKey = "flashcard_analytics_summary_v1"
     private let dailyPrefix = "flashcard_analytics_daily_v1_"
-    
+
     func record(_ log: FlashcardReviewLog) {
         var summary = loadSummary()
         summary.totalReviews += 1
         summary.lastReviewedAt = log.reviewedAt
-        
+
         switch log.grade {
         case .again: summary.againCount += 1
         case .hard: summary.hardCount += 1
         case .good: summary.goodCount += 1
         case .easy: summary.easyCount += 1
         }
-        
+
         saveSummary(summary)
         saveDaily(log)
     }
-    
+
     func loadSummary() -> FlashcardAnalyticsSummary {
         guard let data = UserDefaults.standard.data(forKey: summaryKey),
               let decoded = try? JSONDecoder().decode(FlashcardAnalyticsSummary.self, from: data) else {
@@ -788,16 +788,16 @@ final class FlashcardAnalyticsStore {
         }
         return decoded
     }
-    
+
     func reset() {
         UserDefaults.standard.removeObject(forKey: summaryKey)
     }
-    
+
     private func saveSummary(_ summary: FlashcardAnalyticsSummary) {
         guard let data = try? JSONEncoder().encode(summary) else { return }
         UserDefaults.standard.set(data, forKey: summaryKey)
     }
-    
+
     private func saveDaily(_ log: FlashcardReviewLog) {
         let key = dailyPrefix + FlashcardDayKey.today(date: log.reviewedAt).compact
         var logs = loadDaily(key: key)
@@ -806,7 +806,7 @@ final class FlashcardAnalyticsStore {
         guard let data = try? JSONEncoder().encode(logs) else { return }
         UserDefaults.standard.set(data, forKey: key)
     }
-    
+
     private func loadDaily(key: String) -> [FlashcardReviewLog] {
         guard let data = UserDefaults.standard.data(forKey: key),
               let decoded = try? JSONDecoder().decode([FlashcardReviewLog].self, from: data) else {
@@ -825,13 +825,13 @@ struct FSRSRetentionValidationResult {
 struct FSRSRetentionValidator {
     func validate(progress: FlashcardProgress, now: Date = Date()) -> FSRSRetentionValidationResult {
         var issues: [String] = []
-        
+
         if progress.scheduledDays < 0 { issues.append("scheduledDays negative") }
         if progress.stability < 0.1 { issues.append("stability too low") }
         if progress.difficulty < 1 || progress.difficulty > 10 { issues.append("difficulty out of range") }
         if progress.state == .review && progress.dueDate < (progress.lastReview ?? now) { issues.append("review dueDate earlier than lastReview") }
         if progress.reps < 0 || progress.lapses < 0 { issues.append("counter negative") }
-        
+
         return FSRSRetentionValidationResult(isValid: issues.isEmpty, issues: issues)
     }
 }
@@ -847,7 +847,7 @@ struct FlashcardSyncRecord: Codable, Identifiable {
 
 final class FlashcardSyncMetadataStore {
     private let key = "flashcard_sync_metadata_v1"
-    
+
     func load() -> [String: FlashcardSyncRecord] {
         guard let data = UserDefaults.standard.data(forKey: key),
               let decoded = try? JSONDecoder().decode([String: FlashcardSyncRecord].self, from: data) else {
@@ -855,18 +855,18 @@ final class FlashcardSyncMetadataStore {
         }
         return decoded
     }
-    
+
     func markUpdated(cardId: String, levelId: String, date: Date = Date()) {
         var records = load()
         let currentVersion = records[cardId]?.version ?? 0
         records[cardId] = FlashcardSyncRecord(id: cardId, levelId: levelId, localUpdatedAt: date, version: currentVersion + 1, deleted: false)
         save(records)
     }
-    
+
     func reset() {
         UserDefaults.standard.removeObject(forKey: key)
     }
-    
+
     private func save(_ records: [String: FlashcardSyncRecord]) {
         guard let data = try? JSONEncoder().encode(records) else { return }
         UserDefaults.standard.set(data, forKey: key)
@@ -877,15 +877,15 @@ final class FlashcardSyncMetadataStore {
 // MARK: - Daily New Card Tracker (strict limit lintas sesi)
 final class FlashcardDailyNewCardTracker {
     private let prefix = "flashcard_new_today_"
-    
+
     private func key(levelKey: String, day: String) -> String { "\(prefix)\(levelKey)_\(day)" }
-    
+
     func studiedTodayCount(levelKey: String) -> Int {
         let day = FlashcardDayKey.today().compact
         let ids = UserDefaults.standard.stringArray(forKey: key(levelKey: levelKey, day: day)) ?? []
         return ids.count
     }
-    
+
     func markStudied(cardId: String, levelKey: String) {
         let day = FlashcardDayKey.today().compact
         let k = key(levelKey: levelKey, day: day)

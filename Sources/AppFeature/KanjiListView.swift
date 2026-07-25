@@ -4,16 +4,16 @@ import SwiftUI
 struct KanjiListView: View {
     let level: JLPTLevel
     @Environment(\.colorScheme) var colorScheme
-    
-    
+
+
     @State private var kanjiItems: [KanjiItem] = []
     @State private var searchText: String = ""
     @State private var debouncedSearchText: String = ""
     @State private var loadState: ViewLoadState = .loading
-    
+
     var bgColor: Color { AppTheme.screenBackground(colorScheme) }
     var cardColor: Color { AppTheme.surface(colorScheme) }
-    
+
     var filtered: [KanjiItem] {
         let query = debouncedSearchText.trimmingCharacters(in: .whitespacesAndNewlines)
         if query.isEmpty { return kanjiItems }
@@ -37,9 +37,9 @@ struct KanjiListView: View {
             })
         }
     }
-    
+
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
-    
+
     var body: some View {
         Group {
             if loadState == .loading {
@@ -62,7 +62,7 @@ struct KanjiListView: View {
 
                     SearchField(placeholder: "Cari Kanji (contoh: 日)", text: $searchText)
                         .padding(.horizontal, 20)
-                    
+
                     // Grid kanji
                     ScrollView {
                         if filtered.isEmpty {
@@ -113,16 +113,16 @@ struct KanjiListView: View {
             }
         }
     }
-    
+
 }
 
 // MARK: - Kanji Card (Grid Item)
 struct KanjiCard: View {
     let item: KanjiItem
     @Environment(\.colorScheme) var colorScheme
-    
+
     var cardColor: Color { AppTheme.surface(colorScheme) }
-    
+
     var body: some View {
         VStack(spacing: 6) {
             // Kanji besar
@@ -130,7 +130,7 @@ struct KanjiCard: View {
                 .font(AppTheme.rounded(52, .light))
                 .foregroundColor(AppTheme.primaryText(colorScheme))
                 .frame(height: 65)
-            
+
             // Onyomi / Kunyomi kecil
             Text("\(item.onyomi) / \(item.kunyomi)")
                 .font(AppTheme.rounded(10))
@@ -138,7 +138,7 @@ struct KanjiCard: View {
                 .lineLimit(1)
                 .minimumScaleFactor(0.6)
                 .padding(.horizontal, 4)
-            
+
             // Arti
             Text(item.meaning)
                 .font(AppTheme.rounded(13, .semibold))
@@ -153,7 +153,7 @@ struct KanjiCard: View {
         .cornerRadius(14)
         .shadow(color: AppTheme.cardShadow(colorScheme), radius: 4, x: 0, y: 2)
     }
-    
+
 }
 
 // MARK: - Preview

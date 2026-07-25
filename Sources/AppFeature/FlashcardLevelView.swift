@@ -7,7 +7,7 @@ struct FlashcardTypeSelectionView: View {
 
     var bgColor: Color { AppTheme.screenBackground(colorScheme) }
     var cardColor: Color { AppTheme.surface(colorScheme) }
-    
+
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
@@ -30,7 +30,7 @@ struct FlashcardModeCard: View {
     let mode: FlashcardMode
     let cardColor: Color
     @Environment(\.colorScheme) var colorScheme
-    
+
     var body: some View {
         VStack(spacing: 14) {
             ZStack {
@@ -64,9 +64,9 @@ struct FlashcardLevelView: View {
     let mode: FlashcardMode
     @ObservedObject var store: FlashcardStore
     @Environment(\.colorScheme) var colorScheme
-    
+
     var bgColor: Color { AppTheme.screenBackground(colorScheme) }
-    
+
     var body: some View {
         ScrollView {
             VStack(spacing: 12) {
@@ -88,7 +88,7 @@ struct FlashcardLevelView: View {
         .navigationBarTitleDisplayMode(.large)
         .task { await preloadAllLevels() }
     }
-    
+
     private func preloadAllLevels() async {
         for level in mode.levels() where !level.isLocked {
             await store.loadDeck(mode: mode, levelId: level.id, jsonFile: level.jsonFile)
@@ -102,13 +102,13 @@ struct FlashcardUnlockedLevelCard: View {
     let level: FlashcardLevelInfo
     @ObservedObject var store: FlashcardStore
     @Environment(\.colorScheme) var colorScheme
-    
+
     var cardColor: Color { AppTheme.surface(colorScheme) }
-    
+
     var stats: FlashcardStore.LevelStats? { store.deckStats(mode: mode, levelId: level.id) }
     var totalText: String { stats.map { "\($0.total)" } ?? "-" }
     var due: Int { stats?.due ?? 0 }
-    
+
     var body: some View {
         HStack(spacing: 14) {
             ZStack {
@@ -119,7 +119,7 @@ struct FlashcardUnlockedLevelCard: View {
                     .font(AppTheme.rounded(18, .black))
                     .foregroundColor(level.color)
             }
-            
+
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text(level.name)
@@ -139,11 +139,11 @@ struct FlashcardUnlockedLevelCard: View {
                         .font(AppTheme.rounded(13, .semibold))
                         .foregroundColor(AppTheme.secondaryText(colorScheme))
                 }
-                
+
                 Text(level.description)
                     .font(AppTheme.rounded(13))
                     .foregroundColor(AppTheme.secondaryText(colorScheme))
-                
+
                 Text("\(totalText) kartu • bebas pilih deck")
                     .font(AppTheme.rounded(11, .semibold))
                     .foregroundColor(level.color)
@@ -160,9 +160,9 @@ struct FlashcardUnlockedLevelCard: View {
 struct FlashcardLockedLevelCard: View {
     let level: FlashcardLevelInfo
     @Environment(\.colorScheme) var colorScheme
-    
+
     var cardColor: Color { AppTheme.surface(colorScheme) }
-    
+
     var body: some View {
         HStack(spacing: 14) {
             ZStack {
@@ -173,7 +173,7 @@ struct FlashcardLockedLevelCard: View {
                     .font(AppTheme.rounded(18, .black))
                     .foregroundColor(AppTheme.secondaryText(colorScheme))
             }
-            
+
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text(level.name)
