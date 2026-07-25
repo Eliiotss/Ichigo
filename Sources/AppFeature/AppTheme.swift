@@ -23,6 +23,8 @@ enum AppTheme {
     static let blueDeep = Color(hex: 0x1F63DB)
     static let indigo = Color(hex: 0x6E7BFF)
     static let indigoDeep = Color(hex: 0x4A55E8)
+    /// Deepest blue in the ramp — used as the far end of the katakana gradient.
+    static let navy = Color(hex: 0x3A45C4)
     static let sky = Color(hex: 0x29B6F0)
     static let skyDeep = Color(hex: 0x0E90D6)
     static let teal = Color(hex: 0x22C9DE)
