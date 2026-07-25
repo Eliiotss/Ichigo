@@ -81,9 +81,11 @@ struct UnlockedLevelCard: View {
                     .font(AppTheme.rounded(13))
                     .foregroundColor(AppTheme.secondaryText(colorScheme))
 
-                Text("\(level.totalKanji) Kanji")
-                    .font(AppTheme.rounded(11, .semibold))
-                    .foregroundColor(level.color)
+                if level.totalKanji > 0 {
+                    Text("\(level.totalKanji) Kanji")
+                        .font(AppTheme.rounded(11, .semibold))
+                        .foregroundColor(level.color)
+                }
             }
         }
         .padding(16)

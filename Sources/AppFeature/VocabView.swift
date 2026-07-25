@@ -2,20 +2,9 @@ import SwiftUI
 
 struct VocabularyView: View {
     @Environment(\.colorScheme) var colorScheme
-    @State private var searchText = ""
 
     var bgColor: Color { AppTheme.screenBackground(colorScheme) }
-    
-    var filteredLevels: [VocabularyLevel] {
-        let q = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !q.isEmpty else { return vocabularyLevels }
-        return vocabularyLevels.filter {
-            $0.id.localizedCaseInsensitiveContains(q)
-            || $0.name.localizedCaseInsensitiveContains(q)
-            || $0.description.localizedCaseInsensitiveContains(q)
-        }
-    }
-    
+
     var body: some View {
         Group {
             if vocabularyLevels.isEmpty {
@@ -34,18 +23,7 @@ struct VocabularyView: View {
             } else {
                 ScrollView {
                     VStack(spacing: 12) {
-                        HStack(spacing: 10) {
-                            Image(systemName: "magnifyingglass")
-                                .foregroundColor(AppTheme.secondaryText(colorScheme))
-                            TextField("Cari level vocabulary...", text: $searchText)
-                                .textInputAutocapitalization(.never)
-                                .disableAutocorrection(true)
-                        }
-                        .padding(12)
-                        .background(AppTheme.surface(colorScheme))
-                        .cornerRadius(14)
-                        
-                        ForEach(filteredLevels) { level in
+                        ForEach(vocabularyLevels) { level in
                             if level.isLocked {
                                 VocabularyLockedCard(level: level)
                             } else {
@@ -77,7 +55,7 @@ struct VocabularyUnlockedCard: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 12)
                     .fill(level.bgColor)
-                    .frame(width: 54, height: 54)
+                    .frame(width: 52, height: 52)
                 Text(level.id)
                     .font(AppTheme.rounded(18, .black))
                     .foregroundColor(level.color)
@@ -97,9 +75,11 @@ struct VocabularyUnlockedCard: View {
                     .font(AppTheme.rounded(13))
                     .foregroundColor(AppTheme.secondaryText(colorScheme))
 
-                Text("~\(level.totalWords) Kosakata")
-                    .font(AppTheme.rounded(11, .semibold))
-                    .foregroundColor(level.color)
+                if level.totalWords > 0 {
+                    Text("\(level.totalWords) Kosakata")
+                        .font(AppTheme.rounded(11, .semibold))
+                        .foregroundColor(level.color)
+                }
             }
         }
         .padding(16)
@@ -120,7 +100,7 @@ struct VocabularyLockedCard: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 12)
                     .fill(Color.gray.opacity(0.1))
-                    .frame(width: 54, height: 54)
+                    .frame(width: 52, height: 52)
                 Text(level.id)
                     .font(AppTheme.rounded(18, .black))
                     .foregroundColor(AppTheme.secondaryText(colorScheme))
@@ -142,13 +122,16 @@ struct VocabularyLockedCard: View {
                 }
                 Text(level.description)
                     .font(AppTheme.rounded(13))
-                    .foregroundColor(Color.secondary.opacity(0.7))
+                    .foregroundColor(Color.secondary.opacity(0.6))
             }
         }
         .padding(16)
-        .background(cardColor.opacity(0.55))
-        .cornerRadius(18)
-        .overlay(RoundedRectangle(cornerRadius: 18).stroke(Color.gray.opacity(0.08), lineWidth: 1))
+        .background(cardColor.opacity(0.5))
+        .cornerRadius(16)
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(Color.gray.opacity(0.08), lineWidth: 1)
+        )
     }
 }
 

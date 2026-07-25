@@ -80,6 +80,12 @@ struct GrammarLevelCard: View {
                 Text(level.description)
                     .font(AppTheme.rounded(13))
                     .foregroundColor(AppTheme.secondaryText(colorScheme))
+
+                if level.totalPatterns > 0 {
+                    Text("\(level.totalPatterns) Pola")
+                        .font(AppTheme.rounded(11, .semibold))
+                        .foregroundColor(level.color)
+                }
             }
         }
         .padding(16)
