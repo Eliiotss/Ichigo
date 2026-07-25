@@ -184,6 +184,8 @@ struct GrammarInfoSection<Content: View, Trailing: View>: View {
     let accentColor: Color
     let content: Content
     let trailing: Trailing
+
+    @Environment(\.colorScheme) private var colorScheme
     
     init(title: String, systemImage: String, accentColor: Color, @ViewBuilder content: () -> Content, @ViewBuilder trailing: () -> Trailing) {
         self.title = title
@@ -230,6 +232,8 @@ struct GrammarMiniInfoCard: View {
     let title: String
     let value: String
     let accentColor: Color
+
+    @Environment(\.colorScheme) private var colorScheme
     
     var body: some View {
         VStack(alignment: .leading, spacing: 7) {
