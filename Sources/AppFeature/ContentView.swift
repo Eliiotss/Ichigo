@@ -47,8 +47,7 @@ struct HomeView: View {
     @ObservedObject var flashcardStore: FlashcardStore
     @Environment(\.colorScheme) var colorScheme
 
-    // Shares the "user_name" / "daily_target" keys with SettingsView.
-    @AppStorage("user_name") private var userName = "User123"
+    @ObservedObject private var account = AccountStore.shared
     @AppStorage("daily_target") private var dailyTarget = 20
     
     let menuItems: [MenuItem] = [
@@ -82,7 +81,7 @@ struct HomeView: View {
                             Spacer()
                             HStack(spacing: 6) {
                                 Image(systemName: "person.fill").foregroundColor(AppTheme.accent)
-                                Text(userName)
+                                Text(account.displayName)
                                     .font(.system(size: isIPad ? 15 : 12, weight: .medium))
                                     .foregroundColor(.secondary)
                             }

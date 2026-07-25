@@ -1,8 +1,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @AppStorage("user_name") private var userName = "User123"
-    @AppStorage("user_email") private var userEmail = ""
+    @ObservedObject private var account = AccountStore.shared
     @AppStorage("daily_target") private var dailyTarget = 20
     @AppStorage("notif_enabled") private var notifEnabled = false
     @AppStorage("notif_hour") private var notifHour = 20
@@ -22,14 +21,14 @@ struct SettingsView: View {
                     HStack {
                         Label("Nama Pengguna", systemImage: "person")
                         Spacer()
-                        TextField("User123", text: $userName)
+                        TextField("User123", text: $account.displayName)
                             .multilineTextAlignment(.trailing)
                             .foregroundColor(.secondary)
                     }
                     HStack {
                         Label("Email", systemImage: "envelope")
                         Spacer()
-                        TextField("email@contoh.com", text: $userEmail)
+                        TextField("email@contoh.com", text: $account.email)
                             .keyboardType(.emailAddress)
                             .textInputAutocapitalization(.never)
                             .disableAutocorrection(true)
@@ -170,6 +169,18 @@ struct SettingsView: View {
                     Label("Pulihkan dari Drive", systemImage: "arrow.down.doc")
                 }
                 .disabled(backup.isBusy)
+
+                if let linked = backup.linkedAccountEmail {
+                    HStack {
+                        Label("Akun", systemImage: "person.crop.circle")
+                        Spacer()
+                        Text(linked)
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                            .lineLimit(1)
+                            .truncationMode(.middle)
+                    }
+                }
 
                 if let date = backup.lastBackupDate {
                     Text("Cadangan terakhir: \(date.formatted(date: .abbreviated, time: .shortened))")

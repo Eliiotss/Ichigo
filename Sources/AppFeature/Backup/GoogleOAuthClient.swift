@@ -67,6 +67,27 @@ final class GoogleOAuthClient: NSObject {
         saveTokens(tokens)
     }
 
+    /// Reads the signed-in account's email address (requires the `email` scope).
+    /// Returns `nil` rather than throwing: a missing address must not fail a backup.
+    func fetchAccountEmail() async -> String? {
+        guard let token = try? await validAccessToken(),
+              let url = URL(string: "https://openidconnect.googleapis.com/v1/userinfo") else {
+            return nil
+        }
+        var request = URLRequest(url: url)
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+
+        guard let (data, response) = try? await session.data(for: request),
+              let http = response as? HTTPURLResponse,
+              (200..<300).contains(http.statusCode),
+              let info = try? JSONDecoder().decode(UserInfo.self, from: data) else {
+            return nil
+        }
+        return info.email
+    }
+
+    private struct UserInfo: Decodable { let email: String? }
+
     /// Returns a currently-valid access token, refreshing it first if needed.
     func validAccessToken() async throws -> String {
         guard let tokens = loadTokens() else { throw DriveBackupError.notSignedIn }

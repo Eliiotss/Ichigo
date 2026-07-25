@@ -21,11 +21,15 @@ final class DriveBackupManager: ObservableObject {
     private let oauth: GoogleOAuthClient?
     private let drive: GoogleDriveClient
     private let defaults: UserDefaults
+    private let account: AccountStore
     private let lastBackupKey = "drive_last_backup_at"
 
-    init(defaults: UserDefaults = .standard, drive: GoogleDriveClient = GoogleDriveClient()) {
+    init(defaults: UserDefaults = .standard,
+         drive: GoogleDriveClient = GoogleDriveClient(),
+         account: AccountStore = .shared) {
         self.defaults = defaults
         self.drive = drive
+        self.account = account
         if let config = GoogleDriveConfig.load() {
             self.oauth = GoogleOAuthClient(config: config)
             self.isConfigured = true
@@ -40,12 +44,18 @@ final class DriveBackupManager: ObservableObject {
 
     var isBusy: Bool { if case .working = phase { return true } else { return false } }
 
+    /// Google address currently linked for backup, shown in Settings.
+    var linkedAccountEmail: String? { account.linkedGoogleEmail }
+
     func signIn() async {
         guard let oauth else { return fail(.notConfigured) }
         phase = .working("Membuka Google…")
         do {
             try await oauth.signIn()
             isSignedIn = true
+            if let email = await oauth.fetchAccountEmail() {
+                account.linkGoogleAccount(email: email)
+            }
             phase = .idle
         } catch DriveBackupError.authCancelled {
             phase = .idle
@@ -56,6 +66,7 @@ final class DriveBackupManager: ObservableObject {
 
     func signOut() {
         oauth?.signOut()
+        account.unlinkGoogleAccount()
         isSignedIn = false
         phase = .idle
     }
@@ -92,6 +103,7 @@ final class DriveBackupManager: ObservableObject {
             let data = try await drive.download(fileID: existing.id, accessToken: token)
             let payload = try BackupService.decode(data)
             BackupService.restore(payload, into: defaults)
+            account.reload()
             phase = .success("Progres dipulihkan. Mulai ulang aplikasi untuk melihat perubahan.")
         } catch {
             phase = .failure(error.localizedDescription)

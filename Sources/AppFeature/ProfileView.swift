@@ -4,8 +4,7 @@ struct ProfileView: View {
     @ObservedObject var flashcardStore: FlashcardStore
     @Environment(\.colorScheme) var colorScheme
     
-    @AppStorage("user_name") private var userName = "User123"
-    @AppStorage("user_email") private var userEmail = ""
+    @ObservedObject private var account = AccountStore.shared
     @AppStorage("daily_target") private var dailyTarget = 20
     
     private var dueTodayTotal: Int { flashcardStore.dueTodayGrandTotal }
@@ -29,16 +28,16 @@ struct ProfileView: View {
                             Circle()
                                 .fill(LinearGradient(colors: [AppTheme.sky, AppTheme.indigo], startPoint: .topLeading, endPoint: .bottomTrailing))
                                 .frame(width: 84, height: 84)
-                            Text(initials(from: userName))
+                            Text(account.initials)
                                 .font(.system(size: 30, weight: .black))
                                 .foregroundColor(.white)
                         }
                         
                         VStack(spacing: 4) {
-                            Text(userName)
+                            Text(account.displayName)
                                 .font(.system(size: 22, weight: .black))
-                            if !userEmail.isEmpty {
-                                Text(userEmail)
+                            if !account.email.isEmpty {
+                                Text(account.email)
                                     .font(.system(size: 13))
                                     .foregroundColor(.secondary)
                             }
@@ -123,16 +122,6 @@ struct ProfileView: View {
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.large)
         }
-    }
-    
-    private func initials(from name: String) -> String {
-        let trimmed = name.trimmingCharacters(in: .whitespaces)
-        guard !trimmed.isEmpty else { return "U" }
-        let parts = trimmed.split(separator: " ")
-        if parts.count >= 2 {
-            return String(parts[0].prefix(1) + parts[1].prefix(1)).uppercased()
-        }
-        return String(trimmed.prefix(2)).uppercased()
     }
     
     private func accuracyPill(label: String, count: Int, color: Color) -> some View {

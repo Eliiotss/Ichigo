@@ -20,9 +20,11 @@ struct GoogleDriveConfig: Equatable {
 
     var redirectURI: String { "\(redirectScheme):/oauth2redirect" }
 
-    /// Restricted to the hidden per-app data folder — the app can only see its own
-    /// backups, never the user's other Drive files.
-    static let scope = "https://www.googleapis.com/auth/drive.appdata"
+    /// Drive access is restricted to the hidden per-app data folder — the app can
+    /// only see its own backups, never the user's other Drive files. The `email`
+    /// scope is requested so the linked account can be shown in the Account
+    /// section instead of an anonymous "signed in" state.
+    static let scope = "https://www.googleapis.com/auth/drive.appdata email"
 
     /// Loads the config from `GoogleOAuth.plist`. Searches the main bundle and this
     /// module's framework bundle (not `Bundle.module`, which is unavailable in the
