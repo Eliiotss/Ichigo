@@ -82,6 +82,146 @@ struct SearchField: View {
     }
 }
 
+// MARK: - Kartu Hero Biru
+
+/// Kartu hero bergradien biru yang dipakai di puncak layar detail (Detail Kanji
+/// dan Detail Tata Bahasa).
+///
+/// Dua lingkaran tembus pandang di sudutnya adalah hiasan dari desain; keduanya
+/// dipotong mengikuti sudut kartu lewat `clipShape` sehingga tidak meluber.
+struct DetailHeroCard<Content: View>: View {
+    @ViewBuilder let content: Content
+
+    var body: some View {
+        content
+            .padding(20)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                ZStack {
+                    LinearGradient(
+                        colors: [AppTheme.blueLight, AppTheme.blue],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+
+                    // Hiasan sudut kanan atas dan kiri bawah.
+                    GeometryReader { geo in
+                        Circle()
+                            .fill(Color.white.opacity(0.12))
+                            .frame(width: 190, height: 190)
+                            .offset(x: geo.size.width - 110, y: -70)
+
+                        Circle()
+                            .fill(Color.white.opacity(0.10))
+                            .frame(width: 150, height: 150)
+                            .offset(x: -60, y: geo.size.height - 80)
+                    }
+                }
+            )
+            .clipShape(RoundedRectangle(cornerRadius: AppTheme.heroRadius, style: .continuous))
+            .shadow(color: AppTheme.blue.opacity(0.28), radius: 16, x: 0, y: 8)
+    }
+}
+
+/// Lencana putih pekat di atas kartu hero, mis. "JLPT N5".
+struct HeroBadge: View {
+    let text: String
+
+    var body: some View {
+        Text(text)
+            .font(AppTheme.rounded(11, .bold))
+            .foregroundColor(AppTheme.blue)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
+            .background(Color.white)
+            .clipShape(Capsule())
+    }
+}
+
+/// Pil tembus pandang di atas kartu hero, untuk keterangan tambahan seperti
+/// pola struktur atau kategori.
+struct HeroPill: View {
+    let text: String
+
+    var body: some View {
+        Text(text)
+            .font(AppTheme.rounded(11, .semibold))
+            .foregroundColor(.white)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
+            .background(Color.white.opacity(0.22))
+            .clipShape(Capsule())
+    }
+}
+
+/// Tombol bundar tembus pandang di atas kartu hero, dipakai tombol suara.
+struct HeroCircleButton: View {
+    let systemImage: String
+    let accessibilityLabel: String
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: systemImage)
+                .font(AppTheme.rounded(15, .semibold))
+                .foregroundColor(.white)
+                .frame(width: 38, height: 38)
+                .background(Color.white.opacity(0.22))
+                .clipShape(Circle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(accessibilityLabel)
+    }
+}
+
+// MARK: - Bagian Berkartu
+
+/// Kartu putih dengan judul dan ikon kecil bergradien lembut di kirinya, dipakai
+/// untuk bagian-bagian di layar detail ("Arti", "Penggunaan", dan seterusnya).
+struct DetailSectionCard<Content: View, Trailing: View>: View {
+    let title: String
+    let systemImage: String
+    var tint: Color = AppTheme.blue
+    @ViewBuilder let content: Content
+    @ViewBuilder let trailing: Trailing
+
+    @Environment(\.colorScheme) private var scheme
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(spacing: 10) {
+                Image(systemName: systemImage)
+                    .font(AppTheme.rounded(13, .semibold))
+                    .foregroundColor(tint)
+                    .frame(width: 30, height: 30)
+                    .background(tint.opacity(0.12))
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+
+                Text(title)
+                    .font(AppTheme.rounded(17, .bold))
+                    .foregroundColor(AppTheme.primaryText(scheme))
+
+                Spacer(minLength: 8)
+
+                trailing
+            }
+
+            content
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(AppTheme.surface(scheme))
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius, style: .continuous))
+        .shadow(color: AppTheme.cardShadow(scheme), radius: 8, x: 0, y: 3)
+    }
+}
+
+extension DetailSectionCard where Trailing == EmptyView {
+    init(title: String, systemImage: String, tint: Color = AppTheme.blue, @ViewBuilder content: () -> Content) {
+        self.init(title: title, systemImage: systemImage, tint: tint, content: content, trailing: { EmptyView() })
+    }
+}
+
 // MARK: - Filter Chips
 
 /// Horizontally scrolling pill filters. The selected pill is filled with the

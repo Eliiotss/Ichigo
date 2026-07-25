@@ -110,20 +110,37 @@ struct HiraganaFlashcardView: View {
         store.progressPercent(flat: progressFlat, isKatakana: isKatakana)
     }
 
+    /// Gradien kartu soal: biru untuk hiragana, indigo untuk katakana.
     var cardBgColors: [Color] {
-        if isKatakana {
-            return colorScheme == .dark
-            ? [AppTheme.indigo.opacity(0.28), Color(red: 0.08, green: 0.09, blue: 0.24)]
-            : [Color(red: 0.95, green: 0.92, blue: 1.0), Color(red: 0.88, green: 0.82, blue: 1.0)]
-        } else {
-            return colorScheme == .dark
-            ? [AppTheme.blue.opacity(0.28), Color(red: 0.05, green: 0.10, blue: 0.28)]
-            : [Color(red: 0.92, green: 0.96, blue: 1.0), Color(red: 0.8, green: 0.9, blue: 1.0)]
-        }
+        isKatakana ? [AppTheme.indigo, AppTheme.indigoDeep] : [AppTheme.blueLight, AppTheme.blue]
     }
 
     var body: some View {
-        NavigationView {
+        VStack(spacing: 14) {
+            // Header sendiri, bukan navigation bar, supaya judul dan tombol
+            // Tutup tetap diam di tempat.
+            HStack {
+                Text("Flashcard \(isKatakana ? "Katakana" : "Hiragana")")
+                    .font(AppTheme.rounded(22, .heavy))
+                    .foregroundColor(AppTheme.primaryText(colorScheme))
+
+                Spacer()
+
+                Button { dismiss() } label: {
+                    Text("Tutup")
+                        .font(AppTheme.rounded(15, .semibold))
+                        .foregroundColor(AppTheme.primaryText(colorScheme))
+                        .padding(.horizontal, 20)
+                        .frame(height: 40)
+                        .background(AppTheme.surface(colorScheme))
+                        .clipShape(Capsule())
+                        .shadow(color: AppTheme.softShadow(colorScheme), radius: 6, x: 0, y: 2)
+                }
+                .buttonStyle(.plain)
+            }
+            .padding(.horizontal, 20)
+            .padding(.top, 12)
+
             Group {
                 if finished {
                     finishedView
@@ -131,18 +148,13 @@ struct HiraganaFlashcardView: View {
                     emptyStateView
                 } else if deck.isEmpty || currentQuestion == nil {
                     ProgressView("Memuat...")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     questionContent
                 }
             }
-            .navigationTitle("Flashcard \(isKatakana ? "Katakana" : "Hiragana")")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Tutup") { dismiss() }
-                }
-            }
         }
+        .background(AppTheme.screenBackground(colorScheme).ignoresSafeArea())
         .onAppear { buildDeck() }
     }
 
@@ -162,85 +174,49 @@ struct HiraganaFlashcardView: View {
         }
     }
 
-    // MARK: - Question Content
+    // MARK: - Isi Soal
     var questionContent: some View {
         VStack(spacing: 16) {
-            VStack(spacing: 10) {
-                HStack {
-                    Text("Kartu \(currentIndex + 1) / \(deck.count)")
-                        .font(AppTheme.rounded(11, .semibold))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
-                    Spacer()
-                    Text("\(sessionCorrect) benar")
-                        .font(AppTheme.rounded(11, .semibold))
-                        .foregroundColor(accentColor)
-                }
-
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 4)
-                            .fill(Color.gray.opacity(0.15))
-                            .frame(height: 6)
-                        RoundedRectangle(cornerRadius: 4)
-                            .fill(LinearGradient(
-                                colors: [accentColor, accentColor.opacity(0.7)],
-                                startPoint: .leading, endPoint: .trailing))
-                            .frame(width: geo.size.width * CGFloat(progressValue), height: 6)
-                            .animation(.easeInOut(duration: 0.3), value: progressValue)
-                    }
-                }
-                .frame(height: 6)
-
-                HStack {
-                    Text("Total Hafalan")
-                        .font(AppTheme.rounded(10, .semibold))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
-                    Spacer()
-                }
-                GeometryReader { geo in
-                    ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 3)
-                            .fill(Color.gray.opacity(0.1))
-                            .frame(height: 4)
-                        RoundedRectangle(cornerRadius: 3)
-                            .fill(Color.green)
-                            .frame(width: geo.size.width * CGFloat(totalProgress), height: 4)
-                            .animation(.easeInOut(duration: 0.5), value: totalProgress)
-                    }
-                }
-                .frame(height: 4)
-            }
-            .padding(.horizontal, 20)
-
-            Spacer()
+            statsCard
 
             if let question = currentQuestion {
-                RoundedRectangle(cornerRadius: 28)
-                    .fill(LinearGradient(
-                        colors: cardBgColors,
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing))
-                    .overlay(RoundedRectangle(cornerRadius: 28).stroke(accentColor.opacity(0.15), lineWidth: 1.5))
-                    .frame(height: 180)
-                    .overlay(
-                        Text(question.card.kana)
-                            .font(AppTheme.rounded(90, .medium))
-                            .foregroundColor(AppTheme.primaryText(colorScheme))
-                    )
-                    .padding(.horizontal, 24)
+                // Kartu soal: gradien biru dengan hurufnya berwarna putih.
+                ZStack {
+                    LinearGradient(colors: cardBgColors, startPoint: .topLeading, endPoint: .bottomTrailing)
+
+                    GeometryReader { geo in
+                        Circle()
+                            .fill(Color.white.opacity(0.12))
+                            .frame(width: 170, height: 170)
+                            .offset(x: geo.size.width - 95, y: -55)
+
+                        Circle()
+                            .fill(Color.white.opacity(0.10))
+                            .frame(width: 150, height: 150)
+                            .offset(x: -55, y: geo.size.height - 80)
+                    }
+
+                    Text(question.card.kana)
+                        .font(AppTheme.rounded(120, .medium))
+                        .foregroundColor(.white)
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 260)
+                .clipShape(RoundedRectangle(cornerRadius: AppTheme.heroRadius, style: .continuous))
+                .shadow(color: accentColor.opacity(0.28), radius: 16, x: 0, y: 8)
+                .padding(.horizontal, 20)
 
                 Text("Pilih bacaan yang benar")
-                    .font(AppTheme.rounded(13))
+                    .font(AppTheme.rounded(14))
                     .foregroundColor(AppTheme.secondaryText(colorScheme))
 
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
                     ForEach(question.choices, id: \.self) { choice in
                         ChoiceButton(
                             label: choice,
                             correct: question.correctAnswer,
                             selected: selectedAnswer,
-                            isAnswered: isAnswered,
-                            accentColor: accentColor
+                            isAnswered: isAnswered
                         ) {
                             handleAnswer(choice, correct: question.correctAnswer, card: question.card)
                         }
@@ -251,23 +227,79 @@ struct HiraganaFlashcardView: View {
                 if isAnswered {
                     Button(action: nextCard) {
                         Text(currentIndex + 1 >= deck.count ? "Selesai" : "Lanjut →")
-                            .font(AppTheme.rounded(15, .bold))
+                            .font(AppTheme.rounded(16, .bold))
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
-                            .padding(.vertical, 14)
+                            .padding(.vertical, 16)
                             .background(accentColor)
-                            .cornerRadius(14)
+                            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+                            .shadow(color: accentColor.opacity(0.35), radius: 10, x: 0, y: 4)
                     }
+                    .buttonStyle(.plain)
                     .padding(.horizontal, 20)
                     .transition(.opacity)
                 }
             }
 
-            Spacer()
+            Spacer(minLength: 12)
         }
-        .padding(.top, 12)
-        .background(Color(UIColor.systemBackground))
         .animation(.easeInOut(duration: 0.2), value: isAnswered)
+    }
+
+    /// Kartu putih berisi kemajuan sesi dan kemajuan hafalan keseluruhan.
+    private var statsCard: some View {
+        VStack(spacing: 10) {
+            HStack {
+                Text("Kartu \(currentIndex + 1) / \(deck.count)")
+                    .font(AppTheme.rounded(15, .bold))
+                    .foregroundColor(AppTheme.primaryText(colorScheme))
+
+                Spacer()
+
+                Text("\(sessionCorrect) benar")
+                    .font(AppTheme.rounded(15, .bold))
+                    .foregroundColor(accentColor)
+            }
+
+            progressBar(value: progressValue, color: accentColor, height: 6)
+
+            HStack {
+                Text("Total Hafalan")
+                    .font(AppTheme.rounded(13))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+
+                Spacer()
+
+                Text("\(store.masteredCount(flat: progressFlat, isKatakana: isKatakana)) dari \(progressFlat.count) huruf")
+                    .font(AppTheme.rounded(13))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+            }
+            .padding(.top, 2)
+
+            progressBar(value: totalProgress, color: AppTheme.success, height: 6)
+        }
+        .padding(16)
+        .background(AppTheme.surface(colorScheme))
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius, style: .continuous))
+        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 8, x: 0, y: 3)
+        .padding(.horizontal, 20)
+    }
+
+    /// Bilah kemajuan sederhana dengan jalur dan isian membulat.
+    private func progressBar(value: Double, color: Color, height: CGFloat) -> some View {
+        GeometryReader { geo in
+            ZStack(alignment: .leading) {
+                Capsule()
+                    .fill(AppTheme.trackColor(colorScheme))
+                    .frame(height: height)
+
+                Capsule()
+                    .fill(color)
+                    .frame(width: geo.size.width * CGFloat(min(max(value, 0), 1)), height: height)
+                    .animation(.easeInOut(duration: 0.35), value: value)
+            }
+        }
+        .frame(height: height)
     }
 
     // MARK: - Finished View
@@ -289,9 +321,9 @@ struct HiraganaFlashcardView: View {
                     .foregroundColor(AppTheme.secondaryText(colorScheme))
                 GeometryReader { geo in
                     ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 6).fill(Color.gray.opacity(0.15)).frame(height: 10)
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(LinearGradient(colors: [accentColor, Color.green], startPoint: .leading, endPoint: .trailing))
+                        Capsule().fill(AppTheme.trackColor(colorScheme)).frame(height: 10)
+                        Capsule()
+                            .fill(LinearGradient(colors: [accentColor, AppTheme.success], startPoint: .leading, endPoint: .trailing))
                             .frame(width: geo.size.width * CGFloat(totalProgress), height: 10)
                             .animation(.easeInOut(duration: 0.8), value: totalProgress)
                     }
@@ -318,7 +350,7 @@ struct HiraganaFlashcardView: View {
             .padding(.horizontal, 32)
             .padding(.bottom, 32)
         }
-        .background(Color(UIColor.systemBackground))
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     // MARK: - Logic
@@ -381,51 +413,48 @@ struct HiraganaFlashcardView: View {
     }
 }
 
-// MARK: - Choice Button
+// MARK: - Tombol Pilihan
+
+/// Satu tombol jawaban. Sebelum dijawab tampil sebagai kartu putih; setelah
+/// dijawab, jawaban benar menjadi hijau dan pilihan yang salah menjadi merah.
 struct ChoiceButton: View {
     let label: String
     let correct: String
     let selected: String?
     let isAnswered: Bool
-    let accentColor: Color
     let action: () -> Void
+
+    @Environment(\.colorScheme) private var colorScheme
 
     var isCorrect: Bool { label == correct }
     var isSelected: Bool { label == selected }
     var isWrongSelected: Bool { isSelected && !isCorrect }
 
     var bgColor: Color {
-        guard isAnswered else { return Color(UIColor.secondarySystemBackground) }
-        if isCorrect { return Color.green }
-        if isWrongSelected { return Color.red }
-        return Color(UIColor.secondarySystemBackground)
+        guard isAnswered else { return AppTheme.surface(colorScheme) }
+        if isCorrect { return AppTheme.success }
+        if isWrongSelected { return AppTheme.warning }
+        return AppTheme.surface(colorScheme)
     }
 
     var textColor: Color {
-        guard isAnswered else { return .primary }
-        if isCorrect { return .white }
-        if isWrongSelected { return .white }
-        return .secondary
-    }
-
-    var borderColor: Color {
-        guard isAnswered else { return Color.gray.opacity(0.2) }
-        if isCorrect { return Color.green }
-        if isWrongSelected { return Color.red }
-        return Color.gray.opacity(0.1)
+        guard isAnswered else { return AppTheme.primaryText(colorScheme) }
+        if isCorrect || isWrongSelected { return .white }
+        return AppTheme.secondaryText(colorScheme)
     }
 
     var body: some View {
         Button(action: action) {
-            Text(label)
+            Text(label.uppercased())
                 .font(AppTheme.rounded(18, .bold))
                 .foregroundColor(textColor)
                 .frame(maxWidth: .infinity)
                 .frame(height: 64)
                 .background(bgColor)
-                .cornerRadius(16)
-                .overlay(RoundedRectangle(cornerRadius: 16).stroke(borderColor, lineWidth: 1.5))
+                .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+                .shadow(color: AppTheme.cardShadow(colorScheme), radius: 8, x: 0, y: 3)
         }
+        .buttonStyle(.plain)
         .disabled(isAnswered)
     }
 }

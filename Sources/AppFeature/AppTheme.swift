@@ -34,6 +34,12 @@ enum AppTheme {
 
     static let accent = blue
 
+    /// Merah untuk bagian peringatan, mis. "Kesalahan Umum" di detail tata bahasa.
+    static let warning = Color(hex: 0xE5484D)
+
+    /// Hijau untuk penanda sudah dikuasai, mis. sel kana yang sudah hafal.
+    static let success = Color(hex: 0x1FA971)
+
     /// Primary blue gradient used by the hero card, avatar and primary buttons.
     static let accentGradient = LinearGradient(
         colors: [blueLight, blue],
@@ -48,6 +54,12 @@ enum AppTheme {
 
     static func surface(_ scheme: ColorScheme) -> Color {
         scheme == .dark ? Color(UIColor.secondarySystemBackground) : cardLight
+    }
+
+    /// Permukaan lembut untuk kotak di dalam kartu — dipakai baris penggunaan,
+    /// contoh kalimat, dan kalimat contoh kanji.
+    static func softSurface(_ scheme: ColorScheme) -> Color {
+        scheme == .dark ? Color.white.opacity(0.06) : pageLight.opacity(0.55)
     }
 
     static func primaryText(_ scheme: ColorScheme) -> Color {

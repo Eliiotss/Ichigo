@@ -82,7 +82,9 @@ struct KanjiListView: View {
                                     .buttonStyle(PlainButtonStyle())
                                 }
                             }
-                            .padding(16)
+                            .padding(.horizontal, 20)
+                            .padding(.top, 4)
+                            .padding(.bottom, 20)
                         }
                     }
                     .background(bgColor)
@@ -127,14 +129,14 @@ struct KanjiCard: View {
         VStack(spacing: 6) {
             // Kanji besar
             Text(item.kanji)
-                .font(AppTheme.rounded(52, .light))
+                .font(AppTheme.rounded(54, .regular))
                 .foregroundColor(AppTheme.primaryText(colorScheme))
-                .frame(height: 65)
+                .frame(height: 68)
 
             // Onyomi / Kunyomi kecil
             Text("\(item.onyomi) / \(item.kunyomi)")
-                .font(AppTheme.rounded(10))
-                .foregroundColor(AppTheme.ocean)
+                .font(AppTheme.rounded(10, .bold))
+                .foregroundColor(AppTheme.accent)
                 .lineLimit(1)
                 .minimumScaleFactor(0.6)
                 .padding(.horizontal, 4)
@@ -147,11 +149,11 @@ struct KanjiCard: View {
                 .minimumScaleFactor(0.8)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 16)
+        .padding(.vertical, 18)
         .padding(.horizontal, 8)
         .background(cardColor)
-        .cornerRadius(14)
-        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 4, x: 0, y: 2)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius, style: .continuous))
+        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 8, x: 0, y: 3)
     }
 
 }

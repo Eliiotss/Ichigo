@@ -134,37 +134,47 @@ struct HiraganaView: View {
                 } else {
                     ScrollView {
                         VStack(alignment: .leading, spacing: 24) {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text("Progres Hafalan")
-                                    .font(AppTheme.rounded(12, .semibold))
-                                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                            // Kartu ringkasan progres: judul di kiri, hitungan di
+                            // kanan, lalu bilah kemajuannya.
+                            VStack(alignment: .leading, spacing: 10) {
+                                HStack {
+                                    Text("Progres Hafalan")
+                                        .font(AppTheme.rounded(16, .bold))
+                                        .foregroundColor(AppTheme.primaryText(colorScheme))
+
+                                    Spacer()
+
+                                    Text("\(masteredCount) dari \(currentFlat.count) huruf")
+                                        .font(AppTheme.rounded(13))
+                                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                                }
 
                                 GeometryReader { geo in
                                     ZStack(alignment: .leading) {
-                                        RoundedRectangle(cornerRadius: 6)
-                                            .fill(Color.gray.opacity(0.15))
+                                        Capsule()
+                                            .fill(AppTheme.trackColor(colorScheme))
                                             .frame(height: 8)
 
-                                        RoundedRectangle(cornerRadius: 6)
+                                        Capsule()
                                             .fill(
                                                 LinearGradient(
                                                     colors: isKatakana
                                                     ? [AppTheme.indigo, AppTheme.navy]
-                                                    : [AppTheme.sky, AppTheme.blue],
+                                                    : [AppTheme.blueLight, AppTheme.blue],
                                                     startPoint: .leading,
                                                     endPoint: .trailing
                                                 )
                                             )
-                                            .frame(width: geo.size.width * CGFloat(progressValue), height: 8)
+                                            .frame(width: max(8, geo.size.width * CGFloat(progressValue)), height: 8)
                                             .animation(.easeInOut(duration: 0.5), value: progressValue)
                                     }
                                 }
                                 .frame(height: 8)
-
-                                Text("\(masteredCount) dari \(currentFlat.count) huruf dikuasai")
-                                    .font(AppTheme.rounded(11))
-                                    .foregroundColor(AppTheme.secondaryText(colorScheme))
                             }
+                            .padding(16)
+                            .background(AppTheme.surface(colorScheme))
+                            .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius, style: .continuous))
+                            .shadow(color: AppTheme.cardShadow(colorScheme), radius: 8, x: 0, y: 3)
                             .padding(.horizontal, 16)
                             .padding(.top, 8)
 
@@ -239,27 +249,29 @@ struct KanaGroupSection: View {
     let isKatakana: Bool
     let cardColor: Color
 
+    @Environment(\.colorScheme) private var colorScheme
+
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             VStack(alignment: .leading, spacing: 4) {
                 Text(group.title)
                     .font(AppTheme.rounded(18, .bold))
-                    .foregroundColor(.primary)
+                    .foregroundColor(AppTheme.primaryText(colorScheme))
                     .padding(.horizontal, 16)
 
                 if !group.subtitle.isEmpty {
                     Text(group.subtitle)
                         .font(AppTheme.rounded(13))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                         .padding(.horizontal, 16)
                 }
             }
 
             HStack(spacing: 0) {
                 ForEach(group.columns, id: \.self) { col in
-                    Text(col)
+                    Text(col.uppercased())
                         .font(AppTheme.rounded(10, .bold))
-                        .foregroundColor(.secondary)
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                         .frame(maxWidth: .infinity)
                 }
             }
@@ -299,6 +311,8 @@ struct KanaCellView: View {
     let isKatakana: Bool
     let cardColor: Color
 
+    @Environment(\.colorScheme) private var colorScheme
+
     var accentColor: Color {
         isKatakana ? AppTheme.indigo : AppTheme.blue
     }
@@ -306,40 +320,38 @@ struct KanaCellView: View {
     var body: some View {
         VStack(spacing: 2) {
             Text(item.kana)
-                .font(AppTheme.rounded(24, .medium))
-                .foregroundColor(.primary)
+                .font(AppTheme.rounded(26, .semibold))
+                .foregroundColor(AppTheme.primaryText(colorScheme))
 
-            Text(item.romaji)
+            Text(item.romaji.uppercased())
                 .font(AppTheme.rounded(9, .bold))
-                .foregroundColor(.secondary)
+                .foregroundColor(AppTheme.secondaryText(colorScheme))
                 .kerning(0.5)
 
             GeometryReader { geo in
                 ZStack(alignment: .leading) {
-                    RoundedRectangle(cornerRadius: 2)
-                        .fill(Color.gray.opacity(0.2))
+                    Capsule()
+                        .fill(AppTheme.trackColor(colorScheme))
                         .frame(height: 3)
 
-                    RoundedRectangle(cornerRadius: 2)
-                        .fill(isMastered ? Color.green : accentColor)
+                    Capsule()
+                        .fill(isMastered ? AppTheme.success : accentColor)
                         .frame(width: geo.size.width * CGFloat(barProgress), height: 3)
                 }
             }
             .frame(height: 3)
-            .padding(.horizontal, 6)
-            .padding(.top, 2)
+            .padding(.horizontal, 10)
+            .padding(.top, 4)
         }
         .frame(maxWidth: .infinity)
-        .frame(height: 68)
+        .frame(height: 74)
         .background(cardColor)
-        .cornerRadius(10)
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(
-                    isMastered ? Color.green.opacity(0.6) : Color.gray.opacity(0.15),
-                    lineWidth: 1.5
-                )
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .stroke(isMastered ? AppTheme.success.opacity(0.55) : Color.clear, lineWidth: 1.5)
         )
+        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 6, x: 0, y: 2)
     }
 }
 
