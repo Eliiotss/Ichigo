@@ -20,10 +20,12 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     dividers; native controls retained.
   - **Browsing screens** (Vocabulary / Kanji / Grammar): pinned `ScreenHeader`,
     pill `SearchField` and `FilterChipRow` that stay fixed while content scrolls.
-  - **Level lists** (Vocabulary / Kanji / Grammar) now render from one shared
-    card layout — same 52pt level chip, name + chevron, description and item
-    count, and the same locked-card treatment — so the three screens are no
-    longer three slightly different designs.
+  - **Level lists** (Vocabulary / Kanji / Grammar) now use one card layout —
+    52pt level chip, bold name with chevron, and a single grey subtitle
+    carrying the count ("120 Essential Kanji", "800 Kosakata Dasar", "84 Pola
+    Tata Bahasa Dasar") — plus the same locked-card treatment. The unlocked and
+    locked cards are byte-identical across the three screens apart from their
+    level type.
   - **App-wide type ramp**: every screen now draws its fonts from
     `AppTheme.rounded(...)` and its text colours, surfaces and shadows from the
     theme tokens, so the flashcard, kana, kanji, vocabulary and grammar screens
@@ -89,12 +91,17 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   Essential Kanji" against a 214-entry dataset, Vocabulary N4 claimed ~1500
   words against 700, and Vocabulary N3 claimed ~3750 against 1110. Every count
   is now the real number of entries in the shipped JSON (Kanji 120/181/214,
-  Vocabulary 800/700/1110, Grammar 84/131/160), and locked levels carry `0` so
-  no figure is advertised for data that has not shipped.
+  Vocabulary 800/700/1110, Grammar 84/131/160); levels whose data has not
+  shipped are the only ones allowed an approximate "1.000+" figure.
+  `scripts/check_dataset_counts.py` enforces both rules in CI.
+- **`trailing_whitespace` was in SwiftLint's `disabled_rules`**, silencing 361
+  violations across 20 files instead of fixing them. The whitespace is gone and
+  the rule is on, leaving no rule switched off. The config's `excluded` path
+  also still pointed at the pre-restructure `Sources/AppModule/Resources` and
+  so matched nothing; it now points at `Sources/AppFeature/Resources`.
 - **Level cards** for Kanji, Vocabulary and Grammar had duplicated SwiftUI
-  modifiers that silently overrode the description styling and hid the item
-  count; the intended two-line layout (description + count) is restored, and the
-  previously unused `totalKanji` / `totalWords` fields are now shown.
+  modifiers that silently overrode the description styling; the intended
+  two-line layout (name + count-bearing subtitle) is restored.
 - **Kana flashcard** could render multiple "correct" answer buttons and emit
   duplicate `ForEach` identifiers when the distractor pool was small; choices are
   now guaranteed distinct.
