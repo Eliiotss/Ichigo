@@ -44,12 +44,7 @@ struct KanjiDetailView: View {
 
                     Spacer()
 
-                    HeroCircleButton(
-                        systemImage: "speaker.wave.2.fill",
-                        accessibilityLabel: "Dengarkan pelafalan \(item.kanji)"
-                    ) {
-                        AudioSpeechHelper.shared.speak(item.kanji)
-                    }
+                    HeroSpeakButton(text: item.kanji)
                 }
 
                 Text(item.kanji)

@@ -154,15 +154,20 @@ struct HeroPill: View {
     }
 }
 
-/// Tombol bundar tembus pandang di atas kartu hero, dipakai tombol suara.
-struct HeroCircleButton: View {
-    let systemImage: String
-    let accessibilityLabel: String
-    let action: () -> Void
+/// Tombol suara bundar tembus pandang di atas kartu hero.
+///
+/// Tombol ini menerima teksnya langsung, bukan sebuah closure, karena
+/// `AudioSpeechHelper` terikat main actor: closure yang disimpan sebagai
+/// properti tidak mewarisi isolasi itu, sedangkan closure yang ditulis di dalam
+/// `body` mewarisinya.
+struct HeroSpeakButton: View {
+    let text: String
 
     var body: some View {
-        Button(action: action) {
-            Image(systemName: systemImage)
+        Button {
+            AudioSpeechHelper.shared.speak(text)
+        } label: {
+            Image(systemName: "speaker.wave.2.fill")
                 .font(AppTheme.rounded(15, .semibold))
                 .foregroundColor(.white)
                 .frame(width: 38, height: 38)
@@ -170,7 +175,7 @@ struct HeroCircleButton: View {
                 .clipShape(Circle())
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(accessibilityLabel)
+        .accessibilityLabel("Dengarkan pelafalan \(text)")
     }
 }
 
