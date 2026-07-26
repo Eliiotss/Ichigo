@@ -134,12 +134,26 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   lists, improving perceived navigation speed.
 - Leftover review-note comments in the source.
 
+### Changed (continued)
+- **Deprecated SwiftUI APIs migrated.** `NavigationView` → `NavigationStack`
+  (dropping the now-unnecessary `.navigationViewStyle(.stack)`) and every
+  `foregroundColor(_:)` → `foregroundStyle(_:)` across the app. The minimum
+  target is iOS 17, so both replacements are available; behaviour is unchanged.
+
+### Design decisions
+- **Typography stays on SF Pro Rounded**, the system's rounded face, as the
+  native stand-in for the design's Baloo 2 / Nunito. This keeps the app binary
+  small and avoids bundling and registering font files; the shapes are a close
+  match.
+- **Indonesian-only, strings inline.** The app ships in Indonesian and there is
+  no second language planned, so user-facing text stays in the views. SwiftUI's
+  `Text` already treats those literals as localised keys with the Indonesian
+  text as the fallback, so the app remains translation-ready without a
+  `Localizable.strings` file — which in the Swift Playgrounds package would add
+  bundle-resolution risk for no benefit while the app has one language.
+
 ### Known limitations / next steps
 - Content covers JLPT **N5–N3** plus kana; N2/N1 datasets are the recommended
   next expansion (those levels stay gated until their data is added).
-- Some deprecated SwiftUI APIs (`NavigationView`, `foregroundColor`,
-  `accentColor`) are still in use; migrating to `NavigationStack` /
-  `foregroundStyle` / `tint` is a recommended follow-up that needs on-device
-  verification.
-- User-facing strings are inline; extracting them into `Localizable.strings`
-  would enable full localisation.
+- Account, backup and sync are implemented under `Backup/` but parked behind
+  "Segera hadir"; wiring them to the UI is the largest remaining piece.
