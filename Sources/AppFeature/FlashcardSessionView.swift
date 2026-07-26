@@ -16,7 +16,6 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
     @Published private(set) var remainingLearning = 0
     @Published private(set) var remainingReview = 0
     @Published var isRevealed = false
-    @Published private(set) var isGraded = false
     @Published private(set) var finished = false
     @Published private(set) var sessionCorrect = 0
     @Published private(set) var sessionWrong = 0
@@ -112,7 +111,6 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
         sessionWrong = 0
         isSubmitting = false
         isRevealed = false
-        isGraded = false
         finished = queue.isEmpty
         loadState = queue.isEmpty ? .empty : .loaded
     }
@@ -122,8 +120,11 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
         withAnimation(.easeInOut(duration: 0.2)) { isRevealed = true }
     }
 
+    /// Menilai kartu lalu LANGSUNG lanjut ke kartu berikutnya, sesuai desain —
+    /// tidak ada tombol "Berikutnya" perantara. Empat tombol nilai berperan
+    /// sekaligus sebagai tombol lanjut.
     func submit(grade: FlashcardGrade) {
-        guard !isSubmitting, isRevealed, !isGraded, let cardItem = currentCard else { return }
+        guard !isSubmitting, isRevealed, let cardItem = currentCard else { return }
         isSubmitting = true
 
         let current = store.deckProgress(for: cardItem, levelKey: levelKey)
@@ -144,7 +145,6 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
         case .hard, .good, .easy:
             sessionCorrect += 1
         }
-        isGraded = true
 
         // Persist progress, review log and streak.
         if stateBefore == .new {
@@ -154,6 +154,21 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
         store.appendReviewLog(result.1)
         store.updateStreakIfNeeded()
         store.refreshDeckStats(key: levelKey)
+
+        advanceAfterGrade()
+        isSubmitting = false
+    }
+
+    /// Pindah ke kartu berikutnya (atau selesai bila habis). Kartu yang dinilai
+    /// "Ulang" sudah ditambahkan ke ujung antrean di `submit`, jadi ia akan
+    /// muncul lagi nanti.
+    private func advanceAfterGrade() {
+        if currentIndex + 1 >= queue.count {
+            finished = true
+            return
+        }
+        currentIndex += 1
+        withAnimation(.easeInOut(duration: 0.2)) { isRevealed = false }
     }
 
     // MARK: - Aturan Universal Counter (sama untuk semua kategori, seperti Anki)
@@ -185,14 +200,6 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
         }
     }
 
-    func next() {
-        guard isGraded else { return }
-        isSubmitting = false
-        if currentIndex + 1 >= queue.count { finished = true; return }
-        currentIndex += 1
-        isRevealed = false
-        isGraded = false
-    }
 }
 
 // MARK: - Session View
@@ -381,12 +388,13 @@ struct FlashcardSessionView: View {
         .onTapGesture { vm.reveal() }
     }
 
-    /// Empat tombol nilai muncul setelah jawaban terlihat; setelah dinilai
-    /// digantikan tombol lanjut. Tingginya dijaga tetap supaya kartu di atasnya
-    /// tidak melompat.
+    /// Empat tombol nilai muncul setelah jawaban terlihat. Mengetuknya menilai
+    /// kartu sekaligus langsung lanjut ke kartu berikutnya — tidak ada tombol
+    /// "Berikutnya" terpisah, sesuai desain. Saat jawaban belum terlihat,
+    /// ruangnya dikosongkan agar kartu di atasnya tidak melompat.
     @ViewBuilder
     private var gradeArea: some View {
-        if vm.isRevealed && !vm.isGraded {
+        if vm.isRevealed {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                 ForEach(FlashcardGrade.allCases, id: \.self) { grade in
                     Button {
@@ -405,20 +413,6 @@ struct FlashcardSessionView: View {
                     .disabled(vm.isSubmitting)
                 }
             }
-        } else if vm.isGraded {
-            Button {
-                vm.next()
-            } label: {
-                Text("Berikutnya")
-                    .font(AppTheme.rounded(16, .bold))
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 48)
-                    .background(AppTheme.accent)
-                    .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                    .shadow(color: AppTheme.accent.opacity(0.3), radius: 8, x: 0, y: 5)
-            }
-            .buttonStyle(.plain)
         } else {
             Color.clear.frame(height: 48)
         }
