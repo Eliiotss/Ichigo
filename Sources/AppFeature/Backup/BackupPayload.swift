@@ -38,6 +38,9 @@ struct BackupPayload: Codable, Equatable {
     var dailyTarget: Int?
     var notifEnabled: Bool?
     var notifHour: Int?
+    /// Mode tampilan pilihan pengguna ("system" / "light" / "dark"). Opsional,
+    /// jadi cadangan yang dibuat sebelum pilihan ini ada tetap bisa dipulihkan.
+    var appearance: String?
 }
 
 /// Canonical `UserDefaults` keys used across the app's stores. Kept in one place
@@ -64,4 +67,5 @@ enum BackupKeys {
     static let dailyTarget = "daily_target"
     static let notifEnabled = "notif_enabled"
     static let notifHour = "notif_hour"
+    static let appearance = "app_appearance"
 }

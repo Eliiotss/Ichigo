@@ -38,6 +38,7 @@ final class BackupServiceTests: XCTestCase {
         source.set(30, forKey: BackupKeys.dailyTarget)
         source.set(true, forKey: BackupKeys.notifEnabled)
         source.set(21, forKey: BackupKeys.notifHour)
+        source.set(AppAppearance.dark.rawValue, forKey: BackupKeys.appearance)
 
         let payload = BackupService.makePayload(from: source)
         let encoded = try BackupService.encode(payload)
@@ -56,6 +57,7 @@ final class BackupServiceTests: XCTestCase {
         XCTAssertEqual(target.integer(forKey: BackupKeys.dailyTarget), 30)
         XCTAssertTrue(target.bool(forKey: BackupKeys.notifEnabled))
         XCTAssertEqual(target.integer(forKey: BackupKeys.notifHour), 21)
+        XCTAssertEqual(target.string(forKey: BackupKeys.appearance), AppAppearance.dark.rawValue)
     }
 
     func testEncodedPayloadDecodesToEqualValue() throws {

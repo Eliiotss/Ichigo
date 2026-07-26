@@ -41,7 +41,8 @@ enum BackupService {
             userEmail: defaults.string(forKey: BackupKeys.userEmail),
             dailyTarget: intIfPresent(defaults, BackupKeys.dailyTarget),
             notifEnabled: boolIfPresent(defaults, BackupKeys.notifEnabled),
-            notifHour: intIfPresent(defaults, BackupKeys.notifHour)
+            notifHour: intIfPresent(defaults, BackupKeys.notifHour),
+            appearance: defaults.string(forKey: BackupKeys.appearance)
         )
     }
 
@@ -67,6 +68,7 @@ enum BackupService {
         setOrRemove(defaults, BackupKeys.dailyTarget, payload.dailyTarget)
         setOrRemove(defaults, BackupKeys.notifEnabled, payload.notifEnabled)
         setOrRemove(defaults, BackupKeys.notifHour, payload.notifHour)
+        setOrRemove(defaults, BackupKeys.appearance, payload.appearance)
     }
 
     static func encode(_ payload: BackupPayload) throws -> Data {

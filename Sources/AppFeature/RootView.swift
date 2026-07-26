@@ -8,7 +8,13 @@ import SwiftUI
 public struct RootView: View {
     @StateObject private var loadingState = AppLoadingState()
 
+    /// Mode tampilan pilihan pengguna. Dipasang di akar supaya seluruh layar,
+    /// termasuk lembar yang muncul di atasnya, ikut berubah sekaligus.
+    @AppStorage(AppAppearance.storageKey) private var appearanceRawValue = AppAppearance.system.rawValue
+
     public init() {}
+
+    private var appearance: AppAppearance { .from(storedValue: appearanceRawValue) }
 
     public var body: some View {
         ZStack {
@@ -22,6 +28,7 @@ public struct RootView: View {
                     .zIndex(1)
             }
         }
+        .preferredColorScheme(appearance.preferredColorScheme)
         .task {
             await loadingState.prepare()
         }

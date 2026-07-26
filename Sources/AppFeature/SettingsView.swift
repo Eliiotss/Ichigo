@@ -5,6 +5,7 @@ struct SettingsView: View {
     @AppStorage("daily_target") private var dailyTarget = 20
     @AppStorage("notif_enabled") private var notifEnabled = false
     @AppStorage("notif_hour") private var notifHour = 20
+    @AppStorage(AppAppearance.storageKey) private var appearanceRawValue = AppAppearance.system.rawValue
 
     @StateObject private var notificationManager = NotificationManager.shared
     @Environment(\.colorScheme) private var scheme
@@ -59,6 +60,10 @@ struct SettingsView: View {
         .navigationViewStyle(.stack)
     }
 
+    /// Mode tampilan yang sedang dipilih; ikon barisnya ikut berganti mengikuti
+    /// pilihan ini (matahari, bulan, atau lingkaran separuh).
+    private var appearance: AppAppearance { .from(storedValue: appearanceRawValue) }
+
     // MARK: - Section wrapper
 
     @ViewBuilder
@@ -74,6 +79,19 @@ struct SettingsView: View {
 
     private var preferencesCard: some View {
         SettingsCard {
+            SettingsRow(icon: appearance.icon,
+                        colors: [Color(hex: 0x7C93FF), AppTheme.indigoDeep],
+                        title: "Mode Tampilan") {
+                Picker("Mode Tampilan", selection: $appearanceRawValue) {
+                    ForEach(AppAppearance.allCases) { option in
+                        Text(option.title).tag(option.rawValue)
+                    }
+                }
+                .pickerStyle(.menu)
+                .tint(AppTheme.secondaryText(scheme))
+                .font(AppTheme.rounded(16, .semibold))
+            }
+
             SettingsRow(icon: "bell.fill", colors: [AppTheme.indigo, AppTheme.indigoDeep], title: "Pengingat Belajar") {
                 Toggle("", isOn: $notifEnabled)
                     .labelsHidden()
