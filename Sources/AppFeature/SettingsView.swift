@@ -60,9 +60,20 @@ struct SettingsView: View {
         .navigationViewStyle(.stack)
     }
 
-    /// Mode tampilan yang sedang dipilih; ikon barisnya ikut berganti mengikuti
-    /// pilihan ini (matahari, bulan, atau lingkaran separuh).
-    private var appearance: AppAppearance { .from(storedValue: appearanceRawValue) }
+    /// Jembatan antara sakelar geser (Bool) dan pilihan tersimpan.
+    ///
+    /// Nilai tampilnya diambil dari `scheme`, yaitu skema warna efektif setelah
+    /// `RootView` menerapkan pilihan — jadi saat pilihan masih "Ikuti Sistem",
+    /// sakelar mengikuti tampilan perangkat. Sekali digeser, pilihannya menjadi
+    /// eksplisit terang atau gelap.
+    private var isDarkBinding: Binding<Bool> {
+        Binding(
+            get: { scheme == .dark },
+            set: { newValue in
+                appearanceRawValue = (newValue ? AppAppearance.dark : AppAppearance.light).rawValue
+            }
+        )
+    }
 
     // MARK: - Section wrapper
 
@@ -79,17 +90,10 @@ struct SettingsView: View {
 
     private var preferencesCard: some View {
         SettingsCard {
-            SettingsRow(icon: appearance.icon,
+            SettingsRow(icon: scheme == .dark ? "moon.fill" : "sun.max.fill",
                         colors: [Color(hex: 0x7C93FF), AppTheme.indigoDeep],
                         title: "Mode Tampilan") {
-                Picker("Mode Tampilan", selection: $appearanceRawValue) {
-                    ForEach(AppAppearance.allCases) { option in
-                        Text(option.title).tag(option.rawValue)
-                    }
-                }
-                .pickerStyle(.menu)
-                .tint(AppTheme.secondaryText(scheme))
-                .font(AppTheme.rounded(16, .semibold))
+                ThemeSlideToggle(isDark: isDarkBinding)
             }
 
             SettingsRow(icon: "bell.fill", colors: [AppTheme.indigo, AppTheme.indigoDeep], title: "Pengingat Belajar") {

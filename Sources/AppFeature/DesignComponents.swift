@@ -263,3 +263,84 @@ struct FilterChipRow: View {
         }
     }
 }
+
+// MARK: - Sakelar Geser Tema
+
+/// Sakelar geser terang/gelap. Geser atau ketuk ke kiri untuk terang, ke kanan
+/// untuk gelap; knopnya menampilkan matahari saat terang dan bulan saat gelap.
+///
+/// Terikat pada `Bool` sederhana (mati = terang, hidup = gelap). Pemanggil yang
+/// menerjemahkannya ke pilihan tersimpan, sehingga sakelar ini tetap murni soal
+/// tampilan.
+struct ThemeSlideToggle: View {
+    @Binding var isDark: Bool
+
+    private let trackWidth: CGFloat = 78
+    private let trackHeight: CGFloat = 40
+    private let knobSize: CGFloat = 32
+    private let inset: CGFloat = 4
+
+    /// Jarak geser knop dari sisi ke sisi.
+    private var knobTravel: CGFloat { (trackWidth - knobSize) / 2 - inset }
+
+    var body: some View {
+        ZStack {
+            Capsule()
+                .fill(
+                    LinearGradient(
+                        colors: isDark
+                        ? [AppTheme.indigoDeep, AppTheme.navy]
+                        : [AppTheme.blueLight, AppTheme.blue],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                )
+
+            // Lambang matahari dan bulan sebagai penanda arah di balik knop.
+            HStack {
+                Image(systemName: "sun.max.fill")
+                    .opacity(isDark ? 0.45 : 0)
+                Spacer()
+                Image(systemName: "moon.fill")
+                    .opacity(isDark ? 0 : 0.5)
+            }
+            .font(AppTheme.rounded(13, .semibold))
+            .foregroundColor(.white)
+            .padding(.horizontal, 11)
+
+            Circle()
+                .fill(Color.white)
+                .frame(width: knobSize, height: knobSize)
+                .overlay(
+                    Image(systemName: isDark ? "moon.fill" : "sun.max.fill")
+                        .font(AppTheme.rounded(14, .bold))
+                        .foregroundColor(isDark ? AppTheme.indigoDeep : AppTheme.caution)
+                )
+                .shadow(color: Color.black.opacity(0.18), radius: 4, x: 0, y: 2)
+                .offset(x: isDark ? knobTravel : -knobTravel)
+        }
+        .frame(width: trackWidth, height: trackHeight)
+        .contentShape(Capsule())
+        .onTapGesture {
+            withAnimation(.spring(response: 0.32, dampingFraction: 0.72)) {
+                isDark.toggle()
+            }
+        }
+        .gesture(
+            DragGesture(minimumDistance: 6)
+                .onEnded { value in
+                    // Geser ke kanan → gelap, ke kiri → terang.
+                    if value.translation.width > 10, !isDark {
+                        withAnimation(.spring(response: 0.32, dampingFraction: 0.72)) { isDark = true }
+                    } else if value.translation.width < -10, isDark {
+                        withAnimation(.spring(response: 0.32, dampingFraction: 0.72)) { isDark = false }
+                    }
+                }
+        )
+        .accessibilityElement()
+        .accessibilityLabel("Mode tampilan")
+        .accessibilityValue(isDark ? "Gelap" : "Terang")
+        .accessibilityAddTraits(.isButton)
+        .accessibilityHint("Ketuk untuk beralih terang dan gelap")
+    }
+}

@@ -13,11 +13,20 @@ struct EmptyStateView: View {
     let subtitle: String
     var icon: String = "tray"
 
+    @Environment(\.colorScheme) private var colorScheme
+
     var body: some View {
         VStack(spacing: 10) {
-            Image(systemName: icon).font(AppTheme.rounded(42))
-            Text(title).font(AppTheme.rounded(16, .bold))
-            Text(subtitle).font(AppTheme.rounded(13)).foregroundColor(.secondary).multilineTextAlignment(.center)
+            Image(systemName: icon)
+                .font(AppTheme.rounded(42))
+                .foregroundColor(AppTheme.secondaryText(colorScheme))
+            Text(title)
+                .font(AppTheme.rounded(16, .bold))
+                .foregroundColor(AppTheme.primaryText(colorScheme))
+            Text(subtitle)
+                .font(AppTheme.rounded(13))
+                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .multilineTextAlignment(.center)
         }
         .padding(24)
     }

@@ -2,12 +2,17 @@ import SwiftUI
 
 // MARK: - Pilihan Tampilan
 
-/// Mode tampilan yang dipilih pengguna di Pengaturan.
+/// Mode tampilan aplikasi.
 ///
 /// Nilainya disimpan sebagai teks mentah di `UserDefaults` lewat `@AppStorage`,
 /// jadi pilihan ini bertahan antar-peluncuran dan ikut tersalin ke cadangan
 /// Google Drive bersama preferensi lain.
-enum AppAppearance: String, CaseIterable, Identifiable {
+///
+/// Sakelar geser di Pengaturan hanya beralih antara ``light`` dan ``dark``.
+/// ``system`` adalah keadaan awal sebelum pengguna pernah menggeser: aplikasi
+/// mengikuti tampilan perangkat sampai geseran pertama membuatnya eksplisit.
+/// Nilai ini juga muncul saat memulihkan cadangan lama.
+enum AppAppearance: String, CaseIterable {
     /// Mengikuti pengaturan tampilan perangkat.
     case system
     case light
@@ -15,24 +20,6 @@ enum AppAppearance: String, CaseIterable, Identifiable {
 
     /// Kunci `UserDefaults` tempat pilihan ini disimpan.
     static let storageKey = BackupKeys.appearance
-
-    var id: String { rawValue }
-
-    var title: String {
-        switch self {
-        case .system: return "Ikuti Sistem"
-        case .light: return "Terang"
-        case .dark: return "Gelap"
-        }
-    }
-
-    var icon: String {
-        switch self {
-        case .system: return "circle.lefthalf.filled"
-        case .light: return "sun.max.fill"
-        case .dark: return "moon.fill"
-        }
-    }
 
     /// Skema warna yang dipaksakan ke seluruh aplikasi. `nil` berarti menyerah
     /// pada pengaturan perangkat.

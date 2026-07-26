@@ -30,12 +30,15 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     `AppTheme.rounded(...)` and its text colours, surfaces and shadows from the
     theme tokens, so the flashcard, kana, kanji, vocabulary and grammar screens
     match Home/Profile/Settings.
-- **Light / dark mode setting.** Settings → PREFERENSI now carries a **Mode
-  Tampilan** row offering *Ikuti Sistem*, *Terang* and *Gelap*. The choice is
-  applied once at the root via `preferredColorScheme`, so every screen and sheet
-  follows it, and it is persisted and included in the backup payload alongside
-  the other preferences (older backups without the field restore as *Ikuti
-  Sistem*).
+- **Light / dark mode setting.** Settings → PREFERENSI carries a **Mode
+  Tampilan** row with a slide toggle — drag or tap left for light, right for
+  dark (`ThemeSlideToggle`). The choice is applied once at the root via
+  `preferredColorScheme`, so every screen and sheet follows it, and it is
+  persisted and included in the backup payload alongside the other preferences.
+  Before the first drag the app follows the device (`system`); older backups
+  without the field restore the same way. Every screen already draws its
+  colours from the colour-scheme-aware `AppTheme` tokens, so nothing is left
+  stranded in light styling when dark is selected.
 - **Google Drive backup & restore implementation** (`Sources/AppFeature/Backup/`):
   dependency-free OAuth 2.0 + PKCE via `ASWebAuthenticationSession`, tokens in the
   Keychain, and `URLSession` REST scoped to the Drive `appDataFolder`, plus the
