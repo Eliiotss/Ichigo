@@ -59,6 +59,25 @@ final class FSRSMathTests: XCTestCase {
         }
     }
 
+    /// "Again" harus membuat kartu lebih sulit dan "Easy" lebih mudah dibanding
+    /// nilai "Good" yang netral.
+    func testNextDifficultyMovesInTheRightDirection() {
+        let again = FSRSMath.nextDifficulty(current: 5.0, grade: .again, w: weights)
+        let good = FSRSMath.nextDifficulty(current: 5.0, grade: .good, w: weights)
+        let easy = FSRSMath.nextDifficulty(current: 5.0, grade: .easy, w: weights)
+        XCTAssertGreaterThan(again, good)
+        XCTAssertLessThan(easy, good)
+    }
+
+    /// Linear damping FSRS-6: perubahan difficulty dari "Again" jauh lebih kecil
+    /// saat difficulty sudah mendekati batas atas 10 dibanding saat di tengah.
+    func testNextDifficultyDampingShrinksChangeNearCeiling() {
+        let changeMid = FSRSMath.nextDifficulty(current: 5.0, grade: .again, w: weights) - 5.0
+        let changeHigh = FSRSMath.nextDifficulty(current: 9.5, grade: .again, w: weights) - 9.5
+        XCTAssertGreaterThan(changeMid, 0)
+        XCTAssertGreaterThan(changeMid, changeHigh)
+    }
+
     func testStabilityOnRecallStaysAboveFloor() {
         let s = FSRSMath.nextStabilityOnRecall(stability: 10, difficulty: 5, retrievability: 0.9, grade: .good, w: weights)
         XCTAssertGreaterThanOrEqual(s, 0.1)

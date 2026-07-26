@@ -87,6 +87,13 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   now stateless enums routed through `ResourceLoader`.
 
 ### Fixed
+- **FSRS-6 difficulty update was missing linear damping.** `nextDifficulty`
+  applied the FSRS-4.5 form (`D − w6·(G−3)`), omitting the `(10 − D)/9` damping
+  introduced in FSRS-5/6 that shrinks difficulty changes as a card approaches
+  the maximum. The mean-reversion step was already present; the damping is now
+  applied before it, matching the reference algorithm. New tests assert the
+  direction (Again harder, Easy easier) and that the change shrinks near the
+  ceiling.
 - **Flashcard session summary was bare.** After a deck session ended the screen
   showed only "Benar: X - Ulang: Y". It now presents a full summary — session
   accuracy, the number correct / needing another round / total cards, and the

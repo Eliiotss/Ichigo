@@ -219,11 +219,19 @@ enum FSRSMath {
         return clamp(d, min: 1, max: 10)
     }
 
-    // Difficulty Update - mean reversion ke arah "easy", dipakai tiap review
+    // Difficulty Update - dipakai tiap review.
+    //
+    // FSRS-6 memakai dua tahap yang sebelumnya belum lengkap di sini:
+    //   1. linear damping - perubahan difficulty diperkecil saat difficulty
+    //      sudah mendekati 10, memakai faktor (10 - D) / 9. Tanpa ini rumusnya
+    //      masih pola FSRS-4.5.
+    //   2. mean reversion - hasilnya ditarik sedikit ke arah difficulty awal
+    //      untuk nilai "Easy", dengan bobot w[7].
     static func nextDifficulty(current: Double, grade: FlashcardGrade, w: [Double]) -> Double {
-        let delta = current - w[6] * (Double(grade.rawValue) - 3)
+        let deltaDifficulty = -w[6] * (Double(grade.rawValue) - 3)
+        let damped = current + deltaDifficulty * (10.0 - current) / 9.0
         let easyD0 = initialDifficulty(grade: .easy, w: w)
-        let reverted = w[7] * easyD0 + (1 - w[7]) * delta
+        let reverted = w[7] * easyD0 + (1 - w[7]) * damped
         return clamp(reverted, min: 1, max: 10)
     }
 
