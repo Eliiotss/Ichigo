@@ -68,7 +68,7 @@ struct HomeView: View {
                 ? [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)]
                 : [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)]
 
-            NavigationView {
+            NavigationStack {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 0) {
                         greetingHeader
@@ -80,7 +80,7 @@ struct HomeView: View {
                         Text("BELAJAR MANDIRI")
                             .font(AppTheme.rounded(12, .heavy))
                             .kerning(1.2)
-                            .foregroundColor(AppTheme.secondaryText(colorScheme))
+                            .foregroundStyle(AppTheme.secondaryText(colorScheme))
                             .padding(.horizontal, 2)
                             .padding(.bottom, 10)
 
@@ -97,7 +97,6 @@ struct HomeView: View {
                 .background(AppTheme.screenBackground(colorScheme).ignoresSafeArea())
                 .navigationBarHidden(true)
             }
-            .navigationViewStyle(.stack)
         }
     }
 
@@ -108,10 +107,10 @@ struct HomeView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text("Okaeri 🍓")
                     .font(AppTheme.rounded(13, .bold))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 Text("Halo, \(account.displayName)")
                     .font(AppTheme.rounded(26, .heavy))
-                    .foregroundColor(AppTheme.primaryText(colorScheme))
+                    .foregroundStyle(AppTheme.primaryText(colorScheme))
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
             }
@@ -123,7 +122,7 @@ struct HomeView: View {
             } label: {
                 Text(account.initials)
                     .font(AppTheme.rounded(17, .heavy))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .frame(width: 46, height: 46)
                     .background(AppTheme.accentGradient)
                     .clipShape(Circle())
@@ -168,7 +167,7 @@ struct HomeView: View {
             }
         }
         .padding(20)
-        .foregroundColor(.white)
+        .foregroundStyle(.white)
         .background(
             ZStack(alignment: .topTrailing) {
                 AppTheme.accentGradient
@@ -232,16 +231,16 @@ struct MenuCardView: View {
                     .frame(width: 48, height: 48)
                 Image(systemName: item.icon)
                     .font(AppTheme.rounded(21, .bold))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
             }
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(item.label)
                     .font(AppTheme.rounded(15, .heavy))
-                    .foregroundColor(AppTheme.primaryText(colorScheme))
+                    .foregroundStyle(AppTheme.primaryText(colorScheme))
                 Text(item.sub)
                     .font(AppTheme.rounded(12, .semibold))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -263,13 +262,13 @@ struct ComingSoonView: View {
         VStack(spacing: 14) {
             Image(systemName: "hammer.fill")
                 .font(AppTheme.rounded(44, .semibold))
-                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .foregroundStyle(AppTheme.secondaryText(colorScheme))
             Text("\(featureName) Segera Hadir")
                 .font(AppTheme.rounded(22, .heavy))
-                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .foregroundStyle(AppTheme.primaryText(colorScheme))
             Text("Fitur ini sedang dikembangkan.")
                 .font(AppTheme.rounded(14, .medium))
-                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .foregroundStyle(AppTheme.secondaryText(colorScheme))
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(AppTheme.screenBackground(colorScheme).ignoresSafeArea())

@@ -126,12 +126,12 @@ private struct SplashView: View {
 
                 Text("Ichigo")
                     .font(AppTheme.rounded(34, .heavy))
-                    .foregroundColor(AppTheme.primaryText(colorScheme))
+                    .foregroundStyle(AppTheme.primaryText(colorScheme))
                     .padding(.top, 22)
 
                 Text("Belajar bahasa Jepang")
                     .font(AppTheme.rounded(14, .medium))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
                     .padding(.top, 4)
 
                 Spacer()
@@ -189,7 +189,7 @@ private struct SplashView: View {
 
             Text(statusText)
                 .font(AppTheme.rounded(13, .medium))
-                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 .animation(nil, value: statusText)
         }
     }

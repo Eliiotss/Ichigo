@@ -11,12 +11,12 @@ struct VocabularyView: View {
                 VStack(spacing: 12) {
                     Image(systemName: "text.book.closed")
                         .font(AppTheme.rounded(42))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                        .foregroundStyle(AppTheme.secondaryText(colorScheme))
                     Text("Vocabulary belum tersedia")
                         .font(AppTheme.rounded(18, .bold))
                     Text("Dataset vocabulary sedang dipersiapkan.")
                         .font(AppTheme.rounded(14))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                        .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(bgColor)
@@ -59,25 +59,25 @@ struct VocabularyUnlockedCard: View {
 
                 Text(level.id)
                     .font(AppTheme.rounded(18, .black))
-                    .foregroundColor(level.color)
+                    .foregroundStyle(level.color)
             }
 
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text(level.name)
                         .font(AppTheme.rounded(17, .bold))
-                        .foregroundColor(AppTheme.primaryText(colorScheme))
+                        .foregroundStyle(AppTheme.primaryText(colorScheme))
 
                     Spacer()
 
                     Image(systemName: "chevron.right")
                         .font(AppTheme.rounded(13, .semibold))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                        .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 }
 
                 Text(level.description)
                     .font(AppTheme.rounded(13))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
             }
         }
         .padding(16)
@@ -102,14 +102,14 @@ struct VocabularyLockedCard: View {
 
                 Text(level.id)
                     .font(AppTheme.rounded(18, .black))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
             }
 
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text(level.name)
                         .font(AppTheme.rounded(17, .bold))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                        .foregroundStyle(AppTheme.secondaryText(colorScheme))
 
                     Spacer()
 
@@ -119,12 +119,12 @@ struct VocabularyLockedCard: View {
                         Text("Terkunci")
                             .font(AppTheme.rounded(11, .semibold))
                     }
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 }
 
                 Text(level.description)
                     .font(AppTheme.rounded(13))
-                    .foregroundColor(Color.secondary.opacity(0.6))
+                    .foregroundStyle(Color.secondary.opacity(0.6))
             }
         }
         .padding(16)
@@ -138,5 +138,5 @@ struct VocabularyLockedCard: View {
 }
 
 #Preview {
-    NavigationView { VocabularyView() }
+    NavigationStack { VocabularyView() }
 }

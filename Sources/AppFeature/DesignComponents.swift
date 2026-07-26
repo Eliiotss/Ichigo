@@ -19,7 +19,7 @@ struct ScreenHeader: View {
             } label: {
                 Image(systemName: "chevron.left")
                     .font(AppTheme.rounded(17, .bold))
-                    .foregroundColor(AppTheme.primaryText(scheme))
+                    .foregroundStyle(AppTheme.primaryText(scheme))
                     .frame(width: 44, height: 44)
                     .background(AppTheme.surface(scheme))
                     .clipShape(Circle())
@@ -30,7 +30,7 @@ struct ScreenHeader: View {
 
             Text(title)
                 .font(AppTheme.rounded(24, .heavy))
-                .foregroundColor(AppTheme.primaryText(scheme))
+                .foregroundStyle(AppTheme.primaryText(scheme))
                 .lineLimit(1)
                 .minimumScaleFactor(0.7)
 
@@ -55,7 +55,7 @@ struct SearchField: View {
         HStack(spacing: 12) {
             Image(systemName: "magnifyingglass")
                 .font(AppTheme.rounded(17, .semibold))
-                .foregroundColor(AppTheme.secondaryText(scheme))
+                .foregroundStyle(AppTheme.secondaryText(scheme))
 
             TextField(placeholder, text: $text)
                 .font(AppTheme.rounded(16, .medium))
@@ -68,7 +68,7 @@ struct SearchField: View {
                 } label: {
                     Image(systemName: "xmark.circle.fill")
                         .font(AppTheme.rounded(16))
-                        .foregroundColor(AppTheme.secondaryText(scheme))
+                        .foregroundStyle(AppTheme.secondaryText(scheme))
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Hapus pencarian")
@@ -130,7 +130,7 @@ struct HeroBadge: View {
     var body: some View {
         Text(text)
             .font(AppTheme.rounded(11, .bold))
-            .foregroundColor(AppTheme.blue)
+            .foregroundStyle(AppTheme.blue)
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
             .background(Color.white)
@@ -146,7 +146,7 @@ struct HeroPill: View {
     var body: some View {
         Text(text)
             .font(AppTheme.rounded(11, .semibold))
-            .foregroundColor(.white)
+            .foregroundStyle(.white)
             .padding(.horizontal, 12)
             .padding(.vertical, 6)
             .background(Color.white.opacity(0.22))
@@ -169,7 +169,7 @@ struct HeroSpeakButton: View {
         } label: {
             Image(systemName: "speaker.wave.2.fill")
                 .font(AppTheme.rounded(15, .semibold))
-                .foregroundColor(.white)
+                .foregroundStyle(.white)
                 .frame(width: 38, height: 38)
                 .background(Color.white.opacity(0.22))
                 .clipShape(Circle())
@@ -197,14 +197,14 @@ struct DetailSectionCard<Content: View, Trailing: View>: View {
             HStack(spacing: 10) {
                 Image(systemName: systemImage)
                     .font(AppTheme.rounded(13, .semibold))
-                    .foregroundColor(tint)
+                    .foregroundStyle(tint)
                     .frame(width: 30, height: 30)
                     .background(tint.opacity(0.12))
                     .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
 
                 Text(title)
                     .font(AppTheme.rounded(17, .bold))
-                    .foregroundColor(AppTheme.primaryText(scheme))
+                    .foregroundStyle(AppTheme.primaryText(scheme))
 
                 Spacer(minLength: 8)
 
@@ -247,7 +247,7 @@ struct FilterChipRow: View {
                     } label: {
                         Text(filter)
                             .font(AppTheme.rounded(15, .bold))
-                            .foregroundColor(isSelected ? .white : AppTheme.secondaryText(scheme))
+                            .foregroundStyle(isSelected ? .white : AppTheme.secondaryText(scheme))
                             .padding(.horizontal, 22)
                             .frame(height: 46)
                             .background(isSelected ? AppTheme.accent : AppTheme.surface(scheme))
@@ -305,7 +305,7 @@ struct ThemeSlideToggle: View {
                     .opacity(isDark ? 0 : 0.5)
             }
             .font(AppTheme.rounded(13, .semibold))
-            .foregroundColor(.white)
+            .foregroundStyle(.white)
             .padding(.horizontal, 11)
 
             Circle()
@@ -314,7 +314,7 @@ struct ThemeSlideToggle: View {
                 .overlay(
                     Image(systemName: isDark ? "moon.fill" : "sun.max.fill")
                         .font(AppTheme.rounded(14, .bold))
-                        .foregroundColor(isDark ? AppTheme.indigoDeep : AppTheme.caution)
+                        .foregroundStyle(isDark ? AppTheme.indigoDeep : AppTheme.caution)
                 )
                 .shadow(color: Color.black.opacity(0.18), radius: 4, x: 0, y: 2)
                 .offset(x: isDark ? knobTravel : -knobTravel)

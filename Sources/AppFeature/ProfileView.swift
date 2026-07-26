@@ -14,7 +14,7 @@ struct ProfileView: View {
     }
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(spacing: 14) {
                     header
@@ -31,7 +31,6 @@ struct ProfileView: View {
             .background(AppTheme.screenBackground(scheme).ignoresSafeArea())
             .navigationBarHidden(true)
         }
-        .navigationViewStyle(.stack)
     }
 
     // MARK: - Gradient header
@@ -41,14 +40,14 @@ struct ProfileView: View {
             HStack {
                 Text("Profile")
                     .font(AppTheme.rounded(22, .heavy))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                 Spacer()
             }
 
             VStack(spacing: 10) {
                 Text(account.initials)
                     .font(AppTheme.rounded(32, .heavy))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .frame(width: 88, height: 88)
                     .background(Color.white.opacity(0.22))
                     .clipShape(Circle())
@@ -56,13 +55,13 @@ struct ProfileView: View {
 
                 Text(account.displayName)
                     .font(AppTheme.rounded(22, .heavy))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
 
                 Text("JLPT Learner")
                     .font(AppTheme.rounded(12, .heavy))
-                    .foregroundColor(AppTheme.blue)
+                    .foregroundStyle(AppTheme.blue)
                     .padding(.horizontal, 14)
                     .padding(.vertical, 5)
                     .background(Color.white)
@@ -93,11 +92,11 @@ struct ProfileView: View {
             HStack {
                 Text("Target Harian")
                     .font(AppTheme.rounded(13, .heavy))
-                    .foregroundColor(AppTheme.primaryText(scheme))
+                    .foregroundStyle(AppTheme.primaryText(scheme))
                 Spacer()
                 Text("\(flashcardStore.studiedTodayTotal)/\(dailyTarget)")
                     .font(AppTheme.rounded(13, .heavy))
-                    .foregroundColor(AppTheme.secondaryText(scheme))
+                    .foregroundStyle(AppTheme.secondaryText(scheme))
             }
 
             GeometryReader { bar in
@@ -139,7 +138,7 @@ struct ProfileView: View {
         return VStack(alignment: .leading, spacing: 12) {
             Text("Ringkasan Jawaban")
                 .font(AppTheme.rounded(15, .heavy))
-                .foregroundColor(AppTheme.primaryText(scheme))
+                .foregroundStyle(AppTheme.primaryText(scheme))
 
             HStack(spacing: 10) {
                 answerPill("Ulang", summary.againCount, Color(hex: 0xFF3B30), Color(hex: 0xFFECEB))
@@ -155,11 +154,11 @@ struct ProfileView: View {
             HStack {
                 Text("Akurasi keseluruhan")
                     .font(AppTheme.rounded(13, .semibold))
-                    .foregroundColor(AppTheme.secondaryText(scheme))
+                    .foregroundStyle(AppTheme.secondaryText(scheme))
                 Spacer()
                 Text("\(Int(summary.accuracy * 100))%")
                     .font(AppTheme.rounded(15, .heavy))
-                    .foregroundColor(AppTheme.primaryText(scheme))
+                    .foregroundStyle(AppTheme.primaryText(scheme))
             }
         }
         .padding(16)
@@ -172,10 +171,10 @@ struct ProfileView: View {
         VStack(spacing: 2) {
             Text("\(count)")
                 .font(AppTheme.rounded(18, .heavy))
-                .foregroundColor(tint)
+                .foregroundStyle(tint)
             Text(label)
                 .font(AppTheme.rounded(10, .bold))
-                .foregroundColor(AppTheme.secondaryText(scheme))
+                .foregroundStyle(AppTheme.secondaryText(scheme))
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 9)
@@ -200,7 +199,7 @@ struct ProfileStatTile: View {
         VStack(alignment: .leading, spacing: 8) {
             Image(systemName: icon)
                 .font(AppTheme.rounded(14, .bold))
-                .foregroundColor(iconTint)
+                .foregroundStyle(iconTint)
                 .frame(width: 32, height: 32)
                 .background(chip)
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
@@ -208,15 +207,15 @@ struct ProfileStatTile: View {
             HStack(alignment: .firstTextBaseline, spacing: 4) {
                 Text(value)
                     .font(AppTheme.rounded(24, .heavy))
-                    .foregroundColor(AppTheme.primaryText(scheme))
+                    .foregroundStyle(AppTheme.primaryText(scheme))
                 Text(unit)
                     .font(AppTheme.rounded(11, .bold))
-                    .foregroundColor(AppTheme.secondaryText(scheme))
+                    .foregroundStyle(AppTheme.secondaryText(scheme))
             }
 
             Text(caption)
                 .font(AppTheme.rounded(11, .bold))
-                .foregroundColor(AppTheme.secondaryText(scheme))
+                .foregroundStyle(AppTheme.secondaryText(scheme))
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(14)

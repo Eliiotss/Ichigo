@@ -48,7 +48,7 @@ struct KanjiListView: View {
                         .scaleEffect(1.2)
                     Text("Memuat kanji \(level.id)...")
                         .font(AppTheme.rounded(14))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                        .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(bgColor)
@@ -69,7 +69,7 @@ struct KanjiListView: View {
                             VStack(spacing: 8) {
                                 Text("Tidak ditemukan")
                                     .font(AppTheme.rounded(15))
-                                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
                             }
                             .frame(maxWidth: .infinity)
                             .padding(.top, 60)
@@ -130,13 +130,13 @@ struct KanjiCard: View {
             // Kanji besar
             Text(item.kanji)
                 .font(AppTheme.rounded(54, .regular))
-                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .foregroundStyle(AppTheme.primaryText(colorScheme))
                 .frame(height: 68)
 
             // Onyomi / Kunyomi kecil
             Text("\(item.onyomi) / \(item.kunyomi)")
                 .font(AppTheme.rounded(10, .bold))
-                .foregroundColor(AppTheme.accent)
+                .foregroundStyle(AppTheme.accent)
                 .lineLimit(1)
                 .minimumScaleFactor(0.6)
                 .padding(.horizontal, 4)
@@ -144,7 +144,7 @@ struct KanjiCard: View {
             // Arti
             Text(item.meaning)
                 .font(AppTheme.rounded(13, .semibold))
-                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .foregroundStyle(AppTheme.primaryText(colorScheme))
                 .lineLimit(1)
                 .minimumScaleFactor(0.8)
         }
@@ -160,7 +160,7 @@ struct KanjiCard: View {
 
 // MARK: - Preview
 #Preview {
-    NavigationView {
+    NavigationStack {
         KanjiListView(level: jlptLevels[0])
     }
 }

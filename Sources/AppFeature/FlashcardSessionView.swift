@@ -250,14 +250,14 @@ struct FlashcardSessionView: View {
             HStack {
                 Text("JLPT \(vm.level.id)")
                     .font(AppTheme.rounded(12, .bold))
-                    .foregroundColor(AppTheme.accent)
+                    .foregroundStyle(AppTheme.accent)
                     .kerning(0.5)
 
                 Spacer()
 
                 Text(vm.positionText)
                     .font(AppTheme.rounded(12, .semibold))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
             }
             .padding(.bottom, 8)
 
@@ -303,11 +303,11 @@ struct FlashcardSessionView: View {
 
             Text("\(count)")
                 .font(AppTheme.rounded(15, .bold))
-                .foregroundColor(color)
+                .foregroundStyle(color)
 
             Text(label)
                 .font(AppTheme.rounded(10, .bold))
-                .foregroundColor(color.opacity(0.7))
+                .foregroundStyle(color.opacity(0.7))
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 7)
@@ -321,7 +321,7 @@ struct FlashcardSessionView: View {
         VStack(spacing: 6) {
             Text(item.front)
                 .font(AppTheme.rounded(46, .bold))
-                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .foregroundStyle(AppTheme.primaryText(colorScheme))
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
 
@@ -329,12 +329,12 @@ struct FlashcardSessionView: View {
                 if !item.revealedTitle.isEmpty {
                     Text(item.revealedTitle)
                         .font(AppTheme.rounded(17, .bold))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                        .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 }
 
                 Text(item.revealedBody)
                     .font(AppTheme.rounded(24, .bold))
-                    .foregroundColor(AppTheme.primaryText(colorScheme))
+                    .foregroundStyle(AppTheme.primaryText(colorScheme))
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 4)
@@ -342,7 +342,7 @@ struct FlashcardSessionView: View {
                 if !item.revealedTag.isEmpty {
                     Text(item.revealedTag)
                         .font(AppTheme.rounded(12, .bold))
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                         .padding(.horizontal, 16)
                         .padding(.vertical, 6)
                         .background(
@@ -359,7 +359,7 @@ struct FlashcardSessionView: View {
             } else {
                 Text("Tap kartu untuk melihat jawaban")
                     .font(AppTheme.rounded(13, .medium))
-                    .foregroundColor(AppTheme.placeholder)
+                    .foregroundStyle(AppTheme.placeholder)
                     .padding(.top, 6)
             }
         }
@@ -394,7 +394,7 @@ struct FlashcardSessionView: View {
                     } label: {
                         Text(grade.title)
                             .font(AppTheme.rounded(15, .bold))
-                            .foregroundColor(.white)
+                            .foregroundStyle(.white)
                             .frame(maxWidth: .infinity)
                             .frame(height: 48)
                             .background(color(for: grade))
@@ -411,7 +411,7 @@ struct FlashcardSessionView: View {
             } label: {
                 Text("Berikutnya")
                     .font(AppTheme.rounded(16, .bold))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
                     .frame(height: 48)
                     .background(AppTheme.accent)
@@ -448,11 +448,11 @@ struct FlashcardSessionView: View {
 
                     Text("Sesi Selesai!")
                         .font(AppTheme.rounded(26, .heavy))
-                        .foregroundColor(AppTheme.primaryText(colorScheme))
+                        .foregroundStyle(AppTheme.primaryText(colorScheme))
 
                     Text("JLPT \(vm.level.id) • \(vm.mode.title)")
                         .font(AppTheme.rounded(13, .semibold))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                        .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 }
                 .padding(.top, 20)
 
@@ -464,7 +464,7 @@ struct FlashcardSessionView: View {
                 } label: {
                     Text("Kembali")
                         .font(AppTheme.rounded(16, .bold))
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                         .frame(maxWidth: .infinity)
                         .frame(height: 52)
                         .background(AppTheme.accent)
@@ -486,11 +486,11 @@ struct FlashcardSessionView: View {
             VStack(spacing: 2) {
                 Text("\(Int((vm.sessionAccuracy * 100).rounded()))%")
                     .font(AppTheme.rounded(44, .heavy))
-                    .foregroundColor(AppTheme.accent)
+                    .foregroundStyle(AppTheme.accent)
 
                 Text("Akurasi sesi ini")
                     .font(AppTheme.rounded(13, .semibold))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
             }
 
             Rectangle()
@@ -514,11 +514,11 @@ struct FlashcardSessionView: View {
         VStack(spacing: 3) {
             Text("\(value)")
                 .font(AppTheme.rounded(24, .heavy))
-                .foregroundColor(color)
+                .foregroundStyle(color)
 
             Text(label)
                 .font(AppTheme.rounded(11, .bold))
-                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .foregroundStyle(AppTheme.secondaryText(colorScheme))
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 12)
@@ -535,11 +535,11 @@ struct FlashcardSessionView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text("Streak \(vm.currentStreak) hari")
                     .font(AppTheme.rounded(15, .heavy))
-                    .foregroundColor(AppTheme.primaryText(colorScheme))
+                    .foregroundStyle(AppTheme.primaryText(colorScheme))
 
                 Text("Belajar setiap hari agar runtutannya tidak putus.")
                     .font(AppTheme.rounded(12, .medium))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
                     .fixedSize(horizontal: false, vertical: true)
             }
 
@@ -553,9 +553,9 @@ struct FlashcardSessionView: View {
 
     private func emptyState(_ title: String, _ subtitle: String) -> some View {
         VStack(spacing: 12) {
-            Image(systemName: "tray").font(AppTheme.rounded(42)).foregroundColor(AppTheme.secondaryText(colorScheme))
+            Image(systemName: "tray").font(AppTheme.rounded(42)).foregroundStyle(AppTheme.secondaryText(colorScheme))
             Text(title).font(AppTheme.rounded(18, .bold))
-            Text(subtitle).font(AppTheme.rounded(13)).foregroundColor(AppTheme.secondaryText(colorScheme)).multilineTextAlignment(.center).padding(.horizontal, 28)
+            Text(subtitle).font(AppTheme.rounded(13)).foregroundStyle(AppTheme.secondaryText(colorScheme)).multilineTextAlignment(.center).padding(.horizontal, 28)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

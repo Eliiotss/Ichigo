@@ -50,7 +50,7 @@ struct VocabularyListView: View {
                     ProgressView()
                     Text("Memuat kosakata \(level.id)...")
                         .font(AppTheme.rounded(14))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                        .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else if case .failed(let message) = loadState {
@@ -75,7 +75,7 @@ struct VocabularyListView: View {
                             if filtered.isEmpty {
                                 Text("Tidak ditemukan")
                                     .font(AppTheme.rounded(15, .medium))
-                                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
                                     .padding(.top, 60)
                             } else {
                                 ForEach(filtered) { item in
@@ -134,7 +134,7 @@ struct VocabularyInlineCard: View {
             HStack {
                 Text("JLPT \(levelId)")
                     .font(AppTheme.rounded(11, .bold))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 5)
                     .background(AppTheme.accent)
@@ -145,7 +145,7 @@ struct VocabularyInlineCard: View {
                 Button(action: { AudioSpeechHelper.shared.speak(item.kanji) }) {
                     Image(systemName: "speaker.wave.2.fill")
                         .font(AppTheme.rounded(15, .semibold))
-                        .foregroundColor(AppTheme.accent)
+                        .foregroundStyle(AppTheme.accent)
                         .padding(10)
                         .background(AppTheme.accent.opacity(0.12))
                         .clipShape(Circle())
@@ -156,20 +156,20 @@ struct VocabularyInlineCard: View {
 
             Text(item.kanji)
                 .font(AppTheme.rounded(34, .bold))
-                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .foregroundStyle(AppTheme.primaryText(colorScheme))
                 .fixedSize(horizontal: false, vertical: true)
 
             Text(item.hiragana)
                 .font(AppTheme.rounded(14, .medium))
-                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .foregroundStyle(AppTheme.secondaryText(colorScheme))
 
             Text(item.jenisKata)
                 .font(AppTheme.rounded(13, .bold))
-                .foregroundColor(AppTheme.accent)
+                .foregroundStyle(AppTheme.accent)
 
             Text(item.arti)
                 .font(AppTheme.rounded(17, .medium))
-                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .foregroundStyle(AppTheme.primaryText(colorScheme))
                 .fixedSize(horizontal: false, vertical: true)
         }
         .padding(18)

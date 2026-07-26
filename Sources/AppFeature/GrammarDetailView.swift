@@ -75,20 +75,20 @@ struct GrammarDetailView: View {
 
                 Text(item.pattern)
                     .font(AppTheme.rounded(34, .bold))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 14)
 
                 if !item.romaji.isEmpty {
                     Text(item.romaji)
                         .font(AppTheme.rounded(14))
-                        .foregroundColor(.white.opacity(0.85))
+                        .foregroundStyle(.white.opacity(0.85))
                         .padding(.top, 4)
                 }
 
                 Text(item.meaning)
                     .font(AppTheme.rounded(18, .bold))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 10)
 
@@ -120,7 +120,7 @@ struct GrammarDetailView: View {
         DetailSectionCard(title: "Arti", systemImage: "doc.text.fill") {
             Text(item.explanation)
                 .font(AppTheme.rounded(15))
-                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .foregroundStyle(AppTheme.primaryText(colorScheme))
                 .lineSpacing(5)
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -139,7 +139,7 @@ struct GrammarDetailView: View {
 
                         Text(point)
                             .font(AppTheme.rounded(14))
-                            .foregroundColor(AppTheme.primaryText(colorScheme))
+                            .foregroundStyle(AppTheme.primaryText(colorScheme))
                             .lineSpacing(4)
                             .fixedSize(horizontal: false, vertical: true)
                     }
@@ -159,12 +159,12 @@ struct GrammarDetailView: View {
                     HStack(alignment: .top, spacing: 10) {
                         Image(systemName: "xmark.circle.fill")
                             .font(AppTheme.rounded(14))
-                            .foregroundColor(AppTheme.danger)
+                            .foregroundStyle(AppTheme.danger)
                             .padding(.top, 1)
 
                         Text(mistake)
                             .font(AppTheme.rounded(14))
-                            .foregroundColor(AppTheme.primaryText(colorScheme))
+                            .foregroundStyle(AppTheme.primaryText(colorScheme))
                             .lineSpacing(4)
                             .fixedSize(horizontal: false, vertical: true)
                     }
@@ -187,7 +187,7 @@ struct GrammarDetailView: View {
         } trailing: {
             Text("\(item.examples.count) kalimat")
                 .font(AppTheme.rounded(11, .bold))
-                .foregroundColor(AppTheme.accent)
+                .foregroundStyle(AppTheme.accent)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
                 .background(AppTheme.accent.opacity(0.12))
@@ -208,7 +208,7 @@ struct HeroPillFlow: View {
             ForEach(pills, id: \.self) { pill in
                 Text(pill)
                     .font(AppTheme.rounded(11, .semibold))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .lineLimit(1)
                     .minimumScaleFactor(0.75)
                     .padding(.horizontal, 12)
@@ -235,12 +235,12 @@ struct GrammarMiniInfoCard: View {
         VStack(alignment: .leading, spacing: 7) {
             Text(title)
                 .font(AppTheme.rounded(10, .bold))
-                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 .kerning(1.1)
 
             Text(value)
                 .font(AppTheme.rounded(15, .semibold))
-                .foregroundColor(valueColor)
+                .foregroundStyle(valueColor)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
@@ -265,14 +265,14 @@ struct GrammarExampleCard: View {
             HStack(alignment: .top, spacing: 10) {
                 Text("\(number)")
                     .font(AppTheme.rounded(11, .bold))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .frame(width: 22, height: 22)
                     .background(AppTheme.accent)
                     .clipShape(Circle())
 
                 Text(example.japanese)
                     .font(AppTheme.rounded(17, .semibold))
-                    .foregroundColor(AppTheme.primaryText(colorScheme))
+                    .foregroundStyle(AppTheme.primaryText(colorScheme))
                     .lineSpacing(4)
                     .fixedSize(horizontal: false, vertical: true)
             }
@@ -280,7 +280,7 @@ struct GrammarExampleCard: View {
             if !example.romaji.isEmpty {
                 Text(example.romaji)
                     .font(AppTheme.rounded(13))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.leading, 32)
             }
@@ -288,7 +288,7 @@ struct GrammarExampleCard: View {
             if !example.translation.isEmpty {
                 Text(example.translation)
                     .font(AppTheme.rounded(14, .bold))
-                    .foregroundColor(AppTheme.primaryText(colorScheme))
+                    .foregroundStyle(AppTheme.primaryText(colorScheme))
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.leading, 32)
             }
@@ -302,7 +302,7 @@ struct GrammarExampleCard: View {
 
 // MARK: - Pratinjau
 #Preview {
-    NavigationView {
+    NavigationStack {
         GrammarDetailView(item: GrammarItem.sample)
     }
 }

@@ -49,18 +49,18 @@ struct KanjiDetailView: View {
 
                 Text(item.kanji)
                     .font(AppTheme.rounded(96, .regular))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
                     .padding(.top, 10)
 
                 Text(item.romaji)
                     .font(AppTheme.rounded(30, .bold))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .padding(.top, 10)
 
                 Text(item.meaning)
                     .font(AppTheme.rounded(15))
-                    .foregroundColor(.white.opacity(0.9))
+                    .foregroundStyle(.white.opacity(0.9))
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 4)
@@ -84,7 +84,7 @@ struct KanjiDetailView: View {
         VStack(alignment: .leading, spacing: 12) {
             Text("Contoh Kata & Kalimat")
                 .font(AppTheme.rounded(18, .bold))
-                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .foregroundStyle(AppTheme.primaryText(colorScheme))
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             ForEach(item.examples.indices, id: \.self) { index in
@@ -107,12 +107,12 @@ struct KanjiReadingCard: View {
         VStack(alignment: .leading, spacing: 8) {
             Text(title)
                 .font(AppTheme.rounded(10, .bold))
-                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 .kerning(1.2)
 
             Text(value.isEmpty ? "—" : value)
                 .font(AppTheme.rounded(17, .bold))
-                .foregroundColor(AppTheme.accent)
+                .foregroundStyle(AppTheme.accent)
                 .lineLimit(2)
                 .minimumScaleFactor(0.7)
         }
@@ -149,11 +149,11 @@ struct KanjiExampleCard: View {
             HStack(alignment: .top, spacing: 8) {
                 Text(example.word)
                     .font(AppTheme.rounded(19, .bold))
-                    .foregroundColor(AppTheme.primaryText(colorScheme))
+                    .foregroundStyle(AppTheme.primaryText(colorScheme))
 
                 Text("（\(example.reading)）")
                     .font(AppTheme.rounded(13))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
 
                 Spacer(minLength: 4)
 
@@ -162,7 +162,7 @@ struct KanjiExampleCard: View {
                 } label: {
                     Image(systemName: "speaker.wave.2.fill")
                         .font(AppTheme.rounded(12, .semibold))
-                        .foregroundColor(AppTheme.accent)
+                        .foregroundStyle(AppTheme.accent)
                         .frame(width: 30, height: 30)
                         .background(AppTheme.accent.opacity(0.12))
                         .clipShape(Circle())
@@ -173,20 +173,20 @@ struct KanjiExampleCard: View {
 
             Text("\(example.romaji) — \(example.meaning)")
                 .font(AppTheme.rounded(13, .semibold))
-                .foregroundColor(AppTheme.accent)
+                .foregroundStyle(AppTheme.accent)
                 .fixedSize(horizontal: false, vertical: true)
 
             if let sentence = displaySentence {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(sentence)
                         .font(AppTheme.rounded(15, .medium))
-                        .foregroundColor(AppTheme.primaryText(colorScheme))
+                        .foregroundStyle(AppTheme.primaryText(colorScheme))
                         .fixedSize(horizontal: false, vertical: true)
 
                     if let meaning = example.sentenceMeaning, !meaning.isEmpty {
                         Text(meaning)
                             .font(AppTheme.rounded(13))
-                            .foregroundColor(AppTheme.secondaryText(colorScheme))
+                            .foregroundStyle(AppTheme.secondaryText(colorScheme))
                             .fixedSize(horizontal: false, vertical: true)
                     }
                 }
@@ -206,7 +206,7 @@ struct KanjiExampleCard: View {
 
 // MARK: - Pratinjau
 #Preview {
-    NavigationView {
+    NavigationStack {
         KanjiDetailView(
             item: KanjiItem(
                 id: "N5_001",

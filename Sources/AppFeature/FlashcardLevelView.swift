@@ -38,7 +38,7 @@ struct FlashcardTypeSelectionView: View {
         HStack(alignment: .top, spacing: 12) {
             Image(systemName: "info.circle.fill")
                 .font(AppTheme.rounded(17, .semibold))
-                .foregroundColor(AppTheme.accent)
+                .foregroundStyle(AppTheme.accent)
                 .frame(width: 34, height: 34)
                 .background(AppTheme.surface(colorScheme))
                 .clipShape(RoundedRectangle(cornerRadius: 11, style: .continuous))
@@ -46,11 +46,11 @@ struct FlashcardTypeSelectionView: View {
             VStack(alignment: .leading, spacing: 3) {
                 Text("Cara kerja review")
                     .font(AppTheme.rounded(13, .bold))
-                    .foregroundColor(AppTheme.primaryText(colorScheme))
+                    .foregroundStyle(AppTheme.primaryText(colorScheme))
 
                 Text("Kartu dijadwalkan ulang dengan FSRS. Tap kartu untuk melihat jawaban, lalu nilai seberapa mudah kamu mengingatnya.")
                     .font(AppTheme.rounded(12, .medium))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
                     .lineSpacing(3)
                     .fixedSize(horizontal: false, vertical: true)
             }
@@ -84,18 +84,18 @@ struct FlashcardModeCard: View {
 
                 Image(systemName: mode.icon)
                     .font(AppTheme.rounded(26, .semibold))
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
             }
             .padding(.bottom, 14)
 
             Text(mode.title)
                 .font(AppTheme.rounded(16, .bold))
-                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .foregroundStyle(AppTheme.primaryText(colorScheme))
                 .padding(.bottom, 3)
 
             Text(mode.subtitle)
                 .font(AppTheme.rounded(12, .medium))
-                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
@@ -165,19 +165,19 @@ struct FlashcardUnlockedLevelCard: View {
                     .frame(width: 52, height: 52)
                 Text(level.id)
                     .font(AppTheme.rounded(18, .black))
-                    .foregroundColor(level.color)
+                    .foregroundStyle(level.color)
             }
 
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text(level.name)
                         .font(AppTheme.rounded(17, .bold))
-                        .foregroundColor(AppTheme.primaryText(colorScheme))
+                        .foregroundStyle(AppTheme.primaryText(colorScheme))
                     Spacer()
                     if due > 0 {
                         Text("\(due) due")
                             .font(AppTheme.rounded(11, .bold))
-                            .foregroundColor(.white)
+                            .foregroundStyle(.white)
                             .padding(.horizontal, 8)
                             .padding(.vertical, 3)
                             .background(level.color)
@@ -185,16 +185,16 @@ struct FlashcardUnlockedLevelCard: View {
                     }
                     Image(systemName: "chevron.right")
                         .font(AppTheme.rounded(13, .semibold))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                        .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 }
 
                 Text(level.description)
                     .font(AppTheme.rounded(13))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
 
                 Text("\(totalText) kartu • bebas pilih deck")
                     .font(AppTheme.rounded(11, .semibold))
-                    .foregroundColor(level.color)
+                    .foregroundStyle(level.color)
             }
         }
         .padding(16)
@@ -219,24 +219,24 @@ struct FlashcardLockedLevelCard: View {
                     .frame(width: 52, height: 52)
                 Text(level.id)
                     .font(AppTheme.rounded(18, .black))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
             }
 
             VStack(alignment: .leading, spacing: 5) {
                 HStack {
                     Text(level.name)
                         .font(AppTheme.rounded(17, .bold))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                        .foregroundStyle(AppTheme.secondaryText(colorScheme))
                     Spacer()
                     HStack(spacing: 4) {
                         Image(systemName: "lock.fill").font(AppTheme.rounded(12))
                         Text("Terkunci").font(AppTheme.rounded(11, .semibold))
                     }
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 }
                 Text(level.description)
                     .font(AppTheme.rounded(13))
-                    .foregroundColor(Color.secondary.opacity(0.6))
+                    .foregroundStyle(Color.secondary.opacity(0.6))
             }
         }
         .padding(16)
@@ -247,6 +247,6 @@ struct FlashcardLockedLevelCard: View {
 }
 
 #Preview {
-    NavigationView { FlashcardTypeSelectionView(store: FlashcardStore()) }
+    NavigationStack { FlashcardTypeSelectionView(store: FlashcardStore()) }
 }
 

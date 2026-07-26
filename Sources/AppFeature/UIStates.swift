@@ -19,13 +19,13 @@ struct EmptyStateView: View {
         VStack(spacing: 10) {
             Image(systemName: icon)
                 .font(AppTheme.rounded(42))
-                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .foregroundStyle(AppTheme.secondaryText(colorScheme))
             Text(title)
                 .font(AppTheme.rounded(16, .bold))
-                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .foregroundStyle(AppTheme.primaryText(colorScheme))
             Text(subtitle)
                 .font(AppTheme.rounded(13))
-                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 .multilineTextAlignment(.center)
         }
         .padding(24)

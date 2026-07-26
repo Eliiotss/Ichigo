@@ -38,7 +38,7 @@ struct GrammarListView: View {
                     ProgressView()
                     Text("Memuat tata bahasa...")
                         .font(AppTheme.rounded(14))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                        .foregroundStyle(AppTheme.secondaryText(colorScheme))
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(bgColor)
@@ -66,7 +66,7 @@ struct GrammarListView: View {
                             if filtered.isEmpty {
                                 Text("Tidak ditemukan")
                                     .font(AppTheme.rounded(15, .medium))
-                                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
                                     .padding(.top, 60)
                             } else {
                                 ForEach(filtered) { item in
@@ -132,7 +132,7 @@ struct GrammarListCard: View {
             HStack(alignment: .top, spacing: 10) {
                 Text("JLPT \(levelId)")
                     .font(AppTheme.rounded(11, .bold))
-                    .foregroundColor(AppTheme.accent)
+                    .foregroundStyle(AppTheme.accent)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 5)
                     .background(AppTheme.accent.opacity(0.12))
@@ -144,7 +144,7 @@ struct GrammarListCard: View {
                 if !item.treeCategory.isEmpty {
                     Text(item.treeCategory)
                         .font(AppTheme.rounded(12, .medium))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                        .foregroundStyle(AppTheme.secondaryText(colorScheme))
                         .lineLimit(1)
                         .minimumScaleFactor(0.8)
                 }
@@ -152,20 +152,20 @@ struct GrammarListCard: View {
 
             Text(item.pattern)
                 .font(AppTheme.rounded(26, .bold))
-                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .foregroundStyle(AppTheme.primaryText(colorScheme))
                 .fixedSize(horizontal: false, vertical: true)
                 .padding(.top, 14)
 
             if !item.romaji.isEmpty {
                 Text(item.romaji)
                     .font(AppTheme.rounded(13))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .foregroundStyle(AppTheme.secondaryText(colorScheme))
                     .padding(.top, 3)
             }
 
             Text(item.meaning)
                 .font(AppTheme.rounded(15, .bold))
-                .foregroundColor(AppTheme.accent)
+                .foregroundStyle(AppTheme.accent)
                 .fixedSize(horizontal: false, vertical: true)
                 .padding(.top, 10)
         }
@@ -179,7 +179,7 @@ struct GrammarListCard: View {
 
 // MARK: - Preview
 #Preview {
-    NavigationView {
+    NavigationStack {
         GrammarListView(level: grammarLevels[0])
     }
 }

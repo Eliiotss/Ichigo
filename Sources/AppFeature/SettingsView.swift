@@ -15,12 +15,12 @@ struct SettingsView: View {
     @State private var showPermissionDeniedAlert = false
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Pengaturan")
                         .font(AppTheme.rounded(32, .heavy))
-                        .foregroundColor(AppTheme.primaryText(scheme))
+                        .foregroundStyle(AppTheme.primaryText(scheme))
                         .padding(.horizontal, 18)
                         .padding(.top, 6)
                         .padding(.bottom, 8)
@@ -57,7 +57,6 @@ struct SettingsView: View {
             }
             .onAppear { notificationManager.checkAuthorization() }
         }
-        .navigationViewStyle(.stack)
     }
 
     /// Jembatan antara sakelar geser (Bool) dan pilihan tersimpan.
@@ -120,7 +119,7 @@ struct SettingsView: View {
                 SettingsRow(icon: "clock.fill", colors: [AppTheme.teal, AppTheme.tealDeep], title: "Waktu pengingat") {
                     Stepper("jam \(notifHour):00", value: $notifHour, in: 6...23)
                         .font(AppTheme.rounded(14, .semibold))
-                        .foregroundColor(AppTheme.secondaryText(scheme))
+                        .foregroundStyle(AppTheme.secondaryText(scheme))
                         .fixedSize()
                         .onChange(of: notifHour) { _, newHour in
                             notificationManager.scheduleDailyReminder(hour: newHour)
@@ -131,14 +130,14 @@ struct SettingsView: View {
             SettingsRow(icon: "target", colors: [AppTheme.violet, AppTheme.violetDeep], title: "Target Harian") {
                 Stepper("\(dailyTarget) kartu", value: $dailyTarget, in: 5...200, step: 5)
                     .font(AppTheme.rounded(14, .semibold))
-                    .foregroundColor(AppTheme.secondaryText(scheme))
+                    .foregroundStyle(AppTheme.secondaryText(scheme))
                     .fixedSize()
             }
 
             SettingsRow(icon: "globe", colors: [AppTheme.blue, AppTheme.indigoDeep], title: "Bahasa", showsDivider: false) {
                 Text("Bahasa Indonesia")
                     .font(AppTheme.rounded(16, .semibold))
-                    .foregroundColor(AppTheme.secondaryText(scheme))
+                    .foregroundStyle(AppTheme.secondaryText(scheme))
             }
         }
     }
@@ -181,7 +180,7 @@ struct SettingsView: View {
         SettingsRow(icon: icon, colors: colors, title: title, showsDivider: showsDivider) {
             Text("coming soon")
                 .font(AppTheme.rounded(14, .semibold))
-                .foregroundColor(AppTheme.secondaryText(scheme))
+                .foregroundStyle(AppTheme.secondaryText(scheme))
         }
     }
 }
@@ -201,7 +200,7 @@ struct SettingsSectionLabel: View {
         Text(text)
             .font(AppTheme.rounded(12, .heavy))
             .kerning(0.6)
-            .foregroundColor(AppTheme.secondaryText(scheme))
+            .foregroundStyle(AppTheme.secondaryText(scheme))
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 20)
     }
@@ -229,7 +228,7 @@ struct SettingsIcon: View {
     var body: some View {
         Image(systemName: systemName)
             .font(AppTheme.rounded(14, .semibold))
-            .foregroundColor(.white)
+            .foregroundStyle(.white)
             .frame(width: 29, height: 29)
             .background(LinearGradient(colors: colors, startPoint: .topLeading, endPoint: .bottomTrailing))
             .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
@@ -255,7 +254,7 @@ struct SettingsRow<Trailing: View>: View {
                 HStack(spacing: 10) {
                     Text(title)
                         .font(AppTheme.rounded(16, .semibold))
-                        .foregroundColor(AppTheme.primaryText(scheme))
+                        .foregroundStyle(AppTheme.primaryText(scheme))
                         .fixedSize(horizontal: false, vertical: true)
                     Spacer(minLength: 8)
                     trailing
@@ -282,7 +281,7 @@ struct SettingsFooter: View {
     var body: some View {
         Text(text)
             .font(AppTheme.rounded(12, .medium))
-            .foregroundColor(AppTheme.secondaryText(scheme))
+            .foregroundStyle(AppTheme.secondaryText(scheme))
             .lineSpacing(2)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 20)
