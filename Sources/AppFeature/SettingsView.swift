@@ -90,7 +90,7 @@ struct SettingsView: View {
     private var preferencesCard: some View {
         SettingsCard {
             SettingsRow(icon: scheme == .dark ? "moon.fill" : "sun.max.fill",
-                        colors: [Color(hex: 0x7C93FF), AppTheme.indigoDeep],
+                        colors: [AppTheme.indigoSoft, AppTheme.indigoDeep],
                         title: "Mode Tampilan") {
                 ThemeSlideToggle(isDark: isDarkBinding)
             }
@@ -148,7 +148,7 @@ struct SettingsView: View {
         SettingsCard {
             Button { showResetAlert = true } label: {
                 SettingsRow(icon: "trash.fill",
-                            colors: [Color(hex: 0xFF7A70), Color(hex: 0xFF3B30)],
+                            colors: [AppTheme.dangerSoft, AppTheme.danger],
                             title: "Reset Semua Progress Flashcard", showsDivider: false) { EmptyView() }
             }
             .buttonStyle(.plain)
@@ -170,7 +170,7 @@ struct SettingsView: View {
                           colors: [AppTheme.teal, AppTheme.tealDeep],
                           title: "Cadangkan & Pulihkan")
             comingSoonRow(icon: "icloud.fill",
-                          colors: [Color(hex: 0x7C93FF), AppTheme.indigoDeep],
+                          colors: [AppTheme.indigoSoft, AppTheme.indigoDeep],
                           title: "Sinkronisasi otomatis",
                           showsDivider: false)
         }
