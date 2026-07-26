@@ -87,6 +87,11 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   now stateless enums routed through `ResourceLoader`.
 
 ### Fixed
+- **Flashcard session summary was bare.** After a deck session ended the screen
+  showed only "Benar: X - Ulang: Y". It now presents a full summary — session
+  accuracy, the number correct / needing another round / total cards, and the
+  current day streak — all read from the same `FlashcardStore` that feeds the
+  Home hero card and Profile, so the figures agree across every screen.
 - **Dataset failures were swallowed.** `ResourceLoader` caught every error and
   returned an empty array, so a missing or corrupt JSON file was reported to the
   user as "Coming soon — konten level ini belum tersedia" and the `.failed`

@@ -48,6 +48,19 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
     }
     var progressValue: Double { sessionTotal == 0 ? 0 : Double(min(currentIndex + 1, sessionTotal)) / Double(sessionTotal) }
 
+    /// Jumlah seluruh penilaian di sesi ini. Satu kartu yang dinilai "Ulang"
+    /// muncul kembali, jadi angka ini bisa lebih besar dari jumlah kartu.
+    var sessionAnswered: Int { sessionCorrect + sessionWrong }
+
+    /// Akurasi sesi ini: bagian penilaian yang bukan "Ulang".
+    var sessionAccuracy: Double {
+        sessionAnswered == 0 ? 0 : Double(sessionCorrect) / Double(sessionAnswered)
+    }
+
+    /// Runtutan hari belajar terkini, dibaca dari store bersama supaya angka di
+    /// layar selesai sama dengan yang tampil di Beranda dan Profil.
+    var currentStreak: Int { store.currentStreak }
+
     func loadDeck() async {
         if case .loaded = loadState { return }
         loadState = .loading
@@ -421,29 +434,121 @@ struct FlashcardSessionView: View {
         }
     }
 
+    // MARK: - Selesai sesi
+
+    /// Ringkasan setelah sesi habis: berapa kartu benar, berapa yang perlu
+    /// diulang, akurasi, dan runtutan hari — semua diambil dari data yang sama
+    /// dengan Beranda dan Profil, sehingga angkanya tidak berbeda antar layar.
     private var finishedView: some View {
-        VStack(spacing: 18) {
-            Spacer()
-            Text("Sesi Selesai").font(AppTheme.rounded(28, .black))
-            Text("Benar: \(vm.sessionCorrect) - Ulang: \(vm.sessionWrong)").foregroundColor(AppTheme.secondaryText(colorScheme))
-            Spacer()
-            Button {
-                dismiss()
-            } label: {
-                Text("Kembali")
-                    .font(AppTheme.rounded(16, .bold))
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 15)
-                    .background(vm.level.color)
-                    .cornerRadius(16)
+        ScrollView {
+            VStack(spacing: 18) {
+                VStack(spacing: 8) {
+                    Text(vm.sessionAccuracy >= 0.8 ? "🎉" : "💪")
+                        .font(AppTheme.rounded(60))
+
+                    Text("Sesi Selesai!")
+                        .font(AppTheme.rounded(26, .heavy))
+                        .foregroundColor(AppTheme.primaryText(colorScheme))
+
+                    Text("JLPT \(vm.level.id) • \(vm.mode.title)")
+                        .font(AppTheme.rounded(13, .semibold))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
+                }
+                .padding(.top, 20)
+
+                summaryCard
+                streakBanner
+
+                Button {
+                    dismiss()
+                } label: {
+                    Text("Kembali")
+                        .font(AppTheme.rounded(16, .bold))
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 52)
+                        .background(AppTheme.accent)
+                        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        .shadow(color: AppTheme.accent.opacity(0.3), radius: 10, x: 0, y: 5)
+                }
+                .buttonStyle(.plain)
+                .padding(.top, 4)
             }
-            .buttonStyle(.plain)
-            .contentShape(Rectangle())
-            .padding(.horizontal, 24)
+            .padding(.horizontal, 20)
+            .padding(.bottom, 28)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .contentShape(Rectangle())
+    }
+
+    /// Kartu putih berisi akurasi besar dan tiga kotak angka: benar, ulang, dan
+    /// jumlah kartu.
+    private var summaryCard: some View {
+        VStack(spacing: 16) {
+            VStack(spacing: 2) {
+                Text("\(Int((vm.sessionAccuracy * 100).rounded()))%")
+                    .font(AppTheme.rounded(44, .heavy))
+                    .foregroundColor(AppTheme.accent)
+
+                Text("Akurasi sesi ini")
+                    .font(AppTheme.rounded(13, .semibold))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+            }
+
+            Rectangle()
+                .fill(AppTheme.trackColor(colorScheme))
+                .frame(height: 1)
+
+            HStack(spacing: 10) {
+                summaryStat(value: vm.sessionCorrect, label: "Benar", color: AppTheme.success)
+                summaryStat(value: vm.sessionWrong, label: "Ulang", color: AppTheme.danger)
+                summaryStat(value: vm.sessionTotal, label: "Kartu", color: AppTheme.accent)
+            }
+        }
+        .padding(20)
+        .frame(maxWidth: .infinity)
+        .background(cardColor)
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius, style: .continuous))
+        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 9, x: 0, y: 6)
+    }
+
+    private func summaryStat(value: Int, label: String, color: Color) -> some View {
+        VStack(spacing: 3) {
+            Text("\(value)")
+                .font(AppTheme.rounded(24, .heavy))
+                .foregroundColor(color)
+
+            Text(label)
+                .font(AppTheme.rounded(11, .bold))
+                .foregroundColor(AppTheme.secondaryText(colorScheme))
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 12)
+        .background(AppTheme.softTint(color, colorScheme))
+        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+    }
+
+    /// Pengingat runtutan hari, memakai angka streak yang sama dengan Beranda.
+    private var streakBanner: some View {
+        HStack(spacing: 12) {
+            Text("🔥")
+                .font(AppTheme.rounded(26))
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Streak \(vm.currentStreak) hari")
+                    .font(AppTheme.rounded(15, .heavy))
+                    .foregroundColor(AppTheme.primaryText(colorScheme))
+
+                Text("Belajar setiap hari agar runtutannya tidak putus.")
+                    .font(AppTheme.rounded(12, .medium))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            Spacer(minLength: 0)
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(AppTheme.softTint(AppTheme.caution, colorScheme))
+        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
     }
 
     private func emptyState(_ title: String, _ subtitle: String) -> some View {
