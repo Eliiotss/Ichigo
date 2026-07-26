@@ -433,7 +433,7 @@ struct ChoiceButton: View {
     var bgColor: Color {
         guard isAnswered else { return AppTheme.surface(colorScheme) }
         if isCorrect { return AppTheme.success }
-        if isWrongSelected { return AppTheme.warning }
+        if isWrongSelected { return AppTheme.danger }
         return AppTheme.surface(colorScheme)
     }
 

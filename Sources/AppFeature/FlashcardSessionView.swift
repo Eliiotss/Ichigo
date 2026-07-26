@@ -42,7 +42,10 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
     }
 
     var currentCard: FlashcardDeckCard? { currentIndex < queue.count ? queue[currentIndex] : nil }
-    var progressText: String { sessionTotal == 0 ? "0/0" : "\(min(currentIndex + 1, sessionTotal))/\(sessionTotal)" }
+    /// Posisi kartu yang sedang dibuka, mis. "Kartu 3 / 25".
+    var positionText: String {
+        sessionTotal == 0 ? "Kartu 0 / 0" : "Kartu \(min(currentIndex + 1, sessionTotal)) / \(sessionTotal)"
+    }
     var progressValue: Double { sessionTotal == 0 ? 0 : Double(min(currentIndex + 1, sessionTotal)) / Double(sessionTotal) }
 
     func loadDeck() async {
@@ -211,130 +214,210 @@ struct FlashcardSessionView: View {
         .background(bgColor.ignoresSafeArea())
     }
 
-    // MARK: - Review (tap kartu untuk reveal, seperti versi sebelumnya)
+    // MARK: - Review (tap kartu untuk melihat jawaban, lalu nilai)
     private func reviewView(_ item: FlashcardDeckCard) -> some View {
-        VStack(spacing: 18) {
-            VStack(spacing: 8) {
-                HStack {
-                    Text(vm.level.id).font(AppTheme.rounded(13, .black)).foregroundColor(vm.level.color)
-                    Spacer()
+        VStack(spacing: 0) {
+            statsCard
+                .padding(.horizontal, 18)
+
+            flipCard(item)
+                .padding(.horizontal, 18)
+                .padding(.vertical, 16)
+
+            gradeArea
+                .padding(.horizontal, 18)
+                .padding(.bottom, 14)
+        }
+    }
+
+    /// Kartu ringkasan di atas: level, posisi kartu, bilah kemajuan, dan tiga
+    /// pil hitungan (due / ulang / hafal).
+    private var statsCard: some View {
+        VStack(spacing: 0) {
+            HStack {
+                Text("JLPT \(vm.level.id)")
+                    .font(AppTheme.rounded(12, .bold))
+                    .foregroundColor(AppTheme.accent)
+                    .kerning(0.5)
+
+                Spacer()
+
+                Text(vm.positionText)
+                    .font(AppTheme.rounded(12, .semibold))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+            }
+            .padding(.bottom, 8)
+
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(AppTheme.trackColor(colorScheme))
+                        .frame(height: 7)
+
+                    Capsule()
+                        .fill(
+                            LinearGradient(
+                                colors: [AppTheme.blueLight, AppTheme.blue],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                        .frame(width: geo.size.width * CGFloat(min(max(vm.progressValue, 0), 1)), height: 7)
+                        .animation(.easeInOut(duration: 0.3), value: vm.progressValue)
                 }
-                ProgressView(value: vm.progressValue).tint(vm.level.color)
+            }
+            .frame(height: 7)
+            .padding(.bottom, 11)
 
-                // Counter 3 bagian ala Anki: Baru / Belajar-Ulang / Review
-                HStack(spacing: 0) {
-                    Spacer()
-                    counterBadge(count: vm.remainingNew, color: .blue)
-                    Spacer()
-                    counterBadge(count: vm.remainingLearning, color: .red)
-                    Spacer()
-                    counterBadge(count: vm.remainingReview, color: .green)
-                    Spacer()
+            HStack(spacing: 8) {
+                countPill(count: vm.remainingNew, label: "due", color: AppTheme.accent)
+                countPill(count: vm.remainingLearning, label: "ulang", color: AppTheme.danger)
+                countPill(count: vm.remainingReview, label: "hafal", color: AppTheme.success)
+            }
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 13)
+        .background(cardColor)
+        .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 8, x: 0, y: 3)
+    }
+
+    private func countPill(count: Int, label: String, color: Color) -> some View {
+        HStack(spacing: 6) {
+            Circle()
+                .fill(color)
+                .frame(width: 7, height: 7)
+
+            Text("\(count)")
+                .font(AppTheme.rounded(15, .bold))
+                .foregroundColor(color)
+
+            Text(label)
+                .font(AppTheme.rounded(10, .bold))
+                .foregroundColor(color.opacity(0.7))
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 7)
+        .background(AppTheme.softTint(color, colorScheme))
+        .clipShape(RoundedRectangle(cornerRadius: 11, style: .continuous))
+    }
+
+    /// Kartu soal. Sebelum diketuk hanya menampilkan sisi depan; setelah
+    /// diketuk memperlihatkan cara baca, artinya, dan jenis katanya.
+    private func flipCard(_ item: FlashcardDeckCard) -> some View {
+        VStack(spacing: 6) {
+            Text(item.front)
+                .font(AppTheme.rounded(46, .bold))
+                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+
+            if vm.isRevealed {
+                if !item.revealedTitle.isEmpty {
+                    Text(item.revealedTitle)
+                        .font(AppTheme.rounded(17, .bold))
+                        .foregroundColor(AppTheme.secondaryText(colorScheme))
                 }
-                .padding(.top, 4)
-            }.padding(.horizontal, 20)
 
-            Spacer()
-
-            VStack(spacing: 16) {
-                Text(item.front)
-                    .font(AppTheme.rounded(40, .black))
+                Text(item.revealedBody)
+                    .font(AppTheme.rounded(24, .bold))
+                    .foregroundColor(AppTheme.primaryText(colorScheme))
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, 4)
 
-                if vm.isRevealed {
-                    if !item.revealedTitle.isEmpty {
-                        Text(item.revealedTitle)
-                            .font(AppTheme.rounded(18, .semibold))
-                            .foregroundColor(AppTheme.secondaryText(colorScheme))
-                    }
-                    Text(item.revealedBody)
-                        .font(AppTheme.rounded(22, .bold))
-                        .multilineTextAlignment(.center)
-                        .fixedSize(horizontal: false, vertical: true)
-                    if !item.revealedTag.isEmpty {
-                        Text(item.revealedTag)
-                            .font(AppTheme.rounded(12, .semibold))
-                            .foregroundColor(.white)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 5)
-                            .background(vm.mode.color)
-                            .cornerRadius(10)
-                    }
-                } else {
-                    Text("Tap kartu untuk melihat jawaban")
-                        .font(AppTheme.rounded(14))
-                        .foregroundColor(AppTheme.secondaryText(colorScheme))
-                        .multilineTextAlignment(.center)
-                }
-            }
-            .frame(maxWidth: .infinity)
-            .padding(28)
-            .background(cardColor)
-            .cornerRadius(24)
-            .contentShape(Rectangle())
-            .onTapGesture { vm.reveal() }
-            .padding(.horizontal, 20)
-
-            Spacer()
-
-            if vm.isRevealed && !vm.isGraded {
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
-                    ForEach(FlashcardGrade.allCases, id: \.self) { grade in
-                        Button {
-                            vm.submit(grade: grade)
-                        } label: {
-                            Text(grade.title)
-                                .font(AppTheme.rounded(15, .bold))
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical, 14)
-                                .background(color(for: grade))
-                                .cornerRadius(14)
-                        }
-                        .buttonStyle(.plain)
-                        .disabled(vm.isSubmitting)
-                    }
-                }
-                .padding(.horizontal, 20)
-            } else if vm.isGraded {
-                Button {
-                    vm.next()
-                } label: {
-                    Text("Berikutnya")
-                        .font(AppTheme.rounded(16, .bold))
+                if !item.revealedTag.isEmpty {
+                    Text(item.revealedTag)
+                        .font(AppTheme.rounded(12, .bold))
                         .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 15)
-                        .background(vm.level.color)
-                        .cornerRadius(16)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 6)
+                        .background(
+                            LinearGradient(
+                                colors: [AppTheme.blueLight, AppTheme.blue],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
+                        .clipShape(Capsule())
+                        .shadow(color: AppTheme.blue.opacity(0.3), radius: 8, x: 0, y: 4)
+                        .padding(.top, 10)
                 }
-                .buttonStyle(.plain)
-                .contentShape(Rectangle())
-                .padding(.horizontal, 20)
             } else {
-                // Belum revealed - placeholder kosong agar layout tidak lompat
-                Color.clear.frame(height: 52)
+                Text("Tap kartu untuk melihat jawaban")
+                    .font(AppTheme.rounded(13, .medium))
+                    .foregroundColor(AppTheme.placeholder)
+                    .padding(.top, 6)
             }
         }
-        .padding(.vertical, 16)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(20)
+        .background(cardColor)
+        .overlay(alignment: .top) {
+            // Garis aksen tipis di bibir atas kartu, sesuai desain.
+            LinearGradient(
+                colors: [AppTheme.blueLight, AppTheme.blue],
+                startPoint: .leading,
+                endPoint: .trailing
+            )
+            .frame(height: 5)
+        }
+        .clipShape(RoundedRectangle(cornerRadius: AppTheme.heroRadius, style: .continuous))
+        .shadow(color: AppTheme.cardShadow(colorScheme), radius: 13, x: 0, y: 10)
+        .contentShape(Rectangle())
+        .onTapGesture { vm.reveal() }
     }
 
-    private func counterBadge(count: Int, color: Color) -> some View {
-        HStack(spacing: 4) {
-            Circle().fill(color).frame(width: 8, height: 8)
-            Text("\(count)")
-                .font(AppTheme.rounded(14, .bold))
-                .foregroundColor(color)
+    /// Empat tombol nilai muncul setelah jawaban terlihat; setelah dinilai
+    /// digantikan tombol lanjut. Tingginya dijaga tetap supaya kartu di atasnya
+    /// tidak melompat.
+    @ViewBuilder
+    private var gradeArea: some View {
+        if vm.isRevealed && !vm.isGraded {
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
+                ForEach(FlashcardGrade.allCases, id: \.self) { grade in
+                    Button {
+                        vm.submit(grade: grade)
+                    } label: {
+                        Text(grade.title)
+                            .font(AppTheme.rounded(15, .bold))
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 48)
+                            .background(color(for: grade))
+                            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                            .shadow(color: color(for: grade).opacity(0.3), radius: 8, x: 0, y: 5)
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(vm.isSubmitting)
+                }
+            }
+        } else if vm.isGraded {
+            Button {
+                vm.next()
+            } label: {
+                Text("Berikutnya")
+                    .font(AppTheme.rounded(16, .bold))
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 48)
+                    .background(AppTheme.accent)
+                    .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    .shadow(color: AppTheme.accent.opacity(0.3), radius: 8, x: 0, y: 5)
+            }
+            .buttonStyle(.plain)
+        } else {
+            Color.clear.frame(height: 48)
         }
     }
 
+    /// Warna tombol nilai, nilainya persis dari desain.
     private func color(for grade: FlashcardGrade) -> Color {
         switch grade {
-        case .again: return .red
-        case .hard: return .orange
-        case .good: return .blue
-        case .easy: return .green
+        case .again: return AppTheme.danger
+        case .hard: return AppTheme.caution
+        case .good: return AppTheme.accent
+        case .easy: return AppTheme.success
         }
     }
 

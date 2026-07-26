@@ -34,11 +34,18 @@ enum AppTheme {
 
     static let accent = blue
 
-    /// Merah untuk bagian peringatan, mis. "Kesalahan Umum" di detail tata bahasa.
-    static let warning = Color(hex: 0xE5484D)
+    /// Warna bermakna, nilainya persis dari desain: merah untuk kesalahan dan
+    /// nilai "Ulang", oranye untuk "Susah", hijau untuk sudah dikuasai dan
+    /// nilai "Mudah".
+    static let danger = Color(hex: 0xFF3B30)
+    static let caution = Color(hex: 0xFF9500)
+    static let success = Color(hex: 0x22B981)
 
-    /// Hijau untuk penanda sudah dikuasai, mis. sel kana yang sudah hafal.
-    static let success = Color(hex: 0x1FA971)
+    /// Latar lembut untuk kotak bernuansa warna, mis. pil hitungan di layar
+    /// sesi flashcard. Di mode gelap kepekatannya dinaikkan agar tetap terbaca.
+    static func softTint(_ color: Color, _ scheme: ColorScheme) -> Color {
+        color.opacity(scheme == .dark ? 0.20 : 0.10)
+    }
 
     /// Primary blue gradient used by the hero card, avatar and primary buttons.
     static let accentGradient = LinearGradient(

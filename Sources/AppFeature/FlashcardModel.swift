@@ -531,7 +531,15 @@ enum FlashcardMode: String, CaseIterable, Identifiable {
     var color: Color {
         switch self {
         case .vocabulary: return AppTheme.blue
-        case .grammar: return AppTheme.teal
+        case .grammar: return AppTheme.violetDeep
+        }
+    }
+
+    /// Gradien ikon di layar pemilih, nilainya persis dari desain.
+    var gradient: [Color] {
+        switch self {
+        case .vocabulary: return [AppTheme.blueLight, AppTheme.blue]
+        case .grammar: return [AppTheme.violet, AppTheme.violetDeep]
         }
     }
 

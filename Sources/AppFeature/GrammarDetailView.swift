@@ -153,13 +153,13 @@ struct GrammarDetailView: View {
     }
 
     private var mistakeSection: some View {
-        DetailSectionCard(title: "Kesalahan Umum", systemImage: "exclamationmark.triangle.fill", tint: AppTheme.warning) {
+        DetailSectionCard(title: "Kesalahan Umum", systemImage: "exclamationmark.triangle.fill", tint: AppTheme.danger) {
             VStack(alignment: .leading, spacing: 10) {
                 ForEach(item.commonMistakes, id: \.self) { mistake in
                     HStack(alignment: .top, spacing: 10) {
                         Image(systemName: "xmark.circle.fill")
                             .font(AppTheme.rounded(14))
-                            .foregroundColor(AppTheme.warning)
+                            .foregroundColor(AppTheme.danger)
                             .padding(.top, 1)
 
                         Text(mistake)
@@ -170,7 +170,7 @@ struct GrammarDetailView: View {
                     }
                     .padding(12)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(AppTheme.warning.opacity(colorScheme == .dark ? 0.16 : 0.07))
+                    .background(AppTheme.danger.opacity(colorScheme == .dark ? 0.16 : 0.07))
                     .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
                 }
             }

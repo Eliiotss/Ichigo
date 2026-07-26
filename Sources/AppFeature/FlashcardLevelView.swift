@@ -1,59 +1,107 @@
 import SwiftUI
 
-// MARK: - Pilihan Mode (Vocabulary / Grammar)
+// MARK: - Pilihan Mode (Kosakata / Tata Bahasa)
+
+/// Layar pemilih jenis flashcard: dua kotak besar berdampingan, lalu keterangan
+/// singkat cara kerja penjadwalan ulangnya.
 struct FlashcardTypeSelectionView: View {
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var store: FlashcardStore
 
     var bgColor: Color { AppTheme.screenBackground(colorScheme) }
-    var cardColor: Color { AppTheme.surface(colorScheme) }
 
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
-                ForEach(FlashcardMode.allCases) { mode in
-                    NavigationLink(destination: FlashcardLevelView(mode: mode, store: store)) {
-                        FlashcardModeCard(mode: mode, cardColor: cardColor)
+            VStack(spacing: 16) {
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 14) {
+                    ForEach(FlashcardMode.allCases) { mode in
+                        NavigationLink(destination: FlashcardLevelView(mode: mode, store: store)) {
+                            FlashcardModeCard(mode: mode)
+                        }
+                        .buttonStyle(.plain)
                     }
-                    .buttonStyle(.plain)
                 }
+
+                reviewInfoCard
             }
-            .padding(16)
+            .padding(.horizontal, 18)
+            .padding(.top, 4)
+            .padding(.bottom, 20)
         }
         .background(bgColor)
         .navigationTitle("Flashcard")
         .navigationBarTitleDisplayMode(.large)
     }
+
+    /// Keterangan cara kerja review, sesuai desain.
+    private var reviewInfoCard: some View {
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: "info.circle.fill")
+                .font(AppTheme.rounded(17, .semibold))
+                .foregroundColor(AppTheme.accent)
+                .frame(width: 34, height: 34)
+                .background(AppTheme.surface(colorScheme))
+                .clipShape(RoundedRectangle(cornerRadius: 11, style: .continuous))
+
+            VStack(alignment: .leading, spacing: 3) {
+                Text("Cara kerja review")
+                    .font(AppTheme.rounded(13, .bold))
+                    .foregroundColor(AppTheme.primaryText(colorScheme))
+
+                Text("Kartu dijadwalkan ulang dengan FSRS. Tap kartu untuk melihat jawaban, lalu nilai seberapa mudah kamu mengingatnya.")
+                    .font(AppTheme.rounded(12, .medium))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .lineSpacing(3)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            Spacer(minLength: 0)
+        }
+        .padding(16)
+        .background(AppTheme.softTint(AppTheme.accent, colorScheme))
+        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+    }
 }
 
+/// Kotak pilihan satu mode flashcard: ikon bergradien, judul, dan penjelasan.
 struct FlashcardModeCard: View {
     let mode: FlashcardMode
-    let cardColor: Color
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
-        VStack(spacing: 14) {
+        VStack(spacing: 0) {
             ZStack {
-                RoundedRectangle(cornerRadius: 18)
-                    .fill(mode.color.opacity(0.15))
-                    .frame(width: 64, height: 64)
+                RoundedRectangle(cornerRadius: 17, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: mode.gradient,
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .frame(width: 56, height: 56)
+                    .shadow(color: mode.gradient[1].opacity(0.34), radius: 9, x: 0, y: 5)
+
                 Image(systemName: mode.icon)
-                    .font(AppTheme.rounded(28, .bold))
-                    .foregroundColor(mode.color)
+                    .font(AppTheme.rounded(26, .semibold))
+                    .foregroundColor(.white)
             }
-            VStack(spacing: 4) {
-                Text(mode.title)
-                    .font(AppTheme.rounded(17, .black))
-                    .foregroundColor(AppTheme.primaryText(colorScheme))
-                Text(mode.subtitle)
-                    .font(AppTheme.rounded(12))
-                    .foregroundColor(AppTheme.secondaryText(colorScheme))
-                    .multilineTextAlignment(.center)
-            }
+            .padding(.bottom, 14)
+
+            Text(mode.title)
+                .font(AppTheme.rounded(16, .bold))
+                .foregroundColor(AppTheme.primaryText(colorScheme))
+                .padding(.bottom, 3)
+
+            Text(mode.subtitle)
+                .font(AppTheme.rounded(12, .medium))
+                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 28)
-        .background(cardColor)
+        .padding(.vertical, 20)
+        .padding(.horizontal, 16)
+        .background(AppTheme.surface(colorScheme))
         .clipShape(RoundedRectangle(cornerRadius: AppTheme.cardRadius, style: .continuous))
         .shadow(color: AppTheme.cardShadow(colorScheme), radius: 9, x: 0, y: 6)
     }
