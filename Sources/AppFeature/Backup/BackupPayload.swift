@@ -67,5 +67,7 @@ enum BackupKeys {
     static let dailyTarget = "daily_target"
     static let notifEnabled = "notif_enabled"
     static let notifHour = "notif_hour"
-    static let appearance = "app_appearance"
+    /// Sumber nilainya ada di `AppAppearance.storageKey`; diacu balik di sini
+    /// agar kunci cadangan dan penyimpan preferensi tidak pernah berbeda.
+    static let appearance = AppAppearance.storageKey
 }

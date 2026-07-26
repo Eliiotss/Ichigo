@@ -18,8 +18,11 @@ enum AppAppearance: String, CaseIterable {
     case light
     case dark
 
-    /// Kunci `UserDefaults` tempat pilihan ini disimpan.
-    static let storageKey = BackupKeys.appearance
+    /// Kunci `UserDefaults` tempat pilihan ini disimpan. Ditulis sebagai literal
+    /// di sini — bukan mengacu ke `BackupKeys` — supaya berkas ini berdiri
+    /// sendiri dan tidak gagal kompilasi bila berkas lain belum ikut diperbarui.
+    /// `BackupKeys.appearance` mengacu balik ke nilai ini agar tetap satu sumber.
+    static let storageKey = "app_appearance"
 
     /// Skema warna yang dipaksakan ke seluruh aplikasi. `nil` berarti menyerah
     /// pada pengaturan perangkat.
