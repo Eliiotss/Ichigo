@@ -120,13 +120,13 @@ struct ProfileView: View {
 
     private var statsGrid: some View {
         LazyVGrid(columns: [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)], spacing: 12) {
-            ProfileStatTile(icon: "clock.fill", iconTint: AppTheme.blue, chip: Color(hex: 0xEBF3FF),
+            ProfileStatTile(icon: "clock.fill", iconTint: AppTheme.blue,
                             value: "\(dueTodayTotal)", unit: "due", caption: "hari ini")
-            ProfileStatTile(icon: "checkmark.circle.fill", iconTint: Color(hex: 0x22B981), chip: Color(hex: 0xE7F8ED),
+            ProfileStatTile(icon: "checkmark.circle.fill", iconTint: AppTheme.success,
                             value: "\(flashcardStore.studiedTodayTotal)", unit: "kartu", caption: "belajar")
-            ProfileStatTile(icon: "flame.fill", iconTint: Color(hex: 0xFF9500), chip: Color(hex: 0xFFF1E4),
+            ProfileStatTile(icon: "flame.fill", iconTint: AppTheme.caution,
                             value: "\(flashcardStore.currentStreak)", unit: "hari", caption: "streak")
-            ProfileStatTile(icon: "star.fill", iconTint: AppTheme.indigoDeep, chip: Color(hex: 0xEAF0FF),
+            ProfileStatTile(icon: "star.fill", iconTint: AppTheme.indigoDeep,
                             value: "\(flashcardStore.masteredTotal)", unit: "kartu", caption: "mastered")
         }
     }
@@ -141,10 +141,10 @@ struct ProfileView: View {
                 .foregroundStyle(AppTheme.primaryText(scheme))
 
             HStack(spacing: 10) {
-                answerPill("Ulang", summary.againCount, Color(hex: 0xFF3B30), Color(hex: 0xFFECEB))
-                answerPill("Susah", summary.hardCount, Color(hex: 0xFF9500), Color(hex: 0xFFF1E4))
-                answerPill("Bagus", summary.goodCount, AppTheme.blue, Color(hex: 0xEBF3FF))
-                answerPill("Mudah", summary.easyCount, Color(hex: 0x22B981), Color(hex: 0xE7F8ED))
+                answerPill("Ulang", summary.againCount, AppTheme.danger)
+                answerPill("Susah", summary.hardCount, AppTheme.caution)
+                answerPill("Bagus", summary.goodCount, AppTheme.accent)
+                answerPill("Mudah", summary.easyCount, AppTheme.success)
             }
 
             Rectangle()
@@ -167,7 +167,7 @@ struct ProfileView: View {
         .shadow(color: AppTheme.cardShadow(scheme), radius: 9, x: 0, y: 6)
     }
 
-    private func answerPill(_ label: String, _ count: Int, _ tint: Color, _ background: Color) -> some View {
+    private func answerPill(_ label: String, _ count: Int, _ tint: Color) -> some View {
         VStack(spacing: 2) {
             Text("\(count)")
                 .font(AppTheme.rounded(18, .heavy))
@@ -178,7 +178,7 @@ struct ProfileView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 9)
-        .background(background)
+        .background(AppTheme.softTint(tint, scheme))
         .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
     }
 }
@@ -188,7 +188,6 @@ struct ProfileView: View {
 struct ProfileStatTile: View {
     let icon: String
     let iconTint: Color
-    let chip: Color
     let value: String
     let unit: String
     let caption: String
@@ -201,7 +200,7 @@ struct ProfileStatTile: View {
                 .font(AppTheme.rounded(14, .bold))
                 .foregroundStyle(iconTint)
                 .frame(width: 32, height: 32)
-                .background(chip)
+                .background(AppTheme.softTint(iconTint, scheme))
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
 
             HStack(alignment: .firstTextBaseline, spacing: 4) {
