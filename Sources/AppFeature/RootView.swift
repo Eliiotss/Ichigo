@@ -17,7 +17,7 @@ public struct RootView: View {
                 .animation(.easeOut(duration: 0.2), value: loadingState.isReady)
 
             if !loadingState.isReady {
-                SplashView(progressText: loadingState.statusText)
+                SplashView(statusText: loadingState.statusText, progress: loadingState.progress)
                     .transition(.opacity)
                     .zIndex(1)
             }
@@ -31,23 +31,30 @@ public struct RootView: View {
 @MainActor
 final class AppLoadingState: ObservableObject {
     @Published var isReady = false
-    @Published var statusText = "Menyiapkan aplikasi..."
+    @Published var statusText = "Menyiapkan aplikasi…"
+    /// Bagian pekerjaan yang sudah selesai, 0 sampai 1. Nilainya naik setiap
+    /// satu dataset selesai dibaca, jadi bilah di layar pembuka menunjukkan
+    /// kemajuan yang sebenarnya, bukan animasi hiasan.
+    @Published var progress: Double = 0
+
     private var hasPrepared = false
+
+    /// Jeda terpendek layar pembuka. Tanpa ini, pada perangkat cepat splash
+    /// hanya berkedip sepersekian detik dan terlihat seperti gangguan.
+    private let minimumSplashSeconds = 0.65
 
     func prepare() async {
         guard !hasPrepared else { return }
         hasPrepared = true
 
         let start = Date()
-        statusText = "Memuat data dasar..."
-
         await preloadCoreResources()
 
-        statusText = "Hampir selesai..."
+        statusText = "Hampir selesai…"
+
         let elapsed = Date().timeIntervalSince(start)
-        let minimumSplashTime = 0.65
-        if elapsed < minimumSplashTime {
-            try? await Task.sleep(nanoseconds: UInt64((minimumSplashTime - elapsed) * 1_000_000_000))
+        if elapsed < minimumSplashSeconds {
+            try? await Task.sleep(nanoseconds: UInt64((minimumSplashSeconds - elapsed) * 1_000_000_000))
         }
 
         withAnimation(.easeOut(duration: 0.25)) {
@@ -55,47 +62,132 @@ final class AppLoadingState: ObservableObject {
         }
     }
 
+    /// Membaca dataset level pertama lebih dulu supaya layar Beranda dan
+    /// daftar-daftar tidak perlu menunggu pembacaan JSON saat dibuka. Hasilnya
+    /// tersimpan di ``JSONResourceCache``, jadi pemanggilan berikutnya gratis.
     private func preloadCoreResources() async {
-        await Task.detached(priority: .userInitiated) {
-            _ = try? JSONResourceCache.shared.decode([KanjiItem].self, filename: "KanjiN5")
-            _ = try? JSONResourceCache.shared.decode([VocabularyItem].self, filename: "VocabN5")
-            _ = try? JSONResourceCache.shared.decode([GrammarItem].self, filename: "GrammarN5")
-            _ = try? JSONResourceCache.shared.decode([KanaGroupJSON].self, filename: "Hiragana")
-        }.value
+        statusText = "Memuat kanji…"
+        await decodeOffMainThread { _ = try? JSONResourceCache.shared.decode([KanjiItem].self, filename: "KanjiN5") }
+        advance(to: 0.25)
+
+        statusText = "Memuat kosakata…"
+        await decodeOffMainThread { _ = try? JSONResourceCache.shared.decode([VocabularyItem].self, filename: "VocabN5") }
+        advance(to: 0.5)
+
+        statusText = "Memuat tata bahasa…"
+        await decodeOffMainThread { _ = try? JSONResourceCache.shared.decode([GrammarItem].self, filename: "GrammarN5") }
+        advance(to: 0.75)
+
+        statusText = "Memuat huruf kana…"
+        await decodeOffMainThread { _ = try? JSONResourceCache.shared.decode([KanaGroupJSON].self, filename: "Hiragana") }
+        advance(to: 1)
+    }
+
+    /// Menjalankan pembacaan di luar main thread supaya antarmuka tetap lancar.
+    private func decodeOffMainThread(_ work: @escaping @Sendable () -> Void) async {
+        await Task.detached(priority: .userInitiated) { work() }.value
+    }
+
+    private func advance(to value: Double) {
+        withAnimation(.easeOut(duration: 0.25)) {
+            progress = value
+        }
     }
 }
 
+// MARK: - Layar Pembuka
+
+/// Layar pembuka: lambang aplikasi bergradien biru, nama aplikasi, lalu bilah
+/// kemajuan pembacaan data di bagian bawah. Warnanya mengikuti tema aplikasi
+/// agar peralihan ke Beranda tidak terasa melompat.
 private struct SplashView: View {
-    let progressText: String
+    let statusText: String
+    let progress: Double
+
+    @Environment(\.colorScheme) private var colorScheme
+    @State private var hasAppeared = false
 
     var body: some View {
         ZStack {
-            LinearGradient(
-                colors: [Color.black, Color(red: 0.08, green: 0.1, blue: 0.16)],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .ignoresSafeArea()
+            AppTheme.screenBackground(colorScheme)
+                .ignoresSafeArea()
 
-            VStack(spacing: 16) {
-                Text("🇯🇵")
-                    .font(AppTheme.rounded(58))
+            VStack(spacing: 0) {
+                Spacer()
 
-                VStack(spacing: 6) {
-                    Text("Ichigo")
-                        .font(AppTheme.rounded(29, .black))
-                        .foregroundColor(.white)
+                appMark
 
-                    Text(progressText)
-                        .font(AppTheme.rounded(13, .semibold))
-                        .foregroundColor(.white.opacity(0.65))
-                }
+                Text("Ichigo")
+                    .font(AppTheme.rounded(34, .heavy))
+                    .foregroundColor(AppTheme.primaryText(colorScheme))
+                    .padding(.top, 22)
 
-                ProgressView()
-                    .tint(.white)
-                    .padding(.top, 8)
+                Text("Belajar bahasa Jepang")
+                    .font(AppTheme.rounded(14, .medium))
+                    .foregroundColor(AppTheme.secondaryText(colorScheme))
+                    .padding(.top, 4)
+
+                Spacer()
+
+                progressSection
+                    .padding(.horizontal, 48)
+                    .padding(.bottom, 56)
             }
-            .padding(.horizontal, 24)
+            .opacity(hasAppeared ? 1 : 0)
+            .animation(.easeOut(duration: 0.35), value: hasAppeared)
+        }
+        .onAppear { hasAppeared = true }
+    }
+
+    private var appMark: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 30, style: .continuous)
+                .fill(
+                    LinearGradient(
+                        colors: [AppTheme.blueLight, AppTheme.blue],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
+                .frame(width: 104, height: 104)
+                .shadow(color: AppTheme.blue.opacity(0.35), radius: 20, x: 0, y: 10)
+
+            Text("🍓")
+                .font(AppTheme.rounded(50))
+        }
+        .scaleEffect(hasAppeared ? 1 : 0.88)
+        .animation(.spring(response: 0.5, dampingFraction: 0.7), value: hasAppeared)
+    }
+
+    private var progressSection: some View {
+        VStack(spacing: 12) {
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(AppTheme.trackColor(colorScheme))
+                        .frame(height: 6)
+
+                    Capsule()
+                        .fill(
+                            LinearGradient(
+                                colors: [AppTheme.blueLight, AppTheme.blue],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                        .frame(width: geo.size.width * CGFloat(min(max(progress, 0), 1)), height: 6)
+                }
+            }
+            .frame(height: 6)
+
+            Text(statusText)
+                .font(AppTheme.rounded(13, .medium))
+                .foregroundColor(AppTheme.secondaryText(colorScheme))
+                .animation(nil, value: statusText)
         }
     }
+}
+
+#Preview {
+    RootView()
 }
