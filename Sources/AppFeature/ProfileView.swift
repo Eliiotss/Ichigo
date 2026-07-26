@@ -22,11 +22,9 @@ struct ProfileView: View {
                     dailyTargetCard
                     statsGrid
                     answerSummaryCard
-
-                    Spacer(minLength: 12)
                 }
                 .padding(.horizontal, 18)
-                .padding(.bottom, 16)
+                .padding(.bottom, AppTheme.screenBottomPadding)
             }
             .background(AppTheme.screenBackground(scheme).ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)

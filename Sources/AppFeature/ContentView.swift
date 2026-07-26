@@ -92,7 +92,7 @@ struct HomeView: View {
                     }
                     .padding(.horizontal, isIPad ? 32 : 18)
                     .padding(.top, 4)
-                    .padding(.bottom, 16)
+                    .padding(.bottom, AppTheme.screenBottomPadding)
                 }
                 .background(AppTheme.screenBackground(colorScheme).ignoresSafeArea())
                 .toolbar(.hidden, for: .navigationBar)

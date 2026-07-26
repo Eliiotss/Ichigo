@@ -33,7 +33,7 @@ struct SettingsView: View {
 
                     section("SEGERA HADIR") { comingSoonCard }
                 }
-                .padding(.bottom, 24)
+                .padding(.bottom, AppTheme.screenBottomPadding)
             }
             .background(AppTheme.screenBackground(scheme).ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)

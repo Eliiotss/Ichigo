@@ -99,6 +99,12 @@ enum AppTheme {
     static let heroRadius: CGFloat = 26
     static let tileIconRadius: CGFloat = 15
 
+    /// Ruang bawah pada layar bertab (Beranda, Profil, Pengaturan). Ditambahkan
+    /// di atas sisipan aman yang sudah otomatis diberi `TabView` untuk tab bar
+    /// dan home indicator, sehingga isi terakhir tidak mepet tab bar dan jaraknya
+    /// sama di semua perangkat — dari iPhone SE sampai iPad.
+    static let screenBottomPadding: CGFloat = 28
+
     // MARK: - JLPT level scale (N5 light → N1 deep)
     static func levelColor(_ id: String) -> Color {
         switch id {
