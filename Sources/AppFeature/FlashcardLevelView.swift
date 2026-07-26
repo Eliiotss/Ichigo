@@ -160,7 +160,7 @@ struct FlashcardUnlockedLevelCard: View {
     var body: some View {
         HStack(spacing: 14) {
             ZStack {
-                RoundedRectangle(cornerRadius: 12)
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .fill(level.bgColor)
                     .frame(width: 52, height: 52)
                 Text(level.id)
@@ -181,7 +181,7 @@ struct FlashcardUnlockedLevelCard: View {
                             .padding(.horizontal, 8)
                             .padding(.vertical, 3)
                             .background(level.color)
-                            .cornerRadius(10)
+                            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     }
                     Image(systemName: "chevron.right")
                         .font(AppTheme.rounded(13, .semibold))
@@ -214,7 +214,7 @@ struct FlashcardLockedLevelCard: View {
     var body: some View {
         HStack(spacing: 14) {
             ZStack {
-                RoundedRectangle(cornerRadius: 12)
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .fill(Color.gray.opacity(0.1))
                     .frame(width: 52, height: 52)
                 Text(level.id)
@@ -241,8 +241,8 @@ struct FlashcardLockedLevelCard: View {
         }
         .padding(16)
         .background(cardColor.opacity(0.5))
-        .cornerRadius(16)
-        .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray.opacity(0.08), lineWidth: 1))
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(Color.gray.opacity(0.08), lineWidth: 1))
     }
 }
 

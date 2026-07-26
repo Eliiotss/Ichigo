@@ -28,7 +28,7 @@ struct ContentView: View {
                 .tabItem { Image(systemName: "gearshape.fill"); Text("Pengaturan") }
                 .tag(2)
         }
-        .accentColor(AppTheme.accent)
+        .tint(AppTheme.accent)
         .task { await preloadHomeStats() }
     }
 
@@ -95,7 +95,7 @@ struct HomeView: View {
                     .padding(.bottom, 16)
                 }
                 .background(AppTheme.screenBackground(colorScheme).ignoresSafeArea())
-                .navigationBarHidden(true)
+                .toolbar(.hidden, for: .navigationBar)
             }
         }
     }

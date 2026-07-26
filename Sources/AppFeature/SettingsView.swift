@@ -36,7 +36,7 @@ struct SettingsView: View {
                 .padding(.bottom, 24)
             }
             .background(AppTheme.screenBackground(scheme).ignoresSafeArea())
-            .navigationBarHidden(true)
+            .toolbar(.hidden, for: .navigationBar)
             .alert("Reset progress flashcard?", isPresented: $showResetAlert) {
                 Button("Batal", role: .cancel) {}
                 Button("Reset", role: .destructive) {

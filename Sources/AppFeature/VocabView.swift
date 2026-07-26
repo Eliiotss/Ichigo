@@ -53,7 +53,7 @@ struct VocabularyUnlockedCard: View {
     var body: some View {
         HStack(spacing: 14) {
             ZStack {
-                RoundedRectangle(cornerRadius: 12)
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .fill(level.bgColor)
                     .frame(width: 52, height: 52)
 
@@ -96,7 +96,7 @@ struct VocabularyLockedCard: View {
     var body: some View {
         HStack(spacing: 14) {
             ZStack {
-                RoundedRectangle(cornerRadius: 12)
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .fill(Color.gray.opacity(0.1))
                     .frame(width: 52, height: 52)
 
@@ -129,9 +129,9 @@ struct VocabularyLockedCard: View {
         }
         .padding(16)
         .background(cardColor.opacity(0.5))
-        .cornerRadius(16)
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         .overlay(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .stroke(Color.gray.opacity(0.08), lineWidth: 1)
         )
     }

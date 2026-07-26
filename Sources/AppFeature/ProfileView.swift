@@ -29,7 +29,7 @@ struct ProfileView: View {
                 .padding(.bottom, 16)
             }
             .background(AppTheme.screenBackground(scheme).ignoresSafeArea())
-            .navigationBarHidden(true)
+            .toolbar(.hidden, for: .navigationBar)
         }
     }
 

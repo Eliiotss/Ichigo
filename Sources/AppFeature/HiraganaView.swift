@@ -207,7 +207,7 @@ struct HiraganaView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
                     .background(isKatakana ? AppTheme.indigo : AppTheme.blue)
-                    .cornerRadius(16)
+                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                     .shadow(color: (isKatakana ? AppTheme.indigo : AppTheme.blue).opacity(0.4), radius: 10, x: 0, y: 4)
                 }
                 .padding(.horizontal, 16)

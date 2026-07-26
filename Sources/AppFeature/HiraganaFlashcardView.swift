@@ -345,7 +345,7 @@ struct HiraganaFlashcardView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
                     .background(accentColor)
-                    .cornerRadius(16)
+                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             }
             .padding(.horizontal, 32)
             .padding(.bottom, 32)
