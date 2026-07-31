@@ -108,6 +108,16 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   now stateless enums routed through `ResourceLoader`.
 
 ### Fixed
+- **Placeholder kanji examples in `KanjiN5.json`.** 51 kanji carried a bogus
+  fifth example whose word was the kanji with `語` appended (`水語`, `木語`, `山語`
+  …) and whose `reading`/`romaji` were blank — auto-generated filler that never
+  read as real Japanese. Each is now the standalone kanji with its primary
+  on'yomi (`水` → スイ/sui, `木` → モク/moku), derived from the entry's existing
+  `onyomi` field and a deterministic katakana→rōmaji conversion validated against
+  the 69 already-correct entries. Item count is unchanged and every reading/rōmaji
+  is now filled.
+- **Empty example translation in `GrammarN4.json`.** Item `N4_G125` (〜どうしても)
+  had one example with a blank Indonesian translation; it is now filled.
 - **Graduating-interval settings were dead code.** `FlashcardSettings`
   carried `graduatingIntervalDays` (1) and `easyIntervalDays` (4) but the review
   engine ignored them and graduated every learning card straight off its FSRS

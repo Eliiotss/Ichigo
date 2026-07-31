@@ -209,9 +209,9 @@
                 "sentenceMeaning": "Saya memakai air setiap hari."
             },
             {
-                "word": "水語",
-                "reading": "",
-                "romaji": "",
+                "word": "水",
+                "reading": "スイ",
+                "romaji": "sui",
                 "meaning": "air",
                 "sentence": "友だちと水語について話しました。",
                 "sentenceFurigana": "ともだちと水語についてはなしました。",
@@ -264,9 +264,9 @@
                 "sentenceMeaning": "Saya memakai pohon / kayu setiap hari."
             },
             {
-                "word": "木語",
-                "reading": "",
-                "romaji": "",
+                "word": "木",
+                "reading": "モク",
+                "romaji": "moku",
                 "meaning": "pohon / kayu",
                 "sentence": "友だちと木語について話しました。",
                 "sentenceFurigana": "ともだちと木語についてはなしました。",
@@ -374,9 +374,9 @@
                 "sentenceMeaning": "Saya memakai tanah setiap hari."
             },
             {
-                "word": "土語",
-                "reading": "",
-                "romaji": "",
+                "word": "土",
+                "reading": "ド",
+                "romaji": "do",
                 "meaning": "tanah",
                 "sentence": "友だちと土語について話しました。",
                 "sentenceFurigana": "ともだちと土語についてはなしました。",
@@ -429,9 +429,9 @@
                 "sentenceMeaning": "Saya memakai gunung setiap hari."
             },
             {
-                "word": "山語",
-                "reading": "",
-                "romaji": "",
+                "word": "山",
+                "reading": "サン",
+                "romaji": "san",
                 "meaning": "gunung",
                 "sentence": "友だちと山語について話しました。",
                 "sentenceFurigana": "ともだちと山語についてはなしました。",
@@ -484,9 +484,9 @@
                 "sentenceMeaning": "Saya memakai sungai setiap hari."
             },
             {
-                "word": "川語",
-                "reading": "",
-                "romaji": "",
+                "word": "川",
+                "reading": "セン",
+                "romaji": "sen",
                 "meaning": "sungai",
                 "sentence": "友だちと川語について話しました。",
                 "sentenceFurigana": "ともだちと川語についてはなしました。",
@@ -539,9 +539,9 @@
                 "sentenceMeaning": "Saya memakai orang setiap hari."
             },
             {
-                "word": "人語",
-                "reading": "",
-                "romaji": "",
+                "word": "人",
+                "reading": "ジン",
+                "romaji": "jin",
                 "meaning": "orang",
                 "sentence": "友だちと人語について話しました。",
                 "sentenceFurigana": "ともだちと人語についてはなしました。",
@@ -1089,9 +1089,9 @@
                 "sentenceMeaning": "Saya memakai sepuluh setiap hari."
             },
             {
-                "word": "十語",
-                "reading": "",
-                "romaji": "",
+                "word": "十",
+                "reading": "ジュウ",
+                "romaji": "juu",
                 "meaning": "sepuluh",
                 "sentence": "友だちと十語について話しました。",
                 "sentenceFurigana": "ともだちと十語についてはなしました。",
@@ -1694,9 +1694,9 @@
                 "sentenceMeaning": "Saya memakai tengah / dalam setiap hari."
             },
             {
-                "word": "中語",
-                "reading": "",
-                "romaji": "",
+                "word": "中",
+                "reading": "チュウ",
+                "romaji": "chuu",
                 "meaning": "tengah / dalam",
                 "sentence": "友だちと中語について話しました。",
                 "sentenceFurigana": "ともだちと中語についてはなしました。",
@@ -1749,9 +1749,9 @@
                 "sentenceMeaning": "Saya memakai atas setiap hari."
             },
             {
-                "word": "上語",
-                "reading": "",
-                "romaji": "",
+                "word": "上",
+                "reading": "ジョウ",
+                "romaji": "jou",
                 "meaning": "atas",
                 "sentence": "友だちと上語について話しました。",
                 "sentenceFurigana": "ともだちと上語についてはなしました。",
@@ -1804,9 +1804,9 @@
                 "sentenceMeaning": "Saya memakai bawah setiap hari."
             },
             {
-                "word": "下語",
-                "reading": "",
-                "romaji": "",
+                "word": "下",
+                "reading": "カ",
+                "romaji": "ka",
                 "meaning": "bawah",
                 "sentence": "友だちと下語について話しました。",
                 "sentenceFurigana": "ともだちと下語についてはなしました。",
@@ -1859,9 +1859,9 @@
                 "sentenceMeaning": "Saya memakai kiri setiap hari."
             },
             {
-                "word": "左語",
-                "reading": "",
-                "romaji": "",
+                "word": "左",
+                "reading": "サ",
+                "romaji": "sa",
                 "meaning": "kiri",
                 "sentence": "友だちと左語について話しました。",
                 "sentenceFurigana": "ともだちと左語についてはなしました。",
@@ -1914,9 +1914,9 @@
                 "sentenceMeaning": "Saya memakai kanan setiap hari."
             },
             {
-                "word": "右語",
-                "reading": "",
-                "romaji": "",
+                "word": "右",
+                "reading": "ウ",
+                "romaji": "u",
                 "meaning": "kanan",
                 "sentence": "友だちと右語について話しました。",
                 "sentenceFurigana": "ともだちと右語についてはなしました。",
@@ -1969,9 +1969,9 @@
                 "sentenceMeaning": "Saya memakai mulut setiap hari."
             },
             {
-                "word": "口語",
-                "reading": "",
-                "romaji": "",
+                "word": "口",
+                "reading": "コウ",
+                "romaji": "kou",
                 "meaning": "mulut",
                 "sentence": "友だちと口語について話しました。",
                 "sentenceFurigana": "ともだちと口語についてはなしました。",
@@ -2024,9 +2024,9 @@
                 "sentenceMeaning": "Saya memakai mata setiap hari."
             },
             {
-                "word": "目語",
-                "reading": "",
-                "romaji": "",
+                "word": "目",
+                "reading": "モク",
+                "romaji": "moku",
                 "meaning": "mata",
                 "sentence": "友だちと目語について話しました。",
                 "sentenceFurigana": "ともだちと目語についてはなしました。",
@@ -2079,9 +2079,9 @@
                 "sentenceMeaning": "Saya memakai telinga setiap hari."
             },
             {
-                "word": "耳語",
-                "reading": "",
-                "romaji": "",
+                "word": "耳",
+                "reading": "ジ",
+                "romaji": "ji",
                 "meaning": "telinga",
                 "sentence": "友だちと耳語について話しました。",
                 "sentenceFurigana": "ともだちと耳語についてはなしました。",
@@ -2134,9 +2134,9 @@
                 "sentenceMeaning": "Saya memakai tangan setiap hari."
             },
             {
-                "word": "手語",
-                "reading": "",
-                "romaji": "",
+                "word": "手",
+                "reading": "シュ",
+                "romaji": "shu",
                 "meaning": "tangan",
                 "sentence": "友だちと手語について話しました。",
                 "sentenceFurigana": "ともだちと手語についてはなしました。",
@@ -2189,9 +2189,9 @@
                 "sentenceMeaning": "Saya memakai kaki / cukup setiap hari."
             },
             {
-                "word": "足語",
-                "reading": "",
-                "romaji": "",
+                "word": "足",
+                "reading": "ソク",
+                "romaji": "soku",
                 "meaning": "kaki / cukup",
                 "sentence": "友だちと足語について話しました。",
                 "sentenceFurigana": "ともだちと足語についてはなしました。",
@@ -2519,9 +2519,9 @@
                 "sentenceMeaning": "Saya memakai luar setiap hari."
             },
             {
-                "word": "外語",
-                "reading": "",
-                "romaji": "",
+                "word": "外",
+                "reading": "ガイ",
+                "romaji": "gai",
                 "meaning": "luar",
                 "sentence": "友だちと外語について話しました。",
                 "sentenceFurigana": "ともだちと外語についてはなしました。",
@@ -2574,9 +2574,9 @@
                 "sentenceMeaning": "Saya memakai negara setiap hari."
             },
             {
-                "word": "国語",
-                "reading": "",
-                "romaji": "",
+                "word": "国",
+                "reading": "コク",
+                "romaji": "koku",
                 "meaning": "negara",
                 "sentence": "友だちと国語について話しました。",
                 "sentenceFurigana": "ともだちと国語についてはなしました。",
@@ -2684,9 +2684,9 @@
                 "sentenceMeaning": "Saya memakai apa / berapa setiap hari."
             },
             {
-                "word": "何語",
-                "reading": "",
-                "romaji": "",
+                "word": "何",
+                "reading": "カ",
+                "romaji": "ka",
                 "meaning": "apa / berapa",
                 "sentence": "友だちと何語について話しました。",
                 "sentenceFurigana": "ともだちと何語についてはなしました。",
@@ -2739,9 +2739,9 @@
                 "sentenceMeaning": "Saya memakai sekarang setiap hari."
             },
             {
-                "word": "今語",
-                "reading": "",
-                "romaji": "",
+                "word": "今",
+                "reading": "コン",
+                "romaji": "kon",
                 "meaning": "sekarang",
                 "sentence": "友だちと今語について話しました。",
                 "sentenceFurigana": "ともだちと今語についてはなしました。",
@@ -3674,9 +3674,9 @@
                 "sentenceMeaning": "Saya memakai putih setiap hari."
             },
             {
-                "word": "白語",
-                "reading": "",
-                "romaji": "",
+                "word": "白",
+                "reading": "ハク",
+                "romaji": "haku",
                 "meaning": "putih",
                 "sentence": "友だちと白語について話しました。",
                 "sentenceFurigana": "ともだちと白語についてはなしました。",
@@ -3729,9 +3729,9 @@
                 "sentenceMeaning": "Saya memakai hitam setiap hari."
             },
             {
-                "word": "黒語",
-                "reading": "",
-                "romaji": "",
+                "word": "黒",
+                "reading": "コク",
+                "romaji": "koku",
                 "meaning": "hitam",
                 "sentence": "友だちと黒語について話しました。",
                 "sentenceFurigana": "ともだちと黒語についてはなしました。",
@@ -3784,9 +3784,9 @@
                 "sentenceMeaning": "Saya memakai merah setiap hari."
             },
             {
-                "word": "赤語",
-                "reading": "",
-                "romaji": "",
+                "word": "赤",
+                "reading": "セキ",
+                "romaji": "seki",
                 "meaning": "merah",
                 "sentence": "友だちと赤語について話しました。",
                 "sentenceFurigana": "ともだちと赤語についてはなしました。",
@@ -3839,9 +3839,9 @@
                 "sentenceMeaning": "Saya memakai biru / hijau setiap hari."
             },
             {
-                "word": "青語",
-                "reading": "",
-                "romaji": "",
+                "word": "青",
+                "reading": "セイ",
+                "romaji": "sei",
                 "meaning": "biru / hijau",
                 "sentence": "友だちと青語について話しました。",
                 "sentenceFurigana": "ともだちと青語についてはなしました。",
@@ -4444,9 +4444,9 @@
                 "sentenceMeaning": "Saya memakai ayah setiap hari."
             },
             {
-                "word": "父語",
-                "reading": "",
-                "romaji": "",
+                "word": "父",
+                "reading": "フ",
+                "romaji": "fu",
                 "meaning": "ayah",
                 "sentence": "友だちと父語について話しました。",
                 "sentenceFurigana": "ともだちと父語についてはなしました。",
@@ -4499,9 +4499,9 @@
                 "sentenceMeaning": "Saya memakai ibu setiap hari."
             },
             {
-                "word": "母語",
-                "reading": "",
-                "romaji": "",
+                "word": "母",
+                "reading": "ボ",
+                "romaji": "bo",
                 "meaning": "ibu",
                 "sentence": "友だちと母語について話しました。",
                 "sentenceFurigana": "ともだちと母語についてはなしました。",
@@ -4554,9 +4554,9 @@
                 "sentenceMeaning": "Saya memakai kakak laki-laki setiap hari."
             },
             {
-                "word": "兄語",
-                "reading": "",
-                "romaji": "",
+                "word": "兄",
+                "reading": "ケイ",
+                "romaji": "kei",
                 "meaning": "kakak laki-laki",
                 "sentence": "友だちと兄語について話しました。",
                 "sentenceFurigana": "ともだちと兄語についてはなしました。",
@@ -4609,9 +4609,9 @@
                 "sentenceMeaning": "Saya memakai kakak perempuan setiap hari."
             },
             {
-                "word": "姉語",
-                "reading": "",
-                "romaji": "",
+                "word": "姉",
+                "reading": "シ",
+                "romaji": "shi",
                 "meaning": "kakak perempuan",
                 "sentence": "友だちと姉語について話しました。",
                 "sentenceFurigana": "ともだちと姉語についてはなしました。",
@@ -4664,9 +4664,9 @@
                 "sentenceMeaning": "Saya memakai adik laki-laki setiap hari."
             },
             {
-                "word": "弟語",
-                "reading": "",
-                "romaji": "",
+                "word": "弟",
+                "reading": "テイ",
+                "romaji": "tei",
                 "meaning": "adik laki-laki",
                 "sentence": "友だちと弟語について話しました。",
                 "sentenceFurigana": "ともだちと弟語についてはなしました。",
@@ -4719,9 +4719,9 @@
                 "sentenceMeaning": "Saya memakai adik perempuan setiap hari."
             },
             {
-                "word": "妹語",
-                "reading": "",
-                "romaji": "",
+                "word": "妹",
+                "reading": "マイ",
+                "romaji": "mai",
                 "meaning": "adik perempuan",
                 "sentence": "友だちと妹語について話しました。",
                 "sentenceFurigana": "ともだちと妹語についてはなしました。",
@@ -4829,9 +4829,9 @@
                 "sentenceMeaning": "Saya memakai perempuan setiap hari."
             },
             {
-                "word": "女語",
-                "reading": "",
-                "romaji": "",
+                "word": "女",
+                "reading": "ジョ",
+                "romaji": "jo",
                 "meaning": "perempuan",
                 "sentence": "友だちと女語について話しました。",
                 "sentenceFurigana": "ともだちと女語についてはなしました。",
@@ -4884,9 +4884,9 @@
                 "sentenceMeaning": "Saya memakai laki-laki setiap hari."
             },
             {
-                "word": "男語",
-                "reading": "",
-                "romaji": "",
+                "word": "男",
+                "reading": "ダン",
+                "romaji": "dan",
                 "meaning": "laki-laki",
                 "sentence": "友だちと男語について話しました。",
                 "sentenceFurigana": "ともだちと男語についてはなしました。",
@@ -4994,9 +4994,9 @@
                 "sentenceMeaning": "Saya memakai mobil / kendaraan setiap hari."
             },
             {
-                "word": "車語",
-                "reading": "",
-                "romaji": "",
+                "word": "車",
+                "reading": "シャ",
+                "romaji": "sha",
                 "meaning": "mobil / kendaraan",
                 "sentence": "友だちと車語について話しました。",
                 "sentenceFurigana": "ともだちと車語についてはなしました。",
@@ -5159,9 +5159,9 @@
                 "sentenceMeaning": "Saya memakai toko setiap hari."
             },
             {
-                "word": "店語",
-                "reading": "",
-                "romaji": "",
+                "word": "店",
+                "reading": "テン",
+                "romaji": "ten",
                 "meaning": "toko",
                 "sentence": "友だちと店語について話しました。",
                 "sentenceFurigana": "ともだちと店語についてはなしました。",
@@ -5214,9 +5214,9 @@
                 "sentenceMeaning": "Saya memakai rumah / keluarga setiap hari."
             },
             {
-                "word": "家語",
-                "reading": "",
-                "romaji": "",
+                "word": "家",
+                "reading": "カ",
+                "romaji": "ka",
                 "meaning": "rumah / keluarga",
                 "sentence": "友だちと家語について話しました。",
                 "sentenceFurigana": "ともだちと家語についてはなしました。",
@@ -5379,9 +5379,9 @@
                 "sentenceMeaning": "Saya memakai bunga setiap hari."
             },
             {
-                "word": "花語",
-                "reading": "",
-                "romaji": "",
+                "word": "花",
+                "reading": "カ",
+                "romaji": "ka",
                 "meaning": "bunga",
                 "sentence": "友だちと花語について話しました。",
                 "sentenceFurigana": "ともだちと花語についてはなしました。",
@@ -5434,9 +5434,9 @@
                 "sentenceMeaning": "Saya memakai langit / kosong setiap hari."
             },
             {
-                "word": "空語",
-                "reading": "",
-                "romaji": "",
+                "word": "空",
+                "reading": "クウ",
+                "romaji": "kuu",
                 "meaning": "langit / kosong",
                 "sentence": "友だちと空語について話しました。",
                 "sentenceFurigana": "ともだちと空語についてはなしました。",
@@ -5489,9 +5489,9 @@
                 "sentenceMeaning": "Saya memakai hujan setiap hari."
             },
             {
-                "word": "雨語",
-                "reading": "",
-                "romaji": "",
+                "word": "雨",
+                "reading": "ウ",
+                "romaji": "u",
                 "meaning": "hujan",
                 "sentence": "友だちと雨語について話しました。",
                 "sentenceFurigana": "ともだちと雨語についてはなしました。",
@@ -5544,9 +5544,9 @@
                 "sentenceMeaning": "Saya memakai ikan setiap hari."
             },
             {
-                "word": "魚語",
-                "reading": "",
-                "romaji": "",
+                "word": "魚",
+                "reading": "ギョ",
+                "romaji": "gyo",
                 "meaning": "ikan",
                 "sentence": "友だちと魚語について話しました。",
                 "sentenceFurigana": "ともだちと魚語についてはなしました。",
@@ -5874,9 +5874,9 @@
                 "sentenceMeaning": "Saya memakai tubuh setiap hari."
             },
             {
-                "word": "体語",
-                "reading": "",
-                "romaji": "",
+                "word": "体",
+                "reading": "タイ",
+                "romaji": "tai",
                 "meaning": "tubuh",
                 "sentence": "友だちと体語について話しました。",
                 "sentenceFurigana": "ともだちと体語についてはなしました。",
@@ -5929,9 +5929,9 @@
                 "sentenceMeaning": "Saya memakai kekuatan setiap hari."
             },
             {
-                "word": "力語",
-                "reading": "",
-                "romaji": "",
+                "word": "力",
+                "reading": "リョク",
+                "romaji": "ryoku",
                 "meaning": "kekuatan",
                 "sentence": "友だちと力語について話しました。",
                 "sentenceFurigana": "ともだちと力語についてはなしました。",
@@ -6039,9 +6039,9 @@
                 "sentenceMeaning": "Saya memakai depan / sebelum setiap hari."
             },
             {
-                "word": "前語",
-                "reading": "",
-                "romaji": "",
+                "word": "前",
+                "reading": "ゼン",
+                "romaji": "zen",
                 "meaning": "depan / sebelum",
                 "sentence": "友だちと前語について話しました。",
                 "sentenceFurigana": "ともだちと前語についてはなしました。",
@@ -6094,9 +6094,9 @@
                 "sentenceMeaning": "Saya memakai belakang / setelah setiap hari."
             },
             {
-                "word": "後語",
-                "reading": "",
-                "romaji": "",
+                "word": "後",
+                "reading": "ゴ",
+                "romaji": "go",
                 "meaning": "belakang / setelah",
                 "sentence": "友だちと後語について話しました。",
                 "sentenceFurigana": "ともだちと後語についてはなしました。",
@@ -6204,9 +6204,9 @@
                 "sentenceMeaning": "Saya memakai antara / waktu setiap hari."
             },
             {
-                "word": "間語",
-                "reading": "",
-                "romaji": "",
+                "word": "間",
+                "reading": "カン",
+                "romaji": "kan",
                 "meaning": "antara / waktu",
                 "sentence": "友だちと間語について話しました。",
                 "sentenceFurigana": "ともだちと間語についてはなしました。",
@@ -6259,9 +6259,9 @@
                 "sentenceMeaning": "Saya memakai timur setiap hari."
             },
             {
-                "word": "東語",
-                "reading": "",
-                "romaji": "",
+                "word": "東",
+                "reading": "トウ",
+                "romaji": "tou",
                 "meaning": "timur",
                 "sentence": "友だちと東語について話しました。",
                 "sentenceFurigana": "ともだちと東語についてはなしました。",
@@ -6314,9 +6314,9 @@
                 "sentenceMeaning": "Saya memakai barat setiap hari."
             },
             {
-                "word": "西語",
-                "reading": "",
-                "romaji": "",
+                "word": "西",
+                "reading": "セイ",
+                "romaji": "sei",
                 "meaning": "barat",
                 "sentence": "友だちと西語について話しました。",
                 "sentenceFurigana": "ともだちと西語についてはなしました。",
@@ -6369,9 +6369,9 @@
                 "sentenceMeaning": "Saya memakai selatan setiap hari."
             },
             {
-                "word": "南語",
-                "reading": "",
-                "romaji": "",
+                "word": "南",
+                "reading": "ナン",
+                "romaji": "nan",
                 "meaning": "selatan",
                 "sentence": "友だちと南語について話しました。",
                 "sentenceFurigana": "ともだちと南語についてはなしました。",
@@ -6424,9 +6424,9 @@
                 "sentenceMeaning": "Saya memakai utara setiap hari."
             },
             {
-                "word": "北語",
-                "reading": "",
-                "romaji": "",
+                "word": "北",
+                "reading": "ホク",
+                "romaji": "hoku",
                 "meaning": "utara",
                 "sentence": "友だちと北語について話しました。",
                 "sentenceFurigana": "ともだちと北語についてはなしました。",
@@ -6534,9 +6534,9 @@
                 "sentenceMeaning": "Saya memakai anjing setiap hari."
             },
             {
-                "word": "犬語",
-                "reading": "",
-                "romaji": "",
+                "word": "犬",
+                "reading": "ケン",
+                "romaji": "ken",
                 "meaning": "anjing",
                 "sentence": "友だちと犬語について話しました。",
                 "sentenceFurigana": "ともだちと犬語についてはなしました。",
@@ -6589,9 +6589,9 @@
                 "sentenceMeaning": "Saya memakai serangga setiap hari."
             },
             {
-                "word": "虫語",
-                "reading": "",
-                "romaji": "",
+                "word": "虫",
+                "reading": "チュウ",
+                "romaji": "chuu",
                 "meaning": "serangga",
                 "sentence": "友だちと虫語について話しました。",
                 "sentenceFurigana": "ともだちと虫語についてはなしました。",
