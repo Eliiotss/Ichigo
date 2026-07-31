@@ -7,6 +7,13 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **10 verified N3 grammar patterns** (`GrammarN3.json`, `N3_G161`–`N3_G170`):
+  common points that were missing from the set — 〜として, 〜ば〜ほど, 〜さえ〜ば,
+  〜きり, 〜わりに(は), 〜において/〜における, 〜向け/〜向き, 〜だけに, 〜ことだ and
+  〜っこない. Each carries the full schema (structure, nuance, explanation, usage,
+  common mistakes and four example sentences with rōmaji + Indonesian), matched
+  to the existing entries. The level count in `GrammarModel.swift` moves 160 →
+  170, enforced by `check_dataset_counts.py`.
 - **37 verified N3 vocabulary entries** (`VocabN3.json`, `N3_V1111`–`N3_V1147`),
   a small hand-checked batch of common words not already in the set (経済-adjacent
   society/work/health/abstract nouns plus a few na-adjectives and adverbs). Each
