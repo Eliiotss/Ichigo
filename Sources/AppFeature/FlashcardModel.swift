@@ -288,7 +288,7 @@ final class FlashcardReviewEngine {
             updated.difficulty = FSRSMath.initialDifficulty(grade: grade, w: w)
 
             if grade == .easy {
-                graduateWithStability(&updated, settings: settings, now: now)
+                graduate(&updated, toInterval: settings.easyIntervalDays, settings: settings, now: now)
             } else {
                 updated.state = .learning
                 // -1 = belum pernah masuk step; treat sebagai awal
@@ -301,7 +301,7 @@ final class FlashcardReviewEngine {
             updated.difficulty = FSRSMath.initialDifficulty(grade: grade, w: w)
 
             if grade == .easy {
-                graduateWithStability(&updated, settings: settings, now: now)
+                graduate(&updated, toInterval: settings.easyIntervalDays, settings: settings, now: now)
             } else {
                 advanceStep(&updated, currentIndex: card.learningStepIndex, steps: settings.learningStepsMinutes, grade: grade, settings: settings, now: now)
             }
@@ -326,7 +326,7 @@ final class FlashcardReviewEngine {
             // MARK: Kartu relearning (Merah setelah lupa dari Hijau)
         case .relearning:
             if grade == .easy {
-                graduateWithStability(&updated, settings: settings, now: now)
+                graduate(&updated, toInterval: settings.easyIntervalDays, settings: settings, now: now)
             } else {
                 if grade == .again { updated.lapses += 1 }
                 advanceStep(&updated, currentIndex: card.learningStepIndex, steps: settings.relearningStepsMinutes, grade: grade, settings: settings, now: now)
@@ -368,10 +368,12 @@ final class FlashcardReviewEngine {
             updated.scheduledDays = 0
 
         case .good:
-            // Maju satu step. Kalau sudah habis step -> lulus ke Hijau
+            // Maju satu step. Kalau sudah habis step -> lulus ke Hijau dengan
+            // interval kelulusan tetap (graduatingIntervalDays), lalu FSRS-6
+            // mengambil alih di review-review berikutnya.
             let nextIdx = currentIndex + 1
             if nextIdx >= steps.count {
-                graduateWithStability(&updated, settings: settings, now: now)
+                graduate(&updated, toInterval: settings.graduatingIntervalDays, settings: settings, now: now)
             } else {
                 updated.learningStepIndex = nextIdx
                 updated.dueDate = now.addingTimeInterval(steps[nextIdx] * 60)
@@ -380,11 +382,25 @@ final class FlashcardReviewEngine {
 
         case .easy:
             // Selalu langsung lulus (ditangani sebelum manggil fungsi ini, fallback jaga-jaga)
-            graduateWithStability(&updated, settings: settings, now: now)
+            graduate(&updated, toInterval: settings.easyIntervalDays, settings: settings, now: now)
         }
     }
 
-    // Lulus ke state .review, interval dihitung dari stability (FSRS-6 formula)
+    // Kelulusan PERTAMA dari learning/relearning ("cara A" ala Anki): pakai
+    // interval kelulusan tetap — Bagus -> graduatingIntervalDays (1 hari, jadi
+    // kartu hari-1 muncul lagi di hari-2), Mudah -> easyIntervalDays (4 hari).
+    // Sesudah lulus, FSRS-6 penuh (graduateWithStability) yang menjadwalkan setiap
+    // review berikutnya.
+    private func graduate(_ updated: inout FlashcardProgress, toInterval days: Int, settings: FlashcardSettings, now: Date) {
+        let clamped = min(max(days, 1), settings.maximumIntervalDays)
+        updated.state = .review
+        updated.learningStepIndex = 0
+        updated.scheduledDays = clamped
+        updated.dueDate = Calendar.current.date(byAdding: .day, value: clamped, to: now) ?? now
+    }
+
+    // Interval review dihitung ulang dari stability (rumus FSRS-6). Dipakai di
+    // SETIAP review kartu Hijau, bukan untuk kelulusan pertama dari learning.
     private func graduateWithStability(_ updated: inout FlashcardProgress, settings: FlashcardSettings, now: Date) {
         let days = FSRSMath.nextInterval(stability: updated.stability, desiredRetention: settings.desiredRetention, maximumDays: settings.maximumIntervalDays, w: settings.fsrsWeights)
         updated.state = .review

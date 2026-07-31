@@ -108,6 +108,15 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   now stateless enums routed through `ResourceLoader`.
 
 ### Fixed
+- **Graduating-interval settings were dead code.** `FlashcardSettings`
+  carried `graduatingIntervalDays` (1) and `easyIntervalDays` (4) but the review
+  engine ignored them and graduated every learning card straight off its FSRS
+  stability (≈2 days for Good), so a new card first reappeared on day 3 rather
+  than day 2. The learning/relearning graduation now uses the fixed graduating
+  interval ("cara A": Anki-style learning steps + graduating interval), so a
+  Good graduation is due the next day and an Easy graduation in four; FSRS-6
+  then schedules every subsequent review from the card's stability, unchanged.
+  Regression tests assert the graduating intervals.
 - **FSRS-6 difficulty update was missing linear damping.** `nextDifficulty`
   applied the FSRS-4.5 form (`D − w6·(G−3)`), omitting the `(10 − D)/9` damping
   introduced in FSRS-5/6 that shrinks difficulty changes as a card approaches

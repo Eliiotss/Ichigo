@@ -49,6 +49,24 @@ final class FlashcardReviewEngineTests: XCTestCase {
         XCTAssertEqual(card.state, .review)
     }
 
+    func testGoodGraduatesAtGraduatingInterval() {
+        // "Cara A": kartu baru yang lulus lewat Bagus memakai interval kelulusan
+        // tetap `graduatingIntervalDays` (1 hari) — jadi kartu hari-1 muncul lagi
+        // di hari-2, bukan dihitung dari stability.
+        var card = newCard()
+        card = engine.review(card: card, grade: .good, settings: settings).0
+        card = engine.review(card: card, grade: .good, settings: settings).0
+        card = engine.review(card: card, grade: .good, settings: settings).0
+        XCTAssertEqual(card.state, .review)
+        XCTAssertEqual(card.scheduledDays, settings.graduatingIntervalDays)
+    }
+
+    func testEasyGraduatesAtEasyInterval() {
+        let (updated, _) = engine.review(card: newCard(), grade: .easy, settings: settings)
+        XCTAssertEqual(updated.state, .review)
+        XCTAssertEqual(updated.scheduledDays, settings.easyIntervalDays)
+    }
+
     func testAgainDuringLearningResetsToFirstStep() {
         var card = engine.review(card: newCard(), grade: .good, settings: settings).0
         card = engine.review(card: card, grade: .again, settings: settings).0
