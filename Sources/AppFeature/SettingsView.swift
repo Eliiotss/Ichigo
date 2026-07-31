@@ -13,6 +13,7 @@ struct SettingsView: View {
     @State private var showResetAlert = false
     @State private var resetDone = false
     @State private var showPermissionDeniedAlert = false
+    @FocusState private var nameFieldFocused: Bool
 
     var body: some View {
         NavigationStack {
@@ -93,11 +94,22 @@ struct SettingsView: View {
     /// Satu baris untuk menyunting nama pengguna. Terikat langsung ke
     /// `AccountStore.displayName` yang otomatis tersimpan dan tersinkron ke
     /// Beranda serta Profil (keduanya mengamati `AccountStore.shared`).
+    ///
+    /// Dibuat sebagai baris khusus (bukan `SettingsRow`) karena baris bersama itu
+    /// menaruh kontrol trailing SETELAH `Spacer` yang rakus — untuk `TextField`
+    /// hal itu meruntuhkan lebar & area sentuhnya sehingga tak bisa diketik. Di
+    /// sini field mengisi ruang (`maxWidth: .infinity`) dan seluruh baris bisa
+    /// diketuk untuk memfokuskan field.
     private var profileCard: some View {
         SettingsCard {
-            SettingsRow(icon: "person.fill",
-                        colors: [AppTheme.blueLight, AppTheme.blue],
-                        title: "Nama Pengguna", showsDivider: false) {
+            HStack(spacing: 12) {
+                SettingsIcon(systemName: "person.fill", colors: [AppTheme.blueLight, AppTheme.blue])
+
+                Text("Nama Pengguna")
+                    .font(AppTheme.rounded(16, .semibold))
+                    .foregroundStyle(AppTheme.primaryText(scheme))
+                    .fixedSize()
+
                 TextField("user123", text: $account.displayName)
                     .font(AppTheme.rounded(16, .semibold))
                     .foregroundStyle(AppTheme.primaryText(scheme))
@@ -105,7 +117,13 @@ struct SettingsView: View {
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
                     .submitLabel(.done)
+                    .focused($nameFieldFocused)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
             }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 11)
+            .contentShape(Rectangle())
+            .onTapGesture { nameFieldFocused = true }
         }
     }
 
