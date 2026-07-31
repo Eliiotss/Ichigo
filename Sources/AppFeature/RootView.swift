@@ -54,6 +54,10 @@ final class AppLoadingState: ObservableObject {
         guard !hasPrepared else { return }
         hasPrepared = true
 
+        // Catat tanggal pemasangan pertama sekali saja. Ini jadi titik awal semua
+        // hitungan harian (hari ini/due/streak) — hari pertama = hari install.
+        AppInstallInfo.registerIfNeeded()
+
         let start = Date()
         await preloadCoreResources()
 
@@ -99,6 +103,27 @@ final class AppLoadingState: ObservableObject {
         withAnimation(.easeOut(duration: 0.25)) {
             progress = value
         }
+    }
+}
+
+// MARK: - Info Pemasangan
+
+/// Menyimpan tanggal pemasangan pertama aplikasi. Dipakai sebagai titik awal
+/// hitungan harian ("hari ini"/"due"/streak) sehingga hari pertama = hari install.
+/// Nilainya ditulis sekali dan tidak pernah ditimpa selama data lokal masih ada.
+enum AppInstallInfo {
+    static let firstInstallKey = "first_install_date_v1"
+
+    /// Menstempel tanggal sekarang bila belum pernah tercatat.
+    static func registerIfNeeded(date: Date = Date(), defaults: UserDefaults = .standard) {
+        if defaults.object(forKey: firstInstallKey) == nil {
+            defaults.set(date, forKey: firstInstallKey)
+        }
+    }
+
+    /// Tanggal pemasangan pertama; jika belum ada, dianggap hari ini.
+    static func firstInstallDate(defaults: UserDefaults = .standard) -> Date {
+        defaults.object(forKey: firstInstallKey) as? Date ?? Date()
     }
 }
 

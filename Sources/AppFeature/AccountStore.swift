@@ -35,7 +35,7 @@ final class AccountStore: ObservableObject {
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
-        self.displayName = defaults.string(forKey: BackupKeys.userName) ?? "User123"
+        self.displayName = defaults.string(forKey: BackupKeys.userName) ?? "user123"
         self.email = defaults.string(forKey: BackupKeys.userEmail) ?? ""
         self.linkedGoogleEmail = defaults.string(forKey: Self.googleEmailKey)
     }
@@ -69,7 +69,7 @@ final class AccountStore: ObservableObject {
 
     /// Re-reads persisted values, e.g. after restoring a backup.
     func reload() {
-        displayName = defaults.string(forKey: BackupKeys.userName) ?? "User123"
+        displayName = defaults.string(forKey: BackupKeys.userName) ?? "user123"
         email = defaults.string(forKey: BackupKeys.userEmail) ?? ""
         linkedGoogleEmail = defaults.string(forKey: Self.googleEmailKey)
     }

@@ -501,9 +501,31 @@ final class FlashcardStore: ObservableObject {
         deckStats(mode: mode, levelId: levelId)?.due ?? 0
     }
 
-    var dueTodayGrandTotal: Int {
-        FlashcardMode.allCases.reduce(0) { total, mode in
-            total + mode.levels().reduce(0) { $0 + (deckStats(mode: mode, levelId: $1.id)?.due ?? 0) }
+    /// Beban kartu untuk hari ini, dijumlahkan semua dek yang sudah dimuat.
+    ///
+    /// Ini mencerminkan persis apa yang akan disajikan sesi belajar (lihat
+    /// `FlashcardDeckQueueBuilder.build`): kartu pengulangan yang jatuh tempo,
+    /// ditambah sisa kartu baru hari ini. Jatah kartu baru dihitung per dek —
+    /// tiap level punya jatah `target` sendiri — jadi angka ini bisa lebih besar
+    /// dari `target` karena pengulangan menumpuk di atas kartu baru. `target`
+    /// datang dari "daily_target" yang dipilih pengguna di Pengaturan.
+    func dailyDueTotal(target: Int) -> Int {
+        let now = Date()
+        return FlashcardMode.allCases.reduce(0) { total, mode in
+            total + mode.levels().reduce(0) { sub, level in
+                let key = flashcardLevelKey(mode: mode, levelId: level.id)
+                guard let items = deckItemsPerLevel[key] else { return sub }
+                // Pengulangan: kartu yang SUDAH pernah dipelajari dan kini jatuh tempo.
+                let dueReviews = items.filter { item in
+                    guard let progress = progressMap[item.id] else { return false }
+                    return progress.dueDate <= now
+                }.count
+                // Sisa kartu baru hari ini untuk dek ini (jatah per dek = target).
+                let untouched = items.filter { progressMap[$0.id] == nil }.count
+                let newStudied = newCardTracker.studiedTodayCount(levelKey: key)
+                let newRemaining = min(untouched, max(0, target - newStudied))
+                return sub + dueReviews + newRemaining
+            }
         }
     }
 }

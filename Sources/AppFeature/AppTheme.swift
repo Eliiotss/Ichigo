@@ -17,16 +17,24 @@ enum AppTheme {
 
     // MARK: - 1. Latar & Permukaan  (dipakai SEMUA layar)
 
-    /// Latar utama seluruh layar saat mode TERANG — beige hangat khas Ichigo.
-    static let pageLight = Color(hex: 0xE7E0DC)
+    // --- Mode TERANG (krem hangat, sedikit lebih cerah agar enak dipandang) ---
+    /// Latar utama seluruh layar saat mode TERANG — krem hangat lembut.
+    static let pageLight = Color(hex: 0xF1EAE3)
     /// Warna kartu putih saat mode TERANG (kartu, tombol, baris pengaturan).
     static let cardLight = Color.white
-    /// Jalur (track) bilah kemajuan saat mode TERANG.
-    static let track = Color(hex: 0xF0E7E2)
+    /// Jalur (track) bilah kemajuan saat mode TERANG — sedikit lebih pekat dari
+    /// latar agar bar kosong tetap terlihat di atas kartu putih.
+    static let track = Color(hex: 0xE4DAD1)
     /// Warna tab bar bawah saat mode TERANG.
     static let tabBarLight = Color(hex: 0xFBF6F3)
     /// Garis pemisah tipis antar baris saat mode TERANG.
-    static let hairline = Color(hex: 0xEFE6E0)
+    static let hairline = Color(hex: 0xEAE1DA)
+
+    // --- Mode GELAP (navy kebiruan, bukan hitam pekat) ---
+    /// Latar utama seluruh layar saat mode GELAP — navy pekat yang lembut di mata.
+    static let pageDark = Color(hex: 0x12161F)
+    /// Warna kartu saat mode GELAP — navy sedikit lebih terang dari latar.
+    static let cardDark = Color(hex: 0x1C2231)
 
     // MARK: - 2. Teks
 
@@ -129,9 +137,10 @@ enum AppTheme {
 
     // MARK: - 7. Bayangan Kartu
 
-    /// Bayangan lembut kartu — `0 6px 18px rgba(43,32,41,.06)` di desain.
+    /// Bayangan lembut kartu. Sedikit lebih pekat di mode terang agar kartu putih
+    /// tetap terpisah dari latar krem yang cerah; lebih dalam di mode gelap navy.
     static func cardShadow(_ scheme: ColorScheme) -> Color {
-        scheme == .dark ? Color.black.opacity(0.3) : ink.opacity(0.06)
+        scheme == .dark ? Color.black.opacity(0.35) : ink.opacity(0.08)
     }
 
     /// Alias bayangan lembut (nilai sama dengan `cardShadow`).
@@ -143,14 +152,14 @@ enum AppTheme {
     // ikut berubah saat mode gelap/terang. Umumnya tak perlu diubah — cukup ganti
     // nilai mentah di Bagian 1–6 di atas.
 
-    /// Latar layar: beige saat terang, gelap sistem saat gelap.
+    /// Latar layar: krem saat terang, navy pekat saat gelap.
     static func screenBackground(_ scheme: ColorScheme) -> Color {
-        scheme == .dark ? Color(UIColor.systemBackground) : pageLight
+        scheme == .dark ? pageDark : pageLight
     }
 
-    /// Permukaan kartu: putih saat terang, abu gelap saat gelap.
+    /// Permukaan kartu: putih saat terang, navy lebih terang saat gelap.
     static func surface(_ scheme: ColorScheme) -> Color {
-        scheme == .dark ? Color(UIColor.secondarySystemBackground) : cardLight
+        scheme == .dark ? cardDark : cardLight
     }
 
     /// Permukaan lembut untuk kotak di dalam kartu (baris penggunaan, contoh

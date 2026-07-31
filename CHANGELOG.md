@@ -7,6 +7,14 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Editable username in Settings.** A new **PROFIL** section carries a **Nama
+  Pengguna** field bound to `AccountStore.displayName`; it persists automatically
+  and syncs live to the Home greeting and the Profile header (both observe the
+  shared `AccountStore`). Default is `user123`.
+- **Time-of-day greeting on Home.** The static "Halo" line now reads *Selamat
+  pagi / siang / sore / malam* by the device hour (`TimeGreeting`, unit-tested).
+- **First-install date is recorded** (`AppInstallInfo`) as the origin for the
+  per-day counts, stamped once during the splash preload.
 - **Ichigo v2 visual design** across the app: a central `AppTheme` carrying the
   design's exact tokens (warm beige `#E7E0DC` page, white cards, plum `#2B2029`
   ink, muted `#B0A199`, blue `#2E7BFF` accent with its gradient pairs) and a
@@ -65,6 +73,19 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   changelog, and a `.swiftlint.yml` configuration.
 
 ### Changed
+- **Flashcard new-card quota follows the daily target.** The session builder's
+  per-deck new-card limit is now the **Target Harian** value from Settings instead
+  of a fixed 35, so setting e.g. 45/day gives 45 new cards per deck each day; due
+  repetitions still stack on top as they come due. The `FlashcardSettings` default
+  is unchanged so the pure builder tests keep asserting against a known value.
+- **Home "Due" / Profile "hari ini" now show the day's real workload.** They read
+  `FlashcardStore.dailyDueTotal(target:)` — remaining new cards for today plus the
+  reviews that have come due — instead of counting every un-mastered card. The
+  figure resets each day from the install date.
+- **Light and dark palette tuned for comfort.** Light mode moves to a slightly
+  brighter warm cream (`#F1EAE3`, with matching track/hairline) and dark mode moves
+  off pure black to a soft navy (`#12161F` page, `#1C2231` cards). All values live
+  in the single `AppTheme` colour panel, so every screen follows in both modes.
 - **Project restructured** from a flat pile of files at the repository root into
   a single `Sources/AppFeature/` app target (all logic, UI, `@main` entry and the
   `Resources/` datasets). A single target is required by Swift Playgrounds, which
@@ -136,6 +157,8 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Dead code: the unused `AppState` observable object, the legacy `FlashcardItem`
   type and its initializer, the unused `itemsPerLevel` storage, and the no-op
   `NotificationManager.skipTodayIfTargetMet` method.
+- Dead code: `FlashcardStore.dueTodayGrandTotal`, which summed every un-mastered
+  card across all decks and is superseded by `dailyDueTotal(target:)`.
 - Debug `print` statements across the loaders (replaced by unified logging).
 - Artificial fixed-delay spinners on the static Kanji/Grammar/Vocabulary level
   lists, improving perceived navigation speed.

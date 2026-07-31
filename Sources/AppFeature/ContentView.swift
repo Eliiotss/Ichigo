@@ -41,6 +41,21 @@ struct ContentView: View {
     }
 }
 
+// MARK: - Time-based greeting
+
+/// Sapaan berbahasa Indonesia berdasarkan jam (0–23): pagi (05–10), siang
+/// (11–14), sore (15–17), selebihnya malam. Dipisah dari tampilan agar bisa diuji.
+enum TimeGreeting {
+    static func text(hour: Int) -> String {
+        switch hour {
+        case 5..<11:  return "Selamat pagi"
+        case 11..<15: return "Selamat siang"
+        case 15..<18: return "Selamat sore"
+        default:      return "Selamat malam"
+        }
+    }
+}
+
 // MARK: - Home View
 struct HomeView: View {
     @Binding var selectedTab: Int
@@ -59,7 +74,7 @@ struct HomeView: View {
         MenuItem(id: "lainnya", label: "Lainnya", sub: "Fitur Lain", icon: "square.grid.2x2.fill", gradientColors: AppTheme.tileGradient("lainnya"))
     ]
 
-    var dueTodayTotal: Int { flashcardStore.dueTodayGrandTotal }
+    var dueTodayTotal: Int { flashcardStore.dailyDueTotal(target: dailyTarget) }
 
     var body: some View {
         GeometryReader { geo in
@@ -102,13 +117,18 @@ struct HomeView: View {
 
     // MARK: - Greeting
 
+    /// Sapaan menyesuaikan jam perangkat saat ini.
+    private var greeting: String {
+        TimeGreeting.text(hour: Calendar.current.component(.hour, from: Date()))
+    }
+
     private var greetingHeader: some View {
         HStack(alignment: .center) {
             VStack(alignment: .leading, spacing: 2) {
                 Text("Okaeri 🍓")
                     .font(AppTheme.rounded(13, .bold))
                     .foregroundStyle(AppTheme.secondaryText(colorScheme))
-                Text("Halo, \(account.displayName)")
+                Text("\(greeting), \(account.displayName)")
                     .font(AppTheme.rounded(26, .heavy))
                     .foregroundStyle(AppTheme.primaryText(colorScheme))
                     .lineLimit(1)

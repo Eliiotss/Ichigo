@@ -70,8 +70,14 @@ final class FlashcardDeckSessionViewModel: ObservableObject {
         if items.isEmpty { loadState = .empty; return }
 
         let progressSnapshot = store.progressMap
-        let settingsSnapshot = store.settings
         let usedToday = store.newCardTracker.studiedTodayCount(levelKey: levelKey)
+
+        // Jatah kartu baru harian mengikuti "Target Harian" di Pengaturan: kalau
+        // target 45/hari maka tiap dek menyajikan 45 kartu baru per hari. Pengulangan
+        // yang jatuh tempo tetap ditambahkan builder di atas kartu baru.
+        let dailyTarget = (UserDefaults.standard.object(forKey: BackupKeys.dailyTarget) as? Int) ?? 20
+        var settingsSnapshot = store.settings
+        settingsSnapshot.newCardsPerDay = max(1, dailyTarget)
 
         let built = builder.build(
             levelKey: levelKey,

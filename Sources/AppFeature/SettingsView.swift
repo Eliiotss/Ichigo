@@ -25,6 +25,9 @@ struct SettingsView: View {
                         .padding(.top, 6)
                         .padding(.bottom, 8)
 
+                    section("PROFIL") { profileCard }
+                    SettingsFooter(text: "Nama pengguna tampil di Beranda dan halaman Profil.")
+
                     section("PREFERENSI") { preferencesCard }
                     SettingsFooter(text: "Pengingat akan mengirim notifikasi kalau target belajar hari ini belum selesai.")
 
@@ -83,6 +86,27 @@ struct SettingsView: View {
             content()
         }
         .padding(.top, 14)
+    }
+
+    // MARK: - Profil
+
+    /// Satu baris untuk menyunting nama pengguna. Terikat langsung ke
+    /// `AccountStore.displayName` yang otomatis tersimpan dan tersinkron ke
+    /// Beranda serta Profil (keduanya mengamati `AccountStore.shared`).
+    private var profileCard: some View {
+        SettingsCard {
+            SettingsRow(icon: "person.fill",
+                        colors: [AppTheme.blueLight, AppTheme.blue],
+                        title: "Nama Pengguna", showsDivider: false) {
+                TextField("user123", text: $account.displayName)
+                    .font(AppTheme.rounded(16, .semibold))
+                    .foregroundStyle(AppTheme.primaryText(scheme))
+                    .multilineTextAlignment(.trailing)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+                    .submitLabel(.done)
+            }
+        }
     }
 
     // MARK: - Preferensi

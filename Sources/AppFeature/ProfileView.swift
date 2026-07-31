@@ -7,7 +7,7 @@ struct ProfileView: View {
 
     @AppStorage("daily_target") private var dailyTarget = 20
 
-    private var dueTodayTotal: Int { flashcardStore.dueTodayGrandTotal }
+    private var dueTodayTotal: Int { flashcardStore.dailyDueTotal(target: dailyTarget) }
     private var targetProgress: Double {
         guard dailyTarget > 0 else { return 0 }
         return min(Double(flashcardStore.studiedTodayTotal) / Double(dailyTarget), 1)
