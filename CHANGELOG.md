@@ -7,6 +7,13 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **37 verified N3 vocabulary entries** (`VocabN3.json`, `N3_V1111`–`N3_V1147`),
+  a small hand-checked batch of common words not already in the set (経済-adjacent
+  society/work/health/abstract nouns plus a few na-adjectives and adverbs). Each
+  carries an accurate reading, Indonesian meaning and word type; the level count
+  advertised in `VocabModel.swift` moves 1.110 → 1.147 and stays enforced by
+  `check_dataset_counts.py`. Deliberately kept to genuinely-known words rather
+  than bulk-generating the long tail, to avoid shipping unverified data.
 - **Editable username in Settings.** A new **PROFIL** section carries a **Nama
   Pengguna** field bound to `AccountStore.displayName`; it persists automatically
   and syncs live to the Home greeting and the Profile header (both observe the
