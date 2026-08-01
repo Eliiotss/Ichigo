@@ -12208,5 +12208,445 @@
                 "sentenceMeaning": "Saya membahas Pembiasan / Pembelokan dengan teman."
             }
         ]
+    },
+    {
+        "id": "N3_223",
+        "kanji": "収",
+        "onyomi": "シュウ",
+        "kunyomi": "おさめる・おさまる",
+        "romaji": "Shuu",
+        "meaning": "Mengumpulkan / Pendapatan",
+        "examples": [
+            {
+                "word": "収入",
+                "reading": "しゅうにゅう",
+                "romaji": "Shuunyuu",
+                "meaning": "Pendapatan",
+                "sentence": "私は収入を勉強します。",
+                "sentenceFurigana": "私は収入(しゅうにゅう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Pendapatan."
+            },
+            {
+                "word": "収集",
+                "reading": "しゅうしゅう",
+                "romaji": "Shuushuu",
+                "meaning": "Pengumpulan / Koleksi",
+                "sentence": "この収集は大切です。",
+                "sentenceFurigana": "この収集(しゅうしゅう)はたいせつです。",
+                "sentenceMeaning": "Pengumpulan / Koleksi ini penting."
+            },
+            {
+                "word": "回収",
+                "reading": "かいしゅう",
+                "romaji": "Kaishuu",
+                "meaning": "Penarikan kembali",
+                "sentence": "先生が回収を説明しました。",
+                "sentenceFurigana": "せんせいが回収(かいしゅう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Penarikan kembali."
+            },
+            {
+                "word": "吸収",
+                "reading": "きゅうしゅう",
+                "romaji": "Kyuushuu",
+                "meaning": "Penyerapan",
+                "sentence": "毎日吸収を使います。",
+                "sentenceFurigana": "まいにち吸収(きゅうしゅう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Penyerapan setiap hari."
+            },
+            {
+                "word": "領収書",
+                "reading": "りょうしゅうしょ",
+                "romaji": "Ryoushuusho",
+                "meaning": "Kuitansi",
+                "sentence": "友だちと領収書について話しました。",
+                "sentenceFurigana": "ともだちと領収書(りょうしゅうしょ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Kuitansi dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_224",
+        "kanji": "職",
+        "onyomi": "ショク",
+        "kunyomi": "-",
+        "romaji": "Shoku",
+        "meaning": "Pekerjaan / Jabatan",
+        "examples": [
+            {
+                "word": "就職",
+                "reading": "しゅうしょく",
+                "romaji": "Shuushoku",
+                "meaning": "Mendapat pekerjaan",
+                "sentence": "私は就職を勉強します。",
+                "sentenceFurigana": "私は就職(しゅうしょく)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Mendapat pekerjaan."
+            },
+            {
+                "word": "職業",
+                "reading": "しょくぎょう",
+                "romaji": "Shokugyou",
+                "meaning": "Profesi",
+                "sentence": "この職業は大切です。",
+                "sentenceFurigana": "この職業(しょくぎょう)はたいせつです。",
+                "sentenceMeaning": "Profesi ini penting."
+            },
+            {
+                "word": "職場",
+                "reading": "しょくば",
+                "romaji": "Shokuba",
+                "meaning": "Tempat kerja",
+                "sentence": "先生が職場を説明しました。",
+                "sentenceFurigana": "せんせいが職場(しょくば)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Tempat kerja."
+            },
+            {
+                "word": "退職",
+                "reading": "たいしょく",
+                "romaji": "Taishoku",
+                "meaning": "Pensiun / Berhenti kerja",
+                "sentence": "毎日退職を使います。",
+                "sentenceFurigana": "まいにち退職(たいしょく)をつかいます。",
+                "sentenceMeaning": "Saya memakai Pensiun / Berhenti kerja setiap hari."
+            },
+            {
+                "word": "職員",
+                "reading": "しょくいん",
+                "romaji": "Shokuin",
+                "meaning": "Staf / Pegawai",
+                "sentence": "友だちと職員について話しました。",
+                "sentenceFurigana": "ともだちと職員(しょくいん)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Staf / Pegawai dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_225",
+        "kanji": "型",
+        "onyomi": "ケイ",
+        "kunyomi": "かた",
+        "romaji": "Kei",
+        "meaning": "Tipe / Model / Cetakan",
+        "examples": [
+            {
+                "word": "模型",
+                "reading": "もけい",
+                "romaji": "Mokei",
+                "meaning": "Model / Miniatur",
+                "sentence": "私は模型を勉強します。",
+                "sentenceFurigana": "私は模型(もけい)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Model / Miniatur."
+            },
+            {
+                "word": "典型",
+                "reading": "てんけい",
+                "romaji": "Tenkei",
+                "meaning": "Tipikal",
+                "sentence": "この典型は大切です。",
+                "sentenceFurigana": "この典型(てんけい)はたいせつです。",
+                "sentenceMeaning": "Tipikal ini penting."
+            },
+            {
+                "word": "大型",
+                "reading": "おおがた",
+                "romaji": "Oogata",
+                "meaning": "Ukuran besar",
+                "sentence": "先生が大型を説明しました。",
+                "sentenceFurigana": "せんせいが大型(おおがた)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Ukuran besar."
+            },
+            {
+                "word": "小型",
+                "reading": "こがた",
+                "romaji": "Kogata",
+                "meaning": "Ukuran kecil",
+                "sentence": "毎日小型を使います。",
+                "sentenceFurigana": "まいにち小型(こがた)をつかいます。",
+                "sentenceMeaning": "Saya memakai Ukuran kecil setiap hari."
+            },
+            {
+                "word": "原型",
+                "reading": "げんけい",
+                "romaji": "Genkei",
+                "meaning": "Prototipe",
+                "sentence": "友だちと原型について話しました。",
+                "sentenceFurigana": "ともだちと原型(げんけい)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Prototipe dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_226",
+        "kanji": "供",
+        "onyomi": "キョウ・ク",
+        "kunyomi": "そなえる・とも",
+        "romaji": "Kyou",
+        "meaning": "Menyediakan / Menemani",
+        "examples": [
+            {
+                "word": "提供",
+                "reading": "ていきょう",
+                "romaji": "Teikyou",
+                "meaning": "Penyediaan",
+                "sentence": "私は提供を勉強します。",
+                "sentenceFurigana": "私は提供(ていきょう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Penyediaan."
+            },
+            {
+                "word": "供給",
+                "reading": "きょうきゅう",
+                "romaji": "Kyoukyuu",
+                "meaning": "Pasokan",
+                "sentence": "この供給は大切です。",
+                "sentenceFurigana": "この供給(きょうきゅう)はたいせつです。",
+                "sentenceMeaning": "Pasokan ini penting."
+            },
+            {
+                "word": "子供",
+                "reading": "こども",
+                "romaji": "Kodomo",
+                "meaning": "Anak",
+                "sentence": "先生が子供を説明しました。",
+                "sentenceFurigana": "せんせいが子供(こども)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Anak."
+            },
+            {
+                "word": "供養",
+                "reading": "くよう",
+                "romaji": "Kuyou",
+                "meaning": "Doa untuk arwah",
+                "sentence": "毎日供養を使います。",
+                "sentenceFurigana": "まいにち供養(くよう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Doa untuk arwah setiap hari."
+            },
+            {
+                "word": "自供",
+                "reading": "じきょう",
+                "romaji": "Jikyou",
+                "meaning": "Pengakuan (pelaku)",
+                "sentence": "友だちと自供について話しました。",
+                "sentenceFurigana": "ともだちと自供(じきょう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Pengakuan (pelaku) dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_227",
+        "kanji": "吸",
+        "onyomi": "キュウ",
+        "kunyomi": "すう",
+        "romaji": "Kyuu",
+        "meaning": "Menghirup / Menyerap",
+        "examples": [
+            {
+                "word": "呼吸",
+                "reading": "こきゅう",
+                "romaji": "Kokyuu",
+                "meaning": "Pernapasan",
+                "sentence": "私は呼吸を勉強します。",
+                "sentenceFurigana": "私は呼吸(こきゅう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Pernapasan."
+            },
+            {
+                "word": "吸収",
+                "reading": "きゅうしゅう",
+                "romaji": "Kyuushuu",
+                "meaning": "Penyerapan",
+                "sentence": "この吸収は大切です。",
+                "sentenceFurigana": "この吸収(きゅうしゅう)はたいせつです。",
+                "sentenceMeaning": "Penyerapan ini penting."
+            },
+            {
+                "word": "吸入",
+                "reading": "きゅうにゅう",
+                "romaji": "Kyuunyuu",
+                "meaning": "Inhalasi",
+                "sentence": "先生が吸入を説明しました。",
+                "sentenceFurigana": "せんせいが吸入(きゅうにゅう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Inhalasi."
+            },
+            {
+                "word": "吸引",
+                "reading": "きゅういん",
+                "romaji": "Kyuuin",
+                "meaning": "Pengisapan",
+                "sentence": "毎日吸引を使います。",
+                "sentenceFurigana": "まいにち吸引(きゅういん)をつかいます。",
+                "sentenceMeaning": "Saya memakai Pengisapan setiap hari."
+            },
+            {
+                "word": "深呼吸",
+                "reading": "しんこきゅう",
+                "romaji": "Shinkokyuu",
+                "meaning": "Napas dalam",
+                "sentence": "友だちと深呼吸について話しました。",
+                "sentenceFurigana": "ともだちと深呼吸(しんこきゅう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Napas dalam dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_228",
+        "kanji": "疑",
+        "onyomi": "ギ",
+        "kunyomi": "うたがう",
+        "romaji": "Gi",
+        "meaning": "Ragu / Curiga",
+        "examples": [
+            {
+                "word": "疑問",
+                "reading": "ぎもん",
+                "romaji": "Gimon",
+                "meaning": "Pertanyaan / Keraguan",
+                "sentence": "私は疑問を勉強します。",
+                "sentenceFurigana": "私は疑問(ぎもん)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Pertanyaan / Keraguan."
+            },
+            {
+                "word": "質疑",
+                "reading": "しつぎ",
+                "romaji": "Shitsugi",
+                "meaning": "Tanya jawab",
+                "sentence": "この質疑は大切です。",
+                "sentenceFurigana": "この質疑(しつぎ)はたいせつです。",
+                "sentenceMeaning": "Tanya jawab ini penting."
+            },
+            {
+                "word": "疑念",
+                "reading": "ぎねん",
+                "romaji": "Ginen",
+                "meaning": "Keraguan",
+                "sentence": "先生が疑念を説明しました。",
+                "sentenceFurigana": "せんせいが疑念(ぎねん)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Keraguan."
+            },
+            {
+                "word": "容疑",
+                "reading": "ようぎ",
+                "romaji": "Yougi",
+                "meaning": "Kecurigaan (pidana)",
+                "sentence": "毎日容疑を使います。",
+                "sentenceFurigana": "まいにち容疑(ようぎ)をつかいます。",
+                "sentenceMeaning": "Saya memakai Kecurigaan (pidana) setiap hari."
+            },
+            {
+                "word": "疑惑",
+                "reading": "ぎわく",
+                "romaji": "Giwaku",
+                "meaning": "Kecurigaan / Skandal",
+                "sentence": "友だちと疑惑について話しました。",
+                "sentenceFurigana": "ともだちと疑惑(ぎわく)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Kecurigaan / Skandal dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_229",
+        "kanji": "延",
+        "onyomi": "エン",
+        "kunyomi": "のびる・のばす・のべる",
+        "romaji": "En",
+        "meaning": "Menunda / Memperpanjang",
+        "examples": [
+            {
+                "word": "延期",
+                "reading": "えんき",
+                "romaji": "Enki",
+                "meaning": "Penundaan",
+                "sentence": "私は延期を勉強します。",
+                "sentenceFurigana": "私は延期(えんき)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Penundaan."
+            },
+            {
+                "word": "延長",
+                "reading": "えんちょう",
+                "romaji": "Enchou",
+                "meaning": "Perpanjangan",
+                "sentence": "この延長は大切です。",
+                "sentenceFurigana": "この延長(えんちょう)はたいせつです。",
+                "sentenceMeaning": "Perpanjangan ini penting."
+            },
+            {
+                "word": "遅延",
+                "reading": "ちえん",
+                "romaji": "Chien",
+                "meaning": "Keterlambatan",
+                "sentence": "先生が遅延を説明しました。",
+                "sentenceFurigana": "せんせいが遅延(ちえん)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Keterlambatan."
+            },
+            {
+                "word": "延焼",
+                "reading": "えんしょう",
+                "romaji": "Enshou",
+                "meaning": "Perambatan api",
+                "sentence": "毎日延焼を使います。",
+                "sentenceFurigana": "まいにち延焼(えんしょう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Perambatan api setiap hari."
+            },
+            {
+                "word": "順延",
+                "reading": "じゅんえん",
+                "romaji": "Jun'en",
+                "meaning": "Penundaan berurutan",
+                "sentence": "友だちと順延について話しました。",
+                "sentenceFurigana": "ともだちと順延(じゅんえん)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Penundaan berurutan dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_230",
+        "kanji": "額",
+        "onyomi": "ガク",
+        "kunyomi": "ひたい",
+        "romaji": "Gaku",
+        "meaning": "Jumlah uang / Bingkai / Dahi",
+        "examples": [
+            {
+                "word": "金額",
+                "reading": "きんがく",
+                "romaji": "Kingaku",
+                "meaning": "Jumlah uang",
+                "sentence": "私は金額を勉強します。",
+                "sentenceFurigana": "私は金額(きんがく)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Jumlah uang."
+            },
+            {
+                "word": "半額",
+                "reading": "はんがく",
+                "romaji": "Hangaku",
+                "meaning": "Setengah harga",
+                "sentence": "この半額は大切です。",
+                "sentenceFurigana": "この半額(はんがく)はたいせつです。",
+                "sentenceMeaning": "Setengah harga ini penting."
+            },
+            {
+                "word": "全額",
+                "reading": "ぜんがく",
+                "romaji": "Zengaku",
+                "meaning": "Jumlah penuh",
+                "sentence": "先生が全額を説明しました。",
+                "sentenceFurigana": "せんせいが全額(ぜんがく)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Jumlah penuh."
+            },
+            {
+                "word": "差額",
+                "reading": "さがく",
+                "romaji": "Sagaku",
+                "meaning": "Selisih (uang)",
+                "sentence": "毎日差額を使います。",
+                "sentenceFurigana": "まいにち差額(さがく)をつかいます。",
+                "sentenceMeaning": "Saya memakai Selisih (uang) setiap hari."
+            },
+            {
+                "word": "高額",
+                "reading": "こうがく",
+                "romaji": "Kougaku",
+                "meaning": "Nominal tinggi",
+                "sentence": "友だちと高額について話しました。",
+                "sentenceFurigana": "ともだちと高額(こうがく)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Nominal tinggi dengan teman."
+            }
+        ]
     }
 ]
