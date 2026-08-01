@@ -15343,5 +15343,775 @@
                 "sentenceMeaning": "Saya membahas Kesopanan / Menahan diri dengan teman."
             }
         ]
+    },
+    {
+        "id": "N3_280",
+        "kanji": "党",
+        "onyomi": "トウ",
+        "kunyomi": "-",
+        "romaji": "Tou",
+        "meaning": "Partai",
+        "examples": [
+            {
+                "word": "政党",
+                "reading": "せいとう",
+                "romaji": "Seitou",
+                "meaning": "Partai politik",
+                "sentence": "私は政党を勉強します。",
+                "sentenceFurigana": "私は政党(せいとう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Partai politik."
+            },
+            {
+                "word": "与党",
+                "reading": "よとう",
+                "romaji": "Yotou",
+                "meaning": "Partai penguasa",
+                "sentence": "この与党は大切です。",
+                "sentenceFurigana": "この与党(よとう)はたいせつです。",
+                "sentenceMeaning": "Partai penguasa ini penting."
+            },
+            {
+                "word": "野党",
+                "reading": "やとう",
+                "romaji": "Yatou",
+                "meaning": "Partai oposisi",
+                "sentence": "先生が野党を説明しました。",
+                "sentenceFurigana": "せんせいが野党(やとう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Partai oposisi."
+            },
+            {
+                "word": "党首",
+                "reading": "とうしゅ",
+                "romaji": "Toushu",
+                "meaning": "Ketua partai",
+                "sentence": "毎日党首を使います。",
+                "sentenceFurigana": "まいにち党首(とうしゅ)をつかいます。",
+                "sentenceMeaning": "Saya memakai Ketua partai setiap hari."
+            },
+            {
+                "word": "党員",
+                "reading": "とういん",
+                "romaji": "Touin",
+                "meaning": "Anggota partai",
+                "sentence": "友だちと党員について話しました。",
+                "sentenceFurigana": "ともだちと党員(とういん)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Anggota partai dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_281",
+        "kanji": "律",
+        "onyomi": "リツ・リチ",
+        "kunyomi": "-",
+        "romaji": "Ritsu",
+        "meaning": "Hukum / Aturan",
+        "examples": [
+            {
+                "word": "法律",
+                "reading": "ほうりつ",
+                "romaji": "Houritsu",
+                "meaning": "Hukum / Undang-undang",
+                "sentence": "私は法律を勉強します。",
+                "sentenceFurigana": "私は法律(ほうりつ)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Hukum / Undang-undang."
+            },
+            {
+                "word": "規律",
+                "reading": "きりつ",
+                "romaji": "Kiritsu",
+                "meaning": "Tata tertib",
+                "sentence": "この規律は大切です。",
+                "sentenceFurigana": "この規律(きりつ)はたいせつです。",
+                "sentenceMeaning": "Tata tertib ini penting."
+            },
+            {
+                "word": "自律",
+                "reading": "じりつ",
+                "romaji": "Jiritsu",
+                "meaning": "Otonomi / Kemandirian",
+                "sentence": "先生が自律を説明しました。",
+                "sentenceFurigana": "せんせいが自律(じりつ)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Otonomi / Kemandirian."
+            },
+            {
+                "word": "旋律",
+                "reading": "せんりつ",
+                "romaji": "Senritsu",
+                "meaning": "Melodi",
+                "sentence": "毎日旋律を使います。",
+                "sentenceFurigana": "まいにち旋律(せんりつ)をつかいます。",
+                "sentenceMeaning": "Saya memakai Melodi setiap hari."
+            },
+            {
+                "word": "律儀",
+                "reading": "りちぎ",
+                "romaji": "Richigi",
+                "meaning": "Jujur / Setia",
+                "sentence": "友だちと律儀について話しました。",
+                "sentenceFurigana": "ともだちと律儀(りちぎ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Jujur / Setia dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_282",
+        "kanji": "憲",
+        "onyomi": "ケン",
+        "kunyomi": "-",
+        "romaji": "Ken",
+        "meaning": "Konstitusi",
+        "examples": [
+            {
+                "word": "憲法",
+                "reading": "けんぽう",
+                "romaji": "Kenpou",
+                "meaning": "Konstitusi / UUD",
+                "sentence": "私は憲法を勉強します。",
+                "sentenceFurigana": "私は憲法(けんぽう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Konstitusi / UUD."
+            },
+            {
+                "word": "立憲",
+                "reading": "りっけん",
+                "romaji": "Rikken",
+                "meaning": "Berkonstitusi",
+                "sentence": "この立憲は大切です。",
+                "sentenceFurigana": "この立憲(りっけん)はたいせつです。",
+                "sentenceMeaning": "Berkonstitusi ini penting."
+            },
+            {
+                "word": "憲章",
+                "reading": "けんしょう",
+                "romaji": "Kenshou",
+                "meaning": "Piagam",
+                "sentence": "先生が憲章を説明しました。",
+                "sentenceFurigana": "せんせいが憲章(けんしょう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Piagam."
+            },
+            {
+                "word": "改憲",
+                "reading": "かいけん",
+                "romaji": "Kaiken",
+                "meaning": "Amandemen konstitusi",
+                "sentence": "毎日改憲を使います。",
+                "sentenceFurigana": "まいにち改憲(かいけん)をつかいます。",
+                "sentenceMeaning": "Saya memakai Amandemen konstitusi setiap hari."
+            },
+            {
+                "word": "護憲",
+                "reading": "ごけん",
+                "romaji": "Goken",
+                "meaning": "Pembelaan konstitusi",
+                "sentence": "友だちと護憲について話しました。",
+                "sentenceFurigana": "ともだちと護憲(ごけん)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Pembelaan konstitusi dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_283",
+        "kanji": "挙",
+        "onyomi": "キョ",
+        "kunyomi": "あげる・あがる",
+        "romaji": "Kyo",
+        "meaning": "Mengangkat / Pemilihan",
+        "examples": [
+            {
+                "word": "選挙",
+                "reading": "せんきょ",
+                "romaji": "Senkyo",
+                "meaning": "Pemilihan umum",
+                "sentence": "私は選挙を勉強します。",
+                "sentenceFurigana": "私は選挙(せんきょ)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Pemilihan umum."
+            },
+            {
+                "word": "挙手",
+                "reading": "きょしゅ",
+                "romaji": "Kyoshu",
+                "meaning": "Angkat tangan",
+                "sentence": "この挙手は大切です。",
+                "sentenceFurigana": "この挙手(きょしゅ)はたいせつです。",
+                "sentenceMeaning": "Angkat tangan ini penting."
+            },
+            {
+                "word": "快挙",
+                "reading": "かいきょ",
+                "romaji": "Kaikyo",
+                "meaning": "Prestasi gemilang",
+                "sentence": "先生が快挙を説明しました。",
+                "sentenceFurigana": "せんせいが快挙(かいきょ)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Prestasi gemilang."
+            },
+            {
+                "word": "列挙",
+                "reading": "れっきょ",
+                "romaji": "Rekkyo",
+                "meaning": "Penyebutan berderet",
+                "sentence": "毎日列挙を使います。",
+                "sentenceFurigana": "まいにち列挙(れっきょ)をつかいます。",
+                "sentenceMeaning": "Saya memakai Penyebutan berderet setiap hari."
+            },
+            {
+                "word": "挙式",
+                "reading": "きょしき",
+                "romaji": "Kyoshiki",
+                "meaning": "Melangsungkan upacara",
+                "sentence": "友だちと挙式について話しました。",
+                "sentenceFurigana": "ともだちと挙式(きょしき)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Melangsungkan upacara dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_284",
+        "kanji": "署",
+        "onyomi": "ショ",
+        "kunyomi": "-",
+        "romaji": "Sho",
+        "meaning": "Kantor / Tanda tangan",
+        "examples": [
+            {
+                "word": "署名",
+                "reading": "しょめい",
+                "romaji": "Shomei",
+                "meaning": "Tanda tangan",
+                "sentence": "私は署名を勉強します。",
+                "sentenceFurigana": "私は署名(しょめい)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Tanda tangan."
+            },
+            {
+                "word": "警察署",
+                "reading": "けいさつしょ",
+                "romaji": "Keisatsusho",
+                "meaning": "Kantor polisi",
+                "sentence": "この警察署は大切です。",
+                "sentenceFurigana": "この警察署(けいさつしょ)はたいせつです。",
+                "sentenceMeaning": "Kantor polisi ini penting."
+            },
+            {
+                "word": "部署",
+                "reading": "ぶしょ",
+                "romaji": "Busho",
+                "meaning": "Pos / Bagian",
+                "sentence": "先生が部署を説明しました。",
+                "sentenceFurigana": "せんせいが部署(ぶしょ)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Pos / Bagian."
+            },
+            {
+                "word": "消防署",
+                "reading": "しょうぼうしょ",
+                "romaji": "Shoubousho",
+                "meaning": "Kantor pemadam",
+                "sentence": "毎日消防署を使います。",
+                "sentenceFurigana": "まいにち消防署(しょうぼうしょ)をつかいます。",
+                "sentenceMeaning": "Saya memakai Kantor pemadam setiap hari."
+            },
+            {
+                "word": "署長",
+                "reading": "しょちょう",
+                "romaji": "Shochou",
+                "meaning": "Kepala kantor",
+                "sentence": "友だちと署長について話しました。",
+                "sentenceFurigana": "ともだちと署長(しょちょう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Kepala kantor dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_285",
+        "kanji": "域",
+        "onyomi": "イキ",
+        "kunyomi": "-",
+        "romaji": "Iki",
+        "meaning": "Wilayah / Kawasan",
+        "examples": [
+            {
+                "word": "地域",
+                "reading": "ちいき",
+                "romaji": "Chiiki",
+                "meaning": "Daerah / Kawasan",
+                "sentence": "私は地域を勉強します。",
+                "sentenceFurigana": "私は地域(ちいき)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Daerah / Kawasan."
+            },
+            {
+                "word": "区域",
+                "reading": "くいき",
+                "romaji": "Kuiki",
+                "meaning": "Zona",
+                "sentence": "この区域は大切です。",
+                "sentenceFurigana": "この区域(くいき)はたいせつです。",
+                "sentenceMeaning": "Zona ini penting."
+            },
+            {
+                "word": "領域",
+                "reading": "りょういき",
+                "romaji": "Ryouiki",
+                "meaning": "Ranah / Domain",
+                "sentence": "先生が領域を説明しました。",
+                "sentenceFurigana": "せんせいが領域(りょういき)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Ranah / Domain."
+            },
+            {
+                "word": "流域",
+                "reading": "りゅういき",
+                "romaji": "Ryuuiki",
+                "meaning": "Daerah aliran sungai",
+                "sentence": "毎日流域を使います。",
+                "sentenceFurigana": "まいにち流域(りゅういき)をつかいます。",
+                "sentenceMeaning": "Saya memakai Daerah aliran sungai setiap hari."
+            },
+            {
+                "word": "聖域",
+                "reading": "せいいき",
+                "romaji": "Seiiki",
+                "meaning": "Kawasan suci",
+                "sentence": "友だちと聖域について話しました。",
+                "sentenceFurigana": "ともだちと聖域(せいいき)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Kawasan suci dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_286",
+        "kanji": "券",
+        "onyomi": "ケン",
+        "kunyomi": "-",
+        "romaji": "Ken",
+        "meaning": "Karcis / Tiket",
+        "examples": [
+            {
+                "word": "乗車券",
+                "reading": "じょうしゃけん",
+                "romaji": "Joushaken",
+                "meaning": "Tiket kereta",
+                "sentence": "私は乗車券を勉強します。",
+                "sentenceFurigana": "私は乗車券(じょうしゃけん)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Tiket kereta."
+            },
+            {
+                "word": "入場券",
+                "reading": "にゅうじょうけん",
+                "romaji": "Nyuujouken",
+                "meaning": "Tiket masuk",
+                "sentence": "この入場券は大切です。",
+                "sentenceFurigana": "この入場券(にゅうじょうけん)はたいせつです。",
+                "sentenceMeaning": "Tiket masuk ini penting."
+            },
+            {
+                "word": "定期券",
+                "reading": "ていきけん",
+                "romaji": "Teikiken",
+                "meaning": "Kartu langganan",
+                "sentence": "先生が定期券を説明しました。",
+                "sentenceFurigana": "せんせいが定期券(ていきけん)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Kartu langganan."
+            },
+            {
+                "word": "旅券",
+                "reading": "りょけん",
+                "romaji": "Ryoken",
+                "meaning": "Paspor",
+                "sentence": "毎日旅券を使います。",
+                "sentenceFurigana": "まいにち旅券(りょけん)をつかいます。",
+                "sentenceMeaning": "Saya memakai Paspor setiap hari."
+            },
+            {
+                "word": "証券",
+                "reading": "しょうけん",
+                "romaji": "Shouken",
+                "meaning": "Surat berharga / Sekuritas",
+                "sentence": "友だちと証券について話しました。",
+                "sentenceFurigana": "ともだちと証券(しょうけん)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Surat berharga / Sekuritas dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_287",
+        "kanji": "州",
+        "onyomi": "シュウ",
+        "kunyomi": "す",
+        "romaji": "Shuu",
+        "meaning": "Negara bagian / Provinsi",
+        "examples": [
+            {
+                "word": "本州",
+                "reading": "ほんしゅう",
+                "romaji": "Honshuu",
+                "meaning": "Honshu",
+                "sentence": "私は本州を勉強します。",
+                "sentenceFurigana": "私は本州(ほんしゅう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Honshu."
+            },
+            {
+                "word": "州立",
+                "reading": "しゅうりつ",
+                "romaji": "Shuuritsu",
+                "meaning": "Milik negara bagian",
+                "sentence": "この州立は大切です。",
+                "sentenceFurigana": "この州立(しゅうりつ)はたいせつです。",
+                "sentenceMeaning": "Milik negara bagian ini penting."
+            },
+            {
+                "word": "九州",
+                "reading": "きゅうしゅう",
+                "romaji": "Kyuushuu",
+                "meaning": "Kyushu",
+                "sentence": "先生が九州を説明しました。",
+                "sentenceFurigana": "せんせいが九州(きゅうしゅう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Kyushu."
+            },
+            {
+                "word": "州都",
+                "reading": "しゅうと",
+                "romaji": "Shuuto",
+                "meaning": "Ibu kota negara bagian",
+                "sentence": "毎日州都を使います。",
+                "sentenceFurigana": "まいにち州都(しゅうと)をつかいます。",
+                "sentenceMeaning": "Saya memakai Ibu kota negara bagian setiap hari."
+            },
+            {
+                "word": "欧州",
+                "reading": "おうしゅう",
+                "romaji": "Oushuu",
+                "meaning": "Eropa",
+                "sentence": "友だちと欧州について話しました。",
+                "sentenceFurigana": "ともだちと欧州(おうしゅう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Eropa dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_288",
+        "kanji": "貿",
+        "onyomi": "ボウ",
+        "kunyomi": "-",
+        "romaji": "Bou",
+        "meaning": "Perdagangan (luar negeri)",
+        "examples": [
+            {
+                "word": "貿易",
+                "reading": "ぼうえき",
+                "romaji": "Boueki",
+                "meaning": "Perdagangan / Ekspor-impor",
+                "sentence": "私は貿易を勉強します。",
+                "sentenceFurigana": "私は貿易(ぼうえき)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Perdagangan / Ekspor-impor."
+            },
+            {
+                "word": "貿易商",
+                "reading": "ぼうえきしょう",
+                "romaji": "Bouekishou",
+                "meaning": "Pedagang internasional",
+                "sentence": "この貿易商は大切です。",
+                "sentenceFurigana": "この貿易商(ぼうえきしょう)はたいせつです。",
+                "sentenceMeaning": "Pedagang internasional ini penting."
+            },
+            {
+                "word": "貿易港",
+                "reading": "ぼうえきこう",
+                "romaji": "Bouekikou",
+                "meaning": "Pelabuhan dagang",
+                "sentence": "先生が貿易港を説明しました。",
+                "sentenceFurigana": "せんせいが貿易港(ぼうえきこう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Pelabuhan dagang."
+            },
+            {
+                "word": "貿易風",
+                "reading": "ぼうえきふう",
+                "romaji": "Bouekifuu",
+                "meaning": "Angin pasat",
+                "sentence": "毎日貿易風を使います。",
+                "sentenceFurigana": "まいにち貿易風(ぼうえきふう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Angin pasat setiap hari."
+            },
+            {
+                "word": "密貿易",
+                "reading": "みつぼうえき",
+                "romaji": "Mitsuboueki",
+                "meaning": "Penyelundupan",
+                "sentence": "友だちと密貿易について話しました。",
+                "sentenceFurigana": "ともだちと密貿易(みつぼうえき)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Penyelundupan dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_289",
+        "kanji": "購",
+        "onyomi": "コウ",
+        "kunyomi": "-",
+        "romaji": "Kou",
+        "meaning": "Membeli",
+        "examples": [
+            {
+                "word": "購入",
+                "reading": "こうにゅう",
+                "romaji": "Kounyuu",
+                "meaning": "Pembelian",
+                "sentence": "私は購入を勉強します。",
+                "sentenceFurigana": "私は購入(こうにゅう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Pembelian."
+            },
+            {
+                "word": "購買",
+                "reading": "こうばい",
+                "romaji": "Koubai",
+                "meaning": "Pembelian / Pengadaan",
+                "sentence": "この購買は大切です。",
+                "sentenceFurigana": "この購買(こうばい)はたいせつです。",
+                "sentenceMeaning": "Pembelian / Pengadaan ini penting."
+            },
+            {
+                "word": "購読",
+                "reading": "こうどく",
+                "romaji": "Koudoku",
+                "meaning": "Berlangganan (baca)",
+                "sentence": "先生が購読を説明しました。",
+                "sentenceFurigana": "せんせいが購読(こうどく)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Berlangganan (baca)."
+            },
+            {
+                "word": "購入者",
+                "reading": "こうにゅうしゃ",
+                "romaji": "Kounyuusha",
+                "meaning": "Pembeli",
+                "sentence": "毎日購入者を使います。",
+                "sentenceFurigana": "まいにち購入者(こうにゅうしゃ)をつかいます。",
+                "sentenceMeaning": "Saya memakai Pembeli setiap hari."
+            },
+            {
+                "word": "共同購入",
+                "reading": "きょうどうこうにゅう",
+                "romaji": "Kyoudoukounyuu",
+                "meaning": "Pembelian bersama",
+                "sentence": "友だちと共同購入について話しました。",
+                "sentenceFurigana": "ともだちと共同購入(きょうどうこうにゅう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Pembelian bersama dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_290",
+        "kanji": "融",
+        "onyomi": "ユウ",
+        "kunyomi": "-",
+        "romaji": "Yuu",
+        "meaning": "Melebur / Keuangan",
+        "examples": [
+            {
+                "word": "金融",
+                "reading": "きんゆう",
+                "romaji": "Kin'yuu",
+                "meaning": "Keuangan",
+                "sentence": "私は金融を勉強します。",
+                "sentenceFurigana": "私は金融(きんゆう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Keuangan."
+            },
+            {
+                "word": "融資",
+                "reading": "ゆうし",
+                "romaji": "Yuushi",
+                "meaning": "Pembiayaan / Pinjaman",
+                "sentence": "この融資は大切です。",
+                "sentenceFurigana": "この融資(ゆうし)はたいせつです。",
+                "sentenceMeaning": "Pembiayaan / Pinjaman ini penting."
+            },
+            {
+                "word": "融合",
+                "reading": "ゆうごう",
+                "romaji": "Yuugou",
+                "meaning": "Peleburan / Fusi",
+                "sentence": "先生が融合を説明しました。",
+                "sentenceFurigana": "せんせいが融合(ゆうごう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Peleburan / Fusi."
+            },
+            {
+                "word": "融通",
+                "reading": "ゆうずう",
+                "romaji": "Yuuzuu",
+                "meaning": "Keluwesan",
+                "sentence": "毎日融通を使います。",
+                "sentenceFurigana": "まいにち融通(ゆうずう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Keluwesan setiap hari."
+            },
+            {
+                "word": "溶融",
+                "reading": "ようゆう",
+                "romaji": "Youyuu",
+                "meaning": "Peleburan (logam)",
+                "sentence": "友だちと溶融について話しました。",
+                "sentenceFurigana": "ともだちと溶融(ようゆう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Peleburan (logam) dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_291",
+        "kanji": "株",
+        "onyomi": "-",
+        "kunyomi": "かぶ",
+        "romaji": "Kabu",
+        "meaning": "Saham / Tunggul",
+        "examples": [
+            {
+                "word": "株式",
+                "reading": "かぶしき",
+                "romaji": "Kabushiki",
+                "meaning": "Saham",
+                "sentence": "私は株式を勉強します。",
+                "sentenceFurigana": "私は株式(かぶしき)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Saham."
+            },
+            {
+                "word": "株主",
+                "reading": "かぶぬし",
+                "romaji": "Kabunushi",
+                "meaning": "Pemegang saham",
+                "sentence": "この株主は大切です。",
+                "sentenceFurigana": "この株主(かぶぬし)はたいせつです。",
+                "sentenceMeaning": "Pemegang saham ini penting."
+            },
+            {
+                "word": "株価",
+                "reading": "かぶか",
+                "romaji": "Kabuka",
+                "meaning": "Harga saham",
+                "sentence": "先生が株価を説明しました。",
+                "sentenceFurigana": "せんせいが株価(かぶか)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Harga saham."
+            },
+            {
+                "word": "株券",
+                "reading": "かぶけん",
+                "romaji": "Kabuken",
+                "meaning": "Sertifikat saham",
+                "sentence": "毎日株券を使います。",
+                "sentenceFurigana": "まいにち株券(かぶけん)をつかいます。",
+                "sentenceMeaning": "Saya memakai Sertifikat saham setiap hari."
+            },
+            {
+                "word": "切り株",
+                "reading": "きりかぶ",
+                "romaji": "Kirikabu",
+                "meaning": "Tunggul pohon",
+                "sentence": "友だちと切り株について話しました。",
+                "sentenceFurigana": "ともだちと切り株(きりかぶ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Tunggul pohon dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_292",
+        "kanji": "債",
+        "onyomi": "サイ",
+        "kunyomi": "-",
+        "romaji": "Sai",
+        "meaning": "Utang / Obligasi",
+        "examples": [
+            {
+                "word": "債務",
+                "reading": "さいむ",
+                "romaji": "Saimu",
+                "meaning": "Kewajiban utang",
+                "sentence": "私は債務を勉強します。",
+                "sentenceFurigana": "私は債務(さいむ)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Kewajiban utang."
+            },
+            {
+                "word": "債券",
+                "reading": "さいけん",
+                "romaji": "Saiken",
+                "meaning": "Obligasi",
+                "sentence": "この債券は大切です。",
+                "sentenceFurigana": "この債券(さいけん)はたいせつです。",
+                "sentenceMeaning": "Obligasi ini penting."
+            },
+            {
+                "word": "負債",
+                "reading": "ふさい",
+                "romaji": "Fusai",
+                "meaning": "Kewajiban / Utang",
+                "sentence": "先生が負債を説明しました。",
+                "sentenceFurigana": "せんせいが負債(ふさい)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Kewajiban / Utang."
+            },
+            {
+                "word": "国債",
+                "reading": "こくさい",
+                "romaji": "Kokusai",
+                "meaning": "Obligasi negara",
+                "sentence": "毎日国債を使います。",
+                "sentenceFurigana": "まいにち国債(こくさい)をつかいます。",
+                "sentenceMeaning": "Saya memakai Obligasi negara setiap hari."
+            },
+            {
+                "word": "債権",
+                "reading": "さいけん",
+                "romaji": "Saiken",
+                "meaning": "Piutang / Hak tagih",
+                "sentence": "友だちと債権について話しました。",
+                "sentenceFurigana": "ともだちと債権(さいけん)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Piutang / Hak tagih dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_293",
+        "kanji": "僚",
+        "onyomi": "リョウ",
+        "kunyomi": "-",
+        "romaji": "Ryou",
+        "meaning": "Rekan / Pejabat",
+        "examples": [
+            {
+                "word": "官僚",
+                "reading": "かんりょう",
+                "romaji": "Kanryou",
+                "meaning": "Birokrat",
+                "sentence": "私は官僚を勉強します。",
+                "sentenceFurigana": "私は官僚(かんりょう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Birokrat."
+            },
+            {
+                "word": "同僚",
+                "reading": "どうりょう",
+                "romaji": "Douryou",
+                "meaning": "Rekan kerja",
+                "sentence": "この同僚は大切です。",
+                "sentenceFurigana": "この同僚(どうりょう)はたいせつです。",
+                "sentenceMeaning": "Rekan kerja ini penting."
+            },
+            {
+                "word": "閣僚",
+                "reading": "かくりょう",
+                "romaji": "Kakuryou",
+                "meaning": "Menteri kabinet",
+                "sentence": "先生が閣僚を説明しました。",
+                "sentenceFurigana": "せんせいが閣僚(かくりょう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Menteri kabinet."
+            },
+            {
+                "word": "僚友",
+                "reading": "りょうゆう",
+                "romaji": "Ryouyuu",
+                "meaning": "Rekan seperjuangan",
+                "sentence": "毎日僚友を使います。",
+                "sentenceFurigana": "まいにち僚友(りょうゆう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Rekan seperjuangan setiap hari."
+            },
+            {
+                "word": "幕僚",
+                "reading": "ばくりょう",
+                "romaji": "Bakuryou",
+                "meaning": "Perwira staf",
+                "sentence": "友だちと幕僚について話しました。",
+                "sentenceFurigana": "ともだちと幕僚(ばくりょう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Perwira staf dengan teman."
+            }
+        ]
     }
 ]
