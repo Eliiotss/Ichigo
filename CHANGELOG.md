@@ -7,6 +7,12 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **8 verified N3 kanji** (`KanjiN3.json`, `N3_215`–`N3_222`): 決, 加, 減, 済, 勝,
+  過, 招, 折 — common kanji not already in any level. Each carries accurate
+  on'yomi / kun'yomi / meaning and five real compound-word examples (word,
+  reading, rōmaji, meaning) rendered into the dataset's fixed sentence templates
+  (sentence + furigana + Indonesian). The level count in `KanjiModel.swift` moves
+  214 → 222, enforced by `check_dataset_counts.py`.
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from

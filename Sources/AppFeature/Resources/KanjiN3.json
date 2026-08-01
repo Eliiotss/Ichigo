@@ -11768,5 +11768,445 @@
                 "sentenceMeaning": "Saya membahas Kecantikan / Perawatan dengan teman."
             }
         ]
+    },
+    {
+        "id": "N3_215",
+        "kanji": "決",
+        "onyomi": "ケツ",
+        "kunyomi": "きめる・きまる",
+        "romaji": "Ketsu",
+        "meaning": "Memutuskan / Keputusan",
+        "examples": [
+            {
+                "word": "決定",
+                "reading": "けってい",
+                "romaji": "Kettei",
+                "meaning": "Keputusan",
+                "sentence": "私は決定を勉強します。",
+                "sentenceFurigana": "私は決定(けってい)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Keputusan."
+            },
+            {
+                "word": "解決",
+                "reading": "かいけつ",
+                "romaji": "Kaiketsu",
+                "meaning": "Penyelesaian",
+                "sentence": "この解決は大切です。",
+                "sentenceFurigana": "この解決(かいけつ)はたいせつです。",
+                "sentenceMeaning": "Penyelesaian ini penting."
+            },
+            {
+                "word": "決心",
+                "reading": "けっしん",
+                "romaji": "Kesshin",
+                "meaning": "Tekad",
+                "sentence": "先生が決心を説明しました。",
+                "sentenceFurigana": "せんせいが決心(けっしん)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Tekad."
+            },
+            {
+                "word": "判決",
+                "reading": "はんけつ",
+                "romaji": "Hanketsu",
+                "meaning": "Vonis / Putusan",
+                "sentence": "毎日判決を使います。",
+                "sentenceFurigana": "まいにち判決(はんけつ)をつかいます。",
+                "sentenceMeaning": "Saya memakai Vonis / Putusan setiap hari."
+            },
+            {
+                "word": "決断",
+                "reading": "けつだん",
+                "romaji": "Ketsudan",
+                "meaning": "Keputusan tegas",
+                "sentence": "友だちと決断について話しました。",
+                "sentenceFurigana": "ともだちと決断(けつだん)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Keputusan tegas dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_216",
+        "kanji": "加",
+        "onyomi": "カ",
+        "kunyomi": "くわえる・くわわる",
+        "romaji": "Ka",
+        "meaning": "Menambah",
+        "examples": [
+            {
+                "word": "参加",
+                "reading": "さんか",
+                "romaji": "Sanka",
+                "meaning": "Partisipasi",
+                "sentence": "私は参加を勉強します。",
+                "sentenceFurigana": "私は参加(さんか)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Partisipasi."
+            },
+            {
+                "word": "増加",
+                "reading": "ぞうか",
+                "romaji": "Zouka",
+                "meaning": "Peningkatan",
+                "sentence": "この増加は大切です。",
+                "sentenceFurigana": "この増加(ぞうか)はたいせつです。",
+                "sentenceMeaning": "Peningkatan ini penting."
+            },
+            {
+                "word": "追加",
+                "reading": "ついか",
+                "romaji": "Tsuika",
+                "meaning": "Tambahan",
+                "sentence": "先生が追加を説明しました。",
+                "sentenceFurigana": "せんせいが追加(ついか)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Tambahan."
+            },
+            {
+                "word": "加入",
+                "reading": "かにゅう",
+                "romaji": "Kanyuu",
+                "meaning": "Bergabung / Keanggotaan",
+                "sentence": "毎日加入を使います。",
+                "sentenceFurigana": "まいにち加入(かにゅう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Bergabung / Keanggotaan setiap hari."
+            },
+            {
+                "word": "加工",
+                "reading": "かこう",
+                "romaji": "Kakou",
+                "meaning": "Pengolahan",
+                "sentence": "友だちと加工について話しました。",
+                "sentenceFurigana": "ともだちと加工(かこう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Pengolahan dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_217",
+        "kanji": "減",
+        "onyomi": "ゲン",
+        "kunyomi": "へる・へらす",
+        "romaji": "Gen",
+        "meaning": "Berkurang / Mengurangi",
+        "examples": [
+            {
+                "word": "減少",
+                "reading": "げんしょう",
+                "romaji": "Genshou",
+                "meaning": "Penurunan",
+                "sentence": "私は減少を勉強します。",
+                "sentenceFurigana": "私は減少(げんしょう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Penurunan."
+            },
+            {
+                "word": "削減",
+                "reading": "さくげん",
+                "romaji": "Sakugen",
+                "meaning": "Pemangkasan",
+                "sentence": "この削減は大切です。",
+                "sentenceFurigana": "この削減(さくげん)はたいせつです。",
+                "sentenceMeaning": "Pemangkasan ini penting."
+            },
+            {
+                "word": "軽減",
+                "reading": "けいげん",
+                "romaji": "Keigen",
+                "meaning": "Peringanan",
+                "sentence": "先生が軽減を説明しました。",
+                "sentenceFurigana": "せんせいが軽減(けいげん)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Peringanan."
+            },
+            {
+                "word": "半減",
+                "reading": "はんげん",
+                "romaji": "Hangen",
+                "meaning": "Berkurang setengah",
+                "sentence": "毎日半減を使います。",
+                "sentenceFurigana": "まいにち半減(はんげん)をつかいます。",
+                "sentenceMeaning": "Saya memakai Berkurang setengah setiap hari."
+            },
+            {
+                "word": "加減",
+                "reading": "かげん",
+                "romaji": "Kagen",
+                "meaning": "Takaran / Penyesuaian",
+                "sentence": "友だちと加減について話しました。",
+                "sentenceFurigana": "ともだちと加減(かげん)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Takaran / Penyesuaian dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_218",
+        "kanji": "済",
+        "onyomi": "サイ",
+        "kunyomi": "すむ・すます",
+        "romaji": "Sai",
+        "meaning": "Selesai / Menyelesaikan",
+        "examples": [
+            {
+                "word": "経済",
+                "reading": "けいざい",
+                "romaji": "Keizai",
+                "meaning": "Ekonomi",
+                "sentence": "私は経済を勉強します。",
+                "sentenceFurigana": "私は経済(けいざい)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Ekonomi."
+            },
+            {
+                "word": "返済",
+                "reading": "へんさい",
+                "romaji": "Hensai",
+                "meaning": "Pelunasan",
+                "sentence": "この返済は大切です。",
+                "sentenceFurigana": "この返済(へんさい)はたいせつです。",
+                "sentenceMeaning": "Pelunasan ini penting."
+            },
+            {
+                "word": "完済",
+                "reading": "かんさい",
+                "romaji": "Kansai",
+                "meaning": "Pelunasan penuh",
+                "sentence": "先生が完済を説明しました。",
+                "sentenceFurigana": "せんせいが完済(かんさい)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Pelunasan penuh."
+            },
+            {
+                "word": "救済",
+                "reading": "きゅうさい",
+                "romaji": "Kyuusai",
+                "meaning": "Pertolongan / Bantuan",
+                "sentence": "毎日救済を使います。",
+                "sentenceFurigana": "まいにち救済(きゅうさい)をつかいます。",
+                "sentenceMeaning": "Saya memakai Pertolongan / Bantuan setiap hari."
+            },
+            {
+                "word": "決済",
+                "reading": "けっさい",
+                "romaji": "Kessai",
+                "meaning": "Penyelesaian pembayaran",
+                "sentence": "友だちと決済について話しました。",
+                "sentenceFurigana": "ともだちと決済(けっさい)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Penyelesaian pembayaran dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_219",
+        "kanji": "勝",
+        "onyomi": "ショウ",
+        "kunyomi": "かつ・まさる",
+        "romaji": "Shou",
+        "meaning": "Menang / Kemenangan",
+        "examples": [
+            {
+                "word": "勝利",
+                "reading": "しょうり",
+                "romaji": "Shouri",
+                "meaning": "Kemenangan",
+                "sentence": "私は勝利を勉強します。",
+                "sentenceFurigana": "私は勝利(しょうり)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Kemenangan."
+            },
+            {
+                "word": "優勝",
+                "reading": "ゆうしょう",
+                "romaji": "Yuushou",
+                "meaning": "Juara",
+                "sentence": "この優勝は大切です。",
+                "sentenceFurigana": "この優勝(ゆうしょう)はたいせつです。",
+                "sentenceMeaning": "Juara ini penting."
+            },
+            {
+                "word": "勝負",
+                "reading": "しょうぶ",
+                "romaji": "Shoubu",
+                "meaning": "Pertandingan / Duel",
+                "sentence": "先生が勝負を説明しました。",
+                "sentenceFurigana": "せんせいが勝負(しょうぶ)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Pertandingan / Duel."
+            },
+            {
+                "word": "勝敗",
+                "reading": "しょうはい",
+                "romaji": "Shouhai",
+                "meaning": "Hasil menang-kalah",
+                "sentence": "毎日勝敗を使います。",
+                "sentenceFurigana": "まいにち勝敗(しょうはい)をつかいます。",
+                "sentenceMeaning": "Saya memakai Hasil menang-kalah setiap hari."
+            },
+            {
+                "word": "勝手",
+                "reading": "かって",
+                "romaji": "Katte",
+                "meaning": "Semaunya sendiri",
+                "sentence": "友だちと勝手について話しました。",
+                "sentenceFurigana": "ともだちと勝手(かって)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Semaunya sendiri dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_220",
+        "kanji": "過",
+        "onyomi": "カ",
+        "kunyomi": "すぎる・すごす・あやまつ",
+        "romaji": "Ka",
+        "meaning": "Melewati / Melebihi / Lampau",
+        "examples": [
+            {
+                "word": "過去",
+                "reading": "かこ",
+                "romaji": "Kako",
+                "meaning": "Masa lalu",
+                "sentence": "私は過去を勉強します。",
+                "sentenceFurigana": "私は過去(かこ)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Masa lalu."
+            },
+            {
+                "word": "過程",
+                "reading": "かてい",
+                "romaji": "Katei",
+                "meaning": "Proses",
+                "sentence": "この過程は大切です。",
+                "sentenceFurigana": "この過程(かてい)はたいせつです。",
+                "sentenceMeaning": "Proses ini penting."
+            },
+            {
+                "word": "通過",
+                "reading": "つうか",
+                "romaji": "Tsuuka",
+                "meaning": "Melewati / Lolos",
+                "sentence": "先生が通過を説明しました。",
+                "sentenceFurigana": "せんせいが通過(つうか)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Melewati / Lolos."
+            },
+            {
+                "word": "過労",
+                "reading": "かろう",
+                "romaji": "Karou",
+                "meaning": "Kelelahan berlebihan",
+                "sentence": "毎日過労を使います。",
+                "sentenceFurigana": "まいにち過労(かろう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Kelelahan berlebihan setiap hari."
+            },
+            {
+                "word": "過半数",
+                "reading": "かはんすう",
+                "romaji": "Kahansuu",
+                "meaning": "Mayoritas",
+                "sentence": "友だちと過半数について話しました。",
+                "sentenceFurigana": "ともだちと過半数(かはんすう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Mayoritas dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_221",
+        "kanji": "招",
+        "onyomi": "ショウ",
+        "kunyomi": "まねく",
+        "romaji": "Shou",
+        "meaning": "Mengundang",
+        "examples": [
+            {
+                "word": "招待",
+                "reading": "しょうたい",
+                "romaji": "Shoutai",
+                "meaning": "Undangan",
+                "sentence": "私は招待を勉強します。",
+                "sentenceFurigana": "私は招待(しょうたい)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Undangan."
+            },
+            {
+                "word": "招致",
+                "reading": "しょうち",
+                "romaji": "Shouchi",
+                "meaning": "Pengundangan (tuan rumah)",
+                "sentence": "この招致は大切です。",
+                "sentenceFurigana": "この招致(しょうち)はたいせつです。",
+                "sentenceMeaning": "Pengundangan (tuan rumah) ini penting."
+            },
+            {
+                "word": "招集",
+                "reading": "しょうしゅう",
+                "romaji": "Shoushuu",
+                "meaning": "Pemanggilan / Rapat",
+                "sentence": "先生が招集を説明しました。",
+                "sentenceFurigana": "せんせいが招集(しょうしゅう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Pemanggilan / Rapat."
+            },
+            {
+                "word": "手招き",
+                "reading": "てまねき",
+                "romaji": "Temaneki",
+                "meaning": "Melambai memanggil",
+                "sentence": "毎日手招きを使います。",
+                "sentenceFurigana": "まいにち手招き(てまねき)をつかいます。",
+                "sentenceMeaning": "Saya memakai Melambai memanggil setiap hari."
+            },
+            {
+                "word": "招き猫",
+                "reading": "まねきねこ",
+                "romaji": "Manekineko",
+                "meaning": "Kucing pemanggil keberuntungan",
+                "sentence": "友だちと招き猫について話しました。",
+                "sentenceFurigana": "ともだちと招き猫(まねきねこ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Kucing pemanggil keberuntungan dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_222",
+        "kanji": "折",
+        "onyomi": "セツ",
+        "kunyomi": "おる・おれる・おり",
+        "romaji": "Setsu",
+        "meaning": "Melipat / Mematahkan",
+        "examples": [
+            {
+                "word": "骨折",
+                "reading": "こっせつ",
+                "romaji": "Kossetsu",
+                "meaning": "Patah tulang",
+                "sentence": "私は骨折を勉強します。",
+                "sentenceFurigana": "私は骨折(こっせつ)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Patah tulang."
+            },
+            {
+                "word": "折り紙",
+                "reading": "おりがみ",
+                "romaji": "Origami",
+                "meaning": "Origami (melipat kertas)",
+                "sentence": "この折り紙は大切です。",
+                "sentenceFurigana": "この折り紙(おりがみ)はたいせつです。",
+                "sentenceMeaning": "Origami (melipat kertas) ini penting."
+            },
+            {
+                "word": "時折",
+                "reading": "ときおり",
+                "romaji": "Tokiori",
+                "meaning": "Sesekali / Kadang-kadang",
+                "sentence": "先生が時折を説明しました。",
+                "sentenceFurigana": "せんせいが時折(ときおり)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Sesekali / Kadang-kadang."
+            },
+            {
+                "word": "折半",
+                "reading": "せっぱん",
+                "romaji": "Seppan",
+                "meaning": "Membagi dua rata",
+                "sentence": "毎日折半を使います。",
+                "sentenceFurigana": "まいにち折半(せっぱん)をつかいます。",
+                "sentenceMeaning": "Saya memakai Membagi dua rata setiap hari."
+            },
+            {
+                "word": "屈折",
+                "reading": "くっせつ",
+                "romaji": "Kussetsu",
+                "meaning": "Pembiasan / Pembelokan",
+                "sentence": "友だちと屈折について話しました。",
+                "sentenceFurigana": "ともだちと屈折(くっせつ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Pembiasan / Pembelokan dengan teman."
+            }
+        ]
     }
 ]
