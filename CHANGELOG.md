@@ -13,12 +13,14 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   meaning/reading/level verification) and the official JLPT past papers — with a
   note that these are community references (no official list since 2010) to be
   used for verifying individual entries, not copied wholesale.
-- **16 verified N3 kanji** (`KanjiN3.json`, `N3_215`–`N3_230`): 決, 加, 減, 済, 勝,
-  過, 招, 折, 収, 職, 型, 供, 吸, 疑, 延, 額 — common kanji not already in any level.
+- **24 verified N3 kanji** (`KanjiN3.json`, `N3_215`–`N3_238`): 決, 加, 減, 済, 勝,
+  過, 招, 折, 収, 職, 型, 供, 吸, 疑, 延, 額, 富, 貧, 貸, 貨, 貯, 販, 換, 略 — common
+  kanji not already in any level (the last eight form an economy/money cluster:
+  wealth, poverty, lending, currency, saving, selling, exchange, abbreviation).
   Each carries accurate on'yomi / kun'yomi / meaning and five real compound-word
   examples (word, reading, rōmaji, meaning) rendered into the dataset's fixed
   sentence templates (sentence + furigana + Indonesian). The level count in
-  `KanjiModel.swift` moves 214 → 230, enforced by `check_dataset_counts.py`.
+  `KanjiModel.swift` moves 214 → 238, enforced by `check_dataset_counts.py`.
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from
