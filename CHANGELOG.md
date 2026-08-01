@@ -13,14 +13,15 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   meaning/reading/level verification) and the official JLPT past papers — with a
   note that these are community references (no official list since 2010) to be
   used for verifying individual entries, not copied wholesale.
-- **37 verified N3 kanji** (`KanjiN3.json`, `N3_215`–`N3_251`): 決, 加, 減, 済, 勝,
-  過, 招, 折, 収, 職, 型, 供, 吸, 疑, 延, 額, 富, 貧, 貸, 貨, 貯, 販, 換, 略 (an
-  economy/money cluster) plus a nature/water cluster 波, 岸, 河, 岩, 砂, 灰, 煙, 湖,
-  沿, 傾, 沈, 浮, 潮 — common kanji not already in any level. Each carries accurate
-  on'yomi / kun'yomi / meaning and five real compound-word examples (word, reading,
-  rōmaji, meaning) rendered into the dataset's fixed sentence templates (sentence +
-  furigana + Indonesian). The level count in `KanjiModel.swift` moves 214 → 251,
-  enforced by `check_dataset_counts.py`.
+- **51 verified N3 kanji** (`KanjiN3.json`, `N3_215`–`N3_265`): an economy/money
+  cluster 富, 貧, 貸, 貨, 貯, 販, 換, 略 (plus 決, 加, 減, 済, 勝, 過, 招, 折, 収, 職,
+  型, 供, 吸, 疑, 延, 額), a nature/water cluster 波, 岸, 河, 岩, 砂, 灰, 煙, 湖, 沿,
+  傾, 沈, 浮, 潮, and a body/health cluster 胸, 腹, 肩, 腰, 髪, 涙, 汗, 呼, 眠, 疲, 痛,
+  症, 骨, 傷 — common kanji not already in any level. Each carries accurate on'yomi /
+  kun'yomi / meaning and five real compound-word examples (word, reading, rōmaji,
+  meaning) rendered into the dataset's fixed sentence templates (sentence + furigana
+  + Indonesian). The level count in `KanjiModel.swift` moves 214 → 265, enforced by
+  `check_dataset_counts.py`.
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from
