@@ -7,6 +7,12 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Reference sources for the JLPT datasets** documented in
+  `Sources/AppFeature/Resources/README.md`: Tanos.co.uk (vocabulary lists),
+  JLPTsensei.com (grammar/vocab/kanji per level), Jisho.org (per-entry
+  meaning/reading/level verification) and the official JLPT past papers — with a
+  note that these are community references (no official list since 2010) to be
+  used for verifying individual entries, not copied wholesale.
 - **16 verified N3 kanji** (`KanjiN3.json`, `N3_215`–`N3_230`): 決, 加, 減, 済, 勝,
   過, 招, 折, 収, 職, 型, 供, 吸, 疑, 延, 額 — common kanji not already in any level.
   Each carries accurate on'yomi / kun'yomi / meaning and five real compound-word
