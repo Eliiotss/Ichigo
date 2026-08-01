@@ -34,13 +34,17 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `GrammarModel.swift` move to 182 (N3) and 132 (N4), enforced by
   `check_dataset_counts.py`, bringing N5/N4/N3 to 84/132/182 — level with the
   widely-cited JLPT Sensei list counts.
-- **37 verified N3 vocabulary entries** (`VocabN3.json`, `N3_V1111`–`N3_V1147`),
-  a small hand-checked batch of common words not already in the set (経済-adjacent
-  society/work/health/abstract nouns plus a few na-adjectives and adverbs). Each
-  carries an accurate reading, Indonesian meaning and word type; the level count
-  advertised in `VocabModel.swift` moves 1.110 → 1.147 and stays enforced by
-  `check_dataset_counts.py`. Deliberately kept to genuinely-known words rather
-  than bulk-generating the long tail, to avoid shipping unverified data.
+- **64 verified N3 vocabulary entries** (`VocabN3.json`, `N3_V1111`–`N3_V1174`),
+  hand-checked batches of common words not already in the set (経済-adjacent
+  society/work/health/abstract nouns, suru-verbs, na-adjectives and adverbs — e.g.
+  発揮する, 把握する, 募集する, 翻訳する, 手段, 対象, 患者, 医療, 預金, 損害, 明確,
+  慎重, 主要, 妥当, 案外, 相変わらず). Each carries an accurate reading, Indonesian
+  meaning and word type; the level count advertised in `VocabModel.swift` moves
+  1.110 → 1.174 and stays enforced by `check_dataset_counts.py`. Every candidate
+  was deduplicated against N5/N4/N3 before insertion — of ~100 candidates only ~27
+  were genuinely new, confirming the set is already broad. Deliberately kept to
+  genuinely-known words rather than bulk-generating the long tail, to avoid
+  shipping unverified data.
 - **Editable username in Settings.** A new **PROFIL** section carries a **Nama
   Pengguna** field bound to `AccountStore.displayName`; it persists automatically
   and syncs live to the Home greeting and the Profile header (both observe the
