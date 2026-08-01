@@ -7,13 +7,19 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
-- **10 verified N3 grammar patterns** (`GrammarN3.json`, `N3_G161`–`N3_G170`):
-  common points that were missing from the set — 〜として, 〜ば〜ほど, 〜さえ〜ば,
-  〜きり, 〜わりに(は), 〜において/〜における, 〜向け/〜向き, 〜だけに, 〜ことだ and
-  〜っこない. Each carries the full schema (structure, nuance, explanation, usage,
-  common mistakes and four example sentences with rōmaji + Indonesian), matched
-  to the existing entries. The level count in `GrammarModel.swift` moves 160 →
-  170, enforced by `check_dataset_counts.py`.
+- **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
+  patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
+  (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from
+  the sets. The N3 additions — 〜として, 〜ば〜ほど, 〜さえ〜ば, 〜きり, 〜わりに(は),
+  〜において/〜における, 〜向け/〜向き, 〜だけに, 〜ことだ, 〜っこない, 〜うちに,
+  〜からには, 〜わけにはいかない, 〜ざるを得ない, 〜たとたん(に), 〜だけあって,
+  〜かと思うと/〜かと思ったら, 〜最中に, 〜てはじめて, 〜からこそ, 〜にすぎない and
+  〜ものか — each carry the full schema (structure, nuance, explanation, usage,
+  common mistakes and four example sentences with rōmaji + Indonesian) and are
+  deduplicated against both the N3 and N4 sets. The level counts in
+  `GrammarModel.swift` move to 182 (N3) and 132 (N4), enforced by
+  `check_dataset_counts.py`, bringing N5/N4/N3 to 84/132/182 — level with the
+  widely-cited JLPT Sensei list counts.
 - **37 verified N3 vocabulary entries** (`VocabN3.json`, `N3_V1111`–`N3_V1147`),
   a small hand-checked batch of common words not already in the set (経済-adjacent
   society/work/health/abstract nouns plus a few na-adjectives and adverbs). Each

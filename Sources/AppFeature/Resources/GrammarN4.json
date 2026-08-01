@@ -7652,5 +7652,56 @@
         "bunpouPersamaan": [
             "N4_G077"
         ]
+    },
+    {
+        "id": "N4_G132",
+        "pattern": "〜てもいい / 〜てはいけない",
+        "romaji": "te mo ii / te wa ikenai",
+        "meaning": "boleh... / tidak boleh...",
+        "level": "N4",
+        "difficulty": 1,
+        "structure": "Verb-te + もいい (izin) / Verb-te + はいけない (larangan)",
+        "tags": [
+            "N4",
+            "Izin",
+            "Larangan"
+        ],
+        "treeCategory": "Izin & Larangan",
+        "relatedGrammarIds": [],
+        "nuance": "〜てもいい memberi atau meminta izin; 〜てはいけない menyatakan larangan.",
+        "frequency": "Very Common",
+        "commonMistakes": [
+            "Verb-te + もいい / はいけない.",
+            "はいけない sering disingkat ちゃいけない / ちゃだめ dalam percakapan kasual."
+        ],
+        "explanation": "〜てもいい menyatakan izin ('boleh'), sedangkan 〜てはいけない menyatakan larangan ('tidak boleh').",
+        "usage": [
+            "Izin: ここに座ってもいいですか.",
+            "Larangan: ここで写真を撮ってはいけません.",
+            "Kasual: 食べちゃだめ."
+        ],
+        "examples": [
+            {
+                "japanese": "ここに座ってもいいですか。",
+                "romaji": "Koko ni suwatte mo ii desu ka.",
+                "translation": "Boleh saya duduk di sini?"
+            },
+            {
+                "japanese": "写真を撮ってもいいですよ。",
+                "romaji": "Shashin o totte mo ii desu yo.",
+                "translation": "Boleh kok mengambil foto."
+            },
+            {
+                "japanese": "ここでタバコを吸ってはいけません。",
+                "romaji": "Koko de tabako o sutte wa ikemasen.",
+                "translation": "Dilarang merokok di sini."
+            },
+            {
+                "japanese": "授業中に話してはいけない。",
+                "romaji": "Jugyou chuu ni hanashite wa ikenai.",
+                "translation": "Tidak boleh berbicara saat pelajaran."
+            }
+        ],
+        "bunpouPersamaan": []
     }
 ]
