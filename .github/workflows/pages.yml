@@ -35,6 +35,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          # Try to enable Pages (GitHub Actions source) automatically so no manual
+          # Settings step is needed. If the token isn't allowed to, this fails and
+          # Pages must be enabled once in Settings -> Pages -> Source: GitHub Actions.
+          enablement: true
       - name: Upload web/ as Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
