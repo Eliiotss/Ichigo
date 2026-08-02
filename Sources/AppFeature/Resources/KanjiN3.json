@@ -19193,5 +19193,995 @@
                 "sentenceMeaning": "Saya membahas Penurunan mutu dengan teman."
             }
         ]
+    },
+    {
+        "id": "N3_350",
+        "kanji": "昇",
+        "onyomi": "ショウ",
+        "kunyomi": "のぼる",
+        "romaji": "Shou",
+        "meaning": "Naik",
+        "examples": [
+            {
+                "word": "上昇",
+                "reading": "じょうしょう",
+                "romaji": "Joushou",
+                "meaning": "Kenaikan",
+                "sentence": "私は上昇を勉強します。",
+                "sentenceFurigana": "私は上昇(じょうしょう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Kenaikan."
+            },
+            {
+                "word": "昇進",
+                "reading": "しょうしん",
+                "romaji": "Shoushin",
+                "meaning": "Promosi jabatan",
+                "sentence": "この昇進は大切です。",
+                "sentenceFurigana": "この昇進(しょうしん)はたいせつです。",
+                "sentenceMeaning": "Promosi jabatan ini penting."
+            },
+            {
+                "word": "昇格",
+                "reading": "しょうかく",
+                "romaji": "Shoukaku",
+                "meaning": "Kenaikan tingkat",
+                "sentence": "先生が昇格を説明しました。",
+                "sentenceFurigana": "せんせいが昇格(しょうかく)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Kenaikan tingkat."
+            },
+            {
+                "word": "昇給",
+                "reading": "しょうきゅう",
+                "romaji": "Shoukyuu",
+                "meaning": "Kenaikan gaji",
+                "sentence": "毎日昇給を使います。",
+                "sentenceFurigana": "まいにち昇給(しょうきゅう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Kenaikan gaji setiap hari."
+            },
+            {
+                "word": "昇華",
+                "reading": "しょうか",
+                "romaji": "Shouka",
+                "meaning": "Sublimasi",
+                "sentence": "友だちと昇華について話しました。",
+                "sentenceFurigana": "ともだちと昇華(しょうか)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Sublimasi dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_351",
+        "kanji": "暮",
+        "onyomi": "ボ",
+        "kunyomi": "くれる・くらす",
+        "romaji": "Bo",
+        "meaning": "Senja / Menjalani hidup",
+        "examples": [
+            {
+                "word": "暮色",
+                "reading": "ぼしょく",
+                "romaji": "Boshoku",
+                "meaning": "Warna senja",
+                "sentence": "私は暮色を勉強します。",
+                "sentenceFurigana": "私は暮色(ぼしょく)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Warna senja."
+            },
+            {
+                "word": "歳暮",
+                "reading": "せいぼ",
+                "romaji": "Seibo",
+                "meaning": "Hadiah akhir tahun",
+                "sentence": "この歳暮は大切です。",
+                "sentenceFurigana": "この歳暮(せいぼ)はたいせつです。",
+                "sentenceMeaning": "Hadiah akhir tahun ini penting."
+            },
+            {
+                "word": "夕暮れ",
+                "reading": "ゆうぐれ",
+                "romaji": "Yuugure",
+                "meaning": "Senja",
+                "sentence": "先生が夕暮れを説明しました。",
+                "sentenceFurigana": "せんせいが夕暮れ(ゆうぐれ)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Senja."
+            },
+            {
+                "word": "暮らし",
+                "reading": "くらし",
+                "romaji": "Kurashi",
+                "meaning": "Kehidupan sehari-hari",
+                "sentence": "毎日暮らしを使います。",
+                "sentenceFurigana": "まいにち暮らし(くらし)をつかいます。",
+                "sentenceMeaning": "Saya memakai Kehidupan sehari-hari setiap hari."
+            },
+            {
+                "word": "野暮",
+                "reading": "やぼ",
+                "romaji": "Yabo",
+                "meaning": "Norak / Kampungan",
+                "sentence": "友だちと野暮について話しました。",
+                "sentenceFurigana": "ともだちと野暮(やぼ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Norak / Kampungan dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_352",
+        "kanji": "曇",
+        "onyomi": "ドン",
+        "kunyomi": "くもる",
+        "romaji": "Don",
+        "meaning": "Mendung",
+        "examples": [
+            {
+                "word": "曇天",
+                "reading": "どんてん",
+                "romaji": "Donten",
+                "meaning": "Langit mendung",
+                "sentence": "私は曇天を勉強します。",
+                "sentenceFurigana": "私は曇天(どんてん)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Langit mendung."
+            },
+            {
+                "word": "曇り",
+                "reading": "くもり",
+                "romaji": "Kumori",
+                "meaning": "Berawan",
+                "sentence": "この曇りは大切です。",
+                "sentenceFurigana": "この曇り(くもり)はたいせつです。",
+                "sentenceMeaning": "Berawan ini penting."
+            },
+            {
+                "word": "薄曇り",
+                "reading": "うすぐもり",
+                "romaji": "Usugumori",
+                "meaning": "Sedikit berawan",
+                "sentence": "先生が薄曇りを説明しました。",
+                "sentenceFurigana": "せんせいが薄曇り(うすぐもり)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Sedikit berawan."
+            },
+            {
+                "word": "本曇り",
+                "reading": "ほんぐもり",
+                "romaji": "Hongumori",
+                "meaning": "Mendung penuh",
+                "sentence": "毎日本曇りを使います。",
+                "sentenceFurigana": "まいにち本曇り(ほんぐもり)をつかいます。",
+                "sentenceMeaning": "Saya memakai Mendung penuh setiap hari."
+            },
+            {
+                "word": "花曇り",
+                "reading": "はなぐもり",
+                "romaji": "Hanagumori",
+                "meaning": "Cuaca berawan musim semi",
+                "sentence": "友だちと花曇りについて話しました。",
+                "sentenceFurigana": "ともだちと花曇り(はなぐもり)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Cuaca berawan musim semi dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_353",
+        "kanji": "陰",
+        "onyomi": "イン",
+        "kunyomi": "かげ・かげる",
+        "romaji": "In",
+        "meaning": "Bayangan / Suram",
+        "examples": [
+            {
+                "word": "陰気",
+                "reading": "いんき",
+                "romaji": "Inki",
+                "meaning": "Muram / Suram",
+                "sentence": "私は陰気を勉強します。",
+                "sentenceFurigana": "私は陰気(いんき)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Muram / Suram."
+            },
+            {
+                "word": "陰謀",
+                "reading": "いんぼう",
+                "romaji": "Inbou",
+                "meaning": "Persekongkolan",
+                "sentence": "この陰謀は大切です。",
+                "sentenceFurigana": "この陰謀(いんぼう)はたいせつです。",
+                "sentenceMeaning": "Persekongkolan ini penting."
+            },
+            {
+                "word": "光陰",
+                "reading": "こういん",
+                "romaji": "Kouin",
+                "meaning": "Waktu (yang berlalu)",
+                "sentence": "先生が光陰を説明しました。",
+                "sentenceFurigana": "せんせいが光陰(こういん)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Waktu (yang berlalu)."
+            },
+            {
+                "word": "陰影",
+                "reading": "いんえい",
+                "romaji": "In'ei",
+                "meaning": "Bayangan / Nuansa",
+                "sentence": "毎日陰影を使います。",
+                "sentenceFurigana": "まいにち陰影(いんえい)をつかいます。",
+                "sentenceMeaning": "Saya memakai Bayangan / Nuansa setiap hari."
+            },
+            {
+                "word": "日陰",
+                "reading": "ひかげ",
+                "romaji": "Hikage",
+                "meaning": "Tempat teduh",
+                "sentence": "友だちと日陰について話しました。",
+                "sentenceFurigana": "ともだちと日陰(ひかげ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Tempat teduh dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_354",
+        "kanji": "陽",
+        "onyomi": "ヨウ",
+        "kunyomi": "-",
+        "romaji": "You",
+        "meaning": "Matahari / Positif",
+        "examples": [
+            {
+                "word": "太陽",
+                "reading": "たいよう",
+                "romaji": "Taiyou",
+                "meaning": "Matahari",
+                "sentence": "私は太陽を勉強します。",
+                "sentenceFurigana": "私は太陽(たいよう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Matahari."
+            },
+            {
+                "word": "陽気",
+                "reading": "ようき",
+                "romaji": "Youki",
+                "meaning": "Ceria",
+                "sentence": "この陽気は大切です。",
+                "sentenceFurigana": "この陽気(ようき)はたいせつです。",
+                "sentenceMeaning": "Ceria ini penting."
+            },
+            {
+                "word": "陽性",
+                "reading": "ようせい",
+                "romaji": "Yousei",
+                "meaning": "Positif (hasil tes)",
+                "sentence": "先生が陽性を説明しました。",
+                "sentenceFurigana": "せんせいが陽性(ようせい)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Positif (hasil tes)."
+            },
+            {
+                "word": "陰陽",
+                "reading": "いんよう",
+                "romaji": "In'you",
+                "meaning": "Yin-yang",
+                "sentence": "毎日陰陽を使います。",
+                "sentenceFurigana": "まいにち陰陽(いんよう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Yin-yang setiap hari."
+            },
+            {
+                "word": "夕陽",
+                "reading": "ゆうひ",
+                "romaji": "Yuuhi",
+                "meaning": "Matahari terbenam",
+                "sentence": "友だちと夕陽について話しました。",
+                "sentenceFurigana": "ともだちと夕陽(ゆうひ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Matahari terbenam dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_355",
+        "kanji": "至",
+        "onyomi": "シ",
+        "kunyomi": "いたる",
+        "romaji": "Shi",
+        "meaning": "Sampai / Puncak",
+        "examples": [
+            {
+                "word": "至急",
+                "reading": "しきゅう",
+                "romaji": "Shikyuu",
+                "meaning": "Sangat mendesak",
+                "sentence": "私は至急を勉強します。",
+                "sentenceFurigana": "私は至急(しきゅう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Sangat mendesak."
+            },
+            {
+                "word": "冬至",
+                "reading": "とうじ",
+                "romaji": "Touji",
+                "meaning": "Titik balik musim dingin",
+                "sentence": "この冬至は大切です。",
+                "sentenceFurigana": "この冬至(とうじ)はたいせつです。",
+                "sentenceMeaning": "Titik balik musim dingin ini penting."
+            },
+            {
+                "word": "夏至",
+                "reading": "げし",
+                "romaji": "Geshi",
+                "meaning": "Titik balik musim panas",
+                "sentence": "先生が夏至を説明しました。",
+                "sentenceFurigana": "せんせいが夏至(げし)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Titik balik musim panas."
+            },
+            {
+                "word": "至極",
+                "reading": "しごく",
+                "romaji": "Shigoku",
+                "meaning": "Sangat / Amat",
+                "sentence": "毎日至極を使います。",
+                "sentenceFurigana": "まいにち至極(しごく)をつかいます。",
+                "sentenceMeaning": "Saya memakai Sangat / Amat setiap hari."
+            },
+            {
+                "word": "必至",
+                "reading": "ひっし",
+                "romaji": "Hisshi",
+                "meaning": "Tak terhindarkan",
+                "sentence": "友だちと必至について話しました。",
+                "sentenceFurigana": "ともだちと必至(ひっし)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Tak terhindarkan dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_356",
+        "kanji": "到",
+        "onyomi": "トウ",
+        "kunyomi": "-",
+        "romaji": "Tou",
+        "meaning": "Tiba / Mencapai",
+        "examples": [
+            {
+                "word": "到着",
+                "reading": "とうちゃく",
+                "romaji": "Touchaku",
+                "meaning": "Kedatangan",
+                "sentence": "私は到着を勉強します。",
+                "sentenceFurigana": "私は到着(とうちゃく)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Kedatangan."
+            },
+            {
+                "word": "到達",
+                "reading": "とうたつ",
+                "romaji": "Toutatsu",
+                "meaning": "Pencapaian",
+                "sentence": "この到達は大切です。",
+                "sentenceFurigana": "この到達(とうたつ)はたいせつです。",
+                "sentenceMeaning": "Pencapaian ini penting."
+            },
+            {
+                "word": "殺到",
+                "reading": "さっとう",
+                "romaji": "Sattou",
+                "meaning": "Membanjir / Menyerbu",
+                "sentence": "先生が殺到を説明しました。",
+                "sentenceFurigana": "せんせいが殺到(さっとう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Membanjir / Menyerbu."
+            },
+            {
+                "word": "到底",
+                "reading": "とうてい",
+                "romaji": "Toutei",
+                "meaning": "Sama sekali (tidak)",
+                "sentence": "毎日到底を使います。",
+                "sentenceFurigana": "まいにち到底(とうてい)をつかいます。",
+                "sentenceMeaning": "Saya memakai Sama sekali (tidak) setiap hari."
+            },
+            {
+                "word": "周到",
+                "reading": "しゅうとう",
+                "romaji": "Shuutou",
+                "meaning": "Cermat / Matang",
+                "sentence": "友だちと周到について話しました。",
+                "sentenceFurigana": "ともだちと周到(しゅうとう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Cermat / Matang dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_357",
+        "kanji": "逃",
+        "onyomi": "トウ",
+        "kunyomi": "にげる・のがす",
+        "romaji": "Tou",
+        "meaning": "Kabur / Melarikan diri",
+        "examples": [
+            {
+                "word": "逃亡",
+                "reading": "とうぼう",
+                "romaji": "Toubou",
+                "meaning": "Pelarian",
+                "sentence": "私は逃亡を勉強します。",
+                "sentenceFurigana": "私は逃亡(とうぼう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Pelarian."
+            },
+            {
+                "word": "逃走",
+                "reading": "とうそう",
+                "romaji": "Tousou",
+                "meaning": "Melarikan diri",
+                "sentence": "この逃走は大切です。",
+                "sentenceFurigana": "この逃走(とうそう)はたいせつです。",
+                "sentenceMeaning": "Melarikan diri ini penting."
+            },
+            {
+                "word": "逃避",
+                "reading": "とうひ",
+                "romaji": "Touhi",
+                "meaning": "Pengelakan",
+                "sentence": "先生が逃避を説明しました。",
+                "sentenceFurigana": "せんせいが逃避(とうひ)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Pengelakan."
+            },
+            {
+                "word": "見逃す",
+                "reading": "みのがす",
+                "romaji": "Minogasu",
+                "meaning": "Melewatkan / Membiarkan",
+                "sentence": "毎日見逃すを使います。",
+                "sentenceFurigana": "まいにち見逃す(みのがす)をつかいます。",
+                "sentenceMeaning": "Saya memakai Melewatkan / Membiarkan setiap hari."
+            },
+            {
+                "word": "逃げ道",
+                "reading": "にげみち",
+                "romaji": "Nigemichi",
+                "meaning": "Jalan kabur",
+                "sentence": "友だちと逃げ道について話しました。",
+                "sentenceFurigana": "ともだちと逃げ道(にげみち)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Jalan kabur dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_358",
+        "kanji": "逆",
+        "onyomi": "ギャク",
+        "kunyomi": "さか・さからう",
+        "romaji": "Gyaku",
+        "meaning": "Berlawanan / Terbalik",
+        "examples": [
+            {
+                "word": "逆転",
+                "reading": "ぎゃくてん",
+                "romaji": "Gyakuten",
+                "meaning": "Pembalikan keadaan",
+                "sentence": "私は逆転を勉強します。",
+                "sentenceFurigana": "私は逆転(ぎゃくてん)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Pembalikan keadaan."
+            },
+            {
+                "word": "逆効果",
+                "reading": "ぎゃくこうか",
+                "romaji": "Gyakukouka",
+                "meaning": "Efek sebaliknya",
+                "sentence": "この逆効果は大切です。",
+                "sentenceFurigana": "この逆効果(ぎゃくこうか)はたいせつです。",
+                "sentenceMeaning": "Efek sebaliknya ini penting."
+            },
+            {
+                "word": "反逆",
+                "reading": "はんぎゃく",
+                "romaji": "Hangyaku",
+                "meaning": "Pemberontakan",
+                "sentence": "先生が反逆を説明しました。",
+                "sentenceFurigana": "せんせいが反逆(はんぎゃく)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Pemberontakan."
+            },
+            {
+                "word": "逆さま",
+                "reading": "さかさま",
+                "romaji": "Sakasama",
+                "meaning": "Terbalik",
+                "sentence": "毎日逆さまを使います。",
+                "sentenceFurigana": "まいにち逆さま(さかさま)をつかいます。",
+                "sentenceMeaning": "Saya memakai Terbalik setiap hari."
+            },
+            {
+                "word": "逆流",
+                "reading": "ぎゃくりゅう",
+                "romaji": "Gyakuryuu",
+                "meaning": "Aliran balik",
+                "sentence": "友だちと逆流について話しました。",
+                "sentenceFurigana": "ともだちと逆流(ぎゃくりゅう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Aliran balik dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_359",
+        "kanji": "遭",
+        "onyomi": "ソウ",
+        "kunyomi": "あう",
+        "romaji": "Sou",
+        "meaning": "Mengalami / Berjumpa",
+        "examples": [
+            {
+                "word": "遭遇",
+                "reading": "そうぐう",
+                "romaji": "Souguu",
+                "meaning": "Perjumpaan tak terduga",
+                "sentence": "私は遭遇を勉強します。",
+                "sentenceFurigana": "私は遭遇(そうぐう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Perjumpaan tak terduga."
+            },
+            {
+                "word": "遭難",
+                "reading": "そうなん",
+                "romaji": "Sounan",
+                "meaning": "Kecelakaan / Terdampar",
+                "sentence": "この遭難は大切です。",
+                "sentenceFurigana": "この遭難(そうなん)はたいせつです。",
+                "sentenceMeaning": "Kecelakaan / Terdampar ini penting."
+            },
+            {
+                "word": "遭難者",
+                "reading": "そうなんしゃ",
+                "romaji": "Sounansha",
+                "meaning": "Korban musibah",
+                "sentence": "先生が遭難者を説明しました。",
+                "sentenceFurigana": "せんせいが遭難者(そうなんしゃ)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Korban musibah."
+            },
+            {
+                "word": "遭難信号",
+                "reading": "そうなんしんごう",
+                "romaji": "Sounanshingou",
+                "meaning": "Sinyal darurat",
+                "sentence": "毎日遭難信号を使います。",
+                "sentenceFurigana": "まいにち遭難信号(そうなんしんごう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Sinyal darurat setiap hari."
+            },
+            {
+                "word": "遭う",
+                "reading": "あう",
+                "romaji": "Au",
+                "meaning": "Mengalami (musibah)",
+                "sentence": "友だちと遭うについて話しました。",
+                "sentenceFurigana": "ともだちと遭う(あう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Mengalami (musibah) dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_360",
+        "kanji": "巡",
+        "onyomi": "ジュン",
+        "kunyomi": "めぐる",
+        "romaji": "Jun",
+        "meaning": "Berkeliling / Patroli",
+        "examples": [
+            {
+                "word": "巡回",
+                "reading": "じゅんかい",
+                "romaji": "Junkai",
+                "meaning": "Patroli / Keliling",
+                "sentence": "私は巡回を勉強します。",
+                "sentenceFurigana": "私は巡回(じゅんかい)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Patroli / Keliling."
+            },
+            {
+                "word": "巡査",
+                "reading": "じゅんさ",
+                "romaji": "Junsa",
+                "meaning": "Polisi (pangkat)",
+                "sentence": "この巡査は大切です。",
+                "sentenceFurigana": "この巡査(じゅんさ)はたいせつです。",
+                "sentenceMeaning": "Polisi (pangkat) ini penting."
+            },
+            {
+                "word": "巡礼",
+                "reading": "じゅんれい",
+                "romaji": "Junrei",
+                "meaning": "Ziarah",
+                "sentence": "先生が巡礼を説明しました。",
+                "sentenceFurigana": "せんせいが巡礼(じゅんれい)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Ziarah."
+            },
+            {
+                "word": "一巡",
+                "reading": "いちじゅん",
+                "romaji": "Ichijun",
+                "meaning": "Satu putaran",
+                "sentence": "毎日一巡を使います。",
+                "sentenceFurigana": "まいにち一巡(いちじゅん)をつかいます。",
+                "sentenceMeaning": "Saya memakai Satu putaran setiap hari."
+            },
+            {
+                "word": "巡業",
+                "reading": "じゅんぎょう",
+                "romaji": "Jungyou",
+                "meaning": "Tur pertunjukan",
+                "sentence": "友だちと巡業について話しました。",
+                "sentenceFurigana": "ともだちと巡業(じゅんぎょう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Tur pertunjukan dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_361",
+        "kanji": "迫",
+        "onyomi": "ハク",
+        "kunyomi": "せまる",
+        "romaji": "Haku",
+        "meaning": "Mendesak / Mendekat",
+        "examples": [
+            {
+                "word": "迫力",
+                "reading": "はくりょく",
+                "romaji": "Hakuryoku",
+                "meaning": "Daya gugah / Impak",
+                "sentence": "私は迫力を勉強します。",
+                "sentenceFurigana": "私は迫力(はくりょく)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Daya gugah / Impak."
+            },
+            {
+                "word": "切迫",
+                "reading": "せっぱく",
+                "romaji": "Seppaku",
+                "meaning": "Kegentingan",
+                "sentence": "この切迫は大切です。",
+                "sentenceFurigana": "この切迫(せっぱく)はたいせつです。",
+                "sentenceMeaning": "Kegentingan ini penting."
+            },
+            {
+                "word": "圧迫",
+                "reading": "あっぱく",
+                "romaji": "Appaku",
+                "meaning": "Tekanan",
+                "sentence": "先生が圧迫を説明しました。",
+                "sentenceFurigana": "せんせいが圧迫(あっぱく)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Tekanan."
+            },
+            {
+                "word": "迫害",
+                "reading": "はくがい",
+                "romaji": "Hakugai",
+                "meaning": "Penganiayaan",
+                "sentence": "毎日迫害を使います。",
+                "sentenceFurigana": "まいにち迫害(はくがい)をつかいます。",
+                "sentenceMeaning": "Saya memakai Penganiayaan setiap hari."
+            },
+            {
+                "word": "気迫",
+                "reading": "きはく",
+                "romaji": "Kihaku",
+                "meaning": "Semangat / Daya juang",
+                "sentence": "友だちと気迫について話しました。",
+                "sentenceFurigana": "ともだちと気迫(きはく)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Semangat / Daya juang dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_362",
+        "kanji": "透",
+        "onyomi": "トウ",
+        "kunyomi": "すく・すける",
+        "romaji": "Tou",
+        "meaning": "Tembus / Transparan",
+        "examples": [
+            {
+                "word": "透明",
+                "reading": "とうめい",
+                "romaji": "Toumei",
+                "meaning": "Bening / Transparan",
+                "sentence": "私は透明を勉強します。",
+                "sentenceFurigana": "私は透明(とうめい)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Bening / Transparan."
+            },
+            {
+                "word": "浸透",
+                "reading": "しんとう",
+                "romaji": "Shintou",
+                "meaning": "Peresapan / Penetrasi",
+                "sentence": "この浸透は大切です。",
+                "sentenceFurigana": "この浸透(しんとう)はたいせつです。",
+                "sentenceMeaning": "Peresapan / Penetrasi ini penting."
+            },
+            {
+                "word": "透視",
+                "reading": "とうし",
+                "romaji": "Toushi",
+                "meaning": "Menembus pandang",
+                "sentence": "先生が透視を説明しました。",
+                "sentenceFurigana": "せんせいが透視(とうし)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Menembus pandang."
+            },
+            {
+                "word": "透過",
+                "reading": "とうか",
+                "romaji": "Touka",
+                "meaning": "Transmisi (cahaya)",
+                "sentence": "毎日透過を使います。",
+                "sentenceFurigana": "まいにち透過(とうか)をつかいます。",
+                "sentenceMeaning": "Saya memakai Transmisi (cahaya) setiap hari."
+            },
+            {
+                "word": "透き通る",
+                "reading": "すきとおる",
+                "romaji": "Sukitooru",
+                "meaning": "Menjadi bening",
+                "sentence": "友だちと透き通るについて話しました。",
+                "sentenceFurigana": "ともだちと透き通る(すきとおる)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Menjadi bening dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_363",
+        "kanji": "貫",
+        "onyomi": "カン",
+        "kunyomi": "つらぬく",
+        "romaji": "Kan",
+        "meaning": "Menembus",
+        "examples": [
+            {
+                "word": "貫通",
+                "reading": "かんつう",
+                "romaji": "Kantsuu",
+                "meaning": "Penembusan",
+                "sentence": "私は貫通を勉強します。",
+                "sentenceFurigana": "私は貫通(かんつう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Penembusan."
+            },
+            {
+                "word": "一貫",
+                "reading": "いっかん",
+                "romaji": "Ikkan",
+                "meaning": "Konsistensi",
+                "sentence": "この一貫は大切です。",
+                "sentenceFurigana": "この一貫(いっかん)はたいせつです。",
+                "sentenceMeaning": "Konsistensi ini penting."
+            },
+            {
+                "word": "突貫",
+                "reading": "とっかん",
+                "romaji": "Tokkan",
+                "meaning": "Kerja kilat",
+                "sentence": "先生が突貫を説明しました。",
+                "sentenceFurigana": "せんせいが突貫(とっかん)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Kerja kilat."
+            },
+            {
+                "word": "貫徹",
+                "reading": "かんてつ",
+                "romaji": "Kantetsu",
+                "meaning": "Perwujudan / Ketuntasan",
+                "sentence": "毎日貫徹を使います。",
+                "sentenceFurigana": "まいにち貫徹(かんてつ)をつかいます。",
+                "sentenceMeaning": "Saya memakai Perwujudan / Ketuntasan setiap hari."
+            },
+            {
+                "word": "縦貫",
+                "reading": "じゅうかん",
+                "romaji": "Juukan",
+                "meaning": "Membentang memanjang",
+                "sentence": "友だちと縦貫について話しました。",
+                "sentenceFurigana": "ともだちと縦貫(じゅうかん)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Membentang memanjang dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_364",
+        "kanji": "即",
+        "onyomi": "ソク",
+        "kunyomi": "-",
+        "romaji": "Soku",
+        "meaning": "Segera / Seketika",
+        "examples": [
+            {
+                "word": "即座",
+                "reading": "そくざ",
+                "romaji": "Sokuza",
+                "meaning": "Seketika",
+                "sentence": "私は即座を勉強します。",
+                "sentenceFurigana": "私は即座(そくざ)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Seketika."
+            },
+            {
+                "word": "即席",
+                "reading": "そくせき",
+                "romaji": "Sokuseki",
+                "meaning": "Instan / Dadakan",
+                "sentence": "この即席は大切です。",
+                "sentenceFurigana": "この即席(そくせき)はたいせつです。",
+                "sentenceMeaning": "Instan / Dadakan ini penting."
+            },
+            {
+                "word": "即興",
+                "reading": "そっきょう",
+                "romaji": "Sokkyou",
+                "meaning": "Improvisasi",
+                "sentence": "先生が即興を説明しました。",
+                "sentenceFurigana": "せんせいが即興(そっきょう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Improvisasi."
+            },
+            {
+                "word": "即答",
+                "reading": "そくとう",
+                "romaji": "Sokutou",
+                "meaning": "Jawaban langsung",
+                "sentence": "毎日即答を使います。",
+                "sentenceFurigana": "まいにち即答(そくとう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Jawaban langsung setiap hari."
+            },
+            {
+                "word": "即決",
+                "reading": "そっけつ",
+                "romaji": "Sokketsu",
+                "meaning": "Keputusan cepat",
+                "sentence": "友だちと即決について話しました。",
+                "sentenceFurigana": "ともだちと即決(そっけつ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Keputusan cepat dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_365",
+        "kanji": "駆",
+        "onyomi": "ク",
+        "kunyomi": "かける・かる",
+        "romaji": "Ku",
+        "meaning": "Berlari / Menggerakkan",
+        "examples": [
+            {
+                "word": "駆使",
+                "reading": "くし",
+                "romaji": "Kushi",
+                "meaning": "Menguasai / Memanfaatkan",
+                "sentence": "私は駆使を勉強します。",
+                "sentenceFurigana": "私は駆使(くし)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Menguasai / Memanfaatkan."
+            },
+            {
+                "word": "駆除",
+                "reading": "くじょ",
+                "romaji": "Kujo",
+                "meaning": "Pembasmian",
+                "sentence": "この駆除は大切です。",
+                "sentenceFurigana": "この駆除(くじょ)はたいせつです。",
+                "sentenceMeaning": "Pembasmian ini penting."
+            },
+            {
+                "word": "先駆",
+                "reading": "せんく",
+                "romaji": "Senku",
+                "meaning": "Pelopor",
+                "sentence": "先生が先駆を説明しました。",
+                "sentenceFurigana": "せんせいが先駆(せんく)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Pelopor."
+            },
+            {
+                "word": "駆け足",
+                "reading": "かけあし",
+                "romaji": "Kakeashi",
+                "meaning": "Berlari kecil",
+                "sentence": "毎日駆け足を使います。",
+                "sentenceFurigana": "まいにち駆け足(かけあし)をつかいます。",
+                "sentenceMeaning": "Saya memakai Berlari kecil setiap hari."
+            },
+            {
+                "word": "疾駆",
+                "reading": "しっく",
+                "romaji": "Shikku",
+                "meaning": "Berlari kencang",
+                "sentence": "友だちと疾駆について話しました。",
+                "sentenceFurigana": "ともだちと疾駆(しっく)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Berlari kencang dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_366",
+        "kanji": "跳",
+        "onyomi": "チョウ",
+        "kunyomi": "はねる・とぶ",
+        "romaji": "Chou",
+        "meaning": "Melompat",
+        "examples": [
+            {
+                "word": "跳躍",
+                "reading": "ちょうやく",
+                "romaji": "Chouyaku",
+                "meaning": "Lompatan",
+                "sentence": "私は跳躍を勉強します。",
+                "sentenceFurigana": "私は跳躍(ちょうやく)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Lompatan."
+            },
+            {
+                "word": "跳馬",
+                "reading": "ちょうば",
+                "romaji": "Chouba",
+                "meaning": "Kuda-kuda lompat",
+                "sentence": "この跳馬は大切です。",
+                "sentenceFurigana": "この跳馬(ちょうば)はたいせつです。",
+                "sentenceMeaning": "Kuda-kuda lompat ini penting."
+            },
+            {
+                "word": "跳ね返り",
+                "reading": "はねかえり",
+                "romaji": "Hanekaeri",
+                "meaning": "Pantulan",
+                "sentence": "先生が跳ね返りを説明しました。",
+                "sentenceFurigana": "せんせいが跳ね返り(はねかえり)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Pantulan."
+            },
+            {
+                "word": "縄跳び",
+                "reading": "なわとび",
+                "romaji": "Nawatobi",
+                "meaning": "Lompat tali",
+                "sentence": "毎日縄跳びを使います。",
+                "sentenceFurigana": "まいにち縄跳び(なわとび)をつかいます。",
+                "sentenceMeaning": "Saya memakai Lompat tali setiap hari."
+            },
+            {
+                "word": "三段跳び",
+                "reading": "さんだんとび",
+                "romaji": "Sandantobi",
+                "meaning": "Lompat jangkit",
+                "sentence": "友だちと三段跳びについて話しました。",
+                "sentenceFurigana": "ともだちと三段跳び(さんだんとび)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Lompat jangkit dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_367",
+        "kanji": "踏",
+        "onyomi": "トウ",
+        "kunyomi": "ふむ・ふまえる",
+        "romaji": "Tou",
+        "meaning": "Menginjak",
+        "examples": [
+            {
+                "word": "踏切",
+                "reading": "ふみきり",
+                "romaji": "Fumikiri",
+                "meaning": "Perlintasan kereta",
+                "sentence": "私は踏切を勉強します。",
+                "sentenceFurigana": "私は踏切(ふみきり)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Perlintasan kereta."
+            },
+            {
+                "word": "舞踏",
+                "reading": "ぶとう",
+                "romaji": "Butou",
+                "meaning": "Tarian / Dansa",
+                "sentence": "この舞踏は大切です。",
+                "sentenceFurigana": "この舞踏(ぶとう)はたいせつです。",
+                "sentenceMeaning": "Tarian / Dansa ini penting."
+            },
+            {
+                "word": "踏襲",
+                "reading": "とうしゅう",
+                "romaji": "Toushuu",
+                "meaning": "Mengikuti (preseden)",
+                "sentence": "先生が踏襲を説明しました。",
+                "sentenceFurigana": "せんせいが踏襲(とうしゅう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Mengikuti (preseden)."
+            },
+            {
+                "word": "雑踏",
+                "reading": "ざっとう",
+                "romaji": "Zattou",
+                "meaning": "Keramaian / Kerumunan",
+                "sentence": "毎日雑踏を使います。",
+                "sentenceFurigana": "まいにち雑踏(ざっとう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Keramaian / Kerumunan setiap hari."
+            },
+            {
+                "word": "踏破",
+                "reading": "とうは",
+                "romaji": "Touha",
+                "meaning": "Menempuh dengan berjalan",
+                "sentence": "友だちと踏破について話しました。",
+                "sentenceFurigana": "ともだちと踏破(とうは)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Menempuh dengan berjalan dengan teman."
+            }
+        ]
     }
 ]
