@@ -42,14 +42,14 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `GrammarModel.swift` move to 182 (N3) and 132 (N4), enforced by
   `check_dataset_counts.py`, bringing N5/N4/N3 to 84/132/182 — level with the
   widely-cited JLPT Sensei list counts.
-- **119 verified N3 vocabulary entries** (`VocabN3.json`, `N3_V1111`–`N3_V1229`),
-  hand-checked batches of common words not already in the set — 経済-adjacent
-  society/work/health/abstract nouns, suru- and plain verbs, na-adjectives and
-  adverbs (e.g. 発揮する, 把握する, 募集する, 翻訳する, 稼ぐ, 諦める, 憧れる, 目指す,
-  手段, 対象, 患者, 特徴, 段階, 設備, 明確, 慎重, 豊富, 穏やか, 突然, せっかく). Each
-  carries an accurate reading, Indonesian meaning and word type; the level count
-  advertised in `VocabModel.swift` moves 1.110 → 1.229 and stays enforced by
-  `check_dataset_counts.py`. Every candidate was deduplicated against N5/N4/N3
+- **161 verified N3 vocabulary entries** (`VocabN3.json`, `N3_V1111`–`N3_V1271`),
+  hand-checked batches of common words not already in the set — society/work/health/
+  abstract nouns, suru- and plain verbs, na-adjectives and adverbs (e.g. 発揮する,
+  把握する, 稼ぐ, 諦める, 憧れる, 目指す, 取り組む, 味わう, 手段, 特徴, 段階, 設備,
+  順番, 方針, 明確, 慎重, 豊富, 穏やか, 清潔, 面倒, 突然, せっかく, 要するに,
+  めったに). Each carries an accurate reading, Indonesian meaning and word type; the
+  level count advertised in `VocabModel.swift` moves 1.110 → 1.271 and stays enforced
+  by `check_dataset_counts.py`. Every candidate was deduplicated against N5/N4/N3
   before insertion — a large share of candidates were already present, confirming
   the set is already broad. Deliberately kept to genuinely-known words rather than
   bulk-generating the long tail, to avoid shipping unverified data.
