@@ -26,23 +26,28 @@ python3 -m http.server 8000
 Atau host statis mana pun (GitHub Pages, Netlify, dsb.) — arahkan ke folder
 `web/` sebagai root.
 
-### GitHub Pages (otomatis)
+### GitHub Pages
 
-Repo ini punya workflow `.github/workflows/pages.yml` yang menyebarkan folder
-`web/` ke GitHub Pages. **Aktifkan sekali**: repo **Settings → Pages → Build and
-deployment → Source: "GitHub Actions"**. Setelah itu tiap push yang menyentuh
-`web/` akan otomatis mem-publish situs. URL-nya:
+Repo ini punya workflow `.github/workflows/pages.yml` (jalankan manual dari tab
+**Actions → Run workflow**) yang menyebarkan folder `web/`. **Prasyarat:**
 
-```
-https://eliiotss.github.io/Ichigo/
-```
+- **Aktifkan Pages sekali:** Settings → Pages → Build and deployment →
+  Source: **"GitHub Actions"**.
+- **Repo harus publik** pada paket gratis. **GitHub Pages untuk repo privat butuh
+  paket berbayar** (Pro/Team/Enterprise). Token Actions **tidak bisa** mengaktifkan
+  Pages otomatis. Jika repo tetap privat & paket gratis, pakai host alternatif di
+  bawah.
 
-Untuk **sync Google Drive**, daftarkan **origin** berikut di OAuth client ID
-(Authorized JavaScript origins) — cukup host-nya, tanpa path:
+Bila aktif, URL situs: `https://eliiotss.github.io/Ichigo/`, dan **origin** untuk
+OAuth client ID (Authorized JavaScript origins): `https://eliiotss.github.io`.
 
-```
-https://eliiotss.github.io
-```
+### Alternatif hosting (mendukung repo privat, gratis)
+
+- **Netlify / Vercel / Cloudflare Pages** — sambungkan repo, set *base/publish
+  directory* ke `web`, tanpa build command. Daftarkan origin yang diberikan
+  (mis. `https://ichigo.netlify.app`) di OAuth client ID.
+- **Uji lokal** — `cd web && python3 -m http.server 8000`, origin
+  `http://localhost:8000`. Paling cepat untuk mencoba login Google.
 
 ## Struktur
 

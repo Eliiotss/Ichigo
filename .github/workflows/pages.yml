@@ -1,18 +1,17 @@
 name: Deploy web to GitHub Pages
 
-# Publishes the static web app in web/ to GitHub Pages. Requires Pages to be
-# enabled once in the repo: Settings -> Pages -> Build and deployment ->
-# Source: "GitHub Actions". Deploys on pushes that touch web/ (from main or the
-# audit branch), and can also be run manually from the Actions tab.
+# Publishes the static web app in web/ to GitHub Pages.
+#
+# PREREQUISITE: Pages must first be enabled in Settings -> Pages -> Build and
+# deployment -> Source: "GitHub Actions". Pages requires the repo to be PUBLIC on
+# a free plan (private repos need GitHub Pro/Team/Enterprise); the Actions token
+# cannot enable it automatically ("Resource not accessible by integration").
+#
+# This workflow is MANUAL ONLY (workflow_dispatch) so it never fails checks on
+# PRs before Pages is set up. Once Pages is enabled, run it from the Actions tab
+# ("Run workflow"), or add a `push` trigger on main.
 
 on:
-  push:
-    branches:
-      - main
-      - claude/ichigo-production-audit-cprvp8
-    paths:
-      - "web/**"
-      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -35,11 +34,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          # Try to enable Pages (GitHub Actions source) automatically so no manual
-          # Settings step is needed. If the token isn't allowed to, this fails and
-          # Pages must be enabled once in Settings -> Pages -> Source: GitHub Actions.
-          enablement: true
       - name: Upload web/ as Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
