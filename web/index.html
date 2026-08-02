@@ -4,31 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Ichigo — aplikasi belajar bahasa Jepang JLPT (Kanji, Kosakata, Tata Bahasa, Hiragana) dengan flashcard FSRS.">
-    <meta name="theme-color" content="#f26d7d">
+    <meta name="theme-color" content="#2E7BFF">
     <title>Ichigo — Belajar Bahasa Jepang</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍓%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="app-header">
-        <a class="brand" href="#/home" aria-label="Ichigo beranda">
-            <span class="brand-mark">🍓</span>
-            <span class="brand-name">Ichigo</span>
-        </a>
-        <nav class="tabs" id="tabs" aria-label="Navigasi utama"></nav>
-        <a class="icon-btn" id="settingsBtn" href="#/settings" aria-label="Pengaturan">⚙️</a>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti tema">
-            <span class="theme-icon">🌙</span>
-        </button>
-    </header>
-
     <main id="app" class="app-main" aria-live="polite">
         <div class="loading">Memuat…</div>
     </main>
 
-    <footer class="app-footer">
-        <p>Ichigo · versi web · data JLPT N5–N3 · flashcard FSRS-6</p>
-    </footer>
+    <nav class="tabbar" id="tabbar" aria-label="Navigasi utama"></nav>
 
     <script type="module" src="js/app.js"></script>
 </body>

@@ -4,6 +4,12 @@ Port web dari aplikasi Ichigo (belajar bahasa Jepang JLPT). **Statis, tanpa
 build**: HTML + CSS + JavaScript (ES modules) murni. Sepenuhnya terpisah dari
 kode Swift di `Sources/` — mengubah web tidak menyentuh aplikasi iOS.
 
+**Tampilan mengikuti aplikasi iOS (SwiftUI)**: aksen **biru** (`#2E7BFF`), **tab
+bar di bawah** (Home · Profil · Pengaturan) dengan menu belajar dibuka dari grid
+Beranda, kartu membulat berbayang lembut + kartu hero bergradien, dan font
+membulat **Baloo 2**. Token warna & ukuran disalin dari
+`Sources/AppFeature/AppTheme.swift`. 🍓 dipakai sebagai logo saja.
+
 ## Fitur
 
 - **Penjelajah konten**: Kanji, Kosakata, dan Tata Bahasa untuk **N5–N3**
@@ -53,16 +59,21 @@ OAuth client ID (Authorized JavaScript origins): `https://eliiotss.github.io`.
 
 ```
 web/
-  index.html          # kerangka SPA
-  css/styles.css       # tema (terang/gelap), tata letak, komponen
+  index.html          # kerangka SPA + tab bar bawah + muat font Baloo 2
+  css/styles.css       # token warna iOS (terang/gelap), komponen, tab bar, kartu hero
   js/
-    app.js             # router berbasis hash + navigasi + tema
-    levels.js          # metadata level JLPT (jumlah, kunci, warna)
+    app.js             # router hash + tab bar bawah (Home/Profil/Pengaturan)
+    levels.js          # metadata: tab, menu Beranda, level JLPT, mode flashcard
+    icons.js           # ikon SVG inline bersama + glyph Jepang untuk tile
     data.js            # pemuat JSON + cache
-    browse.js          # tampilan Kanji/Vocab/Grammar/Hiragana (daftar+detail)
+    browse.js          # Beranda + Kanji/Vocab/Grammar/Hiragana (daftar + detail)
+    profile.js         # tab Profil (header gradien, stat, ringkasan jawaban)
     fsrs.js            # FSRS-6 (port setia dari FlashcardModel.swift)
-    store.js           # progres/streak/kuota harian di localStorage
-    flashcards.js      # pemilih dek + sesi review
+    store.js           # progres/streak/kuota/statistik/jawaban di localStorage
+    flashcards.js      # pemilih mode + level + sesi review (gaya iOS)
+    settings.js        # Pengaturan (gaya iOS) + ekspor/impor + sync Drive
+    theme.js           # tema terang/gelap/auto
+    drive.js, gsync.js # klien Google Drive (GIS) + orkestrasi sync
   data/*.json          # SALINAN dataset dari Sources/AppFeature/Resources
 ```
 

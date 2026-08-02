@@ -1,12 +1,15 @@
 // localStorage persistence for flashcard progress, the daily new-card quota, and
 // the study streak. Keys are namespaced under `ichigo_`.
 
+import { isDue, isMastered, STATE } from "./fsrs.js";
+
 const K = {
     progress: "ichigo_progress_v1",
     settings: "ichigo_settings_v1",
     newToday: "ichigo_new_today_v1",
     streak: "ichigo_streak_v1",
     driveSync: "ichigo_drive_sync_v1",
+    answers: "ichigo_answers_v1",
 };
 
 function read(key, fallback) {
@@ -100,6 +103,61 @@ export function setAutoSync(on) {
     const s = read(K.settings, {});
     s.autoSync = !!on;
     write(K.settings, s);
+}
+
+// ---------- Home / Profile stats (derived from the progress map) ----------
+
+/// How many brand-new cards have been introduced across all decks today.
+export function newTodayTotalCount() {
+    const s = read(K.newToday, {});
+    if (s.day !== dayKey()) return 0;
+    return Object.values(s.counts || {}).reduce((a, b) => a + (b || 0), 0);
+}
+
+/// Distinct cards whose last review happened today.
+export function studiedTodayTotal() {
+    const today = dayKey();
+    let n = 0;
+    for (const p of Object.values(allProgress())) {
+        if (p.lastReview && dayKey(new Date(p.lastReview)) === today) n++;
+    }
+    return n;
+}
+
+/// Cards waiting today: new cards still allowed under the daily target plus the
+/// already-seen reviews that have come due. Mirrors the app's "Due" number.
+export function dueTodayTotal(target = getDailyTarget()) {
+    const now = Date.now();
+    let dueReviews = 0;
+    for (const p of Object.values(allProgress())) {
+        if (p.state !== STATE.new && isDue(p, now)) dueReviews++;
+    }
+    return Math.max(0, target - newTodayTotalCount()) + dueReviews;
+}
+
+/// Cards that have graduated to a long (≥21 day) interval.
+export function masteredTotal() {
+    let n = 0;
+    for (const p of Object.values(allProgress())) if (isMastered(p)) n++;
+    return n;
+}
+
+// ---------- Answer tally (Profile "Ringkasan Jawaban") ----------
+
+/// Records one graded answer (1=again … 4=easy) for the overall summary.
+export function recordAnswer(gradeValue) {
+    const key = { 1: "again", 2: "hard", 3: "good", 4: "easy" }[gradeValue];
+    if (!key) return;
+    const a = read(K.answers, { again: 0, hard: 0, good: 0, easy: 0 });
+    a[key] = (a[key] || 0) + 1;
+    write(K.answers, a);
+}
+
+export function getAnswerSummary() {
+    const a = read(K.answers, { again: 0, hard: 0, good: 0, easy: 0 });
+    const again = a.again || 0, hard = a.hard || 0, good = a.good || 0, easy = a.easy || 0;
+    const total = again + hard + good + easy;
+    return { again, hard, good, easy, total, accuracy: total ? (hard + good + easy) / total : 0 };
 }
 
 // ---------- Export / Import (backup with Anki-style merge) ----------

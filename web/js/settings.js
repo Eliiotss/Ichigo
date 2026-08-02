@@ -1,18 +1,33 @@
-// Settings page: profile name, daily target, theme, backup export/import (with
-// merge), study stats, and reset.
+// Settings page, styled like the iOS SettingsView: uppercase section labels,
+// rounded cards, rows with a gradient icon chip, a sun/moon slide toggle for the
+// theme, a stepper for the daily target, the Google Drive sync rows, and reset.
+// All existing behaviour (name, target, theme, file backup, Drive sync, reset)
+// is preserved — only the presentation changed.
 
 import * as store from "./store.js";
 import * as gsync from "./gsync.js";
-import { setTheme, currentTheme } from "./theme.js";
+import { setTheme, effectiveIsDark } from "./theme.js";
+import { icon, GOOGLE_G } from "./icons.js";
 
 const esc = (s) =>
     String(s ?? "").replace(/[&<>"']/g, (c) =>
         ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
+// Gradient chips matching the iOS row icons.
+const G = {
+    blue: "var(--grad-huruf)",
+    teal: "var(--grad-vocabulary)",
+    violet: "var(--grad-grammar)",
+    sky: "var(--grad-flashcard)",
+    indigo: "linear-gradient(135deg,var(--indigo-soft),var(--indigo-deep))",
+    globe: "linear-gradient(135deg,var(--blue),var(--indigo-deep))",
+    danger: "linear-gradient(135deg,var(--danger-soft),var(--danger))",
+    flame: "linear-gradient(135deg,#ffb23e,var(--caution))",
+};
+
 const relFmt = new Intl.RelativeTimeFormat("id-ID", { numeric: "auto" });
 function relTime(ts) {
-    const diff = ts - Date.now();
-    const mins = Math.round(diff / 60000);
+    const mins = Math.round((ts - Date.now()) / 60000);
     if (Math.abs(mins) < 60) return relFmt.format(mins, "minute");
     const hrs = Math.round(mins / 60);
     if (Math.abs(hrs) < 24) return relFmt.format(hrs, "hour");
@@ -36,118 +51,133 @@ function dateStamp() {
     return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
 }
 
+function chip(grad, name) { return `<span class="set-ic" style="background:${grad}">${icon(name)}</span>`; }
+
 export function renderSettings(app) {
     const draw = () => {
         const username = store.getUsername();
         const target = store.getDailyTarget();
-        const streak = store.getStreak();
+        const streak = store.getStreak().count;
         const learned = Object.keys(store.allProgress()).length;
-        const theme = currentTheme();
-        const themeBtn = (val, label) =>
-            `<button class="seg ${theme === val ? "active" : ""}" data-theme-set="${val}">${label}</button>`;
+        const isDark = effectiveIsDark();
+        const configured = gsync.isConfigured();
+        const signedIn = configured && gsync.isSignedIn();
+
+        const syncFoot = !configured
+            ? "Tambahkan Client ID Google (tipe Web) Anda untuk sinkron otomatis antar-perangkat lewat folder privat aplikasi di Drive. Panduan di web/README.md."
+            : signedIn
+                ? `${gsync.linkedEmail() ? "Masuk sebagai " + esc(gsync.linkedEmail()) + ". " : ""}${
+                    store.getDriveLastSync() ? "Tersinkron " + esc(relTime(store.getDriveLastSync())) + "." : "Belum pernah tersinkron."
+                } Progres tersinkron dua arah (mirip Anki), otomatis saat aplikasi dibuka.`
+                : "Masuk dengan Google agar progres flashcard tersinkron antar-perangkat seperti Anki.";
 
         app.innerHTML = `
-            <h1 class="page-title">⚙️ Pengaturan</h1>
+            <h1 class="settings-title">Pengaturan</h1>
 
-            <div class="set-group">
-                <div class="set-title">Profil</div>
+            <div class="set-section-label">PROFIL</div>
+            <div class="set-card">
                 <div class="set-row">
-                    <label class="set-label" for="uname">Nama pengguna</label>
-                    <input class="search set-input" id="uname" type="text" maxlength="40"
-                           placeholder="mis. Budi" value="${esc(username)}">
+                    ${chip(G.blue, "person")}
+                    <span class="set-label">Nama Pengguna</span>
+                    <span class="set-trailing"><input id="uname" class="set-input" type="text" maxlength="40" placeholder="user123" value="${esc(username)}"></span>
                 </div>
-                <p class="set-note">Ditampilkan pada sapaan di Beranda.</p>
             </div>
+            <p class="set-foot">Nama pengguna tampil di Beranda dan halaman Profil.</p>
 
-            <div class="set-group">
-                <div class="set-title">Belajar</div>
+            <div class="set-section-label">PREFERENSI</div>
+            <div class="set-card">
                 <div class="set-row">
-                    <span class="set-label">Target kartu baru / hari</span>
-                    <span class="stepper">
-                        <button class="btn" id="tMinus" aria-label="kurangi">−</button>
-                        <b id="tVal">${target}</b>
-                        <button class="btn" id="tPlus" aria-label="tambah">+</button>
+                    ${chip(G.indigo, "moon")}
+                    <span class="set-label">Mode Tampilan</span>
+                    <span class="set-trailing">
+                        <button class="slide-toggle ${isDark ? "dark" : ""}" id="themeSlide" type="button" aria-label="Mode tampilan">
+                            <span class="knob">${isDark ? "🌙" : "☀️"}</span>
+                        </button>
                     </span>
                 </div>
-            </div>
-
-            <div class="set-group">
-                <div class="set-title">Tampilan</div>
                 <div class="set-row">
-                    <span class="set-label">Tema</span>
-                    <span class="segmented">
-                        ${themeBtn("auto", "Sistem")}${themeBtn("light", "Terang")}${themeBtn("dark", "Gelap")}
+                    ${chip(G.violet, "target")}
+                    <span class="set-label">Target Harian</span>
+                    <span class="set-trailing">
+                        <span class="stepper">
+                            <button id="tMinus" type="button" aria-label="kurangi">−</button>
+                            <b id="tVal">${target}</b>
+                            <button id="tPlus" type="button" aria-label="tambah">+</button>
+                        </span>
                     </span>
                 </div>
-            </div>
-
-            <div class="set-group">
-                <div class="set-title">Cadangan & sinkronisasi</div>
-                <p class="set-note">Pindahkan progres antar-perangkat/peramban lewat berkas.
-                    Saat <b>impor</b>, data digabung cerdas — untuk tiap kartu, review
-                    terbaru yang menang, jadi progres tidak hilang (mirip Anki).</p>
-                <div class="set-actions">
-                    <button class="btn btn-primary" id="exportBtn">⬇️ Ekspor cadangan</button>
-                    <button class="btn" id="importBtn">⬆️ Impor cadangan</button>
-                    <input type="file" id="importFile" accept="application/json,.json" hidden>
-                </div>
-                <p class="set-msg" id="backupMsg" hidden></p>
-            </div>
-
-            <div class="set-group">
-                <div class="set-title">Sinkronisasi Google Drive</div>
-                <p class="set-note">Sinkron otomatis antar-perangkat lewat folder privat
-                    aplikasi di Google Drive (web ↔ web). Butuh <b>Client ID Google</b> Anda
-                    sendiri — panduan di <code>web/README.md</code>. Data tetap privat: hanya
-                    folder aplikasi yang diakses.</p>
                 <div class="set-row">
-                    <label class="set-label" for="gClient">Client ID (Web)</label>
-                    <input class="search set-input" id="gClient" type="text"
-                           placeholder="xxxx.apps.googleusercontent.com" value="${esc(gsync.getClientId())}">
+                    ${chip(G.globe, "globe")}
+                    <span class="set-label">Bahasa</span>
+                    <span class="set-trailing">Bahasa Indonesia</span>
                 </div>
-                <div class="set-actions">
-                    <button class="btn" id="gSaveId">Simpan Client ID</button>
-                    ${gsync.isConfigured()
-                        ? (gsync.isSignedIn()
-                            ? `<button class="btn btn-primary" id="gSync">🔄 Sinkronkan sekarang</button>
-                               <button class="btn" id="gOut">Keluar</button>`
-                            : `<button class="btn btn-primary" id="gIn">Masuk dengan Google</button>`)
-                        : ""}
+            </div>
+
+            <div class="set-section-label">AKUN & SINKRONISASI</div>
+            <div class="set-card">
+                <div class="set-row">
+                    ${chip(G.teal, "cloud")}
+                    <input id="gClient" class="set-input wide" type="text"
+                        placeholder="Client ID (Web) — xxxx.apps.googleusercontent.com" value="${esc(gsync.getClientId())}">
                 </div>
-                ${gsync.isConfigured() && gsync.isSignedIn()
-                    ? `<div class="set-row" style="margin-top:12px">
-                           <span class="set-label">Sinkronisasi otomatis</span>
-                           <span class="segmented">
-                               <button class="seg ${store.getAutoSync() ? "active" : ""}" id="gAutoOn">Nyala</button>
-                               <button class="seg ${!store.getAutoSync() ? "active" : ""}" id="gAutoOff">Mati</button>
-                           </span>
-                       </div>
-                       <p class="set-note">${gsync.linkedEmail() ? "Masuk sebagai " + esc(gsync.linkedEmail()) + ". " : ""}${
-                           store.getDriveLastSync() ? "Tersinkron " + esc(relTime(store.getDriveLastSync())) + "." : "Belum pernah tersinkron."
-                       }</p>`
+                ${signedIn ? `
+                <div class="set-row">
+                    ${chip(G.blue, "person")}
+                    <span class="set-label">Akun</span>
+                    <span class="set-trailing">${esc(gsync.linkedEmail() || "Tersambung")}</span>
+                </div>
+                <div class="set-row">
+                    ${chip(G.indigo, "sync")}
+                    <span class="set-label">Sinkronisasi otomatis</span>
+                    <span class="set-trailing"><label class="switch"><input type="checkbox" id="gAuto" ${store.getAutoSync() ? "checked" : ""}><span class="slider"></span></label></span>
+                </div>` : ""}
+            </div>
+            <div class="set-actions">
+                <button class="btn" id="gSaveId" type="button">Simpan Client ID</button>
+                ${configured
+                    ? (signedIn
+                        ? `<button class="btn btn-primary" id="gSync" type="button">Sinkronkan sekarang</button>
+                           <button class="btn" id="gOut" type="button">Keluar</button>`
+                        : `<button class="gbtn" id="gIn" type="button">${GOOGLE_G} Masuk dengan Google</button>`)
                     : ""}
-                <p class="set-msg" id="gMsg" hidden></p>
+            </div>
+            <p class="set-msg" id="gMsg" hidden></p>
+            <p class="set-foot">${syncFoot}</p>
+
+            <div class="set-section-label">CADANGAN BERKAS</div>
+            <div class="set-actions" style="margin-top:0">
+                <button class="btn btn-primary" id="exportBtn" type="button">Ekspor cadangan</button>
+                <button class="btn" id="importBtn" type="button">Impor cadangan</button>
+                <input type="file" id="importFile" accept="application/json,.json" hidden>
+            </div>
+            <p class="set-msg" id="backupMsg" hidden></p>
+            <p class="set-foot">Pindahkan progres antar-perangkat lewat berkas. Saat impor, data digabung
+                cerdas — untuk tiap kartu review terbaru yang menang, jadi progres tidak hilang (mirip Anki).</p>
+
+            <div class="set-section-label">STATISTIK</div>
+            <div class="set-card">
+                <div class="set-row">${chip(G.flame, "flame")}<span class="set-label">Streak</span><span class="set-trailing">${streak} hari</span></div>
+                <div class="set-row">${chip(G.sky, "cards")}<span class="set-label">Kartu dipelajari</span><span class="set-trailing">${learned}</span></div>
             </div>
 
-            <div class="set-group">
-                <div class="set-title">Statistik</div>
-                <div class="detail-grid" style="margin:6px 0 0">
-                    <div class="fact"><div class="fact-label">Streak</div><div class="fact-value">${streak.count} hari</div></div>
-                    <div class="fact"><div class="fact-label">Kartu dipelajari</div><div class="fact-value">${learned}</div></div>
-                </div>
+            <div class="set-section-label">DATA BELAJAR</div>
+            <div class="set-card">
+                <button class="set-row tappable" id="resetBtn" type="button">
+                    ${chip(G.danger, "trash")}
+                    <span class="set-label" style="color:var(--danger)">Reset Semua Progress</span>
+                </button>
             </div>
+            <p class="set-foot">Menghapus progres flashcard, streak, jawaban, dan pengaturan di peramban ini. Tidak bisa dibatalkan.</p>`;
 
-            <div class="set-group danger">
-                <div class="set-title">Zona bahaya</div>
-                <div class="set-actions">
-                    <button class="btn btn-danger" id="resetBtn">🗑️ Reset semua progres</button>
-                </div>
-                <p class="set-note">Menghapus progres flashcard, streak, dan pengaturan di peramban ini. Tidak bisa dibatalkan.</p>
-            </div>`;
+        // ---- Wiring ----
+        const on = (id, ev, fn) => { const el = document.getElementById(id); if (el) el.addEventListener(ev, fn); };
 
         // Username
         const uname = document.getElementById("uname");
         uname.addEventListener("change", () => store.setUsername(uname.value.trim()));
+
+        // Theme (sun/moon slide toggle)
+        on("themeSlide", "click", () => { setTheme(effectiveIsDark() ? "light" : "dark"); draw(); });
 
         // Daily target
         const setT = (delta) => {
@@ -155,76 +185,61 @@ export function renderSettings(app) {
             store.setDailyTarget(next);
             document.getElementById("tVal").textContent = next;
         };
-        document.getElementById("tMinus").addEventListener("click", () => setT(-5));
-        document.getElementById("tPlus").addEventListener("click", () => setT(+5));
+        on("tMinus", "click", () => setT(-5));
+        on("tPlus", "click", () => setT(+5));
 
-        // Theme
-        app.querySelectorAll("[data-theme-set]").forEach((b) =>
-            b.addEventListener("click", () => { setTheme(b.dataset.themeSet); draw(); })
-        );
-
-        // Backup
-        const msg = (text, isError = false) => {
+        // File backup
+        const bmsg = (text, isError = false) => {
             const el = document.getElementById("backupMsg");
-            el.hidden = false;
-            el.textContent = text;
-            el.classList.toggle("error", isError);
+            el.hidden = false; el.textContent = text; el.classList.toggle("error", isError);
         };
-        document.getElementById("exportBtn").addEventListener("click", () => {
+        on("exportBtn", "click", () => {
             download(`ichigo-backup-${dateStamp()}.json`, JSON.stringify(store.exportState(), null, 2));
-            msg("Cadangan diunduh.");
+            bmsg("Cadangan diunduh.");
         });
         const fileInput = document.getElementById("importFile");
-        document.getElementById("importBtn").addEventListener("click", () => fileInput.click());
+        on("importBtn", "click", () => fileInput.click());
         fileInput.addEventListener("change", async () => {
             const file = fileInput.files && fileInput.files[0];
             if (!file) return;
             try {
-                const data = JSON.parse(await file.text());
-                const res = store.importState(data);
-                msg(`Impor berhasil — ${res.progress} kartu tersimpan (digabung).`);
+                const res = store.importState(JSON.parse(await file.text()));
+                bmsg(`Impor berhasil — ${res.progress} kartu tersimpan (digabung).`);
                 draw();
             } catch (e) {
-                msg("Gagal impor: " + e.message, true);
-            } finally {
-                fileInput.value = "";
-            }
+                bmsg("Gagal impor: " + e.message, true);
+            } finally { fileInput.value = ""; }
         });
 
         // Reset
-        document.getElementById("resetBtn").addEventListener("click", () => {
-            if (confirm("Reset semua progres flashcard, streak, dan pengaturan di peramban ini?")) {
-                store.resetAll();
-                draw();
+        on("resetBtn", "click", () => {
+            if (confirm("Reset semua progres flashcard, streak, jawaban, dan pengaturan di peramban ini?")) {
+                store.resetAll(); draw();
             }
         });
 
         // Google Drive sync
         const gmsg = (text, isError = false) => {
             const el = document.getElementById("gMsg");
-            el.hidden = false;
-            el.textContent = text;
-            el.classList.toggle("error", isError);
+            el.hidden = false; el.textContent = text; el.classList.toggle("error", isError);
         };
-        const on = (id, fn) => { const el = document.getElementById(id); if (el) el.addEventListener("click", fn); };
-        on("gSaveId", () => {
+        on("gSaveId", "click", () => {
             gsync.setClientId(document.getElementById("gClient").value);
             draw();
             gmsg(gsync.isConfigured() ? "Client ID disimpan." : "Client ID dikosongkan.");
         });
-        on("gIn", async () => {
+        on("gIn", "click", async () => {
             gmsg("Membuka Google…");
             try { await gsync.signIn(); draw(); gmsg("Berhasil masuk."); }
             catch (e) { gmsg("Gagal masuk: " + e.message, true); }
         });
-        on("gSync", async () => {
+        on("gSync", "click", async () => {
             gmsg("Menyinkronkan…");
             try { await gsync.syncNow({ interactive: true }); draw(); gmsg("Sinkronisasi selesai."); }
             catch (e) { gmsg("Gagal sinkron: " + e.message, true); }
         });
-        on("gOut", () => { gsync.signOut(); draw(); });
-        on("gAutoOn", () => { store.setAutoSync(true); draw(); });
-        on("gAutoOff", () => { store.setAutoSync(false); draw(); });
+        on("gOut", "click", () => { gsync.signOut(); draw(); });
+        on("gAuto", "change", (e) => { store.setAutoSync(e.target.checked); });
     };
 
     draw();
