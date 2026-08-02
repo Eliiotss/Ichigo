@@ -42,7 +42,7 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `GrammarModel.swift` move to 182 (N3) and 132 (N4), enforced by
   `check_dataset_counts.py`, bringing N5/N4/N3 to 84/132/182 — level with the
   widely-cited JLPT Sensei list counts.
-- **659 verified N3 vocabulary entries** (`VocabN3.json`, `N3_V1111`–`N3_V1769`),
+- **690 verified N3 vocabulary entries** (`VocabN3.json`, `N3_V1111`–`N3_V1800`),
   hand-checked batches of common words not already in the set — society/work/health/
   abstract nouns, suru-, plain and compound verbs, na-adjectives, adverbs and
   onomatopoeia (e.g. 発揮する, 把握する, 稼ぐ, 諦める, 取り組む, 味わう, 引っ張る,
@@ -51,9 +51,10 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   申請, 頻度, 単調, 過度, 相次いで, 次々, とっくに, 筋肉, 血液, 神経, 姿勢, 感謝, 緊張,
   覚悟, 頑固, 真剣, 天候, 稲妻, 虹, 学問, 講義, 論文, 職業, 履歴書, 交渉, 名刺, 郊外,
   首都, 渋滞, 勤める, 任せる, 預ける, 献立, 冷凍, 外食, 家電, 暖房, 換気, 衣服, 制服,
-  割引, 消費税, 通帳, 炊く). Each carries an accurate reading, Indonesian
-  meaning and word type; the level count advertised in
-  `VocabModel.swift` moves 1.110 → 1.470 and stays enforced by
+  割引, 消費税, 通帳, 炊く, 労働, 雇用, 概念, 定義, グループ, システム, 従って,
+  いわゆる). Each carries an accurate reading, Indonesian meaning and word type; the
+  level count advertised in `VocabModel.swift` moves 1.110 → **1.800** — level with
+  the widely-cited Tanos/JLPT-Sensei N3 vocabulary figure — and stays enforced by
   `check_dataset_counts.py`. Every candidate was deduplicated against N5/N4/N3
   before insertion — a large share of candidates were already present, confirming
   the set is already broad. Deliberately kept to genuinely-known words rather than
