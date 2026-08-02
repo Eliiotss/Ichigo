@@ -1607,6 +1607,27 @@
     {"id": "N3_V1606", "kanji": "鋭い", "hiragana": "するどい", "arti": "tajam", "jenisKata": "Kata Sifat"},
     {"id": "N3_V1607", "kanji": "鈍い", "hiragana": "にぶい", "arti": "tumpul / lamban", "jenisKata": "Kata Sifat"},
     {"id": "N3_V1608", "kanji": "図々しい", "hiragana": "ずうずうしい", "arti": "tebal muka / tak tahu malu", "jenisKata": "Kata Sifat"},
-    {"id": "N3_V1609", "kanji": "等しい", "hiragana": "ひとしい", "arti": "sama / setara", "jenisKata": "Kata Sifat"}
+    {"id": "N3_V1609", "kanji": "等しい", "hiragana": "ひとしい", "arti": "sama / setara", "jenisKata": "Kata Sifat"},
+    {"id": "N3_V1610", "kanji": "比較する", "hiragana": "ひかくする", "arti": "membandingkan", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1611", "kanji": "区分する", "hiragana": "くぶんする", "arti": "mengelompokkan", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1612", "kanji": "整頓する", "hiragana": "せいとんする", "arti": "merapikan", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1613", "kanji": "評価する", "hiragana": "ひょうかする", "arti": "menilai / mengevaluasi", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1614", "kanji": "想定する", "hiragana": "そうていする", "arti": "mengasumsikan", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1615", "kanji": "検証する", "hiragana": "けんしょうする", "arti": "memverifikasi", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1616", "kanji": "分析する", "hiragana": "ぶんせきする", "arti": "menganalisis", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1617", "kanji": "正当", "hiragana": "せいとう", "arti": "sah / wajar", "jenisKata": "Kata Sifat-na"},
+    {"id": "N3_V1618", "kanji": "莫大", "hiragana": "ばくだい", "arti": "sangat besar (nilai)", "jenisKata": "Kata Sifat-na"},
+    {"id": "N3_V1619", "kanji": "概念", "hiragana": "がいねん", "arti": "konsep", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1620", "kanji": "観念", "hiragana": "かんねん", "arti": "gagasan / notion", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1621", "kanji": "論理", "hiragana": "ろんり", "arti": "logika", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1622", "kanji": "原則", "hiragana": "げんそく", "arti": "asas / prinsip", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1623", "kanji": "前提", "hiragana": "ぜんてい", "arti": "premis / prasyarat", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1624", "kanji": "仮定", "hiragana": "かてい", "arti": "asumsi", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1625", "kanji": "定義", "hiragana": "ていぎ", "arti": "definisi", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1626", "kanji": "概要", "hiragana": "がいよう", "arti": "ikhtisar / garis besar", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1627", "kanji": "趣旨", "hiragana": "しゅし", "arti": "maksud / tujuan", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1628", "kanji": "意義", "hiragana": "いぎ", "arti": "makna / signifikansi", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1629", "kanji": "特性", "hiragana": "とくせい", "arti": "karakteristik", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1630", "kanji": "属性", "hiragana": "ぞくせい", "arti": "atribut", "jenisKata": "Kata Benda"}
 ]
     
