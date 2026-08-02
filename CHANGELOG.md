@@ -42,7 +42,7 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `GrammarModel.swift` move to 182 (N3) and 132 (N4), enforced by
   `check_dataset_counts.py`, bringing N5/N4/N3 to 84/132/182 — level with the
   widely-cited JLPT Sensei list counts.
-- **573 verified N3 vocabulary entries** (`VocabN3.json`, `N3_V1111`–`N3_V1683`),
+- **606 verified N3 vocabulary entries** (`VocabN3.json`, `N3_V1111`–`N3_V1716`),
   hand-checked batches of common words not already in the set — society/work/health/
   abstract nouns, suru-, plain and compound verbs, na-adjectives, adverbs and
   onomatopoeia (e.g. 発揮する, 把握する, 稼ぐ, 諦める, 取り組む, 味わう, 引っ張る,
