@@ -1661,6 +1661,26 @@
     {"id": "N3_V1660", "kanji": "触覚", "hiragana": "しょっかく", "arti": "indra peraba", "jenisKata": "Kata Benda"},
     {"id": "N3_V1661", "kanji": "感触", "hiragana": "かんしょく", "arti": "sentuhan / kesan", "jenisKata": "Kata Benda"},
     {"id": "N3_V1662", "kanji": "騒音", "hiragana": "そうおん", "arti": "kebisingan", "jenisKata": "Kata Benda"},
-    {"id": "N3_V1663", "kanji": "静けさ", "hiragana": "しずけさ", "arti": "keheningan", "jenisKata": "Kata Benda"}
+    {"id": "N3_V1663", "kanji": "静けさ", "hiragana": "しずけさ", "arti": "keheningan", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1664", "kanji": "成立する", "hiragana": "せいりつする", "arti": "terbentuk / tercapai", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1665", "kanji": "増加する", "hiragana": "ぞうかする", "arti": "meningkat (jumlah)", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1666", "kanji": "減少する", "hiragana": "げんしょうする", "arti": "menurun (jumlah)", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1667", "kanji": "上昇する", "hiragana": "じょうしょうする", "arti": "naik / meningkat", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1668", "kanji": "下降する", "hiragana": "かこうする", "arti": "turun / menurun", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1669", "kanji": "導入する", "hiragana": "どうにゅうする", "arti": "memperkenalkan / mengintroduksi", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1670", "kanji": "流通する", "hiragana": "りゅうつうする", "arti": "beredar / didistribusikan", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1671", "kanji": "蓄積する", "hiragana": "ちくせきする", "arti": "menumpuk / mengakumulasi", "jenisKata": "Kata Kerja"},
+    {"id": "N3_V1672", "kanji": "イメージ", "hiragana": "イメージ", "arti": "citra / kesan", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1673", "kanji": "テーマ", "hiragana": "テーマ", "arti": "tema", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1674", "kanji": "システム", "hiragana": "システム", "arti": "sistem", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1675", "kanji": "サービス", "hiragana": "サービス", "arti": "layanan", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1676", "kanji": "スケジュール", "hiragana": "スケジュール", "arti": "jadwal", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1677", "kanji": "パターン", "hiragana": "パターン", "arti": "pola", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1678", "kanji": "アドバイス", "hiragana": "アドバイス", "arti": "saran / nasihat", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1679", "kanji": "トラブル", "hiragana": "トラブル", "arti": "masalah / gangguan", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1680", "kanji": "リサイクル", "hiragana": "リサイクル", "arti": "daur ulang", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1681", "kanji": "ボランティア", "hiragana": "ボランティア", "arti": "sukarelawan", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1682", "kanji": "コミュニケーション", "hiragana": "コミュニケーション", "arti": "komunikasi", "jenisKata": "Kata Benda"},
+    {"id": "N3_V1683", "kanji": "スタイル", "hiragana": "スタイル", "arti": "gaya / postur", "jenisKata": "Kata Benda"}
 ]
     
