@@ -7,6 +7,18 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Web version of Ichigo (`web/`).** A standalone, build-free static site
+  (HTML + CSS + vanilla ES modules) that ports the app to the browser, kept fully
+  separate from the Swift sources so it never disturbs the iOS build. It includes
+  a content browser for Kanji/Vocab/Grammar N5–N3 (list + detail + live search)
+  and the Hiragana/Katakana chart, plus a **flashcard mode whose FSRS-6 scheduler
+  is a faithful port of `FlashcardModel.swift`** (same 21 official weights, same
+  Anki-style learning steps — new+Easy graduates to 4 days, new+Good enters the
+  learning steps), with progress, daily new-card quota, and streak persisted in
+  `localStorage`. Theme-aware (light/dark) and responsive. Datasets in
+  `web/data/` are copies of `Sources/AppFeature/Resources/`; see `web/README.md`
+  for how to serve it (any static host / `python3 -m http.server`). Verified
+  end-to-end in headless Chromium with no console errors.
 - **Two-way flashcard sync (Anki-style) over Google Drive.** The previously
   parked backup module is now wired into the app as automatic, bidirectional
   sync. A new `BackupMerge` engine merges the cloud snapshot with the local one
