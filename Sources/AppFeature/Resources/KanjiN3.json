@@ -18423,5 +18423,775 @@
                 "sentenceMeaning": "Saya membahas Sate ayam Jepang dengan teman."
             }
         ]
+    },
+    {
+        "id": "N3_336",
+        "kanji": "及",
+        "onyomi": "キュウ",
+        "kunyomi": "およぶ・および・およぼす",
+        "romaji": "Kyuu",
+        "meaning": "Mencapai / Dan",
+        "examples": [
+            {
+                "word": "普及",
+                "reading": "ふきゅう",
+                "romaji": "Fukyuu",
+                "meaning": "Penyebaran / Populer",
+                "sentence": "私は普及を勉強します。",
+                "sentenceFurigana": "私は普及(ふきゅう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Penyebaran / Populer."
+            },
+            {
+                "word": "及第",
+                "reading": "きゅうだい",
+                "romaji": "Kyuudai",
+                "meaning": "Lulus (ujian)",
+                "sentence": "この及第は大切です。",
+                "sentenceFurigana": "この及第(きゅうだい)はたいせつです。",
+                "sentenceMeaning": "Lulus (ujian) ini penting."
+            },
+            {
+                "word": "波及",
+                "reading": "はきゅう",
+                "romaji": "Hakyuu",
+                "meaning": "Perembetan / Dampak",
+                "sentence": "先生が波及を説明しました。",
+                "sentenceFurigana": "せんせいが波及(はきゅう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Perembetan / Dampak."
+            },
+            {
+                "word": "追及",
+                "reading": "ついきゅう",
+                "romaji": "Tsuikyuu",
+                "meaning": "Pengejaran / Pendesakan",
+                "sentence": "毎日追及を使います。",
+                "sentenceFurigana": "まいにち追及(ついきゅう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Pengejaran / Pendesakan setiap hari."
+            },
+            {
+                "word": "言及",
+                "reading": "げんきゅう",
+                "romaji": "Genkyuu",
+                "meaning": "Penyinggungan / Menyebut",
+                "sentence": "友だちと言及について話しました。",
+                "sentenceFurigana": "ともだちと言及(げんきゅう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Penyinggungan / Menyebut dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_337",
+        "kanji": "否",
+        "onyomi": "ヒ",
+        "kunyomi": "いな",
+        "romaji": "Hi",
+        "meaning": "Tidak / Menyangkal",
+        "examples": [
+            {
+                "word": "否定",
+                "reading": "ひてい",
+                "romaji": "Hitei",
+                "meaning": "Penyangkalan",
+                "sentence": "私は否定を勉強します。",
+                "sentenceFurigana": "私は否定(ひてい)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Penyangkalan."
+            },
+            {
+                "word": "拒否",
+                "reading": "きょひ",
+                "romaji": "Kyohi",
+                "meaning": "Penolakan",
+                "sentence": "この拒否は大切です。",
+                "sentenceFurigana": "この拒否(きょひ)はたいせつです。",
+                "sentenceMeaning": "Penolakan ini penting."
+            },
+            {
+                "word": "安否",
+                "reading": "あんぴ",
+                "romaji": "Anpi",
+                "meaning": "Keselamatan / Kabar",
+                "sentence": "先生が安否を説明しました。",
+                "sentenceFurigana": "せんせいが安否(あんぴ)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Keselamatan / Kabar."
+            },
+            {
+                "word": "賛否",
+                "reading": "さんぴ",
+                "romaji": "Sanpi",
+                "meaning": "Setuju-tidak setuju",
+                "sentence": "毎日賛否を使います。",
+                "sentenceFurigana": "まいにち賛否(さんぴ)をつかいます。",
+                "sentenceMeaning": "Saya memakai Setuju-tidak setuju setiap hari."
+            },
+            {
+                "word": "否決",
+                "reading": "ひけつ",
+                "romaji": "Hiketsu",
+                "meaning": "Penolakan (voting)",
+                "sentence": "友だちと否決について話しました。",
+                "sentenceFurigana": "ともだちと否決(ひけつ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Penolakan (voting) dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_338",
+        "kanji": "賛",
+        "onyomi": "サン",
+        "kunyomi": "-",
+        "romaji": "San",
+        "meaning": "Menyetujui / Memuji",
+        "examples": [
+            {
+                "word": "賛成",
+                "reading": "さんせい",
+                "romaji": "Sansei",
+                "meaning": "Persetujuan",
+                "sentence": "私は賛成を勉強します。",
+                "sentenceFurigana": "私は賛成(さんせい)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Persetujuan."
+            },
+            {
+                "word": "賛同",
+                "reading": "さんどう",
+                "romaji": "Sandou",
+                "meaning": "Menyokong",
+                "sentence": "この賛同は大切です。",
+                "sentenceFurigana": "この賛同(さんどう)はたいせつです。",
+                "sentenceMeaning": "Menyokong ini penting."
+            },
+            {
+                "word": "協賛",
+                "reading": "きょうさん",
+                "romaji": "Kyousan",
+                "meaning": "Dukungan / Sponsor",
+                "sentence": "先生が協賛を説明しました。",
+                "sentenceFurigana": "せんせいが協賛(きょうさん)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Dukungan / Sponsor."
+            },
+            {
+                "word": "称賛",
+                "reading": "しょうさん",
+                "romaji": "Shousan",
+                "meaning": "Pujian",
+                "sentence": "毎日称賛を使います。",
+                "sentenceFurigana": "まいにち称賛(しょうさん)をつかいます。",
+                "sentenceMeaning": "Saya memakai Pujian setiap hari."
+            },
+            {
+                "word": "賛否",
+                "reading": "さんぴ",
+                "romaji": "Sanpi",
+                "meaning": "Pro dan kontra",
+                "sentence": "友だちと賛否について話しました。",
+                "sentenceFurigana": "ともだちと賛否(さんぴ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Pro dan kontra dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_339",
+        "kanji": "貴",
+        "onyomi": "キ",
+        "kunyomi": "とうとい・たっとい",
+        "romaji": "Ki",
+        "meaning": "Berharga / Mulia",
+        "examples": [
+            {
+                "word": "貴重",
+                "reading": "きちょう",
+                "romaji": "Kichou",
+                "meaning": "Berharga",
+                "sentence": "私は貴重を勉強します。",
+                "sentenceFurigana": "私は貴重(きちょう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Berharga."
+            },
+            {
+                "word": "貴族",
+                "reading": "きぞく",
+                "romaji": "Kizoku",
+                "meaning": "Bangsawan",
+                "sentence": "この貴族は大切です。",
+                "sentenceFurigana": "この貴族(きぞく)はたいせつです。",
+                "sentenceMeaning": "Bangsawan ini penting."
+            },
+            {
+                "word": "高貴",
+                "reading": "こうき",
+                "romaji": "Kouki",
+                "meaning": "Mulia / Ningrat",
+                "sentence": "先生が高貴を説明しました。",
+                "sentenceFurigana": "せんせいが高貴(こうき)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Mulia / Ningrat."
+            },
+            {
+                "word": "貴金属",
+                "reading": "ききんぞく",
+                "romaji": "Kikinzoku",
+                "meaning": "Logam mulia",
+                "sentence": "毎日貴金属を使います。",
+                "sentenceFurigana": "まいにち貴金属(ききんぞく)をつかいます。",
+                "sentenceMeaning": "Saya memakai Logam mulia setiap hari."
+            },
+            {
+                "word": "貴賓",
+                "reading": "きひん",
+                "romaji": "Kihin",
+                "meaning": "Tamu kehormatan",
+                "sentence": "友だちと貴賓について話しました。",
+                "sentenceFurigana": "ともだちと貴賓(きひん)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Tamu kehormatan dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_340",
+        "kanji": "賢",
+        "onyomi": "ケン",
+        "kunyomi": "かしこい",
+        "romaji": "Ken",
+        "meaning": "Bijak / Pandai",
+        "examples": [
+            {
+                "word": "賢明",
+                "reading": "けんめい",
+                "romaji": "Kenmei",
+                "meaning": "Bijaksana",
+                "sentence": "私は賢明を勉強します。",
+                "sentenceFurigana": "私は賢明(けんめい)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Bijaksana."
+            },
+            {
+                "word": "賢者",
+                "reading": "けんじゃ",
+                "romaji": "Kenja",
+                "meaning": "Orang bijak",
+                "sentence": "この賢者は大切です。",
+                "sentenceFurigana": "この賢者(けんじゃ)はたいせつです。",
+                "sentenceMeaning": "Orang bijak ini penting."
+            },
+            {
+                "word": "賢人",
+                "reading": "けんじん",
+                "romaji": "Kenjin",
+                "meaning": "Cendekiawan",
+                "sentence": "先生が賢人を説明しました。",
+                "sentenceFurigana": "せんせいが賢人(けんじん)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Cendekiawan."
+            },
+            {
+                "word": "賢母",
+                "reading": "けんぼ",
+                "romaji": "Kenbo",
+                "meaning": "Ibu bijaksana",
+                "sentence": "毎日賢母を使います。",
+                "sentenceFurigana": "まいにち賢母(けんぼ)をつかいます。",
+                "sentenceMeaning": "Saya memakai Ibu bijaksana setiap hari."
+            },
+            {
+                "word": "賢愚",
+                "reading": "けんぐ",
+                "romaji": "Kengu",
+                "meaning": "Bijak dan bodoh",
+                "sentence": "友だちと賢愚について話しました。",
+                "sentenceFurigana": "ともだちと賢愚(けんぐ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Bijak dan bodoh dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_341",
+        "kanji": "距",
+        "onyomi": "キョ",
+        "kunyomi": "-",
+        "romaji": "Kyo",
+        "meaning": "Jarak",
+        "examples": [
+            {
+                "word": "距離",
+                "reading": "きょり",
+                "romaji": "Kyori",
+                "meaning": "Jarak",
+                "sentence": "私は距離を勉強します。",
+                "sentenceFurigana": "私は距離(きょり)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Jarak."
+            },
+            {
+                "word": "長距離",
+                "reading": "ちょうきょり",
+                "romaji": "Choukyori",
+                "meaning": "Jarak jauh",
+                "sentence": "この長距離は大切です。",
+                "sentenceFurigana": "この長距離(ちょうきょり)はたいせつです。",
+                "sentenceMeaning": "Jarak jauh ini penting."
+            },
+            {
+                "word": "短距離",
+                "reading": "たんきょり",
+                "romaji": "Tankyori",
+                "meaning": "Jarak dekat",
+                "sentence": "先生が短距離を説明しました。",
+                "sentenceFurigana": "せんせいが短距離(たんきょり)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Jarak dekat."
+            },
+            {
+                "word": "遠距離",
+                "reading": "えんきょり",
+                "romaji": "Enkyori",
+                "meaning": "Jarak jauh",
+                "sentence": "毎日遠距離を使います。",
+                "sentenceFurigana": "まいにち遠距離(えんきょり)をつかいます。",
+                "sentenceMeaning": "Saya memakai Jarak jauh setiap hari."
+            },
+            {
+                "word": "等距離",
+                "reading": "とうきょり",
+                "romaji": "Toukyori",
+                "meaning": "Jarak sama",
+                "sentence": "友だちと等距離について話しました。",
+                "sentenceFurigana": "ともだちと等距離(とうきょり)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Jarak sama dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_342",
+        "kanji": "隔",
+        "onyomi": "カク",
+        "kunyomi": "へだてる",
+        "romaji": "Kaku",
+        "meaning": "Memisahkan / Selang",
+        "examples": [
+            {
+                "word": "間隔",
+                "reading": "かんかく",
+                "romaji": "Kankaku",
+                "meaning": "Jarak / Interval",
+                "sentence": "私は間隔を勉強します。",
+                "sentenceFurigana": "私は間隔(かんかく)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Jarak / Interval."
+            },
+            {
+                "word": "隔離",
+                "reading": "かくり",
+                "romaji": "Kakuri",
+                "meaning": "Isolasi / Karantina",
+                "sentence": "この隔離は大切です。",
+                "sentenceFurigana": "この隔離(かくり)はたいせつです。",
+                "sentenceMeaning": "Isolasi / Karantina ini penting."
+            },
+            {
+                "word": "遠隔",
+                "reading": "えんかく",
+                "romaji": "Enkaku",
+                "meaning": "Jarak jauh / Remote",
+                "sentence": "先生が遠隔を説明しました。",
+                "sentenceFurigana": "せんせいが遠隔(えんかく)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Jarak jauh / Remote."
+            },
+            {
+                "word": "隔世",
+                "reading": "かくせい",
+                "romaji": "Kakusei",
+                "meaning": "Beda zaman",
+                "sentence": "毎日隔世を使います。",
+                "sentenceFurigana": "まいにち隔世(かくせい)をつかいます。",
+                "sentenceMeaning": "Saya memakai Beda zaman setiap hari."
+            },
+            {
+                "word": "隔月",
+                "reading": "かくげつ",
+                "romaji": "Kakugetsu",
+                "meaning": "Dua bulan sekali",
+                "sentence": "友だちと隔月について話しました。",
+                "sentenceFurigana": "ともだちと隔月(かくげつ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Dua bulan sekali dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_343",
+        "kanji": "端",
+        "onyomi": "タン",
+        "kunyomi": "はし・はた・は",
+        "romaji": "Tan",
+        "meaning": "Ujung / Tepi",
+        "examples": [
+            {
+                "word": "極端",
+                "reading": "きょくたん",
+                "romaji": "Kyokutan",
+                "meaning": "Ekstrem",
+                "sentence": "私は極端を勉強します。",
+                "sentenceFurigana": "私は極端(きょくたん)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Ekstrem."
+            },
+            {
+                "word": "端末",
+                "reading": "たんまつ",
+                "romaji": "Tanmatsu",
+                "meaning": "Terminal / Perangkat",
+                "sentence": "この端末は大切です。",
+                "sentenceFurigana": "この端末(たんまつ)はたいせつです。",
+                "sentenceMeaning": "Terminal / Perangkat ini penting."
+            },
+            {
+                "word": "先端",
+                "reading": "せんたん",
+                "romaji": "Sentan",
+                "meaning": "Ujung / Mutakhir",
+                "sentence": "先生が先端を説明しました。",
+                "sentenceFurigana": "せんせいが先端(せんたん)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Ujung / Mutakhir."
+            },
+            {
+                "word": "発端",
+                "reading": "ほったん",
+                "romaji": "Hottan",
+                "meaning": "Awal mula",
+                "sentence": "毎日発端を使います。",
+                "sentenceFurigana": "まいにち発端(ほったん)をつかいます。",
+                "sentenceMeaning": "Saya memakai Awal mula setiap hari."
+            },
+            {
+                "word": "道端",
+                "reading": "みちばた",
+                "romaji": "Michibata",
+                "meaning": "Pinggir jalan",
+                "sentence": "友だちと道端について話しました。",
+                "sentenceFurigana": "ともだちと道端(みちばた)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Pinggir jalan dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_344",
+        "kanji": "偏",
+        "onyomi": "ヘン",
+        "kunyomi": "かたよる",
+        "romaji": "Hen",
+        "meaning": "Berat sebelah / Bias",
+        "examples": [
+            {
+                "word": "偏見",
+                "reading": "へんけん",
+                "romaji": "Henken",
+                "meaning": "Prasangka",
+                "sentence": "私は偏見を勉強します。",
+                "sentenceFurigana": "私は偏見(へんけん)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Prasangka."
+            },
+            {
+                "word": "偏り",
+                "reading": "かたより",
+                "romaji": "Katayori",
+                "meaning": "Kecondongan / Bias",
+                "sentence": "この偏りは大切です。",
+                "sentenceFurigana": "この偏り(かたより)はたいせつです。",
+                "sentenceMeaning": "Kecondongan / Bias ini penting."
+            },
+            {
+                "word": "偏差値",
+                "reading": "へんさち",
+                "romaji": "Hensachi",
+                "meaning": "Nilai deviasi",
+                "sentence": "先生が偏差値を説明しました。",
+                "sentenceFurigana": "せんせいが偏差値(へんさち)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Nilai deviasi."
+            },
+            {
+                "word": "偏向",
+                "reading": "へんこう",
+                "romaji": "Henkou",
+                "meaning": "Keberpihakan",
+                "sentence": "毎日偏向を使います。",
+                "sentenceFurigana": "まいにち偏向(へんこう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Keberpihakan setiap hari."
+            },
+            {
+                "word": "偏食",
+                "reading": "へんしょく",
+                "romaji": "Henshoku",
+                "meaning": "Pilih-pilih makanan",
+                "sentence": "友だちと偏食について話しました。",
+                "sentenceFurigana": "ともだちと偏食(へんしょく)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Pilih-pilih makanan dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_345",
+        "kanji": "傍",
+        "onyomi": "ボウ",
+        "kunyomi": "かたわら・そば",
+        "romaji": "Bou",
+        "meaning": "Di samping",
+        "examples": [
+            {
+                "word": "傍観",
+                "reading": "ぼうかん",
+                "romaji": "Boukan",
+                "meaning": "Menonton (tak ikut)",
+                "sentence": "私は傍観を勉強します。",
+                "sentenceFurigana": "私は傍観(ぼうかん)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Menonton (tak ikut)."
+            },
+            {
+                "word": "傍聴",
+                "reading": "ぼうちょう",
+                "romaji": "Bouchou",
+                "meaning": "Menghadiri (sebagai penonton)",
+                "sentence": "この傍聴は大切です。",
+                "sentenceFurigana": "この傍聴(ぼうちょう)はたいせつです。",
+                "sentenceMeaning": "Menghadiri (sebagai penonton) ini penting."
+            },
+            {
+                "word": "傍線",
+                "reading": "ぼうせん",
+                "romaji": "Bousen",
+                "meaning": "Garis bawah samping",
+                "sentence": "先生が傍線を説明しました。",
+                "sentenceFurigana": "せんせいが傍線(ぼうせん)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Garis bawah samping."
+            },
+            {
+                "word": "傍点",
+                "reading": "ぼうてん",
+                "romaji": "Bouten",
+                "meaning": "Tanda penekanan",
+                "sentence": "毎日傍点を使います。",
+                "sentenceFurigana": "まいにち傍点(ぼうてん)をつかいます。",
+                "sentenceMeaning": "Saya memakai Tanda penekanan setiap hari."
+            },
+            {
+                "word": "路傍",
+                "reading": "ろぼう",
+                "romaji": "Robou",
+                "meaning": "Pinggir jalan",
+                "sentence": "友だちと路傍について話しました。",
+                "sentenceFurigana": "ともだちと路傍(ろぼう)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Pinggir jalan dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_346",
+        "kanji": "幅",
+        "onyomi": "フク",
+        "kunyomi": "はば",
+        "romaji": "Fuku",
+        "meaning": "Lebar",
+        "examples": [
+            {
+                "word": "大幅",
+                "reading": "おおはば",
+                "romaji": "Oohaba",
+                "meaning": "Besar-besaran",
+                "sentence": "私は大幅を勉強します。",
+                "sentenceFurigana": "私は大幅(おおはば)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Besar-besaran."
+            },
+            {
+                "word": "幅広い",
+                "reading": "はばひろい",
+                "romaji": "Habahiroi",
+                "meaning": "Luas / Beragam",
+                "sentence": "この幅広いは大切です。",
+                "sentenceFurigana": "この幅広い(はばひろい)はたいせつです。",
+                "sentenceMeaning": "Luas / Beragam ini penting."
+            },
+            {
+                "word": "全幅",
+                "reading": "ぜんぷく",
+                "romaji": "Zenpuku",
+                "meaning": "Lebar penuh",
+                "sentence": "先生が全幅を説明しました。",
+                "sentenceFurigana": "せんせいが全幅(ぜんぷく)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Lebar penuh."
+            },
+            {
+                "word": "振幅",
+                "reading": "しんぷく",
+                "romaji": "Shinpuku",
+                "meaning": "Amplitudo",
+                "sentence": "毎日振幅を使います。",
+                "sentenceFurigana": "まいにち振幅(しんぷく)をつかいます。",
+                "sentenceMeaning": "Saya memakai Amplitudo setiap hari."
+            },
+            {
+                "word": "値幅",
+                "reading": "ねはば",
+                "romaji": "Nehaba",
+                "meaning": "Rentang harga",
+                "sentence": "友だちと値幅について話しました。",
+                "sentenceFurigana": "ともだちと値幅(ねはば)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Rentang harga dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_347",
+        "kanji": "巨",
+        "onyomi": "キョ",
+        "kunyomi": "-",
+        "romaji": "Kyo",
+        "meaning": "Raksasa / Besar",
+        "examples": [
+            {
+                "word": "巨大",
+                "reading": "きょだい",
+                "romaji": "Kyodai",
+                "meaning": "Raksasa / Besar sekali",
+                "sentence": "私は巨大を勉強します。",
+                "sentenceFurigana": "私は巨大(きょだい)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Raksasa / Besar sekali."
+            },
+            {
+                "word": "巨額",
+                "reading": "きょがく",
+                "romaji": "Kyogaku",
+                "meaning": "Jumlah sangat besar",
+                "sentence": "この巨額は大切です。",
+                "sentenceFurigana": "この巨額(きょがく)はたいせつです。",
+                "sentenceMeaning": "Jumlah sangat besar ini penting."
+            },
+            {
+                "word": "巨人",
+                "reading": "きょじん",
+                "romaji": "Kyojin",
+                "meaning": "Raksasa",
+                "sentence": "先生が巨人を説明しました。",
+                "sentenceFurigana": "せんせいが巨人(きょじん)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Raksasa."
+            },
+            {
+                "word": "巨匠",
+                "reading": "きょしょう",
+                "romaji": "Kyoshou",
+                "meaning": "Maestro",
+                "sentence": "毎日巨匠を使います。",
+                "sentenceFurigana": "まいにち巨匠(きょしょう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Maestro setiap hari."
+            },
+            {
+                "word": "巨費",
+                "reading": "きょひ",
+                "romaji": "Kyohi",
+                "meaning": "Biaya besar",
+                "sentence": "友だちと巨費について話しました。",
+                "sentenceFurigana": "ともだちと巨費(きょひ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Biaya besar dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_348",
+        "kanji": "微",
+        "onyomi": "ビ",
+        "kunyomi": "-",
+        "romaji": "Bi",
+        "meaning": "Sedikit / Halus",
+        "examples": [
+            {
+                "word": "微妙",
+                "reading": "びみょう",
+                "romaji": "Bimyou",
+                "meaning": "Rumit / Samar",
+                "sentence": "私は微妙を勉強します。",
+                "sentenceFurigana": "私は微妙(びみょう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Rumit / Samar."
+            },
+            {
+                "word": "微小",
+                "reading": "びしょう",
+                "romaji": "Bishou",
+                "meaning": "Sangat kecil",
+                "sentence": "この微小は大切です。",
+                "sentenceFurigana": "この微小(びしょう)はたいせつです。",
+                "sentenceMeaning": "Sangat kecil ini penting."
+            },
+            {
+                "word": "微笑",
+                "reading": "びしょう",
+                "romaji": "Bishou",
+                "meaning": "Senyuman",
+                "sentence": "先生が微笑を説明しました。",
+                "sentenceFurigana": "せんせいが微笑(びしょう)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Senyuman."
+            },
+            {
+                "word": "顕微鏡",
+                "reading": "けんびきょう",
+                "romaji": "Kenbikyou",
+                "meaning": "Mikroskop",
+                "sentence": "毎日顕微鏡を使います。",
+                "sentenceFurigana": "まいにち顕微鏡(けんびきょう)をつかいます。",
+                "sentenceMeaning": "Saya memakai Mikroskop setiap hari."
+            },
+            {
+                "word": "微生物",
+                "reading": "びせいぶつ",
+                "romaji": "Biseibutsu",
+                "meaning": "Mikroorganisme",
+                "sentence": "友だちと微生物について話しました。",
+                "sentenceFurigana": "ともだちと微生物(びせいぶつ)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Mikroorganisme dengan teman."
+            }
+        ]
+    },
+    {
+        "id": "N3_349",
+        "kanji": "劣",
+        "onyomi": "レツ",
+        "kunyomi": "おとる",
+        "romaji": "Retsu",
+        "meaning": "Kalah / Inferior",
+        "examples": [
+            {
+                "word": "劣等",
+                "reading": "れっとう",
+                "romaji": "Rettou",
+                "meaning": "Inferioritas",
+                "sentence": "私は劣等を勉強します。",
+                "sentenceFurigana": "私は劣等(れっとう)をべんきょうします。",
+                "sentenceMeaning": "Saya mempelajari Inferioritas."
+            },
+            {
+                "word": "優劣",
+                "reading": "ゆうれつ",
+                "romaji": "Yuuretsu",
+                "meaning": "Unggul-lemah",
+                "sentence": "この優劣は大切です。",
+                "sentenceFurigana": "この優劣(ゆうれつ)はたいせつです。",
+                "sentenceMeaning": "Unggul-lemah ini penting."
+            },
+            {
+                "word": "劣悪",
+                "reading": "れつあく",
+                "romaji": "Retsuaku",
+                "meaning": "Buruk / Rendah",
+                "sentence": "先生が劣悪を説明しました。",
+                "sentenceFurigana": "せんせいが劣悪(れつあく)をせつめいしました。",
+                "sentenceMeaning": "Guru menjelaskan Buruk / Rendah."
+            },
+            {
+                "word": "劣勢",
+                "reading": "れっせい",
+                "romaji": "Ressei",
+                "meaning": "Posisi lemah",
+                "sentence": "毎日劣勢を使います。",
+                "sentenceFurigana": "まいにち劣勢(れっせい)をつかいます。",
+                "sentenceMeaning": "Saya memakai Posisi lemah setiap hari."
+            },
+            {
+                "word": "劣化",
+                "reading": "れっか",
+                "romaji": "Rekka",
+                "meaning": "Penurunan mutu",
+                "sentence": "友だちと劣化について話しました。",
+                "sentenceFurigana": "ともだちと劣化(れっか)についてはなしました。",
+                "sentenceMeaning": "Saya membahas Penurunan mutu dengan teman."
+            }
+        ]
     }
 ]

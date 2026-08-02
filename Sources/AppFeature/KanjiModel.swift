@@ -57,7 +57,7 @@ struct JLPTLevel: Identifiable {
 let jlptLevels: [JLPTLevel] = [
     JLPTLevel(id: "N5", name: "Beginner", description: "120 Essential Kanji", color: AppTheme.levelColor("N5"), bgColor: AppTheme.levelBackground("N5"), isLocked: false, jsonFile: "KanjiN5"),
     JLPTLevel(id: "N4", name: "Elementary", description: "181 Essential Kanji", color: AppTheme.levelColor("N4"), bgColor: AppTheme.levelBackground("N4"), isLocked: false, jsonFile: "KanjiN4"),
-    JLPTLevel(id: "N3", name: "Intermediate", description: "335 Essential Kanji", color: AppTheme.levelColor("N3"), bgColor: AppTheme.levelBackground("N3"), isLocked: false, jsonFile: "KanjiN3"),
+    JLPTLevel(id: "N3", name: "Intermediate", description: "349 Essential Kanji", color: AppTheme.levelColor("N3"), bgColor: AppTheme.levelBackground("N3"), isLocked: false, jsonFile: "KanjiN3"),
     JLPTLevel(id: "N2", name: "Pre-Advanced", description: "1.000+ Complex Kanji", color: AppTheme.levelColor("N2"), bgColor: AppTheme.levelBackground("N2"), isLocked: true, jsonFile: "KanjiN2"),
     JLPTLevel(id: "N1", name: "Advanced", description: "2.000+ Master Kanji", color: AppTheme.levelColor("N1"), bgColor: AppTheme.levelBackground("N1"), isLocked: true, jsonFile: "KanjiN1")
 ]
