@@ -6,6 +6,7 @@ const K = {
     settings: "ichigo_settings_v1",
     newToday: "ichigo_new_today_v1",
     streak: "ichigo_streak_v1",
+    driveSync: "ichigo_drive_sync_v1",
 };
 
 function read(key, fallback) {
@@ -82,6 +83,22 @@ export function getUsername() { return read(K.settings, {}).username || ""; }
 export function setUsername(name) {
     const s = read(K.settings, {});
     s.username = String(name || "").slice(0, 40);
+    write(K.settings, s);
+}
+
+// ---------- Google Drive sync (device-local flags) ----------
+
+export function getDriveLastSync() { return read(K.driveSync, {}).at || null; }
+export function setDriveLastSync(ts) { write(K.driveSync, { at: ts }); }
+
+/// Auto-sync defaults on; stored in settings so the preference is remembered.
+export function getAutoSync() {
+    const v = read(K.settings, {}).autoSync;
+    return v === undefined ? true : !!v;
+}
+export function setAutoSync(on) {
+    const s = read(K.settings, {});
+    s.autoSync = !!on;
     write(K.settings, s);
 }
 

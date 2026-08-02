@@ -213,6 +213,8 @@ function grade(session, p, gradeValue) {
 function renderDone(session) {
     const { app, reviewed } = session;
     const streak = store.recordStudyToday();
+    // Let the app push progress to Drive in the background (if auto-sync is on).
+    window.dispatchEvent(new CustomEvent("ichigo-session-done"));
     app.innerHTML = `
         <a class="crumb" href="#/flashcard">← Flashcard</a>
         <div class="fc-wrap">

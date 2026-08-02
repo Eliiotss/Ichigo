@@ -27,6 +27,17 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   - **Motion polish.** Page-enter fade on navigation, flashcard reveal/next-card
     animations, active-press feedback, all disabled under
     `prefers-reduced-motion`.
+  - **Automatic Google Drive sync.** Optional cloud sync to the Drive
+    `appDataFolder` via Google Identity Services (browser token flow) + Drive v3
+    REST — no backend, no SDK (`web/js/drive.js`, `web/js/gsync.js`). `syncNow`
+    pulls the remote snapshot, merges it into local storage (reusing
+    `store.importState`, the same newest-review-wins rule), and pushes the merged
+    result; auto-sync runs on app load and after each study session. Requires a
+    user-supplied OAuth **Web** client ID (entered in Settings or via a git-ignored
+    `web/config.js`; template in `web/config.example.js`) — no credentials in the
+    repo. Syncs **web ↔ web** (its backup format differs from the iOS payload).
+    Non-OAuth paths verified in headless Chromium with no console errors; the
+    interactive OAuth flow is documented in `web/README.md` for manual testing.
 - **Two-way flashcard sync (Anki-style) over Google Drive.** The previously
   parked backup module is now wired into the app as automatic, bidirectional
   sync. A new `BackupMerge` engine merges the cloud snapshot with the local one

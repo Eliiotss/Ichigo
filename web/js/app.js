@@ -4,6 +4,7 @@
 import { SECTIONS } from "./levels.js";
 import { renderHome, renderLevels, renderList, renderDetail, renderHiragana } from "./browse.js";
 import { initTheme } from "./theme.js";
+import * as gsync from "./gsync.js";
 
 const app = document.getElementById("app");
 const tabsEl = document.getElementById("tabs");
@@ -78,4 +79,10 @@ async function renderFlashcard(container) {
 initTheme();
 buildTabs();
 window.addEventListener("hashchange", router);
+// After a Drive sync merges remote data, refresh the current view.
+window.addEventListener("ichigo-synced", router);
+// A finished study session triggers a background push (if auto-sync is on).
+window.addEventListener("ichigo-session-done", () => gsync.autoSyncIfEnabled());
 router();
+// Pull-merge on load (silent — no-op unless configured, consented and enabled).
+gsync.autoSyncIfEnabled();

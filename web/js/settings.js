@@ -2,11 +2,22 @@
 // merge), study stats, and reset.
 
 import * as store from "./store.js";
+import * as gsync from "./gsync.js";
 import { setTheme, currentTheme } from "./theme.js";
 
 const esc = (s) =>
     String(s ?? "").replace(/[&<>"']/g, (c) =>
         ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+const relFmt = new Intl.RelativeTimeFormat("id-ID", { numeric: "auto" });
+function relTime(ts) {
+    const diff = ts - Date.now();
+    const mins = Math.round(diff / 60000);
+    if (Math.abs(mins) < 60) return relFmt.format(mins, "minute");
+    const hrs = Math.round(mins / 60);
+    if (Math.abs(hrs) < 24) return relFmt.format(hrs, "hour");
+    return relFmt.format(Math.round(hrs / 24), "day");
+}
 
 function download(filename, text) {
     const blob = new Blob([text], { type: "application/json" });
@@ -84,6 +95,41 @@ export function renderSettings(app) {
             </div>
 
             <div class="set-group">
+                <div class="set-title">Sinkronisasi Google Drive</div>
+                <p class="set-note">Sinkron otomatis antar-perangkat lewat folder privat
+                    aplikasi di Google Drive (web ↔ web). Butuh <b>Client ID Google</b> Anda
+                    sendiri — panduan di <code>web/README.md</code>. Data tetap privat: hanya
+                    folder aplikasi yang diakses.</p>
+                <div class="set-row">
+                    <label class="set-label" for="gClient">Client ID (Web)</label>
+                    <input class="search set-input" id="gClient" type="text"
+                           placeholder="xxxx.apps.googleusercontent.com" value="${esc(gsync.getClientId())}">
+                </div>
+                <div class="set-actions">
+                    <button class="btn" id="gSaveId">Simpan Client ID</button>
+                    ${gsync.isConfigured()
+                        ? (gsync.isSignedIn()
+                            ? `<button class="btn btn-primary" id="gSync">🔄 Sinkronkan sekarang</button>
+                               <button class="btn" id="gOut">Keluar</button>`
+                            : `<button class="btn btn-primary" id="gIn">Masuk dengan Google</button>`)
+                        : ""}
+                </div>
+                ${gsync.isConfigured() && gsync.isSignedIn()
+                    ? `<div class="set-row" style="margin-top:12px">
+                           <span class="set-label">Sinkronisasi otomatis</span>
+                           <span class="segmented">
+                               <button class="seg ${store.getAutoSync() ? "active" : ""}" id="gAutoOn">Nyala</button>
+                               <button class="seg ${!store.getAutoSync() ? "active" : ""}" id="gAutoOff">Mati</button>
+                           </span>
+                       </div>
+                       <p class="set-note">${gsync.linkedEmail() ? "Masuk sebagai " + esc(gsync.linkedEmail()) + ". " : ""}${
+                           store.getDriveLastSync() ? "Tersinkron " + esc(relTime(store.getDriveLastSync())) + "." : "Belum pernah tersinkron."
+                       }</p>`
+                    : ""}
+                <p class="set-msg" id="gMsg" hidden></p>
+            </div>
+
+            <div class="set-group">
                 <div class="set-title">Statistik</div>
                 <div class="detail-grid" style="margin:6px 0 0">
                     <div class="fact"><div class="fact-label">Streak</div><div class="fact-value">${streak.count} hari</div></div>
@@ -152,6 +198,33 @@ export function renderSettings(app) {
                 draw();
             }
         });
+
+        // Google Drive sync
+        const gmsg = (text, isError = false) => {
+            const el = document.getElementById("gMsg");
+            el.hidden = false;
+            el.textContent = text;
+            el.classList.toggle("error", isError);
+        };
+        const on = (id, fn) => { const el = document.getElementById(id); if (el) el.addEventListener("click", fn); };
+        on("gSaveId", () => {
+            gsync.setClientId(document.getElementById("gClient").value);
+            draw();
+            gmsg(gsync.isConfigured() ? "Client ID disimpan." : "Client ID dikosongkan.");
+        });
+        on("gIn", async () => {
+            gmsg("Membuka Google…");
+            try { await gsync.signIn(); draw(); gmsg("Berhasil masuk."); }
+            catch (e) { gmsg("Gagal masuk: " + e.message, true); }
+        });
+        on("gSync", async () => {
+            gmsg("Menyinkronkan…");
+            try { await gsync.syncNow({ interactive: true }); draw(); gmsg("Sinkronisasi selesai."); }
+            catch (e) { gmsg("Gagal sinkron: " + e.message, true); }
+        });
+        on("gOut", () => { gsync.signOut(); draw(); });
+        on("gAutoOn", () => { store.setAutoSync(true); draw(); });
+        on("gAutoOff", () => { store.setAutoSync(false); draw(); });
     };
 
     draw();

@@ -65,8 +65,34 @@ tanpa server): *Ekspor* mengunduh `ichigo-backup-YYYYMMDD.json`; *Impor* di
 perangkat/peramban lain **menggabung** data secara cerdas — untuk tiap kartu,
 salinan dengan review terbaru yang menang (streak diambil yang tertinggi), jadi
 progres tidak pernah hilang. Aturan merge ini mengikuti filosofi `BackupMerge`
-di aplikasi iOS. (Sinkronisasi otomatis lewat Google Drive bisa ditambahkan
-kemudian bila diinginkan.)
+di aplikasi iOS.
+
+### Sinkronisasi otomatis via Google Drive
+
+Selain berkas, tersedia **sync otomatis** ke folder privat aplikasi di Google
+Drive (`appDataFolder` — hanya berkas milik app ini yang terlihat, bukan berkas
+Drive Anda yang lain). Autentikasi memakai **Google Identity Services** langsung
+di peramban; tidak ada server maupun SDK. Saat aktif, app menyinkron **saat
+dibuka** (tarik + merge) dan **setelah sesi flashcard** (dorong).
+
+Ini butuh **Client ID OAuth (tipe Web)** milik Anda — bukan rahasia, dan **tidak
+disimpan di repo**. Menyiapkannya sekali:
+
+1. Buat proyek di <https://console.cloud.google.com/> dan **aktifkan Google Drive API**.
+2. **OAuth consent screen** (External boleh untuk pribadi); tambahkan diri Anda
+   sebagai *Test user*. Scope cukup `.../auth/drive.appdata` + `email`.
+3. **Credentials → Create OAuth client ID → Web application**. Pada
+   *Authorized JavaScript origins*, tambahkan origin tempat situs di-host
+   (mis. `https://USERNAME.github.io` untuk GitHub Pages, atau
+   `http://localhost:8000` untuk uji lokal).
+4. Salin Client ID (`...apps.googleusercontent.com`) dan isikan di app pada
+   **Pengaturan → Sinkronisasi Google Drive → Client ID**, lalu **Masuk dengan
+   Google**. (Alternatif: pakai `web/config.js` — lihat `web/config.example.js`.)
+
+**Catatan:** format cadangan web berbeda dari aplikasi iOS, jadi sync ini bekerja
+**web ↔ web** (antar-peramban/perangkat). Interop iOS ↔ web bisa ditambahkan
+kemudian. Bila situs dibuka offline atau tanpa Client ID, fitur ini menonaktifkan
+diri dengan anggun dan ekspor/impor berkas tetap tersedia.
 
 ## Kesetaraan FSRS
 
