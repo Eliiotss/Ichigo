@@ -3,31 +3,10 @@
 
 import { SECTIONS } from "./levels.js";
 import { renderHome, renderLevels, renderList, renderDetail, renderHiragana } from "./browse.js";
+import { initTheme } from "./theme.js";
 
 const app = document.getElementById("app");
 const tabsEl = document.getElementById("tabs");
-
-// ---------- Theme ----------
-
-const THEME_KEY = "ichigo_theme";
-function applyTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-    const icon = document.querySelector("#themeToggle .theme-icon");
-    if (icon) icon.textContent = theme === "dark" ? "☀️" : "🌙";
-}
-function initTheme() {
-    const stored = localStorage.getItem(THEME_KEY);
-    applyTheme(stored || "auto");
-    document.getElementById("themeToggle").addEventListener("click", () => {
-        const current = document.documentElement.getAttribute("data-theme");
-        const isDark =
-            current === "dark" ||
-            (current === "auto" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-        const next = isDark ? "light" : "dark";
-        localStorage.setItem(THEME_KEY, next);
-        applyTheme(next);
-    });
-}
 
 // ---------- Nav ----------
 
@@ -52,8 +31,11 @@ function parseHash() {
 async function router() {
     const [section = "home", level, id] = parseHash();
     setActiveTab(section === "home" ? "home" : section);
-    app.scrollIntoView({ block: "start" });
     window.scrollTo(0, 0);
+    // Retrigger the page-enter animation on every navigation.
+    app.classList.remove("page-enter");
+    void app.offsetWidth;
+    app.classList.add("page-enter");
 
     try {
         switch (section) {
@@ -69,6 +51,10 @@ async function router() {
                 return await renderHiragana(app);
             case "flashcard":
                 return await renderFlashcard(app);
+            case "settings": {
+                const mod = await import("./settings.js");
+                return mod.renderSettings(app);
+            }
             default:
                 return renderHome(app);
         }

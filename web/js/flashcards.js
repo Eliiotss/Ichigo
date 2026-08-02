@@ -167,7 +167,9 @@ function renderCard(session) {
 function revealCard(session, p, card) {
     if (session.revealed) return;
     session.revealed = true;
-    document.getElementById("fcBack").hidden = false;
+    const back = document.getElementById("fcBack");
+    back.hidden = false;
+    back.classList.add("revealed");
     document.querySelector(".fc-hint").textContent = "Seberapa lancar Anda mengingatnya?";
     const iv = intervalPreview(p);
     const g = [

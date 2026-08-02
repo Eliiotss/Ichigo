@@ -19,6 +19,14 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `web/data/` are copies of `Sources/AppFeature/Resources/`; see `web/README.md`
   for how to serve it (any static host / `python3 -m http.server`). Verified
   end-to-end in headless Chromium with no console errors.
+  - **Settings page (⚙️) + backup sync.** Username (used in the Home greeting),
+    daily new-card target, theme (Sistem/Terang/Gelap), study stats and reset.
+    Cross-device sync without a backend via **Ekspor/Impor** of a backup JSON that
+    **merges** on import — per card the newer review wins, streak takes the max —
+    mirroring the iOS `BackupMerge` rule so no progress is lost.
+  - **Motion polish.** Page-enter fade on navigation, flashcard reveal/next-card
+    animations, active-press feedback, all disabled under
+    `prefers-reduced-motion`.
 - **Two-way flashcard sync (Anki-style) over Google Drive.** The previously
   parked backup module is now wired into the app as automatic, bidirectional
   sync. A new `BackupMerge` engine merges the cloud snapshot with the local one

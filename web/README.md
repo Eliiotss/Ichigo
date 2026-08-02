@@ -54,6 +54,20 @@ cp Sources/AppFeature/Resources/*.json web/data/
 
 N2/N1 belum disertakan (levelnya terkunci), sama seperti aplikasi iOS.
 
+## Pengaturan & cadangan (⚙️)
+
+Halaman **Pengaturan** (ikon gigi di kanan atas) menyediakan: nama pengguna
+(dipakai pada sapaan Beranda), target kartu baru harian, pilihan tema
+(Sistem/Terang/Gelap), statistik (streak, jumlah kartu dipelajari), dan reset.
+
+**Sinkronisasi antar-perangkat** memakai **Ekspor/Impor berkas** (situs statis,
+tanpa server): *Ekspor* mengunduh `ichigo-backup-YYYYMMDD.json`; *Impor* di
+perangkat/peramban lain **menggabung** data secara cerdas — untuk tiap kartu,
+salinan dengan review terbaru yang menang (streak diambil yang tertinggi), jadi
+progres tidak pernah hilang. Aturan merge ini mengikuti filosofi `BackupMerge`
+di aplikasi iOS. (Sinkronisasi otomatis lewat Google Drive bisa ditambahkan
+kemudian bila diinginkan.)
+
 ## Kesetaraan FSRS
 
 `js/fsrs.js` memakai formula dan bobot yang identik dengan `FSRSMath` /

@@ -3,6 +3,7 @@
 
 import { loadJSON } from "./data.js";
 import { LEVELS, SECTION_META, findLevel } from "./levels.js";
+import { getUsername } from "./store.js";
 
 const esc = (s) =>
     String(s ?? "").replace(/[&<>"']/g, (c) =>
@@ -20,9 +21,10 @@ export function renderHome(app) {
         ["hiragana", "あ", "Hiragana & Katakana", "Dasar aksara kana"],
         ["flashcard", "🎴", "Flashcard", "Belajar terjadwal (FSRS-6)"],
     ];
+    const name = getUsername();
     app.innerHTML = `
         <section class="hero">
-            <h1>Selamat datang di Ichigo 🍓</h1>
+            <h1>${name ? `Selamat datang, ${esc(name)} 🍓` : "Selamat datang di Ichigo 🍓"}</h1>
             <p>Belajar bahasa Jepang untuk JLPT: jelajahi kanji, kosakata, dan tata bahasa,
                lalu kuatkan ingatan dengan flashcard berjadwal FSRS-6.</p>
         </section>
