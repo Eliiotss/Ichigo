@@ -12,7 +12,9 @@ struct MenuItem {
 // MARK: - Content View
 struct ContentView: View {
     @StateObject private var flashcardStore = FlashcardStore()
+    @StateObject private var backupManager = DriveBackupManager()
     @State private var selectedTab = 0
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -24,12 +26,24 @@ struct ContentView: View {
                 .tabItem { Image(systemName: "person.fill"); Text("Profile") }
                 .tag(1)
 
-            SettingsView()
+            SettingsView(backupManager: backupManager)
                 .tabItem { Image(systemName: "gearshape.fill"); Text("Pengaturan") }
                 .tag(2)
         }
         .tint(AppTheme.accent)
         .task { await preloadHomeStats() }
+        // Auto-sync (Anki-style) when the app returns to the foreground, and
+        // refresh the in-memory schedule once a sync has merged remote data.
+        .onChange(of: scenePhase) { _, phase in
+            // Pull-merge on foreground, push on background — so studying on one
+            // device shows up on the next.
+            if phase == .active || phase == .background {
+                Task { await backupManager.autoSyncIfEnabled() }
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .ichigoDidApplyRemoteSync)) { _ in
+            flashcardStore.reload()
+        }
     }
 
     private func preloadHomeStats() async {

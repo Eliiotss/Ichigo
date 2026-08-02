@@ -1,8 +1,9 @@
-# Google Drive backup (manual)
+# Google Drive backup & sync
 
-Ichigo can back up and restore your local learning progress to a single JSON file
-in your Google Drive **appDataFolder** — a hidden, per-app folder that only this
-app can read. No third-party SDK is used: sign-in is OAuth 2.0 + PKCE via
+Ichigo keeps your local learning progress in sync across devices through a single
+JSON file in your Google Drive **appDataFolder** — a hidden, per-app folder that
+only this app can read. Sync is **two-way and automatic**, like Anki: no
+third-party SDK is used — sign-in is OAuth 2.0 + PKCE via
 `ASWebAuthenticationSession`, and Drive access is plain `URLSession` REST.
 
 The feature is **off until you provide an OAuth client ID**. When unconfigured,
@@ -37,13 +38,33 @@ using its `callbackURLScheme`.
 
 ## Using it
 
-In **Settings → Cadangan (Google Drive)**:
+In **Settings → Akun & Sinkronisasi**:
 
 - **Masuk dengan Google** — sign in and grant appData access.
-- **Backup sekarang** — upload/overwrite the backup file (`ichigo-backup.json`).
-- **Pulihkan dari Drive** — download and overwrite local progress (confirmation
-  required). Restart the app afterwards so the in-memory stores reload.
-- **Keluar dari Google** — remove the stored tokens from the Keychain.
+- **Sinkronisasi otomatis** — when on (default), the app syncs on its own each
+  time it enters the foreground (pull + merge) and when it goes to the background
+  (push), so progress made on one device shows up on the next.
+- **Sinkronkan sekarang** — run a sync immediately; the row also shows how long
+  ago the last sync ran.
+- **Keluar** — remove the stored tokens from the Keychain.
+
+## How sync merges (never loses progress)
+
+A sync downloads the cloud snapshot, merges it with the local one via
+`BackupMerge`, writes the result back locally, then uploads it. The merge is
+designed so no review progress is ever lost:
+
+- **Per flashcard** — the copy whose `lastReview` is more recent wins (ties break
+  toward more repetitions). Study a card on your phone, then open your tablet, and
+  that card keeps the latest schedule.
+- **Review history** — the union of both devices' logs, keyed by log UUID.
+- **Streak** — the larger of the two.
+- **Preferences** (daily target, username, theme, reminder) — the newer snapshot
+  wins, falling back to the other side when a field is absent.
+
+This is last-writer-wins per card by review time — the common "one device at a
+time" case is always consistent. There is no live conflict resolution for the
+same card edited on two devices simultaneously; the later review simply wins.
 
 ## Security notes
 

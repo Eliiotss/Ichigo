@@ -7,6 +7,23 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Two-way flashcard sync (Anki-style) over Google Drive.** The previously
+  parked backup module is now wired into the app as automatic, bidirectional
+  sync. A new `BackupMerge` engine merges the cloud snapshot with the local one
+  without losing progress: per-card the copy with the more recent `lastReview`
+  wins (ties break toward more repetitions), review logs are unioned by UUID,
+  streaks take the larger value, and preferences take the newer snapshot (falling
+  back to the other side when a field is absent). `DriveBackupManager.syncNow()`
+  performs pull → merge → local restore → push; `ContentView` triggers it on
+  foreground (pull-merge) and background (push) when auto-sync is on and an
+  account is linked, and reloads `FlashcardStore` via a
+  `.ichigoDidApplyRemoteSync` notification so the merged schedule shows at once.
+  Settings gains an **Akun & Sinkronisasi** section (Google sign-in, auto-sync
+  toggle, "Sinkronkan sekarang" with last-sync time, sign-out) replacing the old
+  "coming soon" placeholder. Still gated on a user-supplied `GoogleOAuth.plist`
+  (no credentials in the repo); unconfigured, the UI shows setup guidance. Covered
+  by `BackupMergeTests` (per-card newest-wins, log union, streak max, preference
+  last-writer-wins, new-today union). See `docs/GoogleDriveBackup.md`.
 - **Reference sources for the JLPT datasets** documented in
   `Sources/AppFeature/Resources/README.md`: Tanos.co.uk (vocabulary lists),
   JLPTsensei.com (grammar/vocab/kanji per level), Jisho.org (per-entry

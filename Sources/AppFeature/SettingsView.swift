@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @ObservedObject private var account = AccountStore.shared
+    @ObservedObject var backupManager: DriveBackupManager
     @AppStorage("daily_target") private var dailyTarget = 20
     @AppStorage("notif_enabled") private var notifEnabled = false
     @AppStorage("notif_hour") private var notifHour = 20
@@ -32,10 +33,11 @@ struct SettingsView: View {
                     section("PREFERENSI") { preferencesCard }
                     SettingsFooter(text: "Pengingat akan mengirim notifikasi kalau target belajar hari ini belum selesai.")
 
+                    section("AKUN & SINKRONISASI") { syncCard }
+                    SettingsFooter(text: syncFooterText)
+
                     section("DATA BELAJAR") { dataCard }
                     SettingsFooter(text: "Reset hanya menghapus progres flashcard lokal, review log, streak, dan pengaturan FSRS.")
-
-                    section("SEGERA HADIR") { comingSoonCard }
                 }
                 .padding(.bottom, AppTheme.screenBottomPadding)
             }
@@ -197,38 +199,119 @@ struct SettingsView: View {
         }
     }
 
-    // MARK: - Segera hadir
+    // MARK: - Akun & Sinkronisasi
 
-    /// Account, cloud backup and sync are intentionally parked for a later
-    /// release. Their implementation lives under `Backup/` and is not wired up
-    /// yet, so the UI advertises them as upcoming rather than exposing controls
-    /// that cannot be completed.
-    private var comingSoonCard: some View {
-        SettingsCard {
-            comingSoonRow(icon: "person.crop.circle.fill",
-                          colors: [AppTheme.blueLight, AppTheme.blue],
-                          title: "Akun")
-            comingSoonRow(icon: "externaldrive.fill",
-                          colors: [AppTheme.teal, AppTheme.tealDeep],
-                          title: "Cadangkan & Pulihkan")
-            comingSoonRow(icon: "icloud.fill",
-                          colors: [AppTheme.indigoSoft, AppTheme.indigoDeep],
-                          title: "Sinkronisasi otomatis",
-                          showsDivider: false)
+    /// Google account + Anki-style two-way sync of flashcard progress, streak and
+    /// preferences. The card adapts to three states: not configured (no
+    /// `GoogleOAuth.plist`), configured-but-signed-out, and signed-in.
+    @ViewBuilder
+    private var syncCard: some View {
+        if !backupManager.isConfigured {
+            SettingsCard {
+                SettingsRow(icon: "icloud.slash.fill",
+                            colors: [AppTheme.teal, AppTheme.tealDeep],
+                            title: "Sinkronisasi", showsDivider: false) {
+                    Text("belum disetel")
+                        .font(AppTheme.rounded(14, .semibold))
+                        .foregroundStyle(AppTheme.secondaryText(scheme))
+                }
+            }
+        } else if !backupManager.isSignedIn {
+            SettingsCard {
+                Button { Task { await backupManager.signIn() } } label: {
+                    SettingsRow(icon: "person.crop.circle.badge.plus",
+                                colors: [AppTheme.blueLight, AppTheme.blue],
+                                title: "Masuk dengan Google", showsDivider: false) {
+                        syncTrailing
+                    }
+                }
+                .buttonStyle(.plain)
+                .disabled(backupManager.isBusy)
+            }
+        } else {
+            SettingsCard {
+                SettingsRow(icon: "person.crop.circle.fill",
+                            colors: [AppTheme.blueLight, AppTheme.blue],
+                            title: "Akun") {
+                    Text(backupManager.linkedAccountEmail ?? "Tersambung")
+                        .font(AppTheme.rounded(13, .semibold))
+                        .foregroundStyle(AppTheme.secondaryText(scheme))
+                        .lineLimit(1)
+                        .truncationMode(.middle)
+                }
+
+                SettingsRow(icon: "arrow.triangle.2.circlepath",
+                            colors: [AppTheme.indigoSoft, AppTheme.indigoDeep],
+                            title: "Sinkronisasi otomatis") {
+                    Toggle("", isOn: $backupManager.autoSyncEnabled)
+                        .labelsHidden()
+                        .tint(AppTheme.accent)
+                }
+
+                Button { Task { await backupManager.syncNow() } } label: {
+                    SettingsRow(icon: "icloud.and.arrow.up.fill",
+                                colors: [AppTheme.teal, AppTheme.tealDeep],
+                                title: "Sinkronkan sekarang") {
+                        syncTrailing
+                    }
+                }
+                .buttonStyle(.plain)
+                .disabled(backupManager.isBusy)
+
+                Button { backupManager.signOut() } label: {
+                    SettingsRow(icon: "rectangle.portrait.and.arrow.right",
+                                colors: [AppTheme.dangerSoft, AppTheme.danger],
+                                title: "Keluar", showsDivider: false) { EmptyView() }
+                }
+                .buttonStyle(.plain)
+                .disabled(backupManager.isBusy)
+            }
         }
     }
 
-    private func comingSoonRow(icon: String, colors: [Color], title: String, showsDivider: Bool = true) -> some View {
-        SettingsRow(icon: icon, colors: colors, title: title, showsDivider: showsDivider) {
-            Text("coming soon")
-                .font(AppTheme.rounded(14, .semibold))
+    /// Trailing accessory for the sign-in / sync rows: a spinner while busy,
+    /// otherwise the last-sync time (or a chevron before the first sync).
+    @ViewBuilder
+    private var syncTrailing: some View {
+        if backupManager.isBusy {
+            ProgressView()
+        } else if let last = backupManager.lastSyncDate {
+            Text(Self.syncTimeFormatter.localizedString(for: last, relativeTo: Date()))
+                .font(AppTheme.rounded(13, .semibold))
+                .foregroundStyle(AppTheme.secondaryText(scheme))
+        } else {
+            Image(systemName: "chevron.right")
+                .font(AppTheme.rounded(14, .bold))
                 .foregroundStyle(AppTheme.secondaryText(scheme))
         }
+    }
+
+    private static let syncTimeFormatter: RelativeDateTimeFormatter = {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.locale = Locale(identifier: "id_ID")
+        formatter.unitsStyle = .short
+        return formatter
+    }()
+
+    /// Footer under the sync card, reflecting the current state or the latest
+    /// success/failure message from a sync attempt.
+    private var syncFooterText: String {
+        switch backupManager.phase {
+        case .failure(let message): return message
+        case .success(let message): return message
+        default: break
+        }
+        guard backupManager.isConfigured else {
+            return "Untuk mengaktifkan, tambahkan berkas GoogleOAuth.plist berisi CLIENT_ID Google OAuth Anda. Data tetap privat — hanya folder aplikasi di Drive."
+        }
+        return backupManager.isSignedIn
+            ? "Progres flashcard, streak, dan pengaturan tersinkron dua arah lewat akun Google (folder privat aplikasi di Drive). Otomatis saat membuka aplikasi."
+            : "Masuk dengan Google agar progres flashcard tersinkron antar-perangkat seperti Anki."
     }
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(backupManager: DriveBackupManager())
 }
 
 // MARK: - Settings building blocks

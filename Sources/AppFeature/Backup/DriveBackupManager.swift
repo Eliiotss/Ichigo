@@ -15,6 +15,12 @@ final class DriveBackupManager: ObservableObject {
     @Published private(set) var phase: Phase = .idle
     @Published private(set) var isSignedIn = false
     @Published private(set) var lastBackupDate: Date?
+    @Published private(set) var lastSyncDate: Date?
+    /// When on, the app syncs automatically on foreground and after each study
+    /// session. Persisted so the choice survives relaunches.
+    @Published var autoSyncEnabled: Bool {
+        didSet { defaults.set(autoSyncEnabled, forKey: autoSyncKey) }
+    }
 
     let isConfigured: Bool
 
@@ -23,6 +29,8 @@ final class DriveBackupManager: ObservableObject {
     private let defaults: UserDefaults
     private let account: AccountStore
     private let lastBackupKey = "drive_last_backup_at"
+    private let lastSyncKey = "drive_last_sync_at"
+    private let autoSyncKey = "drive_auto_sync_enabled"
 
     /// `AccountStore.shared` is main-actor isolated, so it cannot be a default
     /// argument (those are evaluated in a nonisolated context — an error under
@@ -44,6 +52,10 @@ final class DriveBackupManager: ObservableObject {
         self.isSignedIn = oauth?.isSignedIn ?? false
         let stored = defaults.double(forKey: lastBackupKey)
         self.lastBackupDate = stored > 0 ? Date(timeIntervalSince1970: stored) : nil
+        let syncStored = defaults.double(forKey: lastSyncKey)
+        self.lastSyncDate = syncStored > 0 ? Date(timeIntervalSince1970: syncStored) : nil
+        // Auto-sync defaults on; an explicit stored `false` disables it.
+        self.autoSyncEnabled = defaults.object(forKey: autoSyncKey) as? Bool ?? true
     }
 
     var isBusy: Bool { if case .working = phase { return true } else { return false } }
@@ -114,6 +126,55 @@ final class DriveBackupManager: ObservableObject {
         }
     }
 
+    /// Bidirectional, Anki-style sync: pull the remote snapshot, merge it with the
+    /// local one via ``BackupMerge`` (never losing progress), write the merged
+    /// result back to local storage, then push it to Drive. When no remote exists
+    /// yet this is just a first upload.
+    ///
+    /// - Parameter auto: when triggered by the app lifecycle rather than a button,
+    ///   the flow stays quiet — no success toast, and network failures are
+    ///   swallowed (the next foreground will retry) instead of surfacing an error.
+    func syncNow(auto: Bool = false) async {
+        guard let oauth else { if !auto { fail(.notConfigured) }; return }
+        guard isSignedIn else { if !auto { fail(.notSignedIn) }; return }
+        if isBusy { return }
+        phase = .working("Menyinkronkan…")
+        do {
+            let token = try await oauth.validAccessToken()
+            let local = BackupService.makePayload(from: defaults)
+            var appliedRemote = false
+            if let existing = try await drive.findBackup(named: BackupService.fileName, accessToken: token) {
+                let remoteData = try await drive.download(fileID: existing.id, accessToken: token)
+                let remote = try BackupService.decode(remoteData)
+                let merged = BackupMerge.merge(local: local, remote: remote)
+                BackupService.restore(merged, into: defaults)
+                account.reload()
+                let mergedData = try BackupService.encode(merged)
+                try await drive.update(fileID: existing.id, content: mergedData, accessToken: token)
+                appliedRemote = true
+            } else {
+                let data = try BackupService.encode(local)
+                _ = try await drive.create(named: BackupService.fileName, content: data, accessToken: token)
+            }
+            stampSync()
+            if appliedRemote {
+                NotificationCenter.default.post(name: .ichigoDidApplyRemoteSync, object: nil)
+            }
+            phase = auto ? .idle : .success("Sinkronisasi selesai.")
+        } catch DriveBackupError.authCancelled {
+            phase = .idle
+        } catch {
+            phase = auto ? .idle : .failure(error.localizedDescription)
+        }
+    }
+
+    /// Runs a sync only when auto-sync is on and an account is linked. Safe to call
+    /// from the app lifecycle without checking state first.
+    func autoSyncIfEnabled() async {
+        guard isConfigured, isSignedIn, autoSyncEnabled else { return }
+        await syncNow(auto: true)
+    }
+
     func dismissMessage() {
         switch phase {
         case .success, .failure: phase = .idle
@@ -121,7 +182,21 @@ final class DriveBackupManager: ObservableObject {
         }
     }
 
+    private func stampSync() {
+        let now = Date()
+        defaults.set(now.timeIntervalSince1970, forKey: lastSyncKey)
+        defaults.set(now.timeIntervalSince1970, forKey: lastBackupKey)
+        lastSyncDate = now
+        lastBackupDate = now
+    }
+
     private func fail(_ error: DriveBackupError) {
         phase = .failure(error.localizedDescription)
     }
+}
+
+extension Notification.Name {
+    /// Posted after a sync applies merged remote data into local storage, so
+    /// in-memory view models (e.g. `FlashcardStore`) can reload from disk.
+    static let ichigoDidApplyRemoteSync = Notification.Name("ichigo.didApplyRemoteSync")
 }

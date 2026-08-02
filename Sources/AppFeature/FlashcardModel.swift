@@ -458,6 +458,15 @@ final class FlashcardStore: ObservableObject {
         settings = settingsStore.load()
     }
 
+    /// Reloads persisted progress and settings from storage and refreshes the
+    /// stats of every already-loaded deck. Called after a cloud sync merges remote
+    /// data into local storage so the UI reflects the combined schedule at once.
+    func reload() {
+        progressMap = progressStore.load()
+        settings = settingsStore.load()
+        for key in deckItemsPerLevel.keys { refreshDeckStats(key: key) }
+    }
+
     // MARK: - Deck loading (Vocabulary / Grammar)
     func loadDeck(mode: FlashcardMode, levelId: String, jsonFile: String) async {
         _ = dayBoundaryStore.markDailyResetIfNeeded()
