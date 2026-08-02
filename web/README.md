@@ -26,6 +26,24 @@ python3 -m http.server 8000
 Atau host statis mana pun (GitHub Pages, Netlify, dsb.) — arahkan ke folder
 `web/` sebagai root.
 
+### GitHub Pages (otomatis)
+
+Repo ini punya workflow `.github/workflows/pages.yml` yang menyebarkan folder
+`web/` ke GitHub Pages. **Aktifkan sekali**: repo **Settings → Pages → Build and
+deployment → Source: "GitHub Actions"**. Setelah itu tiap push yang menyentuh
+`web/` akan otomatis mem-publish situs. URL-nya:
+
+```
+https://eliiotss.github.io/Ichigo/
+```
+
+Untuk **sync Google Drive**, daftarkan **origin** berikut di OAuth client ID
+(Authorized JavaScript origins) — cukup host-nya, tanpa path:
+
+```
+https://eliiotss.github.io
+```
+
 ## Struktur
 
 ```
