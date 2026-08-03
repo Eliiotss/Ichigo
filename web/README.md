@@ -4,11 +4,13 @@ Port web dari aplikasi Ichigo (belajar bahasa Jepang JLPT). **Statis, tanpa
 build**: HTML + CSS + JavaScript (ES modules) murni. Sepenuhnya terpisah dari
 kode Swift di `Sources/` — mengubah web tidak menyentuh aplikasi iOS.
 
-**Tampilan mengikuti aplikasi iOS (SwiftUI)**: aksen **biru** (`#2E7BFF`), **tab
-bar di bawah** (Home · Profil · Pengaturan) dengan menu belajar dibuka dari grid
-Beranda, kartu membulat berbayang lembut + kartu hero bergradien, dan font
-membulat **Baloo 2**. Token warna & ukuran disalin dari
-`Sources/AppFeature/AppTheme.swift`. 🍓 dipakai sebagai logo saja.
+**Tampilan iOS-native, responsif** (mengikuti mockup Claude Design
+`Ichigo App.dc.html`): font sistem (SF Pro / Segoe / Roboto), latar abu-abu
+`#F2F2F7`, kartu putih membulat berbayang lembut, aksen biru `#2E7BFF` dengan
+warna per-level (N5 hijau … N1 merah). **Desktop**: sidebar kiri yang bisa
+dilipat (logo 苺 Ichigo + navigasi lengkap + kartu Target Harian). **Mobile**:
+tab bar di bawah (Home · Profil · Pengaturan), menu belajar dibuka dari grid
+Beranda. Tidak butuh font eksternal.
 
 ## Fitur
 

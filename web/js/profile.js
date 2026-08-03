@@ -1,10 +1,9 @@
-// Profile tab, matching the Claude Design mockup: a blue gradient header (rounded
-// bottom) with avatar + name + "JLPT Learner", a daily-target card, a 2×2 stats
-// grid, and the overall answer summary. Numbers come from the same store helpers
-// the Home hero uses, so they never disagree between screens.
+// Profile tab, matching the iOS-native design: gradient avatar + name + "JLPT
+// Learner", a daily-target card, a 2×2 stats grid, and the answer summary. All
+// numbers come from the same store helpers the Home progress card uses.
 
-import { icon } from "./icons.js";
 import * as store from "./store.js";
+import { alpha } from "./levels.js";
 
 const esc = (s) =>
     String(s ?? "").replace(/[&<>"']/g, (c) =>
@@ -12,58 +11,57 @@ const esc = (s) =>
 
 function initials(name) {
     const w = String(name || "").trim().split(/\s+/).filter(Boolean);
-    if (!w.length) return "U";
+    if (!w.length) return "US";
     return (w.length > 1 ? w[0][0] + w[1][0] : w[0].slice(0, 2)).toUpperCase();
 }
 
 export function renderProfile(app) {
-    const name = store.getUsername() || "Teman";
+    const name = store.getUsername() || "User";
     const target = store.getDailyTarget();
     const studied = store.studiedTodayTotal();
-    const prog = target > 0 ? Math.min(studied / target, 1) : 0;
+    const pct = target > 0 ? Math.min(studied / target, 1) * 100 : 0;
     const due = store.dueTodayTotal(target);
     const streak = store.getStreak().count;
     const mastered = store.masteredTotal();
     const sum = store.getAnswerSummary();
 
-    const tile = (name_, chip, value, unit, caption) => `
-        <div class="stat-tile">
-            <span class="stat-ic" style="background:${chip}">${icon(name_)}</span>
-            <div class="stat-val">${value} <small>${esc(unit)}</small></div>
-            <div class="stat-cap">${esc(caption)}</div>
-        </div>`;
-    const ans = (cls, label, count) => `<div class="ans-pill ${cls}"><div class="v">${count}</div><div class="l">${esc(label)}</div></div>`;
+    const stats = [
+        { title: "DUE", value: due, sub: "hari ini", color: "#2E7BFF", icon: "◷" },
+        { title: "BELAJAR", value: studied, sub: "kartu", color: "#34C759", icon: "✓" },
+        { title: "STREAK", value: streak, sub: "hari", color: "#FF9500", icon: "✦" },
+        { title: "MASTERED", value: mastered, sub: "kartu", color: "#AF52DE", icon: "★" },
+    ];
+    const acc = [
+        { label: "Ulang", count: sum.again, color: "#FF3B30" },
+        { label: "Susah", count: sum.hard, color: "#FF9500" },
+        { label: "Bagus", count: sum.good, color: "#2E7BFF" },
+        { label: "Mudah", count: sum.easy, color: "#34C759" },
+    ];
 
     app.innerHTML = `
-        <div class="profile-header">
-            <div class="ph-title">Profile</div>
-            <div class="profile-id">
-                <div class="profile-avatar">${esc(initials(name))}</div>
-                <div class="profile-name">${esc(name)}</div>
-                <span class="profile-tag">JLPT Learner</span>
+        <div class="prof-head">
+            <div class="prof-avatar">${esc(initials(name))}</div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+                <div class="prof-name">${esc(name)}</div>
+                <div class="prof-tag">JLPT Learner</div>
             </div>
         </div>
 
-        <div class="card">
-            <div class="tgt-row"><span class="l">Target Harian</span><span class="r">${studied}/${target}</span></div>
-            <div class="tgt-bar"><span style="width:${Math.max(prog * 100, prog > 0 ? 4 : 0)}%"></span></div>
+        <div class="prof-target">
+            <div class="r"><span>Target Harian</span><span>${studied}/${target}</span></div>
+            <div class="bar"><span style="width:${Math.max(pct, pct > 0 ? 4 : 0)}%"></span></div>
         </div>
 
-        <div class="stat-grid">
-            ${tile("clock", "#ebf3ff", due, "due", "hari ini")}
-            ${tile("check", "#e7f8ed", studied, "kartu", "belajar")}
-            ${tile("flame", "#fff1e4", streak, "hari", "streak")}
-            ${tile("star", "#eaf0ff", mastered, "kartu", "mastered")}
-        </div>
+        <div class="stat-grid">${stats.map((s) => `
+            <div class="stat-tile" style="background:${alpha(s.color, 0.1)}">
+                <div class="top"><span class="ic" style="color:${s.color}">${s.icon}</span><span class="ttl">${s.title}</span></div>
+                <div class="num"><b>${s.value}</b><span>${esc(s.sub)}</span></div>
+            </div>`).join("")}</div>
 
-        <div class="card">
-            <div class="card-title">Ringkasan Jawaban</div>
-            <div class="ans-pills">
-                ${ans("a", "Ulang", sum.again)}
-                ${ans("h", "Susah", sum.hard)}
-                ${ans("g", "Bagus", sum.good)}
-                ${ans("e", "Mudah", sum.easy)}
-            </div>
-            <div class="ans-foot"><span class="lab">Akurasi keseluruhan</span><span class="val">${Math.round(sum.accuracy * 100)}%</span></div>
+        <div class="acc-card">
+            <div class="h">Ringkasan Jawaban</div>
+            <div class="acc-grid">${acc.map((a) => `
+                <div class="acc-cell" style="background:${alpha(a.color, 0.1)}"><div class="n" style="color:${a.color}">${a.count}</div><div class="l">${a.label}</div></div>`).join("")}</div>
+            <div class="acc-foot"><span class="l">Akurasi keseluruhan</span><span class="v">${Math.round(sum.accuracy * 100)}%</span></div>
         </div>`;
 }
