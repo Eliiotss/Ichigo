@@ -10,6 +10,7 @@ const K = {
     streak: "ichigo_streak_v1",
     driveSync: "ichigo_drive_sync_v1",
     answers: "ichigo_answers_v1",
+    reminderDay: "ichigo_reminder_day_v1",
 };
 
 function read(key, fallback) {
@@ -80,7 +81,7 @@ export function recordStudyToday() {
     return s.count;
 }
 
-// ---------- Username ----------
+// ---------- Username + profile identity ----------
 
 export function getUsername() { return read(K.settings, {}).username || ""; }
 export function setUsername(name) {
@@ -88,6 +89,21 @@ export function setUsername(name) {
     s.username = String(name || "").slice(0, 40);
     write(K.settings, s);
 }
+export function getEmail() { return read(K.settings, {}).email || ""; }
+export function setEmail(v) {
+    const s = read(K.settings, {});
+    s.email = String(v || "").slice(0, 120);
+    write(K.settings, s);
+}
+
+// ---------- Study reminder (browser notification) ----------
+
+export function getNotifEnabled() { return !!read(K.settings, {}).notifEnabled; }
+export function setNotifEnabled(on) { const s = read(K.settings, {}); s.notifEnabled = !!on; write(K.settings, s); }
+export function getNotifHour() { const h = read(K.settings, {}).notifHour; return h == null ? 20 : h; }
+export function setNotifHour(h) { const s = read(K.settings, {}); s.notifHour = Math.max(6, Math.min(23, h | 0)); write(K.settings, s); }
+export function getReminderShownDay() { return read(K.reminderDay, {}).day || null; }
+export function setReminderShownDay(day) { write(K.reminderDay, { day }); }
 
 // ---------- Google Drive sync (device-local flags) ----------
 

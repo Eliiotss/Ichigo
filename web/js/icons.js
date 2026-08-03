@@ -1,45 +1,64 @@
-// Shared inline SVG icons (24×24). Colour is inherited via `currentColor`
-// (see the base `svg { fill: currentColor }` rule and per-context overrides in
-// styles.css), so the same icon renders white on a gradient chip or tinted in a
-// stat tile. Stroke icons (back / chev) rely on their context setting
-// `fill: none; stroke: currentColor`. Kept deliberately simple and original.
+// Inline SVG icons, taken verbatim from the Claude Design mockup so the web app
+// matches it pixel-for-pixel. Colours are baked per the design (white on gradient
+// chips, blue/red two-tone detail icons); the tab bar and nav icons use
+// `currentColor` so they follow the theme and active state.
 
 const P = {
-    // Bottom tab bar
-    home: '<path d="M12 3.2 3.5 10.5V20a1 1 0 0 0 1 1H9v-6h6v6h4.5a1 1 0 0 0 1-1v-9.5z"/>',
-    person: '<path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 1.8c-4.3 0-7.8 2.2-7.8 4.9V21h15.6v-2.3c0-2.7-3.5-4.9-7.8-4.9z"/>',
-    gear: '<path d="M19.4 13a7.6 7.6 0 0 0 0-2l2-1.6a.5.5 0 0 0 .12-.62l-1.9-3.3a.5.5 0 0 0-.6-.22l-2.4.96a7 7 0 0 0-1.7-1l-.36-2.5a.48.48 0 0 0-.48-.4h-3.8a.48.48 0 0 0-.48.4l-.36 2.5a7 7 0 0 0-1.7 1l-2.4-.96a.5.5 0 0 0-.6.22l-1.9 3.3a.5.5 0 0 0 .12.62l2 1.6a7.6 7.6 0 0 0 0 2l-2 1.6a.5.5 0 0 0-.12.62l1.9 3.3a.5.5 0 0 0 .6.22l2.4-.96a7 7 0 0 0 1.7 1l.36 2.5a.48.48 0 0 0 .48.4h3.8a.48.48 0 0 0 .48-.4l.36-2.5a7 7 0 0 0 1.7-1l2.4.96a.5.5 0 0 0 .6-.22l1.9-3.3a.5.5 0 0 0-.12-.62zM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/>',
+    // Bottom tab bar (currentColor)
+    home: '<path d="M12 3 3 10.5V21h6v-6h6v6h6V10.5L12 3Z"/>',
+    person: '<circle cx="12" cy="8" r="4"/><path d="M4 20.5c0-4 3.6-7 8-7s8 3 8 7v.5H4v-.5Z"/>',
+    gear: '<path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Zm0 2.2a1.6 1.6 0 1 1 0 3.2 1.6 1.6 0 0 1 0-3.2Z"/><path d="M12 1.5l1.4 2.2 2.5-.7.6 2.6 2.6.6-.7 2.5L21 12l-2.2 1.4.7 2.5-2.6.6-.6 2.6-2.5-.7L12 22.5l-1.4-2.2-2.5.7-.6-2.6-2.6-.6.7-2.5L3 12l2.2-1.4-.7-2.5 2.6-.6.6-2.6 2.5.7L12 1.5Z"/>',
 
-    // Navigation (stroke)
-    back: '<path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/>',
-    chev: '<path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>',
-    search: '<path d="M10 2a8 8 0 1 0 4.9 14.32l4.39 4.39 1.42-1.42-4.39-4.39A8 8 0 0 0 10 2zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z"/>',
+    // Nav (currentColor, stroke)
+    back: '<path d="M14.5 6 9 12l5.5 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>',
+    chev: '<path d="M9.5 6 15 12l-5.5 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>',
+    search: '<circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m15.5 15.5 4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
 
-    // Menu / mode
-    cards: '<path d="M9 5h10a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM5 8v9a4 4 0 0 0 4 4h8v-2H9a2 2 0 0 1-2-2V8z"/>',
-    grid: '<path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/>',
-    info: '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 5a1.3 1.3 0 1 1 0 2.6A1.3 1.3 0 0 1 12 7zm1.2 4v6h-2.4v-6z"/>',
-    book: '<path d="M6 3h11a2 2 0 0 1 2 2v15a1 1 0 0 1-1.4.9L12 18.6 6.4 20.9A1 1 0 0 1 5 20V4a1 1 0 0 1 1-1z"/>',
+    // Menu tiles (white on gradient; spine tinted to the tile colour)
+    cards: '<rect x="4" y="8" width="16" height="11" rx="2.5" fill="#fff"/><path d="M6 6h12M8 4h8" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity=".7"/>',
+    bookVocab: '<path d="M5 5.5A1.5 1.5 0 0 1 6.5 4H18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.5A1.5 1.5 0 0 1 5 18.5V5.5Z" fill="#fff"/><path d="M8 4v16" fill="none" stroke="#0FA8BE" stroke-width="1.4"/>',
+    bookGrammar: '<path d="M5 5.5A1.5 1.5 0 0 1 6.5 4H18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.5A1.5 1.5 0 0 1 5 18.5V5.5Z" fill="#fff"/><path d="M10 9h6M10 12h6" fill="none" stroke="#6E5CF0" stroke-width="1.4" stroke-linecap="round"/>',
+    grid: '<rect x="4" y="4" width="7" height="7" rx="1.8" fill="#fff"/><rect x="13" y="4" width="7" height="7" rx="1.8" fill="#fff"/><rect x="4" y="13" width="7" height="7" rx="1.8" fill="#fff"/><rect x="13" y="13" width="7" height="7" rx="1.8" fill="#fff"/>',
 
-    // Settings / profile
-    moon: '<path d="M13 3a9 9 0 1 0 8 13.5A7 7 0 0 1 13 3z"/>',
-    bell: '<path d="M12 3a5 5 0 0 0-5 5v3l-1.6 3.1A1 1 0 0 0 6.3 16h11.4a1 1 0 0 0 .9-1.9L17 11V8a5 5 0 0 0-5-5zm0 18a2.3 2.3 0 0 0 2.2-2H9.8A2.3 2.3 0 0 0 12 21z"/>',
-    target: '<path fill-rule="evenodd" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 3a7 7 0 1 1 0 14 7 7 0 0 1 0-14zm0 3.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/>',
-    globe: '<path fill-rule="evenodd" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 2.2c-.9 0-2.3 2.1-2.7 5.3h5.4C14.3 6.3 12.9 4.2 12 4.2zM9.1 11.5c-.1.8-.1 1.6 0 2.4h5.8c.1-.8.1-1.6 0-2.4zm.2 4.6c.5 2.6 1.7 3.7 2.7 3.7s2.2-1.1 2.7-3.7z"/>',
-    trash: '<path d="M9 3h6l1 2h4v2H4V5h4zm-3 4h12l-1 12.1A2 2 0 0 1 15 21H9a2 2 0 0 1-2-1.9z"/>',
-    cloud: '<path d="M7 18a4.5 4.5 0 0 1-.6-8.96A5.5 5.5 0 0 1 17 9.5 3.75 3.75 0 0 1 17 18z"/>',
-    cloudup: '<path d="M12 8l4 4h-2.6v3h-2.8v-3H8zM7 19a4.5 4.5 0 0 1-.6-8.96 5.5 5.5 0 0 1 10.6.46A3.75 3.75 0 0 1 17 19h-1.4l-2-2h.9a1.75 1.75 0 0 0 0-3.5h-1.1l-.2-1A3.5 3.5 0 0 0 8.7 11l-.3.9-.9.1A2.5 2.5 0 0 0 7 17h1.4l-.6-.6 2-2 .1.1V17H7z"/>',
-    sync: '<path d="M12 5V2L8 6l4 4V7a5 5 0 1 1-4.9 6h-2A7 7 0 1 0 12 5z"/>',
-    signout: '<path d="M14 3h5a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-5v-2h5V5h-5zM10.6 8 9.2 9.4 11 11.2H3v2h8l-1.8 1.8 1.4 1.4L15 12z"/>',
-    clock: '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 5h-2v6l5 3 1-1.7-4-2.3z"/>',
-    check: '<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.5-4-4L8.2 11l2.6 2.6L15.8 8l1.4 1.5z"/>',
-    flame: '<path d="M13 2c.4 2.5-1 3.9-2 5.3-.9 1.2-1.5 2.2-.6 3.5.5.8 1.7.8 2.3-.1.3-.4.4-1 .3-1.7 1.6 1.2 2.6 3 2.6 5A5.6 5.6 0 0 1 6.4 14c0-2.5 1.4-4 2.6-5.6C10.8 6 12.6 4.4 13 2z"/>',
-    star: '<path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/>',
-    reset: '<path d="M9 3h6l1 2h4v2H4V5h4zm-3 4h12l-1 12.1A2 2 0 0 1 15 21H9a2 2 0 0 1-2-1.9z"/>',
+    // Flashcard mode cards (white on gradient)
+    cardsFan: '<path d="M3.5 5.5c2.6-1 5-1 8.5.6 3.5-1.6 5.9-1.6 8.5-.6v13c-2.6-1-5-1-8.5.6-3.5-1.6-5.9-1.6-8.5-.6v-13Z" fill="#fff"/><path d="M12 6.1v13" fill="none" stroke="#2E7BFF" stroke-width="1.4"/>',
+    bookGrammarMode: '<path d="M5 5.5A1.5 1.5 0 0 1 6.5 4H18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.5A1.5 1.5 0 0 1 5 18.5V5.5Z" fill="#fff"/><path d="M9.5 8.5h5.5M9.5 11.5h5.5" fill="none" stroke="#6E5CF0" stroke-width="1.5" stroke-linecap="round"/>',
+
+    // Small accents
+    info: '<circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 10.5v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.2"/>',
+    lock: '<rect x="5" y="10.5" width="14" height="9.5" rx="2.2" fill="currentColor"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" fill="none" stroke="currentColor" stroke-width="1.9"/>',
+    speaker: '<path d="M4 9.5h3.5L12 5.5v13L7.5 14.5H4v-5Z" fill="currentColor"/><path d="M15.5 9.2a4 4 0 0 1 0 5.6M18 7a7.2 7.2 0 0 1 0 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+
+    // Profile stat icons (two-tone, baked)
+    clock: '<circle cx="12" cy="12" r="9" fill="#2E7BFF"/><path d="M12 7v5l3.5 2" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>',
+    check: '<circle cx="12" cy="12" r="9" fill="#22B981"/><path d="M8 12.5l2.5 2.5L16 9" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>',
+    flame: '<path d="M12 3c1 3.5 4.5 4.5 4.5 9a4.5 4.5 0 0 1-9 0c0-2.2 1.2-3.4 2.3-4.4.4 1.2 1.5 1.7 2.2 1.2-1-2.2-1-4.5 0-5.8Z" fill="#FF6B3D"/>',
+    star: '<path d="M12 3l2.6 5.6 6.1.7-4.5 4.1 1.2 6L12 16.9 6.6 19.5l1.2-6L3.3 9.3l6.1-.7L12 3Z" fill="#4A55E8"/>',
+
+    // Settings row icons (white on gradient chip)
+    user: '<circle cx="12" cy="8" r="3.6" fill="#fff"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7" fill="#fff"/>',
+    envelope: '<rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="#fff" stroke-width="2"/><path d="M3.7 7 12 13l8.3-6" fill="none" stroke="#fff" stroke-width="2"/>',
+    bell: '<path d="M6 16.5V10a6 6 0 0 1 12 0v6.5l1.5 2h-15l1.5-2Z" fill="#fff"/><path d="M10 19.5a2 2 0 0 0 4 0" fill="none" stroke="#fff" stroke-width="1.6"/>',
+    globe: '<circle cx="12" cy="12" r="8.5" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M3.5 12h17M12 3.5c2.6 2.4 2.6 14.6 0 17M12 3.5c-2.6 2.4-2.6 14.6 0 17" fill="none" stroke="#fff" stroke-width="1.5"/>',
+    target: '<path d="M4 18l4-10 4 10M5.2 15h5.6M13 8h6M16 8v10M13 18h6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+    trash: '<path d="M4 6.5h16M9 6.5V4.5h6v2M6.5 6.5l1 14h9l1-14" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+    cloud: '<path d="M7 18.5a4 4 0 0 1-.5-7.97 5.5 5.5 0 0 1 10.7-1.2A3.8 3.8 0 0 1 17 18.5H7Z" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>',
+    cloudTri: '<path d="M12 4 21 19.5H3L12 4Z" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 10v4.5M12 17.2h.01" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/>',
+
+    // Section-card icons (blue/red two-tone, baked)
+    arti: '<rect x="4.5" y="4" width="15" height="16" rx="2.5" fill="#2E7BFF"/><path d="M9 9h6M9 12.5h6M9 16h3.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>',
+    usage: '<circle cx="6" cy="7" r="1.8" fill="#2E7BFF"/><circle cx="6" cy="12.5" r="1.8" fill="#2E7BFF"/><circle cx="6" cy="18" r="1.8" fill="#2E7BFF"/><path d="M10.5 7h9M10.5 12.5h9M10.5 18h9" fill="none" stroke="#2E7BFF" stroke-width="1.8" stroke-linecap="round"/>',
+    warn: '<path d="M12 4 21 19.5H3L12 4Z" fill="none" stroke="#FF3B30" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4.3M12 17h.01" fill="none" stroke="#FF3B30" stroke-width="2" stroke-linecap="round"/>',
+    quotes: '<path d="M5 6h6v6a3 3 0 0 1-3 3H7v-3H5V6ZM13 6h6v6a3 3 0 0 1-3 3h-1v-3h-2V6Z" fill="#2E7BFF"/>',
+    xmark: '<circle cx="12" cy="12" r="9" fill="#FF3B30"/><path d="m9 9 6 6M15 9l-6 6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>',
+
+    // Stepper ± (currentColor stroke)
+    minus: '<path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>',
+    plus: '<path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>',
 };
 
-// Menu / mode tiles use Japanese glyphs for a clean, thematic look.
-export const GLYPH = { huruf: "あ", kanji: "字", vocabulary: "本", grammar: "文", lainnya: "他" };
+// Japanese glyphs used on the Huruf / Kanji tiles (Baloo 2 / system JP).
+export const GLYPH = { huruf: "あ", kanji: "字" };
 
 /// Returns SVG markup for a named icon (empty string if unknown).
 export function icon(name) {

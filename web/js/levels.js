@@ -1,74 +1,73 @@
-// Metadata for the iOS-style shell: the three bottom tabs, the Home learning
-// menu, JLPT level info per content type, and the flashcard modes. Counts and
-// lock states mirror the iOS app; N2/N1 datasets are not shipped yet (locked).
+// Metadata for the iOS-style shell, matching the Claude Design mockup: bottom
+// tabs, the Home learning grid (with per-tile icon + gradient), JLPT level info
+// per content type, and the flashcard modes. N2/N1 datasets are locked.
 
-// Bottom tab bar (Home · Profil · Pengaturan), like the iOS TabView.
 export const TABS = [
     { key: "home", label: "Home", icon: "home" },
-    { key: "profile", label: "Profil", icon: "person" },
+    { key: "profile", label: "Profile", icon: "person" },
     { key: "settings", label: "Pengaturan", icon: "gear" },
 ];
 
-// Home "BELAJAR MANDIRI" grid — same six tiles as ContentView.swift.
+// Home "BELAJAR MANDIRI" grid. `glyph` renders a Japanese character; otherwise
+// `icon` names an SVG from icons.js.
 export const MENU = [
-    { id: "huruf", label: "Huruf", sub: "Kana", route: "#/hiragana", icon: "kana" },
-    { id: "kanji", label: "Kanji", sub: "Aksara", route: "#/kanji", icon: "kanji" },
+    { id: "huruf", label: "Huruf", sub: "Kana", route: "#/hiragana", glyph: "huruf" },
+    { id: "kanji", label: "Kanji", sub: "Aksara", route: "#/kanji", glyph: "kanji" },
     { id: "flashcard", label: "Flashcard", sub: "Review Cepat", route: "#/flashcard", icon: "cards" },
-    { id: "vocabulary", label: "Vocabulary", sub: "Kosakata", route: "#/vocab", icon: "book" },
-    { id: "grammar", label: "Grammar", sub: "Tata Bahasa", route: "#/grammar", icon: "grammar" },
+    { id: "vocabulary", label: "Vocabulary", sub: "Kosakata", route: "#/vocab", icon: "bookVocab" },
+    { id: "grammar", label: "Grammar", sub: "Tata Bahasa", route: "#/grammar", icon: "bookGrammar" },
     { id: "lainnya", label: "Lainnya", sub: "Fitur Lain", route: "#/soon", icon: "grid" },
 ];
 
-const LV = { N5: "var(--n5)", N4: "var(--n4)", N3: "var(--n3)", N2: "var(--n2)", N1: "var(--n1)" };
-
-// tier name + short description per level, matching the app's level cards.
+// English tier names + design descriptions per section. `desc` is a template:
+// {n} is replaced by the localized real count.
 const TIER = {
-    N5: { name: "Pemula", desc: "Dasar mutlak untuk memulai" },
-    N4: { name: "Dasar", desc: "Materi sehari-hari" },
-    N3: { name: "Menengah", desc: "Lompatan ke tingkat menengah" },
-    N2: { name: "Pra-Mahir", desc: "Segera hadir" },
-    N1: { name: "Mahir", desc: "Segera hadir" },
+    N5: { name: "Beginner", color: "var(--n5)", tint: "var(--n5-tint)" },
+    N4: { name: "Elementary", color: "var(--n4)", tint: "var(--n4-tint)" },
+    N3: { name: "Intermediate", color: "var(--n3)", tint: "var(--n3-tint)" },
+    N2: { name: "Pre-Advanced", color: "var(--n2)", tint: "var(--n2-tint)" },
+    N1: { name: "Advanced", color: "var(--n1)", tint: "var(--n1-tint)" },
 };
 
-function lv(id, count, file, locked) {
-    return { id, name: TIER[id].name, desc: TIER[id].desc, count, file, locked, color: LV[id] };
+function lv(id, count, file, locked, desc) {
+    return { id, name: TIER[id].name, color: TIER[id].color, tint: TIER[id].tint, count, file, locked, desc };
 }
 
 export const LEVELS = {
     kanji: [
-        lv("N5", 120, "KanjiN5", false),
-        lv("N4", 181, "KanjiN4", false),
-        lv("N3", 367, "KanjiN3", false),
-        lv("N2", null, "KanjiN2", true),
-        lv("N1", null, "KanjiN1", true),
+        lv("N5", 120, "KanjiN5", false, "{n} Essential Kanji"),
+        lv("N4", 181, "KanjiN4", false, "{n} Essential Kanji"),
+        lv("N3", 367, "KanjiN3", false, "{n} Essential Kanji"),
+        lv("N2", null, "KanjiN2", true, "1.000+ Complex Kanji"),
+        lv("N1", null, "KanjiN1", true, "2.000+ Master Kanji"),
     ],
     vocab: [
-        lv("N5", 800, "VocabN5", false),
-        lv("N4", 700, "VocabN4", false),
-        lv("N3", 1800, "VocabN3", false),
-        lv("N2", null, "VocabN2", true),
-        lv("N1", null, "VocabN1", true),
+        lv("N5", 800, "VocabN5", false, "{n} Kosakata"),
+        lv("N4", 700, "VocabN4", false, "{n} Kosakata"),
+        lv("N3", 1800, "VocabN3", false, "{n} Kosakata"),
+        lv("N2", null, "VocabN2", true, "Segera hadir"),
+        lv("N1", null, "VocabN1", true, "Segera hadir"),
     ],
     grammar: [
-        lv("N5", 84, "GrammarN5", false),
-        lv("N4", 132, "GrammarN4", false),
-        lv("N3", 182, "GrammarN3", false),
-        lv("N2", null, "GrammarN2", true),
-        lv("N1", null, "GrammarN1", true),
+        lv("N5", 84, "GrammarN5", false, "{n} Pola tata bahasa"),
+        lv("N4", 132, "GrammarN4", false, "{n} Pola tata bahasa"),
+        lv("N3", 182, "GrammarN3", false, "{n} Pola tata bahasa"),
+        lv("N2", null, "GrammarN2", true, "Segera hadir"),
+        lv("N1", null, "GrammarN1", true, "Segera hadir"),
     ],
 };
 
 export const SECTION_META = {
-    kanji: { label: "Kanji", title: "Kanji", unit: "kanji", icon: "kanji" },
-    vocab: { label: "Kosakata", title: "Kosakata", unit: "kata", icon: "book" },
-    grammar: { label: "Tata Bahasa", title: "Tata Bahasa", unit: "pola", icon: "grammar" },
+    kanji: { label: "Kanji", title: "Kanji", listTitle: "JLPT N5 Kanji", unit: "kanji", searchHint: "Cari Kanji (contoh: 日)" },
+    vocab: { label: "Kosakata", title: "Vocabulary", listTitle: "JLPT N5 Vocabulary", unit: "kata", searchHint: "Cari kosakata" },
+    grammar: { label: "Tata Bahasa", title: "Grammar", listTitle: "JLPT N5 Grammar", unit: "pola", searchHint: "Cari pola" },
 };
 
 // Flashcard modes shown on the type-selection screen.
 export const MODES = [
-    { type: "vocab", title: "Kosakata", sub: "Kartu kata & arti", icon: "book", grad: "vocabulary" },
-    { type: "kanji", title: "Kanji", sub: "Aksara & bacaan", icon: "kanji", grad: "kanji" },
-    { type: "grammar", title: "Tata Bahasa", sub: "Pola & makna", icon: "grammar", grad: "grammar" },
+    { type: "vocab", title: "Vocabulary", sub: "Hafalkan kosakata", icon: "cardsFan", grad: "vocabulary-blue" },
+    { type: "kanji", title: "Kanji", sub: "Hafalkan aksara", glyph: "kanji", grad: "kanji" },
+    { type: "grammar", title: "Grammar", sub: "Hafalkan pola kalimat", icon: "bookGrammarMode", grad: "grammar" },
 ];
 
 export function findLevel(section, id) {

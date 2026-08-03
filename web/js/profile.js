@@ -1,6 +1,6 @@
-// Profile tab, matching the iOS ProfileView: a blue gradient header with the
-// avatar + name + "JLPT Learner" badge, a daily-target card, a 2×2 stats grid,
-// and the overall answer summary. All numbers come from the same store helpers
+// Profile tab, matching the Claude Design mockup: a blue gradient header (rounded
+// bottom) with avatar + name + "JLPT Learner", a daily-target card, a 2×2 stats
+// grid, and the overall answer summary. Numbers come from the same store helpers
 // the Home hero uses, so they never disagree between screens.
 
 import { icon } from "./icons.js";
@@ -11,11 +11,9 @@ const esc = (s) =>
         ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
 function initials(name) {
-    const words = String(name || "").trim().split(/\s+/).filter(Boolean);
-    if (!words.length) return "🍓";
-    const a = words[0][0] || "";
-    const b = words.length > 1 ? words[words.length - 1][0] : "";
-    return (a + b).toUpperCase();
+    const w = String(name || "").trim().split(/\s+/).filter(Boolean);
+    if (!w.length) return "U";
+    return (w.length > 1 ? w[0][0] + w[1][0] : w[0].slice(0, 2)).toUpperCase();
 }
 
 export function renderProfile(app) {
@@ -28,50 +26,44 @@ export function renderProfile(app) {
     const mastered = store.masteredTotal();
     const sum = store.getAnswerSummary();
 
-    const statTile = (name_, color, value, unit, caption) => `
+    const tile = (name_, chip, value, unit, caption) => `
         <div class="stat-tile">
-            <span class="stat-ic" style="background:color-mix(in srgb, ${color} 14%, transparent);color:${color}">${icon(name_)}</span>
+            <span class="stat-ic" style="background:${chip}">${icon(name_)}</span>
             <div class="stat-val">${value} <small>${esc(unit)}</small></div>
             <div class="stat-cap">${esc(caption)}</div>
         </div>`;
-
-    const ansPill = (label, count, color) => `
-        <div class="ans-pill" style="background:color-mix(in srgb, ${color} 12%, transparent)">
-            <div class="v" style="color:${color}">${count}</div><div class="l">${esc(label)}</div>
-        </div>`;
+    const ans = (cls, label, count) => `<div class="ans-pill ${cls}"><div class="v">${count}</div><div class="l">${esc(label)}</div></div>`;
 
     app.innerHTML = `
         <div class="profile-header">
             <div class="ph-title">Profile</div>
-            <div class="profile-avatar">${esc(initials(name))}</div>
-            <div class="profile-name">${esc(name)}</div>
-            <span class="profile-tag">JLPT Learner</span>
+            <div class="profile-id">
+                <div class="profile-avatar">${esc(initials(name))}</div>
+                <div class="profile-name">${esc(name)}</div>
+                <span class="profile-tag">JLPT Learner</span>
+            </div>
         </div>
 
         <div class="card">
-            <div class="tgt-row"><span>Target Harian</span><span class="muted">${studied}/${target}</span></div>
+            <div class="tgt-row"><span class="l">Target Harian</span><span class="r">${studied}/${target}</span></div>
             <div class="tgt-bar"><span style="width:${Math.max(prog * 100, prog > 0 ? 4 : 0)}%"></span></div>
         </div>
 
         <div class="stat-grid">
-            ${statTile("clock", "var(--blue)", due, "due", "hari ini")}
-            ${statTile("check", "var(--success)", studied, "kartu", "belajar")}
-            ${statTile("flame", "var(--caution)", streak, "hari", "streak")}
-            ${statTile("star", "var(--indigo-deep)", mastered, "kartu", "mastered")}
+            ${tile("clock", "#ebf3ff", due, "due", "hari ini")}
+            ${tile("check", "#e7f8ed", studied, "kartu", "belajar")}
+            ${tile("flame", "#fff1e4", streak, "hari", "streak")}
+            ${tile("star", "#eaf0ff", mastered, "kartu", "mastered")}
         </div>
 
         <div class="card">
             <div class="card-title">Ringkasan Jawaban</div>
             <div class="ans-pills">
-                ${ansPill("Ulang", sum.again, "var(--danger)")}
-                ${ansPill("Susah", sum.hard, "var(--caution)")}
-                ${ansPill("Bagus", sum.good, "var(--accent)")}
-                ${ansPill("Mudah", sum.easy, "var(--success)")}
+                ${ans("a", "Ulang", sum.again)}
+                ${ans("h", "Susah", sum.hard)}
+                ${ans("g", "Bagus", sum.good)}
+                ${ans("e", "Mudah", sum.easy)}
             </div>
-            <div class="summary-divider"></div>
-            <div class="ans-foot">
-                <span class="lab">Akurasi keseluruhan</span>
-                <span class="val">${Math.round(sum.accuracy * 100)}%</span>
-            </div>
+            <div class="ans-foot"><span class="lab">Akurasi keseluruhan</span><span class="val">${Math.round(sum.accuracy * 100)}%</span></div>
         </div>`;
 }

@@ -9,6 +9,7 @@ import { renderHome, renderLevels, renderList, renderDetail, renderHiragana, ren
 import { renderProfile } from "./profile.js";
 import { initTheme } from "./theme.js";
 import { icon } from "./icons.js";
+import { checkReminder } from "./reminder.js";
 import * as gsync from "./gsync.js";
 
 const app = document.getElementById("app");
@@ -94,3 +95,6 @@ window.addEventListener("ichigo-session-done", () => gsync.autoSyncIfEnabled());
 router();
 // Pull-merge on load (silent — no-op unless configured, consented and enabled).
 gsync.autoSyncIfEnabled();
+// Study reminder check on load and whenever the tab regains focus.
+checkReminder();
+document.addEventListener("visibilitychange", () => { if (!document.hidden) checkReminder(); });
