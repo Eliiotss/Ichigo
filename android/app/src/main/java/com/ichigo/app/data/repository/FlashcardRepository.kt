@@ -124,8 +124,12 @@ class FlashcardRepository @Inject constructor(
 
     // MARK: - Reviewing
 
-    /** Runs the scheduler for a grade and persists everything (Swift `submit`). */
-    suspend fun review(card: FlashcardDeckCard, levelKey: String, grade: FlashcardGrade) {
+    /**
+     * Runs the scheduler for a grade and persists everything (Swift `submit`).
+     * Returns the resulting card state so the session view can update its
+     * per-card bucket counters from the same single computation.
+     */
+    suspend fun review(card: FlashcardDeckCard, levelKey: String, grade: FlashcardGrade): FlashcardCardState {
         ensureLoaded()
         val current = deckProgress(card, levelKey)
         val stateBefore = current.state
@@ -141,6 +145,7 @@ class FlashcardRepository @Inject constructor(
         reviewLogDao.trimTo(MAX_LOGS)
         prefs.recordAnalytics(log.grade, log.reviewedAt)
         updateStreak(now)
+        return updated.state
     }
 
     private suspend fun saveProgress(p: FlashcardProgress) {
