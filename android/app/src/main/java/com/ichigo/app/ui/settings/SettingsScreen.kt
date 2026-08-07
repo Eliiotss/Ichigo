@@ -43,11 +43,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
@@ -211,18 +214,29 @@ private fun SettingsRow(icon: ImageVector, colors: List<Color>, title: String, s
 @Composable
 private fun NameRow(name: String, onChange: (String) -> Unit) {
     val c = IchigoTheme.colors
+    // The text field owns its value/selection locally (TextFieldValue) so the
+    // caret never jumps: previously the value was bound straight to the async
+    // DataStore flow, and each keystroke round-tripped and reset the caret to 0,
+    // which reversed the text ("zoro" → "oroz") and broke deletion. We only
+    // re-seed from the external value while the field is NOT focused (e.g. after
+    // a reload), so typing is never clobbered by the persistence round-trip.
+    var field by remember { mutableStateOf(TextFieldValue(name, TextRange(name.length))) }
+    var focused by remember { mutableStateOf(false) }
+    LaunchedEffect(name, focused) {
+        if (!focused && name != field.text) field = TextFieldValue(name, TextRange(name.length))
+    }
     Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 11.dp), verticalAlignment = Alignment.CenterVertically) {
         SettingsIcon(Icons.Filled.Person, listOf(IchigoPalette.BlueLight, IchigoPalette.Blue))
         Spacer(Modifier.size(12.dp))
         Text("Nama Pengguna", style = rounded(16, Wt.Semibold), color = c.primaryText)
         Spacer(Modifier.weight(1f))
         BasicTextField(
-            value = name,
-            onValueChange = onChange,
+            value = field,
+            onValueChange = { field = it; onChange(it.text) },
             singleLine = true,
             textStyle = rounded(16, Wt.Semibold).merge(androidx.compose.ui.text.TextStyle(color = c.primaryText, textAlign = TextAlign.End)),
             cursorBrush = SolidColor(IchigoPalette.Accent),
-            modifier = Modifier.weight(1f),
+            modifier = Modifier.weight(1f).onFocusChanged { focused = it.isFocused },
         )
     }
 }

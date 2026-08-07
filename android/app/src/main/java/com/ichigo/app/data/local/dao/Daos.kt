@@ -74,6 +74,10 @@ interface NewCardTodayDao {
     @Query("SELECT COUNT(*) FROM new_card_today WHERE levelKey = :levelKey AND day = :day")
     suspend fun countByLevelDay(levelKey: String, day: String): Int
 
+    /** New cards studied today across ALL decks — the global daily budget usage. */
+    @Query("SELECT COUNT(*) FROM new_card_today WHERE day = :day")
+    suspend fun countAllByDay(day: String): Int
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertIgnore(entity: NewCardTodayEntity)
 

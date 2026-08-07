@@ -109,7 +109,14 @@ class FlashcardRepository @Inject constructor(
         return LevelStats(total, mastered, due, if (total == 0) 0.0 else mastered.toDouble() / total)
     }
 
-    /** Builds the review queue for a session (Swift `FlashcardDeckQueueBuilder`). */
+    /**
+     * Builds the review queue for a session (Swift `FlashcardDeckQueueBuilder`).
+     *
+     * The new-card quota is a **global** daily budget: "Target Harian" is the
+     * total number of new cards across all decks per day, not a per-deck quota.
+     * (The iOS app applied it per deck, which let a multi-deck learner exceed the
+     * target several times over and inflated the "due hari ini" count.)
+     */
     suspend fun buildQueue(
         mode: FlashcardMode,
         levelId: String,
@@ -117,7 +124,7 @@ class FlashcardRepository @Inject constructor(
         dailyTarget: Int,
     ): List<FlashcardDeckCard> {
         val key = flashcardLevelKey(mode, levelId)
-        val usedToday = newCardStudiedToday(key)
+        val usedToday = newCardStudiedTodayGlobal()
         val sessionSettings = settings.copy(newCardsPerDay = maxOf(1, dailyTarget))
         return builder.build(key, items, _progress.value, sessionSettings, usedToday)
     }
@@ -176,6 +183,10 @@ class FlashcardRepository @Inject constructor(
         return newCardTodayDao.countByLevelDay(levelKey, day)
     }
 
+    /** New cards studied today across all decks (the global daily budget usage). */
+    suspend fun newCardStudiedTodayGlobal(now: Long = System.currentTimeMillis()): Int =
+        newCardTodayDao.countAllByDay(FlashcardDayKey.today(now).compact)
+
     // MARK: - Aggregate stats (Home / Profile)
 
     val masteredTotal: Int get() = _progress.value.values.count { it.isMastered }
@@ -189,20 +200,22 @@ class FlashcardRepository @Inject constructor(
     val analyticsSummary: Flow<FlashcardAnalyticsSummary> get() = prefs.analytics
 
     /**
-     * Today's total card load across all loaded decks, port of `dailyDueTotal`:
-     * due reviews plus the remaining new-card quota per deck.
+     * Today's total card load across all loaded decks: due reviews plus the
+     * remaining new-card budget. The new-card part uses a **global** daily budget
+     * (`target − new studied today across all decks`), so a fresh install shows a
+     * number near the daily target instead of `target × number-of-decks`.
      */
     suspend fun dailyDueTotal(target: Int, now: Long = System.currentTimeMillis()): Int {
         val map = _progress.value
-        var total = 0
-        for ((key, items) in deckCache) {
-            val dueReviews = items.count { map[it.id]?.let { p -> p.dueDate <= now } ?: false }
-            val untouched = items.count { map[it.id] == null }
-            val newStudied = newCardStudiedToday(key, now)
-            val newRemaining = minOf(untouched, maxOf(0, target - newStudied))
-            total += dueReviews + newRemaining
+        var dueReviews = 0
+        var totalUntouched = 0
+        for ((_, items) in deckCache) {
+            dueReviews += items.count { map[it.id]?.let { p -> p.dueDate <= now } ?: false }
+            totalUntouched += items.count { map[it.id] == null }
         }
-        return total
+        val newStudied = newCardStudiedTodayGlobal(now)
+        val newRemaining = minOf(totalUntouched, maxOf(0, target - newStudied))
+        return dueReviews + newRemaining
     }
 
     /** Preloads all unlocked decks so Home/Profile totals are ready (Swift `preloadHomeStats`). */
