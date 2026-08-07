@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base app theme (Compose paints everything; this only covers the window
+         background before the first frame). Cream page background matches
+         AppTheme.pageLight so the splash does not flash a different colour. -->
+    <style name="Theme.Ichigo" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/ichigo_page_light</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- SplashScreen API theme: the app mark on the cream background, matching
+         RootView.SplashView. The Compose splash then takes over for the
+         progress bar and status text. -->
+    <style name="Theme.Ichigo.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/ichigo_page_light</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_round</item>
+        <item name="postSplashScreenTheme">@style/Theme.Ichigo</item>
+    </style>
+</resources>

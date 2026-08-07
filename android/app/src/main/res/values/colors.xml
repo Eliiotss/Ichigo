@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mirrors AppTheme.pageLight (#F1EAE3) / pageDark (#12161F). -->
+    <color name="ichigo_page_light">#F1EAE3</color>
+    <color name="ichigo_page_dark">#12161F</color>
+</resources>
