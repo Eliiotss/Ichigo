@@ -19,7 +19,10 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CloudOff
+import androidx.compose.material.icons.automirrored.filled.Logout
+import androidx.compose.material.icons.filled.CloudDone
+import androidx.compose.material.icons.filled.CloudSync
+import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.GpsFixed
@@ -29,6 +32,7 @@ import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
@@ -62,9 +66,12 @@ import com.ichigo.app.ui.theme.IchigoTheme
 import com.ichigo.app.ui.theme.Wt
 import com.ichigo.app.ui.theme.rounded
 
-/** Port of `SettingsView`. Google Drive sync shows a "Segera Hadir" placeholder for now. */
+/** Port of `SettingsView`, with a working Google Drive two-way sync section. */
 @Composable
-fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
+fun SettingsScreen(
+    viewModel: SettingsViewModel = hiltViewModel(),
+    syncViewModel: SyncViewModel = hiltViewModel(),
+) {
     val c = IchigoTheme.colors
     val state by viewModel.state.collectAsStateWithLifecycle()
     val systemDark = androidx.compose.foundation.isSystemInDarkTheme()
@@ -129,15 +136,7 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
             }
         }
 
-        item {
-            Section("AKUN & SINKRONISASI", "Sinkronisasi progres via Google Drive akan hadir di pembaruan berikutnya.") {
-                SettingsCard {
-                    SettingsRow(Icons.Filled.CloudOff, listOf(IchigoPalette.Teal, IchigoPalette.TealDeep), "Sinkronisasi Google Drive", showDivider = false) {
-                        Text("Segera Hadir", style = rounded(14, Wt.Semibold), color = c.secondaryText)
-                    }
-                }
-            }
-        }
+        item { SyncSection(syncViewModel) }
 
         item {
             Section("DATA BELAJAR", "Reset hanya menghapus progres flashcard lokal, review log, streak, dan pengaturan FSRS.") {
@@ -238,6 +237,83 @@ private fun NameRow(name: String, onChange: (String) -> Unit) {
             cursorBrush = SolidColor(IchigoPalette.Accent),
             modifier = Modifier.weight(1f).onFocusChanged { focused = it.isFocused },
         )
+    }
+}
+
+@Composable
+private fun SyncSection(vm: SyncViewModel) {
+    val c = IchigoTheme.colors
+    val state by vm.state.collectAsStateWithLifecycle()
+    val autoSync by vm.autoSync.collectAsStateWithLifecycle()
+    val recovery by vm.recoveryIntent.collectAsStateWithLifecycle()
+
+    val signInLauncher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { res ->
+        vm.onSignInResult(res.data)
+    }
+    val recoveryLauncher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { vm.onRecoveryDone() }
+    LaunchedEffect(recovery) { recovery?.let { recoveryLauncher.launch(it) } }
+
+    val footer = state.message ?: if (state.signedIn) {
+        "Progres flashcard tersinkron dua arah lewat folder privat aplikasi di Google Drive. Aktifkan sinkron otomatis agar berjalan saat aplikasi dibuka."
+    } else {
+        "Masuk dengan Google agar progres flashcard tersinkron antar-perangkat seperti Anki (folder privat aplikasi di Drive)."
+    }
+
+    Section("AKUN & SINKRONISASI", footer) {
+        SettingsCard {
+            if (!state.signedIn) {
+                Row(
+                    Modifier.fillMaxWidth().clickable { signInLauncher.launch(vm.signInIntent()) }.padding(horizontal = 16.dp, vertical = 11.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    SettingsIcon(Icons.Filled.CloudSync, listOf(IchigoPalette.BlueLight, IchigoPalette.Blue))
+                    Spacer(Modifier.size(12.dp))
+                    Text("Masuk dengan Google", style = rounded(16, Wt.Semibold), color = c.primaryText)
+                    Spacer(Modifier.weight(1f))
+                    if (state.busy) CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp, color = IchigoPalette.Accent)
+                }
+            } else {
+                SettingsRow(Icons.Filled.CloudDone, listOf(IchigoPalette.BlueLight, IchigoPalette.Blue), "Akun") {
+                    Text(state.email ?: "Tersambung", style = rounded(13, Wt.Semibold), color = c.secondaryText)
+                }
+                SettingsRow(Icons.Filled.CloudSync, listOf(IchigoPalette.IndigoSoft, IchigoPalette.IndigoDeep), "Sinkronisasi otomatis") {
+                    Switch(checked = autoSync, onCheckedChange = { vm.setAutoSync(it) }, colors = SwitchDefaults.colors(checkedTrackColor = IchigoPalette.Accent))
+                }
+                Row(
+                    Modifier.fillMaxWidth().clickable(enabled = !state.busy) { vm.syncNow() }.padding(horizontal = 16.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    SettingsIcon(Icons.Filled.CloudUpload, listOf(IchigoPalette.Teal, IchigoPalette.TealDeep))
+                    Spacer(Modifier.size(12.dp))
+                    Column(Modifier.weight(1f)) {
+                        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 11.dp)) {
+                            Text("Sinkronkan sekarang", style = rounded(16, Wt.Semibold), color = c.primaryText, modifier = Modifier.weight(1f))
+                            if (state.busy) CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp, color = IchigoPalette.Accent)
+                            else state.lastSyncAt?.let { Text(relTime(it), style = rounded(13, Wt.Semibold), color = c.secondaryText) }
+                        }
+                        Box(Modifier.fillMaxWidth().height(1.dp).background(c.track))
+                    }
+                }
+                Row(
+                    Modifier.fillMaxWidth().clickable { vm.signOut() }.padding(horizontal = 16.dp, vertical = 11.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    SettingsIcon(Icons.AutoMirrored.Filled.Logout, listOf(IchigoPalette.DangerSoft, IchigoPalette.Danger))
+                    Spacer(Modifier.size(12.dp))
+                    Text("Keluar", style = rounded(16, Wt.Semibold), color = c.primaryText)
+                }
+            }
+        }
+    }
+}
+
+private fun relTime(ts: Long): String {
+    val minutes = (System.currentTimeMillis() - ts) / 60_000
+    return when {
+        minutes < 1 -> "baru saja"
+        minutes < 60 -> "$minutes menit lalu"
+        minutes < 1440 -> "${minutes / 60} jam lalu"
+        else -> "${minutes / 1440} hari lalu"
     }
 }
 

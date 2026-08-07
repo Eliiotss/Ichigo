@@ -50,6 +50,8 @@ class AppPreferences @Inject constructor(
 
         val googleEmail = stringPreferencesKey("google_account_email")
         val autoSync = booleanPreferencesKey("auto_sync_enabled")
+        val driveLastSync = longPreferencesKey("drive_last_sync")
+        val deviceId = stringPreferencesKey("drive_device_id")
 
         // analytics summary (flashcard_analytics_summary_v1) as scalar counters
         val anTotal = intPreferencesKey("analytics_total")
@@ -70,6 +72,20 @@ class AppPreferences @Inject constructor(
     val googleEmail: Flow<String?> = ds.data.map { it[Keys.googleEmail] }
     val autoSync: Flow<Boolean> = ds.data.map { it[Keys.autoSync] ?: false }
     val streak: Flow<Int> = ds.data.map { it[Keys.streak] ?: 0 }
+    val driveLastSync: Flow<Long?> = ds.data.map { it[Keys.driveLastSync] }
+
+    suspend fun setDriveLastSync(value: Long) = ds.edit { it[Keys.driveLastSync] = value }
+    suspend fun driveLastSyncOrNull(): Long? = driveLastSync.first()
+    suspend fun autoSyncNow(): Boolean = autoSync.first()
+
+    /** Stable per-install id used to tag backups. Generated once, then reused. */
+    suspend fun deviceId(): String {
+        val existing = ds.data.map { it[Keys.deviceId] }.first()
+        if (existing != null) return existing
+        val id = java.util.UUID.randomUUID().toString()
+        ds.edit { it[Keys.deviceId] = id }
+        return id
+    }
 
     suspend fun setUserName(value: String) = ds.edit { it[Keys.userName] = value }
     suspend fun setUserEmail(value: String) = ds.edit { it[Keys.userEmail] = value }
@@ -109,6 +125,52 @@ class AppPreferences @Inject constructor(
             lastReviewedAt = it[Keys.anLast],
         )
     }
+
+    /** Overwrites the analytics summary (used when restoring a Drive backup). */
+    suspend fun setAnalytics(summary: FlashcardAnalyticsSummary) = ds.edit { p ->
+        p[Keys.anTotal] = summary.totalReviews
+        p[Keys.anAgain] = summary.againCount
+        p[Keys.anHard] = summary.hardCount
+        p[Keys.anGood] = summary.goodCount
+        p[Keys.anEasy] = summary.easyCount
+        summary.lastReviewedAt?.let { p[Keys.anLast] = it }
+    }
+
+    /** Snapshot of all scalar preferences + day/streak keys for a backup. */
+    data class Snapshot(
+        val userName: String,
+        val userEmail: String,
+        val dailyTarget: Int,
+        val notifEnabled: Boolean,
+        val notifHour: Int,
+        val appearance: String,
+        val streak: Int,
+        val lastStudyDayKey: String?,
+        val lastResetDayKey: String?,
+        val analytics: FlashcardAnalyticsSummary,
+    )
+
+    suspend fun snapshot(): Snapshot = ds.data.map { p ->
+        Snapshot(
+            userName = p[Keys.userName] ?: "user123",
+            userEmail = p[Keys.userEmail] ?: "",
+            dailyTarget = p[Keys.dailyTarget] ?: 20,
+            notifEnabled = p[Keys.notifEnabled] ?: false,
+            notifHour = p[Keys.notifHour] ?: 20,
+            appearance = p[Keys.appearance] ?: AppAppearance.SYSTEM.rawValue,
+            streak = p[Keys.streak] ?: 0,
+            lastStudyDayKey = p[Keys.lastStudyDayKey],
+            lastResetDayKey = p[Keys.lastResetDayKey],
+            analytics = FlashcardAnalyticsSummary(
+                totalReviews = p[Keys.anTotal] ?: 0,
+                againCount = p[Keys.anAgain] ?: 0,
+                hardCount = p[Keys.anHard] ?: 0,
+                goodCount = p[Keys.anGood] ?: 0,
+                easyCount = p[Keys.anEasy] ?: 0,
+                lastReviewedAt = p[Keys.anLast],
+            ),
+        )
+    }.first()
 
     /** Increments the summary for a graded review, matching `FlashcardAnalyticsStore.record`. */
     suspend fun recordAnalytics(grade: FlashcardGrade, reviewedAt: Long) = ds.edit { p ->

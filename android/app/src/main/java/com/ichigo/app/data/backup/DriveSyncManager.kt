@@ -1,0 +1,152 @@
+package com.ichigo.app.data.backup
+
+import android.content.Context
+import android.content.Intent
+import com.google.android.gms.auth.GoogleAuthUtil
+import com.google.android.gms.auth.UserRecoverableAuthException
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.common.api.Scope
+import com.ichigo.app.data.local.AppPreferences
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.withContext
+import kotlinx.serialization.json.Json
+import javax.inject.Inject
+import javax.inject.Singleton
+
+/**
+ * Orchestrates Google Drive two-way sync, the Android counterpart of the iOS
+ * `DriveBackupManager`. Sign-in uses Google Sign-In (requesting the
+ * `drive.appdata` scope); the OAuth token is fetched with `GoogleAuthUtil` and
+ * used by [DriveClient]. A sync is pull → merge → apply → push, so studying on
+ * one device shows up on the next (Anki-style), never losing progress.
+ */
+@Singleton
+class DriveSyncManager @Inject constructor(
+    @ApplicationContext private val context: Context,
+    private val drive: DriveClient,
+    private val backup: BackupRepository,
+    private val prefs: AppPreferences,
+) {
+    data class DriveState(
+        val signedIn: Boolean = false,
+        val email: String? = null,
+        val busy: Boolean = false,
+        val lastSyncAt: Long? = null,
+        val message: String? = null,
+        val isError: Boolean = false,
+    )
+
+    private val json = Json { ignoreUnknownKeys = true; encodeDefaults = true }
+
+    private val _state = MutableStateFlow(DriveState())
+    val state: StateFlow<DriveState> = _state.asStateFlow()
+
+    /** When non-null, the UI must launch this consent intent then retry the sync. */
+    private val _recoveryIntent = MutableStateFlow<Intent?>(null)
+    val recoveryIntent: StateFlow<Intent?> = _recoveryIntent.asStateFlow()
+
+    private val driveScope = Scope(DRIVE_APPDATA)
+
+    private val signInOptions: GoogleSignInOptions
+        get() = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestEmail()
+            .requestScopes(driveScope)
+            .build()
+
+    fun signInIntent(): Intent = GoogleSignIn.getClient(context, signInOptions).signInIntent
+
+    /** Refreshes the signed-in state from the last account (call on screen enter). */
+    suspend fun refreshState() {
+        val acc = GoogleSignIn.getLastSignedInAccount(context)
+        _state.value = _state.value.copy(
+            signedIn = acc != null && GoogleSignIn.hasPermissions(acc, driveScope),
+            email = acc?.email,
+            lastSyncAt = prefs.driveLastSyncOrNull(),
+        )
+    }
+
+    suspend fun onSignInResult(data: Intent?) {
+        try {
+            val acc = GoogleSignIn.getSignedInAccountFromIntent(data).getResult(ApiException::class.java)
+            prefs.setGoogleEmail(acc.email)
+            _state.value = _state.value.copy(
+                signedIn = GoogleSignIn.hasPermissions(acc, driveScope),
+                email = acc.email,
+                message = "Berhasil masuk.",
+                isError = false,
+            )
+            syncNow()
+        } catch (e: ApiException) {
+            _state.value = _state.value.copy(message = "Gagal masuk (kode ${e.statusCode}).", isError = true)
+        } catch (e: Exception) {
+            _state.value = _state.value.copy(message = "Gagal masuk: ${e.message}", isError = true)
+        }
+    }
+
+    fun signOut() {
+        GoogleSignIn.getClient(context, signInOptions).signOut()
+        _state.value = DriveState()
+    }
+
+    suspend fun clearGoogleEmail() = prefs.setGoogleEmail(null)
+
+    fun consumeRecoveryIntent() { _recoveryIntent.value = null }
+
+    suspend fun syncNow() {
+        val acc = GoogleSignIn.getLastSignedInAccount(context)
+        if (acc == null || !GoogleSignIn.hasPermissions(acc, driveScope)) {
+            _state.value = _state.value.copy(message = "Belum masuk / izin Drive belum diberikan.", isError = true)
+            return
+        }
+        _state.value = _state.value.copy(busy = true, message = null, isError = false)
+        try {
+            withContext(Dispatchers.IO) {
+                val token = fetchToken(acc)
+                val fileId = drive.findBackupFileId(token)
+                val local = backup.export(prefs.deviceId())
+                val merged = if (fileId != null) {
+                    val remoteJson = drive.download(token, fileId)
+                    val remote = runCatching { json.decodeFromString(BackupPayload.serializer(), remoteJson) }.getOrNull()
+                    if (remote != null) BackupMerge.merge(local, remote) else local
+                } else {
+                    local
+                }
+                backup.apply(merged)
+                val out = json.encodeToString(BackupPayload.serializer(), merged)
+                if (fileId != null) drive.update(token, fileId, out) else drive.create(token, out)
+            }
+            val now = System.currentTimeMillis()
+            prefs.setDriveLastSync(now)
+            _state.value = _state.value.copy(busy = false, lastSyncAt = now, message = "Sinkronisasi selesai.", isError = false)
+        } catch (e: UserRecoverableAuthException) {
+            _recoveryIntent.value = e.intent
+            _state.value = _state.value.copy(busy = false, message = "Perlu izin Google Drive. Setujui lalu coba lagi.", isError = true)
+        } catch (e: Exception) {
+            _state.value = _state.value.copy(busy = false, message = "Gagal sinkron: ${e.message}", isError = true)
+        }
+    }
+
+    /** Pull-merge on foreground / push after study, only when auto-sync is on. */
+    suspend fun autoSyncIfEnabled() {
+        if (!prefs.autoSyncNow()) return
+        val acc = GoogleSignIn.getLastSignedInAccount(context) ?: return
+        if (!GoogleSignIn.hasPermissions(acc, driveScope)) return
+        syncNow()
+    }
+
+    private fun fetchToken(acc: GoogleSignInAccount): String {
+        val account = acc.account ?: throw IllegalStateException("Akun Google tidak tersedia")
+        return GoogleAuthUtil.getToken(context, account, "oauth2:$DRIVE_APPDATA")
+    }
+
+    companion object {
+        private const val DRIVE_APPDATA = "https://www.googleapis.com/auth/drive.appdata"
+    }
+}

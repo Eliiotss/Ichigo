@@ -62,6 +62,9 @@ interface KanaCountDao {
     @Query("SELECT * FROM kana_count")
     fun observeAll(): Flow<List<KanaCountEntity>>
 
+    @Query("SELECT * FROM kana_count")
+    suspend fun getAll(): List<KanaCountEntity>
+
     @Query("SELECT count FROM kana_count WHERE kana = :kana AND script = :script")
     suspend fun getCount(kana: String, script: String): Int?
 
@@ -84,4 +87,7 @@ interface NewCardTodayDao {
     /** Housekeeping: drop entries from previous days. */
     @Query("DELETE FROM new_card_today WHERE day != :today")
     suspend fun deleteOtherDays(today: String)
+
+    @Query("SELECT * FROM new_card_today")
+    suspend fun getAll(): List<NewCardTodayEntity>
 }

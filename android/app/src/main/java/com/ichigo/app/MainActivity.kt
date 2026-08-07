@@ -8,10 +8,14 @@ import androidx.activity.viewModels
 import androidx.compose.runtime.getValue
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.lifecycleScope
+import com.ichigo.app.data.backup.DriveSyncManager
 import com.ichigo.app.ui.IchigoApp
 import com.ichigo.app.ui.settings.AppearanceViewModel
 import com.ichigo.app.ui.theme.IchigoTheme
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 /**
  * Single-activity host, matching the iOS `IchigoApp` scene that hosts `RootView`.
@@ -26,6 +30,8 @@ class MainActivity : ComponentActivity() {
 
     private val appearanceViewModel: AppearanceViewModel by viewModels()
 
+    @Inject lateinit var driveSync: DriveSyncManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         enableEdgeToEdge()
@@ -39,5 +45,11 @@ class MainActivity : ComponentActivity() {
                 IchigoApp()
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Anki-style: pull-merge on foreground when auto-sync is on (iOS scenePhase).
+        lifecycleScope.launch { driveSync.autoSyncIfEnabled() }
     }
 }

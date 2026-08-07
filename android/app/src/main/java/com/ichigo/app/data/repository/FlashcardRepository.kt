@@ -76,6 +76,14 @@ class FlashcardRepository @Inject constructor(
         }
     }
 
+    /** Re-reads progress from the database, e.g. after a Drive backup is restored. */
+    suspend fun reloadFromDb() {
+        mutex.withLock {
+            _progress.value = progressDao.getAll().associate { it.id to it.toDomain() }
+            loaded = true
+        }
+    }
+
     // MARK: - Deck loading
 
     suspend fun loadDeck(mode: FlashcardMode, levelId: String, jsonFile: String): List<FlashcardDeckCard> {
