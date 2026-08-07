@@ -166,9 +166,10 @@ private fun HomeNavHost(nav: NavHostController, onOpenProfile: () -> Unit) {
         composable(Routes.KANJI_LIST) { entry ->
             val jsonFile = entry.arguments?.getString(Routes.Arg.JSON_FILE).orEmpty()
             val levelId = entry.arguments?.getString(Routes.Arg.LEVEL_ID).orEmpty()
-            KanjiListScreen(onBack = { nav.popBackStack() }) { itemId ->
-                nav.navigate(Routes.kanjiDetail(jsonFile, levelId, itemId))
-            }
+            KanjiListScreen(
+                onBack = { nav.popBackStack() },
+                onOpenItem = { itemId -> nav.navigate(Routes.kanjiDetail(jsonFile, levelId, itemId)) },
+            )
         }
         composable(Routes.KANJI_DETAIL) { KanjiDetailScreen(onBack = { nav.popBackStack() }) }
 
@@ -189,9 +190,10 @@ private fun HomeNavHost(nav: NavHostController, onOpenProfile: () -> Unit) {
         composable(Routes.GRAMMAR_LIST) { entry ->
             val jsonFile = entry.arguments?.getString(Routes.Arg.JSON_FILE).orEmpty()
             val levelId = entry.arguments?.getString(Routes.Arg.LEVEL_ID).orEmpty()
-            GrammarListScreen(onBack = { nav.popBackStack() }) { itemId ->
-                nav.navigate(Routes.grammarDetail(jsonFile, levelId, itemId))
-            }
+            GrammarListScreen(
+                onBack = { nav.popBackStack() },
+                onOpenItem = { itemId -> nav.navigate(Routes.grammarDetail(jsonFile, levelId, itemId)) },
+            )
         }
         composable(Routes.GRAMMAR_DETAIL) { GrammarDetailScreen(onBack = { nav.popBackStack() }) }
 
@@ -202,17 +204,19 @@ private fun HomeNavHost(nav: NavHostController, onOpenProfile: () -> Unit) {
             }
         }
         composable(Routes.FLASHCARD_LEVEL) {
-            FlashcardLevelScreen(onBack = { nav.popBackStack() }) { mode, level ->
-                nav.navigate(Routes.flashcardSession(mode.raw, level.id, level.jsonFile))
-            }
+            FlashcardLevelScreen(
+                onBack = { nav.popBackStack() },
+                onOpenLevel = { mode, level -> nav.navigate(Routes.flashcardSession(mode.raw, level.id, level.jsonFile)) },
+            )
         }
         composable(Routes.FLASHCARD_SESSION) { FlashcardSessionScreen(onBack = { nav.popBackStack() }) }
 
         // Hiragana / kana
         composable(Routes.HIRAGANA) {
-            HiraganaScreen(onBack = { nav.popBackStack() }) { isKatakana ->
-                nav.navigate(Routes.kanaFlashcard(isKatakana))
-            }
+            HiraganaScreen(
+                onBack = { nav.popBackStack() },
+                onStartFlashcard = { isKatakana -> nav.navigate(Routes.kanaFlashcard(isKatakana)) },
+            )
         }
         composable(Routes.KANA_FLASHCARD) { KanaFlashcardScreen(onClose = { nav.popBackStack() }) }
 

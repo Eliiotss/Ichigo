@@ -13,7 +13,7 @@ import java.util.Locale
  */
 class SpeechHelper(context: Context) {
     private var ready = false
-    private val tts = TextToSpeech(context.applicationContext) { status ->
+    private val tts: TextToSpeech = TextToSpeech(context.applicationContext) { status ->
         if (status == TextToSpeech.SUCCESS) {
             tts.language = Locale.JAPANESE
             tts.setSpeechRate(0.9f)

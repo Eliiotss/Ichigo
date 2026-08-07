@@ -1,6 +1,5 @@
 package com.ichigo.app.ui.splash
 
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -79,7 +78,5 @@ fun SplashScreen(onReady: () -> Unit, viewModel: SplashViewModel = hiltViewModel
                 Text(state.statusText, style = rounded(13, Wt.Medium), color = c.secondaryText, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
             }
         }
-        // markScale kept referenced for future entrance animation parity.
-        if (markScale < 0f) Unit
     }
 }
