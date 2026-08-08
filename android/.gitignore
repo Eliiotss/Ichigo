@@ -2,6 +2,12 @@
 .gradle/
 build/
 /local.properties
+
+# Signing — NEVER commit keystores or their passwords
+keystore.properties
+*.jks
+*.keystore
+/keystore/
 /.idea/
 *.iml
 .DS_Store

@@ -103,6 +103,47 @@ N2/N1 terkunci (belum ada dataset), sama seperti aplikasi iOS.
   penjadwalan latar (WorkManager) menyusul.
 - Dataset N2/N1 belum disertakan (mengikuti iOS).
 
+## Rilis ke Play Store (AAB bertanda tangan)
+
+Build rilis memakai **signing config** yang dibaca dari `keystore.properties`
+(TIDAK di-commit — lihat `.gitignore`). Isi berkasnya:
+
+```properties
+storeFile=keystore/ichigo-upload.jks
+storePassword=****
+keyAlias=ichigo-upload
+keyPassword=****
+```
+
+Build:
+
+```bash
+cd android
+./gradlew bundleRelease     # → app/build/outputs/bundle/release/app-release.aab  (unggah ke Play Console)
+./gradlew assembleRelease   # → app/build/outputs/apk/release/app-release.apk    (uji langsung di HP)
+```
+
+Langkah publikasi (ringkas):
+1. Buat akun **Google Play Console** (biaya pendaftaran satu kali $25).
+2. **Create app** → isi nama, bahasa, kategori (Education).
+3. **App integrity → Play App Signing**: aktif (Google memegang app signing key;
+   kamu mengunggah AAB yang ditandatangani dengan **upload key** di
+   `ichigo-upload.jks`). Kalau upload key hilang, bisa di-reset lewat Play.
+4. Unggah `app-release.aab` ke track **Internal testing** dulu, lalu Production.
+5. Lengkapi **Data safety**, **Privacy policy**, ikon toko **512×512**
+   (`ichigo_playstore_icon_512.png`), screenshot, dsb.
+6. `applicationId` saat ini `com.ichigo.app` — pastikan unik/milikmu sebelum rilis.
+
+**Penting:** simpan `ichigo-upload.jks` + passwordnya baik-baik (untuk update
+aplikasi berikutnya). Jangan pernah commit keystore/password ke repo.
+
+## Ikon & splash
+
+- **Launcher icon**: adaptive icon (foreground konten logo + background krem
+  `#FCF9F4`) di `res/mipmap-*` + `res/drawable-*/ic_launcher_foreground.png`.
+- **Splash**: wordmark "IchiGo" (`res/drawable-nodpi/ic_splash_logo.png`) di atas
+  latar krem, dengan bilah progres pemuatan dataset.
+
 ## Font
 
 Baloo 2 (`res/font/baloo2.ttf`) disertakan di bawah **SIL Open Font License 1.1**

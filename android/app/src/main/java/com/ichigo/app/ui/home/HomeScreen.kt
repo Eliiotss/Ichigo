@@ -98,12 +98,7 @@ fun HomeScreen(
             HeroCard(state)
         }
         item(span = { GridItemSpan(maxLineSpan) }) {
-            Text(
-                "BELAJAR MANDIRI",
-                style = rounded(12, Wt.Heavy),
-                color = c.secondaryText,
-                modifier = Modifier.padding(top = 4.dp),
-            )
+            Spacer(Modifier.height(4.dp))
         }
         items(menuItems.size) { index ->
             val item = menuItems[index]
@@ -117,7 +112,6 @@ private fun GreetingHeader(state: HomeUiState, onOpenProfile: () -> Unit) {
     val c = IchigoTheme.colors
     Row(Modifier.fillMaxWidth().padding(bottom = 4.dp), verticalAlignment = Alignment.CenterVertically) {
         Column(Modifier.weight(1f)) {
-            Text("Okaeri 🍓", style = rounded(13, Wt.Bold), color = c.secondaryText)
             Text(
                 "${state.greeting}, ${state.displayName}",
                 style = rounded(26, Wt.Heavy),

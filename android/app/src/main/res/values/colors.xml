@@ -3,4 +3,6 @@
     <!-- Mirrors AppTheme.pageLight (#F1EAE3) / pageDark (#12161F). -->
     <color name="ichigo_page_light">#F1EAE3</color>
     <color name="ichigo_page_dark">#12161F</color>
+    <!-- Cream of the Ichigo logo — used as the splash background on both themes. -->
+    <color name="ichigo_splash">#FCF9F4</color>
 </resources>
