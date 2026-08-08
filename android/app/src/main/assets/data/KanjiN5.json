@@ -13,7 +13,7 @@
                 "romaji": "nihon",
                 "meaning": "Jepang",
                 "sentence": "私は日本を勉強します。",
-                "sentenceFurigana": "私は日本(にほん)をべんきょうします。",
+                "sentenceFurigana": "私は日本をべんきょうします。",
                 "sentenceMeaning": "Saya mempelajari Jepang."
             },
             {
@@ -22,7 +22,7 @@
                 "romaji": "kyou",
                 "meaning": "hari ini",
                 "sentence": "この今日は大切です。",
-                "sentenceFurigana": "この今日(きょう)はたいせつです。",
+                "sentenceFurigana": "この今日はたいせつです。",
                 "sentenceMeaning": "hari ini ini penting."
             },
             {
@@ -31,7 +31,7 @@
                 "romaji": "nichiyoubi",
                 "meaning": "Minggu",
                 "sentence": "先生が日曜日を説明しました。",
-                "sentenceFurigana": "せんせいが日曜日(にちようび)をせつめいしました。",
+                "sentenceFurigana": "せんせいが日曜日をせつめいしました。",
                 "sentenceMeaning": "Guru menjelaskan Minggu."
             },
             {
@@ -40,7 +40,7 @@
                 "romaji": "nichi",
                 "meaning": "hari / matahari",
                 "sentence": "毎日日を使います。",
-                "sentenceFurigana": "まいにち日(ひ)をつかいます。",
+                "sentenceFurigana": "まいにち日をつかいます。",
                 "sentenceMeaning": "Saya memakai hari / matahari setiap hari."
             },
             {
@@ -49,7 +49,7 @@
                 "romaji": "nichi",
                 "meaning": "hari / matahari",
                 "sentence": "友だちと日について話しました。",
-                "sentenceFurigana": "ともだちと日(ニチ)についてはなしました。",
+                "sentenceFurigana": "ともだちと日についてはなしました。",
                 "sentenceMeaning": "Saya membahas hari / matahari dengan teman."
             }
         ]
@@ -68,7 +68,7 @@
                 "romaji": "getsuyoubi",
                 "meaning": "Senin",
                 "sentence": "私は月曜日を勉強します。",
-                "sentenceFurigana": "私は月曜日(げつようび)をべんきょうします。",
+                "sentenceFurigana": "私は月曜日をべんきょうします。",
                 "sentenceMeaning": "Saya mempelajari Senin."
             },
             {
@@ -77,7 +77,7 @@
                 "romaji": "kongetsu",
                 "meaning": "bulan ini",
                 "sentence": "この今月は大切です。",
-                "sentenceFurigana": "この今月(こんげつ)はたいせつです。",
+                "sentenceFurigana": "この今月はたいせつです。",
                 "sentenceMeaning": "bulan ini ini penting."
             },
             {
@@ -86,7 +86,7 @@
                 "romaji": "ichigatsu",
                 "meaning": "Januari",
                 "sentence": "先生が一月を説明しました。",
-                "sentenceFurigana": "せんせいが一月(いちがつ)をせつめいしました。",
+                "sentenceFurigana": "せんせいが一月をせつめいしました。",
                 "sentenceMeaning": "Guru menjelaskan Januari."
             },
             {
@@ -95,7 +95,7 @@
                 "romaji": "getsu",
                 "meaning": "bulan",
                 "sentence": "毎日月を使います。",
-                "sentenceFurigana": "まいにち月(つき)をつかいます。",
+                "sentenceFurigana": "まいにち月をつかいます。",
                 "sentenceMeaning": "Saya memakai bulan setiap hari."
             },
             {
@@ -104,7 +104,7 @@
                 "romaji": "getsu",
                 "meaning": "bulan",
                 "sentence": "友だちと月について話しました。",
-                "sentenceFurigana": "ともだちと月(ゲツ)についてはなしました。",
+                "sentenceFurigana": "ともだちと月についてはなしました。",
                 "sentenceMeaning": "Saya membahas bulan dengan teman."
             }
         ]
@@ -123,7 +123,7 @@
                 "romaji": "kayoubi",
                 "meaning": "Selasa",
                 "sentence": "私は火曜日を勉強します。",
-                "sentenceFurigana": "私は火曜日(かようび)をべんきょうします。",
+                "sentenceFurigana": "私は火曜日をべんきょうします。",
                 "sentenceMeaning": "Saya mempelajari Selasa."
             },
             {
@@ -132,7 +132,7 @@
                 "romaji": "kaji",
                 "meaning": "kebakaran",
                 "sentence": "この火事は大切です。",
-                "sentenceFurigana": "この火事(かじ)はたいせつです。",
+                "sentenceFurigana": "この火事はたいせつです。",
                 "sentenceMeaning": "kebakaran ini penting."
             },
             {
@@ -141,7 +141,7 @@
                 "romaji": "hanabi",
                 "meaning": "kembang api",
                 "sentence": "先生が花火を説明しました。",
-                "sentenceFurigana": "せんせいが花火(はなび)をせつめいしました。",
+                "sentenceFurigana": "せんせいが花火をせつめいしました。",
                 "sentenceMeaning": "Guru menjelaskan kembang api."
             },
             {
@@ -150,7 +150,7 @@
                 "romaji": "ka",
                 "meaning": "api",
                 "sentence": "毎日火を使います。",
-                "sentenceFurigana": "まいにち火(ひ)をつかいます。",
+                "sentenceFurigana": "まいにち火をつかいます。",
                 "sentenceMeaning": "Saya memakai api setiap hari."
             },
             {
@@ -159,7 +159,7 @@
                 "romaji": "ka",
                 "meaning": "api",
                 "sentence": "友だちと火について話しました。",
-                "sentenceFurigana": "ともだちと火(カ)についてはなしました。",
+                "sentenceFurigana": "ともだちと火についてはなしました。",
                 "sentenceMeaning": "Saya membahas api dengan teman."
             }
         ]
@@ -178,7 +178,7 @@
                 "romaji": "suiyoubi",
                 "meaning": "Rabu",
                 "sentence": "私は水曜日を勉強します。",
-                "sentenceFurigana": "私は水曜日(すいようび)をべんきょうします。",
+                "sentenceFurigana": "私は水曜日をべんきょうします。",
                 "sentenceMeaning": "Saya mempelajari Rabu."
             },
             {
@@ -187,7 +187,7 @@
                 "romaji": "mizu",
                 "meaning": "air",
                 "sentence": "この水は大切です。",
-                "sentenceFurigana": "この水(みず)はたいせつです。",
+                "sentenceFurigana": "この水はたいせつです。",
                 "sentenceMeaning": "air ini penting."
             },
             {
@@ -196,7 +196,7 @@
                 "romaji": "suiei",
                 "meaning": "renang",
                 "sentence": "先生が水泳を説明しました。",
-                "sentenceFurigana": "せんせいが水泳(すいえい)をせつめいしました。",
+                "sentenceFurigana": "せんせいが水泳をせつめいしました。",
                 "sentenceMeaning": "Guru menjelaskan renang."
             },
             {
@@ -205,7 +205,7 @@
                 "romaji": "sui",
                 "meaning": "air",
                 "sentence": "毎日水を使います。",
-                "sentenceFurigana": "まいにち水(スイ)をつかいます。",
+                "sentenceFurigana": "まいにち水をつかいます。",
                 "sentenceMeaning": "Saya memakai air setiap hari."
             },
             {
@@ -233,7 +233,7 @@
                 "romaji": "mokuyoubi",
                 "meaning": "Kamis",
                 "sentence": "私は木曜日を勉強します。",
-                "sentenceFurigana": "私は木曜日(もくようび)をべんきょうします。",
+                "sentenceFurigana": "私は木曜日をべんきょうします。",
                 "sentenceMeaning": "Saya mempelajari Kamis."
             },
             {
@@ -242,7 +242,7 @@
                 "romaji": "ki",
                 "meaning": "pohon",
                 "sentence": "この木は大切です。",
-                "sentenceFurigana": "この木(き)はたいせつです。",
+                "sentenceFurigana": "この木はたいせつです。",
                 "sentenceMeaning": "pohon ini penting."
             },
             {
@@ -251,7 +251,7 @@
                 "romaji": "mokuzai",
                 "meaning": "kayu bahan",
                 "sentence": "先生が木材を説明しました。",
-                "sentenceFurigana": "せんせいが木材(もくざい)をせつめいしました。",
+                "sentenceFurigana": "せんせいが木材をせつめいしました。",
                 "sentenceMeaning": "Guru menjelaskan kayu bahan."
             },
             {
@@ -260,7 +260,7 @@
                 "romaji": "moku",
                 "meaning": "pohon / kayu",
                 "sentence": "毎日木を使います。",
-                "sentenceFurigana": "まいにち木(モク)をつかいます。",
+                "sentenceFurigana": "まいにち木をつかいます。",
                 "sentenceMeaning": "Saya memakai pohon / kayu setiap hari."
             },
             {
@@ -288,7 +288,7 @@
                 "romaji": "kinyoubi",
                 "meaning": "Jumat",
                 "sentence": "私は金曜日を勉強します。",
-                "sentenceFurigana": "私は金曜日(きんようび)をべんきょうします。",
+                "sentenceFurigana": "私は金曜日をべんきょうします。",
                 "sentenceMeaning": "Saya mempelajari Jumat."
             },
             {
@@ -297,7 +297,7 @@
                 "romaji": "okane",
                 "meaning": "uang",
                 "sentence": "このお金は大切です。",
-                "sentenceFurigana": "このお金(おかね)はたいせつです。",
+                "sentenceFurigana": "このお金はたいせつです。",
                 "sentenceMeaning": "uang ini penting."
             },
             {
@@ -306,7 +306,7 @@
                 "romaji": "kiniro",
                 "meaning": "warna emas",
                 "sentence": "先生が金色を説明しました。",
-                "sentenceFurigana": "せんせいが金色(きんいろ)をせつめいしました。",
+                "sentenceFurigana": "せんせいが金色をせつめいしました。",
                 "sentenceMeaning": "Guru menjelaskan warna emas."
             },
             {
