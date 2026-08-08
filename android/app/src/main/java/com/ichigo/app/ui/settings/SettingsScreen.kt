@@ -21,6 +21,7 @@ import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.CloudDone
+import androidx.compose.material.icons.filled.CloudOff
 import androidx.compose.material.icons.filled.CloudSync
 import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.DarkMode
@@ -66,12 +67,13 @@ import com.ichigo.app.ui.theme.IchigoTheme
 import com.ichigo.app.ui.theme.Wt
 import com.ichigo.app.ui.theme.rounded
 
-/** Port of `SettingsView`, with a working Google Drive two-way sync section. */
+/**
+ * Port of `SettingsView`. The Google Drive sync section shows a "Segera Hadir"
+ * placeholder for now (the sync backend + [SyncSection] are implemented and kept
+ * in the codebase; re-enable by rendering `SyncSection(hiltViewModel())` here).
+ */
 @Composable
-fun SettingsScreen(
-    viewModel: SettingsViewModel = hiltViewModel(),
-    syncViewModel: SyncViewModel = hiltViewModel(),
-) {
+fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
     val c = IchigoTheme.colors
     val state by viewModel.state.collectAsStateWithLifecycle()
     val systemDark = androidx.compose.foundation.isSystemInDarkTheme()
@@ -136,7 +138,15 @@ fun SettingsScreen(
             }
         }
 
-        item { SyncSection(syncViewModel) }
+        item {
+            Section("AKUN & SINKRONISASI", "Sinkronisasi progres via Google Drive akan hadir di pembaruan berikutnya.") {
+                SettingsCard {
+                    SettingsRow(Icons.Filled.CloudOff, listOf(IchigoPalette.Teal, IchigoPalette.TealDeep), "Sinkronisasi Google Drive", showDivider = false) {
+                        Text("Segera Hadir", style = rounded(14, Wt.Semibold), color = c.secondaryText)
+                    }
+                }
+            }
+        }
 
         item {
             Section("DATA BELAJAR", "Reset hanya menghapus progres flashcard lokal, review log, streak, dan pengaturan FSRS.") {
