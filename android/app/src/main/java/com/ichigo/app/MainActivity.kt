@@ -10,10 +10,13 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import com.ichigo.app.data.backup.DriveSyncManager
+import com.ichigo.app.data.local.AppPreferences
 import com.ichigo.app.ui.IchigoApp
 import com.ichigo.app.ui.settings.AppearanceViewModel
 import com.ichigo.app.ui.theme.IchigoTheme
+import com.ichigo.app.util.ReminderScheduler
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -31,11 +34,17 @@ class MainActivity : ComponentActivity() {
     private val appearanceViewModel: AppearanceViewModel by viewModels()
 
     @Inject lateinit var driveSync: DriveSyncManager
+    @Inject lateinit var prefs: AppPreferences
+    @Inject lateinit var reminder: ReminderScheduler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+        // Re-arm the daily reminder if it was enabled (covers reinstall/update).
+        lifecycleScope.launch {
+            if (prefs.notifEnabled.first()) reminder.schedule(prefs.notifHour.first())
+        }
         setContent {
             // The user's Sistem/Terang/Gelap choice, persisted like the iOS
             // `AppAppearance` @AppStorage value. Applied at the root so every

@@ -19,6 +19,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.CloudDone
 import androidx.compose.material.icons.filled.CloudSync
@@ -85,8 +86,14 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
     val systemDark = androidx.compose.foundation.isSystemInDarkTheme()
     val context = LocalContext.current
     var showReset by remember { mutableStateOf(false) }
+    var showAbout by remember { mutableStateOf(false) }
 
     LaunchedEffect(systemDark) { viewModel.syncEffectiveDark(systemDark) }
+
+    if (showAbout) {
+        AboutScreen(onBack = { showAbout = false })
+        return
+    }
 
     val notifLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
         viewModel.setNotifEnabled(granted)
@@ -164,10 +171,18 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
         }
 
         item {
-            Section("TENTANG", "Ichigo — belajar bahasa Jepang JLPT.") {
+            Section("TENTANG", "Versi, kebijakan privasi, dan info aplikasi.") {
                 SettingsCard {
-                    SettingsRow(Icons.Filled.Info, listOf(IchigoPalette.BlueLight, IchigoPalette.Blue), "Versi", showDivider = false) {
-                        Text("v${BuildConfig.VERSION_NAME}", style = rounded(16, Wt.Semibold), color = c.secondaryText)
+                    Row(
+                        Modifier.fillMaxWidth().clickable { showAbout = true }.padding(horizontal = 16.dp, vertical = 11.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        SettingsIcon(Icons.Filled.Info, listOf(IchigoPalette.BlueLight, IchigoPalette.Blue))
+                        Spacer(Modifier.size(12.dp))
+                        Text("Tentang Aplikasi", style = rounded(16, Wt.Semibold), color = c.primaryText, modifier = Modifier.weight(1f))
+                        Text("v${BuildConfig.VERSION_NAME}", style = rounded(14, Wt.Semibold), color = c.secondaryText)
+                        Spacer(Modifier.size(8.dp))
+                        Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = c.secondaryText, modifier = Modifier.size(20.dp))
                     }
                 }
             }

@@ -6,6 +6,7 @@ import com.ichigo.app.data.local.AppPreferences
 import com.ichigo.app.data.model.AppAppearance
 import com.ichigo.app.data.repository.AccountRepository
 import com.ichigo.app.data.repository.FlashcardRepository
+import com.ichigo.app.util.ReminderScheduler
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -38,6 +39,7 @@ class SettingsViewModel @Inject constructor(
     private val prefs: AppPreferences,
     private val account: AccountRepository,
     private val flashcards: FlashcardRepository,
+    private val reminder: ReminderScheduler,
 ) : ViewModel() {
 
     // `isDark` reflects the effective scheme; the screen passes the system value
@@ -76,9 +78,17 @@ class SettingsViewModel @Inject constructor(
     fun setEmail(value: String) = launch { account.setEmail(value) }
     fun incTarget() = launch { prefs.setDailyTarget(state.value.dailyTarget + 5) }
     fun decTarget() = launch { prefs.setDailyTarget(state.value.dailyTarget - 5) }
-    fun setNotifEnabled(value: Boolean) = launch { prefs.setNotifEnabled(value) }
-    fun incNotifHour() = launch { prefs.setNotifHour(state.value.notifHour + 1) }
-    fun decNotifHour() = launch { prefs.setNotifHour(state.value.notifHour - 1) }
+    fun setNotifEnabled(value: Boolean) = launch {
+        prefs.setNotifEnabled(value)
+        if (value) reminder.schedule(state.value.notifHour) else reminder.cancel()
+    }
+    fun incNotifHour() = launch { setNotifHour((state.value.notifHour + 1).coerceIn(6, 23)) }
+    fun decNotifHour() = launch { setNotifHour((state.value.notifHour - 1).coerceIn(6, 23)) }
+
+    private suspend fun setNotifHour(hour: Int) {
+        prefs.setNotifHour(hour)
+        if (state.value.notifEnabled) reminder.schedule(hour)
+    }
 
     /** Slide toggle → explicit light/dark, matching `isDarkBinding`. */
     fun setDark(dark: Boolean) = launch {

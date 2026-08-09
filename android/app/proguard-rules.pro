@@ -70,6 +70,10 @@
 -dontwarn org.bouncycastle.**
 -dontwarn org.openjsse.**
 
+# ── WorkManager ────────────────────────────────────────────────────────────
+# Workers are instantiated by class name via reflection, so keep ours by name.
+-keep class com.ichigo.app.util.DailyReminderWorker { <init>(android.content.Context, androidx.work.WorkerParameters); }
+
 # Hilt, Jetpack Compose, DataStore and Google Play services all ship their own
 # consumer ProGuard rules inside their artifacts, so R8 applies them
 # automatically — no extra keeps required here.

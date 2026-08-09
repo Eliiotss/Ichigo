@@ -1,6 +1,7 @@
 package com.ichigo.app
 
 import android.app.Application
+import com.ichigo.app.util.createReminderChannel
 import dagger.hilt.android.HiltAndroidApp
 
 /**
@@ -12,4 +13,9 @@ import dagger.hilt.android.HiltAndroidApp
  * `UserDefaults`-backed stores) is constructed once and shared.
  */
 @HiltAndroidApp
-class IchigoApplication : Application()
+class IchigoApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        createReminderChannel(this)
+    }
+}
