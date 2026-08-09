@@ -15,6 +15,7 @@ import com.ichigo.app.ui.IchigoApp
 import com.ichigo.app.ui.settings.AppearanceViewModel
 import com.ichigo.app.ui.theme.IchigoTheme
 import com.ichigo.app.util.ReminderScheduler
+import com.ichigo.app.util.SMART_REMINDER_HOUR
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -43,7 +44,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         // Re-arm the daily reminder if it was enabled (covers reinstall/update).
         lifecycleScope.launch {
-            if (prefs.notifEnabled.first()) reminder.schedule(prefs.notifHour.first())
+            if (prefs.notifEnabled.first()) {
+                val hour = if (prefs.reminderSmartNow()) SMART_REMINDER_HOUR else prefs.notifHour.first()
+                reminder.schedule(hour)
+            }
         }
         setContent {
             // The user's Sistem/Terang/Gelap choice, persisted like the iOS

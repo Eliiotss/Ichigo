@@ -7,6 +7,7 @@ import com.ichigo.app.data.model.AppAppearance
 import com.ichigo.app.data.repository.AccountRepository
 import com.ichigo.app.data.repository.FlashcardRepository
 import com.ichigo.app.util.ReminderScheduler
+import com.ichigo.app.util.SMART_REMINDER_HOUR
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -82,17 +83,24 @@ class SettingsViewModel @Inject constructor(
     fun decTarget() = launch { prefs.setDailyTarget(state.value.dailyTarget - 5) }
     fun setNotifEnabled(value: Boolean) = launch {
         prefs.setNotifEnabled(value)
-        if (value) reminder.schedule(state.value.notifHour) else reminder.cancel()
+        if (value) reminder.schedule(reminderHour(state.value.reminderSmart, state.value.notifHour)) else reminder.cancel()
     }
     fun incNotifHour() = launch { setNotifHour((state.value.notifHour + 1).coerceIn(6, 23)) }
     fun decNotifHour() = launch { setNotifHour((state.value.notifHour - 1).coerceIn(6, 23)) }
 
     private suspend fun setNotifHour(hour: Int) {
         prefs.setNotifHour(hour)
-        if (state.value.notifEnabled) reminder.schedule(hour)
+        // Only the Manual mode uses the picked hour; Pintar uses the fixed smart hour.
+        if (state.value.notifEnabled && !state.value.reminderSmart) reminder.schedule(hour)
     }
 
-    fun setReminderSmart(value: Boolean) = launch { prefs.setReminderSmart(value) }
+    fun setReminderSmart(value: Boolean) = launch {
+        prefs.setReminderSmart(value)
+        if (state.value.notifEnabled) reminder.schedule(reminderHour(value, state.value.notifHour))
+    }
+
+    /** Manual mode reminds at the picked hour; Pintar mode at the fixed smart hour. */
+    private fun reminderHour(smart: Boolean, manualHour: Int) = if (smart) SMART_REMINDER_HOUR else manualHour
 
     /** Slide toggle → explicit light/dark, matching `isDarkBinding`. */
     fun setDark(dark: Boolean) = launch {

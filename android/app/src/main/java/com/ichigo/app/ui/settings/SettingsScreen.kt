@@ -68,6 +68,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.ichigo.app.BuildConfig
 import com.ichigo.app.ui.components.ReminderModeToggle
 import com.ichigo.app.ui.components.ThemeSlideToggle
+import com.ichigo.app.util.SMART_REMINDER_HOUR
 import com.ichigo.app.ui.theme.IchigoPalette
 import com.ichigo.app.ui.theme.IchigoTheme
 import com.ichigo.app.ui.theme.Wt
@@ -118,7 +119,7 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
         }
 
         item {
-            Section("PREFERENSI", "Mode pengingat — Manual: selalu ingatkan pada jam pilihan. Pintar: hanya kalau kamu belum belajar hari ini.") {
+            Section("PREFERENSI", "Pengingat Belajar menyalakan notifikasi harian. Mode Manual: kamu pilih jamnya. Mode Pintar: otomatis di malam hari, dan hanya muncul kalau kamu belum belajar.") {
                 SettingsCard {
                     SettingsRow(if (state.isDark) Icons.Filled.DarkMode else Icons.Filled.LightMode, listOf(IchigoPalette.IndigoSoft, IchigoPalette.IndigoDeep), "Mode Tampilan") {
                         ThemeSlideToggle(state.isDark) { viewModel.setDark(it) }
@@ -142,8 +143,15 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
                         SettingsRow(Icons.Filled.AutoAwesome, listOf(IchigoPalette.Sky, IchigoPalette.SkyDeep), "Mode pengingat") {
                             ReminderModeToggle(state.reminderSmart) { viewModel.setReminderSmart(it) }
                         }
-                        SettingsRow(Icons.Filled.Schedule, listOf(IchigoPalette.Teal, IchigoPalette.TealDeep), "Waktu pengingat") {
-                            Stepper("jam ${state.notifHour}:00", viewModel::decNotifHour, viewModel::incNotifHour)
+                        if (state.reminderSmart) {
+                            // Pintar: timing is automatic — show it as info, not a picker (no more clash).
+                            SettingsRow(Icons.Filled.Schedule, listOf(IchigoPalette.Teal, IchigoPalette.TealDeep), "Waktu pengingat") {
+                                Text("Otomatis · $SMART_REMINDER_HOUR:00", style = rounded(14, Wt.Semibold), color = c.secondaryText)
+                            }
+                        } else {
+                            SettingsRow(Icons.Filled.Schedule, listOf(IchigoPalette.Teal, IchigoPalette.TealDeep), "Waktu pengingat") {
+                                Stepper("jam ${state.notifHour}:00", viewModel::decNotifHour, viewModel::incNotifHour)
+                            }
                         }
                     }
                     SettingsRow(Icons.Filled.GpsFixed, listOf(IchigoPalette.Violet, IchigoPalette.VioletDeep), "Target Harian") {

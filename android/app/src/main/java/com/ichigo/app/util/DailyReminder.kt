@@ -31,6 +31,8 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 const val REMINDER_CHANNEL_ID = "study_reminder"
+/** Fixed evening hour used by the smart ("Pintar") reminder mode. */
+const val SMART_REMINDER_HOUR = 20
 private const val REMINDER_WORK_NAME = "ichigo_daily_reminder"
 private const val REMINDER_NOTIF_ID = 1001
 
