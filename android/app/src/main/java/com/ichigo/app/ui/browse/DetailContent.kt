@@ -18,10 +18,8 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Article
 import androidx.compose.material.icons.automirrored.filled.FormatListBulleted
-import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.FormatQuote
 import androidx.compose.material.icons.filled.Warning
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -176,13 +174,13 @@ fun GrammarDetailContent(item: GrammarItem) {
             }
         }
         if (item.commonMistakes.isNotEmpty()) {
-            DetailSectionCard("Kesalahan Umum", Icons.Filled.Warning, tint = IchigoPalette.Danger) {
+            DetailSectionCard("Poin Penting", Icons.Filled.Warning, tint = IchigoPalette.Caution) {
                 Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    item.commonMistakes.forEach { mistake ->
-                        Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).background(IchigoPalette.Danger.copy(alpha = if (c.isDark) 0.16f else 0.07f)).padding(12.dp), verticalAlignment = Alignment.Top) {
-                            Icon(Icons.Filled.Cancel, null, tint = IchigoPalette.Danger, modifier = Modifier.size(14.dp).padding(top = 1.dp))
+                    item.commonMistakes.forEach { point ->
+                        Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).background(IchigoPalette.Caution.copy(alpha = if (c.isDark) 0.16f else 0.09f)).padding(12.dp), verticalAlignment = Alignment.Top) {
+                            Box(Modifier.padding(top = 7.dp).size(7.dp).clip(CircleShape).background(IchigoPalette.Caution))
                             Spacer(Modifier.width(10.dp))
-                            Text(mistake, style = rounded(14), color = c.primaryText)
+                            Text(point, style = rounded(14), color = c.primaryText)
                         }
                     }
                 }
