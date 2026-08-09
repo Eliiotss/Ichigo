@@ -89,23 +89,29 @@ private fun ReadingCard(title: String, value: String, modifier: Modifier = Modif
 @Composable
 private fun KanjiExampleCard(example: KanjiExample) {
     val c = IchigoTheme.colors
-    val displaySentence = example.sentenceFurigana?.takeIf { it.isNotEmpty() } ?: example.sentence?.takeIf { it.isNotEmpty() }
+    // Kalimat kanji (utama) → reading hiragana penuh (kecil) → arti Indonesia.
+    val sentence = example.sentence?.takeIf { it.isNotEmpty() }
+    val reading = example.sentenceFurigana?.takeIf { it.isNotEmpty() }
+    val meaning = example.sentenceMeaning?.takeIf { it.isNotEmpty() }
     Column(Modifier.fillMaxWidth().ichigoCard(c.surface, c.cardShadow, shadowRadius = 8.dp, shadowY = 3.dp).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
         Row(verticalAlignment = Alignment.Top) {
             Text(example.word, style = rounded(19, Wt.Bold), color = c.primaryText)
             Spacer(Modifier.width(8.dp))
             Text("（${example.reading}）", style = rounded(13), color = c.secondaryText, modifier = Modifier.weight(1f))
-            SpeakChip(example.sentence ?: example.word)
+            SpeakChip(sentence ?: example.word)
         }
         Text("${example.romaji} — ${example.meaning}", style = rounded(13, Wt.Semibold), color = IchigoPalette.Accent)
-        if (displaySentence != null) {
+        if (sentence != null) {
             Column(
                 Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).background(c.softSurface).padding(12.dp),
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
-                Text(displaySentence, style = rounded(15, Wt.Medium), color = c.primaryText)
-                example.sentenceMeaning?.takeIf { it.isNotEmpty() }?.let {
-                    Text(it, style = rounded(13), color = c.secondaryText)
+                Text(sentence, style = rounded(15, Wt.Medium), color = c.primaryText)
+                reading?.let {
+                    Text(it, style = rounded(12), color = c.secondaryText)
+                }
+                meaning?.let {
+                    Text(it, style = rounded(13, Wt.Medium), color = IchigoPalette.Accent)
                 }
             }
         }
