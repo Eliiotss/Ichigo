@@ -1,6 +1,6 @@
 // Orchestrates Google Drive sync for the web app — the browser analogue of the
 // iOS `DriveBackupManager`. Pull the remote snapshot, merge it into local storage
-// (via `store.importState`, the same Anki-style rule), then push the merged
+// (via `store.importState`, the same newest-review-wins rule), then push the merged
 // result back. The access token lives only in memory.
 
 import * as drive from "./drive.js";

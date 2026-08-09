@@ -4,7 +4,7 @@ import kotlin.math.exp
 import kotlin.math.pow
 
 /**
- * Direct port of `FSRSMath` — the official FSRS-6 formulas used by recent Anki.
+ * Direct port of `FSRSMath` — the official FSRS-6 spaced-repetition formulas.
  * Every formula, clamp and index matches the Swift source line for line, so a
  * card scheduled on Android lands on the same due date as on iOS.
  */

@@ -45,8 +45,8 @@ export function renderSettings(app) {
         const driveFoot = !configured
             ? "Tambahkan Client ID Google (tipe Web) Anda untuk sinkron otomatis antar-perangkat lewat folder khusus aplikasi di Google Drive. Panduan di web/README.md."
             : signedIn
-                ? `${gsync.linkedEmail() ? "Masuk sebagai " + esc(gsync.linkedEmail()) + ". " : ""}${store.getDriveLastSync() ? "Tersinkron " + esc(relTime(store.getDriveLastSync())) + "." : "Belum pernah tersinkron."} Progres tersinkron dua arah (mirip Anki), otomatis saat aplikasi dibuka.`
-                : "Masuk dengan Google agar progres flashcard tersinkron antar-perangkat seperti Anki.";
+                ? `${gsync.linkedEmail() ? "Masuk sebagai " + esc(gsync.linkedEmail()) + ". " : ""}${store.getDriveLastSync() ? "Tersinkron " + esc(relTime(store.getDriveLastSync())) + "." : "Belum pernah tersinkron."} Progres tersinkron dua arah, otomatis saat aplikasi dibuka.`
+                : "Masuk dengan Google agar progres flashcard tersinkron antar-perangkat.";
 
         app.innerHTML = `
             <section class="set-group">
@@ -98,7 +98,7 @@ export function renderSettings(app) {
                     <input type="file" id="importFile" accept="application/json,.json" hidden>
                 </div>
                 <p class="set-msg" id="setMsg" hidden></p>
-                <div class="set-foot">${driveFoot} Alternatif tanpa Google: Ekspor/Impor berkas — saat impor data digabung (review terbaru menang, mirip Anki).</div>
+                <div class="set-foot">${driveFoot} Alternatif tanpa Google: Ekspor/Impor berkas — saat impor data digabung (review terbaru menang).</div>
             </section>`;
 
         const on = (id, ev, fn) => { const el = document.getElementById(id); if (el) el.addEventListener(ev, fn); };

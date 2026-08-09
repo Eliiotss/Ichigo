@@ -5,7 +5,7 @@ import java.util.UUID
 /**
  * Direct port of `FlashcardReviewEngine`.
  *
- * The Anki-style "cara A" graduation is preserved exactly: new/learning cards
+ * The "cara A" graduation is preserved exactly: new/learning cards
  * walk the learning steps [1, 10] minutes (Easy graduates immediately), the first
  * graduation uses a fixed interval (Good → graduatingIntervalDays, Easy →
  * easyIntervalDays), and every later review of a graduated card is scheduled by
@@ -93,7 +93,7 @@ class FlashcardReviewEngine {
         return updated to log
     }
 
-    // Step progression exactly like Anki. currentIndex == -1 means "first entry".
+    // Step progression for learning cards. currentIndex == -1 means "first entry".
     private fun advanceStep(
         updated: FlashcardProgress,
         currentIndex: Int,

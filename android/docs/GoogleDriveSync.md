@@ -1,7 +1,7 @@
 # Sinkronisasi Google Drive — cara mengaktifkan & menguji
 
 Ichigo menyinkronkan progres flashcard lewat **folder privat aplikasi** di Google
-Drive milik pengguna (scope `drive.appdata`) — Anki-style, dua arah (pull → merge
+Drive milik pengguna (scope `drive.appdata`) — dua arah (pull → merge
 → push). Kode aplikasinya sudah aktif; agar benar-benar jalan, perlu **sekali
 setup** di Google Cloud Console. Semuanya **gratis**.
 

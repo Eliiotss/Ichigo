@@ -27,7 +27,7 @@ import javax.inject.Singleton
  * `DriveBackupManager`. Sign-in uses Google Sign-In (requesting the
  * `drive.appdata` scope); the OAuth token is fetched with `GoogleAuthUtil` and
  * used by [DriveClient]. A sync is pull → merge → apply → push, so studying on
- * one device shows up on the next (Anki-style), never losing progress.
+ * one device shows up on the next, never losing progress.
  */
 @Singleton
 class DriveSyncManager @Inject constructor(

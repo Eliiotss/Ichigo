@@ -58,7 +58,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onResume() {
         super.onResume()
-        // Anki-style: pull-merge on foreground when auto-sync is on (iOS scenePhase).
+        // Pull-merge on foreground when auto-sync is on (iOS scenePhase).
         lifecycleScope.launch { driveSync.autoSyncIfEnabled() }
     }
 }

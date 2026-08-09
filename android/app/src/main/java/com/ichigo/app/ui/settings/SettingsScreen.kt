@@ -340,7 +340,7 @@ private fun SyncSection(vm: SyncViewModel) {
     val footer = state.message ?: if (state.signedIn) {
         "Progres flashcard tersinkron dua arah lewat folder privat aplikasi di Google Drive. Aktifkan sinkron otomatis agar berjalan saat aplikasi dibuka."
     } else {
-        "Masuk dengan Google agar progres flashcard tersinkron antar-perangkat seperti Anki (folder privat aplikasi di Drive)."
+        "Masuk dengan Google agar progres flashcard tersinkron antar-perangkat (folder privat aplikasi di Drive)."
     }
 
     Section("AKUN & SINKRONISASI", footer) {

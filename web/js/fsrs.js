@@ -1,6 +1,6 @@
 // FSRS-6 scheduler — a faithful JavaScript port of the iOS app's `FSRSMath` and
 // `FlashcardReviewEngine` (see Sources/AppFeature/FlashcardModel.swift). Same
-// official 21-parameter weights, same Anki-style learning steps ("cara A"): the
+// official 21-parameter weights, same learning steps ("cara A"): the
 // review math is identical so scheduling is consistent with the native app.
 
 export const GRADE = { again: 1, hard: 2, good: 3, easy: 4 };

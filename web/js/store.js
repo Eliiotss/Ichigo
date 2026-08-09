@@ -176,7 +176,7 @@ export function getAnswerSummary() {
     return { again, hard, good, easy, total, accuracy: total ? (hard + good + easy) / total : 0 };
 }
 
-// ---------- Export / Import (backup with Anki-style merge) ----------
+// ---------- Export / Import (backup with newest-review-wins merge) ----------
 
 /// A portable snapshot of all local learning state.
 export function exportState() {

@@ -18,7 +18,7 @@ Beranda. Tidak butuh font eksternal.
   (daftar + detail + pencarian langsung), serta bagan **Hiragana & Katakana**.
 - **Flashcard dengan FSRS-6**: penjadwalan spaced-repetition yang **diport
   persis** dari mesin FSRS aplikasi iOS (bobot 21 parameter resmi + learning
-  steps ala Anki). Progres tersimpan di `localStorage` peramban.
+  steps "cara A"). Progres tersimpan di `localStorage` peramban.
 - **Tema terang/gelap** (ikuti sistem + tombol ganti), responsif untuk ponsel.
 
 ## Menjalankan
