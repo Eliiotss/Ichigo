@@ -61,7 +61,7 @@ class DailyReminderWorker(context: Context, params: WorkerParameters) : Worker(c
         )
         val notification = NotificationCompat.Builder(ctx, REMINDER_CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_stat_reminder)
-            .setContentTitle("Waktunya belajar! 🍓")
+            .setContentTitle("Waktunya belajar!")
             .setContentText("Jaga streak dan selesaikan target harianmu di IchiGo.")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setAutoCancel(true)

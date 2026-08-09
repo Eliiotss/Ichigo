@@ -139,7 +139,7 @@ private fun OnboardingDialog(
     AlertDialog(
         onDismissRequest = onSkip,
         containerColor = c.surface,
-        title = { Text("Selamat datang di IchiGo! 🍓", style = rounded(18, Wt.Bold), color = c.primaryText) },
+        title = { Text("Selamat datang di IchiGo!", style = rounded(18, Wt.Bold), color = c.primaryText) },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
                 Text("Atur namamu dan target belajar harian.", style = rounded(13, Wt.Medium), color = c.secondaryText)

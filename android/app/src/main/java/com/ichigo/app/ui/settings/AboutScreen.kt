@@ -134,7 +134,7 @@ fun AboutScreen(onBack: () -> Unit) {
                 )
             }
 
-            Text("Dibuat untuk belajar mandiri. 🍓", style = rounded(12, Wt.Semibold), color = c.secondaryText, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
+            Text("Dibuat untuk belajar mandiri.", style = rounded(12, Wt.Semibold), color = c.secondaryText, modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center)
         }
     }
 }

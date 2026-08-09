@@ -17,7 +17,7 @@ export function checkReminder() {
         const studied = store.studiedTodayTotal();
         if (studied >= target) return;
         store.setReminderShownDay(day);
-        new Notification("Ichigo 🍓", {
+        new Notification("IchiGo", {
             body: `Target belajar hari ini belum selesai (${studied}/${target}). Ayo lanjut belajar!`,
         });
     } catch { /* ignore */ }
