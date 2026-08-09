@@ -23,6 +23,7 @@ data class SettingsUiState(
     val dailyTarget: Int = 20,
     val notifEnabled: Boolean = false,
     val notifHour: Int = 20,
+    val reminderSmart: Boolean = false,
     val isDark: Boolean = false,
     val linkedGoogleEmail: String? = null,
 )
@@ -48,7 +49,7 @@ class SettingsViewModel @Inject constructor(
 
     val state: StateFlow<SettingsUiState> = combine(
         combine(prefs.userName, prefs.userEmail, prefs.dailyTarget) { n, e, t -> Triple(n, e, t) },
-        combine(prefs.notifEnabled, prefs.notifHour) { en, h -> en to h },
+        combine(prefs.notifEnabled, prefs.notifHour, prefs.reminderSmart) { en, h, smart -> Triple(en, h, smart) },
         prefs.googleEmail,
         effectiveDark,
     ) { profile, notif, google, dark ->
@@ -58,6 +59,7 @@ class SettingsViewModel @Inject constructor(
             dailyTarget = profile.third,
             notifEnabled = notif.first,
             notifHour = notif.second,
+            reminderSmart = notif.third,
             isDark = dark,
             linkedGoogleEmail = google,
         )
@@ -89,6 +91,8 @@ class SettingsViewModel @Inject constructor(
         prefs.setNotifHour(hour)
         if (state.value.notifEnabled) reminder.schedule(hour)
     }
+
+    fun setReminderSmart(value: Boolean) = launch { prefs.setReminderSmart(value) }
 
     /** Slide toggle → explicit light/dark, matching `isDarkBinding`. */
     fun setDark(dark: Boolean) = launch {

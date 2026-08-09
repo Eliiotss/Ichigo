@@ -41,6 +41,7 @@ class AppPreferences @Inject constructor(
         val dailyTarget = intPreferencesKey("daily_target")
         val notifEnabled = booleanPreferencesKey("notif_enabled")
         val notifHour = intPreferencesKey("notif_hour")
+        val reminderSmart = booleanPreferencesKey("reminder_smart_v1")
         val appearance = stringPreferencesKey(AppAppearance.STORAGE_KEY)
 
         val streak = intPreferencesKey("flashcard_streak_v1")
@@ -92,6 +93,12 @@ class AppPreferences @Inject constructor(
     val dailyTarget: Flow<Int> = ds.data.map { it[Keys.dailyTarget] ?: 20 }
     val notifEnabled: Flow<Boolean> = ds.data.map { it[Keys.notifEnabled] ?: false }
     val notifHour: Flow<Int> = ds.data.map { it[Keys.notifHour] ?: 20 }
+    /** Reminder mode: false = Manual (always remind), true = Pintar (skip if already studied today). */
+    val reminderSmart: Flow<Boolean> = ds.data.map { it[Keys.reminderSmart] ?: false }
+    suspend fun setReminderSmart(value: Boolean) = ds.edit { it[Keys.reminderSmart] = value }
+    suspend fun reminderSmartNow(): Boolean = reminderSmart.first()
+    /** Reviews recorded today (used by the smart reminder to decide whether to skip). */
+    suspend fun studiedTodayCount(): Int = dailyStudy.first()[dayKeyOf(System.currentTimeMillis())] ?: 0
     val appearance: Flow<AppAppearance> = ds.data.map { AppAppearance.from(it[Keys.appearance]) }
     val googleEmail: Flow<String?> = ds.data.map { it[Keys.googleEmail] }
     val autoSync: Flow<Boolean> = ds.data.map { it[Keys.autoSync] ?: false }

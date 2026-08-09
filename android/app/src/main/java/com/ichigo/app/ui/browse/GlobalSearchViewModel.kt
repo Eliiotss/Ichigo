@@ -27,6 +27,8 @@ data class SearchResult(
     val itemId: String,
     val title: String,
     val subtitle: String,
+    // All matchable text (kanji, furigana/reading, katakana on'yomi, romaji, arti…).
+    val searchKey: String,
 )
 
 /**
@@ -49,25 +51,30 @@ class GlobalSearchViewModel @Inject constructor(
         combine(index, searchText.debounce(200)) { list, query ->
             val q = query.trim()
             if (q.isEmpty()) emptyList()
-            else list.filter { it.title.contains(q, ignoreCase = true) || it.subtitle.contains(q, ignoreCase = true) }.take(80)
+            else list.filter { it.searchKey.contains(q, ignoreCase = true) }.take(80)
         }.stateIn(viewModelScope, SharingStarted.Eagerly, emptyList())
 
     init {
         viewModelScope.launch {
             val all = ArrayList<SearchResult>()
             for (lvl in kanjiLevels.filterNot { it.isLocked }) {
-                runCatching { content.loadKanji(lvl.jsonFile) }.getOrDefault(emptyList()).forEach {
-                    all += SearchResult(SearchType.KANJI, lvl.id, lvl.jsonFile, it.id, it.kanji, "${it.romaji} — ${it.meaning}")
+                runCatching { content.loadKanji(lvl.jsonFile) }.getOrDefault(emptyList()).forEach { k ->
+                    // kanji + on'yomi (katakana) + kun'yomi + romaji + arti + contoh (kata/furigana/arti)
+                    val key = (listOf(k.kanji, k.onyomi, k.kunyomi, k.romaji, k.meaning) +
+                        k.examples.flatMap { listOf(it.word, it.reading, it.romaji, it.meaning) }).joinToString(" ")
+                    all += SearchResult(SearchType.KANJI, lvl.id, lvl.jsonFile, k.id, k.kanji, "${k.romaji} — ${k.meaning}", key)
                 }
             }
             for (lvl in vocabularyLevels.filterNot { it.isLocked }) {
-                runCatching { content.loadVocab(lvl.jsonFile) }.getOrDefault(emptyList()).forEach {
-                    all += SearchResult(SearchType.VOCAB, lvl.id, lvl.jsonFile, it.id, it.kanji.ifEmpty { it.hiragana }, "${it.hiragana} — ${it.arti}")
+                runCatching { content.loadVocab(lvl.jsonFile) }.getOrDefault(emptyList()).forEach { v ->
+                    val key = listOf(v.kanji, v.hiragana, v.arti, v.jenisKata).joinToString(" ")
+                    all += SearchResult(SearchType.VOCAB, lvl.id, lvl.jsonFile, v.id, v.kanji.ifEmpty { v.hiragana }, "${v.hiragana} — ${v.arti}", key)
                 }
             }
             for (lvl in grammarLevels.filterNot { it.isLocked }) {
-                runCatching { content.loadGrammar(lvl.jsonFile) }.getOrDefault(emptyList()).forEach {
-                    all += SearchResult(SearchType.GRAMMAR, lvl.id, lvl.jsonFile, it.id, it.pattern, "${it.romaji} — ${it.meaning}")
+                runCatching { content.loadGrammar(lvl.jsonFile) }.getOrDefault(emptyList()).forEach { g ->
+                    val key = (listOf(g.pattern, g.romaji, g.meaning, g.explanation) + g.tags).joinToString(" ")
+                    all += SearchResult(SearchType.GRAMMAR, lvl.id, lvl.jsonFile, g.id, g.pattern, "${g.romaji} — ${g.meaning}", key)
                 }
             }
             index.value = all

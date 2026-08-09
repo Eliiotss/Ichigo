@@ -18,7 +18,13 @@ import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.ichigo.app.MainActivity
 import com.ichigo.app.R
+import com.ichigo.app.data.local.AppPreferences
+import dagger.hilt.EntryPoint
+import dagger.hilt.InstallIn
+import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.runBlocking
 import java.util.Calendar
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
@@ -27,6 +33,13 @@ import javax.inject.Singleton
 const val REMINDER_CHANNEL_ID = "study_reminder"
 private const val REMINDER_WORK_NAME = "ichigo_daily_reminder"
 private const val REMINDER_NOTIF_ID = 1001
+
+/** Lets the (non-Hilt) Worker reach the shared [AppPreferences] singleton. */
+@EntryPoint
+@InstallIn(SingletonComponent::class)
+internal interface ReminderEntryPoint {
+    fun prefs(): AppPreferences
+}
 
 /** Creates the reminder notification channel. Safe to call repeatedly. */
 fun createReminderChannel(context: Context) {
@@ -51,6 +64,12 @@ class DailyReminderWorker(context: Context, params: WorkerParameters) : Worker(c
         ) {
             return Result.success()
         }
+
+        // Smart mode: skip the reminder if the user has already studied today.
+        val prefs = EntryPointAccessors.fromApplication(ctx, ReminderEntryPoint::class.java).prefs()
+        val skip = runBlocking { prefs.reminderSmartNow() && prefs.studiedTodayCount() > 0 }
+        if (skip) return Result.success()
+
         createReminderChannel(ctx)
 
         val open = PendingIntent.getActivity(

@@ -23,9 +23,11 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
+import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.ChevronLeft
 import androidx.compose.material.icons.filled.DarkMode
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Inbox
 import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material.icons.filled.Search
@@ -333,6 +335,53 @@ fun ThemeSlideToggle(isDark: Boolean, onToggle: (Boolean) -> Unit) {
                 if (isDark) Icons.Filled.DarkMode else Icons.Filled.LightMode,
                 contentDescription = "Mode tampilan",
                 tint = if (isDark) IchigoPalette.IndigoDeep else IchigoPalette.Caution,
+                modifier = Modifier.size(16.dp),
+            )
+        }
+    }
+}
+
+/**
+ * Reminder-mode slide toggle, styled like [ThemeSlideToggle]: left = Manual
+ * (always remind at the set time), right = Pintar (smart — skip if you've
+ * already studied today).
+ */
+@Composable
+fun ReminderModeToggle(isSmart: Boolean, onToggle: (Boolean) -> Unit) {
+    val trackWidth = 78.dp
+    val trackHeight = 40.dp
+    val knobSize = 32.dp
+    val inset = 4.dp
+    val travel = (trackWidth - knobSize) / 2 - inset
+    val offsetX by animateDpAsState(if (isSmart) travel else -travel, spring(dampingRatio = 0.72f, stiffness = 900f), label = "knob")
+
+    Box(
+        Modifier
+            .size(trackWidth, trackHeight)
+            .clip(RoundedCornerShape(50))
+            .background(
+                if (isSmart) Brush.horizontalGradient(IchigoPalette.AccentGradient)
+                else Brush.horizontalGradient(listOf(IchigoPalette.Muted, IchigoPalette.Muted)),
+            )
+            .clickable { onToggle(!isSmart) },
+        contentAlignment = Alignment.Center,
+    ) {
+        Row(
+            Modifier.fillMaxWidth().padding(horizontal = 11.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Icon(Icons.Filled.Schedule, null, tint = Color.White.copy(alpha = if (isSmart) 0.45f else 0f), modifier = Modifier.size(15.dp))
+            Icon(Icons.Filled.AutoAwesome, null, tint = Color.White.copy(alpha = if (isSmart) 0f else 0.5f), modifier = Modifier.size(15.dp))
+        }
+        Box(
+            Modifier.offset(x = offsetX).size(knobSize).clip(CircleShape).background(Color.White),
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(
+                if (isSmart) Icons.Filled.AutoAwesome else Icons.Filled.Schedule,
+                contentDescription = "Mode pengingat",
+                tint = if (isSmart) IchigoPalette.Accent else IchigoPalette.Muted,
                 modifier = Modifier.size(16.dp),
             )
         }

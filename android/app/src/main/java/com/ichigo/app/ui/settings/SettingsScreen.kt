@@ -20,6 +20,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.CloudDone
 import androidx.compose.material.icons.filled.CloudSync
@@ -65,6 +66,7 @@ import androidx.core.content.ContextCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.ichigo.app.BuildConfig
+import com.ichigo.app.ui.components.ReminderModeToggle
 import com.ichigo.app.ui.components.ThemeSlideToggle
 import com.ichigo.app.ui.theme.IchigoPalette
 import com.ichigo.app.ui.theme.IchigoTheme
@@ -116,7 +118,7 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
         }
 
         item {
-            Section("PREFERENSI", "Pengingat akan mengirim notifikasi kalau target belajar hari ini belum selesai.") {
+            Section("PREFERENSI", "Mode pengingat — Manual: selalu ingatkan pada jam pilihan. Pintar: hanya kalau kamu belum belajar hari ini.") {
                 SettingsCard {
                     SettingsRow(if (state.isDark) Icons.Filled.DarkMode else Icons.Filled.LightMode, listOf(IchigoPalette.IndigoSoft, IchigoPalette.IndigoDeep), "Mode Tampilan") {
                         ThemeSlideToggle(state.isDark) { viewModel.setDark(it) }
@@ -137,6 +139,9 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
                         )
                     }
                     if (state.notifEnabled) {
+                        SettingsRow(Icons.Filled.AutoAwesome, listOf(IchigoPalette.Sky, IchigoPalette.SkyDeep), "Mode pengingat") {
+                            ReminderModeToggle(state.reminderSmart) { viewModel.setReminderSmart(it) }
+                        }
                         SettingsRow(Icons.Filled.Schedule, listOf(IchigoPalette.Teal, IchigoPalette.TealDeep), "Waktu pengingat") {
                             Stepper("jam ${state.notifHour}:00", viewModel::decNotifHour, viewModel::incNotifHour)
                         }
