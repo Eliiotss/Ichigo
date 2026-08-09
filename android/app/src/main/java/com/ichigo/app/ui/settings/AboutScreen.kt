@@ -187,6 +187,9 @@ private fun PrivacyScreen(onBack: () -> Unit) {
             Heading("Anak-anak")
             Para("Aplikasi tidak mengumpulkan data pribadi, sehingga aman digunakan segala usia.")
 
+            Heading("Kontak")
+            Para("Pertanyaan terkait privasi: ichigogo1708@gmail.com")
+
             Heading("Perubahan")
             Para("Kebijakan ini dapat diperbarui seiring pembaruan aplikasi.")
         }

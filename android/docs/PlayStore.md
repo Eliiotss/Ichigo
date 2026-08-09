@@ -4,8 +4,8 @@ Checklist + teks siap-tempel untuk mempublikasikan IchiGo. Kode & bundle sudah
 siap (AAB bertanda tangan, R8, targetSdk 35). Yang tersisa kebanyakan mengisi
 form di Play Console.
 
-> ⚠️ **BELUM DIISI: email developer.** Beberapa bagian (kontak, privacy policy,
-> Data safety) butuh email developer. Ganti setiap `[EMAIL DEVELOPER]` di bawah.
+> **Email developer:** `ichigogo1708@gmail.com` (dipakai untuk kontak listing,
+> Data safety, content rating, dan halaman privacy).
 
 ## 0. Prasyarat
 - Akun **Google Play Console** (biaya pendaftaran satu kali **$25**).
@@ -59,7 +59,7 @@ Cocok untuk pemula sampai menengah yang ingin belajar bahasa Jepang setiap hari.
 ```
 
 **Kategori:** Education · **Tag:** pendidikan, bahasa
-**Email kontak:** `[EMAIL DEVELOPER]`
+**Email kontak:** `ichigogo1708@gmail.com`
 **Situs (opsional):** URL GitHub Pages / privacy (lihat §5)
 
 ## 3. Data safety (jawaban form Play Console)
@@ -75,7 +75,7 @@ Cocok untuk pemula sampai menengah yang ingin belajar bahasa Jepang setiap hari.
 ## 4. Content rating (kuesioner IARC)
 - Kekerasan/seksual/narkoba/judi → **Tidak** untuk semua.
 - Hasil yang diharapkan: **Rated for Everyone / 3+.**
-- Email untuk kuesioner: `[EMAIL DEVELOPER]`.
+- Email untuk kuesioner: `ichigogo1708@gmail.com`.
 
 ## 5. Privacy policy URL
 Play mewajibkan **tautan web publik**. Pilihan:
@@ -83,8 +83,8 @@ Play mewajibkan **tautan web publik**. Pilihan:
   aktifkan Settings → Pages → Source "GitHub Actions", jalankan workflow, lalu
   URL-nya `https://eliiotss.github.io/Ichigo/privacy.html` (repo harus publik).
 - Atau host `web/privacy.html` di Netlify/Vercel/Cloudflare Pages/Google Sites.
-- **Sebelum publish:** ganti `[BELUM DIISI]` di `web/privacy.html` dengan
-  `[EMAIL DEVELOPER]`.
+- Email kontak privasi di `web/privacy.html` sudah diisi
+  (`ichigogo1708@gmail.com`).
 
 ## 6. Signing
 - **Play App Signing** aktif: Google memegang app signing key; kamu mengunggah
