@@ -9,9 +9,11 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.calculateEndPadding
 import androidx.compose.foundation.layout.calculateStartPadding
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -110,10 +112,16 @@ fun MainScaffold() {
                     bottom = if (hideBar) 0.dp else padding.calculateBottomPadding(),
                 ),
         ) {
-            when (selectedTab) {
-                0 -> HomeNavHost(homeNav, onOpenProfile = { selectedTab = 1 })
-                1 -> ProfileScreen()
-                2 -> SettingsScreen()
+            // Responsive: cap the content column and centre it on large screens
+            // (tablets/foldables) so cards and tap targets stay a comfortable size
+            // instead of stretching thin. On phones (< 680dp) it fills the whole
+            // width, so nothing changes there.
+            Box(Modifier.fillMaxHeight().widthIn(max = 680.dp).align(Alignment.TopCenter)) {
+                when (selectedTab) {
+                    0 -> HomeNavHost(homeNav, onOpenProfile = { selectedTab = 1 })
+                    1 -> ProfileScreen()
+                    2 -> SettingsScreen()
+                }
             }
         }
     }
