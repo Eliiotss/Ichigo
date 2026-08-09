@@ -27,6 +27,7 @@ import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.GpsFixed
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material.icons.filled.Notifications
@@ -61,6 +62,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.ichigo.app.BuildConfig
 import com.ichigo.app.ui.components.ThemeSlideToggle
 import com.ichigo.app.ui.theme.IchigoPalette
 import com.ichigo.app.ui.theme.IchigoTheme
@@ -158,6 +160,16 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
                         SettingsIcon(Icons.Filled.Delete, listOf(IchigoPalette.DangerSoft, IchigoPalette.Danger))
                         Spacer(Modifier.size(12.dp))
                         Text("Reset Semua Progress Flashcard", style = rounded(16, Wt.Semibold), color = c.primaryText)
+                    }
+                }
+            }
+        }
+
+        item {
+            Section("TENTANG", "Ichigo — belajar bahasa Jepang JLPT.") {
+                SettingsCard {
+                    SettingsRow(Icons.Filled.Info, listOf(IchigoPalette.BlueLight, IchigoPalette.Blue), "Versi", showDivider = false) {
+                        Text("v${BuildConfig.VERSION_NAME}", style = rounded(16, Wt.Semibold), color = c.secondaryText)
                     }
                 }
             }

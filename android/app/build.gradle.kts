@@ -19,6 +19,20 @@ val keystoreProps = Properties().apply {
 }
 val hasReleaseSigning = keystorePropsFile.exists()
 
+// ── Versi aplikasi — SATU-SATUNYA tempat untuk dinaikkan tiap rilis ─────────
+// Naikkan angka di bawah setiap ada update:
+//   • perbaikan kecil / konten  → patch  (1.0.0 → 1.0.1)
+//   • fitur baru                → minor  (1.0.1 → 1.1.0), patch balik ke 0
+//   • perubahan besar           → major  (1.9.0 → 2.0.0), minor & patch ke 0
+// versionName = "major.minor.patch" (tampil di Play Store & di app).
+// versionCode dihitung otomatis dan DIJAMIN selalu naik — Google mewajibkan
+// versionCode lebih besar dari upload sebelumnya untuk tiap rilis ke Play Store.
+val appVersionMajor = 1
+val appVersionMinor = 0
+val appVersionPatch = 0
+val appVersionName = "$appVersionMajor.$appVersionMinor.$appVersionPatch"
+val appVersionCode = appVersionMajor * 10000 + appVersionMinor * 100 + appVersionPatch
+
 android {
     namespace = "com.ichigo.app"
     compileSdk = 35
@@ -27,8 +41,8 @@ android {
         applicationId = "com.ichigo.app"
         minSdk = 24
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = appVersionCode
+        versionName = appVersionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables { useSupportLibrary = true }

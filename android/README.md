@@ -115,6 +115,27 @@ keyAlias=ichigo-upload
 keyPassword=****
 ```
 
+### Versi (naikkan tiap update)
+
+Versi diatur di **satu tempat** di `app/build.gradle.kts`:
+
+```kotlin
+val appVersionMajor = 1
+val appVersionMinor = 0
+val appVersionPatch = 0
+```
+
+Sebelum build rilis baru, naikkan angkanya:
+
+- **perbaikan kecil / konten** → `patch` (mis. `1.0.0` → `1.0.1`)
+- **fitur baru** → `minor` (`1.0.1` → `1.1.0`, patch balik ke `0`)
+- **perubahan besar** → `major` (`1.9.0` → `2.0.0`, minor & patch ke `0`)
+
+`versionName` (mis. `1.0.0`) tampil di Play Store dan di **Pengaturan → Tentang →
+Versi**. `versionCode` dihitung otomatis (`major*10000 + minor*100 + patch`),
+jadi **selalu naik** — Google mewajibkan `versionCode` lebih besar dari upload
+sebelumnya untuk tiap rilis. Tidak perlu ubah `versionCode` manual.
+
 Build:
 
 ```bash
