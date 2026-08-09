@@ -17,9 +17,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.Article
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
-import androidx.compose.material.icons.filled.Android
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Shield
@@ -70,11 +68,17 @@ fun AboutScreen(onBack: () -> Unit) {
                 Modifier.fillMaxWidth().ichigoCard(c.surface, c.cardShadow, radius = 22.dp).padding(vertical = 26.dp, horizontal = 20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                Image(
-                    painter = painterResource(R.drawable.ic_splash_logo),
-                    contentDescription = "IchiGo",
-                    modifier = Modifier.height(58.dp),
-                )
+                // The wordmark is dark ink on transparent, so keep it on a cream
+                // chip — otherwise it vanishes on the dark card in dark mode.
+                Box(
+                    Modifier.clip(RoundedCornerShape(18.dp)).background(Color(0xFFFCF9F4)).padding(horizontal = 24.dp, vertical = 16.dp),
+                ) {
+                    Image(
+                        painter = painterResource(R.drawable.ic_splash_logo),
+                        contentDescription = "IchiGo",
+                        modifier = Modifier.height(52.dp),
+                    )
+                }
                 Spacer(Modifier.height(16.dp))
                 Text(
                     "Versi ${BuildConfig.VERSION_NAME}",
@@ -94,12 +98,8 @@ fun AboutScreen(onBack: () -> Unit) {
             // Informasi
             SectionLabel("INFORMASI")
             Column(Modifier.fillMaxWidth().ichigoCard(c.surface, c.cardShadow, radius = 20.dp)) {
-                InfoRow(Icons.Filled.Info, listOf(IchigoPalette.BlueLight, IchigoPalette.Blue), "Versi") {
+                InfoRow(Icons.Filled.Info, listOf(IchigoPalette.BlueLight, IchigoPalette.Blue), "Versi", showDivider = false) {
                     Text("v${BuildConfig.VERSION_NAME}", style = rounded(15, Wt.Semibold), color = c.secondaryText)
-                }
-                Divider()
-                InfoRow(Icons.Filled.Android, listOf(IchigoPalette.Teal, IchigoPalette.TealDeep), "Paket", showDivider = false) {
-                    Text(BuildConfig.APPLICATION_ID, style = rounded(13, Wt.Semibold), color = c.secondaryText)
                 }
             }
 
@@ -108,13 +108,10 @@ fun AboutScreen(onBack: () -> Unit) {
             Column(Modifier.fillMaxWidth().ichigoCard(c.surface, c.cardShadow, radius = 20.dp)) {
                 InfoRow(
                     Icons.Filled.Shield, listOf(IchigoPalette.Indigo, IchigoPalette.IndigoDeep), "Kebijakan Privasi",
+                    showDivider = false,
                     onClick = { showPrivacy = true },
                 ) {
                     Icon(Icons.AutoMirrored.Filled.KeyboardArrowRight, null, tint = c.secondaryText, modifier = Modifier.size(20.dp))
-                }
-                Divider()
-                InfoRow(Icons.AutoMirrored.Filled.Article, listOf(IchigoPalette.Violet, IchigoPalette.VioletDeep), "Lisensi Font", showDivider = false) {
-                    Text("Baloo 2 · OFL 1.1", style = rounded(12, Wt.Semibold), color = c.secondaryText)
                 }
             }
 

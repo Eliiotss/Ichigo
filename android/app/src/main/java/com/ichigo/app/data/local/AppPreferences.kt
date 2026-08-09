@@ -250,4 +250,13 @@ class AppPreferences @Inject constructor(
         it.remove(Keys.streak)
         it.remove(Keys.lastStudyDate)
     }
+
+    /** Clears the answer-summary analytics (used by a full progress reset). */
+    suspend fun clearAnalytics() = ds.edit { p ->
+        p.remove(Keys.anTotal); p.remove(Keys.anAgain); p.remove(Keys.anHard)
+        p.remove(Keys.anGood); p.remove(Keys.anEasy); p.remove(Keys.anLast)
+    }
+
+    /** Clears the 7-day study chart data. */
+    suspend fun clearDailyStudy() = ds.edit { it.remove(Keys.dailyStudy) }
 }

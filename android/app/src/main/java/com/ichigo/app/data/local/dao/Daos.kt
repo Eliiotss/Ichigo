@@ -88,6 +88,9 @@ interface NewCardTodayDao {
     @Query("DELETE FROM new_card_today WHERE day != :today")
     suspend fun deleteOtherDays(today: String)
 
+    @Query("DELETE FROM new_card_today")
+    suspend fun deleteAll()
+
     @Query("SELECT * FROM new_card_today")
     suspend fun getAll(): List<NewCardTodayEntity>
 }

@@ -240,12 +240,14 @@ class FlashcardRepository @Inject constructor(
     // MARK: - Reset (Swift FlashcardDataResetter.resetAll)
 
     suspend fun resetAll() {
+        // Full reset: every visible progress stat goes back to zero.
         progressDao.deleteAll()
         reviewLogDao.deleteAll()
-        prefs.resetStudyScalars()
+        newCardTodayDao.deleteAll()      // "kartu belajar" today → 0
+        prefs.resetStudyScalars()        // streak → 0
+        prefs.clearAnalytics()           // Ringkasan Jawaban → 0
+        prefs.clearDailyStudy()          // grafik 7 hari → kosong
         mutex.withLock { _progress.value = emptyMap() }
-        // Note: analytics summary and per-day new-card lists are intentionally NOT
-        // cleared here, matching the iOS `resetAll` exactly.
     }
 
     private fun dayRange(now: Long, zone: ZoneId = ZoneId.systemDefault()): Pair<Long, Long> {

@@ -169,7 +169,7 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
         }
 
         item {
-            Section("DATA BELAJAR", "Reset hanya menghapus progres flashcard lokal, review log, streak, dan pengaturan FSRS.") {
+            Section("DATA BELAJAR", "Reset menghapus semua progres flashcard, streak, statistik jawaban, dan grafik belajar. Materi (Kanji/Grammar/Vocabulary) tidak dihapus.") {
                 SettingsCard {
                     Row(
                         Modifier.fillMaxWidth().clickable { showReset = true }.padding(start = 16.dp, end = 16.dp, top = 11.dp, bottom = 11.dp),
@@ -206,7 +206,7 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
         AlertDialog(
             onDismissRequest = { showReset = false },
             title = { Text("Reset progress flashcard?", style = rounded(18, Wt.Bold), color = c.primaryText) },
-            text = { Text("Tindakan ini tidak bisa dibatalkan. Data Kanji, Grammar, Vocabulary tidak akan dihapus.", style = rounded(14), color = c.secondaryText) },
+            text = { Text("Semua progres flashcard, streak, statistik, dan grafik belajar akan dihapus dan tidak bisa dibatalkan. Materi (Kanji/Grammar/Vocabulary) tidak dihapus.", style = rounded(14), color = c.secondaryText) },
             confirmButton = { TextButton(onClick = { viewModel.resetAll(); showReset = false }) { Text("Reset", color = IchigoPalette.Danger) } },
             dismissButton = { TextButton(onClick = { showReset = false }) { Text("Batal", color = c.secondaryText) } },
             containerColor = c.surface,
