@@ -3,6 +3,7 @@ package com.ichigo.app.ui.browse
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -10,10 +11,17 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.StarBorder
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -60,6 +68,7 @@ fun GrammarListScreen(onBack: () -> Unit, onOpenItem: (String) -> Unit, viewMode
     val loadState by viewModel.loadState.collectAsStateWithLifecycle()
     val filtered by viewModel.filtered.collectAsStateWithLifecycle()
     val search by viewModel.searchText.collectAsStateWithLifecycle()
+    val learnedIds by viewModel.learnedIds.collectAsStateWithLifecycle()
 
     Column(Modifier.fillMaxSize().background(c.page)) {
         ScreenHeader("Grammar", onBack)
@@ -78,7 +87,16 @@ fun GrammarListScreen(onBack: () -> Unit, onOpenItem: (String) -> Unit, viewMode
                         contentPadding = androidx.compose.foundation.layout.PaddingValues(20.dp),
                         verticalArrangement = Arrangement.spacedBy(12.dp),
                     ) {
-                        items(filtered.size) { i -> GrammarListCard(filtered[i], viewModel.levelId) { onOpenItem(filtered[i].id) } }
+                        items(filtered.size) { i ->
+                            val g = filtered[i]
+                            GrammarListCard(
+                                g,
+                                viewModel.levelId,
+                                learned = g.id in learnedIds,
+                                onToggleStar = { viewModel.toggleLearned(g.id) },
+                                onClick = { onOpenItem(g.id) },
+                            )
+                        }
                     }
                 }
             }
@@ -87,10 +105,16 @@ fun GrammarListScreen(onBack: () -> Unit, onOpenItem: (String) -> Unit, viewMode
 }
 
 @Composable
-private fun GrammarListCard(item: GrammarItem, levelId: String, onClick: () -> Unit) {
+private fun GrammarListCard(
+    item: GrammarItem,
+    levelId: String,
+    learned: Boolean,
+    onToggleStar: () -> Unit,
+    onClick: () -> Unit,
+) {
     val c = IchigoTheme.colors
     Column(Modifier.fillMaxWidth().ichigoCard(c.surface, c.cardShadow, shadowRadius = 8.dp, shadowY = 3.dp).clickable(onClick = onClick).padding(18.dp)) {
-        Row(verticalAlignment = Alignment.Top) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
                 "JLPT $levelId",
                 style = rounded(11, Wt.Bold),
@@ -99,10 +123,29 @@ private fun GrammarListCard(item: GrammarItem, levelId: String, onClick: () -> U
             )
             Spacer(Modifier.weight(1f))
             if (item.treeCategory.isNotEmpty()) Text(item.treeCategory, style = rounded(12, Wt.Medium), color = c.secondaryText, maxLines = 1)
+            Spacer(Modifier.width(6.dp))
+            StarToggle(learned, onToggle = onToggleStar)
         }
         Text(item.pattern, style = rounded(26, Wt.Bold), color = c.primaryText, modifier = Modifier.padding(top = 14.dp))
         if (item.romaji.isNotEmpty()) Text(item.romaji, style = rounded(13), color = c.secondaryText, modifier = Modifier.padding(top = 3.dp))
         Text(item.meaning, style = rounded(15, Wt.Bold), color = IchigoPalette.Accent, modifier = Modifier.padding(top = 10.dp))
+    }
+}
+
+/** Small star button: filled amber when the grammar is marked learned, outline otherwise. */
+@Composable
+private fun StarToggle(learned: Boolean, onToggle: () -> Unit) {
+    val c = IchigoTheme.colors
+    Box(
+        Modifier.size(30.dp).clip(CircleShape).clickable(onClick = onToggle),
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(
+            if (learned) Icons.Filled.Star else Icons.Filled.StarBorder,
+            contentDescription = if (learned) "Sudah dipelajari" else "Tandai sudah dipelajari",
+            tint = if (learned) IchigoPalette.Caution else c.secondaryText,
+            modifier = Modifier.size(22.dp),
+        )
     }
 }
 
@@ -111,8 +154,43 @@ private fun GrammarListCard(item: GrammarItem, levelId: String, onClick: () -> U
 fun GrammarDetailScreen(onBack: () -> Unit, viewModel: GrammarDetailViewModel = hiltViewModel()) {
     val c = IchigoTheme.colors
     val item by viewModel.item.collectAsStateWithLifecycle()
+    val learned by viewModel.learned.collectAsStateWithLifecycle()
     Column(Modifier.fillMaxSize().background(c.page)) {
         ScreenHeader("Detail Grammar", onBack)
-        item?.let { GrammarDetailContent(it) }
+        item?.let {
+            LearnedToggleBar(learned) { viewModel.toggleLearned() }
+            GrammarDetailContent(it)
+        }
+    }
+}
+
+/** Tap to mark this grammar point as learned (feeds the "Total kartu" stat). */
+@Composable
+private fun LearnedToggleBar(learned: Boolean, onToggle: () -> Unit) {
+    val c = IchigoTheme.colors
+    val tint = if (learned) IchigoPalette.Caution else c.secondaryText
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 20.dp, vertical = 10.dp)
+            .clip(RoundedCornerShape(14.dp))
+            .background(if (learned) c.softTint(IchigoPalette.Caution) else c.surface)
+            .clickable(onClick = onToggle)
+            .padding(horizontal = 14.dp, vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Icon(
+            if (learned) Icons.Filled.Star else Icons.Filled.StarBorder,
+            contentDescription = null,
+            tint = tint,
+            modifier = Modifier.size(22.dp),
+        )
+        Spacer(Modifier.width(10.dp))
+        Text(
+            if (learned) "Sudah dipelajari" else "Tandai sudah dipelajari",
+            style = rounded(14, Wt.Bold),
+            color = if (learned) IchigoPalette.Caution else c.primaryText,
+            modifier = Modifier.weight(1f),
+        )
     }
 }

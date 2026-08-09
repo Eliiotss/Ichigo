@@ -15,9 +15,9 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.LocalFireDepartment
-import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -108,7 +108,7 @@ private fun TargetCard(studied: Int, target: Int, progress: Float) {
 private fun StatsGrid(state: ProfileUiState) {
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            StatTile(Icons.Filled.Schedule, IchigoPalette.Blue, "${state.due}", "due", "hari ini", Modifier.weight(1f))
+            StatTile(Icons.Filled.Bookmark, IchigoPalette.Blue, "${state.totalCards}", "kartu", "total", Modifier.weight(1f))
             StatTile(Icons.Filled.CheckCircle, IchigoPalette.Success, "${state.studiedToday}", "kartu", "belajar", Modifier.weight(1f))
         }
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {

@@ -8,6 +8,7 @@ import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
+import androidx.datastore.preferences.core.stringSetPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.ichigo.app.data.flashcard.FlashcardAnalyticsSummary
 import com.ichigo.app.data.flashcard.FlashcardGrade
@@ -60,6 +61,9 @@ class AppPreferences @Inject constructor(
         val anGood = intPreferencesKey("analytics_good")
         val anEasy = intPreferencesKey("analytics_easy")
         val anLast = longPreferencesKey("analytics_last")
+
+        // Grammar points the user has marked as learned (star). Set of GrammarItem.id.
+        val learnedGrammar = stringSetPreferencesKey("learned_grammar_ids_v1")
     }
 
     // --- Account / preferences (defaults match AccountStore + @AppStorage) ---
@@ -73,6 +77,16 @@ class AppPreferences @Inject constructor(
     val autoSync: Flow<Boolean> = ds.data.map { it[Keys.autoSync] ?: false }
     val streak: Flow<Int> = ds.data.map { it[Keys.streak] ?: 0 }
     val driveLastSync: Flow<Long?> = ds.data.map { it[Keys.driveLastSync] }
+
+    /** Grammar points marked as learned (star). Drives the "Total kartu" stat. */
+    val learnedGrammarIds: Flow<Set<String>> = ds.data.map { it[Keys.learnedGrammar] ?: emptySet() }
+
+    /** Toggle a grammar point's learned mark. */
+    suspend fun setGrammarLearned(id: String, learned: Boolean) = ds.edit { p ->
+        val current = (p[Keys.learnedGrammar] ?: emptySet()).toMutableSet()
+        if (learned) current.add(id) else current.remove(id)
+        p[Keys.learnedGrammar] = current
+    }
 
     suspend fun setDriveLastSync(value: Long) = ds.edit { it[Keys.driveLastSync] = value }
     suspend fun driveLastSyncOrNull(): Long? = driveLastSync.first()

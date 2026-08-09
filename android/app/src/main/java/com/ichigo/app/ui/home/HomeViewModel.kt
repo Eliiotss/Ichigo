@@ -34,7 +34,7 @@ data class HomeUiState(
     val initials: String = "US",
     val studiedToday: Int = 0,
     val target: Int = 20,
-    val due: Int = 0,
+    val totalCards: Int = 0,
     val streak: Int = 0,
     val mastered: Int = 0,
 )
@@ -57,22 +57,19 @@ class HomeViewModel @Inject constructor(
 
     init {
         combine(
-            prefs.userName,
-            prefs.dailyTarget,
+            combine(prefs.userName, prefs.dailyTarget, prefs.streak) { name, target, streak -> Triple(name, target, streak) },
+            prefs.learnedGrammarIds,
             flashcards.progress,
-            prefs.streak,
             refreshTrigger,
-        ) { name, target, _, streak, _ ->
+        ) { (name, target, streak), learned, _, _ ->
             flashcards.ensureLoaded()
-            val studied = flashcards.studiedTodayTotal()
-            val due = flashcards.dailyDueTotal(target)
             HomeUiState(
                 greeting = TimeGreeting.now(),
                 displayName = name,
                 initials = AccountRepository.initials(name),
-                studiedToday = studied,
+                studiedToday = flashcards.studiedTodayTotal(),
                 target = target,
-                due = due,
+                totalCards = learned.size,
                 streak = streak,
                 mastered = flashcards.masteredTotal,
             )

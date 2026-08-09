@@ -18,7 +18,7 @@ data class ProfileUiState(
     val initials: String = "US",
     val studiedToday: Int = 0,
     val target: Int = 20,
-    val due: Int = 0,
+    val totalCards: Int = 0,
     val streak: Int = 0,
     val mastered: Int = 0,
     val summary: FlashcardAnalyticsSummary = FlashcardAnalyticsSummary(),
@@ -34,19 +34,18 @@ class ProfileViewModel @Inject constructor(
 ) : ViewModel() {
 
     val state: StateFlow<ProfileUiState> = combine(
-        prefs.userName,
-        prefs.dailyTarget,
-        flashcards.progress,
-        prefs.streak,
+        combine(prefs.userName, prefs.dailyTarget, prefs.streak) { name, target, streak -> Triple(name, target, streak) },
         prefs.analytics,
-    ) { name, target, _, streak, summary ->
+        prefs.learnedGrammarIds,
+        flashcards.progress,
+    ) { (name, target, streak), summary, learned, _ ->
         flashcards.ensureLoaded()
         ProfileUiState(
             displayName = name,
             initials = AccountRepository.initials(name),
             studiedToday = flashcards.studiedTodayTotal(),
             target = target,
-            due = flashcards.dailyDueTotal(target),
+            totalCards = learned.size,
             streak = streak,
             mastered = flashcards.masteredTotal,
             summary = summary,

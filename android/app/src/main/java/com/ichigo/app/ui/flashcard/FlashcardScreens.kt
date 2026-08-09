@@ -81,13 +81,30 @@ fun FlashcardModeScreen(onBack: () -> Unit, onOpenMode: (FlashcardMode) -> Unit)
                 Column {
                     Text("Cara kerja review", style = rounded(13, Wt.Bold), color = c.primaryText)
                     Text(
-                        "Kartu dijadwalkan ulang dengan FSRS. Tap kartu untuk melihat jawaban, lalu nilai seberapa mudah kamu mengingatnya.",
+                        "Tap kartu untuk melihat jawaban, lalu nilai seberapa mudah kamu mengingatnya. Kartu dijadwalkan ulang dengan FSRS:",
                         style = rounded(12, Wt.Medium),
                         color = c.secondaryText,
                     )
+                    Spacer(Modifier.height(10.dp))
+                    GradeIntervalRow("Ulang", "diulang ~1 menit lagi", IchigoPalette.Danger)
+                    GradeIntervalRow("Susah", "diulang ~1–10 menit lagi", IchigoPalette.Caution)
+                    GradeIntervalRow("Bagus", "~10 menit, lalu ~1 hari saat lulus", IchigoPalette.Accent)
+                    GradeIntervalRow("Mudah", "langsung lulus, ~4 hari", IchigoPalette.Success)
                 }
             }
         }
+    }
+}
+
+/** One line in the "Cara kerja review" card: grade dot + name + when it repeats. */
+@Composable
+private fun GradeIntervalRow(grade: String, interval: String, color: Color) {
+    val c = IchigoTheme.colors
+    Row(Modifier.fillMaxWidth().padding(vertical = 3.dp), verticalAlignment = Alignment.CenterVertically) {
+        Box(Modifier.size(8.dp).clip(CircleShape).background(color))
+        Spacer(Modifier.width(8.dp))
+        Text(grade, style = rounded(12, Wt.Bold), color = color, modifier = Modifier.width(52.dp))
+        Text(interval, style = rounded(12, Wt.Medium), color = c.secondaryText)
     }
 }
 

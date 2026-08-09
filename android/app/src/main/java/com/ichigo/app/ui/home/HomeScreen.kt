@@ -160,9 +160,10 @@ private fun HeroCard(state: HomeUiState) {
             }
             Spacer(Modifier.height(14.dp))
             Row(Modifier.fillMaxWidth().height(44.dp)) {
-                HeroStat("${state.due}", "Due", showDivider = false, modifier = Modifier.weight(1f))
+                // "Total kartu" is the longest label, so give its column extra width.
+                HeroStat("${state.totalCards}", "Total kartu", showDivider = false, modifier = Modifier.weight(1.5f))
                 HeroStat("🔥 ${state.streak}", "Streak", showDivider = true, modifier = Modifier.weight(1f))
-                HeroStat("${state.mastered}", "Mastered", showDivider = true, modifier = Modifier.weight(1f))
+                HeroStat("${state.mastered}", "Mastered", showDivider = true, modifier = Modifier.weight(1.15f))
             }
         }
     }
@@ -176,8 +177,8 @@ private fun HeroStat(value: String, label: String, showDivider: Boolean, modifie
             Spacer(Modifier.width(10.dp))
         }
         Column {
-            Text(value, style = rounded(22, Wt.Heavy), color = Color.White)
-            Text(label, style = rounded(11, Wt.Bold), color = Color.White.copy(alpha = 0.85f))
+            Text(value, style = rounded(22, Wt.Heavy), color = Color.White, maxLines = 1)
+            Text(label, style = rounded(11, Wt.Bold), color = Color.White.copy(alpha = 0.85f), maxLines = 1, softWrap = false)
         }
     }
 }

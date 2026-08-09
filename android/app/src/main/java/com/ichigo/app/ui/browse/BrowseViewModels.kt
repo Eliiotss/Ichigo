@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ichigo.app.data.flashcard.FlashcardLoadState
 import com.ichigo.app.data.model.GrammarItem
+import com.ichigo.app.data.local.AppPreferences
 import com.ichigo.app.data.model.KanjiItem
 import com.ichigo.app.data.model.VocabularyItem
 import com.ichigo.app.data.repository.ContentRepository
@@ -134,6 +135,7 @@ class VocabListViewModel @Inject constructor(
 @HiltViewModel
 class GrammarListViewModel @Inject constructor(
     private val content: ContentRepository,
+    private val prefs: AppPreferences,
     handle: SavedStateHandle,
 ) : ViewModel() {
     val levelId: String = handle[Routes.Arg.LEVEL_ID] ?: ""
@@ -144,6 +146,14 @@ class GrammarListViewModel @Inject constructor(
 
     private val items = MutableStateFlow<List<GrammarItem>>(emptyList())
     val searchText = MutableStateFlow("")
+
+    /** Grammar ids the user has starred (marked as learned). */
+    val learnedIds: StateFlow<Set<String>> =
+        prefs.learnedGrammarIds.stateIn(viewModelScope, SharingStarted.Eagerly, emptySet())
+
+    fun toggleLearned(id: String) {
+        viewModelScope.launch { prefs.setGrammarLearned(id, id !in learnedIds.value) }
+    }
 
     val filtered: StateFlow<List<GrammarItem>> =
         combine(items, searchText.debounce(250)) { list, query ->
@@ -198,6 +208,7 @@ class KanjiDetailViewModel @Inject constructor(
 @HiltViewModel
 class GrammarDetailViewModel @Inject constructor(
     content: ContentRepository,
+    private val prefs: AppPreferences,
     handle: SavedStateHandle,
 ) : ViewModel() {
     private val jsonFile: String = handle[Routes.Arg.JSON_FILE] ?: ""
@@ -205,6 +216,15 @@ class GrammarDetailViewModel @Inject constructor(
 
     private val _item = MutableStateFlow<GrammarItem?>(null)
     val item: StateFlow<GrammarItem?> = _item.asStateFlow()
+
+    /** Whether this grammar point is starred (marked as learned). */
+    val learned: StateFlow<Boolean> = prefs.learnedGrammarIds
+        .map { itemId in it }
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
+    fun toggleLearned() {
+        viewModelScope.launch { prefs.setGrammarLearned(itemId, !learned.value) }
+    }
 
     init {
         viewModelScope.launch {
