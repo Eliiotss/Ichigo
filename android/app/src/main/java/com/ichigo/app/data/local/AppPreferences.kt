@@ -67,6 +67,23 @@ class AppPreferences @Inject constructor(
 
         // First-run onboarding completed.
         val onboardingDone = booleanPreferencesKey("onboarding_done_v1")
+
+        // Reviews-per-day, "yyyy-MM-dd" → count, as a small JSON map (for the chart).
+        val dailyStudy = stringPreferencesKey("daily_study_v1")
+    }
+
+    private val mapJson = kotlinx.serialization.json.Json { ignoreUnknownKeys = true }
+    private val dayCountSerializer = kotlinx.serialization.builtins.MapSerializer(
+        kotlinx.serialization.serializer<String>(),
+        kotlinx.serialization.serializer<Int>(),
+    )
+
+    private fun decodeDaily(raw: String?): Map<String, Int> =
+        raw?.let { runCatching { mapJson.decodeFromString(dayCountSerializer, it) }.getOrNull() } ?: emptyMap()
+
+    private fun dayKeyOf(millis: Long): String {
+        val d = java.time.Instant.ofEpochMilli(millis).atZone(java.time.ZoneId.systemDefault()).toLocalDate()
+        return "%04d-%02d-%02d".format(d.year, d.monthValue, d.dayOfMonth)
     }
 
     // --- Account / preferences (defaults match AccountStore + @AppStorage) ---
@@ -94,6 +111,18 @@ class AppPreferences @Inject constructor(
     /** First-run onboarding (name + target). Defaults to not-done. */
     val onboardingDone: Flow<Boolean> = ds.data.map { it[Keys.onboardingDone] ?: false }
     suspend fun setOnboardingDone() = ds.edit { it[Keys.onboardingDone] = true }
+
+    /** Reviews-per-day map ("yyyy-MM-dd" → count) for the Profile study chart. */
+    val dailyStudy: Flow<Map<String, Int>> = ds.data.map { decodeDaily(it[Keys.dailyStudy]) }
+
+    /** Counts one review on the day of [atMillis]; keeps only the most recent 40 days. */
+    suspend fun recordStudyDay(atMillis: Long = System.currentTimeMillis()) = ds.edit { p ->
+        val key = dayKeyOf(atMillis)
+        val current = decodeDaily(p[Keys.dailyStudy]).toMutableMap()
+        current[key] = (current[key] ?: 0) + 1
+        val pruned = current.entries.sortedByDescending { it.key }.take(40).associate { it.key to it.value }
+        p[Keys.dailyStudy] = mapJson.encodeToString(dayCountSerializer, pruned)
+    }
 
     suspend fun setDriveLastSync(value: Long) = ds.edit { it[Keys.driveLastSync] = value }
     suspend fun driveLastSyncOrNull(): Long? = driveLastSync.first()

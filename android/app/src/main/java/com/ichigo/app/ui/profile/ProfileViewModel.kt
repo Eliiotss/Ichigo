@@ -22,9 +22,13 @@ data class ProfileUiState(
     val streak: Int = 0,
     val mastered: Int = 0,
     val summary: FlashcardAnalyticsSummary = FlashcardAnalyticsSummary(),
+    val weeklyStudy: List<DayStat> = emptyList(),
 ) {
     val targetProgress: Float get() = if (target > 0) minOf(studiedToday.toFloat() / target, 1f) else 0f
 }
+
+/** One bar in the 7-day study chart. */
+data class DayStat(val label: String, val count: Int)
 
 /** Port of `ProfileView`'s state — the same numbers as Home plus the answer summary. */
 @HiltViewModel
@@ -38,7 +42,8 @@ class ProfileViewModel @Inject constructor(
         prefs.analytics,
         prefs.learnedGrammarIds,
         flashcards.progress,
-    ) { (name, target, streak), summary, learned, _ ->
+        prefs.dailyStudy,
+    ) { (name, target, streak), summary, learned, _, daily ->
         flashcards.ensureLoaded()
         ProfileUiState(
             displayName = name,
@@ -50,6 +55,18 @@ class ProfileViewModel @Inject constructor(
             // Mastered = flashcards mastered by FSRS + grammar marked as learned (star).
             mastered = flashcards.masteredTotal + learned.size,
             summary = summary,
+            weeklyStudy = lastSevenDays(daily),
         )
     }.stateIn(viewModelScope, SharingStarted.Eagerly, ProfileUiState())
+
+    /** Builds the last-7-days series (oldest → today), filling missing days with 0. */
+    private fun lastSevenDays(daily: Map<String, Int>): List<DayStat> {
+        val labels = arrayOf("Sen", "Sel", "Rab", "Kam", "Jum", "Sab", "Min") // Mon..Sun
+        val today = java.time.LocalDate.now()
+        return (6 downTo 0).map { i ->
+            val d = today.minusDays(i.toLong())
+            val key = "%04d-%02d-%02d".format(d.year, d.monthValue, d.dayOfMonth)
+            DayStat(labels[d.dayOfWeek.value - 1], daily[key] ?: 0)
+        }
+    }
 }

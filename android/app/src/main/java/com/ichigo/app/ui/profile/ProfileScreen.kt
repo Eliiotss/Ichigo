@@ -7,10 +7,12 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -57,6 +59,7 @@ fun ProfileScreen(viewModel: ProfileViewModel = hiltViewModel()) {
                 Spacer(Modifier.height(14.dp))
                 TargetCard(state.studiedToday, state.target, state.targetProgress)
                 StatsGrid(state)
+                WeeklyChart(state.weeklyStudy)
                 AnswerSummary(state)
             }
         }
@@ -132,6 +135,34 @@ private fun StatTile(icon: ImageVector, tint: Color, value: String, unit: String
             Text(unit, style = rounded(11, Wt.Bold), color = c.secondaryText, modifier = Modifier.padding(bottom = 3.dp))
         }
         Text(caption, style = rounded(11, Wt.Bold), color = c.secondaryText)
+    }
+}
+
+@Composable
+private fun WeeklyChart(week: List<DayStat>) {
+    val c = IchigoTheme.colors
+    if (week.isEmpty()) return
+    val max = (week.maxOfOrNull { it.count } ?: 0).coerceAtLeast(1)
+    Column(Modifier.fillMaxWidth().ichigoCard(c.surface, c.cardShadow, radius = 20.dp).padding(16.dp)) {
+        Text("Belajar 7 Hari Terakhir", style = rounded(15, Wt.Heavy), color = c.primaryText)
+        Spacer(Modifier.height(14.dp))
+        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.Bottom) {
+            week.forEach { day ->
+                Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
+                    Text("${day.count}", style = rounded(10, Wt.Bold), color = c.secondaryText)
+                    Spacer(Modifier.height(4.dp))
+                    Box(Modifier.width(22.dp).height(92.dp), contentAlignment = Alignment.BottomCenter) {
+                        Box(Modifier.matchParentSize().clip(RoundedCornerShape(7.dp)).background(c.track.copy(alpha = 0.6f)))
+                        val frac = (day.count.toFloat() / max).coerceIn(0f, 1f)
+                        if (frac > 0f) {
+                            Box(Modifier.fillMaxWidth().fillMaxHeight(frac).clip(RoundedCornerShape(7.dp)).background(Brush.verticalGradient(IchigoPalette.AccentGradient)))
+                        }
+                    }
+                    Spacer(Modifier.height(6.dp))
+                    Text(day.label, style = rounded(10, Wt.Bold), color = c.secondaryText)
+                }
+            }
+        }
     }
 }
 

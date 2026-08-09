@@ -159,6 +159,7 @@ class FlashcardRepository @Inject constructor(
         reviewLogDao.insert(ReviewLogEntity.from(log))
         reviewLogDao.trimTo(MAX_LOGS)
         prefs.recordAnalytics(log.grade, log.reviewedAt)
+        prefs.recordStudyDay(log.reviewedAt)
         updateStreak(now)
         return updated.state
     }
