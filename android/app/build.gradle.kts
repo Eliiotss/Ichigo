@@ -89,7 +89,19 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    // Name the built artifacts "IchiGo-<version>" instead of "app-release".
+    applicationVariants.all {
+        val variant = this
+        outputs.all {
+            (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl)
+                .outputFileName = "IchiGo-${variant.versionName}.apk"
+        }
+    }
 }
+
+// Base name for the App Bundle output → "IchiGo-release.aab".
+base { archivesName.set("IchiGo") }
 
 dependencies {
     implementation(libs.androidx.core.ktx)

@@ -21,7 +21,6 @@ import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.filled.CloudDone
-import androidx.compose.material.icons.filled.CloudOff
 import androidx.compose.material.icons.filled.CloudSync
 import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.DarkMode
@@ -70,9 +69,10 @@ import com.ichigo.app.ui.theme.Wt
 import com.ichigo.app.ui.theme.rounded
 
 /**
- * Port of `SettingsView`. The Google Drive sync section shows a "Segera Hadir"
- * placeholder for now (the sync backend + [SyncSection] are implemented and kept
- * in the codebase; re-enable by rendering `SyncSection(hiltViewModel())` here).
+ * Port of `SettingsView`. The "AKUN & SINKRONISASI" section renders [SyncSection]
+ * (Google Sign-In + two-way Drive `appDataFolder` sync). Live sync needs a
+ * one-time Google Cloud setup (register the app SHA-1 + a Test user) — see
+ * `docs/GoogleDriveSync.md`; without it Google Sign-In returns error code 10.
  */
 @Composable
 fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
@@ -141,13 +141,7 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
         }
 
         item {
-            Section("AKUN & SINKRONISASI", "Sinkronisasi progres via Google Drive akan hadir di pembaruan berikutnya.") {
-                SettingsCard {
-                    SettingsRow(Icons.Filled.CloudOff, listOf(IchigoPalette.Teal, IchigoPalette.TealDeep), "Sinkronisasi Google Drive", showDivider = false) {
-                        Text("Segera Hadir", style = rounded(14, Wt.Semibold), color = c.secondaryText)
-                    }
-                }
-            }
+            SyncSection(hiltViewModel())
         }
 
         item {

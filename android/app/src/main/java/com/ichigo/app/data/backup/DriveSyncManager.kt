@@ -7,7 +7,9 @@ import com.google.android.gms.auth.UserRecoverableAuthException
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.auth.api.signin.GoogleSignInStatusCodes
 import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.common.api.CommonStatusCodes
 import com.google.android.gms.common.api.Scope
 import com.ichigo.app.data.local.AppPreferences
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -84,10 +86,29 @@ class DriveSyncManager @Inject constructor(
             )
             syncNow()
         } catch (e: ApiException) {
-            _state.value = _state.value.copy(message = "Gagal masuk (kode ${e.statusCode}).", isError = true)
+            _state.value = _state.value.copy(message = signInErrorMessage(e.statusCode), isError = true)
         } catch (e: Exception) {
             _state.value = _state.value.copy(message = "Gagal masuk: ${e.message}", isError = true)
         }
+    }
+
+    /** Maps a Google Sign-In status code to a clear, actionable message (Indonesian). */
+    private fun signInErrorMessage(code: Int): String = when (code) {
+        CommonStatusCodes.DEVELOPER_ERROR -> // 10
+            "Gagal masuk (kode 10): konfigurasi OAuth belum lengkap. Daftarkan SHA-1 " +
+                "+ package \"com.ichigo.app\" pada OAuth Client ID (Android) di Google " +
+                "Cloud Console, dan tambahkan akunmu sebagai Test user. Lihat docs/GoogleDriveSync.md."
+        GoogleSignInStatusCodes.SIGN_IN_CANCELLED -> // 12501
+            "Masuk dibatalkan."
+        GoogleSignInStatusCodes.SIGN_IN_CURRENTLY_IN_PROGRESS -> // 12502
+            "Proses masuk sedang berjalan, tunggu sebentar."
+        CommonStatusCodes.NETWORK_ERROR -> // 7
+            "Tidak ada koneksi internet."
+        GoogleSignInStatusCodes.SIGN_IN_FAILED -> // 12500
+            "Gagal masuk (kode 12500): pastikan Google Drive API aktif dan scope " +
+                "drive.appdata sudah ditambahkan di OAuth consent screen."
+        else ->
+            "Gagal masuk (kode $code): ${GoogleSignInStatusCodes.getStatusCodeString(code)}."
     }
 
     fun signOut() {

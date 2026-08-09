@@ -96,9 +96,11 @@ N2/N1 terkunci (belum ada dataset), sama seperti aplikasi iOS.
 
 ## Status & yang menyusul (bertahap)
 
-- **Sinkronisasi Google Drive**: sementara ditampilkan sebagai **"Segera Hadir"**
-  di Pengaturan agar aplikasi bisa diuji/di-*debug* bertahap. Backend sync (OAuth
-  + Drive appDataFolder) akan ditambahkan kemudian, terpisah.
+- **Sinkronisasi Google Drive**: **aktif** di Pengaturan (Google Sign-In + sync
+  dua arah ke folder privat `appDataFolder`). Agar berfungsi, perlu setup satu kali
+  di Google Cloud Console (daftarkan SHA-1 + package, tambahkan Test user) — lihat
+  [`docs/GoogleDriveSync.md`](docs/GoogleDriveSync.md). Tanpa itu, sign-in
+  mengembalikan **kode 10** (bukan bug aplikasi, murni konfigurasi).
 - **Penjadwalan notifikasi harian**: sakelar pengingat + izin sudah ada;
   penjadwalan latar (WorkManager) menyusul.
 - Dataset N2/N1 belum disertakan (mengikuti iOS).
