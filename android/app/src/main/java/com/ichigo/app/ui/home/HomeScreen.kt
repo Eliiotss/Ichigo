@@ -65,7 +65,7 @@ private val menuItems = listOf(
     MenuItem("flashcard", "Flashcard", "Review Cepat", Icons.Filled.Style, Routes.FLASHCARD),
     MenuItem("vocabulary", "Vocabulary", "Kosakata", Icons.AutoMirrored.Filled.MenuBook, Routes.VOCAB),
     MenuItem("grammar", "Grammar", "Tata Bahasa", Icons.AutoMirrored.Filled.Article, Routes.GRAMMAR),
-    MenuItem("lainnya", "Lainnya", "Fitur Lain", Icons.Filled.GridView, Routes.comingSoon("Lainnya")),
+    MenuItem("lainnya", "Lainnya", "Fitur Lain", Icons.Filled.GridView, Routes.LAINNYA),
 )
 
 /** Port of `HomeView`: greeting, blue hero progress card, and the menu grid. */

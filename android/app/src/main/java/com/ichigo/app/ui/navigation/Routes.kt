@@ -19,6 +19,7 @@ object Routes {
     const val GRAMMAR = "grammar"
     const val FLASHCARD = "flashcard"
     const val HIRAGANA = "hiragana"
+    const val LAINNYA = "lainnya"
 
     const val KANJI_LIST = "kanji/list/{jsonFile}/{levelId}"
     const val KANJI_DETAIL = "kanji/detail/{jsonFile}/{levelId}/{itemId}"

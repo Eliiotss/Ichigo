@@ -46,6 +46,7 @@ import com.ichigo.app.ui.browse.GrammarListScreen
 import com.ichigo.app.ui.browse.KanjiDetailScreen
 import com.ichigo.app.ui.browse.KanjiLevelScreen
 import com.ichigo.app.ui.browse.KanjiListScreen
+import com.ichigo.app.ui.browse.LainnyaScreen
 import com.ichigo.app.ui.browse.VocabLevelScreen
 import com.ichigo.app.ui.browse.VocabListScreen
 import com.ichigo.app.ui.flashcard.FlashcardLevelScreen
@@ -220,7 +221,15 @@ private fun HomeNavHost(nav: NavHostController, onOpenProfile: () -> Unit) {
         }
         composable(Routes.KANA_FLASHCARD) { KanaFlashcardScreen(onClose = { nav.popBackStack() }) }
 
-        // Coming soon (Home "Lainnya" tile)
+        // Lainnya → two exam tracks (JLPT / JFT)
+        composable(Routes.LAINNYA) {
+            LainnyaScreen(
+                onBack = { nav.popBackStack() },
+                onOpen = { feature -> nav.navigate(Routes.comingSoon(feature)) },
+            )
+        }
+
+        // Coming soon (JLPT / JFT tracks)
         composable(Routes.COMING_SOON) { entry ->
             ComingSoonScreen(
                 feature = entry.arguments?.getString(Routes.Arg.FEATURE).orEmpty(),
