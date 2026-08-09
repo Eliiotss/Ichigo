@@ -25,6 +25,7 @@ import androidx.compose.material.icons.filled.CloudSync
 import androidx.compose.material.icons.filled.CloudUpload
 import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.GpsFixed
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Language
@@ -32,6 +33,7 @@ import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Schedule
+import androidx.compose.material.icons.filled.Upload
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -69,10 +71,12 @@ import com.ichigo.app.ui.theme.Wt
 import com.ichigo.app.ui.theme.rounded
 
 /**
- * Port of `SettingsView`. The "AKUN & SINKRONISASI" section renders [SyncSection]
- * (Google Sign-In + two-way Drive `appDataFolder` sync). Live sync needs a
- * one-time Google Cloud setup (register the app SHA-1 + a Test user) — see
- * `docs/GoogleDriveSync.md`; without it Google Sign-In returns error code 10.
+ * Port of `SettingsView`. Backup/restore uses [BackupFileSection] — export the
+ * progress to a `.json` file and restore it later — which needs no Google setup
+ * at all (the file can be uploaded to Google Drive manually). The Google Drive
+ * auto-sync path ([SyncSection] + DriveSyncManager) stays in the codebase but is
+ * not shown, since it requires a one-time Google Cloud registration (see
+ * `docs/GoogleDriveSync.md`).
  */
 @Composable
 fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
@@ -141,7 +145,7 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
         }
 
         item {
-            SyncSection(hiltViewModel())
+            BackupFileSection()
         }
 
         item {
@@ -259,6 +263,49 @@ private fun NameRow(name: String, onChange: (String) -> Unit) {
                 if (gainedFocus) field = field.copy(selection = TextRange(0, field.text.length))
             },
         )
+    }
+}
+
+/** File-based backup/restore — no Google setup needed. */
+@Composable
+private fun BackupFileSection(vm: BackupFileViewModel = hiltViewModel()) {
+    val c = IchigoTheme.colors
+    val state by vm.state.collectAsStateWithLifecycle()
+    val exportLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.CreateDocument("application/json"),
+    ) { uri -> uri?.let { vm.exportTo(it) } }
+    val importLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.OpenDocument(),
+    ) { uri -> uri?.let { vm.importFrom(it) } }
+
+    val footer = state.message
+        ?: "Simpan progres ke satu berkas untuk dipindahkan/dicadangkan (mis. unggah manual ke Google Drive), lalu pulihkan di perangkat lain."
+
+    Section("CADANGAN DATA", footer) {
+        SettingsCard {
+            Row(
+                Modifier.fillMaxWidth().clickable(enabled = !state.busy) { exportLauncher.launch(vm.suggestedFileName) }.padding(horizontal = 16.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                SettingsIcon(Icons.Filled.Upload, listOf(IchigoPalette.Teal, IchigoPalette.TealDeep))
+                Spacer(Modifier.size(12.dp))
+                Column(Modifier.weight(1f)) {
+                    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 11.dp)) {
+                        Text("Simpan cadangan (Ekspor)", style = rounded(16, Wt.Semibold), color = c.primaryText, modifier = Modifier.weight(1f))
+                        if (state.busy) CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp, color = IchigoPalette.Accent)
+                    }
+                    Box(Modifier.fillMaxWidth().height(1.dp).background(c.track))
+                }
+            }
+            Row(
+                Modifier.fillMaxWidth().clickable(enabled = !state.busy) { importLauncher.launch(arrayOf("*/*")) }.padding(horizontal = 16.dp, vertical = 11.dp),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                SettingsIcon(Icons.Filled.Download, listOf(IchigoPalette.BlueLight, IchigoPalette.Blue))
+                Spacer(Modifier.size(12.dp))
+                Text("Pulihkan cadangan (Impor)", style = rounded(16, Wt.Semibold), color = c.primaryText)
+            }
+        }
     }
 }
 

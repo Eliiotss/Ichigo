@@ -96,11 +96,14 @@ N2/N1 terkunci (belum ada dataset), sama seperti aplikasi iOS.
 
 ## Status & yang menyusul (bertahap)
 
-- **Sinkronisasi Google Drive**: **aktif** di Pengaturan (Google Sign-In + sync
-  dua arah ke folder privat `appDataFolder`). Agar berfungsi, perlu setup satu kali
-  di Google Cloud Console (daftarkan SHA-1 + package, tambahkan Test user) — lihat
-  [`docs/GoogleDriveSync.md`](docs/GoogleDriveSync.md). Tanpa itu, sign-in
-  mengembalikan **kode 10** (bukan bug aplikasi, murni konfigurasi).
+- **Cadangan data (file)**: **aktif** di Pengaturan → "CADANGAN DATA". Ekspor
+  progres ke satu berkas `.json` lewat file picker (bisa diunggah manual ke Google
+  Drive / dipindah ke HP lain), lalu Impor untuk memulihkan — di-*merge* pakai
+  `BackupMerge` (tak ada yang hilang). **Tanpa setup Google apa pun.**
+- **Sinkronisasi Google Drive otomatis**: kode-nya tetap ada (`DriveSyncManager` +
+  `SyncSection`) tapi **UInya disembunyikan**, karena butuh setup satu kali di
+  Google Cloud Console (SHA-1 + Test user). Cara mengaktifkan kembali +
+  langkah setup: [`docs/GoogleDriveSync.md`](docs/GoogleDriveSync.md).
 - **Penjadwalan notifikasi harian**: sakelar pengingat + izin sudah ada;
   penjadwalan latar (WorkManager) menyusul.
 - Dataset N2/N1 belum disertakan (mengikuti iOS).
