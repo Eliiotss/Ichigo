@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -159,11 +160,12 @@ private fun HeroCard(state: HomeUiState) {
                 Box(Modifier.fillMaxWidth(progress).height(9.dp).clip(RoundedCornerShape(50)).background(Color.White))
             }
             Spacer(Modifier.height(14.dp))
-            Row(Modifier.fillMaxWidth().height(44.dp)) {
-                // "Total kartu" is the longest label, so give its column extra width.
-                HeroStat("${state.totalCards}", "Total kartu", showDivider = false, modifier = Modifier.weight(1.5f))
+            // IntrinsicSize.Min sizes the row to its content so the stat labels are
+            // never clipped by the card edge (and the dividers match that height).
+            Row(Modifier.fillMaxWidth().height(IntrinsicSize.Min)) {
+                HeroStat("${state.due}", "Due", showDivider = false, modifier = Modifier.weight(1f))
                 HeroStat("🔥 ${state.streak}", "Streak", showDivider = true, modifier = Modifier.weight(1f))
-                HeroStat("${state.mastered}", "Mastered", showDivider = true, modifier = Modifier.weight(1.15f))
+                HeroStat("${state.mastered}", "Mastered", showDivider = true, modifier = Modifier.weight(1f))
             }
         }
     }

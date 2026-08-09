@@ -257,7 +257,13 @@ private fun NameRow(name: String, onChange: (String) -> Unit) {
             singleLine = true,
             textStyle = rounded(16, Wt.Semibold).merge(androidx.compose.ui.text.TextStyle(color = c.primaryText, textAlign = TextAlign.End)),
             cursorBrush = SolidColor(IchigoPalette.Accent),
-            modifier = Modifier.weight(1f).onFocusChanged { focused = it.isFocused },
+            // On gaining focus, select the whole name so tapping the field lets you
+            // overwrite it immediately (no need to delete char by char).
+            modifier = Modifier.weight(1f).onFocusChanged { fs ->
+                val gainedFocus = fs.isFocused && !focused
+                focused = fs.isFocused
+                if (gainedFocus) field = field.copy(selection = TextRange(0, field.text.length))
+            },
         )
     }
 }

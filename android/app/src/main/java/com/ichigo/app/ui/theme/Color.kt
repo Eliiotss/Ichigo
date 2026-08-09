@@ -18,8 +18,11 @@ import androidx.compose.ui.graphics.Color
  */
 object IchigoPalette {
     // MARK: 1. Backgrounds & surfaces (raw values)
-    val PageLight = Color(0xFFF1EAE3)
+    val PageLight = Color(0xFFFFFFFF)
     val CardLight = Color(0xFFFFFFFF)
+    // Light-grey fill for inner "soft" boxes (example sentences, usage points) so
+    // they still read on a white page + white cards.
+    val SoftSurfaceLight = Color(0xFFF1F2F4)
     val Track = Color(0xFFE4DAD1)
     val TabBarLight = Color(0xFFFBF6F3)
     val Hairline = Color(0xFFEAE1DA)
@@ -112,7 +115,7 @@ val LightIchigoColors = IchigoColors(
     isDark = false,
     page = IchigoPalette.PageLight,
     surface = IchigoPalette.CardLight,
-    softSurface = IchigoPalette.PageLight.copy(alpha = 0.55f),
+    softSurface = IchigoPalette.SoftSurfaceLight,
     primaryText = IchigoPalette.Ink,
     secondaryText = IchigoPalette.Muted,
     track = IchigoPalette.Track,

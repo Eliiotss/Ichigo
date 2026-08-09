@@ -18,7 +18,7 @@ data class ProfileUiState(
     val initials: String = "US",
     val studiedToday: Int = 0,
     val target: Int = 20,
-    val totalCards: Int = 0,
+    val due: Int = 0,
     val streak: Int = 0,
     val mastered: Int = 0,
     val summary: FlashcardAnalyticsSummary = FlashcardAnalyticsSummary(),
@@ -45,9 +45,10 @@ class ProfileViewModel @Inject constructor(
             initials = AccountRepository.initials(name),
             studiedToday = flashcards.studiedTodayTotal(),
             target = target,
-            totalCards = learned.size,
+            due = flashcards.dailyDueTotal(target),
             streak = streak,
-            mastered = flashcards.masteredTotal,
+            // Mastered = flashcards mastered by FSRS + grammar marked as learned (star).
+            mastered = flashcards.masteredTotal + learned.size,
             summary = summary,
         )
     }.stateIn(viewModelScope, SharingStarted.Eagerly, ProfileUiState())
