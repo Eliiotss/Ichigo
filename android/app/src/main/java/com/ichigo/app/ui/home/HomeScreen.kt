@@ -96,7 +96,7 @@ fun HomeScreen(
             GreetingHeader(state, onOpenProfile)
         }
         item(span = { GridItemSpan(maxLineSpan) }) {
-            HeroCard(state)
+            HeroCard(state, onStartReview = { onOpenRoute(Routes.FLASHCARD) })
         }
         item(span = { GridItemSpan(maxLineSpan) }) {
             Spacer(Modifier.height(4.dp))
@@ -137,7 +137,7 @@ private fun GreetingHeader(state: HomeUiState, onOpenProfile: () -> Unit) {
 }
 
 @Composable
-private fun HeroCard(state: HomeUiState) {
+private fun HeroCard(state: HomeUiState, onStartReview: () -> Unit) {
     val progress = if (state.target > 0) (state.studiedToday.toFloat() / state.target).coerceIn(0f, 1f) else 0f
     Box(
         Modifier
@@ -166,6 +166,14 @@ private fun HeroCard(state: HomeUiState) {
                 HeroStat("${state.due}", "Total kartu hari ini", showDivider = false, modifier = Modifier.weight(1f))
                 HeroStat("🔥 ${state.streak}", "Streak", showDivider = true, modifier = Modifier.weight(1f))
                 HeroStat("${state.mastered}", "Mastered", showDivider = true, modifier = Modifier.weight(1f))
+            }
+            Spacer(Modifier.height(16.dp))
+            Box(
+                Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp)).background(Color.White)
+                    .clickable(onClick = onStartReview).padding(vertical = 12.dp),
+                contentAlignment = Alignment.Center,
+            ) {
+                Text("Mulai Review", style = rounded(15, Wt.Heavy), color = IchigoPalette.Blue)
             }
         }
     }
