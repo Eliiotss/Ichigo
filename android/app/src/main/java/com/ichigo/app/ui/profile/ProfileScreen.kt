@@ -108,7 +108,7 @@ private fun TargetCard(studied: Int, target: Int, progress: Float) {
 private fun StatsGrid(state: ProfileUiState) {
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            StatTile(Icons.Filled.Schedule, IchigoPalette.Blue, "${state.due}", "due", "hari ini", Modifier.weight(1f))
+            StatTile(Icons.Filled.Schedule, IchigoPalette.Blue, "${state.due}", "kartu", "total hari ini", Modifier.weight(1f))
             StatTile(Icons.Filled.CheckCircle, IchigoPalette.Success, "${state.studiedToday}", "kartu", "belajar", Modifier.weight(1f))
         }
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {

@@ -24,7 +24,7 @@ object IchigoPalette {
     // they still read on a white page + white cards.
     val SoftSurfaceLight = Color(0xFFF1F2F4)
     val Track = Color(0xFFE4DAD1)
-    val TabBarLight = Color(0xFFFBF6F3)
+    val TabBarLight = Color(0xFFFFFFFF)
     val Hairline = Color(0xFFEAE1DA)
     val PageDark = Color(0xFF12161F)
     val CardDark = Color(0xFF1C2231)

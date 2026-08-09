@@ -163,7 +163,7 @@ private fun HeroCard(state: HomeUiState) {
             // IntrinsicSize.Min sizes the row to its content so the stat labels are
             // never clipped by the card edge (and the dividers match that height).
             Row(Modifier.fillMaxWidth().height(IntrinsicSize.Min)) {
-                HeroStat("${state.due}", "Due", showDivider = false, modifier = Modifier.weight(1f))
+                HeroStat("${state.due}", "Total kartu hari ini", showDivider = false, modifier = Modifier.weight(1f))
                 HeroStat("🔥 ${state.streak}", "Streak", showDivider = true, modifier = Modifier.weight(1f))
                 HeroStat("${state.mastered}", "Mastered", showDivider = true, modifier = Modifier.weight(1f))
             }
@@ -180,7 +180,9 @@ private fun HeroStat(value: String, label: String, showDivider: Boolean, modifie
         }
         Column {
             Text(value, style = rounded(22, Wt.Heavy), color = Color.White, maxLines = 1)
-            Text(label, style = rounded(11, Wt.Bold), color = Color.White.copy(alpha = 0.85f), maxLines = 1, softWrap = false)
+            // Allow wrapping to 2 lines so long labels ("Total kartu hari ini") fit;
+            // IntrinsicSize.Min on the parent row grows to accommodate them.
+            Text(label, style = rounded(11, Wt.Bold), color = Color.White.copy(alpha = 0.85f), maxLines = 2)
         }
     }
 }
