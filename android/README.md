@@ -144,6 +144,13 @@ cd android
 ./gradlew assembleRelease   # → app/build/outputs/apk/release/app-release.apk    (uji langsung di HP)
 ```
 
+Build rilis **di-obfuscate dengan R8** (`isMinifyEnabled`/`isShrinkResources`):
+kode yang tidak terpakai dibuang dan simbol logika diganti nama jadi acak, jadi
+APK yang di-*decompile* sulit dibaca. Tiap build menghasilkan
+`app/build/outputs/mapping/release/mapping.txt` — **simpan** berkas ini per rilis
+untuk membaca ulang laporan *crash*. Detail keamanan & pengerasan: lihat
+[`docs/SECURITY.md`](docs/SECURITY.md).
+
 Langkah publikasi (ringkas):
 1. Buat akun **Google Play Console** (biaya pendaftaran satu kali $25).
 2. **Create app** → isi nama, bahasa, kategori (Education).

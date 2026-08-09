@@ -61,7 +61,11 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            // R8: strip unused code and obfuscate everything not explicitly kept
+            // in proguard-rules.pro, so a decompiled APK reads as meaningless
+            // symbols instead of the real business logic.
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
