@@ -45,8 +45,10 @@ import com.ichigo.app.ui.browse.GrammarLevelScreen
 import com.ichigo.app.ui.browse.GrammarListScreen
 import com.ichigo.app.ui.browse.KanjiDetailScreen
 import com.ichigo.app.ui.browse.KanjiLevelScreen
+import com.ichigo.app.ui.browse.GlobalSearchScreen
 import com.ichigo.app.ui.browse.KanjiListScreen
 import com.ichigo.app.ui.browse.LainnyaScreen
+import com.ichigo.app.ui.browse.SearchType
 import com.ichigo.app.ui.browse.VocabLevelScreen
 import com.ichigo.app.ui.browse.VocabListScreen
 import com.ichigo.app.ui.flashcard.FlashcardLevelScreen
@@ -220,6 +222,20 @@ private fun HomeNavHost(nav: NavHostController, onOpenProfile: () -> Unit) {
             )
         }
         composable(Routes.KANA_FLASHCARD) { KanaFlashcardScreen(onClose = { nav.popBackStack() }) }
+
+        // Global search across all unlocked levels & content types.
+        composable(Routes.SEARCH) {
+            GlobalSearchScreen(
+                onBack = { nav.popBackStack() },
+                onOpenResult = { r ->
+                    when (r.type) {
+                        SearchType.KANJI -> nav.navigate(Routes.kanjiDetail(r.jsonFile, r.levelId, r.itemId))
+                        SearchType.GRAMMAR -> nav.navigate(Routes.grammarDetail(r.jsonFile, r.levelId, r.itemId))
+                        SearchType.VOCAB -> nav.navigate(Routes.vocabList(r.jsonFile, r.levelId))
+                    }
+                },
+            )
+        }
 
         // Lainnya → two exam tracks (JLPT / JFT)
         composable(Routes.LAINNYA) {

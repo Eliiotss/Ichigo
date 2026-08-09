@@ -13,6 +13,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.launch
 import java.util.Calendar
 import javax.inject.Inject
 
@@ -37,6 +38,7 @@ data class HomeUiState(
     val due: Int = 0,
     val streak: Int = 0,
     val mastered: Int = 0,
+    val showOnboarding: Boolean = false,
 )
 
 /**
@@ -60,8 +62,9 @@ class HomeViewModel @Inject constructor(
             combine(prefs.userName, prefs.dailyTarget, prefs.streak) { name, target, streak -> Triple(name, target, streak) },
             prefs.learnedGrammarIds,
             flashcards.progress,
+            prefs.onboardingDone,
             refreshTrigger,
-        ) { (name, target, streak), learned, _, _ ->
+        ) { (name, target, streak), learned, _, onboardingDone, _ ->
             flashcards.ensureLoaded()
             HomeUiState(
                 greeting = TimeGreeting.now(),
@@ -73,6 +76,7 @@ class HomeViewModel @Inject constructor(
                 streak = streak,
                 // Mastered = flashcards mastered by FSRS + grammar marked as learned (star).
                 mastered = flashcards.masteredTotal + learned.size,
+                showOnboarding = !onboardingDone,
             )
         }.onEach { _state.value = it }.launchIn(viewModelScope)
     }
@@ -81,4 +85,14 @@ class HomeViewModel @Inject constructor(
     fun onResume() {
         refreshTrigger.value = System.currentTimeMillis()
     }
+
+    /** First-run: save the chosen name + target and dismiss onboarding. */
+    fun completeOnboarding(name: String, target: Int) = viewModelScope.launch {
+        val trimmed = name.trim()
+        if (trimmed.isNotEmpty()) prefs.setUserName(trimmed)
+        prefs.setDailyTarget(target)
+        prefs.setOnboardingDone()
+    }
+
+    fun skipOnboarding() = viewModelScope.launch { prefs.setOnboardingDone() }
 }

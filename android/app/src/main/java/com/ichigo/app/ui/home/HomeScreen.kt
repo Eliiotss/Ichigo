@@ -25,12 +25,20 @@ import androidx.compose.material.icons.automirrored.filled.Article
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.GridView
 import androidx.compose.material.icons.filled.MenuBook
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Style
 import androidx.compose.material.icons.filled.Translate
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -93,7 +101,7 @@ fun HomeScreen(
         verticalArrangement = Arrangement.spacedBy(14.dp),
     ) {
         item(span = { GridItemSpan(maxLineSpan) }) {
-            GreetingHeader(state, onOpenProfile)
+            GreetingHeader(state, onOpenProfile, onOpenSearch = { onOpenRoute(Routes.SEARCH) })
         }
         item(span = { GridItemSpan(maxLineSpan) }) {
             HeroCard(state, onStartReview = { onOpenRoute(Routes.FLASHCARD) })
@@ -106,10 +114,66 @@ fun HomeScreen(
             MenuCard(item) { onOpenRoute(item.route) }
         }
     }
+
+    if (state.showOnboarding) {
+        OnboardingDialog(
+            initialName = state.displayName.takeUnless { it == "user123" }.orEmpty(),
+            initialTarget = state.target,
+            onStart = { name, target -> viewModel.completeOnboarding(name, target) },
+            onSkip = { viewModel.skipOnboarding() },
+        )
+    }
+}
+
+/** First-run dialog: pick a name and a daily target. */
+@Composable
+private fun OnboardingDialog(
+    initialName: String,
+    initialTarget: Int,
+    onStart: (String, Int) -> Unit,
+    onSkip: () -> Unit,
+) {
+    val c = IchigoTheme.colors
+    var name by remember { mutableStateOf(initialName) }
+    var target by remember { mutableIntStateOf(initialTarget) }
+    AlertDialog(
+        onDismissRequest = onSkip,
+        containerColor = c.surface,
+        title = { Text("Selamat datang di IchiGo! 🍓", style = rounded(18, Wt.Bold), color = c.primaryText) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                Text("Atur namamu dan target belajar harian.", style = rounded(13, Wt.Medium), color = c.secondaryText)
+                OutlinedTextField(
+                    value = name,
+                    onValueChange = { name = it },
+                    singleLine = true,
+                    label = { Text("Nama pengguna") },
+                    textStyle = rounded(16, Wt.Semibold),
+                )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text("Target harian", style = rounded(14, Wt.Semibold), color = c.primaryText, modifier = Modifier.weight(1f))
+                    Row(
+                        Modifier.clip(RoundedCornerShape(10.dp)).background(c.track),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Box(Modifier.size(36.dp).clip(RoundedCornerShape(10.dp)).clickable { target = (target - 5).coerceAtLeast(5) }, contentAlignment = Alignment.Center) {
+                            Text("−", style = rounded(18, Wt.Bold), color = c.primaryText)
+                        }
+                        Text("$target", style = rounded(15, Wt.Bold), color = c.primaryText, modifier = Modifier.width(44.dp), textAlign = androidx.compose.ui.text.style.TextAlign.Center)
+                        Box(Modifier.size(36.dp).clip(RoundedCornerShape(10.dp)).clickable { target = (target + 5).coerceAtMost(200) }, contentAlignment = Alignment.Center) {
+                            Text("+", style = rounded(18, Wt.Bold), color = c.primaryText)
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = { TextButton(onClick = { onStart(name, target) }) { Text("Mulai belajar", color = IchigoPalette.Accent, style = rounded(15, Wt.Bold)) } },
+        dismissButton = { TextButton(onClick = onSkip) { Text("Lewati", color = c.secondaryText) } },
+    )
 }
 
 @Composable
-private fun GreetingHeader(state: HomeUiState, onOpenProfile: () -> Unit) {
+private fun GreetingHeader(state: HomeUiState, onOpenProfile: () -> Unit, onOpenSearch: () -> Unit) {
     val c = IchigoTheme.colors
     Row(Modifier.fillMaxWidth().padding(bottom = 4.dp), verticalAlignment = Alignment.CenterVertically) {
         Column(Modifier.weight(1f)) {
@@ -121,7 +185,14 @@ private fun GreetingHeader(state: HomeUiState, onOpenProfile: () -> Unit) {
                 overflow = TextOverflow.Ellipsis,
             )
         }
-        Spacer(Modifier.width(12.dp))
+        Spacer(Modifier.width(10.dp))
+        Box(
+            Modifier.size(46.dp).clip(CircleShape).background(c.surface).clickable(onClick = onOpenSearch),
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(Icons.Filled.Search, contentDescription = "Cari", tint = IchigoPalette.Accent, modifier = Modifier.size(22.dp))
+        }
+        Spacer(Modifier.width(10.dp))
         Box(
             Modifier
                 .size(46.dp)

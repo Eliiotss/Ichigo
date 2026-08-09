@@ -64,6 +64,9 @@ class AppPreferences @Inject constructor(
 
         // Grammar points the user has marked as learned (star). Set of GrammarItem.id.
         val learnedGrammar = stringSetPreferencesKey("learned_grammar_ids_v1")
+
+        // First-run onboarding completed.
+        val onboardingDone = booleanPreferencesKey("onboarding_done_v1")
     }
 
     // --- Account / preferences (defaults match AccountStore + @AppStorage) ---
@@ -87,6 +90,10 @@ class AppPreferences @Inject constructor(
         if (learned) current.add(id) else current.remove(id)
         p[Keys.learnedGrammar] = current
     }
+
+    /** First-run onboarding (name + target). Defaults to not-done. */
+    val onboardingDone: Flow<Boolean> = ds.data.map { it[Keys.onboardingDone] ?: false }
+    suspend fun setOnboardingDone() = ds.edit { it[Keys.onboardingDone] = true }
 
     suspend fun setDriveLastSync(value: Long) = ds.edit { it[Keys.driveLastSync] = value }
     suspend fun driveLastSyncOrNull(): Long? = driveLastSync.first()
