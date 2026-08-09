@@ -52,8 +52,9 @@ enum class FlashcardGrade(val value: Int) {
 }
 
 /**
- * Port of `FlashcardSettings`. Defaults are copied verbatim, including the 21
- * official FSRS-6 weights, so scheduling is byte-for-byte identical to iOS.
+ * Port of `FlashcardSettings`. Defaults match iOS — including the 21 official
+ * FSRS-6 weights — so scheduling stays aligned, with one intentional tweak:
+ * [easyIntervalDays] is tuned to 3 days (iOS: 4) so "Mudah" cards return sooner.
  */
 data class FlashcardSettings(
     var newCardsPerDay: Int = 35,
@@ -63,7 +64,9 @@ data class FlashcardSettings(
     var desiredRetention: Double = 0.9,
     var maximumIntervalDays: Int = 36500,
     var graduatingIntervalDays: Int = 1,
-    var easyIntervalDays: Int = 4,
+    // Tuned to 3 days (iOS uses 4): a shorter first interval for "Mudah" cards
+    // brings them back sooner so they are less likely to be forgotten.
+    var easyIntervalDays: Int = 3,
     var leechThreshold: Int = 8,
     var fsrsWeights: List<Double> = listOf(
         0.2120, 1.2931, 2.3065, 8.2956, 6.4133, 0.8334, 3.0194, 0.0010,
