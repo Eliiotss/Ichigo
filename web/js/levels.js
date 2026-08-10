@@ -42,7 +42,7 @@ export const LEVELS = {
     ],
     grammar: [
         lv("N5", 84, "GrammarN5", false), lv("N4", 132, "GrammarN4", false), lv("N3", 182, "GrammarN3", false),
-        lv("N2", 80, "GrammarN2", false), lv("N1", null, "GrammarN1", true),
+        lv("N2", 141, "GrammarN2", false), lv("N1", null, "GrammarN1", true),
     ],
 };
 

@@ -48,6 +48,6 @@ val grammarLevels: List<ContentLevel> = listOf(
     ContentLevel("N5", "Beginner", "84 Pola Tata Bahasa Dasar", false, "GrammarN5"),
     ContentLevel("N4", "Elementary", "132 Pola Tata Bahasa Dasar+", false, "GrammarN4"),
     ContentLevel("N3", "Intermediate", "182 Pola Tata Bahasa Menengah", false, "GrammarN3"),
-    ContentLevel("N2", "Pre-Advanced", "80 Pola Tata Bahasa Lanjutan", false, "GrammarN2"),
+    ContentLevel("N2", "Pre-Advanced", "141 Pola Tata Bahasa Lanjutan", false, "GrammarN2"),
     ContentLevel("N1", "Advanced", "Pola Tata Bahasa Master", true, "GrammarN1"),
 )
