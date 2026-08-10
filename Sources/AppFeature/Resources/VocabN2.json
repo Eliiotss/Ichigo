@@ -3897,5 +3897,3890 @@
     "hiragana": "やむをえず",
     "arti": "terpaksa/mau tak mau",
     "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V558",
+    "kanji": "愛着",
+    "hiragana": "あいちゃく",
+    "arti": "rasa lekat/sayang",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V559",
+    "kanji": "悪循環",
+    "hiragana": "あくじゅんかん",
+    "arti": "lingkaran setan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V560",
+    "kanji": "圧勝",
+    "hiragana": "あっしょう",
+    "arti": "kemenangan telak",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V561",
+    "kanji": "斡旋",
+    "hiragana": "あっせん",
+    "arti": "perantaraan/mediasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V562",
+    "kanji": "圧迫",
+    "hiragana": "あっぱく",
+    "arti": "tekanan/penindasan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V563",
+    "kanji": "宛名",
+    "hiragana": "あてな",
+    "arti": "nama penerima",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V564",
+    "kanji": "暗示",
+    "hiragana": "あんじ",
+    "arti": "isyarat/sugesti",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V565",
+    "kanji": "暗黙",
+    "hiragana": "あんもく",
+    "arti": "tersirat/diam-diam",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V566",
+    "kanji": "委託",
+    "hiragana": "いたく",
+    "arti": "penitipan/mandat",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V567",
+    "kanji": "一環",
+    "hiragana": "いっかん",
+    "arti": "bagian dari (rangkaian)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V568",
+    "kanji": "逸材",
+    "hiragana": "いつざい",
+    "arti": "orang berbakat langka",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V569",
+    "kanji": "一括",
+    "hiragana": "いっかつ",
+    "arti": "sekaligus/borongan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V570",
+    "kanji": "一環性",
+    "hiragana": "いっかんせい",
+    "arti": "koherensi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V571",
+    "kanji": "威厳",
+    "hiragana": "いげん",
+    "arti": "kewibawaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V572",
+    "kanji": "意向",
+    "hiragana": "いこう",
+    "arti": "niat/kehendak",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V573",
+    "kanji": "意地",
+    "hiragana": "いじ",
+    "arti": "gengsi/keras kepala",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V574",
+    "kanji": "委嘱",
+    "hiragana": "いしょく",
+    "arti": "penunjukan (tugas)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V575",
+    "kanji": "委任",
+    "hiragana": "いにん",
+    "arti": "pelimpahan wewenang",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V576",
+    "kanji": "違法",
+    "hiragana": "いほう",
+    "arti": "ilegal",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V577",
+    "kanji": "陰謀",
+    "hiragana": "いんぼう",
+    "arti": "persekongkolan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V578",
+    "kanji": "隠居",
+    "hiragana": "いんきょ",
+    "arti": "pensiun/menyepi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V579",
+    "kanji": "英知",
+    "hiragana": "えいち",
+    "arti": "kearifan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V580",
+    "kanji": "閲覧",
+    "hiragana": "えつらん",
+    "arti": "penelusuran/membaca",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V581",
+    "kanji": "演出",
+    "hiragana": "えんしゅつ",
+    "arti": "penyutradaraan/penataan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V582",
+    "kanji": "縁故",
+    "hiragana": "えんこ",
+    "arti": "koneksi/kekerabatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V583",
+    "kanji": "汚職",
+    "hiragana": "おしょく",
+    "arti": "korupsi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V584",
+    "kanji": "恩師",
+    "hiragana": "おんし",
+    "arti": "guru yang berjasa",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V585",
+    "kanji": "温床",
+    "hiragana": "おんしょう",
+    "arti": "sarang/lahan subur (negatif)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V586",
+    "kanji": "概略",
+    "hiragana": "がいりゃく",
+    "arti": "garis besar",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V587",
+    "kanji": "該当",
+    "hiragana": "がいとう",
+    "arti": "kesesuaian/berlaku",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V588",
+    "kanji": "開拓",
+    "hiragana": "かいたく",
+    "arti": "pembukaan lahan/perintisan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V589",
+    "kanji": "介入",
+    "hiragana": "かいにゅう",
+    "arti": "intervensi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V590",
+    "kanji": "回顧",
+    "hiragana": "かいこ",
+    "arti": "kenangan/retrospeksi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V591",
+    "kanji": "解体",
+    "hiragana": "かいたい",
+    "arti": "pembongkaran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V592",
+    "kanji": "改訂",
+    "hiragana": "かいてい",
+    "arti": "revisi (edisi)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V593",
+    "kanji": "回覧",
+    "hiragana": "かいらん",
+    "arti": "edaran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V594",
+    "kanji": "架空",
+    "hiragana": "かくう",
+    "arti": "fiktif/khayalan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V595",
+    "kanji": "格闘",
+    "hiragana": "かくとう",
+    "arti": "pergulatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V596",
+    "kanji": "確立",
+    "hiragana": "かくりつ",
+    "arti": "penegakan/pembentukan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V597",
+    "kanji": "駆け引き",
+    "hiragana": "かけひき",
+    "arti": "taktik tawar-menawar",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V598",
+    "kanji": "箇条書き",
+    "hiragana": "かじょうがき",
+    "arti": "poin per poin",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V599",
+    "kanji": "加担",
+    "hiragana": "かたん",
+    "arti": "turut serta (kejahatan)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V600",
+    "kanji": "片言",
+    "hiragana": "かたこと",
+    "arti": "bicara terbata",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V601",
+    "kanji": "葛藤",
+    "hiragana": "かっとう",
+    "arti": "konflik batin",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V602",
+    "kanji": "過渡期",
+    "hiragana": "かとき",
+    "arti": "masa transisi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V603",
+    "kanji": "貨物",
+    "hiragana": "かもつ",
+    "arti": "kargo/barang muatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V604",
+    "kanji": "感慨",
+    "hiragana": "かんがい",
+    "arti": "perasaan mendalam",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V605",
+    "kanji": "勧告",
+    "hiragana": "かんこく",
+    "arti": "imbauan/rekomendasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V606",
+    "kanji": "看護",
+    "hiragana": "かんご",
+    "arti": "perawatan (medis)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V607",
+    "kanji": "監修",
+    "hiragana": "かんしゅう",
+    "arti": "penyuntingan ahli",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V608",
+    "kanji": "感染",
+    "hiragana": "かんせん",
+    "arti": "infeksi/penularan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V609",
+    "kanji": "干拓",
+    "hiragana": "かんたく",
+    "arti": "reklamasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V610",
+    "kanji": "鑑定",
+    "hiragana": "かんてい",
+    "arti": "penilaian/penaksiran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V611",
+    "kanji": "元老",
+    "hiragana": "げんろう",
+    "arti": "sesepuh/negarawan senior",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V612",
+    "kanji": "緩和",
+    "hiragana": "かんわ",
+    "arti": "pelonggaran/peredaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V613",
+    "kanji": "危惧",
+    "hiragana": "きぐ",
+    "arti": "kekhawatiran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V614",
+    "kanji": "棄権",
+    "hiragana": "きけん",
+    "arti": "abstain/mengundurkan diri",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V615",
+    "kanji": "兆し",
+    "hiragana": "きざし",
+    "arti": "tanda/pertanda",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V616",
+    "kanji": "記載",
+    "hiragana": "きさい",
+    "arti": "pencatatan (tertulis)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V617",
+    "kanji": "儀式",
+    "hiragana": "ぎしき",
+    "arti": "upacara/ritual",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V618",
+    "kanji": "犠打",
+    "hiragana": "ぎだ",
+    "arti": "pukulan pengorbanan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V619",
+    "kanji": "軌跡",
+    "hiragana": "きせき",
+    "arti": "jejak lintasan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V620",
+    "kanji": "擬態",
+    "hiragana": "ぎたい",
+    "arti": "mimikri",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V621",
+    "kanji": "規範",
+    "hiragana": "きはん",
+    "arti": "norma/kaidah",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V622",
+    "kanji": "欺瞞",
+    "hiragana": "ぎまん",
+    "arti": "tipu daya",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V623",
+    "kanji": "却下",
+    "hiragana": "きゃっか",
+    "arti": "penolakan (permohonan)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V624",
+    "kanji": "窮地",
+    "hiragana": "きゅうち",
+    "arti": "situasi terjepit",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V625",
+    "kanji": "糾弾",
+    "hiragana": "きゅうだん",
+    "arti": "kecaman keras",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V626",
+    "kanji": "驚異",
+    "hiragana": "きょうい",
+    "arti": "keajaiban",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V627",
+    "kanji": "享受",
+    "hiragana": "きょうじゅ",
+    "arti": "menikmati (hak)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V628",
+    "kanji": "強制",
+    "hiragana": "きょうせい",
+    "arti": "pemaksaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V629",
+    "kanji": "郷土",
+    "hiragana": "きょうど",
+    "arti": "tanah kelahiran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V630",
+    "kanji": "脅迫",
+    "hiragana": "きょうはく",
+    "arti": "ancaman/pemerasan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V631",
+    "kanji": "興隆",
+    "hiragana": "こうりゅう",
+    "arti": "kebangkitan/kejayaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V632",
+    "kanji": "局面",
+    "hiragana": "きょくめん",
+    "arti": "fase/situasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V633",
+    "kanji": "拒絶",
+    "hiragana": "きょぜつ",
+    "arti": "penolakan tegas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V634",
+    "kanji": "虚偽",
+    "hiragana": "きょぎ",
+    "arti": "kepalsuan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V635",
+    "kanji": "虚栄心",
+    "hiragana": "きょえいしん",
+    "arti": "kesombongan hampa",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V636",
+    "kanji": "規律",
+    "hiragana": "きりつ",
+    "arti": "disiplin/tata tertib",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V637",
+    "kanji": "疑惑",
+    "hiragana": "ぎわく",
+    "arti": "kecurigaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V638",
+    "kanji": "勤勉",
+    "hiragana": "きんべん",
+    "arti": "rajin/tekun",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V639",
+    "kanji": "空虚",
+    "hiragana": "くうきょ",
+    "arti": "kehampaan",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V640",
+    "kanji": "苦悩",
+    "hiragana": "くのう",
+    "arti": "kepedihan batin",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V641",
+    "kanji": "工面",
+    "hiragana": "くめん",
+    "arti": "mengusahakan (dana)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V642",
+    "kanji": "軍備",
+    "hiragana": "ぐんび",
+    "arti": "persenjataan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V643",
+    "kanji": "警戒",
+    "hiragana": "けいかい",
+    "arti": "kewaspadaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V644",
+    "kanji": "軽減",
+    "hiragana": "けいげん",
+    "arti": "pengurangan/keringanan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V645",
+    "kanji": "掲載",
+    "hiragana": "けいさい",
+    "arti": "pemuatan (tulisan)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V646",
+    "kanji": "形勢",
+    "hiragana": "けいせい",
+    "arti": "situasi/keadaan (pertarungan)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V647",
+    "kanji": "継承",
+    "hiragana": "けいしょう",
+    "arti": "pewarisan/penerusan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V648",
+    "kanji": "形跡",
+    "hiragana": "けいせき",
+    "arti": "jejak/bekas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V649",
+    "kanji": "啓発",
+    "hiragana": "けいはつ",
+    "arti": "pencerahan/edukasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V650",
+    "kanji": "経歴",
+    "hiragana": "けいれき",
+    "arti": "riwayat hidup/karier",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V651",
+    "kanji": "激励",
+    "hiragana": "げきれい",
+    "arti": "penyemangatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V652",
+    "kanji": "桁",
+    "hiragana": "けた",
+    "arti": "digit/tingkatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V653",
+    "kanji": "決意",
+    "hiragana": "けつい",
+    "arti": "tekad",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V654",
+    "kanji": "傑作",
+    "hiragana": "けっさく",
+    "arti": "mahakarya",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V655",
+    "kanji": "決裁",
+    "hiragana": "けっさい",
+    "arti": "persetujuan (pejabat)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V656",
+    "kanji": "結束",
+    "hiragana": "けっそく",
+    "arti": "persatuan/solidaritas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V657",
+    "kanji": "圏内",
+    "hiragana": "けんない",
+    "arti": "dalam jangkauan/wilayah",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V658",
+    "kanji": "見地",
+    "hiragana": "けんち",
+    "arti": "sudut pandang",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V659",
+    "kanji": "兼務",
+    "hiragana": "けんむ",
+    "arti": "rangkap jabatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V660",
+    "kanji": "賢明",
+    "hiragana": "けんめい",
+    "arti": "kebijaksanaan/bijak",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V661",
+    "kanji": "倹しい",
+    "hiragana": "つましい",
+    "arti": "hemat/sederhana",
+    "jenisKata": "Kata Sifat"
+  },
+  {
+    "id": "N2_V662",
+    "kanji": "原型",
+    "hiragana": "げんけい",
+    "arti": "prototipe/bentuk asli",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V663",
+    "kanji": "言及",
+    "hiragana": "げんきゅう",
+    "arti": "penyinggungan/menyebut",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V664",
+    "kanji": "減少",
+    "hiragana": "げんしょう",
+    "arti": "penurunan/pengurangan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V665",
+    "kanji": "倹",
+    "hiragana": "つづまやか",
+    "arti": "kesederhanaan",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V666",
+    "kanji": "後遺症",
+    "hiragana": "こういしょう",
+    "arti": "gejala sisa/komplikasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V667",
+    "kanji": "好意",
+    "hiragana": "こうい",
+    "arti": "niat baik/simpati",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V668",
+    "kanji": "交錯",
+    "hiragana": "こうさく",
+    "arti": "persilangan/bercampur",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V669",
+    "kanji": "控訴",
+    "hiragana": "こうそ",
+    "arti": "banding (hukum)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V670",
+    "kanji": "構想",
+    "hiragana": "こうそう",
+    "arti": "konsep/gagasan besar",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V671",
+    "kanji": "後退",
+    "hiragana": "こうたい",
+    "arti": "kemunduran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V672",
+    "kanji": "交代制",
+    "hiragana": "こうたいせい",
+    "arti": "sistem giliran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V673",
+    "kanji": "公認",
+    "hiragana": "こうにん",
+    "arti": "pengakuan resmi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V674",
+    "kanji": "荒廃",
+    "hiragana": "こうはい",
+    "arti": "kerusakan/kebobrokan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V675",
+    "kanji": "公募",
+    "hiragana": "こうぼ",
+    "arti": "rekrutmen terbuka",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V676",
+    "kanji": "拷問",
+    "hiragana": "ごうもん",
+    "arti": "penyiksaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V677",
+    "kanji": "小柄",
+    "hiragana": "こがら",
+    "arti": "bertubuh kecil",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V678",
+    "kanji": "互恵",
+    "hiragana": "ごけい",
+    "arti": "timbal balik menguntungkan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V679",
+    "kanji": "誇示",
+    "hiragana": "こじ",
+    "arti": "memamerkan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V680",
+    "kanji": "固執",
+    "hiragana": "こしつ",
+    "arti": "bersikeras/keras kepala",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V681",
+    "kanji": "固定",
+    "hiragana": "こてい",
+    "arti": "penetapan/tetap",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V682",
+    "kanji": "孤立",
+    "hiragana": "こりつ",
+    "arti": "keterasingan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V683",
+    "kanji": "懇願",
+    "hiragana": "こんがん",
+    "arti": "permohonan sungguh",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V684",
+    "kanji": "懇談",
+    "hiragana": "こんだん",
+    "arti": "obrolan akrab",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V685",
+    "kanji": "根絶",
+    "hiragana": "こんぜつ",
+    "arti": "pemberantasan tuntas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V686",
+    "kanji": "災難",
+    "hiragana": "さいなん",
+    "arti": "malapetaka",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V687",
+    "kanji": "採算",
+    "hiragana": "さいさん",
+    "arti": "perhitungan untung-rugi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V688",
+    "kanji": "裁量",
+    "hiragana": "さいりょう",
+    "arti": "kebijaksanaan/diskresi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V689",
+    "kanji": "殺到",
+    "hiragana": "さっとう",
+    "arti": "membanjir/membludak",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V690",
+    "kanji": "雑踏",
+    "hiragana": "ざっとう",
+    "arti": "keramaian berdesakan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V691",
+    "kanji": "作動",
+    "hiragana": "さどう",
+    "arti": "pengoperasian (mesin)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V692",
+    "kanji": "裁き",
+    "hiragana": "さばき",
+    "arti": "pengadilan/keputusan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V693",
+    "kanji": "残高",
+    "hiragana": "ざんだか",
+    "arti": "saldo",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V694",
+    "kanji": "暫定",
+    "hiragana": "ざんてい",
+    "arti": "sementara/interim",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V695",
+    "kanji": "賛同",
+    "hiragana": "さんどう",
+    "arti": "persetujuan/dukungan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V696",
+    "kanji": "残忍",
+    "hiragana": "ざんにん",
+    "arti": "kejam/bengis",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V697",
+    "kanji": "弛緩",
+    "hiragana": "しかん",
+    "arti": "kekenduran/relaksasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V698",
+    "kanji": "嗜好",
+    "hiragana": "しこう",
+    "arti": "selera/preferensi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V699",
+    "kanji": "試行錯誤",
+    "hiragana": "しこうさくご",
+    "arti": "coba-coba (trial and error)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V700",
+    "kanji": "持参金",
+    "hiragana": "じさんきん",
+    "arti": "mas kawin/bekal uang",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V701",
+    "kanji": "資質",
+    "hiragana": "ししつ",
+    "arti": "bakat/pembawaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V702",
+    "kanji": "辞職",
+    "hiragana": "じしょく",
+    "arti": "pengunduran diri",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V703",
+    "kanji": "施錠",
+    "hiragana": "せじょう",
+    "arti": "penguncian",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V704",
+    "kanji": "私鉄",
+    "hiragana": "してつ",
+    "arti": "kereta swasta",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V705",
+    "kanji": "失格",
+    "hiragana": "しっかく",
+    "arti": "diskualifikasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V706",
+    "kanji": "疾患",
+    "hiragana": "しっかん",
+    "arti": "penyakit/gangguan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V707",
+    "kanji": "実況",
+    "hiragana": "じっきょう",
+    "arti": "siaran langsung",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V708",
+    "kanji": "実権",
+    "hiragana": "じっけん",
+    "arti": "kekuasaan nyata",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V709",
+    "kanji": "実情",
+    "hiragana": "じつじょう",
+    "arti": "keadaan sebenarnya",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V710",
+    "kanji": "嫉妬",
+    "hiragana": "しっと",
+    "arti": "kecemburuan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V711",
+    "kanji": "辞退",
+    "hiragana": "じたい",
+    "arti": "menolak (dengan sopan)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V712",
+    "kanji": "失墜",
+    "hiragana": "しっつい",
+    "arti": "kejatuhan (wibawa)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V713",
+    "kanji": "執行",
+    "hiragana": "しっこう",
+    "arti": "pelaksanaan (eksekusi)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V714",
+    "kanji": "実費",
+    "hiragana": "じっぴ",
+    "arti": "biaya riil",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V715",
+    "kanji": "視野",
+    "hiragana": "しや",
+    "arti": "bidang pandang/wawasan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V716",
+    "kanji": "遮断",
+    "hiragana": "しゃだん",
+    "arti": "pemutusan/blokir",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V717",
+    "kanji": "斜面",
+    "hiragana": "しゃめん",
+    "arti": "lereng",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V718",
+    "kanji": "襲撃",
+    "hiragana": "しゅうげき",
+    "arti": "serangan mendadak",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V719",
+    "kanji": "収支",
+    "hiragana": "しゅうし",
+    "arti": "neraca pemasukan-pengeluaran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V720",
+    "kanji": "執着",
+    "hiragana": "しゅうちゃく",
+    "arti": "kemelekatan/obsesi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V721",
+    "kanji": "柔和",
+    "hiragana": "にゅうわ",
+    "arti": "lembut/ramah",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V722",
+    "kanji": "充満",
+    "hiragana": "じゅうまん",
+    "arti": "memenuhi (ruang)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V723",
+    "kanji": "収容",
+    "hiragana": "しゅうよう",
+    "arti": "penampungan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V724",
+    "kanji": "守衛",
+    "hiragana": "しゅえい",
+    "arti": "penjaga/satpam",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V725",
+    "kanji": "主催",
+    "hiragana": "しゅさい",
+    "arti": "penyelenggaraan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V726",
+    "kanji": "取材",
+    "hiragana": "しゅざい",
+    "arti": "peliputan/wawancara",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V727",
+    "kanji": "種々",
+    "hiragana": "しゅじゅ",
+    "arti": "bermacam-macam",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V728",
+    "kanji": "主導",
+    "hiragana": "しゅどう",
+    "arti": "inisiatif/memimpin",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V729",
+    "kanji": "守備",
+    "hiragana": "しゅび",
+    "arti": "pertahanan (olahraga)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V730",
+    "kanji": "樹立",
+    "hiragana": "じゅりつ",
+    "arti": "menegakkan/mencetak (rekor)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V731",
+    "kanji": "遵守",
+    "hiragana": "じゅんしゅ",
+    "arti": "kepatuhan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V732",
+    "kanji": "殉職",
+    "hiragana": "じゅんしょく",
+    "arti": "gugur dalam tugas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V733",
+    "kanji": "準ずる",
+    "hiragana": "じゅんずる",
+    "arti": "menyesuaikan/setara",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V734",
+    "kanji": "消去",
+    "hiragana": "しょうきょ",
+    "arti": "penghapusan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V735",
+    "kanji": "昇華",
+    "hiragana": "しょうか",
+    "arti": "sublimasi/pemuliaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V736",
+    "kanji": "償還",
+    "hiragana": "しょうかん",
+    "arti": "penebusan/pelunasan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V737",
+    "kanji": "衝撃",
+    "hiragana": "しょうげき",
+    "arti": "guncangan/dampak",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V738",
+    "kanji": "称賛",
+    "hiragana": "しょうさん",
+    "arti": "pujian",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V739",
+    "kanji": "消息",
+    "hiragana": "しょうそく",
+    "arti": "kabar/keberadaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V740",
+    "kanji": "承諾",
+    "hiragana": "しょうだく",
+    "arti": "persetujuan/kesediaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V741",
+    "kanji": "譲渡",
+    "hiragana": "じょうと",
+    "arti": "pengalihan hak",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V742",
+    "kanji": "勝敗",
+    "hiragana": "しょうはい",
+    "arti": "kalah-menang",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V743",
+    "kanji": "奨励",
+    "hiragana": "しょうれい",
+    "arti": "penganjuran/dorongan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V744",
+    "kanji": "除外",
+    "hiragana": "じょがい",
+    "arti": "pengecualian",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V745",
+    "kanji": "職務",
+    "hiragana": "しょくむ",
+    "arti": "tugas jabatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V746",
+    "kanji": "諸島",
+    "hiragana": "しょとう",
+    "arti": "kepulauan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V747",
+    "kanji": "処罰",
+    "hiragana": "しょばつ",
+    "arti": "penghukuman",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V748",
+    "kanji": "庶民",
+    "hiragana": "しょみん",
+    "arti": "rakyat jelata",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V749",
+    "kanji": "除名",
+    "hiragana": "じょめい",
+    "arti": "pemecatan (keanggotaan)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V750",
+    "kanji": "私利",
+    "hiragana": "しり",
+    "arti": "kepentingan pribadi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V751",
+    "kanji": "思慮",
+    "hiragana": "しりょ",
+    "arti": "kebijaksanaan berpikir",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V752",
+    "kanji": "進行",
+    "hiragana": "しんこう",
+    "arti": "kemajuan/berlangsung",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V753",
+    "kanji": "審議",
+    "hiragana": "しんぎ",
+    "arti": "pembahasan/deliberasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V754",
+    "kanji": "申告",
+    "hiragana": "しんこく",
+    "arti": "pelaporan (pajak)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V755",
+    "kanji": "侵食",
+    "hiragana": "しんしょく",
+    "arti": "erosi/pengikisan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V756",
+    "kanji": "真相",
+    "hiragana": "しんそう",
+    "arti": "kebenaran sesungguhnya",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V757",
+    "kanji": "迅速",
+    "hiragana": "じんそく",
+    "arti": "cepat/gesit",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V758",
+    "kanji": "進呈",
+    "hiragana": "しんてい",
+    "arti": "memberi hadiah",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V759",
+    "kanji": "辛抱",
+    "hiragana": "しんぼう",
+    "arti": "kesabaran/ketahanan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V760",
+    "kanji": "信望",
+    "hiragana": "しんぼう",
+    "arti": "kepercayaan dan kehormatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V761",
+    "kanji": "親密",
+    "hiragana": "しんみつ",
+    "arti": "keakraban",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V762",
+    "kanji": "尽力",
+    "hiragana": "じんりょく",
+    "arti": "upaya keras",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V763",
+    "kanji": "衰退",
+    "hiragana": "すいたい",
+    "arti": "kemunduran/kemerosotan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V764",
+    "kanji": "崇拝",
+    "hiragana": "すうはい",
+    "arti": "pemujaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V765",
+    "kanji": "据え付け",
+    "hiragana": "すえつけ",
+    "arti": "pemasangan (tetap)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V766",
+    "kanji": "素性",
+    "hiragana": "すじょう",
+    "arti": "asal usul/latar",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V767",
+    "kanji": "誠意",
+    "hiragana": "せいい",
+    "arti": "itikad baik",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V768",
+    "kanji": "盛況",
+    "hiragana": "せいきょう",
+    "arti": "keramaian sukses",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V769",
+    "kanji": "制裁",
+    "hiragana": "せいさい",
+    "arti": "sanksi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V770",
+    "kanji": "精算",
+    "hiragana": "せいさん",
+    "arti": "penyelesaian pembayaran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V771",
+    "kanji": "清算",
+    "hiragana": "せいさん",
+    "arti": "pelunasan/penuntasan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V772",
+    "kanji": "誠実",
+    "hiragana": "せいじつ",
+    "arti": "ketulusan/jujur",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V773",
+    "kanji": "静粛",
+    "hiragana": "せいしゅく",
+    "arti": "ketenangan/hening",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V774",
+    "kanji": "盛衰",
+    "hiragana": "せいすい",
+    "arti": "pasang surut/jatuh bangun",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V775",
+    "kanji": "精髄",
+    "hiragana": "せいずい",
+    "arti": "inti/sari",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V776",
+    "kanji": "成熟",
+    "hiragana": "せいじゅく",
+    "arti": "kematangan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V777",
+    "kanji": "整頓",
+    "hiragana": "せいとん",
+    "arti": "kerapian/penataan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V778",
+    "kanji": "征服",
+    "hiragana": "せいふく",
+    "arti": "penaklukan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V779",
+    "kanji": "誓約",
+    "hiragana": "せいやく",
+    "arti": "ikrar/sumpah",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V780",
+    "kanji": "勢力",
+    "hiragana": "せいりょく",
+    "arti": "kekuatan/pengaruh",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V781",
+    "kanji": "世相",
+    "hiragana": "せそう",
+    "arti": "kondisi zaman/masyarakat",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V782",
+    "kanji": "折衝",
+    "hiragana": "せっしょう",
+    "arti": "perundingan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V783",
+    "kanji": "絶望",
+    "hiragana": "ぜつぼう",
+    "arti": "keputusasaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V784",
+    "kanji": "切望",
+    "hiragana": "せつぼう",
+    "arti": "kerinduan mendalam",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V785",
+    "kanji": "善悪",
+    "hiragana": "ぜんあく",
+    "arti": "baik-buruk",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V786",
+    "kanji": "繊細",
+    "hiragana": "せんさい",
+    "arti": "halus/sensitif",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V787",
+    "kanji": "戦車",
+    "hiragana": "せんしゃ",
+    "arti": "tank (militer)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V788",
+    "kanji": "先住民",
+    "hiragana": "せんじゅうみん",
+    "arti": "penduduk asli",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V789",
+    "kanji": "専制",
+    "hiragana": "せんせい",
+    "arti": "otokrasi/lalim",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V790",
+    "kanji": "戦慄",
+    "hiragana": "せんりつ",
+    "arti": "kengerian/gemetar",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V791",
+    "kanji": "相応",
+    "hiragana": "そうおう",
+    "arti": "kesesuaian/pantas",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V792",
+    "kanji": "創刊",
+    "hiragana": "そうかん",
+    "arti": "penerbitan perdana",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V793",
+    "kanji": "総合",
+    "hiragana": "そうごう",
+    "arti": "penggabungan/menyeluruh",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V794",
+    "kanji": "捜索",
+    "hiragana": "そうさく",
+    "arti": "pencarian/penggeledahan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V795",
+    "kanji": "喪失",
+    "hiragana": "そうしつ",
+    "arti": "kehilangan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V796",
+    "kanji": "装飾",
+    "hiragana": "そうしょく",
+    "arti": "dekorasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V797",
+    "kanji": "創設",
+    "hiragana": "そうせつ",
+    "arti": "pendirian/pembentukan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V798",
+    "kanji": "相続",
+    "hiragana": "そうぞく",
+    "arti": "pewarisan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V799",
+    "kanji": "遭遇",
+    "hiragana": "そうぐう",
+    "arti": "perjumpaan tak terduga",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V800",
+    "kanji": "装備",
+    "hiragana": "そうび",
+    "arti": "perlengkapan/persenjataan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V801",
+    "kanji": "疎外",
+    "hiragana": "そがい",
+    "arti": "pengucilan/alienasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V802",
+    "kanji": "阻害",
+    "hiragana": "そがい",
+    "arti": "penghambatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V803",
+    "kanji": "即座",
+    "hiragana": "そくざ",
+    "arti": "seketika/spontan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V804",
+    "kanji": "促進",
+    "hiragana": "そくしん",
+    "arti": "pemacuan/promosi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V805",
+    "kanji": "束縛",
+    "hiragana": "そくばく",
+    "arti": "pengekangan/belenggu",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V806",
+    "kanji": "側面",
+    "hiragana": "そくめん",
+    "arti": "sisi/aspek",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V807",
+    "kanji": "素朴",
+    "hiragana": "そぼく",
+    "arti": "bersahaja/polos",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V808",
+    "kanji": "疎通",
+    "hiragana": "そつう",
+    "arti": "kelancaran komunikasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V809",
+    "kanji": "備え付け",
+    "hiragana": "そなえつけ",
+    "arti": "perlengkapan tetap",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V810",
+    "kanji": "素養",
+    "hiragana": "そよう",
+    "arti": "dasar pengetahuan/pembawaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V811",
+    "kanji": "損益",
+    "hiragana": "そんえき",
+    "arti": "untung-rugi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V812",
+    "kanji": "尊厳",
+    "hiragana": "そんげん",
+    "arti": "martabat",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V813",
+    "kanji": "存続",
+    "hiragana": "そんぞく",
+    "arti": "kelangsungan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V814",
+    "kanji": "対応策",
+    "hiragana": "たいおうさく",
+    "arti": "langkah penanganan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V815",
+    "kanji": "退化",
+    "hiragana": "たいか",
+    "arti": "degenerasi/kemunduran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V816",
+    "kanji": "待遇",
+    "hiragana": "たいぐう",
+    "arti": "perlakuan/gaji-fasilitas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V817",
+    "kanji": "耐久",
+    "hiragana": "たいきゅう",
+    "arti": "daya tahan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V818",
+    "kanji": "対抗",
+    "hiragana": "たいこう",
+    "arti": "menandingi/perlawanan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V819",
+    "kanji": "大衆",
+    "hiragana": "たいしゅう",
+    "arti": "massa/khalayak",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V820",
+    "kanji": "対処",
+    "hiragana": "たいしょ",
+    "arti": "penanganan/mengatasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V821",
+    "kanji": "対称",
+    "hiragana": "たいしょう",
+    "arti": "simetri",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V822",
+    "kanji": "打開",
+    "hiragana": "だかい",
+    "arti": "pemecahan (kebuntuan)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V823",
+    "kanji": "妥結",
+    "hiragana": "だけつ",
+    "arti": "tercapainya kesepakatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V824",
+    "kanji": "打診",
+    "hiragana": "だしん",
+    "arti": "penjajakan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V825",
+    "kanji": "脱出",
+    "hiragana": "だっしゅつ",
+    "arti": "pelarian/keluar",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V826",
+    "kanji": "達観",
+    "hiragana": "たっかん",
+    "arti": "pandangan lapang/pasrah bijak",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V827",
+    "kanji": "脱退",
+    "hiragana": "だったい",
+    "arti": "pengunduran (keanggotaan)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V828",
+    "kanji": "多岐",
+    "hiragana": "たき",
+    "arti": "bercabang banyak/beragam",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V829",
+    "kanji": "多忙",
+    "hiragana": "たぼう",
+    "arti": "sangat sibuk",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V830",
+    "kanji": "弾圧",
+    "hiragana": "だんあつ",
+    "arti": "penindasan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V831",
+    "kanji": "担架",
+    "hiragana": "たんか",
+    "arti": "tandu",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V832",
+    "kanji": "嘆願",
+    "hiragana": "たんがん",
+    "arti": "permohonan iba",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V833",
+    "kanji": "短縮",
+    "hiragana": "たんしゅく",
+    "arti": "penyingkatan/pemendekan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V834",
+    "kanji": "淡水",
+    "hiragana": "たんすい",
+    "arti": "air tawar",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V835",
+    "kanji": "断然",
+    "hiragana": "だんぜん",
+    "arti": "jelas/pasti (lebih)",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V836",
+    "kanji": "断念",
+    "hiragana": "だんねん",
+    "arti": "mengurungkan niat",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V837",
+    "kanji": "知性",
+    "hiragana": "ちせい",
+    "arti": "kecerdasan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V838",
+    "kanji": "中傷",
+    "hiragana": "ちゅうしょう",
+    "arti": "fitnah/pencemaran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V839",
+    "kanji": "忠告",
+    "hiragana": "ちゅうこく",
+    "arti": "nasihat/peringatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V840",
+    "kanji": "抽出",
+    "hiragana": "ちゅうしゅつ",
+    "arti": "ekstraksi/penyaringan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V841",
+    "kanji": "駐留",
+    "hiragana": "ちゅうりゅう",
+    "arti": "penempatan (pasukan)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V842",
+    "kanji": "躊躇",
+    "hiragana": "ちゅうちょ",
+    "arti": "keraguan/bimbang",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V843",
+    "kanji": "重複",
+    "hiragana": "ちょうふく",
+    "arti": "tumpang tindih/duplikasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V844",
+    "kanji": "徴収",
+    "hiragana": "ちょうしゅう",
+    "arti": "pemungutan (iuran)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V845",
+    "kanji": "挑発",
+    "hiragana": "ちょうはつ",
+    "arti": "provokasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V846",
+    "kanji": "眺望",
+    "hiragana": "ちょうぼう",
+    "arti": "panorama/pemandangan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V847",
+    "kanji": "調和",
+    "hiragana": "ちょうわ",
+    "arti": "keselarasan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V848",
+    "kanji": "直面",
+    "hiragana": "ちょくめん",
+    "arti": "berhadapan langsung",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V849",
+    "kanji": "著名",
+    "hiragana": "ちょめい",
+    "arti": "termasyhur/terkenal",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V850",
+    "kanji": "沈殿",
+    "hiragana": "ちんでん",
+    "arti": "pengendapan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V851",
+    "kanji": "陳列",
+    "hiragana": "ちんれつ",
+    "arti": "pemajangan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V852",
+    "kanji": "追及",
+    "hiragana": "ついきゅう",
+    "arti": "pengejaran/mendesak",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V853",
+    "kanji": "痛感",
+    "hiragana": "つうかん",
+    "arti": "merasakan mendalam",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V854",
+    "kanji": "痛烈",
+    "hiragana": "つうれつ",
+    "arti": "pedas/tajam (kritik)",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V855",
+    "kanji": "償い",
+    "hiragana": "つぐない",
+    "arti": "penebusan/ganti rugi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V856",
+    "kanji": "都合",
+    "hiragana": "つごう",
+    "arti": "kepentingan/keadaan (waktu)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V857",
+    "kanji": "提起",
+    "hiragana": "ていき",
+    "arti": "pengajuan (isu)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V858",
+    "kanji": "低迷",
+    "hiragana": "ていめい",
+    "arti": "lesu/stagnan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V859",
+    "kanji": "停滞",
+    "hiragana": "ていたい",
+    "arti": "kemacetan/stagnasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V860",
+    "kanji": "提唱",
+    "hiragana": "ていしょう",
+    "arti": "penganjuran (gagasan)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V861",
+    "kanji": "抵触",
+    "hiragana": "ていしょく",
+    "arti": "berbenturan/melanggar",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V862",
+    "kanji": "体裁",
+    "hiragana": "ていさい",
+    "arti": "penampilan luar/formalitas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V863",
+    "kanji": "摘発",
+    "hiragana": "てきはつ",
+    "arti": "pengungkapan (pelanggaran)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V864",
+    "kanji": "撤退",
+    "hiragana": "てったい",
+    "arti": "penarikan mundur",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V865",
+    "kanji": "徹底",
+    "hiragana": "てってい",
+    "arti": "menyeluruh/tuntas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V866",
+    "kanji": "転嫁",
+    "hiragana": "てんか",
+    "arti": "melemparkan (tanggung jawab)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V867",
+    "kanji": "典型",
+    "hiragana": "てんけい",
+    "arti": "tipikal/khas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V868",
+    "kanji": "転じる",
+    "hiragana": "てんじる",
+    "arti": "beralih/berubah",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V869",
+    "kanji": "伝授",
+    "hiragana": "でんじゅ",
+    "arti": "pewarisan ilmu",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V870",
+    "kanji": "添付",
+    "hiragana": "てんぷ",
+    "arti": "lampiran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V871",
+    "kanji": "同感",
+    "hiragana": "どうかん",
+    "arti": "sependapat",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V872",
+    "kanji": "洞察",
+    "hiragana": "どうさつ",
+    "arti": "wawasan tajam/insight",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V873",
+    "kanji": "同調",
+    "hiragana": "どうちょう",
+    "arti": "menyelaraskan/ikut-ikutan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V874",
+    "kanji": "逃亡",
+    "hiragana": "とうぼう",
+    "arti": "pelarian",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V875",
+    "kanji": "独裁",
+    "hiragana": "どくさい",
+    "arti": "kediktatoran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V876",
+    "kanji": "督促",
+    "hiragana": "とくそく",
+    "arti": "penagihan/desakan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V877",
+    "kanji": "土壇場",
+    "hiragana": "どたんば",
+    "arti": "detik-detik terakhir",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V878",
+    "kanji": "突如",
+    "hiragana": "とつじょ",
+    "arti": "tiba-tiba",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V879",
+    "kanji": "屯",
+    "hiragana": "とん",
+    "arti": "ton (satuan)/berkumpul",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V880",
+    "kanji": "鈍感",
+    "hiragana": "どんかん",
+    "arti": "tak peka/tumpul",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V881",
+    "kanji": "内訳",
+    "hiragana": "うちわけ",
+    "arti": "rincian",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V882",
+    "kanji": "何気ない",
+    "hiragana": "なにげない",
+    "arti": "tanpa maksud/biasa saja",
+    "jenisKata": "Kata Sifat"
+  },
+  {
+    "id": "N2_V883",
+    "kanji": "難航",
+    "hiragana": "なんこう",
+    "arti": "tersendat/kesulitan (proses)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V884",
+    "kanji": "二の次",
+    "hiragana": "にのつぎ",
+    "arti": "nomor dua/dikesampingkan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V885",
+    "kanji": "認識",
+    "hiragana": "にんしき",
+    "arti": "pengenalan/kesadaran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V886",
+    "kanji": "念頭",
+    "hiragana": "ねんとう",
+    "arti": "dalam pikiran/ingatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V887",
+    "kanji": "捏造",
+    "hiragana": "ねつぞう",
+    "arti": "pemalsuan/rekayasa",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V888",
+    "kanji": "粘り",
+    "hiragana": "ねばり",
+    "arti": "kegigihan/kelengketan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V889",
+    "kanji": "狙い",
+    "hiragana": "ねらい",
+    "arti": "sasaran/tujuan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V890",
+    "kanji": "納入",
+    "hiragana": "のうにゅう",
+    "arti": "penyetoran/pengiriman",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V891",
+    "kanji": "媒体",
+    "hiragana": "ばいたい",
+    "arti": "media/perantara",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V892",
+    "kanji": "排除",
+    "hiragana": "はいじょ",
+    "arti": "penyingkiran/eksklusi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V893",
+    "kanji": "賠償",
+    "hiragana": "ばいしょう",
+    "arti": "ganti rugi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V894",
+    "kanji": "排斥",
+    "hiragana": "はいせき",
+    "arti": "pengucilan/boikot",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V895",
+    "kanji": "破棄",
+    "hiragana": "はき",
+    "arti": "pembatalan/pemusnahan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V896",
+    "kanji": "迫害",
+    "hiragana": "はくがい",
+    "arti": "penganiayaan/penindasan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V897",
+    "kanji": "薄弱",
+    "hiragana": "はくじゃく",
+    "arti": "lemah/rapuh",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V898",
+    "kanji": "暴露",
+    "hiragana": "ばくろ",
+    "arti": "pembongkaran (rahasia)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V899",
+    "kanji": "派遣",
+    "hiragana": "はけん",
+    "arti": "pengiriman (tenaga)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V900",
+    "kanji": "破綻",
+    "hiragana": "はたん",
+    "arti": "kebangkrutan/kegagalan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V901",
+    "kanji": "抜群",
+    "hiragana": "ばつぐん",
+    "arti": "luar biasa/menonjol",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V902",
+    "kanji": "伐採",
+    "hiragana": "ばっさい",
+    "arti": "penebangan (hutan)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V903",
+    "kanji": "発散",
+    "hiragana": "はっさん",
+    "arti": "pelepasan/pelampiasan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V904",
+    "kanji": "初耳",
+    "hiragana": "はつみみ",
+    "arti": "baru pertama dengar",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V905",
+    "kanji": "波紋",
+    "hiragana": "はもん",
+    "arti": "riak/dampak beruntun",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V906",
+    "kanji": "反響",
+    "hiragana": "はんきょう",
+    "arti": "gema/tanggapan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V907",
+    "kanji": "反撃",
+    "hiragana": "はんげき",
+    "arti": "serangan balik",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V908",
+    "kanji": "繁殖",
+    "hiragana": "はんしょく",
+    "arti": "perkembangbiakan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V909",
+    "kanji": "汎用",
+    "hiragana": "はんよう",
+    "arti": "serbaguna",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V910",
+    "kanji": "氾濫",
+    "hiragana": "はんらん",
+    "arti": "banjir/melimpah ruah",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V911",
+    "kanji": "悲哀",
+    "hiragana": "ひあい",
+    "arti": "kepedihan/duka",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V912",
+    "kanji": "控え目",
+    "hiragana": "ひかえめ",
+    "arti": "sederhana/tahu diri",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V913",
+    "kanji": "悲観",
+    "hiragana": "ひかん",
+    "arti": "pesimisme",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V914",
+    "kanji": "卑怯",
+    "hiragana": "ひきょう",
+    "arti": "pengecut/curang",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V915",
+    "kanji": "匹敵",
+    "hiragana": "ひってき",
+    "arti": "setara/menyamai",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V916",
+    "kanji": "否認",
+    "hiragana": "ひにん",
+    "arti": "penyangkalan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V917",
+    "kanji": "飛躍",
+    "hiragana": "ひやく",
+    "arti": "lompatan (kemajuan)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V918",
+    "kanji": "百科事典",
+    "hiragana": "ひゃっかじてん",
+    "arti": "ensiklopedia",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V919",
+    "kanji": "標的",
+    "hiragana": "ひょうてき",
+    "arti": "target/sasaran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V920",
+    "kanji": "漂流",
+    "hiragana": "ひょうりゅう",
+    "arti": "terapung-apung/terkatung",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V921",
+    "kanji": "披露",
+    "hiragana": "ひろう",
+    "arti": "memperkenalkan/mempertontonkan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V922",
+    "kanji": "不意",
+    "hiragana": "ふい",
+    "arti": "mendadak/tak terduga",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V923",
+    "kanji": "封鎖",
+    "hiragana": "ふうさ",
+    "arti": "pemblokiran/penutupan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V924",
+    "kanji": "風潮",
+    "hiragana": "ふうちょう",
+    "arti": "kecenderungan zaman",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V925",
+    "kanji": "布告",
+    "hiragana": "ふこく",
+    "arti": "pemakluman/proklamasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V926",
+    "kanji": "負債",
+    "hiragana": "ふさい",
+    "arti": "utang/liabilitas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V927",
+    "kanji": "侮辱",
+    "hiragana": "ぶじょく",
+    "arti": "penghinaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V928",
+    "kanji": "負傷",
+    "hiragana": "ふしょう",
+    "arti": "luka/cedera",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V929",
+    "kanji": "腐敗",
+    "hiragana": "ふはい",
+    "arti": "pembusukan/korupsi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V930",
+    "kanji": "赴任",
+    "hiragana": "ふにん",
+    "arti": "berangkat ke pos tugas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V931",
+    "kanji": "憤慨",
+    "hiragana": "ふんがい",
+    "arti": "kegeraman",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V932",
+    "kanji": "紛失",
+    "hiragana": "ふんしつ",
+    "arti": "kehilangan (barang)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V933",
+    "kanji": "噴出",
+    "hiragana": "ふんしゅつ",
+    "arti": "penyemburan/meletup",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V934",
+    "kanji": "奮闘",
+    "hiragana": "ふんとう",
+    "arti": "perjuangan gigih",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V935",
+    "kanji": "紛争",
+    "hiragana": "ふんそう",
+    "arti": "sengketa/konflik",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V936",
+    "kanji": "分別",
+    "hiragana": "ふんべつ",
+    "arti": "kebijaksanaan/pemilahan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V937",
+    "kanji": "弊害",
+    "hiragana": "へいがい",
+    "arti": "dampak buruk",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V938",
+    "kanji": "併合",
+    "hiragana": "へいごう",
+    "arti": "penggabungan/aneksasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V939",
+    "kanji": "平静",
+    "hiragana": "へいせい",
+    "arti": "ketenangan",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V940",
+    "kanji": "辟易",
+    "hiragana": "へきえき",
+    "arti": "jengkel/muak",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V941",
+    "kanji": "隔たり",
+    "hiragana": "へだたり",
+    "arti": "jarak/kesenjangan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V942",
+    "kanji": "便宜",
+    "hiragana": "べんぎ",
+    "arti": "kemudahan/fasilitas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V943",
+    "kanji": "偏向",
+    "hiragana": "へんこう",
+    "arti": "kecenderungan berat sebelah",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V944",
+    "kanji": "返済",
+    "hiragana": "へんさい",
+    "arti": "pelunasan (utang)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V945",
+    "kanji": "弁明",
+    "hiragana": "べんめい",
+    "arti": "pembelaan/klarifikasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V946",
+    "kanji": "崩壊",
+    "hiragana": "ほうかい",
+    "arti": "keruntuhan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V947",
+    "kanji": "妨害",
+    "hiragana": "ぼうがい",
+    "arti": "penghalangan/sabotase",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V948",
+    "kanji": "崩落",
+    "hiragana": "ほうらく",
+    "arti": "keruntuhan/kejatuhan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V949",
+    "kanji": "包括",
+    "hiragana": "ほうかつ",
+    "arti": "mencakup/komprehensif",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V950",
+    "kanji": "放棄",
+    "hiragana": "ほうき",
+    "arti": "pelepasan (hak)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V951",
+    "kanji": "飽和",
+    "hiragana": "ほうわ",
+    "arti": "kejenuhan/saturasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V952",
+    "kanji": "捕獲",
+    "hiragana": "ほかく",
+    "arti": "penangkapan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V953",
+    "kanji": "撲滅",
+    "hiragana": "ぼくめつ",
+    "arti": "pemberantasan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V954",
+    "kanji": "保守",
+    "hiragana": "ほしゅ",
+    "arti": "konservatif/pemeliharaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V955",
+    "kanji": "保養",
+    "hiragana": "ほよう",
+    "arti": "pemulihan/rekreasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V956",
+    "kanji": "没頭",
+    "hiragana": "ぼっとう",
+    "arti": "tenggelam/asyik total",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V957",
+    "kanji": "翻弄",
+    "hiragana": "ほんろう",
+    "arti": "dipermainkan/terombang-ambing",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V958",
+    "kanji": "埋蔵",
+    "hiragana": "まいぞう",
+    "arti": "terpendam (SDA)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V959",
+    "kanji": "麻痺",
+    "hiragana": "まひ",
+    "arti": "kelumpuhan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V960",
+    "kanji": "蔓延",
+    "hiragana": "まんえん",
+    "arti": "penyebaran (wabah)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V961",
+    "kanji": "満場",
+    "hiragana": "まんじょう",
+    "arti": "seluruh hadirin",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V962",
+    "kanji": "未熟",
+    "hiragana": "みじゅく",
+    "arti": "belum matang/mentah",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V963",
+    "kanji": "密集",
+    "hiragana": "みっしゅう",
+    "arti": "berkerumun rapat",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V964",
+    "kanji": "未練",
+    "hiragana": "みれん",
+    "arti": "kegamangan/tak rela lepas",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V965",
+    "kanji": "名簿",
+    "hiragana": "めいぼ",
+    "arti": "daftar nama",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V966",
+    "kanji": "盟友",
+    "hiragana": "めいゆう",
+    "arti": "sekutu setia",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V967",
+    "kanji": "面識",
+    "hiragana": "めんしき",
+    "arti": "kenal (bertatap muka)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V968",
+    "kanji": "猛威",
+    "hiragana": "もうい",
+    "arti": "keganasan/amukan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V969",
+    "kanji": "盲点",
+    "hiragana": "もうてん",
+    "arti": "titik buta/kelemahan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V970",
+    "kanji": "默認",
+    "hiragana": "もくにん",
+    "arti": "pembiaran diam-diam",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V971",
+    "kanji": "模型",
+    "hiragana": "もけい",
+    "arti": "model/miniatur",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V972",
+    "kanji": "目論見",
+    "hiragana": "もくろみ",
+    "arti": "rencana/rancangan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V973",
+    "kanji": "模範",
+    "hiragana": "もはん",
+    "arti": "teladan/panutan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V974",
+    "kanji": "模倣",
+    "hiragana": "もほう",
+    "arti": "tiruan/imitasi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V975",
+    "kanji": "催し",
+    "hiragana": "もよおし",
+    "arti": "acara/pergelaran",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V976",
+    "kanji": "紋章",
+    "hiragana": "もんしょう",
+    "arti": "lambang/emblem",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V977",
+    "kanji": "躍進",
+    "hiragana": "やくしん",
+    "arti": "lonjakan maju",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V978",
+    "kanji": "野心",
+    "hiragana": "やしん",
+    "arti": "ambisi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V979",
+    "kanji": "野生",
+    "hiragana": "やせい",
+    "arti": "liar (alam)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V980",
+    "kanji": "闇",
+    "hiragana": "やみ",
+    "arti": "kegelapan/gelap gulita",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V981",
+    "kanji": "誘拐",
+    "hiragana": "ゆうかい",
+    "arti": "penculikan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V982",
+    "kanji": "融合",
+    "hiragana": "ゆうごう",
+    "arti": "peleburan/fusi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V983",
+    "kanji": "有識者",
+    "hiragana": "ゆうしきしゃ",
+    "arti": "cendekiawan/pakar",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V984",
+    "kanji": "優勢",
+    "hiragana": "ゆうせい",
+    "arti": "posisi unggul",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V985",
+    "kanji": "誘致",
+    "hiragana": "ゆうち",
+    "arti": "menarik (investasi)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V986",
+    "kanji": "誘発",
+    "hiragana": "ゆうはつ",
+    "arti": "memicu/menginduksi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V987",
+    "kanji": "幽霊",
+    "hiragana": "ゆうれい",
+    "arti": "hantu",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V988",
+    "kanji": "癒着",
+    "hiragana": "ゆちゃく",
+    "arti": "kolusi/pelekatan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V989",
+    "kanji": "擁護",
+    "hiragana": "ようご",
+    "arti": "pembelaan/perlindungan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V990",
+    "kanji": "様相",
+    "hiragana": "ようそう",
+    "arti": "corak/keadaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V991",
+    "kanji": "要望",
+    "hiragana": "ようぼう",
+    "arti": "permintaan/harapan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V992",
+    "kanji": "抑圧",
+    "hiragana": "よくあつ",
+    "arti": "penindasan/represi",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V993",
+    "kanji": "予断",
+    "hiragana": "よだん",
+    "arti": "dugaan dini/prasangka",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V994",
+    "kanji": "余地",
+    "hiragana": "よち",
+    "arti": "ruang/celah",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V995",
+    "kanji": "世論",
+    "hiragana": "よろん",
+    "arti": "opini publik",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V996",
+    "kanji": "来歴",
+    "hiragana": "らいれき",
+    "arti": "riwayat/asal usul",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V997",
+    "kanji": "濫用",
+    "hiragana": "らんよう",
+    "arti": "penyalahgunaan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V998",
+    "kanji": "利害",
+    "hiragana": "りがい",
+    "arti": "untung-rugi/kepentingan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V999",
+    "kanji": "履行",
+    "hiragana": "りこう",
+    "arti": "pelaksanaan (janji)",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1000",
+    "kanji": "理性",
+    "hiragana": "りせい",
+    "arti": "akal/rasio",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1001",
+    "kanji": "立証",
+    "hiragana": "りっしょう",
+    "arti": "pembuktian",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1002",
+    "kanji": "略奪",
+    "hiragana": "りゃくだつ",
+    "arti": "penjarahan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1003",
+    "kanji": "流出",
+    "hiragana": "りゅうしゅつ",
+    "arti": "kebocoran/mengalir keluar",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1004",
+    "kanji": "了承",
+    "hiragana": "りょうしょう",
+    "arti": "persetujuan/pemahaman",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1005",
+    "kanji": "領土",
+    "hiragana": "りょうど",
+    "arti": "teritori/wilayah negara",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1006",
+    "kanji": "冷酷",
+    "hiragana": "れいこく",
+    "arti": "kejam/dingin",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V1007",
+    "kanji": "零細",
+    "hiragana": "れいさい",
+    "arti": "kecil/gurem (usaha)",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V1008",
+    "kanji": "連帯",
+    "hiragana": "れんたい",
+    "arti": "solidaritas/tanggung renteng",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1009",
+    "kanji": "廉価",
+    "hiragana": "れんか",
+    "arti": "harga murah",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1010",
+    "kanji": "露呈",
+    "hiragana": "ろてい",
+    "arti": "tersingkap/terbongkar",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1011",
+    "kanji": "賄賂",
+    "hiragana": "わいろ",
+    "arti": "suap",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1012",
+    "kanji": "湾岸",
+    "hiragana": "わんがん",
+    "arti": "pesisir teluk",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1013",
+    "kanji": "枠組み",
+    "hiragana": "わくぐみ",
+    "arti": "kerangka kerja",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1014",
+    "kanji": "和解",
+    "hiragana": "わかい",
+    "arti": "rekonsiliasi/perdamaian",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1015",
+    "kanji": "値上がりする",
+    "hiragana": "ねあがりする",
+    "arti": "naik harga",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1016",
+    "kanji": "あざ笑う",
+    "hiragana": "あざわらう",
+    "arti": "mencemooh",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1017",
+    "kanji": "あがく",
+    "hiragana": "あがく",
+    "arti": "meronta/berjuang sia-sia",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1018",
+    "kanji": "あやつる",
+    "hiragana": "あやつる",
+    "arti": "mengendalikan/memanipulasi",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1019",
+    "kanji": "言い張る",
+    "hiragana": "いいはる",
+    "arti": "bersikeras",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1020",
+    "kanji": "憤る",
+    "hiragana": "いきどおる",
+    "arti": "geram/murka",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1021",
+    "kanji": "営む",
+    "hiragana": "いとなむ",
+    "arti": "menjalankan (usaha)",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1022",
+    "kanji": "戒める",
+    "hiragana": "いましめる",
+    "arti": "memperingatkan/menegur",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1023",
+    "kanji": "うろたえる",
+    "hiragana": "うろたえる",
+    "arti": "panik bingung",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1024",
+    "kanji": "犯す",
+    "hiragana": "おかす",
+    "arti": "melanggar/melakukan (kesalahan)",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1025",
+    "kanji": "侵す",
+    "hiragana": "おかす",
+    "arti": "menyerbu/melanggar (wilayah)",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1026",
+    "kanji": "陥れる",
+    "hiragana": "おとしいれる",
+    "arti": "menjerumuskan",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1027",
+    "kanji": "脅かす",
+    "hiragana": "おびやかす",
+    "arti": "mengancam",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1028",
+    "kanji": "欺く",
+    "hiragana": "あざむく",
+    "arti": "menipu/mengelabui",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1029",
+    "kanji": "重んずる",
+    "hiragana": "おもんずる",
+    "arti": "menjunjung tinggi",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1030",
+    "kanji": "顧みる",
+    "hiragana": "かえりみる",
+    "arti": "menoleh/merenungkan",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1031",
+    "kanji": "かき乱す",
+    "hiragana": "かきみだす",
+    "arti": "mengacaukan",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1032",
+    "kanji": "かさばる",
+    "hiragana": "かさばる",
+    "arti": "memakan tempat",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1033",
+    "kanji": "かすめる",
+    "hiragana": "かすめる",
+    "arti": "menyerempet/mencuri",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1034",
+    "kanji": "醸し出す",
+    "hiragana": "かもしだす",
+    "arti": "memancarkan (suasana)",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1035",
+    "kanji": "朽ちる",
+    "hiragana": "くちる",
+    "arti": "melapuk/membusuk",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1036",
+    "kanji": "覆る",
+    "hiragana": "くつがえる",
+    "arti": "terbalik/tergulingkan",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1037",
+    "kanji": "削る",
+    "hiragana": "けずる",
+    "arti": "memangkas/menyerut",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1038",
+    "kanji": "交わす",
+    "hiragana": "かわす",
+    "arti": "bertukar/menjalin",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1039",
+    "kanji": "こみ上げる",
+    "hiragana": "こみあげる",
+    "arti": "meluap (emosi)",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1040",
+    "kanji": "凝らす",
+    "hiragana": "こらす",
+    "arti": "memusatkan/mencurahkan",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1041",
+    "kanji": "遮る",
+    "hiragana": "さえぎる",
+    "arti": "menghalangi/menyela",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1042",
+    "kanji": "裂く",
+    "hiragana": "さく",
+    "arti": "merobek/mencabik",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1043",
+    "kanji": "さかのぼる",
+    "hiragana": "さかのぼる",
+    "arti": "menelusuri ke belakang",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1044",
+    "kanji": "授ける",
+    "hiragana": "さずける",
+    "arti": "menganugerahkan",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1045",
+    "kanji": "さする",
+    "hiragana": "さする",
+    "arti": "mengusap/mengelus",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1046",
+    "kanji": "仕組む",
+    "hiragana": "しくむ",
+    "arti": "merancang/merekayasa",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1047",
+    "kanji": "据える",
+    "hiragana": "すえる",
+    "arti": "memasang/menempatkan",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1048",
+    "kanji": "そびえる",
+    "hiragana": "そびえる",
+    "arti": "menjulang",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1049",
+    "kanji": "たくらむ",
+    "hiragana": "たくらむ",
+    "arti": "merencanakan (jahat)",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1050",
+    "kanji": "立ち込める",
+    "hiragana": "たちこめる",
+    "arti": "menyelimuti (asap/kabut)",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1051",
+    "kanji": "尽きる",
+    "hiragana": "つきる",
+    "arti": "habis/mentok",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1052",
+    "kanji": "培う",
+    "hiragana": "つちかう",
+    "arti": "memupuk/membina",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1053",
+    "kanji": "慎む",
+    "hiragana": "つつしむ",
+    "arti": "menahan diri/berhati-hati",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1054",
+    "kanji": "摘む",
+    "hiragana": "つむ",
+    "arti": "memetik",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1055",
+    "kanji": "貫く",
+    "hiragana": "つらぬく",
+    "arti": "menembus/mempertahankan",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1056",
+    "kanji": "尊ぶ",
+    "hiragana": "たっとぶ",
+    "arti": "memuliakan",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1057",
+    "kanji": "咎める",
+    "hiragana": "とがめる",
+    "arti": "menegur/menyalahkan",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1058",
+    "kanji": "研ぐ",
+    "hiragana": "とぐ",
+    "arti": "mengasah",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1059",
+    "kanji": "なだめる",
+    "hiragana": "なだめる",
+    "arti": "menenangkan/membujuk",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1060",
+    "kanji": "にじむ",
+    "hiragana": "にじむ",
+    "arti": "merembes/mengabur",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1061",
+    "kanji": "賑わう",
+    "hiragana": "にぎわう",
+    "arti": "ramai/meriah",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1062",
+    "kanji": "粘る",
+    "hiragana": "ねばる",
+    "arti": "gigih/lengket",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1063",
+    "kanji": "覗く",
+    "hiragana": "のぞく",
+    "arti": "mengintip",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1064",
+    "kanji": "乗り出す",
+    "hiragana": "のりだす",
+    "arti": "terjun/mulai menangani",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1065",
+    "kanji": "映える",
+    "hiragana": "はえる",
+    "arti": "tampak indah/menonjol",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1066",
+    "kanji": "はかどる",
+    "hiragana": "はかどる",
+    "arti": "berjalan lancar (kerja)",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1067",
+    "kanji": "剥がす",
+    "hiragana": "はがす",
+    "arti": "mengelupas/melepas",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1068",
+    "kanji": "省みる",
+    "hiragana": "かえりみる",
+    "arti": "introspeksi",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1069",
+    "kanji": "はびこる",
+    "hiragana": "はびこる",
+    "arti": "merajalela",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1070",
+    "kanji": "ばらまく",
+    "hiragana": "ばらまく",
+    "arti": "menabur/menyebar",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1071",
+    "kanji": "秘める",
+    "hiragana": "ひめる",
+    "arti": "menyimpan/merahasiakan",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1072",
+    "kanji": "翻す",
+    "hiragana": "ひるがえす",
+    "arti": "mengibarkan/membalik",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1073",
+    "kanji": "耽る",
+    "hiragana": "ふける",
+    "arti": "tenggelam (dalam sesuatu)",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1074",
+    "kanji": "めくる",
+    "hiragana": "めくる",
+    "arti": "membalik (halaman)",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1075",
+    "kanji": "持て余す",
+    "hiragana": "もてあます",
+    "arti": "kewalahan menangani",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1076",
+    "kanji": "揉める",
+    "hiragana": "もめる",
+    "arti": "berselisih/ribut",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1077",
+    "kanji": "和らぐ",
+    "hiragana": "やわらぐ",
+    "arti": "mereda/melunak",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1078",
+    "kanji": "歪む",
+    "hiragana": "ゆがむ",
+    "arti": "melengkung/menyimpang",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1079",
+    "kanji": "揺さぶる",
+    "hiragana": "ゆさぶる",
+    "arti": "mengguncang",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1080",
+    "kanji": "よろめく",
+    "hiragana": "よろめく",
+    "arti": "terhuyung",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1081",
+    "kanji": "患う",
+    "hiragana": "わずらう",
+    "arti": "menderita (sakit)",
+    "jenisKata": "Kata Kerja"
+  },
+  {
+    "id": "N2_V1082",
+    "kanji": "いかなる",
+    "hiragana": "いかなる",
+    "arti": "apa pun (formal)",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1083",
+    "kanji": "いかにも",
+    "hiragana": "いかにも",
+    "arti": "betul-betul/tampak sekali",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1084",
+    "kanji": "いっそう",
+    "hiragana": "いっそう",
+    "arti": "semakin/kian",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1085",
+    "kanji": "あえて",
+    "hiragana": "あえて",
+    "arti": "dengan sengaja/berani",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1086",
+    "kanji": "がっしり",
+    "hiragana": "がっしり",
+    "arti": "kekar/kokoh",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1087",
+    "kanji": "きっぱり",
+    "hiragana": "きっぱり",
+    "arti": "tegas/tanpa ragu",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1088",
+    "kanji": "ぎっしり",
+    "hiragana": "ぎっしり",
+    "arti": "penuh sesak/padat",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1089",
+    "kanji": "くまなく",
+    "hiragana": "くまなく",
+    "arti": "sampai ke seluruh sudut",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1090",
+    "kanji": "軽々しい",
+    "hiragana": "かるがるしい",
+    "arti": "gegabah/sembrono",
+    "jenisKata": "Kata Sifat"
+  },
+  {
+    "id": "N2_V1091",
+    "kanji": "ことによると",
+    "hiragana": "ことによると",
+    "arti": "boleh jadi/mungkin",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1092",
+    "kanji": "さも",
+    "hiragana": "さも",
+    "arti": "seolah-olah betul",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1093",
+    "kanji": "しいて",
+    "hiragana": "しいて",
+    "arti": "dengan memaksa/kalau harus",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1094",
+    "kanji": "じっくり",
+    "hiragana": "じっくり",
+    "arti": "dengan saksama/matang",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1095",
+    "kanji": "すこぶる",
+    "hiragana": "すこぶる",
+    "arti": "amat sangat",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1096",
+    "kanji": "すべすべ",
+    "hiragana": "すべすべ",
+    "arti": "halus mulus",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1097",
+    "kanji": "ぞくぞく",
+    "hiragana": "ぞくぞく",
+    "arti": "merinding/beruntun",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1098",
+    "kanji": "だぶだぶ",
+    "hiragana": "だぶだぶ",
+    "arti": "kedodoran/longgar",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1099",
+    "kanji": "堂々",
+    "hiragana": "どうどう",
+    "arti": "gagah/tegap",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1100",
+    "kanji": "何卒",
+    "hiragana": "なにとぞ",
+    "arti": "mohon dengan sangat",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1101",
+    "kanji": "なおさら",
+    "hiragana": "なおさら",
+    "arti": "apalagi/lebih-lebih",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1102",
+    "kanji": "ひそかに",
+    "hiragana": "ひそかに",
+    "arti": "diam-diam/sembunyi",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1103",
+    "kanji": "まちまち",
+    "hiragana": "まちまち",
+    "arti": "beragam/tak seragam",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V1104",
+    "kanji": "もはや",
+    "hiragana": "もはや",
+    "arti": "sudah tak lagi/kini",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1105",
+    "kanji": "ややこしい",
+    "hiragana": "ややこしい",
+    "arti": "ruwet/berbelit",
+    "jenisKata": "Kata Sifat"
+  },
+  {
+    "id": "N2_V1106",
+    "kanji": "やんわり",
+    "hiragana": "やんわり",
+    "arti": "dengan lembut/halus",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1107",
+    "kanji": "いやに",
+    "hiragana": "いやに",
+    "arti": "luar biasa/aneh (banget)",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1108",
+    "kanji": "うすうす",
+    "hiragana": "うすうす",
+    "arti": "samar-samar (menyadari)",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1109",
+    "kanji": "がむしゃら",
+    "hiragana": "がむしゃら",
+    "arti": "membabi buta/nekat",
+    "jenisKata": "Kata Sifat-na"
+  },
+  {
+    "id": "N2_V1110",
+    "kanji": "順繰り",
+    "hiragana": "じゅんぐり",
+    "arti": "bergiliran/berurutan",
+    "jenisKata": "Kata Benda"
+  },
+  {
+    "id": "N2_V1111",
+    "kanji": "たかが",
+    "hiragana": "たかが",
+    "arti": "paling-paling/cuma",
+    "jenisKata": "Kata Keterangan"
+  },
+  {
+    "id": "N2_V1112",
+    "kanji": "なにより",
+    "hiragana": "なにより",
+    "arti": "yang terpenting/paling",
+    "jenisKata": "Kata Keterangan"
   }
 ]

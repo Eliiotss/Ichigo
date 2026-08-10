@@ -39,7 +39,7 @@ val vocabularyLevels: List<ContentLevel> = listOf(
     ContentLevel("N5", "Beginner", "800 Kosakata Dasar", false, "VocabN5"),
     ContentLevel("N4", "Elementary", "700 Kosakata Dasar+", false, "VocabN4"),
     ContentLevel("N3", "Intermediate", "1.800 Kosakata Menengah", false, "VocabN3"),
-    ContentLevel("N2", "Pre-Advanced", "557 Kosakata Lanjutan", false, "VocabN2"),
+    ContentLevel("N2", "Pre-Advanced", "1.112 Kosakata Lanjutan", false, "VocabN2"),
     ContentLevel("N1", "Advanced", "10.000+ Kosakata Master", true, "VocabN1"),
 )
 
