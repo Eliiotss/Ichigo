@@ -30,7 +30,7 @@ val kanjiLevels: List<ContentLevel> = listOf(
     ContentLevel("N5", "Beginner", "120 Essential Kanji", false, "KanjiN5"),
     ContentLevel("N4", "Elementary", "181 Essential Kanji", false, "KanjiN4"),
     ContentLevel("N3", "Intermediate", "367 Essential Kanji", false, "KanjiN3"),
-    ContentLevel("N2", "Pre-Advanced", "1.000+ Complex Kanji", true, "KanjiN2"),
+    ContentLevel("N2", "Pre-Advanced", "118 Complex Kanji", false, "KanjiN2"),
     ContentLevel("N1", "Advanced", "2.000+ Master Kanji", true, "KanjiN1"),
 )
 
@@ -39,7 +39,7 @@ val vocabularyLevels: List<ContentLevel> = listOf(
     ContentLevel("N5", "Beginner", "800 Kosakata Dasar", false, "VocabN5"),
     ContentLevel("N4", "Elementary", "700 Kosakata Dasar+", false, "VocabN4"),
     ContentLevel("N3", "Intermediate", "1.800 Kosakata Menengah", false, "VocabN3"),
-    ContentLevel("N2", "Pre-Advanced", "6.000+ Kosakata Lanjutan", true, "VocabN2"),
+    ContentLevel("N2", "Pre-Advanced", "252 Kosakata Lanjutan", false, "VocabN2"),
     ContentLevel("N1", "Advanced", "10.000+ Kosakata Master", true, "VocabN1"),
 )
 
@@ -48,6 +48,6 @@ val grammarLevels: List<ContentLevel> = listOf(
     ContentLevel("N5", "Beginner", "84 Pola Tata Bahasa Dasar", false, "GrammarN5"),
     ContentLevel("N4", "Elementary", "132 Pola Tata Bahasa Dasar+", false, "GrammarN4"),
     ContentLevel("N3", "Intermediate", "182 Pola Tata Bahasa Menengah", false, "GrammarN3"),
-    ContentLevel("N2", "Pre-Advanced", "Pola Tata Bahasa Lanjutan", true, "GrammarN2"),
+    ContentLevel("N2", "Pre-Advanced", "80 Pola Tata Bahasa Lanjutan", false, "GrammarN2"),
     ContentLevel("N1", "Advanced", "Pola Tata Bahasa Master", true, "GrammarN1"),
 )

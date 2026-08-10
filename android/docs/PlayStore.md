@@ -41,7 +41,7 @@ yang ringan dan rapi.
 FITUR:
 • Flashcard dengan penjadwalan cerdas (algoritme FSRS) — kartu muncul kembali
   tepat sebelum kamu lupa, jadi belajar lebih efisien.
-• Materi JLPT N5–N3: kanji beserta on'yomi/kun'yomi, contoh kata, dan contoh
+• Materi JLPT N5–N2: kanji beserta on'yomi/kun'yomi, contoh kata, dan contoh
   kalimat; kosakata; serta tata bahasa dengan penjelasan dan contoh.
 • Latihan Hiragana & Katakana.
 • Target harian, streak, dan statistik untuk menjaga motivasi.
