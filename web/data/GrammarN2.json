@@ -555,7 +555,7 @@
       },
       {
         "japanese": "社長をはじめ、社員全員が参加した。",
-        "romaji": "Shachou o hajime, shain zenin ga sanka shita.",
+        "romaji": "Shachou o hajime, shain zen'in ga sanka shita.",
         "translation": "Mulai dari direktur, semua karyawan ikut serta."
       }
     ],
@@ -2221,7 +2221,7 @@
       },
       {
         "japanese": "全員参加するとすれば、席が足りない。",
-        "romaji": "Zenin sanka suru to sureba, seki ga tarinai.",
+        "romaji": "Zen'in sanka suru to sureba, seki ga tarinai.",
         "translation": "Kalau semua ikut, kursinya tidak cukup."
       }
     ],
@@ -3476,7 +3476,7 @@
       },
       {
         "japanese": "これは我々全員の勝利にほかならない。",
-        "romaji": "Kore wa wareware zenin no shouri ni hoka naranai.",
+        "romaji": "Kore wa wareware zen'in no shouri ni hoka naranai.",
         "translation": "Ini tak lain adalah kemenangan kita semua."
       },
       {
