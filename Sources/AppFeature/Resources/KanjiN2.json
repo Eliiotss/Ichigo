@@ -3,7 +3,7 @@
     "id": "N2_001",
     "kanji": "液",
     "onyomi": "エキ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Eki",
     "meaning": "Cairan",
     "examples": [
@@ -188,7 +188,7 @@
     "id": "N2_006",
     "kanji": "欧",
     "onyomi": "オウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ou",
     "meaning": "Eropa",
     "examples": [
@@ -299,7 +299,7 @@
     "id": "N2_009",
     "kanji": "菓",
     "onyomi": "カ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ka",
     "meaning": "Kue / Manisan",
     "examples": [
@@ -373,7 +373,7 @@
     "id": "N2_011",
     "kanji": "箇",
     "onyomi": "カ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ka",
     "meaning": "Penghitung butir/bagian",
     "examples": [
@@ -401,7 +401,7 @@
     "id": "N2_012",
     "kanji": "餓",
     "onyomi": "ガ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ga",
     "meaning": "Kelaparan",
     "examples": [
@@ -429,7 +429,7 @@
     "id": "N2_013",
     "kanji": "介",
     "onyomi": "カイ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kai",
     "meaning": "Perantara / Membantu",
     "examples": [
@@ -568,7 +568,7 @@
     "id": "N2_017",
     "kanji": "較",
     "onyomi": "カク",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kaku",
     "meaning": "Membandingkan",
     "examples": [
@@ -623,7 +623,7 @@
   {
     "id": "N2_019",
     "kanji": "刈",
-    "onyomi": "",
+    "onyomi": "-",
     "kunyomi": "か・る",
     "romaji": "Ka",
     "meaning": "Memotong (rumput)",
@@ -689,7 +689,7 @@
     "id": "N2_021",
     "kanji": "環",
     "onyomi": "カン",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kan",
     "meaning": "Cincin / Lingkaran",
     "examples": [
@@ -726,7 +726,7 @@
     "id": "N2_022",
     "kanji": "監",
     "onyomi": "カン",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kan",
     "meaning": "Mengawasi",
     "examples": [
@@ -837,7 +837,7 @@
     "id": "N2_025",
     "kanji": "岐",
     "onyomi": "キ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ki",
     "meaning": "Persimpangan",
     "examples": [
@@ -893,7 +893,7 @@
     "id": "N2_027",
     "kanji": "軌",
     "onyomi": "キ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ki",
     "meaning": "Rel / Jalur",
     "examples": [
@@ -958,7 +958,7 @@
     "id": "N2_029",
     "kanji": "棋",
     "onyomi": "キ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ki",
     "meaning": "Catur (Jepang)",
     "examples": [
@@ -986,7 +986,7 @@
     "id": "N2_030",
     "kanji": "棄",
     "onyomi": "キ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ki",
     "meaning": "Membuang / Melepas",
     "examples": [
@@ -1023,7 +1023,7 @@
     "id": "N2_031",
     "kanji": "騎",
     "onyomi": "キ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ki",
     "meaning": "Menunggang",
     "examples": [
@@ -1079,7 +1079,7 @@
     "id": "N2_033",
     "kanji": "宜",
     "onyomi": "ギ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Gi",
     "meaning": "Sepatutnya / Baik",
     "examples": [
@@ -1135,7 +1135,7 @@
     "id": "N2_035",
     "kanji": "犠",
     "onyomi": "ギ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Gi",
     "meaning": "Korban / Pengorbanan",
     "examples": [
@@ -1163,7 +1163,7 @@
     "id": "N2_036",
     "kanji": "菊",
     "onyomi": "キク",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kiku",
     "meaning": "Bunga krisan",
     "examples": [
@@ -1191,7 +1191,7 @@
     "id": "N2_037",
     "kanji": "吉",
     "onyomi": "キチ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kichi",
     "meaning": "Keberuntungan",
     "examples": [
@@ -1228,7 +1228,7 @@
     "id": "N2_038",
     "kanji": "喫",
     "onyomi": "キツ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kitsu",
     "meaning": "Menikmati / Menghirup",
     "examples": [
@@ -1349,7 +1349,7 @@
     "id": "N2_042",
     "kanji": "糾",
     "onyomi": "キュウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kyuu",
     "meaning": "Memeriksa / Menuntut",
     "examples": [
@@ -1405,7 +1405,7 @@
     "id": "N2_044",
     "kanji": "拠",
     "onyomi": "キョ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kyo",
     "meaning": "Landasan / Dasar",
     "examples": [
@@ -1442,7 +1442,7 @@
     "id": "N2_045",
     "kanji": "虚",
     "onyomi": "キョ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kyo",
     "meaning": "Kosong / Hampa",
     "examples": [
@@ -1479,7 +1479,7 @@
     "id": "N2_046",
     "kanji": "享",
     "onyomi": "キョウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kyou",
     "meaning": "Menikmati / Menerima",
     "examples": [
@@ -1722,7 +1722,7 @@
     "id": "N2_055",
     "kanji": "斤",
     "onyomi": "キン",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kin",
     "meaning": "Kapak / Satuan berat",
     "examples": [
@@ -1843,7 +1843,7 @@
   {
     "id": "N2_060",
     "kanji": "虞",
-    "onyomi": "",
+    "onyomi": "-",
     "kunyomi": "おそれ",
     "romaji": "Osore",
     "meaning": "Kekhawatiran",
@@ -1863,7 +1863,7 @@
     "id": "N2_061",
     "kanji": "遇",
     "onyomi": "グウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Guu",
     "meaning": "Memperlakukan / Bertemu",
     "examples": [
@@ -1900,7 +1900,7 @@
     "id": "N2_062",
     "kanji": "屈",
     "onyomi": "クツ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kutsu",
     "meaning": "Menekuk / Menyerah",
     "examples": [
@@ -1964,7 +1964,7 @@
   {
     "id": "N2_064",
     "kanji": "繰",
-    "onyomi": "",
+    "onyomi": "-",
     "kunyomi": "く・る",
     "romaji": "Ku",
     "meaning": "Menggulung / Mengulang",
@@ -2012,7 +2012,7 @@
     "id": "N2_066",
     "kanji": "勲",
     "onyomi": "クン",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kun",
     "meaning": "Jasa / Penghargaan",
     "examples": [
@@ -2059,7 +2059,7 @@
     "id": "N2_068",
     "kanji": "啓",
     "onyomi": "ケイ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kei",
     "meaning": "Mencerahkan / Membuka",
     "examples": [
@@ -2124,7 +2124,7 @@
     "id": "N2_070",
     "kanji": "径",
     "onyomi": "ケイ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kei",
     "meaning": "Garis tengah / Jalan setapak",
     "examples": [
@@ -2301,7 +2301,7 @@
     "id": "N2_076",
     "kanji": "傑",
     "onyomi": "ケツ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ketsu",
     "meaning": "Menonjol / Ulung",
     "examples": [
@@ -2329,7 +2329,7 @@
     "id": "N2_077",
     "kanji": "倹",
     "onyomi": "ケン",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ken",
     "meaning": "Hemat",
     "examples": [
@@ -2348,7 +2348,7 @@
     "id": "N2_078",
     "kanji": "圏",
     "onyomi": "ケン",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ken",
     "meaning": "Wilayah / Lingkup",
     "examples": [
@@ -2488,7 +2488,7 @@
     "id": "N2_083",
     "kanji": "玄",
     "onyomi": "ゲン",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Gen",
     "meaning": "Gaib / Hitam pekat",
     "examples": [
@@ -2516,7 +2516,7 @@
     "id": "N2_084",
     "kanji": "孤",
     "onyomi": "コ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ko",
     "meaning": "Sendirian / Yatim",
     "examples": [
@@ -2553,7 +2553,7 @@
     "id": "N2_085",
     "kanji": "弧",
     "onyomi": "コ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Ko",
     "meaning": "Busur / Lengkung",
     "examples": [
@@ -2646,7 +2646,7 @@
     "id": "N2_088",
     "kanji": "呉",
     "onyomi": "ゴ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Go",
     "meaning": "Memberi (arkais) / Nama daerah",
     "examples": [
@@ -2665,7 +2665,7 @@
     "id": "N2_089",
     "kanji": "娯",
     "onyomi": "ゴ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Go",
     "meaning": "Hiburan",
     "examples": [
@@ -2684,7 +2684,7 @@
     "id": "N2_090",
     "kanji": "碁",
     "onyomi": "ゴ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Go",
     "meaning": "Permainan Go",
     "examples": [
@@ -2703,7 +2703,7 @@
     "id": "N2_091",
     "kanji": "孔",
     "onyomi": "コウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kou",
     "meaning": "Lubang",
     "examples": [
@@ -2759,7 +2759,7 @@
     "id": "N2_093",
     "kanji": "恒",
     "onyomi": "コウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kou",
     "meaning": "Tetap / Ajek",
     "examples": [
@@ -2796,7 +2796,7 @@
     "id": "N2_094",
     "kanji": "洪",
     "onyomi": "コウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kou",
     "meaning": "Banjir",
     "examples": [
@@ -2852,7 +2852,7 @@
     "id": "N2_096",
     "kanji": "郊",
     "onyomi": "コウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kou",
     "meaning": "Pinggiran kota",
     "examples": [
@@ -3011,7 +3011,7 @@
     "id": "N2_102",
     "kanji": "拘",
     "onyomi": "コウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kou",
     "meaning": "Menahan / Terikat",
     "examples": [
@@ -3048,7 +3048,7 @@
     "id": "N2_103",
     "kanji": "坑",
     "onyomi": "コウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kou",
     "meaning": "Lubang tambang",
     "examples": [
@@ -3076,7 +3076,7 @@
     "id": "N2_104",
     "kanji": "肯",
     "onyomi": "コウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kou",
     "meaning": "Menyetujui",
     "examples": [
@@ -3095,7 +3095,7 @@
     "id": "N2_105",
     "kanji": "侯",
     "onyomi": "コウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kou",
     "meaning": "Bangsawan / Adipati",
     "examples": [
@@ -3152,7 +3152,7 @@
     "id": "N2_108",
     "kanji": "酵",
     "onyomi": "コウ",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kou",
     "meaning": "Fermentasi",
     "examples": [
@@ -3189,7 +3189,7 @@
     "id": "N2_109",
     "kanji": "克",
     "onyomi": "コク",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Koku",
     "meaning": "Mengatasi / Menaklukkan",
     "examples": [
@@ -3217,7 +3217,7 @@
     "id": "N2_110",
     "kanji": "酷",
     "onyomi": "コク",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Koku",
     "meaning": "Kejam / Parah",
     "examples": [
@@ -3254,7 +3254,7 @@
     "id": "N2_111",
     "kanji": "獄",
     "onyomi": "ゴク",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Goku",
     "meaning": "Penjara",
     "examples": [
@@ -3282,7 +3282,7 @@
     "id": "N2_112",
     "kanji": "墾",
     "onyomi": "コン",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kon",
     "meaning": "Membuka lahan",
     "examples": [
@@ -3329,7 +3329,7 @@
     "id": "N2_114",
     "kanji": "昆",
     "onyomi": "コン",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kon",
     "meaning": "Serangga (kombinasi)",
     "examples": [
@@ -3385,7 +3385,7 @@
     "id": "N2_116",
     "kanji": "紺",
     "onyomi": "コン",
-    "kunyomi": "",
+    "kunyomi": "-",
     "romaji": "Kon",
     "meaning": "Biru dongker",
     "examples": [
@@ -3462,6 +3462,3789 @@
         "sentence": "連鎖の意味を調べました。",
         "sentenceFurigana": "れんさの いみを しらべました。",
         "sentenceMeaning": "Mencari arti Rangkaian / rantai."
+      }
+    ]
+  },
+  {
+    "id": "N2_119",
+    "kanji": "斎",
+    "onyomi": "サイ",
+    "kunyomi": "-",
+    "romaji": "Sai",
+    "meaning": "Ruang/Penyucian",
+    "examples": [
+      {
+        "word": "書斎",
+        "reading": "しょさい",
+        "romaji": "Shosai",
+        "meaning": "Ruang baca",
+        "sentence": "先生が書斎について話しました。",
+        "sentenceFurigana": "せんせいが しょさいについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Ruang baca."
+      },
+      {
+        "word": "斎場",
+        "reading": "さいじょう",
+        "romaji": "Saijou",
+        "meaning": "Aula upacara",
+        "sentence": "ノートに斎場と書きました。",
+        "sentenceFurigana": "ノートに さいじょうと かきました。",
+        "sentenceMeaning": "Menulis “Aula upacara” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_120",
+    "kanji": "索",
+    "onyomi": "サク",
+    "kunyomi": "-",
+    "romaji": "Saku",
+    "meaning": "Tali/Mencari",
+    "examples": [
+      {
+        "word": "索引",
+        "reading": "さくいん",
+        "romaji": "Sakuin",
+        "meaning": "Indeks",
+        "sentence": "索引について勉強します。",
+        "sentenceFurigana": "さくいんについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Indeks."
+      },
+      {
+        "word": "検索",
+        "reading": "けんさく",
+        "romaji": "Kensaku",
+        "meaning": "Pencarian",
+        "sentence": "検索にとても興味があります。",
+        "sentenceFurigana": "けんさくに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Pencarian."
+      },
+      {
+        "word": "捜索",
+        "reading": "そうさく",
+        "romaji": "Sousaku",
+        "meaning": "Pencarian/penggeledahan",
+        "sentence": "捜索はとても大切です。",
+        "sentenceFurigana": "そうさくは とても たいせつです。",
+        "sentenceMeaning": "Pencarian/penggeledahan sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_121",
+    "kanji": "酢",
+    "onyomi": "サク",
+    "kunyomi": "す",
+    "romaji": "Saku",
+    "meaning": "Cuka",
+    "examples": [
+      {
+        "word": "酢酸",
+        "reading": "さくさん",
+        "romaji": "Sakusan",
+        "meaning": "Asam asetat",
+        "sentence": "酢酸の意味を調べました。",
+        "sentenceFurigana": "さくさんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Asam asetat."
+      },
+      {
+        "word": "酢の物",
+        "reading": "すのもの",
+        "romaji": "Sunomono",
+        "meaning": "Acar cuka",
+        "sentence": "先生が酢の物について話しました。",
+        "sentenceFurigana": "せんせいが すのものについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Acar cuka."
+      }
+    ]
+  },
+  {
+    "id": "N2_122",
+    "kanji": "搾",
+    "onyomi": "サク",
+    "kunyomi": "しぼ・る",
+    "romaji": "Saku",
+    "meaning": "Memeras",
+    "examples": [
+      {
+        "word": "搾取",
+        "reading": "さくしゅ",
+        "romaji": "Sakushu",
+        "meaning": "Eksploitasi",
+        "sentence": "ノートに搾取と書きました。",
+        "sentenceFurigana": "ノートに さくしゅと かきました。",
+        "sentenceMeaning": "Menulis “Eksploitasi” di buku catatan."
+      },
+      {
+        "word": "圧搾",
+        "reading": "あっさく",
+        "romaji": "Assaku",
+        "meaning": "Pemerasan/kompresi",
+        "sentence": "圧搾について勉強します。",
+        "sentenceFurigana": "あっさくについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Pemerasan/kompresi."
+      }
+    ]
+  },
+  {
+    "id": "N2_123",
+    "kanji": "傘",
+    "onyomi": "サン",
+    "kunyomi": "かさ",
+    "romaji": "San",
+    "meaning": "Payung",
+    "examples": [
+      {
+        "word": "傘下",
+        "reading": "さんか",
+        "romaji": "Sanka",
+        "meaning": "Di bawah naungan",
+        "sentence": "傘下にとても興味があります。",
+        "sentenceFurigana": "さんかに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Di bawah naungan."
+      },
+      {
+        "word": "雨傘",
+        "reading": "あまがさ",
+        "romaji": "Amagasa",
+        "meaning": "Payung hujan",
+        "sentence": "雨傘はとても大切です。",
+        "sentenceFurigana": "あまがさは とても たいせつです。",
+        "sentenceMeaning": "Payung hujan sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_124",
+    "kanji": "惨",
+    "onyomi": "サン",
+    "kunyomi": "みじ・め",
+    "romaji": "San",
+    "meaning": "Tragis/Menyedihkan",
+    "examples": [
+      {
+        "word": "惨事",
+        "reading": "さんじ",
+        "romaji": "Sanji",
+        "meaning": "Tragedi",
+        "sentence": "惨事の意味を調べました。",
+        "sentenceFurigana": "さんじの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Tragedi."
+      },
+      {
+        "word": "悲惨",
+        "reading": "ひさん",
+        "romaji": "Hisan",
+        "meaning": "Menyedihkan",
+        "sentence": "先生が悲惨について話しました。",
+        "sentenceFurigana": "せんせいが ひさんについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Menyedihkan."
+      },
+      {
+        "word": "惨敗",
+        "reading": "ざんぱい",
+        "romaji": "Zanpai",
+        "meaning": "Kekalahan telak",
+        "sentence": "ノートに惨敗と書きました。",
+        "sentenceFurigana": "ノートに ざんぱいと かきました。",
+        "sentenceMeaning": "Menulis “Kekalahan telak” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_125",
+    "kanji": "桟",
+    "onyomi": "サン",
+    "kunyomi": "-",
+    "romaji": "San",
+    "meaning": "Palang/Jembatan kecil",
+    "examples": [
+      {
+        "word": "桟橋",
+        "reading": "さんばし",
+        "romaji": "Sanbashi",
+        "meaning": "Dermaga",
+        "sentence": "桟橋について勉強します。",
+        "sentenceFurigana": "さんばしについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Dermaga."
+      }
+    ]
+  },
+  {
+    "id": "N2_126",
+    "kanji": "暫",
+    "onyomi": "ザン",
+    "kunyomi": "-",
+    "romaji": "Zan",
+    "meaning": "Sementara",
+    "examples": [
+      {
+        "word": "暫時",
+        "reading": "ざんじ",
+        "romaji": "Zanji",
+        "meaning": "Sejenak",
+        "sentence": "暫時にとても興味があります。",
+        "sentenceFurigana": "ざんじに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Sejenak."
+      },
+      {
+        "word": "暫定",
+        "reading": "ざんてい",
+        "romaji": "Zantei",
+        "meaning": "Sementara/interim",
+        "sentence": "暫定はとても大切です。",
+        "sentenceFurigana": "ざんていは とても たいせつです。",
+        "sentenceMeaning": "Sementara/interim sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_127",
+    "kanji": "施",
+    "onyomi": "シ",
+    "kunyomi": "ほどこ・す",
+    "romaji": "Shi",
+    "meaning": "Melaksanakan/Memberi",
+    "examples": [
+      {
+        "word": "施行",
+        "reading": "しこう",
+        "romaji": "Shikou",
+        "meaning": "Pemberlakuan",
+        "sentence": "施行の意味を調べました。",
+        "sentenceFurigana": "しこうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Pemberlakuan."
+      },
+      {
+        "word": "実施",
+        "reading": "じっし",
+        "romaji": "Jisshi",
+        "meaning": "Pelaksanaan",
+        "sentence": "先生が実施について話しました。",
+        "sentenceFurigana": "せんせいが じっしについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Pelaksanaan."
+      },
+      {
+        "word": "施策",
+        "reading": "しさく",
+        "romaji": "Shisaku",
+        "meaning": "Kebijakan/langkah",
+        "sentence": "ノートに施策と書きました。",
+        "sentenceFurigana": "ノートに しさくと かきました。",
+        "sentenceMeaning": "Menulis “Kebijakan/langkah” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_128",
+    "kanji": "旨",
+    "onyomi": "シ",
+    "kunyomi": "むね",
+    "romaji": "Shi",
+    "meaning": "Maksud/Lezat",
+    "examples": [
+      {
+        "word": "趣旨",
+        "reading": "しゅし",
+        "romaji": "Shushi",
+        "meaning": "Maksud/tujuan",
+        "sentence": "趣旨について勉強します。",
+        "sentenceFurigana": "しゅしについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Maksud/tujuan."
+      },
+      {
+        "word": "要旨",
+        "reading": "ようし",
+        "romaji": "Youshi",
+        "meaning": "Inti/ringkasan",
+        "sentence": "要旨にとても興味があります。",
+        "sentenceFurigana": "ようしに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Inti/ringkasan."
+      },
+      {
+        "word": "論旨",
+        "reading": "ろんし",
+        "romaji": "Ronshi",
+        "meaning": "Alur argumen",
+        "sentence": "論旨はとても大切です。",
+        "sentenceFurigana": "ろんしは とても たいせつです。",
+        "sentenceMeaning": "Alur argumen sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_129",
+    "kanji": "脂",
+    "onyomi": "シ",
+    "kunyomi": "あぶら",
+    "romaji": "Shi",
+    "meaning": "Lemak",
+    "examples": [
+      {
+        "word": "脂肪",
+        "reading": "しぼう",
+        "romaji": "Shibou",
+        "meaning": "Lemak",
+        "sentence": "脂肪の意味を調べました。",
+        "sentenceFurigana": "しぼうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Lemak."
+      },
+      {
+        "word": "油脂",
+        "reading": "ゆし",
+        "romaji": "Yushi",
+        "meaning": "Minyak dan lemak",
+        "sentence": "先生が油脂について話しました。",
+        "sentenceFurigana": "せんせいが ゆしについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Minyak dan lemak."
+      },
+      {
+        "word": "脂質",
+        "reading": "ししつ",
+        "romaji": "Shishitsu",
+        "meaning": "Zat lemak/lipid",
+        "sentence": "ノートに脂質と書きました。",
+        "sentenceFurigana": "ノートに ししつと かきました。",
+        "sentenceMeaning": "Menulis “Zat lemak/lipid” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_130",
+    "kanji": "紫",
+    "onyomi": "シ",
+    "kunyomi": "むらさき",
+    "romaji": "Shi",
+    "meaning": "Ungu",
+    "examples": [
+      {
+        "word": "紫外線",
+        "reading": "しがいせん",
+        "romaji": "Shigaisen",
+        "meaning": "Sinar ultraviolet",
+        "sentence": "紫外線について勉強します。",
+        "sentenceFurigana": "しがいせんについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Sinar ultraviolet."
+      },
+      {
+        "word": "紫色",
+        "reading": "むらさきいろ",
+        "romaji": "Murasakiiro",
+        "meaning": "Warna ungu",
+        "sentence": "紫色にとても興味があります。",
+        "sentenceFurigana": "むらさきいろに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Warna ungu."
+      }
+    ]
+  },
+  {
+    "id": "N2_131",
+    "kanji": "雌",
+    "onyomi": "シ",
+    "kunyomi": "めす",
+    "romaji": "Shi",
+    "meaning": "Betina",
+    "examples": [
+      {
+        "word": "雌雄",
+        "reading": "しゆう",
+        "romaji": "Shiyuu",
+        "meaning": "Jantan-betina",
+        "sentence": "雌雄はとても大切です。",
+        "sentenceFurigana": "しゆうは とても たいせつです。",
+        "sentenceMeaning": "Jantan-betina sangat penting."
+      },
+      {
+        "word": "雌花",
+        "reading": "めばな",
+        "romaji": "Mebana",
+        "meaning": "Bunga betina",
+        "sentence": "雌花の意味を調べました。",
+        "sentenceFurigana": "めばなの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Bunga betina."
+      }
+    ]
+  },
+  {
+    "id": "N2_132",
+    "kanji": "慈",
+    "onyomi": "ジ",
+    "kunyomi": "いつく・しむ",
+    "romaji": "Ji",
+    "meaning": "Kasih sayang",
+    "examples": [
+      {
+        "word": "慈善",
+        "reading": "じぜん",
+        "romaji": "Jizen",
+        "meaning": "Amal",
+        "sentence": "先生が慈善について話しました。",
+        "sentenceFurigana": "せんせいが じぜんについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Amal."
+      },
+      {
+        "word": "慈悲",
+        "reading": "じひ",
+        "romaji": "Jihi",
+        "meaning": "Belas kasih",
+        "sentence": "ノートに慈悲と書きました。",
+        "sentenceFurigana": "ノートに じひと かきました。",
+        "sentenceMeaning": "Menulis “Belas kasih” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_133",
+    "kanji": "軸",
+    "onyomi": "ジク",
+    "kunyomi": "-",
+    "romaji": "Jiku",
+    "meaning": "Poros/Sumbu",
+    "examples": [
+      {
+        "word": "車軸",
+        "reading": "しゃじく",
+        "romaji": "Shajiku",
+        "meaning": "Poros roda",
+        "sentence": "車軸について勉強します。",
+        "sentenceFurigana": "しゃじくについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Poros roda."
+      },
+      {
+        "word": "主軸",
+        "reading": "しゅじく",
+        "romaji": "Shujiku",
+        "meaning": "Poros utama",
+        "sentence": "主軸にとても興味があります。",
+        "sentenceFurigana": "しゅじくに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Poros utama."
+      },
+      {
+        "word": "地軸",
+        "reading": "ちじく",
+        "romaji": "Chijiku",
+        "meaning": "Poros bumi",
+        "sentence": "地軸はとても大切です。",
+        "sentenceFurigana": "ちじくは とても たいせつです。",
+        "sentenceMeaning": "Poros bumi sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_134",
+    "kanji": "湿",
+    "onyomi": "シツ",
+    "kunyomi": "しめ・る",
+    "romaji": "Shitsu",
+    "meaning": "Lembap",
+    "examples": [
+      {
+        "word": "湿気",
+        "reading": "しっけ",
+        "romaji": "Shikke",
+        "meaning": "Kelembapan",
+        "sentence": "湿気の意味を調べました。",
+        "sentenceFurigana": "しっけの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Kelembapan."
+      },
+      {
+        "word": "湿度",
+        "reading": "しつど",
+        "romaji": "Shitsudo",
+        "meaning": "Tingkat kelembapan",
+        "sentence": "先生が湿度について話しました。",
+        "sentenceFurigana": "せんせいが しつどについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Tingkat kelembapan."
+      },
+      {
+        "word": "多湿",
+        "reading": "たしつ",
+        "romaji": "Tashitsu",
+        "meaning": "Sangat lembap",
+        "sentence": "ノートに多湿と書きました。",
+        "sentenceFurigana": "ノートに たしつと かきました。",
+        "sentenceMeaning": "Menulis “Sangat lembap” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_135",
+    "kanji": "漆",
+    "onyomi": "シツ",
+    "kunyomi": "うるし",
+    "romaji": "Shitsu",
+    "meaning": "Pernis/Lak",
+    "examples": [
+      {
+        "word": "漆器",
+        "reading": "しっき",
+        "romaji": "Shikki",
+        "meaning": "Peralatan lak",
+        "sentence": "漆器について勉強します。",
+        "sentenceFurigana": "しっきについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Peralatan lak."
+      },
+      {
+        "word": "漆黒",
+        "reading": "しっこく",
+        "romaji": "Shikkoku",
+        "meaning": "Hitam pekat",
+        "sentence": "漆黒にとても興味があります。",
+        "sentenceFurigana": "しっこくに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Hitam pekat."
+      }
+    ]
+  },
+  {
+    "id": "N2_136",
+    "kanji": "芝",
+    "onyomi": "-",
+    "kunyomi": "しば",
+    "romaji": "Shiba",
+    "meaning": "Rumput",
+    "examples": [
+      {
+        "word": "芝生",
+        "reading": "しばふ",
+        "romaji": "Shibafu",
+        "meaning": "Hamparan rumput",
+        "sentence": "芝生はとても大切です。",
+        "sentenceFurigana": "しばふは とても たいせつです。",
+        "sentenceMeaning": "Hamparan rumput sangat penting."
+      },
+      {
+        "word": "芝居",
+        "reading": "しばい",
+        "romaji": "Shibai",
+        "meaning": "Sandiwara",
+        "sentence": "芝居の意味を調べました。",
+        "sentenceFurigana": "しばいの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Sandiwara."
+      }
+    ]
+  },
+  {
+    "id": "N2_137",
+    "kanji": "執",
+    "onyomi": "シツ",
+    "kunyomi": "と・る",
+    "romaji": "Shitsu",
+    "meaning": "Memegang/Gigih",
+    "examples": [
+      {
+        "word": "執着",
+        "reading": "しゅうちゃく",
+        "romaji": "Shuuchaku",
+        "meaning": "Kemelekatan",
+        "sentence": "先生が執着について話しました。",
+        "sentenceFurigana": "せんせいが しゅうちゃくについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Kemelekatan."
+      },
+      {
+        "word": "執念",
+        "reading": "しゅうねん",
+        "romaji": "Shuunen",
+        "meaning": "Keteguhan",
+        "sentence": "ノートに執念と書きました。",
+        "sentenceFurigana": "ノートに しゅうねんと かきました。",
+        "sentenceMeaning": "Menulis “Keteguhan” di buku catatan."
+      },
+      {
+        "word": "固執",
+        "reading": "こしつ",
+        "romaji": "Koshitsu",
+        "meaning": "Bersikeras",
+        "sentence": "固執について勉強します。",
+        "sentenceFurigana": "こしつについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Bersikeras."
+      }
+    ]
+  },
+  {
+    "id": "N2_138",
+    "kanji": "赦",
+    "onyomi": "シャ",
+    "kunyomi": "-",
+    "romaji": "Sha",
+    "meaning": "Pengampunan",
+    "examples": [
+      {
+        "word": "容赦",
+        "reading": "ようしゃ",
+        "romaji": "Yousha",
+        "meaning": "Ampun/keringanan",
+        "sentence": "容赦にとても興味があります。",
+        "sentenceFurigana": "ようしゃに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Ampun/keringanan."
+      },
+      {
+        "word": "赦免",
+        "reading": "しゃめん",
+        "romaji": "Shamen",
+        "meaning": "Pengampunan",
+        "sentence": "赦免はとても大切です。",
+        "sentenceFurigana": "しゃめんは とても たいせつです。",
+        "sentenceMeaning": "Pengampunan sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_139",
+    "kanji": "斜",
+    "onyomi": "シャ",
+    "kunyomi": "なな・め",
+    "romaji": "Sha",
+    "meaning": "Miring",
+    "examples": [
+      {
+        "word": "斜面",
+        "reading": "しゃめん",
+        "romaji": "Shamen",
+        "meaning": "Lereng",
+        "sentence": "斜面の意味を調べました。",
+        "sentenceFurigana": "しゃめんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Lereng."
+      },
+      {
+        "word": "傾斜",
+        "reading": "けいしゃ",
+        "romaji": "Keisha",
+        "meaning": "Kemiringan",
+        "sentence": "先生が傾斜について話しました。",
+        "sentenceFurigana": "せんせいが けいしゃについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Kemiringan."
+      },
+      {
+        "word": "斜線",
+        "reading": "しゃせん",
+        "romaji": "Shasen",
+        "meaning": "Garis miring",
+        "sentence": "ノートに斜線と書きました。",
+        "sentenceFurigana": "ノートに しゃせんと かきました。",
+        "sentenceMeaning": "Menulis “Garis miring” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_140",
+    "kanji": "煮",
+    "onyomi": "シャ",
+    "kunyomi": "に・る",
+    "romaji": "Sha",
+    "meaning": "Merebus",
+    "examples": [
+      {
+        "word": "煮沸",
+        "reading": "しゃふつ",
+        "romaji": "Shafutsu",
+        "meaning": "Perebusan",
+        "sentence": "煮沸について勉強します。",
+        "sentenceFurigana": "しゃふつについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Perebusan."
+      },
+      {
+        "word": "煮物",
+        "reading": "にもの",
+        "romaji": "Nimono",
+        "meaning": "Masakan rebus",
+        "sentence": "煮物にとても興味があります。",
+        "sentenceFurigana": "にものに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Masakan rebus."
+      }
+    ]
+  },
+  {
+    "id": "N2_141",
+    "kanji": "遮",
+    "onyomi": "シャ",
+    "kunyomi": "さえぎ・る",
+    "romaji": "Sha",
+    "meaning": "Menghalangi",
+    "examples": [
+      {
+        "word": "遮断",
+        "reading": "しゃだん",
+        "romaji": "Shadan",
+        "meaning": "Pemutusan/blokir",
+        "sentence": "遮断はとても大切です。",
+        "sentenceFurigana": "しゃだんは とても たいせつです。",
+        "sentenceMeaning": "Pemutusan/blokir sangat penting."
+      },
+      {
+        "word": "遮光",
+        "reading": "しゃこう",
+        "romaji": "Shakou",
+        "meaning": "Penghalang cahaya",
+        "sentence": "遮光の意味を調べました。",
+        "sentenceFurigana": "しゃこうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Penghalang cahaya."
+      }
+    ]
+  },
+  {
+    "id": "N2_142",
+    "kanji": "蛇",
+    "onyomi": "ジャ",
+    "kunyomi": "へび",
+    "romaji": "Ja",
+    "meaning": "Ular",
+    "examples": [
+      {
+        "word": "蛇口",
+        "reading": "じゃぐち",
+        "romaji": "Jaguchi",
+        "meaning": "Keran air",
+        "sentence": "先生が蛇口について話しました。",
+        "sentenceFurigana": "せんせいが じゃぐちについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Keran air."
+      },
+      {
+        "word": "大蛇",
+        "reading": "だいじゃ",
+        "romaji": "Daija",
+        "meaning": "Ular besar",
+        "sentence": "ノートに大蛇と書きました。",
+        "sentenceFurigana": "ノートに だいじゃと かきました。",
+        "sentenceMeaning": "Menulis “Ular besar” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_143",
+    "kanji": "邪",
+    "onyomi": "ジャ",
+    "kunyomi": "-",
+    "romaji": "Ja",
+    "meaning": "Jahat/Gangguan",
+    "examples": [
+      {
+        "word": "邪魔",
+        "reading": "じゃま",
+        "romaji": "Jama",
+        "meaning": "Gangguan",
+        "sentence": "邪魔について勉強します。",
+        "sentenceFurigana": "じゃまについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Gangguan."
+      },
+      {
+        "word": "邪悪",
+        "reading": "じゃあく",
+        "romaji": "Jaaku",
+        "meaning": "Kejahatan",
+        "sentence": "邪悪にとても興味があります。",
+        "sentenceFurigana": "じゃあくに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Kejahatan."
+      },
+      {
+        "word": "邪推",
+        "reading": "じゃすい",
+        "romaji": "Jasui",
+        "meaning": "Prasangka buruk",
+        "sentence": "邪推はとても大切です。",
+        "sentenceFurigana": "じゃすいは とても たいせつです。",
+        "sentenceMeaning": "Prasangka buruk sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_144",
+    "kanji": "酌",
+    "onyomi": "シャク",
+    "kunyomi": "く・む",
+    "romaji": "Shaku",
+    "meaning": "Menuang (sake)",
+    "examples": [
+      {
+        "word": "晩酌",
+        "reading": "ばんしゃく",
+        "romaji": "Banshaku",
+        "meaning": "Minum sake malam",
+        "sentence": "晩酌はとても忙しいです。",
+        "sentenceFurigana": "ばんしゃくは とても いそがしいです。",
+        "sentenceMeaning": "Minum sake malam sangat sibuk."
+      },
+      {
+        "word": "酌量",
+        "reading": "しゃくりょう",
+        "romaji": "Shakuryou",
+        "meaning": "Pertimbangan (keringanan)",
+        "sentence": "酌量の意味を調べました。",
+        "sentenceFurigana": "しゃくりょうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Pertimbangan (keringanan)."
+      }
+    ]
+  },
+  {
+    "id": "N2_145",
+    "kanji": "釈",
+    "onyomi": "シャク",
+    "kunyomi": "-",
+    "romaji": "Shaku",
+    "meaning": "Penjelasan",
+    "examples": [
+      {
+        "word": "釈明",
+        "reading": "しゃくめい",
+        "romaji": "Shakumei",
+        "meaning": "Klarifikasi",
+        "sentence": "先生が釈明について話しました。",
+        "sentenceFurigana": "せんせいが しゃくめいについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Klarifikasi."
+      },
+      {
+        "word": "会釈",
+        "reading": "えしゃく",
+        "romaji": "Eshaku",
+        "meaning": "Membungkuk ringan",
+        "sentence": "ノートに会釈と書きました。",
+        "sentenceFurigana": "ノートに えしゃくと かきました。",
+        "sentenceMeaning": "Menulis “Membungkuk ringan” di buku catatan."
+      },
+      {
+        "word": "釈放",
+        "reading": "しゃくほう",
+        "romaji": "Shakuhou",
+        "meaning": "Pembebasan",
+        "sentence": "釈放について勉強します。",
+        "sentenceFurigana": "しゃくほうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Pembebasan."
+      }
+    ]
+  },
+  {
+    "id": "N2_146",
+    "kanji": "寂",
+    "onyomi": "ジャク",
+    "kunyomi": "さび・しい",
+    "romaji": "Jaku",
+    "meaning": "Sepi",
+    "examples": [
+      {
+        "word": "静寂",
+        "reading": "せいじゃく",
+        "romaji": "Seijaku",
+        "meaning": "Kesunyian",
+        "sentence": "静寂にとても興味があります。",
+        "sentenceFurigana": "せいじゃくに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Kesunyian."
+      },
+      {
+        "word": "寂寞",
+        "reading": "せきばく",
+        "romaji": "Sekibaku",
+        "meaning": "Kesepian",
+        "sentence": "寂寞はとても大切です。",
+        "sentenceFurigana": "せきばくは とても たいせつです。",
+        "sentenceMeaning": "Kesepian sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_147",
+    "kanji": "朱",
+    "onyomi": "シュ",
+    "kunyomi": "-",
+    "romaji": "Shu",
+    "meaning": "Merah cinnabar",
+    "examples": [
+      {
+        "word": "朱色",
+        "reading": "しゅいろ",
+        "romaji": "Shuiro",
+        "meaning": "Warna merah oranye",
+        "sentence": "朱色の意味を調べました。",
+        "sentenceFurigana": "しゅいろの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Warna merah oranye."
+      },
+      {
+        "word": "朱肉",
+        "reading": "しゅにく",
+        "romaji": "Shuniku",
+        "meaning": "Tinta stempel",
+        "sentence": "先生が朱肉について話しました。",
+        "sentenceFurigana": "せんせいが しゅにくについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Tinta stempel."
+      }
+    ]
+  },
+  {
+    "id": "N2_148",
+    "kanji": "狩",
+    "onyomi": "シュ",
+    "kunyomi": "か・る",
+    "romaji": "Shu",
+    "meaning": "Berburu",
+    "examples": [
+      {
+        "word": "狩猟",
+        "reading": "しゅりょう",
+        "romaji": "Shuryou",
+        "meaning": "Perburuan",
+        "sentence": "ノートに狩猟と書きました。",
+        "sentenceFurigana": "ノートに しゅりょうと かきました。",
+        "sentenceMeaning": "Menulis “Perburuan” di buku catatan."
+      },
+      {
+        "word": "狩人",
+        "reading": "かりゅうど",
+        "romaji": "Karyuudo",
+        "meaning": "Pemburu",
+        "sentence": "狩人について勉強します。",
+        "sentenceFurigana": "かりゅうどについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Pemburu."
+      }
+    ]
+  },
+  {
+    "id": "N2_149",
+    "kanji": "珠",
+    "onyomi": "シュ",
+    "kunyomi": "-",
+    "romaji": "Shu",
+    "meaning": "Mutiara/Manik",
+    "examples": [
+      {
+        "word": "真珠",
+        "reading": "しんじゅ",
+        "romaji": "Shinju",
+        "meaning": "Mutiara",
+        "sentence": "真珠にとても興味があります。",
+        "sentenceFurigana": "しんじゅに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Mutiara."
+      },
+      {
+        "word": "珠玉",
+        "reading": "しゅぎょく",
+        "romaji": "Shugyoku",
+        "meaning": "Permata/karya indah",
+        "sentence": "珠玉はとても大切です。",
+        "sentenceFurigana": "しゅぎょくは とても たいせつです。",
+        "sentenceMeaning": "Permata/karya indah sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_150",
+    "kanji": "趣",
+    "onyomi": "シュ",
+    "kunyomi": "おもむき",
+    "romaji": "Shu",
+    "meaning": "Cita rasa/Selera",
+    "examples": [
+      {
+        "word": "趣旨",
+        "reading": "しゅし",
+        "romaji": "Shushi",
+        "meaning": "Maksud",
+        "sentence": "趣旨の意味を調べました。",
+        "sentenceFurigana": "しゅしの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Maksud."
+      },
+      {
+        "word": "趣向",
+        "reading": "しゅこう",
+        "romaji": "Shukou",
+        "meaning": "Gaya/ide",
+        "sentence": "先生が趣向について話しました。",
+        "sentenceFurigana": "せんせいが しゅこうについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Gaya/ide."
+      },
+      {
+        "word": "興趣",
+        "reading": "きょうしゅ",
+        "romaji": "Kyoushu",
+        "meaning": "Ketertarikan",
+        "sentence": "ノートに興趣と書きました。",
+        "sentenceFurigana": "ノートに きょうしゅと かきました。",
+        "sentenceMeaning": "Menulis “Ketertarikan” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_151",
+    "kanji": "儒",
+    "onyomi": "ジュ",
+    "kunyomi": "-",
+    "romaji": "Ju",
+    "meaning": "Konfusianisme",
+    "examples": [
+      {
+        "word": "儒教",
+        "reading": "じゅきょう",
+        "romaji": "Jukyou",
+        "meaning": "Ajaran Konfusius",
+        "sentence": "儒教について勉強します。",
+        "sentenceFurigana": "じゅきょうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Ajaran Konfusius."
+      },
+      {
+        "word": "儒学",
+        "reading": "じゅがく",
+        "romaji": "Jugaku",
+        "meaning": "Konfusianisme",
+        "sentence": "儒学にとても興味があります。",
+        "sentenceFurigana": "じゅがくに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Konfusianisme."
+      }
+    ]
+  },
+  {
+    "id": "N2_152",
+    "kanji": "樹",
+    "onyomi": "ジュ",
+    "kunyomi": "-",
+    "romaji": "Ju",
+    "meaning": "Pohon",
+    "examples": [
+      {
+        "word": "樹立",
+        "reading": "じゅりつ",
+        "romaji": "Juritsu",
+        "meaning": "Menegakkan/mencetak (rekor)",
+        "sentence": "樹立はとても大切です。",
+        "sentenceFurigana": "じゅりつは とても たいせつです。",
+        "sentenceMeaning": "Menegakkan/mencetak (rekor) sangat penting."
+      },
+      {
+        "word": "街路樹",
+        "reading": "がいろじゅ",
+        "romaji": "Gairoju",
+        "meaning": "Pohon tepi jalan",
+        "sentence": "街路樹はとても遠いです。",
+        "sentenceFurigana": "がいろじゅは とても とおいです。",
+        "sentenceMeaning": "Pohon tepi jalan sangat jauh."
+      },
+      {
+        "word": "果樹",
+        "reading": "かじゅ",
+        "romaji": "Kaju",
+        "meaning": "Pohon buah",
+        "sentence": "果樹の意味を調べました。",
+        "sentenceFurigana": "かじゅの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Pohon buah."
+      }
+    ]
+  },
+  {
+    "id": "N2_153",
+    "kanji": "囚",
+    "onyomi": "シュウ",
+    "kunyomi": "-",
+    "romaji": "Shuu",
+    "meaning": "Tahanan",
+    "examples": [
+      {
+        "word": "囚人",
+        "reading": "しゅうじん",
+        "romaji": "Shuujin",
+        "meaning": "Narapidana",
+        "sentence": "先生が囚人について話しました。",
+        "sentenceFurigana": "せんせいが しゅうじんについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Narapidana."
+      },
+      {
+        "word": "死刑囚",
+        "reading": "しけいしゅう",
+        "romaji": "Shikeishuu",
+        "meaning": "Terpidana mati",
+        "sentence": "ノートに死刑囚と書きました。",
+        "sentenceFurigana": "ノートに しけいしゅうと かきました。",
+        "sentenceMeaning": "Menulis “Terpidana mati” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_154",
+    "kanji": "秀",
+    "onyomi": "シュウ",
+    "kunyomi": "ひい・でる",
+    "romaji": "Shuu",
+    "meaning": "Unggul",
+    "examples": [
+      {
+        "word": "優秀",
+        "reading": "ゆうしゅう",
+        "romaji": "Yuushuu",
+        "meaning": "Sangat unggul",
+        "sentence": "優秀について勉強します。",
+        "sentenceFurigana": "ゆうしゅうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Sangat unggul."
+      },
+      {
+        "word": "秀才",
+        "reading": "しゅうさい",
+        "romaji": "Shuusai",
+        "meaning": "Orang cerdas",
+        "sentence": "秀才に手紙を書きます。",
+        "sentenceFurigana": "しゅうさいに てがみを かきます。",
+        "sentenceMeaning": "Menulis surat untuk Orang cerdas."
+      }
+    ]
+  },
+  {
+    "id": "N2_155",
+    "kanji": "臭",
+    "onyomi": "シュウ",
+    "kunyomi": "くさ・い",
+    "romaji": "Shuu",
+    "meaning": "Bau",
+    "examples": [
+      {
+        "word": "悪臭",
+        "reading": "あくしゅう",
+        "romaji": "Akushuu",
+        "meaning": "Bau busuk",
+        "sentence": "悪臭にとても興味があります。",
+        "sentenceFurigana": "あくしゅうに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Bau busuk."
+      },
+      {
+        "word": "無臭",
+        "reading": "むしゅう",
+        "romaji": "Mushuu",
+        "meaning": "Tak berbau",
+        "sentence": "無臭はとても大切です。",
+        "sentenceFurigana": "むしゅうは とても たいせつです。",
+        "sentenceMeaning": "Tak berbau sangat penting."
+      },
+      {
+        "word": "消臭",
+        "reading": "しょうしゅう",
+        "romaji": "Shoushuu",
+        "meaning": "Penghilang bau",
+        "sentence": "消臭の意味を調べました。",
+        "sentenceFurigana": "しょうしゅうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Penghilang bau."
+      }
+    ]
+  },
+  {
+    "id": "N2_156",
+    "kanji": "愁",
+    "onyomi": "シュウ",
+    "kunyomi": "うれ・い",
+    "romaji": "Shuu",
+    "meaning": "Duka/Sedih",
+    "examples": [
+      {
+        "word": "郷愁",
+        "reading": "きょうしゅう",
+        "romaji": "Kyoushuu",
+        "meaning": "Nostalgia",
+        "sentence": "先生が郷愁について話しました。",
+        "sentenceFurigana": "せんせいが きょうしゅうについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Nostalgia."
+      },
+      {
+        "word": "憂愁",
+        "reading": "ゆうしゅう",
+        "romaji": "Yuushuu",
+        "meaning": "Kesedihan",
+        "sentence": "ノートに憂愁と書きました。",
+        "sentenceFurigana": "ノートに ゆうしゅうと かきました。",
+        "sentenceMeaning": "Menulis “Kesedihan” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_157",
+    "kanji": "酬",
+    "onyomi": "シュウ",
+    "kunyomi": "-",
+    "romaji": "Shuu",
+    "meaning": "Balasan/Imbalan",
+    "examples": [
+      {
+        "word": "報酬",
+        "reading": "ほうしゅう",
+        "romaji": "Houshuu",
+        "meaning": "Imbalan",
+        "sentence": "報酬について勉強します。",
+        "sentenceFurigana": "ほうしゅうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Imbalan."
+      },
+      {
+        "word": "応酬",
+        "reading": "おうしゅう",
+        "romaji": "Oushuu",
+        "meaning": "Saling balas",
+        "sentence": "応酬にとても興味があります。",
+        "sentenceFurigana": "おうしゅうに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Saling balas."
+      }
+    ]
+  },
+  {
+    "id": "N2_158",
+    "kanji": "醜",
+    "onyomi": "シュウ",
+    "kunyomi": "みにく・い",
+    "romaji": "Shuu",
+    "meaning": "Buruk rupa",
+    "examples": [
+      {
+        "word": "醜態",
+        "reading": "しゅうたい",
+        "romaji": "Shuutai",
+        "meaning": "Perilaku memalukan",
+        "sentence": "醜態はとても大切です。",
+        "sentenceFurigana": "しゅうたいは とても たいせつです。",
+        "sentenceMeaning": "Perilaku memalukan sangat penting."
+      },
+      {
+        "word": "醜聞",
+        "reading": "しゅうぶん",
+        "romaji": "Shuubun",
+        "meaning": "Skandal",
+        "sentence": "醜聞の意味を調べました。",
+        "sentenceFurigana": "しゅうぶんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Skandal."
+      }
+    ]
+  },
+  {
+    "id": "N2_159",
+    "kanji": "汁",
+    "onyomi": "ジュウ",
+    "kunyomi": "しる",
+    "romaji": "Juu",
+    "meaning": "Kuah/Sari",
+    "examples": [
+      {
+        "word": "果汁",
+        "reading": "かじゅう",
+        "romaji": "Kajuu",
+        "meaning": "Sari buah",
+        "sentence": "先生が果汁について話しました。",
+        "sentenceFurigana": "せんせいが かじゅうについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Sari buah."
+      },
+      {
+        "word": "胆汁",
+        "reading": "たんじゅう",
+        "romaji": "Tanjuu",
+        "meaning": "Empedu",
+        "sentence": "ノートに胆汁と書きました。",
+        "sentenceFurigana": "ノートに たんじゅうと かきました。",
+        "sentenceMeaning": "Menulis “Empedu” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_160",
+    "kanji": "充",
+    "onyomi": "ジュウ",
+    "kunyomi": "あ・てる",
+    "romaji": "Juu",
+    "meaning": "Mengisi/Memenuhi",
+    "examples": [
+      {
+        "word": "充実",
+        "reading": "じゅうじつ",
+        "romaji": "Juujitsu",
+        "meaning": "Substansial/penuh",
+        "sentence": "充実について勉強します。",
+        "sentenceFurigana": "じゅうじつについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Substansial/penuh."
+      },
+      {
+        "word": "充電",
+        "reading": "じゅうでん",
+        "romaji": "Juuden",
+        "meaning": "Pengisian daya",
+        "sentence": "充電にとても興味があります。",
+        "sentenceFurigana": "じゅうでんに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Pengisian daya."
+      },
+      {
+        "word": "補充",
+        "reading": "ほじゅう",
+        "romaji": "Hojuu",
+        "meaning": "Pengisian ulang",
+        "sentence": "補充はとても大切です。",
+        "sentenceFurigana": "ほじゅうは とても たいせつです。",
+        "sentenceMeaning": "Pengisian ulang sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_161",
+    "kanji": "渋",
+    "onyomi": "ジュウ",
+    "kunyomi": "しぶ・い",
+    "romaji": "Juu",
+    "meaning": "Sepat/Ragu",
+    "examples": [
+      {
+        "word": "渋滞",
+        "reading": "じゅうたい",
+        "romaji": "Juutai",
+        "meaning": "Kemacetan",
+        "sentence": "渋滞の意味を調べました。",
+        "sentenceFurigana": "じゅうたいの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Kemacetan."
+      },
+      {
+        "word": "渋面",
+        "reading": "じゅうめん",
+        "romaji": "Juumen",
+        "meaning": "Wajah masam",
+        "sentence": "先生が渋面について話しました。",
+        "sentenceFurigana": "せんせいが じゅうめんについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Wajah masam."
+      }
+    ]
+  },
+  {
+    "id": "N2_162",
+    "kanji": "銃",
+    "onyomi": "ジュウ",
+    "kunyomi": "-",
+    "romaji": "Juu",
+    "meaning": "Senapan",
+    "examples": [
+      {
+        "word": "銃器",
+        "reading": "じゅうき",
+        "romaji": "Juuki",
+        "meaning": "Senjata api",
+        "sentence": "ノートに銃器と書きました。",
+        "sentenceFurigana": "ノートに じゅうきと かきました。",
+        "sentenceMeaning": "Menulis “Senjata api” di buku catatan."
+      },
+      {
+        "word": "拳銃",
+        "reading": "けんじゅう",
+        "romaji": "Kenjuu",
+        "meaning": "Pistol",
+        "sentence": "拳銃について勉強します。",
+        "sentenceFurigana": "けんじゅうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Pistol."
+      },
+      {
+        "word": "銃声",
+        "reading": "じゅうせい",
+        "romaji": "Juusei",
+        "meaning": "Suara tembakan",
+        "sentence": "銃声にとても興味があります。",
+        "sentenceFurigana": "じゅうせいに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Suara tembakan."
+      }
+    ]
+  },
+  {
+    "id": "N2_163",
+    "kanji": "獣",
+    "onyomi": "ジュウ",
+    "kunyomi": "けもの",
+    "romaji": "Juu",
+    "meaning": "Binatang buas",
+    "examples": [
+      {
+        "word": "獣医",
+        "reading": "じゅうい",
+        "romaji": "Juui",
+        "meaning": "Dokter hewan",
+        "sentence": "獣医に会いました。",
+        "sentenceFurigana": "じゅういに あいました。",
+        "sentenceMeaning": "Bertemu dengan Dokter hewan."
+      },
+      {
+        "word": "猛獣",
+        "reading": "もうじゅう",
+        "romaji": "Moujuu",
+        "meaning": "Binatang buas",
+        "sentence": "猛獣はとても大切です。",
+        "sentenceFurigana": "もうじゅうは とても たいせつです。",
+        "sentenceMeaning": "Binatang buas sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_164",
+    "kanji": "叔",
+    "onyomi": "シュク",
+    "kunyomi": "-",
+    "romaji": "Shuku",
+    "meaning": "Paman/Bibi (muda)",
+    "examples": [
+      {
+        "word": "叔父",
+        "reading": "おじ",
+        "romaji": "Oji",
+        "meaning": "Paman",
+        "sentence": "叔父の意味を調べました。",
+        "sentenceFurigana": "おじの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Paman."
+      },
+      {
+        "word": "叔母",
+        "reading": "おば",
+        "romaji": "Oba",
+        "meaning": "Bibi",
+        "sentence": "先生が叔母について話しました。",
+        "sentenceFurigana": "せんせいが おばについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Bibi."
+      }
+    ]
+  },
+  {
+    "id": "N2_165",
+    "kanji": "淑",
+    "onyomi": "シュク",
+    "kunyomi": "-",
+    "romaji": "Shuku",
+    "meaning": "Anggun/Berbudi",
+    "examples": [
+      {
+        "word": "淑女",
+        "reading": "しゅくじょ",
+        "romaji": "Shukujo",
+        "meaning": "Wanita terhormat",
+        "sentence": "淑女はとても親切です。",
+        "sentenceFurigana": "しゅくじょは とても しんせつです。",
+        "sentenceMeaning": "Wanita terhormat sangat baik hati."
+      }
+    ]
+  },
+  {
+    "id": "N2_166",
+    "kanji": "粛",
+    "onyomi": "シュク",
+    "kunyomi": "-",
+    "romaji": "Shuku",
+    "meaning": "Khidmat",
+    "examples": [
+      {
+        "word": "厳粛",
+        "reading": "げんしゅく",
+        "romaji": "Genshuku",
+        "meaning": "Khidmat",
+        "sentence": "ノートに厳粛と書きました。",
+        "sentenceFurigana": "ノートに げんしゅくと かきました。",
+        "sentenceMeaning": "Menulis “Khidmat” di buku catatan."
+      },
+      {
+        "word": "自粛",
+        "reading": "じしゅく",
+        "romaji": "Jishuku",
+        "meaning": "Menahan diri",
+        "sentence": "自粛について勉強します。",
+        "sentenceFurigana": "じしゅくについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Menahan diri."
+      }
+    ]
+  },
+  {
+    "id": "N2_167",
+    "kanji": "塾",
+    "onyomi": "ジュク",
+    "kunyomi": "-",
+    "romaji": "Juku",
+    "meaning": "Bimbingan belajar",
+    "examples": [
+      {
+        "word": "学習塾",
+        "reading": "がくしゅうじゅく",
+        "romaji": "Gakushuujuku",
+        "meaning": "Bimbingan belajar",
+        "sentence": "学習塾にとても興味があります。",
+        "sentenceFurigana": "がくしゅうじゅくに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Bimbingan belajar."
+      },
+      {
+        "word": "塾生",
+        "reading": "じゅくせい",
+        "romaji": "Jukusei",
+        "meaning": "Murid bimbel",
+        "sentence": "塾生と一緒に遊びます。",
+        "sentenceFurigana": "じゅくせいと いっしょに あそびます。",
+        "sentenceMeaning": "Bermain bersama Murid bimbel."
+      }
+    ]
+  },
+  {
+    "id": "N2_168",
+    "kanji": "俊",
+    "onyomi": "シュン",
+    "kunyomi": "-",
+    "romaji": "Shun",
+    "meaning": "Cemerlang/Berbakat",
+    "examples": [
+      {
+        "word": "俊敏",
+        "reading": "しゅんびん",
+        "romaji": "Shunbin",
+        "meaning": "Cekatan cerdas",
+        "sentence": "俊敏はとても大切です。",
+        "sentenceFurigana": "しゅんびんは とても たいせつです。",
+        "sentenceMeaning": "Cekatan cerdas sangat penting."
+      },
+      {
+        "word": "俊才",
+        "reading": "しゅんさい",
+        "romaji": "Shunsai",
+        "meaning": "Orang berbakat",
+        "sentence": "俊才に手紙を書きます。",
+        "sentenceFurigana": "しゅんさいに てがみを かきます。",
+        "sentenceMeaning": "Menulis surat untuk Orang berbakat."
+      }
+    ]
+  },
+  {
+    "id": "N2_169",
+    "kanji": "瞬",
+    "onyomi": "シュン",
+    "kunyomi": "またた・く",
+    "romaji": "Shun",
+    "meaning": "Sekejap",
+    "examples": [
+      {
+        "word": "瞬間",
+        "reading": "しゅんかん",
+        "romaji": "Shunkan",
+        "meaning": "Momen",
+        "sentence": "瞬間の意味を調べました。",
+        "sentenceFurigana": "しゅんかんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Momen."
+      },
+      {
+        "word": "一瞬",
+        "reading": "いっしゅん",
+        "romaji": "Isshun",
+        "meaning": "Sekejap",
+        "sentence": "先生が一瞬について話しました。",
+        "sentenceFurigana": "せんせいが いっしゅんについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Sekejap."
+      }
+    ]
+  },
+  {
+    "id": "N2_170",
+    "kanji": "遵",
+    "onyomi": "ジュン",
+    "kunyomi": "-",
+    "romaji": "Jun",
+    "meaning": "Mematuhi",
+    "examples": [
+      {
+        "word": "遵守",
+        "reading": "じゅんしゅ",
+        "romaji": "Junshu",
+        "meaning": "Kepatuhan",
+        "sentence": "ノートに遵守と書きました。",
+        "sentenceFurigana": "ノートに じゅんしゅと かきました。",
+        "sentenceMeaning": "Menulis “Kepatuhan” di buku catatan."
+      },
+      {
+        "word": "遵法",
+        "reading": "じゅんぽう",
+        "romaji": "Junpou",
+        "meaning": "Taat hukum",
+        "sentence": "遵法について勉強します。",
+        "sentenceFurigana": "じゅんぽうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Taat hukum."
+      }
+    ]
+  },
+  {
+    "id": "N2_171",
+    "kanji": "庶",
+    "onyomi": "ショ",
+    "kunyomi": "-",
+    "romaji": "Sho",
+    "meaning": "Rakyat jelata",
+    "examples": [
+      {
+        "word": "庶民",
+        "reading": "しょみん",
+        "romaji": "Shomin",
+        "meaning": "Rakyat biasa",
+        "sentence": "庶民にとても興味があります。",
+        "sentenceFurigana": "しょみんに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Rakyat biasa."
+      },
+      {
+        "word": "庶務",
+        "reading": "しょむ",
+        "romaji": "Shomu",
+        "meaning": "Urusan umum",
+        "sentence": "庶務はとても大切です。",
+        "sentenceFurigana": "しょむは とても たいせつです。",
+        "sentenceMeaning": "Urusan umum sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_172",
+    "kanji": "叙",
+    "onyomi": "ジョ",
+    "kunyomi": "-",
+    "romaji": "Jo",
+    "meaning": "Menuturkan",
+    "examples": [
+      {
+        "word": "叙述",
+        "reading": "じょじゅつ",
+        "romaji": "Jojutsu",
+        "meaning": "Penuturan",
+        "sentence": "叙述の意味を調べました。",
+        "sentenceFurigana": "じょじゅつの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Penuturan."
+      },
+      {
+        "word": "叙情",
+        "reading": "じょじょう",
+        "romaji": "Jojou",
+        "meaning": "Lirisisme",
+        "sentence": "先生が叙情について話しました。",
+        "sentenceFurigana": "せんせいが じょじょうについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Lirisisme."
+      }
+    ]
+  },
+  {
+    "id": "N2_173",
+    "kanji": "抄",
+    "onyomi": "ショウ",
+    "kunyomi": "-",
+    "romaji": "Shou",
+    "meaning": "Ringkasan/Kutipan",
+    "examples": [
+      {
+        "word": "抄録",
+        "reading": "しょうろく",
+        "romaji": "Shouroku",
+        "meaning": "Abstrak/ringkasan",
+        "sentence": "ノートに抄録と書きました。",
+        "sentenceFurigana": "ノートに しょうろくと かきました。",
+        "sentenceMeaning": "Menulis “Abstrak/ringkasan” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_174",
+    "kanji": "肖",
+    "onyomi": "ショウ",
+    "kunyomi": "-",
+    "romaji": "Shou",
+    "meaning": "Menyerupai",
+    "examples": [
+      {
+        "word": "肖像",
+        "reading": "しょうぞう",
+        "romaji": "Shouzou",
+        "meaning": "Potret",
+        "sentence": "肖像について勉強します。",
+        "sentenceFurigana": "しょうぞうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Potret."
+      },
+      {
+        "word": "不肖",
+        "reading": "ふしょう",
+        "romaji": "Fushou",
+        "meaning": "Tak berbakti/saya (rendah hati)",
+        "sentence": "不肖にとても興味があります。",
+        "sentenceFurigana": "ふしょうに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Tak berbakti/saya (rendah hati)."
+      }
+    ]
+  },
+  {
+    "id": "N2_175",
+    "kanji": "尚",
+    "onyomi": "ショウ",
+    "kunyomi": "なお",
+    "romaji": "Shou",
+    "meaning": "Lagi pula/Menjunjung",
+    "examples": [
+      {
+        "word": "高尚",
+        "reading": "こうしょう",
+        "romaji": "Koushou",
+        "meaning": "Berkelas/luhur",
+        "sentence": "高尚はとても大切です。",
+        "sentenceFurigana": "こうしょうは とても たいせつです。",
+        "sentenceMeaning": "Berkelas/luhur sangat penting."
+      },
+      {
+        "word": "尚更",
+        "reading": "なおさら",
+        "romaji": "Naosara",
+        "meaning": "Apalagi",
+        "sentence": "尚更の意味を調べました。",
+        "sentenceFurigana": "なおさらの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Apalagi."
+      }
+    ]
+  },
+  {
+    "id": "N2_176",
+    "kanji": "沼",
+    "onyomi": "ショウ",
+    "kunyomi": "ぬま",
+    "romaji": "Shou",
+    "meaning": "Rawa",
+    "examples": [
+      {
+        "word": "沼地",
+        "reading": "ぬまち",
+        "romaji": "Numachi",
+        "meaning": "Tanah rawa",
+        "sentence": "先生が沼地について話しました。",
+        "sentenceFurigana": "せんせいが ぬまちについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Tanah rawa."
+      },
+      {
+        "word": "湖沼",
+        "reading": "こしょう",
+        "romaji": "Koshou",
+        "meaning": "Danau dan rawa",
+        "sentence": "ノートに湖沼と書きました。",
+        "sentenceFurigana": "ノートに こしょうと かきました。",
+        "sentenceMeaning": "Menulis “Danau dan rawa” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_177",
+    "kanji": "祥",
+    "onyomi": "ショウ",
+    "kunyomi": "-",
+    "romaji": "Shou",
+    "meaning": "Pertanda baik",
+    "examples": [
+      {
+        "word": "吉祥",
+        "reading": "きっしょう",
+        "romaji": "Kisshou",
+        "meaning": "Pertanda mujur",
+        "sentence": "吉祥について勉強します。",
+        "sentenceFurigana": "きっしょうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Pertanda mujur."
+      },
+      {
+        "word": "発祥",
+        "reading": "はっしょう",
+        "romaji": "Hasshou",
+        "meaning": "Asal mula",
+        "sentence": "発祥にとても興味があります。",
+        "sentenceFurigana": "はっしょうに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Asal mula."
+      }
+    ]
+  },
+  {
+    "id": "N2_178",
+    "kanji": "渉",
+    "onyomi": "ショウ",
+    "kunyomi": "-",
+    "romaji": "Shou",
+    "meaning": "Menyeberang/Berhubungan",
+    "examples": [
+      {
+        "word": "干渉",
+        "reading": "かんしょう",
+        "romaji": "Kanshou",
+        "meaning": "Campur tangan",
+        "sentence": "干渉はとても大切です。",
+        "sentenceFurigana": "かんしょうは とても たいせつです。",
+        "sentenceMeaning": "Campur tangan sangat penting."
+      },
+      {
+        "word": "渉外",
+        "reading": "しょうがい",
+        "romaji": "Shougai",
+        "meaning": "Urusan luar/humas",
+        "sentence": "渉外の意味を調べました。",
+        "sentenceFurigana": "しょうがいの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Urusan luar/humas."
+      }
+    ]
+  },
+  {
+    "id": "N2_179",
+    "kanji": "訟",
+    "onyomi": "ショウ",
+    "kunyomi": "-",
+    "romaji": "Shou",
+    "meaning": "Gugatan",
+    "examples": [
+      {
+        "word": "訴訟",
+        "reading": "そしょう",
+        "romaji": "Soshou",
+        "meaning": "Litigasi/gugatan",
+        "sentence": "先生が訴訟について話しました。",
+        "sentenceFurigana": "せんせいが そしょうについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Litigasi/gugatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_180",
+    "kanji": "硝",
+    "onyomi": "ショウ",
+    "kunyomi": "-",
+    "romaji": "Shou",
+    "meaning": "Sendawa/Mesiu",
+    "examples": [
+      {
+        "word": "硝酸",
+        "reading": "しょうさん",
+        "romaji": "Shousan",
+        "meaning": "Asam nitrat",
+        "sentence": "ノートに硝酸と書きました。",
+        "sentenceFurigana": "ノートに しょうさんと かきました。",
+        "sentenceMeaning": "Menulis “Asam nitrat” di buku catatan."
+      },
+      {
+        "word": "硝煙",
+        "reading": "しょうえん",
+        "romaji": "Shouen",
+        "meaning": "Asap mesiu",
+        "sentence": "硝煙について勉強します。",
+        "sentenceFurigana": "しょうえんについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Asap mesiu."
+      }
+    ]
+  },
+  {
+    "id": "N2_181",
+    "kanji": "奨",
+    "onyomi": "ショウ",
+    "kunyomi": "-",
+    "romaji": "Shou",
+    "meaning": "Menganjurkan",
+    "examples": [
+      {
+        "word": "奨励",
+        "reading": "しょうれい",
+        "romaji": "Shourei",
+        "meaning": "Mendorong/anjuran",
+        "sentence": "奨励にとても興味があります。",
+        "sentenceFurigana": "しょうれいに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Mendorong/anjuran."
+      },
+      {
+        "word": "奨学金",
+        "reading": "しょうがくきん",
+        "romaji": "Shougakukin",
+        "meaning": "Beasiswa",
+        "sentence": "奨学金に会いました。",
+        "sentenceFurigana": "しょうがくきんに あいました。",
+        "sentenceMeaning": "Bertemu dengan Beasiswa."
+      },
+      {
+        "word": "推奨",
+        "reading": "すいしょう",
+        "romaji": "Suishou",
+        "meaning": "Rekomendasi",
+        "sentence": "推奨はとても大切です。",
+        "sentenceFurigana": "すいしょうは とても たいせつです。",
+        "sentenceMeaning": "Rekomendasi sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_182",
+    "kanji": "彰",
+    "onyomi": "ショウ",
+    "kunyomi": "-",
+    "romaji": "Shou",
+    "meaning": "Memuji/Jelas",
+    "examples": [
+      {
+        "word": "表彰",
+        "reading": "ひょうしょう",
+        "romaji": "Hyoushou",
+        "meaning": "Penghargaan",
+        "sentence": "表彰の意味を調べました。",
+        "sentenceFurigana": "ひょうしょうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Penghargaan."
+      }
+    ]
+  },
+  {
+    "id": "N2_183",
+    "kanji": "礁",
+    "onyomi": "ショウ",
+    "kunyomi": "-",
+    "romaji": "Shou",
+    "meaning": "Karang",
+    "examples": [
+      {
+        "word": "岩礁",
+        "reading": "がんしょう",
+        "romaji": "Ganshou",
+        "meaning": "Batu karang",
+        "sentence": "先生が岩礁について話しました。",
+        "sentenceFurigana": "せんせいが がんしょうについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Batu karang."
+      },
+      {
+        "word": "珊瑚礁",
+        "reading": "さんごしょう",
+        "romaji": "Sangoshou",
+        "meaning": "Terumbu karang",
+        "sentence": "ノートに珊瑚礁と書きました。",
+        "sentenceFurigana": "ノートに さんごしょうと かきました。",
+        "sentenceMeaning": "Menulis “Terumbu karang” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_184",
+    "kanji": "鐘",
+    "onyomi": "ショウ",
+    "kunyomi": "かね",
+    "romaji": "Shou",
+    "meaning": "Lonceng",
+    "examples": [
+      {
+        "word": "警鐘",
+        "reading": "けいしょう",
+        "romaji": "Keishou",
+        "meaning": "Lonceng peringatan",
+        "sentence": "警鐘について勉強します。",
+        "sentenceFurigana": "けいしょうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Lonceng peringatan."
+      },
+      {
+        "word": "鐘楼",
+        "reading": "しょうろう",
+        "romaji": "Shourou",
+        "meaning": "Menara lonceng",
+        "sentence": "鐘楼にとても興味があります。",
+        "sentenceFurigana": "しょうろうに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Menara lonceng."
+      }
+    ]
+  },
+  {
+    "id": "N2_185",
+    "kanji": "丈",
+    "onyomi": "ジョウ",
+    "kunyomi": "たけ",
+    "romaji": "Jou",
+    "meaning": "Panjang/Tegar",
+    "examples": [
+      {
+        "word": "頑丈",
+        "reading": "がんじょう",
+        "romaji": "Ganjou",
+        "meaning": "Kokoh",
+        "sentence": "頑丈はとても大切です。",
+        "sentenceFurigana": "がんじょうは とても たいせつです。",
+        "sentenceMeaning": "Kokoh sangat penting."
+      },
+      {
+        "word": "気丈",
+        "reading": "きじょう",
+        "romaji": "Kijou",
+        "meaning": "Tegar",
+        "sentence": "気丈の意味を調べました。",
+        "sentenceFurigana": "きじょうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Tegar."
+      }
+    ]
+  },
+  {
+    "id": "N2_186",
+    "kanji": "冗",
+    "onyomi": "ジョウ",
+    "kunyomi": "-",
+    "romaji": "Jou",
+    "meaning": "Berlebihan",
+    "examples": [
+      {
+        "word": "冗談",
+        "reading": "じょうだん",
+        "romaji": "Joudan",
+        "meaning": "Candaan",
+        "sentence": "先生が冗談について話しました。",
+        "sentenceFurigana": "せんせいが じょうだんについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Candaan."
+      },
+      {
+        "word": "冗長",
+        "reading": "じょうちょう",
+        "romaji": "Jouchou",
+        "meaning": "Bertele-tele",
+        "sentence": "ノートに冗長と書きました。",
+        "sentenceFurigana": "ノートに じょうちょうと かきました。",
+        "sentenceMeaning": "Menulis “Bertele-tele” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_187",
+    "kanji": "浄",
+    "onyomi": "ジョウ",
+    "kunyomi": "-",
+    "romaji": "Jou",
+    "meaning": "Bersih/Suci",
+    "examples": [
+      {
+        "word": "洗浄",
+        "reading": "せんじょう",
+        "romaji": "Senjou",
+        "meaning": "Pencucian",
+        "sentence": "洗浄について勉強します。",
+        "sentenceFurigana": "せんじょうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Pencucian."
+      },
+      {
+        "word": "浄化",
+        "reading": "じょうか",
+        "romaji": "Jouka",
+        "meaning": "Pemurnian",
+        "sentence": "浄化にとても興味があります。",
+        "sentenceFurigana": "じょうかに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Pemurnian."
+      },
+      {
+        "word": "清浄",
+        "reading": "せいじょう",
+        "romaji": "Seijou",
+        "meaning": "Kebersihan",
+        "sentence": "清浄はとても大切です。",
+        "sentenceFurigana": "せいじょうは とても たいせつです。",
+        "sentenceMeaning": "Kebersihan sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_188",
+    "kanji": "剰",
+    "onyomi": "ジョウ",
+    "kunyomi": "-",
+    "romaji": "Jou",
+    "meaning": "Berlebih/Sisa",
+    "examples": [
+      {
+        "word": "余剰",
+        "reading": "よじょう",
+        "romaji": "Yojou",
+        "meaning": "Surplus",
+        "sentence": "余剰の意味を調べました。",
+        "sentenceFurigana": "よじょうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Surplus."
+      },
+      {
+        "word": "剰余",
+        "reading": "じょうよ",
+        "romaji": "Jouyo",
+        "meaning": "Sisa/kelebihan",
+        "sentence": "先生が剰余について話しました。",
+        "sentenceFurigana": "せんせいが じょうよについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Sisa/kelebihan."
+      }
+    ]
+  },
+  {
+    "id": "N2_189",
+    "kanji": "畳",
+    "onyomi": "ジョウ",
+    "kunyomi": "たた・む",
+    "romaji": "Jou",
+    "meaning": "Tikar/Melipat",
+    "examples": [
+      {
+        "word": "折り畳み",
+        "reading": "おりたたみ",
+        "romaji": "Oritatami",
+        "meaning": "Lipat",
+        "sentence": "ノートに折り畳みと書きました。",
+        "sentenceFurigana": "ノートに おりたたみと かきました。",
+        "sentenceMeaning": "Menulis “Lipat” di buku catatan."
+      },
+      {
+        "word": "畳語",
+        "reading": "じょうご",
+        "romaji": "Jougo",
+        "meaning": "Kata ulang",
+        "sentence": "畳語について勉強します。",
+        "sentenceFurigana": "じょうごについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Kata ulang."
+      }
+    ]
+  },
+  {
+    "id": "N2_190",
+    "kanji": "嬢",
+    "onyomi": "ジョウ",
+    "kunyomi": "-",
+    "romaji": "Jou",
+    "meaning": "Nona",
+    "examples": [
+      {
+        "word": "令嬢",
+        "reading": "れいじょう",
+        "romaji": "Reijou",
+        "meaning": "Putri (terhormat)",
+        "sentence": "令嬢にとても興味があります。",
+        "sentenceFurigana": "れいじょうに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Putri (terhormat)."
+      },
+      {
+        "word": "愛嬢",
+        "reading": "あいじょう",
+        "romaji": "Aijou",
+        "meaning": "Putri kesayangan",
+        "sentence": "愛嬢はとても大切です。",
+        "sentenceFurigana": "あいじょうは とても たいせつです。",
+        "sentenceMeaning": "Putri kesayangan sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_191",
+    "kanji": "錠",
+    "onyomi": "ジョウ",
+    "kunyomi": "-",
+    "romaji": "Jou",
+    "meaning": "Kunci/Tablet",
+    "examples": [
+      {
+        "word": "錠前",
+        "reading": "じょうまえ",
+        "romaji": "Joumae",
+        "meaning": "Gembok",
+        "sentence": "錠前の意味を調べました。",
+        "sentenceFurigana": "じょうまえの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Gembok."
+      },
+      {
+        "word": "施錠",
+        "reading": "せじょう",
+        "romaji": "Sejou",
+        "meaning": "Mengunci",
+        "sentence": "先生が施錠について話しました。",
+        "sentenceFurigana": "せんせいが せじょうについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Mengunci."
+      },
+      {
+        "word": "錠剤",
+        "reading": "じょうざい",
+        "romaji": "Jouzai",
+        "meaning": "Tablet",
+        "sentence": "ノートに錠剤と書きました。",
+        "sentenceFurigana": "ノートに じょうざいと かきました。",
+        "sentenceMeaning": "Menulis “Tablet” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_192",
+    "kanji": "醸",
+    "onyomi": "ジョウ",
+    "kunyomi": "かも・す",
+    "romaji": "Jou",
+    "meaning": "Menyeduh/Menimbulkan",
+    "examples": [
+      {
+        "word": "醸造",
+        "reading": "じょうぞう",
+        "romaji": "Jouzou",
+        "meaning": "Pembuatan (bir/sake)",
+        "sentence": "醸造について勉強します。",
+        "sentenceFurigana": "じょうぞうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Pembuatan (bir/sake)."
+      },
+      {
+        "word": "醸成",
+        "reading": "じょうせい",
+        "romaji": "Jousei",
+        "meaning": "Menimbulkan (suasana)",
+        "sentence": "醸成にとても興味があります。",
+        "sentenceFurigana": "じょうせいに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Menimbulkan (suasana)."
+      }
+    ]
+  },
+  {
+    "id": "N2_193",
+    "kanji": "殖",
+    "onyomi": "ショク",
+    "kunyomi": "ふ・える",
+    "romaji": "Shoku",
+    "meaning": "Berkembang biak",
+    "examples": [
+      {
+        "word": "繁殖",
+        "reading": "はんしょく",
+        "romaji": "Hanshoku",
+        "meaning": "Perkembangbiakan",
+        "sentence": "繁殖はとても大切です。",
+        "sentenceFurigana": "はんしょくは とても たいせつです。",
+        "sentenceMeaning": "Perkembangbiakan sangat penting."
+      },
+      {
+        "word": "養殖",
+        "reading": "ようしょく",
+        "romaji": "Youshoku",
+        "meaning": "Budidaya",
+        "sentence": "養殖の意味を調べました。",
+        "sentenceFurigana": "ようしょくの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Budidaya."
+      },
+      {
+        "word": "増殖",
+        "reading": "ぞうしょく",
+        "romaji": "Zoushoku",
+        "meaning": "Proliferasi",
+        "sentence": "先生が増殖について話しました。",
+        "sentenceFurigana": "せんせいが ぞうしょくについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Proliferasi."
+      }
+    ]
+  },
+  {
+    "id": "N2_194",
+    "kanji": "飾",
+    "onyomi": "ショク",
+    "kunyomi": "かざ・る",
+    "romaji": "Shoku",
+    "meaning": "Menghias",
+    "examples": [
+      {
+        "word": "装飾",
+        "reading": "そうしょく",
+        "romaji": "Soushoku",
+        "meaning": "Dekorasi",
+        "sentence": "ノートに装飾と書きました。",
+        "sentenceFurigana": "ノートに そうしょくと かきました。",
+        "sentenceMeaning": "Menulis “Dekorasi” di buku catatan."
+      },
+      {
+        "word": "修飾",
+        "reading": "しゅうしょく",
+        "romaji": "Shuushoku",
+        "meaning": "Memodifikasi/menghias",
+        "sentence": "修飾について勉強します。",
+        "sentenceFurigana": "しゅうしょくについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Memodifikasi/menghias."
+      },
+      {
+        "word": "服飾",
+        "reading": "ふくしょく",
+        "romaji": "Fukushoku",
+        "meaning": "Busana",
+        "sentence": "服飾にとても興味があります。",
+        "sentenceFurigana": "ふくしょくに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Busana."
+      }
+    ]
+  },
+  {
+    "id": "N2_195",
+    "kanji": "触",
+    "onyomi": "ショク",
+    "kunyomi": "ふ・れる",
+    "romaji": "Shoku",
+    "meaning": "Menyentuh",
+    "examples": [
+      {
+        "word": "感触",
+        "reading": "かんしょく",
+        "romaji": "Kanshoku",
+        "meaning": "Sentuhan/kesan",
+        "sentence": "感触はとても大切です。",
+        "sentenceFurigana": "かんしょくは とても たいせつです。",
+        "sentenceMeaning": "Sentuhan/kesan sangat penting."
+      },
+      {
+        "word": "触覚",
+        "reading": "しょっかく",
+        "romaji": "Shokkaku",
+        "meaning": "Indra peraba",
+        "sentence": "触覚の意味を調べました。",
+        "sentenceFurigana": "しょっかくの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Indra peraba."
+      },
+      {
+        "word": "抵触",
+        "reading": "ていしょく",
+        "romaji": "Teishoku",
+        "meaning": "Berbenturan/melanggar",
+        "sentence": "先生が抵触について話しました。",
+        "sentenceFurigana": "せんせいが ていしょくについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Berbenturan/melanggar."
+      }
+    ]
+  },
+  {
+    "id": "N2_196",
+    "kanji": "辱",
+    "onyomi": "ジョク",
+    "kunyomi": "はずかし・める",
+    "romaji": "Joku",
+    "meaning": "Menghina",
+    "examples": [
+      {
+        "word": "屈辱",
+        "reading": "くつじょく",
+        "romaji": "Kutsujoku",
+        "meaning": "Penghinaan",
+        "sentence": "ノートに屈辱と書きました。",
+        "sentenceFurigana": "ノートに くつじょくと かきました。",
+        "sentenceMeaning": "Menulis “Penghinaan” di buku catatan."
+      },
+      {
+        "word": "侮辱",
+        "reading": "ぶじょく",
+        "romaji": "Bujoku",
+        "meaning": "Penghinaan",
+        "sentence": "侮辱について勉強します。",
+        "sentenceFurigana": "ぶじょくについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Penghinaan."
+      }
+    ]
+  },
+  {
+    "id": "N2_197",
+    "kanji": "辛",
+    "onyomi": "シン",
+    "kunyomi": "から・い",
+    "romaji": "Shin",
+    "meaning": "Pedas/Pedih",
+    "examples": [
+      {
+        "word": "辛抱",
+        "reading": "しんぼう",
+        "romaji": "Shinbou",
+        "meaning": "Kesabaran",
+        "sentence": "辛抱にとても興味があります。",
+        "sentenceFurigana": "しんぼうに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Kesabaran."
+      },
+      {
+        "word": "辛勝",
+        "reading": "しんしょう",
+        "romaji": "Shinshou",
+        "meaning": "Menang tipis",
+        "sentence": "辛勝はとても大切です。",
+        "sentenceFurigana": "しんしょうは とても たいせつです。",
+        "sentenceMeaning": "Menang tipis sangat penting."
+      },
+      {
+        "word": "香辛料",
+        "reading": "こうしんりょう",
+        "romaji": "Koushinryou",
+        "meaning": "Rempah-rempah",
+        "sentence": "香辛料の意味を調べました。",
+        "sentenceFurigana": "こうしんりょうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Rempah-rempah."
+      }
+    ]
+  },
+  {
+    "id": "N2_198",
+    "kanji": "侵",
+    "onyomi": "シン",
+    "kunyomi": "おか・す",
+    "romaji": "Shin",
+    "meaning": "Menyerbu/Melanggar",
+    "examples": [
+      {
+        "word": "侵入",
+        "reading": "しんにゅう",
+        "romaji": "Shinnyuu",
+        "meaning": "Penyusupan",
+        "sentence": "先生が侵入について話しました。",
+        "sentenceFurigana": "せんせいが しんにゅうについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Penyusupan."
+      },
+      {
+        "word": "侵食",
+        "reading": "しんしょく",
+        "romaji": "Shinshoku",
+        "meaning": "Erosi",
+        "sentence": "ノートに侵食と書きました。",
+        "sentenceFurigana": "ノートに しんしょくと かきました。",
+        "sentenceMeaning": "Menulis “Erosi” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_199",
+    "kanji": "娠",
+    "onyomi": "シン",
+    "kunyomi": "-",
+    "romaji": "Shin",
+    "meaning": "Hamil",
+    "examples": [
+      {
+        "word": "妊娠",
+        "reading": "にんしん",
+        "romaji": "Ninshin",
+        "meaning": "Kehamilan",
+        "sentence": "妊娠について勉強します。",
+        "sentenceFurigana": "にんしんについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Kehamilan."
+      }
+    ]
+  },
+  {
+    "id": "N2_200",
+    "kanji": "紳",
+    "onyomi": "シン",
+    "kunyomi": "-",
+    "romaji": "Shin",
+    "meaning": "Pria terhormat",
+    "examples": [
+      {
+        "word": "紳士",
+        "reading": "しんし",
+        "romaji": "Shinshi",
+        "meaning": "Gentleman",
+        "sentence": "紳士にとても興味があります。",
+        "sentenceFurigana": "しんしに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Gentleman."
+      }
+    ]
+  },
+  {
+    "id": "N2_201",
+    "kanji": "診",
+    "onyomi": "シン",
+    "kunyomi": "み・る",
+    "romaji": "Shin",
+    "meaning": "Memeriksa (medis)",
+    "examples": [
+      {
+        "word": "診断",
+        "reading": "しんだん",
+        "romaji": "Shindan",
+        "meaning": "Diagnosis",
+        "sentence": "診断はとても大切です。",
+        "sentenceFurigana": "しんだんは とても たいせつです。",
+        "sentenceMeaning": "Diagnosis sangat penting."
+      },
+      {
+        "word": "検診",
+        "reading": "けんしん",
+        "romaji": "Kenshin",
+        "meaning": "Pemeriksaan kesehatan",
+        "sentence": "検診の意味を調べました。",
+        "sentenceFurigana": "けんしんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Pemeriksaan kesehatan."
+      },
+      {
+        "word": "往診",
+        "reading": "おうしん",
+        "romaji": "Oushin",
+        "meaning": "Kunjungan dokter",
+        "sentence": "往診はとても親切です。",
+        "sentenceFurigana": "おうしんは とても しんせつです。",
+        "sentenceMeaning": "Kunjungan dokter sangat baik hati."
+      }
+    ]
+  },
+  {
+    "id": "N2_202",
+    "kanji": "寝",
+    "onyomi": "シン",
+    "kunyomi": "ね・る",
+    "romaji": "Shin",
+    "meaning": "Tidur",
+    "examples": [
+      {
+        "word": "就寝",
+        "reading": "しゅうしん",
+        "romaji": "Shuushin",
+        "meaning": "Beranjak tidur",
+        "sentence": "先生が就寝について話しました。",
+        "sentenceFurigana": "せんせいが しゅうしんについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Beranjak tidur."
+      },
+      {
+        "word": "寝室",
+        "reading": "しんしつ",
+        "romaji": "Shinshitsu",
+        "meaning": "Kamar tidur",
+        "sentence": "寝室で買い物をします。",
+        "sentenceFurigana": "しんしつで かいものを します。",
+        "sentenceMeaning": "Berbelanja di Kamar tidur."
+      },
+      {
+        "word": "寝具",
+        "reading": "しんぐ",
+        "romaji": "Shingu",
+        "meaning": "Perlengkapan tidur",
+        "sentence": "ノートに寝具と書きました。",
+        "sentenceFurigana": "ノートに しんぐと かきました。",
+        "sentenceMeaning": "Menulis “Perlengkapan tidur” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_203",
+    "kanji": "審",
+    "onyomi": "シン",
+    "kunyomi": "-",
+    "romaji": "Shin",
+    "meaning": "Memeriksa/Juri",
+    "examples": [
+      {
+        "word": "審判",
+        "reading": "しんぱん",
+        "romaji": "Shinpan",
+        "meaning": "Wasit/keputusan",
+        "sentence": "審判について勉強します。",
+        "sentenceFurigana": "しんぱんについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Wasit/keputusan."
+      },
+      {
+        "word": "不審",
+        "reading": "ふしん",
+        "romaji": "Fushin",
+        "meaning": "Mencurigakan",
+        "sentence": "不審にとても興味があります。",
+        "sentenceFurigana": "ふしんに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Mencurigakan."
+      },
+      {
+        "word": "審議",
+        "reading": "しんぎ",
+        "romaji": "Shingi",
+        "meaning": "Pembahasan/deliberasi",
+        "sentence": "審議はとても大切です。",
+        "sentenceFurigana": "しんぎは とても たいせつです。",
+        "sentenceMeaning": "Pembahasan/deliberasi sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_204",
+    "kanji": "刃",
+    "onyomi": "ジン",
+    "kunyomi": "は",
+    "romaji": "Jin",
+    "meaning": "Mata pisau",
+    "examples": [
+      {
+        "word": "刃物",
+        "reading": "はもの",
+        "romaji": "Hamono",
+        "meaning": "Benda tajam",
+        "sentence": "刃物は雨が降りました。",
+        "sentenceFurigana": "はものは あめが ふりました。",
+        "sentenceMeaning": "Turun hujan pada Benda tajam."
+      },
+      {
+        "word": "凶刃",
+        "reading": "きょうじん",
+        "romaji": "Kyoujin",
+        "meaning": "Senjata tajam (kejahatan)",
+        "sentence": "凶刃はいい天気です。",
+        "sentenceFurigana": "きょうじんは いい てんきです。",
+        "sentenceMeaning": "Cuaca Senjata tajam (kejahatan) bagus."
+      }
+    ]
+  },
+  {
+    "id": "N2_205",
+    "kanji": "尽",
+    "onyomi": "ジン",
+    "kunyomi": "つ・くす",
+    "romaji": "Jin",
+    "meaning": "Habis/Mengerahkan",
+    "examples": [
+      {
+        "word": "尽力",
+        "reading": "じんりょく",
+        "romaji": "Jinryoku",
+        "meaning": "Upaya keras",
+        "sentence": "尽力の意味を調べました。",
+        "sentenceFurigana": "じんりょくの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Upaya keras."
+      },
+      {
+        "word": "無尽蔵",
+        "reading": "むじんぞう",
+        "romaji": "Mujinzou",
+        "meaning": "Tak habis-habis",
+        "sentence": "先生が無尽蔵について話しました。",
+        "sentenceFurigana": "せんせいが むじんぞうについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Tak habis-habis."
+      }
+    ]
+  },
+  {
+    "id": "N2_206",
+    "kanji": "迅",
+    "onyomi": "ジン",
+    "kunyomi": "-",
+    "romaji": "Jin",
+    "meaning": "Cepat",
+    "examples": [
+      {
+        "word": "迅速",
+        "reading": "じんそく",
+        "romaji": "Jinsoku",
+        "meaning": "Cepat/gesit",
+        "sentence": "ノートに迅速と書きました。",
+        "sentenceFurigana": "ノートに じんそくと かきました。",
+        "sentenceMeaning": "Menulis “Cepat/gesit” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_207",
+    "kanji": "甚",
+    "onyomi": "ジン",
+    "kunyomi": "はなは・だ",
+    "romaji": "Jin",
+    "meaning": "Amat sangat",
+    "examples": [
+      {
+        "word": "甚大",
+        "reading": "じんだい",
+        "romaji": "Jindai",
+        "meaning": "Sangat besar",
+        "sentence": "甚大について勉強します。",
+        "sentenceFurigana": "じんだいについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Sangat besar."
+      },
+      {
+        "word": "激甚",
+        "reading": "げきじん",
+        "romaji": "Gekijin",
+        "meaning": "Amat parah",
+        "sentence": "激甚にとても興味があります。",
+        "sentenceFurigana": "げきじんに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Amat parah."
+      }
+    ]
+  },
+  {
+    "id": "N2_208",
+    "kanji": "陣",
+    "onyomi": "ジン",
+    "kunyomi": "-",
+    "romaji": "Jin",
+    "meaning": "Formasi/Kubu",
+    "examples": [
+      {
+        "word": "陣営",
+        "reading": "じんえい",
+        "romaji": "Jin'ei",
+        "meaning": "Kubu/kamp",
+        "sentence": "陣営はとても大切です。",
+        "sentenceFurigana": "じんえいは とても たいせつです。",
+        "sentenceMeaning": "Kubu/kamp sangat penting."
+      },
+      {
+        "word": "報道陣",
+        "reading": "ほうどうじん",
+        "romaji": "Houdoujin",
+        "meaning": "Kelompok pers",
+        "sentence": "報道陣の意味を調べました。",
+        "sentenceFurigana": "ほうどうじんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Kelompok pers."
+      },
+      {
+        "word": "退陣",
+        "reading": "たいじん",
+        "romaji": "Taijin",
+        "meaning": "Mundur dari jabatan",
+        "sentence": "先生が退陣について話しました。",
+        "sentenceFurigana": "せんせいが たいじんについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Mundur dari jabatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_209",
+    "kanji": "尋",
+    "onyomi": "ジン",
+    "kunyomi": "たず・ねる",
+    "romaji": "Jin",
+    "meaning": "Mencari/Bertanya",
+    "examples": [
+      {
+        "word": "尋問",
+        "reading": "じんもん",
+        "romaji": "Jinmon",
+        "meaning": "Interogasi",
+        "sentence": "ノートに尋問と書きました。",
+        "sentenceFurigana": "ノートに じんもんと かきました。",
+        "sentenceMeaning": "Menulis “Interogasi” di buku catatan."
+      },
+      {
+        "word": "尋常",
+        "reading": "じんじょう",
+        "romaji": "Jinjou",
+        "meaning": "Biasa/normal",
+        "sentence": "尋常について勉強します。",
+        "sentenceFurigana": "じんじょうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Biasa/normal."
+      }
+    ]
+  },
+  {
+    "id": "N2_210",
+    "kanji": "据",
+    "onyomi": "-",
+    "kunyomi": "す・える",
+    "romaji": "Su",
+    "meaning": "Memasang/Menempatkan",
+    "examples": [
+      {
+        "word": "据え置き",
+        "reading": "すえおき",
+        "romaji": "Sueoki",
+        "meaning": "Penetapan/tak berubah",
+        "sentence": "据え置きにとても興味があります。",
+        "sentenceFurigana": "すえおきに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Penetapan/tak berubah."
+      }
+    ]
+  },
+  {
+    "id": "N2_211",
+    "kanji": "澄",
+    "onyomi": "チョウ",
+    "kunyomi": "す・む",
+    "romaji": "Chou",
+    "meaning": "Jernih",
+    "examples": [
+      {
+        "word": "清澄",
+        "reading": "せいちょう",
+        "romaji": "Seichou",
+        "meaning": "Bening/jernih",
+        "sentence": "清澄はとても大切です。",
+        "sentenceFurigana": "せいちょうは とても たいせつです。",
+        "sentenceMeaning": "Bening/jernih sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_212",
+    "kanji": "寸",
+    "onyomi": "スン",
+    "kunyomi": "-",
+    "romaji": "Sun",
+    "meaning": "Sun (satuan)/Sedikit",
+    "examples": [
+      {
+        "word": "寸前",
+        "reading": "すんぜん",
+        "romaji": "Sunzen",
+        "meaning": "Sesaat sebelum",
+        "sentence": "寸前の意味を調べました。",
+        "sentenceFurigana": "すんぜんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Sesaat sebelum."
+      },
+      {
+        "word": "寸断",
+        "reading": "すんだん",
+        "romaji": "Sundan",
+        "meaning": "Terpotong-potong",
+        "sentence": "先生が寸断について話しました。",
+        "sentenceFurigana": "せんせいが すんだんについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Terpotong-potong."
+      },
+      {
+        "word": "原寸",
+        "reading": "げんすん",
+        "romaji": "Gensun",
+        "meaning": "Ukuran asli",
+        "sentence": "ノートに原寸と書きました。",
+        "sentenceFurigana": "ノートに げんすんと かきました。",
+        "sentenceMeaning": "Menulis “Ukuran asli” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_213",
+    "kanji": "征",
+    "onyomi": "セイ",
+    "kunyomi": "-",
+    "romaji": "Sei",
+    "meaning": "Menaklukkan",
+    "examples": [
+      {
+        "word": "征服",
+        "reading": "せいふく",
+        "romaji": "Seifuku",
+        "meaning": "Penaklukan",
+        "sentence": "征服について勉強します。",
+        "sentenceFurigana": "せいふくについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Penaklukan."
+      },
+      {
+        "word": "遠征",
+        "reading": "えんせい",
+        "romaji": "Ensei",
+        "meaning": "Ekspedisi",
+        "sentence": "遠征にとても興味があります。",
+        "sentenceFurigana": "えんせいに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Ekspedisi."
+      }
+    ]
+  },
+  {
+    "id": "N2_214",
+    "kanji": "姓",
+    "onyomi": "セイ",
+    "kunyomi": "-",
+    "romaji": "Sei",
+    "meaning": "Marga/Nama keluarga",
+    "examples": [
+      {
+        "word": "姓名",
+        "reading": "せいめい",
+        "romaji": "Seimei",
+        "meaning": "Nama lengkap",
+        "sentence": "姓名はとても大切です。",
+        "sentenceFurigana": "せいめいは とても たいせつです。",
+        "sentenceMeaning": "Nama lengkap sangat penting."
+      },
+      {
+        "word": "旧姓",
+        "reading": "きゅうせい",
+        "romaji": "Kyuusei",
+        "meaning": "Nama gadis",
+        "sentence": "旧姓の意味を調べました。",
+        "sentenceFurigana": "きゅうせいの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Nama gadis."
+      }
+    ]
+  },
+  {
+    "id": "N2_215",
+    "kanji": "牲",
+    "onyomi": "セイ",
+    "kunyomi": "-",
+    "romaji": "Sei",
+    "meaning": "Kurban",
+    "examples": [
+      {
+        "word": "犠牲",
+        "reading": "ぎせい",
+        "romaji": "Gisei",
+        "meaning": "Pengorbanan",
+        "sentence": "先生が犠牲について話しました。",
+        "sentenceFurigana": "せんせいが ぎせいについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Pengorbanan."
+      }
+    ]
+  },
+  {
+    "id": "N2_216",
+    "kanji": "逝",
+    "onyomi": "セイ",
+    "kunyomi": "ゆ・く",
+    "romaji": "Sei",
+    "meaning": "Wafat",
+    "examples": [
+      {
+        "word": "逝去",
+        "reading": "せいきょ",
+        "romaji": "Seikyo",
+        "meaning": "Wafat/mangkat",
+        "sentence": "ノートに逝去と書きました。",
+        "sentenceFurigana": "ノートに せいきょと かきました。",
+        "sentenceMeaning": "Menulis “Wafat/mangkat” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_217",
+    "kanji": "請",
+    "onyomi": "セイ",
+    "kunyomi": "こ・う",
+    "romaji": "Sei",
+    "meaning": "Meminta",
+    "examples": [
+      {
+        "word": "請求",
+        "reading": "せいきゅう",
+        "romaji": "Seikyuu",
+        "meaning": "Penagihan/tuntutan",
+        "sentence": "請求について勉強します。",
+        "sentenceFurigana": "せいきゅうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Penagihan/tuntutan."
+      },
+      {
+        "word": "要請",
+        "reading": "ようせい",
+        "romaji": "Yousei",
+        "meaning": "Permintaan/imbauan",
+        "sentence": "要請にとても興味があります。",
+        "sentenceFurigana": "ようせいに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Permintaan/imbauan."
+      },
+      {
+        "word": "下請け",
+        "reading": "したうけ",
+        "romaji": "Shitauke",
+        "meaning": "Subkontrak",
+        "sentence": "下請けはとても大切です。",
+        "sentenceFurigana": "したうけは とても たいせつです。",
+        "sentenceMeaning": "Subkontrak sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_218",
+    "kanji": "惜",
+    "onyomi": "セキ",
+    "kunyomi": "お・しい",
+    "romaji": "Seki",
+    "meaning": "Sayang/Eman",
+    "examples": [
+      {
+        "word": "惜敗",
+        "reading": "せきはい",
+        "romaji": "Sekihai",
+        "meaning": "Kalah tipis",
+        "sentence": "惜敗の意味を調べました。",
+        "sentenceFurigana": "せきはいの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Kalah tipis."
+      },
+      {
+        "word": "惜別",
+        "reading": "せきべつ",
+        "romaji": "Sekibetsu",
+        "meaning": "Perpisahan pilu",
+        "sentence": "先生が惜別について話しました。",
+        "sentenceFurigana": "せんせいが せきべつについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Perpisahan pilu."
+      }
+    ]
+  },
+  {
+    "id": "N2_219",
+    "kanji": "籍",
+    "onyomi": "セキ",
+    "kunyomi": "-",
+    "romaji": "Seki",
+    "meaning": "Daftar/Kewarganegaraan",
+    "examples": [
+      {
+        "word": "戸籍",
+        "reading": "こせき",
+        "romaji": "Koseki",
+        "meaning": "Daftar keluarga",
+        "sentence": "戸籍と一緒に遊びます。",
+        "sentenceFurigana": "こせきと いっしょに あそびます。",
+        "sentenceMeaning": "Bermain bersama Daftar keluarga."
+      },
+      {
+        "word": "国籍",
+        "reading": "こくせき",
+        "romaji": "Kokuseki",
+        "meaning": "Kewarganegaraan",
+        "sentence": "国籍はとてもにぎやかです。",
+        "sentenceFurigana": "こくせきは とても にぎやかです。",
+        "sentenceMeaning": "Kewarganegaraan sangat ramai."
+      },
+      {
+        "word": "書籍",
+        "reading": "しょせき",
+        "romaji": "Shoseki",
+        "meaning": "Buku/pustaka",
+        "sentence": "ノートに書籍と書きました。",
+        "sentenceFurigana": "ノートに しょせきと かきました。",
+        "sentenceMeaning": "Menulis “Buku/pustaka” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_220",
+    "kanji": "仙",
+    "onyomi": "セン",
+    "kunyomi": "-",
+    "romaji": "Sen",
+    "meaning": "Pertapa sakti",
+    "examples": [
+      {
+        "word": "仙人",
+        "reading": "せんにん",
+        "romaji": "Sennin",
+        "meaning": "Pertapa sakti",
+        "sentence": "仙人について勉強します。",
+        "sentenceFurigana": "せんにんについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Pertapa sakti."
+      }
+    ]
+  },
+  {
+    "id": "N2_221",
+    "kanji": "占",
+    "onyomi": "セン",
+    "kunyomi": "し・める",
+    "romaji": "Sen",
+    "meaning": "Menduduki/Meramal",
+    "examples": [
+      {
+        "word": "占領",
+        "reading": "せんりょう",
+        "romaji": "Senryou",
+        "meaning": "Pendudukan",
+        "sentence": "占領にとても興味があります。",
+        "sentenceFurigana": "せんりょうに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Pendudukan."
+      },
+      {
+        "word": "独占",
+        "reading": "どくせん",
+        "romaji": "Dokusen",
+        "meaning": "Monopoli",
+        "sentence": "独占はとても大切です。",
+        "sentenceFurigana": "どくせんは とても たいせつです。",
+        "sentenceMeaning": "Monopoli sangat penting."
+      },
+      {
+        "word": "占有",
+        "reading": "せんゆう",
+        "romaji": "Sen'yuu",
+        "meaning": "Penguasaan",
+        "sentence": "占有の意味を調べました。",
+        "sentenceFurigana": "せんゆうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Penguasaan."
+      }
+    ]
+  },
+  {
+    "id": "N2_222",
+    "kanji": "扇",
+    "onyomi": "セン",
+    "kunyomi": "おうぎ",
+    "romaji": "Sen",
+    "meaning": "Kipas",
+    "examples": [
+      {
+        "word": "扇風機",
+        "reading": "せんぷうき",
+        "romaji": "Senpuuki",
+        "meaning": "Kipas angin",
+        "sentence": "先生が扇風機について話しました。",
+        "sentenceFurigana": "せんせいが せんぷうきについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Kipas angin."
+      },
+      {
+        "word": "扇子",
+        "reading": "せんす",
+        "romaji": "Sensu",
+        "meaning": "Kipas lipat",
+        "sentence": "ノートに扇子と書きました。",
+        "sentenceFurigana": "ノートに せんすと かきました。",
+        "sentenceMeaning": "Menulis “Kipas lipat” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_223",
+    "kanji": "潜",
+    "onyomi": "セン",
+    "kunyomi": "ひそ・む",
+    "romaji": "Sen",
+    "meaning": "Menyelam/Tersembunyi",
+    "examples": [
+      {
+        "word": "潜水",
+        "reading": "せんすい",
+        "romaji": "Sensui",
+        "meaning": "Menyelam",
+        "sentence": "潜水について勉強します。",
+        "sentenceFurigana": "せんすいについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Menyelam."
+      },
+      {
+        "word": "潜入",
+        "reading": "せんにゅう",
+        "romaji": "Sennyuu",
+        "meaning": "Menyusup",
+        "sentence": "潜入にとても興味があります。",
+        "sentenceFurigana": "せんにゅうに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Menyusup."
+      },
+      {
+        "word": "潜伏",
+        "reading": "せんぷく",
+        "romaji": "Senpuku",
+        "meaning": "Bersembunyi/inkubasi",
+        "sentence": "潜伏はとても大切です。",
+        "sentenceFurigana": "せんぷくは とても たいせつです。",
+        "sentenceMeaning": "Bersembunyi/inkubasi sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_224",
+    "kanji": "遷",
+    "onyomi": "セン",
+    "kunyomi": "-",
+    "romaji": "Sen",
+    "meaning": "Berpindah/Peralihan",
+    "examples": [
+      {
+        "word": "変遷",
+        "reading": "へんせん",
+        "romaji": "Hensen",
+        "meaning": "Perubahan/transisi",
+        "sentence": "変遷の意味を調べました。",
+        "sentenceFurigana": "へんせんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Perubahan/transisi."
+      },
+      {
+        "word": "左遷",
+        "reading": "させん",
+        "romaji": "Sasen",
+        "meaning": "Penurunan jabatan",
+        "sentence": "先生が左遷について話しました。",
+        "sentenceFurigana": "せんせいが させんについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Penurunan jabatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_225",
+    "kanji": "薦",
+    "onyomi": "セン",
+    "kunyomi": "すす・める",
+    "romaji": "Sen",
+    "meaning": "Merekomendasikan",
+    "examples": [
+      {
+        "word": "推薦",
+        "reading": "すいせん",
+        "romaji": "Suisen",
+        "meaning": "Rekomendasi",
+        "sentence": "ノートに推薦と書きました。",
+        "sentenceFurigana": "ノートに すいせんと かきました。",
+        "sentenceMeaning": "Menulis “Rekomendasi” di buku catatan."
+      },
+      {
+        "word": "自薦",
+        "reading": "じせん",
+        "romaji": "Jisen",
+        "meaning": "Mencalonkan diri",
+        "sentence": "自薦について勉強します。",
+        "sentenceFurigana": "じせんについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Mencalonkan diri."
+      }
+    ]
+  },
+  {
+    "id": "N2_226",
+    "kanji": "繊",
+    "onyomi": "セン",
+    "kunyomi": "-",
+    "romaji": "Sen",
+    "meaning": "Halus/Serat",
+    "examples": [
+      {
+        "word": "繊細",
+        "reading": "せんさい",
+        "romaji": "Sensai",
+        "meaning": "Halus/sensitif",
+        "sentence": "繊細にとても興味があります。",
+        "sentenceFurigana": "せんさいに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Halus/sensitif."
+      },
+      {
+        "word": "化繊",
+        "reading": "かせん",
+        "romaji": "Kasen",
+        "meaning": "Serat sintetis",
+        "sentence": "化繊はとても大切です。",
+        "sentenceFurigana": "かせんは とても たいせつです。",
+        "sentenceMeaning": "Serat sintetis sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_227",
+    "kanji": "鮮",
+    "onyomi": "セン",
+    "kunyomi": "あざ・やか",
+    "romaji": "Sen",
+    "meaning": "Segar/Cerah",
+    "examples": [
+      {
+        "word": "新鮮",
+        "reading": "しんせん",
+        "romaji": "Shinsen",
+        "meaning": "Segar",
+        "sentence": "新鮮の意味を調べました。",
+        "sentenceFurigana": "しんせんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Segar."
+      },
+      {
+        "word": "鮮明",
+        "reading": "せんめい",
+        "romaji": "Senmei",
+        "meaning": "Jelas/terang",
+        "sentence": "先生が鮮明について話しました。",
+        "sentenceFurigana": "せんせいが せんめいについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Jelas/terang."
+      },
+      {
+        "word": "鮮度",
+        "reading": "せんど",
+        "romaji": "Sendo",
+        "meaning": "Tingkat kesegaran",
+        "sentence": "ノートに鮮度と書きました。",
+        "sentenceFurigana": "ノートに せんどと かきました。",
+        "sentenceMeaning": "Menulis “Tingkat kesegaran” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_228",
+    "kanji": "禅",
+    "onyomi": "ゼン",
+    "kunyomi": "-",
+    "romaji": "Zen",
+    "meaning": "Zen",
+    "examples": [
+      {
+        "word": "禅宗",
+        "reading": "ぜんしゅう",
+        "romaji": "Zenshuu",
+        "meaning": "Aliran Zen",
+        "sentence": "禅宗について勉強します。",
+        "sentenceFurigana": "ぜんしゅうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Aliran Zen."
+      },
+      {
+        "word": "座禅",
+        "reading": "ざぜん",
+        "romaji": "Zazen",
+        "meaning": "Meditasi duduk",
+        "sentence": "座禅にとても興味があります。",
+        "sentenceFurigana": "ざぜんに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Meditasi duduk."
+      }
+    ]
+  },
+  {
+    "id": "N2_229",
+    "kanji": "漸",
+    "onyomi": "ゼン",
+    "kunyomi": "-",
+    "romaji": "Zen",
+    "meaning": "Berangsur",
+    "examples": [
+      {
+        "word": "漸次",
+        "reading": "ぜんじ",
+        "romaji": "Zenji",
+        "meaning": "Berangsur-angsur",
+        "sentence": "漸次はとても大切です。",
+        "sentenceFurigana": "ぜんじは とても たいせつです。",
+        "sentenceMeaning": "Berangsur-angsur sangat penting."
+      },
+      {
+        "word": "漸進",
+        "reading": "ぜんしん",
+        "romaji": "Zenshin",
+        "meaning": "Kemajuan bertahap",
+        "sentence": "漸進の意味を調べました。",
+        "sentenceFurigana": "ぜんしんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Kemajuan bertahap."
+      }
+    ]
+  },
+  {
+    "id": "N2_230",
+    "kanji": "疎",
+    "onyomi": "ソ",
+    "kunyomi": "うと・い",
+    "romaji": "So",
+    "meaning": "Renggang/Asing",
+    "examples": [
+      {
+        "word": "疎遠",
+        "reading": "そえん",
+        "romaji": "Soen",
+        "meaning": "Hubungan renggang",
+        "sentence": "先生が疎遠について話しました。",
+        "sentenceFurigana": "せんせいが そえんについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Hubungan renggang."
+      },
+      {
+        "word": "過疎",
+        "reading": "かそ",
+        "romaji": "Kaso",
+        "meaning": "Kekurangan penduduk",
+        "sentence": "ノートに過疎と書きました。",
+        "sentenceFurigana": "ノートに かそと かきました。",
+        "sentenceMeaning": "Menulis “Kekurangan penduduk” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_231",
+    "kanji": "礎",
+    "onyomi": "ソ",
+    "kunyomi": "いしずえ",
+    "romaji": "So",
+    "meaning": "Fondasi",
+    "examples": [
+      {
+        "word": "礎石",
+        "reading": "そせき",
+        "romaji": "Soseki",
+        "meaning": "Batu fondasi",
+        "sentence": "礎石について勉強します。",
+        "sentenceFurigana": "そせきについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Batu fondasi."
+      },
+      {
+        "word": "基礎",
+        "reading": "きそ",
+        "romaji": "Kiso",
+        "meaning": "Dasar/fondasi",
+        "sentence": "基礎にとても興味があります。",
+        "sentenceFurigana": "きそに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Dasar/fondasi."
+      }
+    ]
+  },
+  {
+    "id": "N2_232",
+    "kanji": "双",
+    "onyomi": "ソウ",
+    "kunyomi": "ふた",
+    "romaji": "Sou",
+    "meaning": "Sepasang",
+    "examples": [
+      {
+        "word": "双方",
+        "reading": "そうほう",
+        "romaji": "Souhou",
+        "meaning": "Kedua pihak",
+        "sentence": "双方はとても大切です。",
+        "sentenceFurigana": "そうほうは とても たいせつです。",
+        "sentenceMeaning": "Kedua pihak sangat penting."
+      },
+      {
+        "word": "双子",
+        "reading": "ふたご",
+        "romaji": "Futago",
+        "meaning": "Anak kembar",
+        "sentence": "双子に手紙を書きます。",
+        "sentenceFurigana": "ふたごに てがみを かきます。",
+        "sentenceMeaning": "Menulis surat untuk Anak kembar."
+      }
+    ]
+  },
+  {
+    "id": "N2_233",
+    "kanji": "壮",
+    "onyomi": "ソウ",
+    "kunyomi": "-",
+    "romaji": "Sou",
+    "meaning": "Gagah/Megah",
+    "examples": [
+      {
+        "word": "壮絶",
+        "reading": "そうぜつ",
+        "romaji": "Souzetsu",
+        "meaning": "Sengit/dramatis",
+        "sentence": "壮絶の意味を調べました。",
+        "sentenceFurigana": "そうぜつの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Sengit/dramatis."
+      },
+      {
+        "word": "悲壮",
+        "reading": "ひそう",
+        "romaji": "Hisou",
+        "meaning": "Tragis-heroik",
+        "sentence": "先生が悲壮について話しました。",
+        "sentenceFurigana": "せんせいが ひそうについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Tragis-heroik."
+      },
+      {
+        "word": "勇壮",
+        "reading": "ゆうそう",
+        "romaji": "Yuusou",
+        "meaning": "Gagah berani",
+        "sentence": "ノートに勇壮と書きました。",
+        "sentenceFurigana": "ノートに ゆうそうと かきました。",
+        "sentenceMeaning": "Menulis “Gagah berani” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_234",
+    "kanji": "荘",
+    "onyomi": "ソウ",
+    "kunyomi": "-",
+    "romaji": "Sou",
+    "meaning": "Vila/Khidmat",
+    "examples": [
+      {
+        "word": "別荘",
+        "reading": "べっそう",
+        "romaji": "Bessou",
+        "meaning": "Vila",
+        "sentence": "別荘について勉強します。",
+        "sentenceFurigana": "べっそうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Vila."
+      },
+      {
+        "word": "荘厳",
+        "reading": "そうごん",
+        "romaji": "Sougon",
+        "meaning": "Khidmat megah",
+        "sentence": "荘厳にとても興味があります。",
+        "sentenceFurigana": "そうごんに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Khidmat megah."
+      }
+    ]
+  },
+  {
+    "id": "N2_235",
+    "kanji": "捜",
+    "onyomi": "ソウ",
+    "kunyomi": "さが・す",
+    "romaji": "Sou",
+    "meaning": "Mencari",
+    "examples": [
+      {
+        "word": "捜査",
+        "reading": "そうさ",
+        "romaji": "Sousa",
+        "meaning": "Investigasi",
+        "sentence": "捜査はとても大切です。",
+        "sentenceFurigana": "そうさは とても たいせつです。",
+        "sentenceMeaning": "Investigasi sangat penting."
+      },
+      {
+        "word": "捜索",
+        "reading": "そうさく",
+        "romaji": "Sousaku",
+        "meaning": "Pencarian",
+        "sentence": "捜索の意味を調べました。",
+        "sentenceFurigana": "そうさくの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Pencarian."
+      }
+    ]
+  },
+  {
+    "id": "N2_236",
+    "kanji": "挿",
+    "onyomi": "ソウ",
+    "kunyomi": "さ・す",
+    "romaji": "Sou",
+    "meaning": "Menyisipkan",
+    "examples": [
+      {
+        "word": "挿入",
+        "reading": "そうにゅう",
+        "romaji": "Sounyuu",
+        "meaning": "Penyisipan",
+        "sentence": "先生が挿入について話しました。",
+        "sentenceFurigana": "せんせいが そうにゅうについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Penyisipan."
+      },
+      {
+        "word": "挿話",
+        "reading": "そうわ",
+        "romaji": "Souwa",
+        "meaning": "Anekdot/episode",
+        "sentence": "ノートに挿話と書きました。",
+        "sentenceFurigana": "ノートに そうわと かきました。",
+        "sentenceMeaning": "Menulis “Anekdot/episode” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_237",
+    "kanji": "僧",
+    "onyomi": "ソウ",
+    "kunyomi": "-",
+    "romaji": "Sou",
+    "meaning": "Biksu",
+    "examples": [
+      {
+        "word": "僧侶",
+        "reading": "そうりょ",
+        "romaji": "Souryo",
+        "meaning": "Biksu",
+        "sentence": "僧侶について勉強します。",
+        "sentenceFurigana": "そうりょについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Biksu."
+      },
+      {
+        "word": "高僧",
+        "reading": "こうそう",
+        "romaji": "Kousou",
+        "meaning": "Biksu terhormat",
+        "sentence": "高僧にとても興味があります。",
+        "sentenceFurigana": "こうそうに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Biksu terhormat."
+      }
+    ]
+  },
+  {
+    "id": "N2_238",
+    "kanji": "喪",
+    "onyomi": "ソウ",
+    "kunyomi": "も",
+    "romaji": "Sou",
+    "meaning": "Berkabung",
+    "examples": [
+      {
+        "word": "喪失",
+        "reading": "そうしつ",
+        "romaji": "Soushitsu",
+        "meaning": "Kehilangan",
+        "sentence": "喪失はとても大切です。",
+        "sentenceFurigana": "そうしつは とても たいせつです。",
+        "sentenceMeaning": "Kehilangan sangat penting."
+      },
+      {
+        "word": "喪服",
+        "reading": "もふく",
+        "romaji": "Mofuku",
+        "meaning": "Pakaian berkabung",
+        "sentence": "喪服の意味を調べました。",
+        "sentenceFurigana": "もふくの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Pakaian berkabung."
+      }
+    ]
+  },
+  {
+    "id": "N2_239",
+    "kanji": "葬",
+    "onyomi": "ソウ",
+    "kunyomi": "ほうむ・る",
+    "romaji": "Sou",
+    "meaning": "Menguburkan",
+    "examples": [
+      {
+        "word": "葬儀",
+        "reading": "そうぎ",
+        "romaji": "Sougi",
+        "meaning": "Pemakaman",
+        "sentence": "先生が葬儀について話しました。",
+        "sentenceFurigana": "せんせいが そうぎについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Pemakaman."
+      },
+      {
+        "word": "埋葬",
+        "reading": "まいそう",
+        "romaji": "Maisou",
+        "meaning": "Penguburan",
+        "sentence": "ノートに埋葬と書きました。",
+        "sentenceFurigana": "ノートに まいそうと かきました。",
+        "sentenceMeaning": "Menulis “Penguburan” di buku catatan."
+      }
+    ]
+  },
+  {
+    "id": "N2_240",
+    "kanji": "霜",
+    "onyomi": "ソウ",
+    "kunyomi": "しも",
+    "romaji": "Sou",
+    "meaning": "Embun beku",
+    "examples": [
+      {
+        "word": "霜害",
+        "reading": "そうがい",
+        "romaji": "Sougai",
+        "meaning": "Kerusakan akibat embun beku",
+        "sentence": "霜害について勉強します。",
+        "sentenceFurigana": "そうがいについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Kerusakan akibat embun beku."
+      }
+    ]
+  },
+  {
+    "id": "N2_241",
+    "kanji": "騒",
+    "onyomi": "ソウ",
+    "kunyomi": "さわ・ぐ",
+    "romaji": "Sou",
+    "meaning": "Ribut/Gaduh",
+    "examples": [
+      {
+        "word": "騒音",
+        "reading": "そうおん",
+        "romaji": "Souon",
+        "meaning": "Kebisingan",
+        "sentence": "騒音にとても興味があります。",
+        "sentenceFurigana": "そうおんに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Kebisingan."
+      },
+      {
+        "word": "騒動",
+        "reading": "そうどう",
+        "romaji": "Soudou",
+        "meaning": "Kegemparan",
+        "sentence": "騒動はとても大切です。",
+        "sentenceFurigana": "そうどうは とても たいせつです。",
+        "sentenceMeaning": "Kegemparan sangat penting."
+      }
+    ]
+  },
+  {
+    "id": "N2_242",
+    "kanji": "藻",
+    "onyomi": "ソウ",
+    "kunyomi": "も",
+    "romaji": "Sou",
+    "meaning": "Ganggang/Lumut",
+    "examples": [
+      {
+        "word": "海藻",
+        "reading": "かいそう",
+        "romaji": "Kaisou",
+        "meaning": "Rumput laut",
+        "sentence": "ここは海藻です。",
+        "sentenceFurigana": "ここは かいそうです。",
+        "sentenceMeaning": "Ini Rumput laut."
+      }
+    ]
+  },
+  {
+    "id": "N2_243",
+    "kanji": "憎",
+    "onyomi": "ゾウ",
+    "kunyomi": "にく・む",
+    "romaji": "Zou",
+    "meaning": "Membenci",
+    "examples": [
+      {
+        "word": "憎悪",
+        "reading": "ぞうお",
+        "romaji": "Zouo",
+        "meaning": "Kebencian",
+        "sentence": "憎悪の意味を調べました。",
+        "sentenceFurigana": "ぞうおの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Kebencian."
+      },
+      {
+        "word": "愛憎",
+        "reading": "あいぞう",
+        "romaji": "Aizou",
+        "meaning": "Cinta dan benci",
+        "sentence": "先生が愛憎について話しました。",
+        "sentenceFurigana": "せんせいが あいぞうについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Cinta dan benci."
+      }
+    ]
+  },
+  {
+    "id": "N2_244",
+    "kanji": "贈",
+    "onyomi": "ゾウ",
+    "kunyomi": "おく・る",
+    "romaji": "Zou",
+    "meaning": "Memberi hadiah",
+    "examples": [
+      {
+        "word": "贈答",
+        "reading": "ぞうとう",
+        "romaji": "Zoutou",
+        "meaning": "Bertukar hadiah",
+        "sentence": "ノートに贈答と書きました。",
+        "sentenceFurigana": "ノートに ぞうとうと かきました。",
+        "sentenceMeaning": "Menulis “Bertukar hadiah” di buku catatan."
+      },
+      {
+        "word": "寄贈",
+        "reading": "きぞう",
+        "romaji": "Kizou",
+        "meaning": "Sumbangan/donasi",
+        "sentence": "寄贈について勉強します。",
+        "sentenceFurigana": "きぞうについて べんきょうします。",
+        "sentenceMeaning": "Belajar tentang Sumbangan/donasi."
+      }
+    ]
+  },
+  {
+    "id": "N2_245",
+    "kanji": "俗",
+    "onyomi": "ゾク",
+    "kunyomi": "-",
+    "romaji": "Zoku",
+    "meaning": "Duniawi/Umum",
+    "examples": [
+      {
+        "word": "風俗",
+        "reading": "ふうぞく",
+        "romaji": "Fuuzoku",
+        "meaning": "Adat/moral publik",
+        "sentence": "風俗にとても興味があります。",
+        "sentenceFurigana": "ふうぞくに とても きょうみが あります。",
+        "sentenceMeaning": "Sangat tertarik pada Adat/moral publik."
+      },
+      {
+        "word": "俗語",
+        "reading": "ぞくご",
+        "romaji": "Zokugo",
+        "meaning": "Bahasa gaul",
+        "sentence": "俗語はとても大切です。",
+        "sentenceFurigana": "ぞくごは とても たいせつです。",
+        "sentenceMeaning": "Bahasa gaul sangat penting."
+      },
+      {
+        "word": "世俗",
+        "reading": "せぞく",
+        "romaji": "Sezoku",
+        "meaning": "Keduniawian",
+        "sentence": "世俗の意味を調べました。",
+        "sentenceFurigana": "せぞくの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti Keduniawian."
+      }
+    ]
+  },
+  {
+    "id": "N2_246",
+    "kanji": "賊",
+    "onyomi": "ゾク",
+    "kunyomi": "-",
+    "romaji": "Zoku",
+    "meaning": "Perampok/Pemberontak",
+    "examples": [
+      {
+        "word": "盗賊",
+        "reading": "とうぞく",
+        "romaji": "Touzoku",
+        "meaning": "Perampok",
+        "sentence": "先生が盗賊について話しました。",
+        "sentenceFurigana": "せんせいが とうぞくについて はなしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang Perampok."
+      },
+      {
+        "word": "海賊",
+        "reading": "かいぞく",
+        "romaji": "Kaizoku",
+        "meaning": "Bajak laut",
+        "sentence": "海賊へ行きたいです。",
+        "sentenceFurigana": "かいぞくへ いきたいです。",
+        "sentenceMeaning": "Ingin pergi ke Bajak laut."
+      }
+    ]
+  },
+  {
+    "id": "N2_247",
+    "kanji": "堕",
+    "onyomi": "ダ",
+    "kunyomi": "-",
+    "romaji": "Da",
+    "meaning": "Merosot/Jatuh",
+    "examples": [
+      {
+        "word": "堕落",
+        "reading": "だらく",
+        "romaji": "Daraku",
+        "meaning": "Kemerosotan moral",
+        "sentence": "ノートに堕落と書きました。",
+        "sentenceFurigana": "ノートに だらくと かきました。",
+        "sentenceMeaning": "Menulis “Kemerosotan moral” di buku catatan."
       }
     ]
   }

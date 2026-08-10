@@ -30,7 +30,7 @@ val kanjiLevels: List<ContentLevel> = listOf(
     ContentLevel("N5", "Beginner", "120 Essential Kanji", false, "KanjiN5"),
     ContentLevel("N4", "Elementary", "181 Essential Kanji", false, "KanjiN4"),
     ContentLevel("N3", "Intermediate", "367 Essential Kanji", false, "KanjiN3"),
-    ContentLevel("N2", "Pre-Advanced", "118 Complex Kanji", false, "KanjiN2"),
+    ContentLevel("N2", "Pre-Advanced", "247 Complex Kanji", false, "KanjiN2"),
     ContentLevel("N1", "Advanced", "2.000+ Master Kanji", true, "KanjiN1"),
 )
 

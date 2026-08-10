@@ -34,7 +34,7 @@ function lv(id, count, file, locked) {
 export const LEVELS = {
     kanji: [
         lv("N5", 120, "KanjiN5", false), lv("N4", 181, "KanjiN4", false), lv("N3", 367, "KanjiN3", false),
-        lv("N2", 118, "KanjiN2", false), lv("N1", null, "KanjiN1", true),
+        lv("N2", 247, "KanjiN2", false), lv("N1", null, "KanjiN1", true),
     ],
     vocab: [
         lv("N5", 800, "VocabN5", false), lv("N4", 700, "VocabN4", false), lv("N3", 1800, "VocabN3", false),
