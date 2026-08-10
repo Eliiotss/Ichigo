@@ -38,7 +38,7 @@ export const LEVELS = {
     ],
     vocab: [
         lv("N5", 800, "VocabN5", false), lv("N4", 700, "VocabN4", false), lv("N3", 1800, "VocabN3", false),
-        lv("N2", 252, "VocabN2", false), lv("N1", null, "VocabN1", true),
+        lv("N2", 557, "VocabN2", false), lv("N1", null, "VocabN1", true),
     ],
     grammar: [
         lv("N5", 84, "GrammarN5", false), lv("N4", 132, "GrammarN4", false), lv("N3", 182, "GrammarN3", false),
