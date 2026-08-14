@@ -179,7 +179,18 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   貯まる, 引き出す, 割り引く, 無駄遣い), services (出迎え, 見送り, 差出人, 留守番電話,
   再利用) and city/place (高層ビル, 自動ドア, 入館料, 休館日, 歩道橋, 居酒屋, 八百屋,
   正面, 中心, 中央, 移転, 空き地, 人込み, 徒歩, 遠回り). `ContentLevel.kt` N3
-  1.922 → **2.050** (finishing pass continues in further rounds).
+  1.922 → 2.050. Round 3 (+154, `N3_V2053`–`N3_V2206`) then covered study/school
+  (英会話, 教科, 理科, 国語, 足し算/引き算/掛け算/割り算, 三角形, 定規, 物差し, 文系/理系,
+  言語学, 法学, 物理学, 心理学, 専攻, 公立/市立/県立/国立/私立, 教授, 進路, 休学/退学,
+  受験生, 正解, 実力, 可能性), work (登録, 記入, 正社員, 研修, 実習, 早退, 社会人, 判子,
+  後輩, 同期, 飲み会, 歓迎会, 送別会, 出版社, 長期/短期, 日程, 延期, 省略, 成長, 儲かる/
+  儲ける, 受け付ける), tech/email (件名, 受信/送信/返信, やり取り, 変換, 挿入, ブログ, マウス,
+  ダウンロード, インストール, アップロード, ノートパソコン, エンジニア, デザイナー), professions
+  (作家, 画家, 政治家, 学者, 美容師, 歌手, タレント), travel (日帰り, 滞在, ツアー, 観光客,
+  集合, 解散, 満室, 近付く, 持ち物, スーツケース, 来日, 活躍), sport (前半/後半, 引き分け,
+  運動会, 思い切る, 拍手, 握手, 惜しい, 体操, 日課, 得る) and connectives (そのため, なぜなら,
+  つまり, だけど, 是非とも, 全て). `ContentLevel.kt` N3 1.922 → **2.204** (finishing
+  pass continues in further rounds).
 - **N3 vocabulary expanded on Android (+124, −2 duplicates).** Using the JLPT
   Tango N3 word list as a **coverage checklist** only, 124 common N3 words missing
   from the set were added to `android/app/src/main/assets/data/VocabN3.json`
