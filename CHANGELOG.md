@@ -127,6 +127,24 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   行く, 座る ×3, 練習する), so the file moves 800 → **905**; the count advertised in
   `VocabModel.swift` (and mirrored in Android `ContentLevel.kt` / web `levels.js`)
   moves 800 → 905, enforced by `check_dataset_counts.py`.
+- **N5 vocabulary top-up on Android (+82, using the reference word lists).** Using
+  the level-tagged JLPT Tango N5 word list purely as a **coverage checklist** (which
+  words exist at N5 — a fact), 82 essential N5 words missing from the set were added
+  to `android/app/src/main/assets/data/VocabN5.json` (`N5_V919`–`N5_V1000`) with
+  **original** Indonesian meanings and hand-verified readings (the deck's own
+  meanings/example sentences were *not* used — its readings even carry systematic
+  errors like `お茶→おおちゃ`). The batch fills real beginner gaps: the people
+  counters 一人〜十人 (irregular readings ひとり/ふたり/…), the day-of-month counters
+  一日〜十日 + 二十日 (ついたち/ふつか/…/はつか), the "how many" question words
+  (何人/何日/何個/何台/何枚/何回/何番/何時間), everyday nouns (兄弟, 世界, 小学校,
+  中学校, 高校, 事務所, 工場, 電池, 手帳, 風呂, 食べ物, 飲み物, 紅茶, 弁当, 寿司,
+  醤油, 味噌…), wear/attach verbs (履く, 被る, 脱ぐ, 浴びる, 迎える) and common
+  loanwords (ノート, ボールペン, クラス, ホテル, スーツ, サングラス, ビール, ラーメン…).
+  Deduplicated by exact kanji+reading and by reading against every shipped level.
+  `ContentLevel.kt` moves the Android N5 count 905 → **987**; this is **Android-first**
+  — iOS `VocabN5.json`/`VocabModel.swift` and the web copy stay at 905 until a later
+  sync pass, so the Swift `check_dataset_counts.py` (which reads only the Swift side)
+  is unaffected.
 - **N1 vocabulary unlocked on Android (first verified batch).** The N1 tier —
   previously a locked "10.000+ Kosakata Master" placeholder — now ships **167
   genuinely-advanced vocabulary entries** (`android/app/src/main/assets/data/VocabN1.json`,

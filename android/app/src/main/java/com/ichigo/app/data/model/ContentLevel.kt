@@ -36,7 +36,9 @@ val kanjiLevels: List<ContentLevel> = listOf(
 
 /** Mirrors `vocabularyLevels` in VocabModel.swift. */
 val vocabularyLevels: List<ContentLevel> = listOf(
-    ContentLevel("N5", "Beginner", "905 Kosakata Dasar", false, "VocabN5"),
+    // N5 vocab tops up Android-first (counters, dates, everyday nouns/loanwords);
+    // iOS/web still at 905 until the later sync pass. Keep equal to VocabN5.json.
+    ContentLevel("N5", "Beginner", "987 Kosakata Dasar", false, "VocabN5"),
     ContentLevel("N4", "Elementary", "700 Kosakata Dasar+", false, "VocabN4"),
     ContentLevel("N3", "Intermediate", "1.800 Kosakata Menengah", false, "VocabN3"),
     ContentLevel("N2", "Pre-Advanced", "1.447 Kosakata Lanjutan", false, "VocabN2"),
