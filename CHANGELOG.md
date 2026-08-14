@@ -146,6 +146,22 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   所々, 程々, 強ち, 取り急ぎ, 先頃, 心底). Deduplicated by exact kanji+reading and by
   reading against every shipped level. `ContentLevel.kt` moves the N1 count 167 →
   **304**.
+- **N2 vocabulary — finishing pass rounds 1-2 on Android (+276).** Working through
+  the JLPT Tango N2 checklist, 276 more clean words were added (`N2_V1589`–`N2_V1864`),
+  1.588 → **1.864**, with **original** meanings and verified readings (exact
+  kanji+reading dedup). Coverage: household/relations (一家, 躾, 意思, 幹事, 花嫁,
+  避ける, 貶す, 口論, 台無し, 持て成す), home/kitchen (一戸建て, 点検, 容器, 食卓,
+  風呂場, 清掃, 分類, 収集, 炊事, 濯ぐ, 煮える, 冷ます, 舐める), money/time (大金,
+  納める, 引き落とし, 好物, 年月, 日時, 予め, 起床, 年度, 夜明け), civic/city (街,
+  人通り, 境, 落書き, 身分証明書, 帰省, 近郊, 公共, 普及, 急増), study/IT (願書,
+  修了, 学力, 記号, 混同, 採点, 受講, 講師, 学会, 起動, 本体, 転送, 余白, 手書き),
+  work/business (求人, 内定, 入社, 大企業, 大手, 派遣社員, 有給休暇, 人事, 資本,
+  売り上げ, 打ち合わせ, 依頼, 転職, 立ち上げる, 専念, 敬意, 反論, 頷く), sport (競技,
+  戦う, 敗れる, 攻める, 逆転, 延長, 指導, 技, 足元), arts/media (劇場, 役者, 主役,
+  台詞, 芸術家, 粗筋, 人物, 場面, 著者, 伝記, 発想, 空想, 連想, 生み出す), hobbies
+  (習い事, 拘る, 名人, 編み物, 手品, 占い, 手話, 撮影, 宝くじ) and weather/season
+  (四季, 初夏, 温帯, 確率, 夕立, 生憎, 吹雪, 冷え込む, 日差し, 降水量, 観測, 大気).
+  `ContentLevel.kt` N2 1.588 → **1.864** (finishing pass continues).
 - **N2 vocabulary expanded on Android (+141).** Using the JLPT Tango N2 word list
   as a **coverage checklist** only, 141 common N2 words missing from the set were
   added to `android/app/src/main/assets/data/VocabN2.json` (`N2_V1448`–`N2_V1588`)
