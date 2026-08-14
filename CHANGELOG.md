@@ -127,6 +127,25 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   行く, 座る ×3, 練習する), so the file moves 800 → **905**; the count advertised in
   `VocabModel.swift` (and mirrored in Android `ContentLevel.kt` / web `levels.js`)
   moves 800 → 905, enforced by `check_dataset_counts.py`.
+- **N2 vocabulary expanded on Android (+141).** Using the JLPT Tango N2 word list
+  as a **coverage checklist** only, 141 common N2 words missing from the set were
+  added to `android/app/src/main/assets/data/VocabN2.json` (`N2_V1448`–`N2_V1588`)
+  with **original** Indonesian meanings and hand-verified readings. Coverage:
+  relationships/society (役目, 尊重, 説得, 介護, 妊娠, 出産, 友人, 思いやり, 初対面,
+  自己紹介, お辞儀, 大家, 再会, 口実, 他人, 双子), interaction & action verbs (向き合う,
+  甘える, 打ち明ける, 呆れる, 招く, 探る, 示す, 睨む, 殴る, 誓う, 囁く, 俯く, 振り返る,
+  立て替える, 取り寄せる, 叶える, 挟む, 添える, 漏れる, 取り除く, 担ぐ, 掴む, 描く,
+  用いる, 訳す, 貼り付ける, 限る, 言い換える), housing/place (賃貸, 敷金, 家屋, 洗面所,
+  間取り, 住宅, 付近, 下町, 活気, 坂), money/service (手数料, 援助, 安定, 品質, 返品,
+  返金, 購入, 値引き, 配達, 提供, 用途), civic (自治体, 知事, 年金, 署名), transport
+  (故郷, 方面, 横断, 通行, 歩行者), study/writing (開始, 担任, 充実, 学習, 参考書,
+  徹夜, 上達, 基本, 実現, 複数, 活用, 段落, 箇所, 引用, 編集, 文書, 改行, 拡大),
+  na-adjectives (粗末, 余分, 自動的, 疎か, 必死),
+  i-adjectives (有り難い, 久しい, 生臭い, 諄い, 気まずい) and adverbs (つくづく, 言わば,
+  もしかすると, 一旦, 絶えず, ほぼ, さっさと, てきぱき, 先ほど, 近々, あらゆる, 一切).
+  Deduplicated by exact kanji+reading and by reading against every shipped level.
+  `ContentLevel.kt` moves the Android N2 count 1.447 → **1.588**. Android-first —
+  iOS/web stay at 1.447 until the later sync pass.
 - **N3 vocabulary expanded on Android (+124, −2 duplicates).** Using the JLPT
   Tango N3 word list as a **coverage checklist** only, 124 common N3 words missing
   from the set were added to `android/app/src/main/assets/data/VocabN3.json`
