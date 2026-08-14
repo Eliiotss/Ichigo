@@ -183,6 +183,26 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   two **pre-existing** exact duplicates (保存する at `N3_V428`, 見送る at `N3_V960`).
   `ContentLevel.kt` moves the Android N3 count 1.800 → **1.922**. Android-first —
   iOS/web stay at 1.800 until the later sync pass.
+- **N4 vocabulary finished on Android (+202).** Two more clean rounds exhaust the
+  JLPT Tango N4 checklist (`N4_V827`–`N4_V1028`), bringing N4 from 825 to **1.027**
+  with **original** meanings and verified readings. Adds everyday verbs (似る, 飼う,
+  建つ, 貼る, 上げる, 暮らす, 計る, 寄る, 晴れる, 向かう, ぶつかる, 贈る, 破る, 汚す,
+  踏む, 逃げる, 楽しむ, 伸ばす, 行う, 増やす, 減らす, 見える, 聞こえる, 外れる, 遅れる,
+  治す, 見付かる), nouns across home/city/study/travel/body (管理人, 缶, 餌, 城, 教会,
+  非常口, 髪型, 美容院, 形, 専門学校, 学部, 医学, 実験, 挨拶, 許可, 入力, 出発, 用意,
+  注意, 途中, 発見, 発表, 放送, 連絡, 大会, 選手, 応援, 会場, 水泳, 入院, 退院, 見舞い,
+  石油, 世界遺産, 世紀, 国際, 先輩, 婚約, 喧嘩, 髭, 腕, 背中, 胃, 腰, 尻, 爪, 骨,
+  火傷, 倍, 以上/以下/以内, 両方), i-/na-adjectives (濃い, 可笑しい, 嫌, 楽), pronouns
+  (彼ら, 君), a large set of common loanwords (マンション, カレンダー, ポスター, メニュー,
+  ソース, レジ, サイン, レシート, オートバイ, ガソリン, エンジン, サンダル, リュック,
+  ドラマ, キャンプ, ビタミン, インフルエンザ, チーム, ダイエット, 体温計 …) and core
+  adverbs/conjunctions (必ず, 絶対, 随分, 決して, 殆ど, 到頭, やっと, 例えば, どんどん,
+  なるほど, もし, 一生懸命, しっかり, 確か, びっくり, それで, その上, けれども, ところで).
+  A homophone-recovery pass restored 23 distinct words the reading-dedup had wrongly
+  dropped (e.g. 城/しろ vs 白, 飼う/かう vs 買う, 建つ/たつ vs 立つ), using exact
+  kanji+reading dedup. `ContentLevel.kt` moves the Android N4 count 825 → **1.027**;
+  **N4 vocab is complete** (the remaining checklist is place names, particles,
+  な-adjective grammar forms and ateji — not vocabulary).
 - **N4 vocabulary expanded on Android (+126, −1 duplicate).** Using the JLPT
   Tango N4 word list as a **coverage checklist** only, 126 common N4 words missing
   from the set were added to `android/app/src/main/assets/data/VocabN4.json`
