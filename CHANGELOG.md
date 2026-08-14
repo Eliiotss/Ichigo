@@ -201,8 +201,19 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   曇る, 強風, 大雨/小雨, 濡らす, 積もる, 輝く, 氷, 猛暑日, 暖冬/冷夏), holidays (祭日,
   元日, 元旦, お年玉, 成人式, 雛祭り, 雛人形, 子供の日, 母の日, 父の日, 海の日,
   敬老の日, 七五三) and emotion/personality (個性的, 働き者, 大人しい, 感動, 感心,
-  愛する, 微笑む, 悲しむ, 望む, 魅力的, 平気, 焦り, 自慢, 不機嫌). `ContentLevel.kt` N3
-  1.922 → **2.481** (finishing pass continues).
+  愛する, 微笑む, 悲しむ, 望む, 魅力的, 平気, 焦り, 自慢, 不機嫌). Rounds 6-7 (+170, `N3_V2484`–`N3_V2653`) finished
+  the set with society/media (噂, 記事, 週刊誌, 市民, 国民, 立場, 世の中, 司会, 生放送/
+  再放送, 発売, 注目, 現場, 停電, 断水, 増加, 信用, 失う, 円高/円安, 不景気), the
+  productive negative prefixes 不/無/非/未 (不可能, 不自然, 不完全, 無意味, 無免許,
+  無計画, 非常識, 非公式, 未成年, 未経験, 未解決), superlatives (最大/最小/最高/最低/
+  最悪/最多/最良), geography (北極, 南極, 赤道, 中東, 北欧/東欧/西欧/南欧, 欧米,
+  中南米, オセアニア), events/misc (天才, 稽古, 読書, 講演会, 好奇心, 変化, 一定, 区別,
+  求める, 広げる, 活動, 当然, 当たり前, 金持ち, 貧乏, 進歩, 盛ん, 商売, 立派, 現代的,
+  偉大) and the last loanwords/adverbs (デザート, カタログ, ライブ, ゴール,
+  ジェスチャー, 生き生き, すっきり, ドキドキ). `ContentLevel.kt` N3 1.922 → **2.651**.
+  **N3 vocab is complete** — the Tango N3 list's genuine content words are exhausted
+  (the remainder is compound phrases, ～な grammar forms of already-listed adjectives,
+  particles and archaic ateji, none of which belong as standalone vocabulary).
 - **N3 vocabulary expanded on Android (+124, −2 duplicates).** Using the JLPT
   Tango N3 word list as a **coverage checklist** only, 124 common N3 words missing
   from the set were added to `android/app/src/main/assets/data/VocabN3.json`
