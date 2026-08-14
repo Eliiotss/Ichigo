@@ -161,7 +161,20 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   台詞, 芸術家, 粗筋, 人物, 場面, 著者, 伝記, 発想, 空想, 連想, 生み出す), hobbies
   (習い事, 拘る, 名人, 編み物, 手品, 占い, 手話, 撮影, 宝くじ) and weather/season
   (四季, 初夏, 温帯, 確率, 夕立, 生憎, 吹雪, 冷え込む, 日差し, 降水量, 観測, 大気).
-  `ContentLevel.kt` N2 1.588 → **1.864** (finishing pass continues).
+  Rounds 3-5 (+258, `N2_V1865`–`N2_V2122`) finished the set with nature/leisure
+  (去る, 大地, 滝, 岸, 海辺, 透明, 生き物, 天然, 夕焼け, 休息, 芝生, 漕ぐ, 訪れる,
+  体験, 豪華, 手配, 免税店, 海水浴, 出来事), body/health (心身, 手首, 爪先, 血管,
+  傷跡, 休養, 体調, 通院, 補給, 医師, 便秘, 寒気, 湿疹, 伝染, 熱中症, 躓く, 手当て,
+  遺伝, リハビリ, 肌, 脂肪, 肥満, 減量), society/crime/news (対立, 拒否, 関わる,
+  侵入, 捜査, 少年, 目撃, 行方, 過失, 爆発, 火災, 救助, 政党, 思想, 改正, 成立, 非難,
+  復興, 世間, 報道, 中継, 国旗, 支援, 開発, 調査), personality/emotion (人柄,
+  社交的, 素朴, 無口, 人見知り, 厚かましい, 大雑把, 短気, 前向き, 憂鬱,
+  惨め, 弱気, 傷付く, 躊躇う, 恐れる, 恥, 謙遜, 憎らしい, 鬱陶しい, 中途半端) and the
+  last loanwords/expressions (オフィス, ビジネス, プロジェクト, サポート, ベテラン,
+  リストラ, キーボード, プリンター, 所謂, 仕方ない, バイキング, キャンパス, デモ,
+  省エネ). `ContentLevel.kt` N2 1.588 → **2.122**. **N2 vocab is complete** — the
+  Tango N2 list's genuine content words are exhausted (remainder is particles,
+  ～な grammar forms of listed adjectives, onomatopoeia and archaic ateji).
 - **N2 vocabulary expanded on Android (+141).** Using the JLPT Tango N2 word list
   as a **coverage checklist** only, 141 common N2 words missing from the set were
   added to `android/app/src/main/assets/data/VocabN2.json` (`N2_V1448`–`N2_V1588`)
