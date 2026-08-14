@@ -11,8 +11,9 @@ import org.junit.Test
 
 /**
  * Guards the level catalogue: five JLPT tiers per content type, unique ids and
- * json files, N5–N2 unlocked and N1 still locked, and json filenames that match
- * the "<Kind><Id>" convention the loader relies on. Pure JVM.
+ * json files, N5–N2 unlocked, N1 Vocab unlocked (its dataset has shipped) while
+ * N1 Kanji/Grammar stay locked, and json filenames that match the "<Kind><Id>"
+ * convention the loader relies on. Pure JVM.
  */
 class ContentLevelTest {
 
@@ -48,14 +49,18 @@ class ContentLevelTest {
     }
 
     @Test
-    fun n5ThroughN2Unlocked_n1Locked() {
-        all.forEach { (kind, levels) ->
+    fun n5ThroughN2Unlocked_n1VocabUnlockedElseLocked() {
+        all.forEach { (_, levels) ->
             val byId = levels.associateBy { it.id }
             listOf("N5", "N4", "N3", "N2").forEach { id ->
-                assertFalse("$kind $id should be unlocked", byId.getValue(id).isLocked)
+                assertFalse("$id should be unlocked", byId.getValue(id).isLocked)
             }
-            assertTrue("$kind N1 should be locked", byId.getValue("N1").isLocked)
         }
+        // N1 Vocab has shipped its first content batch (Android-first) so it is
+        // unlocked; N1 Kanji/Grammar have no dataset yet and remain locked.
+        assertFalse("Vocab N1 should be unlocked", vocabularyLevels.first { it.id == "N1" }.isLocked)
+        assertTrue("Kanji N1 should be locked", kanjiLevels.first { it.id == "N1" }.isLocked)
+        assertTrue("Grammar N1 should be locked", grammarLevels.first { it.id == "N1" }.isLocked)
     }
 
     @Test

@@ -40,7 +40,10 @@ val vocabularyLevels: List<ContentLevel> = listOf(
     ContentLevel("N4", "Elementary", "700 Kosakata Dasar+", false, "VocabN4"),
     ContentLevel("N3", "Intermediate", "1.800 Kosakata Menengah", false, "VocabN3"),
     ContentLevel("N2", "Pre-Advanced", "1.447 Kosakata Lanjutan", false, "VocabN2"),
-    ContentLevel("N1", "Advanced", "10.000+ Kosakata Master", true, "VocabN1"),
+    // N1 vocabulary ships Android-first as a growing, verified batch (see
+    // assets/data/VocabN1.json); iOS/web catch up later. Kanji/Grammar N1 have no
+    // dataset yet and stay locked. Keep this count equal to VocabN1.json's length.
+    ContentLevel("N1", "Advanced", "167 Kosakata Master", false, "VocabN1"),
 )
 
 /** Mirrors `grammarLevels` in GrammarModel.swift. */

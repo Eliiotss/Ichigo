@@ -127,6 +127,29 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   行く, 座る ×3, 練習する), so the file moves 800 → **905**; the count advertised in
   `VocabModel.swift` (and mirrored in Android `ContentLevel.kt` / web `levels.js`)
   moves 800 → 905, enforced by `check_dataset_counts.py`.
+- **N1 vocabulary unlocked on Android (first verified batch).** The N1 tier —
+  previously a locked "10.000+ Kosakata Master" placeholder — now ships **167
+  genuinely-advanced vocabulary entries** (`android/app/src/main/assets/data/VocabN1.json`,
+  `N1_V001`–`N1_V167`) so N1 vocab is browsable, searchable and available as
+  flashcards. The batch spans formal/abstract nouns not already taught lower
+  (理念, 体系, 範疇, 官僚, 主権, 責務, 心境, 手腕, 兆候, 流儀, 貫禄, 醍醐味…),
+  four-character idioms / yojijukugo (一石二鳥, 以心伝心, 優柔不断, 半信半疑,
+  千差万別, 弱肉強食, 温故知新, 言語道断, 一挙両得, 正々堂々…), literary/formal verbs
+  and suru-verbs (承る, 繕う, 擁する, 是正する, 掌握する, 躊躇する, 邁進する, 撤回する,
+  翻弄する, 罷免する…), na-/i-adjectives (精巧, 綿密, 周到, 悲惨, 煩雑, 華麗, 目覚ましい,
+  脆い, 名高い…) and advanced adverbs (軒並み, 依然, 敢えて, 一概に, てっきり, おおむね,
+  何気なく…). Each carries a
+  reading and an **original** Indonesian meaning written from standard advanced-
+  Japanese knowledge (not copied from any third-party deck), and every candidate
+  was deduplicated by exact kanji+reading pair against the shipped N2–N5 sets so
+  N1 only holds words not already taught at a lower tier — of ~450 candidates,
+  ~280 were already present at N2/N3 and were dropped. `ContentLevel.kt` unlocks
+  the N1 vocab level and advertises the real count ("167 Kosakata Master");
+  **N1 Kanji and Grammar stay locked** (no dataset yet), and the guard test
+  `ContentLevelTest` was updated to expect exactly this. This is **Android-first**:
+  the iOS `VocabModel.swift`/`Resources` and the web copy are intentionally left
+  for a later pass, so the Swift `check_dataset_counts.py` still sees N1 as a
+  not-yet-shipped level and its approximate "10.000+" figure remains valid.
 - **Editable username in Settings.** A new **PROFIL** section carries a **Nama
   Pengguna** field bound to `AccountStore.displayName`; it persists automatically
   and syncs live to the Home greeting and the Profile header (both observe the
