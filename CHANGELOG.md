@@ -199,6 +199,21 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   duplicate (積極的 at `N4_V355`). `ContentLevel.kt` moves the Android N4 count
   700 → **825** (`700+` → exact). Android-first — iOS/web stay at 700 until the
   later sync pass.
+- **N5 vocabulary round 2 on Android (+78) — finishing the N5 set.** Continuing to
+  exhaust the JLPT Tango N5 checklist (words only; deck meanings/readings not used),
+  78 more clean N5 words were added (`N5_V1001`–`N5_V1078`) with **original**
+  Indonesian meanings and verified readings, after filtering out the checklist's
+  non-vocabulary noise (particles, set-phrase greetings, place names, archaic ateji,
+  predictable counters). Coverage: professions (看護師, 駅員, 運転手, 歯医者, 研究者),
+  places/buildings (本屋, 大使館, 大学院, 建物, 寮, 庭, お手洗い, 乗り場, 県), study/media
+  (勉強, 練習, 見学, 研究, 確認, 平仮名, 片仮名, 電子辞書, 番組, 漫画, 絵, 歌), food (定食,
+  お菓子, 煙草, ナイフ), sport/hobby (試合, 相撲, 柔道, 釣り, 生け花), nature (桜, 紅葉,
+  象), post/transport (切手, 年賀状, 航空便, 船便, 特急, 各駅, 運転), body (喉, 指, 肩,
+  首, 歯, 痛み), verbs (居る, 要る, 勝つ, 負ける, 思う, 掛かる, 回す, 吸う, 出掛ける,
+  下ろす, 置く), adjectives (駄目, 欲しい) and question words (何歳, 何月, 何曜日).
+  Deduplicated by exact kanji+reading and by reading against every shipped level.
+  `ContentLevel.kt` moves the Android N5 count 987 → **1.065** — the Tango N5 list's
+  genuine content words are now essentially exhausted.
 - **N5 vocabulary top-up on Android (+82, using the reference word lists).** Using
   the level-tagged JLPT Tango N5 word list purely as a **coverage checklist** (which
   words exist at N5 — a fact), 82 essential N5 words missing from the set were added
