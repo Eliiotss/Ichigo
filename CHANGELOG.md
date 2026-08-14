@@ -127,6 +127,22 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   行く, 座る ×3, 練習する), so the file moves 800 → **905**; the count advertised in
   `VocabModel.swift` (and mirrored in Android `ContentLevel.kt` / web `levels.js`)
   moves 800 → 905, enforced by `check_dataset_counts.py`.
+- **N4 vocabulary expanded on Android (+126, −1 duplicate).** Using the JLPT
+  Tango N4 word list as a **coverage checklist** only, 126 common N4 words missing
+  from the set were added to `android/app/src/main/assets/data/VocabN4.json`
+  (`N4_V701`–`N4_V826`) with **original** Indonesian meanings and hand-verified
+  readings (the deck's meanings/examples were not used — its readings are riddled
+  with collocation bleed such as `卒業→をそつぎょうする`). Coverage: family (息子,
+  娘, 祖父, 祖母, 孫, 叔父, 叔母), home & furniture (自宅, 廊下, 和室, 畳, 布団, 家具,
+  押し入れ, 留守, カーテン), everyday verbs (移す/移る, 動かす, 起こす, 慣れる, 過ごす,
+  尋ねる, 混む, 進む, 折れる/折る, 残す/残る), school (出席, 欠席, 予習, 復習, 塾,
+  発音, 生徒, 大学生, 作文, 辞典), travel (海外, 景色, 連休, 旅館, 温泉, 両替), weather/nature
+  (天気予報, 曇り, 津波, 空気, 枝), food & shopping (和食, 洋食, 材料, 鍋, 缶詰, 計算,
+  お釣り, 食料品) plus 熱心 / 偉い. Deduplicated by exact kanji+reading and by reading
+  against every shipped level; the same pass removed one **pre-existing** exact
+  duplicate (積極的 at `N4_V355`). `ContentLevel.kt` moves the Android N4 count
+  700 → **825** (`700+` → exact). Android-first — iOS/web stay at 700 until the
+  later sync pass.
 - **N5 vocabulary top-up on Android (+82, using the reference word lists).** Using
   the level-tagged JLPT Tango N5 word list purely as a **coverage checklist** (which
   words exist at N5 — a fact), 82 essential N5 words missing from the set were added
