@@ -165,6 +165,21 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   Deduplicated by exact kanji+reading and by reading against every shipped level.
   `ContentLevel.kt` moves the Android N2 count 1.447 → **1.588**. Android-first —
   iOS/web stay at 1.447 until the later sync pass.
+- **N3 vocabulary — finishing pass, round 2 on Android (+128).** Continuing to work
+  through the JLPT Tango N3 checklist, 128 more clean words were added
+  (`N3_V1925`–`N3_V2052`), 1.922 → **2.050**, with **original** meanings and verified
+  readings (exact kanji+reading dedup, so homophones like 揚げる vs 上げる are kept).
+  Coverage: family (三女, 三男, 一人っ子, 夫妻, 幼児, 乳児, 出身地, 既婚, 専業主婦, 無職,
+  彼氏), time (翌月, 翌週, 昨年, 再来週/再来月/再来年, 先々週/先々月, 初旬, 数回/数年/数か月,
+  以来), kitchen/food (おやつ, グルメ, フライパン, お玉, しゃもじ, 大匙/小匙, 流し台,
+  電子レンジ, 酢, 胡椒, 揚げる, 熱する, 注ぐ), cleaning (箒, 塵取り, バケツ, 洗剤, 黴,
+  乾燥機, アイロン, 糸, 針, 空き缶, 空き瓶, 零す/零れる, 臭う), home/furniture (リビング,
+  ヒーター, クーラー, カーペット, ソファー, クッション, コンセント, スイッチ, ドライヤー),
+  money/bank (札, コイン, 硬貨, 交際費, 公共料金, 銀行口座, 暗証番号, 税込/税別, 貯める/
+  貯まる, 引き出す, 割り引く, 無駄遣い), services (出迎え, 見送り, 差出人, 留守番電話,
+  再利用) and city/place (高層ビル, 自動ドア, 入館料, 休館日, 歩道橋, 居酒屋, 八百屋,
+  正面, 中心, 中央, 移転, 空き地, 人込み, 徒歩, 遠回り). `ContentLevel.kt` N3
+  1.922 → **2.050** (finishing pass continues in further rounds).
 - **N3 vocabulary expanded on Android (+124, −2 duplicates).** Using the JLPT
   Tango N3 word list as a **coverage checklist** only, 124 common N3 words missing
   from the set were added to `android/app/src/main/assets/data/VocabN3.json`
