@@ -22,7 +22,9 @@ SKIP_NT = {"Ankidrone Info"}    # kartu info, bukan kosakata
 KANJI = r"[㐀-鿿々〆ヶ]"
 
 def base_common(s):
-    s = s or ""
+    s = (s or "").strip()
+    if len(s) >= 2 and s[0] == '"' and s[-1] == '"':   # buka escape TSV
+        s = s[1:-1].replace('""', '"')
     s = re.sub(r"\[sound:[^\]]*\]", "", s)
     s = re.sub(r"<[^>]+>", " ", s)
     s = html.unescape(s).replace(" ", " ").replace("　", " ")
@@ -75,6 +77,9 @@ seen, out, stats = set(), [], collections.Counter()
 for r in rows:
     nt = col(r, notetype_col)
     if nt in SKIP_NT:
+        continue
+    deck = col(r, deck_col)
+    if "Bunpou" in deck or "文法" in deck:   # pola tata bahasa -> ke grammar.md
         continue
     kmap = None
     for key, mp in MAPS.items():

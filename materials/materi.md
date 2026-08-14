@@ -1,4 +1,4 @@
-# Materi Kosakata (12376 kata)
+# Materi Kosakata (11684 kata)
 
 | Kata | Bacaan | Arti | Contoh |
 |---|---|---|---|
@@ -8007,7 +8007,7 @@
 | 節約 | せつやく | economising; saving 節 - clause, honor, joint 約 - approximately, promise, shrink menghemat; tabungan 節 - klausa, kehormatan, gabungan 約 - kira-kira, janji, menyusut |  |
 | 設立 | せつりつ | establishment, foundation, institution 設 - establishment, prepare, provision 立 - erect, rise, set up pendirian, landasan, lembaga 設 - pendirian, persiapan, penyediaan 立 - mendirikan, mendirikan, mendirikan |  |
 | 瀬戸物 | せともの | earthenware, crockery, china 瀬 - current, rapids, shallows 戸 - counter for houses, door, door radical (no. 63) 物 - matter, object, thing gerabah, barang pecah belah, porselen 瀬 - arus, jeram, dangkal 戸 - meja untuk rumah, pintu, pintu radikal (no. 63) 物 - materi, benda, benda |  |
-| 是非とも | ぜひとも | "by all means (with sense of not taking ""no"" for an answer) 是 - just so, justice, right 非 - injustice, mistake, negative dengan segala cara (dengan perasaan tidak menerima jawaban ""tidak"") 是 - begitu saja, keadilan, benar 非 - ketidakadilan, kesalahan, negatif" |  |
+| 是非とも | ぜひとも | by all means (with sense of not taking "no" for an answer) 是 - just so, justice, right 非 - injustice, mistake, negative dengan segala cara (dengan perasaan tidak menerima jawaban "tidak") 是 - begitu saja, keadilan, benar 非 - ketidakadilan, kesalahan, negatif |  |
 | 攻め | せめ | attack, offence 攻 - aggression, attack, criticize menyerang, menyerang 攻 - agresi, menyerang, mengkritik |  |
 | 世論 | せろん・よろん | public opinion; popular voice; public sentiment; consensus 世 - generation, public, society 論 - argument, discourse opini publik; suara populer; sentimen publik; konsensus 世 - generasi, publik, masyarakat 論 - argumen, wacana |  |
 | 仙 | せん | hermit, wizard 仙 - cent, hermit, wizard pertapa, penyihir 仙 - sen, pertapa, penyihir |  |
@@ -8657,7 +8657,7 @@
 | 遊牧 | ゆうぼく | nomadism 遊 - play 牧 - breed, care for, feed nomadisme 遊 - bermain 牧 - berkembang biak, merawat, memberi makan |  |
 | 幽霊 | ゆうれい | ghost, specter, apparition, phantom 幽 - calm, confine to a room, dark 霊 - soul, spirits hantu, momok, penampakan, hantu 幽 - tenang, terkurung dalam ruangan, gelap 霊 - jiwa, roh |  |
 | 誘惑 | ゆうわく | temptation, allurement, lure 誘 - allure, ask, call for 惑 - beguile, delusion, perplexity godaan, godaan, iming-iming 誘 - daya tarik, bertanya, menyerukan 惑 - memperdaya, khayalan, kebingungan |  |
-| 床 | ゆか・とこ | "bed; bedding; sickbed; alcove; riverbed; seedbed; straw ""core"" of a tatami mat; floor; floor; stage (for the narrator and the shamisen player); dining platform built across a river 床 - bed, counter for beds, floor tempat tidur; seperai; ranjang sakit; ceruk; palung; persemaian; jerami ""inti"" dari tikar tatami; lantai; lantai; panggung (untuk narator dan pemain shamisen); platform makan dibangun di seberang sungai 床 - tempat tidur, meja untuk tempat tidur, lantai" |  |
+| 床 | ゆか・とこ | bed; bedding; sickbed; alcove; riverbed; seedbed; straw "core" of a tatami mat; floor; floor; stage (for the narrator and the shamisen player); dining platform built across a river 床 - bed, counter for beds, floor tempat tidur; seperai; ranjang sakit; ceruk; palung; persemaian; jerami "inti" dari tikar tatami; lantai; lantai; panggung (untuk narator dan pemain shamisen); platform makan dibangun di seberang sungai 床 - tempat tidur, meja untuk tempat tidur, lantai |  |
 | 揺さぶる | ゆさぶる | to shake, to jolt, to rock, to swing 揺 - rock, shake, sway menggoyang, menyentak, mengayun, mengayun 揺 - mengayun, menggoyang, bergoyang |  |
 | 遊山 | ゆさん | excursion; outing; picnic 遊 - play 山 - mountain tamasya; tamasya; piknik 遊 - bermain 山 - gunung |  |
 | 油井 | ゆせい | oil well 油 - fat, oil 井 - community, town, well sumur minyak 油 - lemak, minyak 井 - komunitas, kota, sumur |  |
@@ -8896,7 +8896,7 @@
 | 劇 | げき | drama, play 劇 - drama, play drama, drama 劇 - drama, drama |  |
 | 激増 | げきぞう | sudden increase 激 - chafe, enraged, get excited 増 - add, augment, gain peningkatan mendadak 激 - kesal, marah, bersemangat 増 - menambah, menambah, menambah |  |
 | 下車 | げしゃ | alighting (from train, bus, etc.); getting off 下 - below, descend, down 車 - car turun (dari kereta api, bus, dll); turun 下 - ke bawah, turun, ke bawah 車 - mobil |  |
-| 下水 | げすい | "drainage; ditch; gutter; sewerage, sewage; black water, water flowing underneath; one's true feelings, kanji ""water"" radical at bottom (radical 85) 下 - below, descend, down 水 - water drainase; parit; selokan; saluran pembuangan, saluran pembuangan; air hitam, air mengalir di bawahnya; perasaan seseorang yang sebenarnya, kanji ""air"" radikal di bawah (radikal 85) 下 - di bawah, turun, turun 水 - air" |  |
+| 下水 | げすい | drainage; ditch; gutter; sewerage, sewage; black water, water flowing underneath; one's true feelings, kanji "water" radical at bottom (radical 85) 下 - below, descend, down 水 - water drainase; parit; selokan; saluran pembuangan, saluran pembuangan; air hitam, air mengalir di bawahnya; perasaan seseorang yang sebenarnya, kanji "air" radikal di bawah (radikal 85) 下 - di bawah, turun, turun 水 - air |  |
 | 月給 | げっきゅう | monthly salary 月 - month, moon 給 - allow, bestow on, gift gaji bulanan 月 - bulan, bulan 給 - izinkan, berikan, hadiah |  |
 | 下品 | げひん・かひん | vulgar; indecent; coarse; crude, inferior article​ 下 - below, descend, down 品 - article, counter for meal courses, dignity vulgar; tidak senonoh; kasar; artikel kasar dan inferior 下 - di bawah, turun, turun 品 - artikel, konter untuk kursus makan, martabat |  |
 | 煙い | けむい | smoky 煙 - smoke berasap 煙 - merokok |  |
@@ -9678,7 +9678,7 @@
 | 経由 | けいゆ | go by the way, via 経 - expire, longitude, pass thru 由 - a reason, wherefore omong-omong, lewat 経 - kedaluwarsa, bujur, lewat 由 - alasan, oleh karena itu |  |
 | 罰する | ばっする | to punish; to penalize; to penalise 罰 - penalty, punishment untuk menghukum; untuk menghukum; untuk menghukum 罰 - penalti, hukuman |  |
 | 羽 | はね | feather; plume; down, wing, blade (of a fan, propeller, etc.), shuttlecock, counter for birds and rabbits, fifth degree (of the Japanese & Chinese pentatonic scale) 羽 - counter for birds, rabbits, feathers bulu; bulu-bulu; bawah, sayap, bilah (kipas, baling-baling, dll.), shuttlecock, penghitung burung dan kelinci, derajat kelima (skala pentatonik Jepang & Cina) 羽 - penghitung untuk burung, kelinci, bulu |  |
-| 翼 | つばさ・よく | "wing, Chinese ""Wings"" constellation (one of the 28 mansions), counter for birds or bird wings 翼 - flank, plane, wing sayap, ""Sayap"" Cina konstelasi (salah satu dari 28 rumah besar), penghitung burung atau sayap burung 翼 - sayap, bidang, sayap" |  |
+| 翼 | つばさ・よく | wing, Chinese "Wings" constellation (one of the 28 mansions), counter for birds or bird wings 翼 - flank, plane, wing sayap, "Sayap" Cina konstelasi (salah satu dari 28 rumah besar), penghitung burung atau sayap burung 翼 - sayap, bidang, sayap |  |
 | 老い | おい | old age, old person, the old, the aged 老 - grow old, old age, old man usia tua, orang tua, orang tua, orang tua 老 - menjadi tua, usia tua, orang tua |  |
 | 職 | しょく | employment 職 - employment, post, work pekerjaan 職 - pekerjaan, jabatan, pekerjaan |  |
 | 職業 | しょくぎょう | occupation, business 職 - employment, post, work 業 - arts, business, performance pekerjaan, bisnis 職 - pekerjaan, jabatan, pekerjaan 業 - seni, bisnis, pertunjukan |  |
@@ -9908,713 +9908,9 @@
 | 私 | わたし・わたくし | I; me 私 - I, me, private SAYA; aku 私 - ​​Aku, aku, pribadi |  |
 | 英語 | えいご | English (language) 英 - England, English, calyx 語 - language, speech, word Inggris (bahasa) 英 - Inggris, Inggris, kelopak 語 - bahasa, ucapan, kata |  |
 | 行く | いく・ゆく | to go 行 - act, bank, carry out pergi 行 - bertindak, bank, melaksanakan |  |
-| 言う | いう・ゆう | "to say; to utter; to declare, to name; to call, to go (e.g. ""the alarm went ping""); to make a noise 言 - say, word untuk mengatakan; untuk mengucapkan; untuk menyatakan, memberi nama; untuk menelepon, untuk pergi (misalnya ""alarm berbunyi""); membuat keributan 言 - katakanlah, kata" |  |
+| 言う | いう・ゆう | to say; to utter; to declare, to name; to call, to go (e.g. "the alarm went ping"); to make a noise 言 - say, word untuk mengatakan; untuk mengucapkan; untuk menyatakan, memberi nama; untuk menelepon, untuk pergi (misalnya "alarm berbunyi"); membuat keributan 言 - katakanlah, kata |  |
 | 話す(し) | はなす | to speak 話 - tale, talk berbicara 話 - dongeng, bicara |  |
 | 風 | かぜ・ふう | wind; breeze; draught; draft, manner; behaviour; behavior, cold; influenza, method; manner; way; style, appearance; air, tendency, folk song (genre of the Shi Jing), wind (one of the five elements) 風 - air, manner, style angin; angin semilir; draf; rancangan, cara; perilaku; perilaku, dingin; influenza, metode; tata krama; jalan; gaya, penampilan; udara, kecenderungan, lagu daerah (genre Shi Jing), angin (salah satu dari lima elemen) 風 - udara, sikap, gaya |  |
-| だ | だ | Dia adalah seorang siswa. | 学生だ。 |
-| は | は | Saya adalah Tom. | 私はトムです。 |
-| も | も | Kamu juga Tom. | あなたもトムです。 |
-| の | の | Ini adalah pena saya. | これは私のペンです。 |
-| か | か | Ini adalah buku. | これは本ですか。 |
-| でしょう | でしょう | Ini adalah bukumu, bukan? | これはあなたの本でしょう。 |
-| が | が | Saya suka buku. | 私は本が好きです。 |
-| る-kata kerja | る | Melihat → Melihat (dalam bentuk sopan) | 見る→見ます |
-| がある | がある | Ada buku. | 本がある。 |
-| のは | のは | Orang yang melakukan pekerjaan ini adalah saya. | この仕事をするのは私だ。 |
-| ～んです・のです | んです・のです | Apakah itu baik? | いいんですか。 |
-| だろう | だろう | Ini mungkin bagus, bukan? | ここがいいだろう？ |
-| を | を | Mempelajari kanji. | 漢字を覚える。 |
-| がいる | がいる | Saya ada. | 私がいる。 |
-| い-kata sifat | い | Ini panas. | 暑いです。 |
-| う-kata kerja | う | Mendengar → Mendengar (bentuk sopan) | 聞く → 聞きます |
-| ている① | ている | Apa yang sedang kamu lakukan? | 何をしている？ |
-| な-kata sifat | な | Gambar yang indah. | 綺麗な絵。 |
-| へいく | へいく | Pergi ke sekolah. | 学校へ行く。 |
-| に | に | Dia ada di sana. | 彼はあそこにいます。 |
-| のがすき | のがすき | Saya suka bermain sepak bola. | 私はサッカーをするのが好き。 |
-| Vもいい | てもいい | Bolehkah saya melihat ini? | これを見てもいい？ |
-| へ | へ | Selamat datang di Osaka. | 大阪へようこそ。 |
-| くる | くる | Tom datang ke sini. | トムはここに来る。 |
-| だった・でした | だった・でした | Itu adalah cantik. | 綺麗 だった。 |
-| kata kerja | た | Saya telah bermain sepak bola di sini. | ここでサッカーをした。 |
-| てもいい | てもいい | Tidak apa-apa (walaupun) tinggi. | 高くてもいい。 |
-| V + にいく | にいく | Saya pergi untuk makan ramen. | ラーメンを食べに行く。 |
-| じゃない | じゃない | Ini bukan anjing. | 犬じゃない。 |
-| じゃなかった | じゃなかった | Bukan apel. | りんごじゃなかった。 |
-| kata kerja | ない | Saya tidak makan sushi. | 寿司を食べない。 |
-| まえに | まえに | """Sebelum makan, saya mengucapkan """"itadakimasu"""".""" | 食べる前に「いただきます」と言う。 |
-| のなかで | のなかで | Makanan yang paling saya suka di antara ini adalah apa? | この中で一番好きな食べ物は何？ |
-| ～になる・～くなる | になる・くなる | Menjadi sulit. | 難しくなる。 |
-| +まで | まで | Sampai di mana kamu akan pergi? | どこまで行く？ |
-| たい | たい | Saya ingin pergi ke Jepang. | 日本に行きたい。 |
-| てください | てください | Tolong bacalah buku ini. | この本を読んでください。 |
-| くらい ① | くらい | Kapan Anda akan datang sekitar? | 何時ぐらいに来ますか。 |
-| ので | ので | Saya tidak suka sushi, jadi saya tidak makan. | 私は寿司 が好きではないので、食べない。 |
-| たことがある | たことがある | Apakah Anda pernah bermain sepak bola di sini? | ここでサッカーをしたことがありますか。 |
-| てから | てから | Setelah belajar bahasa Jepang, saya akan pergi ke Jepang. | 日本語の勉強をしてから、日本に行きます。 |
-| ないでください | ないでください | Tolong jangan pergi. | 行かないでください。 |
-| な | な | Jangan pergi. | 行くな。 |
-| てはいけない | てはいけない | Jangan masuk ke sana. | そこに入ってはいけない。 |
-| たほうがいい | たほうがいい | Sebaiknya tanyakan kepada dokter. | お医者さんに聞いた方がいい。 |
-| ないほうがいい | ないほうがいい | Karena ini adalah pizza yang dibeli kakak, lebih baik jangan dimakan. | これはお兄ちゃんが買ったピザだから、食べない方がいいよ。 |
-| ましょう | ましょう | Mari kita bermain sepak bola. | サッカーをしましょう。 |
-| ね | ね | Bagus, bukan? | いいですね。 |
-| より ~ のほうが | よりのほうが | Roti ini lebih enak daripada roti itu. | このパンよりそのパンの方が美味しいです。 |
-| なくちゃ・なきゃ | なくちゃ・なきゃ | Saya harus belajar bahasa Jepang. | 日本語を勉強しなくちゃいけない。 |
-| ～ましょうか | ましょうか | Apakah kita akan pergi makan sushi? | 寿司を食べに行きましょうか。 |
-| すぎる | すぎる | Di sini terlalu banyak sampah. | ここはゴミが多すぎる。 |
-| のがじょうず | のがじょうず | Tom pandai bermain sepak bola. | トムはサッカーをするのが上手です。 |
-| よ | よ | Tom ada di sana. | トムはあそこにいたよ。 |
-| たり～たりする | たりたりする | Aku bermain game di rumah dan makan. | 家でゲームをしたり、食べたりした。 |
-| つもりだ | つもりだ | Saya berencana untuk pergi ke Jepang. | 日本に行くつもりだ。 |
-| や | や | Saya membeli air dan makanan ringan di minimarket. | コンビニでお水やおかしを買った。 |
-| ませんか | ませんか | Apakah kamu mau pergi makan sushi? | 寿司を食べに行きませんか。 |
-| まだ～ていません | まだていません | Belum makan. | まだ食べていません。 |
-| にする | にする | Apa yang ingin kamu pesan? | 何にする？ |
-| のがへた | のがへた | Saya buruk dalam bermain catur. | 私はチェスをするのが下手だ。 |
-| なくてはいけない | なくてはいけない | Sebelum ujian, saya harus tidur dengan baik. | テストの前に、よく寝なくてはいけない。 |
-| なくてはならない | なくてはならない | Saya harus belajar setiap hari. | 毎日勉強をしなくてはならない。 |
-| など | など | Saya ingin pergi ke Italia dan Amerika, dan lain-lain. | イタリアやアメリカなどに行きたい。 |
-| やすい | やすい | Kue ini mudah dibuat. | ケーキは作りやすい。 |
-| がほしい | がほしい | Saya ingin uang pada hari ulang tahun. | 誕生日にお金がほしい。 |
-| てあげる | てあげる | Aku membelikan bunga untuk ibuku. | 母に花を買ってあげた。 |
-| とき | とき | Ketika berjalan-jalan, saya mendengarkan musik. | 散歩するときは音楽を聴く。 |
-| とおもう | とおもう | Besok, saya berpikir akan pergi menonton film. | 明日は、映画を見に行くと思う。 |
-| なさい | なさい | Belajarlah! | 勉強しなさい。 |
-| ないで | ないで | Bekerja tanpa istirahat. | 休まないで仕事をする。 |
-| みたい | みたい | Anjing ini terlihat seperti beruang. | この犬は熊みたいです。 |
-| こと | こと | Berbicara dalam bahasa Jepang adalah sulit. | 日本語を話すことは難しい。 |
-| てみる | てみる | Saya akan mencoba bermain baseball di akhir pekan ini. | 今週末に野球をしてみる。 |
-| にくい | にくい | Jika kue itu tidak manis, maka sulit untuk memakannya. | ケーキは甘くなかったら、食べにくいです。 |
-| てほしい | てほしい | Saya ingin kamu belajar bersama saya. | 一緒に勉強してほしいです。 |
-| たら | たら | Jika kamu belajar, ujian akan menjadi mudah. | 勉強したら、テストは簡単になる。 |
-| てくれる | てくれる | Bisakah kamu membawakan gelas itu ke sini? | あのグラスをここに持ってきてくれる？ |
-| までに | までに | Tolong telepon saya sebelum besok. | 明日までに電話をください。 |
-| てすみません | てすみません | Saya minta maaf karena telah memakan kue Anda. | あなたのケーキを食べてすみません。 |
-| みたいに・みたいな | みたいに・みたいな | Saya ingin menjadi seperti wanita itu. | あの女の人みたいになってほしい。 |
-| だけで | だけで | Hanya dengan pergi ke pesta, sudah menyenangkan. | パーティーに行くだけで楽しい。 |
-| ことができる | ことができる | Saya bisa menaiki kuda. | 馬に乗ることができる。 |
-| さ | さ | Kecantikan ini adalah yang pertama bagi saya. | この美しさは初めてです。 |
-| がる | がる | Kucing saya merasa takut. | 私の猫は怖がる。 |
-| かもしれない | かもしれない | Mungkin saya akan pergi ke Amerika tahun depan. | 来年アメリカに行くかもしれない。 |
-| てもらう | てもらう | Saya meminta ibu untuk mengerjakan PR. | 私は母に宿題をしてもらった。 |
-| はじめる | はじめる | Pagi ini, salju mulai turun. | 今朝、雪が降り始めた。 |
-| あとで | あとで | Setelah belajar, boleh bermain. | 勉強した後で、遊んでもいいよ。 |
-| がする | がする | Ada suara mobil. | 車の音がする。 |
-| そうに/そうな | そうにそうな | Hari ini sepertinya hari yang hujan, ya. | 今日は雨が降りそうな日ですね。 |
-| Number + も | も | Saya harus membayar bahkan 100.000 yen. | １０万円も払わなくてはいけない。 |
-| かな | かな | Aku akan pergi untuk makan segera, ya? | もうすぐ食べに行くかな。 |
-| 〜よう・〜おう | よう・おう | Mari kita berolahraga setiap hari. | 毎日スポーツをしよう。 |
-| 〜ようと思う・〜おうと思う | ようとう・おうとう | Besok, saya berpikir untuk belajar. | 明日、勉強をしようと思う。 |
-| なら | なら | Jika pergi berwisata, tolong belikan oleh-oleh. | 旅行に行くなら、おみやげを買ってきてください。 |
-| たがる | たがる | Dia ingin pergi ke kebun binatang. | 彼は動物園に行きたがる。 |
-| ごろ | ごろ | Saya pulang sekitar jam 8. | ８時ごろに帰りました。 |
-| おわる | おわる | Meskipun memakan waktu dua jam, saya telah selesai makan. | ２時間もかかったけど、食べ終わりました。 |
-| がひつよう | がひつよう | Saat melakukan tes, pensil diperlukan. | テストをする時はえんぴつが必要です。 |
-| てくる | てくる | Segera kembali ya. | すぐ帰ってきてね。 |
-| といい | といい | Semoga kita bisa menang dalam pertandingan. | 試合に勝てるといいですね。 |
-| のに | のに | Dia sedang bermain game meskipun dia sibuk. | 彼は忙しいのに、ゲームをしている。 |
-| とか～とか | とかとか | Saya suka warna biru dan warna biru muda. | 青とか水色が好き。 |
-| ばあいは | ばあいは | Silakan hubungi kami di sini jika terjadi keadaan berbahaya. | 危険な場合はここに電話をしてください。 |
-| ていただけませんか | ていただけませんか | Bisakah Anda mengajak anjing saya jalan-jalan? | 犬を散歩していただけませんか。 |
-| ていた | ていた | Saya sedang belajar, tapi sekarang saya sedang istirahat. | 勉強をしていたけど、今は休んでいる。 |
-| ていく | ていく | Dengan suara keras, burung-burung terbang pergi. | 大きい音で、鳥が飛んでいく。 |
-| ように・ような | ように・ような | Dia memiliki wajah seperti sudah makan terlalu banyak. | 彼は食べすぎたような顔をしている。 |
-| ひつようがある | ひつようがある | Saya perlu makan sarapan. | 朝ご飯を食べる必要がある。 |
-| てよかった | てよかった | Saya senang telah belajar. | 勉強をしてよかったです。 |
-| し～し | しし | Dia bisa membersihkan dan juga bisa memasak, jadi saya senang menikah dengannya. | 彼は掃除ができるし、料理も作れるし、結婚してよかった。 |
-| に (Frequency) | に | Sekitar tiga kali dalam setahun saya pergi liburan ke luar negeri. | 一年に三回ぐらい海外旅行に行く。 |
-| たところ | たところ | Saya baru saja selesai makan. | 今食べ終わったところです。 |
-| といってもいい | といってもいい | Dia adalah orang yang sangat baik, dan boleh dibilang begitu. | 彼はとてもいい人だといってもいいです。 |
-| ながら | ながら | Saya makan malam sambil menonton acara favorit saya. | 私は晩ご飯を食べながら、一番好きな番組を見る。 |
-| ようだ | ようだ | Sepertinya dia tidak akan datang ke sini. | 彼はここに来ないようだ。 |
-| ているところ | ているところ | Saat ini, saya sedang menonton film. | 今、映画を見ているところです。 |
-| はずだ | はずだ | Dia pasti akan mengembalikan pena yang dipinjamnya. | 彼は借りたペンを返すはずだ。 |
-| と～と、どちらが | ととどちらが | Mana yang kamu inginkan, kopi atau teh? | コーヒーとお茶とどちらがほしいですか。 |
-| ば | ば | Jika besok hujan, saya berencana untuk pergi menonton film. | 明日雨が降れば、映画を見に行くつもり。 |
-| らしい ① | らしい | Dia sepertinya melanjutkan diet. | 彼はダイエットを続けるらしいです。 |
-| かどうか | かどうか | Saya tidak tahu apakah saya bisa pergi berlibur atau tidak. | 旅行に行けるかどうかわからない。 |
-| ときいた | ときいた | Saya mendengar bahwa besok ada ujian. | 明日はテストがあると聞いた。 |
-| ようにする | ようにする | Saya harus berusaha untuk makan sayuran setiap hari. | 毎日野菜を食べるようにしないといけない。 |
-| てある | てある | Pintu ini telah dibuka. | このドアは開けてある。 |
-| ているあいだに | ているあいだに | Saat istri saya tidur, saya bisa melakukan hal-hal yang saya suka. | 妻が寝ている間に、私は好きなことができる。 |
-| はずがない | はずがない | Tidak mungkin salju turun di musim panas. | 夏に雪が降るはずがない。 |
-| ておく | ておく | Saya telah membeli jus untuk pesta besok. | 明日のパーティーのためにジュースを買っておきました。 |
-| ばよかった | ばよかった | Seharusnya saya menunggu kereta berikutnya. | 次の電車を待てばよかったです。 |
-| たばかり | たばかり | Saya baru saja keluar dari rumah. | 今、家を出たばかりです。 |
-| にみえる | にみえる | Dia terlihat sibuk. | 彼は忙しそうにみえる。 |
-| にきがつく | にきがつく | Dia memperhatikan sepatu baru saya. | 彼は、私の新しい靴に気がついてくれた。 |
-| ようになる | ようになる | Jika kamu belajar bahasa Inggris dengan baik, kamu akan bisa berbicara. | ちゃんと英語を勉強したら、話せるようになる。 |
-| なければいけない | なければいけない | Saya harus pergi bekerja. | 仕事に行かなければいけない。 |
-| なくてもいい | なくてもいい | Jika kamu sibuk, tidak apa-apa jika tidak pergi. | 忙しいなら、行かなくてもいいです。 |
-| てしまう・ちゃう | てしまう・ちゃう | Saya lupa membawa payung. | 傘を忘れてしまった。 |
-| じゃないか | じゃないか | Kamu datang untuk pertemuan lebih awal, bukan? | 待ち合わせに来るのが早いじゃないか。 |
-| ても | ても | Walaupun saya pergi ke bioskop, tidak ada film yang ingin saya tonton. | 映画館に行っても、見たい映画がない。 |
-| かい | かい | Apakah kamu benar-benar ingin pergi? | 本当に行きたいのかい？ |
-| たらどう | たらどう | Bagaimana kalau kita pergi bermain ke taman? | 公園に遊びに行ったらどうですか。 |
-| だす | だす | Dia bersin saat dia mulai mengucapkan jawaban. | 彼は答えを言い出す時に、くしゃみをした。 |
-| とみえる | とみえる | Orang tua itu tampak lembut. | あの親は優しいと見える。 |
-| つづける | つづける | Apakah kamu berniat untuk terus menonton televisi? | テレビを見つづけるつもりですか。 |
-| よていだ | よていだ | Rapat dijadwalkan pada hari Senin. | 会議は月曜日の予定です。 |
-| しか～ない | しかない | Karena jauh, saya hanya bisa pergi dengan mobil. | 遠いので、車で行くことしかできない。 |
-| といわれている | といわれている | Dikatakan bahwa kota ini memiliki banyak makanan terkenal. | この町はたくさん有名な食べ物があると言われている。 |
-| ということ | ということ | Saya sering mendengar bahwa toko ini enak. | この店は美味しいということをよく聞きます。 |
-| ございます | ございます | Terima kasih. | ありがとうございます。 |
-| でございます | でございます | Orang ini adalah Tanaka-san. | この方は田中さんでございます。 |
-| お～ください | おください | Silakan tunggu sebentar. | 少しお待ちください。 |
-| お～になる | おになる | Guru sudah pulang. | 先生はお帰りになりました。 |
-| いたす | いたす | Saya akan memberi tahu Anda. | ご案内いたします。 |
-| ばいい | ばいい | Saya tidak tahu kepada siapa seharusnya saya bertanya tentang petunjuk arah. | 道の案内を、誰に聞けばいいのか分からない。 |
-| べき | べき | Saya pikir orang yang gemuk harus berolahraga. | 太っている人は運動をすべきだと思う。 |
-| 上で | で | Setelah melihat ke dalam rumah, saya berpikir untuk membelinya. | 家の中を見た上で、買おうと思っている。 |
-| ことだ | ことだ | Karena ada pertandingan penting besok, sebaiknya kita berlatih. | 明日に大切な試合があるから、練習をすることだ。 |
-| そうだ | そうだ | Kekasih Tom dikatakan adalah seorang aktris. | トムの彼女は女優だそうだ。 |
-| ほど | ほど | Suara jatuhnya pin terdengar, sehingga begitu tenang. | ピンが落ちた音が聞こえるほど、静かだった。 |
-| という | という | Apakah kamu tahu permainan yang disebut Pokémon? | ポケモンというゲームを知っている？ |
-| なぜなら〜から | なぜならから | Dia tidak bisa pergi berenang. Karena, cuacanya dingin. | 彼は泳ぎに行けなかった。なぜなら、寒かったから。 |
-| によると・によれば | によると・によれば | Menurut ramalan cuaca, besok akan cerah. | 天気予報によると明日は晴れです。 |
-| ため(に) | ために | Agar menjadi mahir dalam bahasa Jepang, kita seharusnya belajar tata bahasa. | 日本語が上手になるために、文法を勉強すべきです。 |
-| ば〜ほど | ばほど | Ternyata, semakin banyak saya makan kedelai ini, semakin saya kurus. | この豆を食べれば食べるほど痩せるらしい。 |
-| べきではない | べきではない | Kita tidak seharusnya makan makanan yang busuk. | 腐っている食べ物を食べるべきではない。 |
-| の間に | のに | Jangan datang ke sini antara jam 2 sore sampai jam 3 sore hari ini. | 今日の午後の2時から3時の間には、ここに来ないで。 |
-| うちに | うちに | Selama pelajaran, saya menyelesaikan pekerjaan rumah. | 授業しているうちに、宿題を完成した。 |
-| たらいい・といい | たらいい・といい | Jika kamu ingin bisa berbicara bahasa Jepang dengan baik, sebaiknya berbicara dengan orang Jepang. | 日本語を上手にしゃべれるようになりたかったら、日本人としゃべったらいい。 |
-| もの・もん | もの・もん | Dia berbohong, loh. | 彼女は嘘をついているもの。 |
-| によって・による | によって・による | Di Amerika, hukum berbeda-beda tergantung pada negara bagian. | アメリカでは州によって法律が違う。 |
-| ために | ために | Karena taifun, pertandingan dibatalkan. | 台風のため、試合が中止になった。 |
-| ということだ | ということだ | Ikan lumba-lumba adalah hewan dengan otak paling pintar di antara hewan lainnya, katanya. | イルカは動物の中で頭が一番いいということだ。 |
-| ばかり | ばかり | Dia selalu berkata bohong. | 彼はいつも嘘ばかり言っている。 |
-| どんなに〜ても | どんなにても | Saya rasa tidak mungkin, tidak peduli seberapa keras saya berusaha. | どんなに頑張っても無理だと思う。 |
-| ほど~ない | ほどない | Kereta tidak secepat pesawat, tetapi tidak ada kendaraan yang lebih murah daripada kereta. | 電車は飛行機ほど速くないけど、電車ほど安い乗り物はない。 |
-| ことがある | ことがある | Terkadang saya diantar ke sekolah. | 学校に送ってもらうことがある。 |
-| ものだ | ものだ | Kue itu pasti manis. | ケーキは甘いものだ。 |
-| に比べて | にべて | Nilai saya menjadi lebih baik dibandingkan dengan semester pertama. | 一学期に比べて成績がよくなった。 |
-| 最中に | に | Saat sedang menonton film, dia menerima telepon. | 映画を見ている最中に彼は電話をした。 |
-| ～と言っても | とっても | Hari ini sibuk, meskipun tidak se sibuk kemarin. | 今日は忙しいといっても昨日ほどじゃない。 |
-| というのは | というのは | Yang disebut dengan jihan-ki adalah mesin penjual otomatis. | じはんきというのは、自動販売機だ。 |
-| わけだ | わけだ | Salju sudah turun. Tidak heran. | 雪が降っていた。寒いわけだ。 |
-| あまりに | あまりに | Saya tiba terlalu cepat. | あまりに早く着いた。 |
-| ばかりだ | ばかりだ | Akhir-akhir ini, nilai Bitcoin hanya semakin turun. | 最近、ビットコインの価値が下がっていくばかりだ。 |
-| いくら〜でも | いくらでも | Tidak peduli seberapa cepat saya mencoba, saya tidak akan selesai sebelum hari Sabtu. | いくら急いでも土曜日までには終わらない。 |
-| ことはない | ことはない | Tidak ada yang perlu saya katakan lebih lanjut. | これ以上何も言うことはない。 |
-| くらい ② | くらい | Saya sangat lelah sehingga hanya ingin tidur. | 寝るしかしたくないくらい、疲れている。 |
-| まま(に) | ままに | Kemarin saya tidur dengan jendela terbuka. | 昨日は窓を開けたまま寝た。 |
-| に関する・に関して | にする・にして | Ada buku yang berkaitan dengan tari di atas meja. | ダンスに関する本が机の上にあります。 |
-| に対して | にして | Mengenai bagian ini, karena banyak pertanyaan, mungkin agak sulit. | この部分に対して、質問が多かったので、ちょっと難しかったかしら。 |
-| おかげで | おかげで | Berkat belajar, saya lulus ujian. | 勉強のおかげで、試験に合格した。 |
-| てもかまわない | てもかまわない | Ketika saya memiliki waktu luang, saya tidak keberatan bermain game. | 暇な時はゲームをやってもかまわない。 |
-| といえば | といえば | A: Baru-baru ini, anime semakin populer secara internasional. B: Ngomong-ngomong tentang anime, musim baru Dragon Ball sedang ditayangkan. | A： 最近、アニメは国際的に人気になっていくよ。B： アニメといえばドラグーンボールの新しいシーズンが放送されているね。 |
-| わけではない | わけではない | """A: """"Berbicara tentang Hokkaido, menurut C-san, tampaknya dingin sepanjang tahun."""" B: """"Bahkan di musim panas, itu tidak berarti dingin.""""""" | A: 「北海道といえば、Cさんによれば一年中寒いらしい。」 B：「夏でも寒いわけではない。」 |
-| ばかりに | ばかりに | Karena saya lupa dompet, saya tidak bisa membeli makanan bento. | 財布を忘れたばかりに、お弁当を買えなかった。 |
-| だらけ | だらけ | Lantai menjadi penuh dengan tanah. | 床は泥だらけになった。 |
-| から言うと | からうと | Berdasarkan pengalaman saya, saya dapat lulus berkat guru saya. | 私の経験から言うと、先生のおかげで卒業ができた。 |
-| ことか | ことか | Sudah berapa lama aku menunggu ini ya? | これをどれだけ待っていたことか。 |
-| んだって | んだって | Tom dikabarkan kembali berpacaran dengan mantan pacarnya. | トムが元カノとまた付き合っているんだって。 |
-| に取って | にって | Bagi kamu, membuat teman itu mudah. | 君にとって友達を作ることは簡単だ。 |
-| さえ | さえ | Puncak Gunung Fuji bahkan dingin di musim panas. | 富士山の頂上は夏でさえ寒い。 |
-| しかない | しかない | Karena tidak ada yang bisa menjemput, saya hanya bisa pulang dengan berjalan kaki. | 迎えに来てもらえないので、歩いて帰るしかない。 |
-| というより | というより | Hari ini lebih panas daripada hangat. | 今日は暖かいというより暑い。 |
-| としたら・とすれば・とすると | としたら・とすれば・とすると | Jika harus memilih, mana yang lebih baik, Tanaka-san atau Yamada-san? | 付き合うとしたら、田中さんと山田さんどっちがいい？ |
-| わけがない | わけがない | Jika dia orang Jepang, tidak mungkin dia mengatakan hal seperti itu. | 日本人ならそんなことを言うわけがない。 |
-| ような気がする | ようながする | Saya merasa sepertinya (begitu). | 分かるような気がする。 |
-| ばかりでなく | ばかりでなく | Tuan Tanaka tidak hanya pandai sepak bola, tetapi juga pandai renang. | 田中さんはサッカーばかりでなく水泳も上手です。 |
-| 別に〜ない | にない | Saya tidak mengatakan bahwa Tom itu buruk, sih. | トムが悪いとは別に言っていないよ。 |
-| がたい | がたい | Saya sering dikatakan susah didekati oleh semua orang. | 皆から近寄りがたいってよく言われます。 |
-| こそ | こそ | Kamulah yang bisa melakukannya. | あなたこそできる。 |
-| ことから | ことから | Karena saya belajar matematika dari guru yang baik, saya juga ingin menjadi guru matematika. | いい先生から数学を学んだことから、私も数学の先生になりたい。 |
-| まるで…ようだ | まるでようだ | Wajahmu seolah-olah melihat hantu. | あなたの顔はまるで幽霊を見たようだ。 |
-| 向き | き | Teks ini dibuat untuk pemula. | このテキストは初心者向きにできている。 |
-| にしても | にしても | Meskipun begitu, orang yang paling penting, Yamada-san, tidak ada di sini. | すぐ始めるにしても、肝心の山田さんがここにいない。 |
-| をはじめ | をはじめ | Kita akan pergi ke tur wisata domestik, dimulai dari Tokyo. | 東京をはじめ、国内観光ツアーに行きます。 |
-| さえ〜ば | さえば | Jika adik perempuanku memiliki waktu luang, dia akan berolahraga. | 妹は暇さえあれば、運動する。 |
-| として | として | Kami menghormati dia sebagai guru. | 私たちは先生としての彼を尊敬します。 |
-| わけにはいかない | わけにはいかない | Saya tidak bisa hanya diam dan mengabaikan masalah itu. | 僕はその問題を黙って見過ごすわけにはいかない。 |
-| kata kerjaとする | とする | Lihat! Anak anjing itu sedang berusaha menangkap ekornya! Sangat imut! | 見て！子犬はしっぽを捕まえようとしている！とてもかわいい！ |
-| 決して〜ない | してない | Tom tidak pernah bodoh. Dia hanya seorang pemalas. | トムは決して頭が悪いわけではない。単なる怠け者なだけだ。 |
-| ふりをする | ふりをする | Anjing saya kadang-kadang berpura-pura tidur. | 私の犬は寝たふりをすることがある。 |
-| ことに | ことに | Untungnya, saya akan menikah tahun depan. | 幸せなことに、来年結婚します。 |
-| めったに〜ない | めったにない | Ayah jarang menonton televisi. | 父はめったにテレビを見ない。 |
-| 向け | け | Acara ini ditujukan untuk orang dewasa. | この番組は大人向けだ。 |
-| にしては | にしては | Dia cukup kurus, mengingat dia seorang pegulat sumo. | 力士にしては結構細いですね。 |
-| せいで | せいで | Tom pingsan karena panas. | トムは暑さのせいで気を失った。 |
-| そうもない | そうもない | Karena saljunya tidak turun banyak, sepertinya tidak mungkin untuk bermain ski. | あんまり雪が降っていないから、スキーができそうもない。 |
-| たとえ〜ても | たとえても | Bahkan jika tidak ada salju yang turun, kami akan pergi untuk berseluncur salju. | たとえ雪が降らなくても、スノーボードをしに行く。 |
-| て初めて | てめて | Setelah datang ke Jepang untuk pertama kalinya, saya menjadi tertarik dengan budaya Jepang. | 日本に来てはじめて、日本文化に興味を持った。 |
-| とは限らない | とはらない | Tidak semua orang dapat bernyanyi dengan baik. | すべての人間が上手に歌えるとは限らない。 |
-| 〜ようとしない | ようとしない | Dia tidak pernah berusaha untuk mengakui meskipun dia melakukan hal yang salah. | 彼は自分が悪いことをしても、決して認めようとしない。 |
-| 一方だ | だ | Karena harga yang terus meningkat, kehidupan menjadi semakin sulit. | 上昇し続ける物価のせいで生活は苦しくなる一方だ。 |
-| 代わりに | わりに | Tolong selesaikan masalah ini sebagai ganti saya. | 私の代わりにこの問題を解いてください。 |
-| 切る | る | Akhir pekan lalu, saya telah membaca tiga buku komik. | 先週末、三冊のマンガを読み切った。 |
-| ことになる | ことになる | Jika besok hujan, itu akan menjadi hasil bahwa hujan akan terus turun selama satu minggu. | 明日が雨ならば、１週間降り続くことになる。 |
-| ながらも | ながらも | Meskipun dia memiliki banyak uang, sepertinya dia tidak bahagia. | お金を沢山持ちながらも、彼は幸せではないらしい。 |
-| に違いない | にいない | Dia pasti sakit. | 彼女は病気に違いない。 |
-| において・における | において・における | Dalam kehidupan modern, hidup tanpa listrik tidak bisa dibayangkan. | 現代において、電気のない生活は考えられない。 |
-| その結果 | その | Selama 2 bulan, saya terus-menerus melatih tubuh. Sebagai hasilnya, otot saya meningkat. | 2ヶ月間ずっと体を鍛え続けていた。その結果、筋肉が増えた。 |
-| とおり | とおり | Itu sesuai dengan yang saya pikirkan. | 思ったとおりでした。 |
-| と共に | とに | Bisakah kamu memberikan presentasi bersama saya? | 私と共に論文の発表をしてくれませんか。 |
-| 一方で | で | Sepatu ini, di sisi lain, berat. | この靴は、温かい一方で、重いです。 |
-| 切れない | れない | Jumlah bintang di langit tidak dapat dihitung. | 空の星の数が数え切れない。 |
-| ことにする | ことにする | Karena hari ini adalah April Mop, saya memutuskan untuk tidak mengatakan yang lain. | 今日はエイプリルフールだからウソしか言わないことにする。 |
-| くせに | くせに | Meskipun mendapatkan gaji yang banyak, tampaknya dia tidak punya tabungan. | 給料を沢山もらうくせに、貯金がないらしい。 |
-| なんか・なんて | なんか・なんて | Saya tidak pernah berpikir akan mengalahkan tim yang kuat itu. | あの強いチームに勝つなんて思わなかった。 |
-| に代わって | にわって | Terima kasih telah menjelaskan atas nama saya. | あなたが私に代わって説明をしてくれてありがとう。 |
-| につれて | につれて | Seiring dengan tumbuhnya pohon ini, bayangannya semakin luas. | こちらの木が大きくなるにつれて、影が広がる。 |
-| っぱなし | っぱなし | Seseorang membiarkan pintu itu terbuka. | 誰かがそのドアを開けっぱなしにした。 |
-| たびに | たびに | Setiap kali saya menonton film ini, saya selalu menangis. | この映画を見るたびに、泣いてしまう。 |
-| 割に | に | Makanan yang mahal ini, meskipun begitu, tampaknya tidak enak. | 高い食べ物のわりに、美味しくなさそう。 |
-| ずに | ずに | Dia pergi bekerja tanpa sarapan. | 彼は朝ごはんを食べずに仕事に行きました。 |
-| どころか | どころか | Dia tidak hanya beristirahat, tetapi telah memberikan semua tenaganya. | 彼は休むどころか、全力を出し切った。 |
-| がち | がち | Anak laki-laki saya sering sakit. | 私の息子は病気がちだ。 |
-| ぎみ | ぎみ | Dia berkata bahwa dia merasa sedikit terserang flu. | 彼女は風邪気味だと言った。 |
-| かけ | かけ | Pekerjaan rumah untuk hari ini sudah hampir selesai. | 今日の宿題はもう終わりかけです。 |
-| っけ | っけ | Apakah saya pernah bertemu dengan teman Tom? | トムの友達って、会ったことあったっけ？ |
-| きり | きり | Akhirnya kita bisa berdua saja ya. | やっと二人っきりになれたね。 |
-| ないことはない | ないことはない | """Scrooge: """"Karena aku sudah menjadi kakek, aku sama sekali tidak bisa belajar sesuatu yang baru."""" Huey: """"Tak peduli seberapa tua kamu, tidak ada yang tidak bisa kamu pelajari.""""""" | スクルージ：「オレはオジサンになったから新しいことを全然学べない。」 ヒューイ：「どんなに歳を取っても新しいことを学べないことはないよ。」 |
-| にかけて | にかけて | Pada akhir pekan ini, mungkin akan turun hujan. | 今週末にかけて、雨が降るでしょう。 |
-| っぽい | っぽい | Tom bukan hanya memiliki daya ingat yang baik, tetapi cenderung pelupa. | トムは記憶力がいいどころか、忘れっぽいよ。 |
-| たとたんに | たとたんに | Begitu keluar, hujan mulai turun. | 出たとたんに、雨が降り始めた。 |
-| てごらん | てごらん | Cobalah lihat pemandangan itu. | その景色を見てごらん。 |
-| ずにはいられない | ずにはいられない | Anak itu lahir dan tidak bisa tidak menangis. | 子供が生まれて泣かずにはいられない。 |
-| ぶりに | ぶりに | Ini adalah kali kedua saya pergi ke dokter gigi dalam dua tahun. | 歯医者に行くのは二年ぶりだ。 |
-| 思うように | うように | Saya tidak bisa membuat kue seperti yang saya inginkan. | ケーキ屋みたいなお菓子が思うように作れなかった。 |
-| だけに | だけに | Mobil ini memang terbaru, jadi kursi juga dilengkapi pemanas. | この車は最新だけに、椅子のヒーターもあります。 |
-| 得る / 得る | るる | Pemadam kebakaran adalah orang yang dapat dipercaya. | 消防士は信頼しうる人です。 |
-| 逆に | に | Cerita itu tampaknya benar, tetapi sebaliknya, sulit untuk dipercaya. | あの話は事実らしいが、逆に信じにくい。 |
-| から見ると | からると | Dari sudut pandang pasangan lansia, cinta di kalangan pemuda terasa nostalgia. | 老人夫婦から見ると、若者の恋愛は懐かしい。 |
-| でしかない | でしかない | Kecelakaan sudah terjadi, jika kamu selamat, tidak perlu khawatir. Mobil hanyalah sebuah mobil. | 事故にあって、あなたが無事なら、心配いらない。車は車でしかないよ。 |
-| ことになっている | ことになっている | Rapat akan diadakan di kantor pemerintah yang ada di Tokyo. | 会議は東京にある官庁で行うことになっている。 |
-| も～ば～も | もばも | Dia bisa baik dalam olahraga maupun bekerja dengan efisien. | 彼は、スポーツも上手にできれば、仕事も効率よくできる。 |
-| に向かって・に向けて | にかって・にけて | Tolong senyumnya menghadap ke kamera. | カメラに向かって、笑顔をお願いします。 |
-| にしたら | にしたら | Jika dilihat dari sudut pandang istri, saya harus melakukan lebih banyak pekerjaan rumah tangga. | 妻にしたら、私はもっと家事をしなくてはいけない。 |
-| にしても～にしても | にしてもにしても | Baik itu makan atau tidak makan, saya harus membayar biaya makanan. | 食べるにしても、食べないにしても、料理代を払わないといけない。 |
-| にすぎない | にすぎない | Kamu hanya seorang pelajar. | 君は学生にすぎない。 |
-| そういえば | そういえば | Ngomong-ngomong, jam berapa kamu pulang ke rumah semalam? | そういえば、昨夜は何時に家に帰ったの？ |
-| つもりで | つもりで | Saya belajar bahasa Jepang seolah-olah saya sudah pergi ke Jepang. | 日本に行ったつもりで、日本語を勉強しています。 |
-| ずに済む | ずにむ | Bisa selesai tanpa mencuci piring. | 洗い物をせずに済む。 |
-| だけあって | だけあって | Karena dia telah belajar dengan keras, adik perempuan saya dapat masuk ke universitas yang baik. | 頑張って勉強しただけあって、妹はいい大学に入学できた。 |
-| 〜得ない | ない | Penjahat biasa adalah orang yang tidak dapat dipercaya. | 一般の犯罪者は信頼し得ない人だ。 |
-| 上に | に | Gym itu murah, selain itu, dekat dari rumah saya. | そのジムは安い上に、私の家から近い。 |
-| 以上に | に | Cuacanya lebih buruk dari yang diperkirakan. | 天気は予想以上に悪かった。 |
-| とか | とか | """Megan-chan: """"Apakah kamu ingat apa yang dia katakan kemarin?"""" Yankee-kun: """"Dia bilang, 'Mari kita bertemu di depan sekolah sekitar jam 11 besok', tetapi saya tidak yakin.""""""" | めがねちゃん:「彼が昨日、何て言ったか覚えてる？」 ヤンキー君:「明日、１１時ごろに学校の前で会おうとか言っていたようだけど、定かではない。」 |
-| からすると・からすれば | からすると・からすれば | Berdasarkan apa yang kamu katakan, sepertinya dia tidak ada di sana. | あなたが言っていることからすると、彼はそこにいなかったようですね。 |
-| としても | としても | Meskipun kita bisa, sepertinya aku tidak akan melakukannya. | たとえできるとしても、やらないだろう。 |
-| ことだから | ことだから | Karena kamu, saya yakin semuanya akan berjalan dengan baik. | あなたのことだから間違いなくうまくいくと思うよ。 |
-| まい | まい | Karena saya minum terlalu banyak kemarin, saya tidak akan minum alkohol lagi. | 昨日飲みすぎてしまったので、二度と酒は飲むまい。 |
-| もかまわず | もかまわず | Tanpa memperhatikan tatapan orang lain, dia menari telanjang. | 他の人の視線もかまわず、彼女は裸でダンスをした。 |
-| ということは | ということは | Bahwa dia pergi berlibur sendirian, itu berarti bahwa dia telah menjadi dewasa. | 彼が一人で旅に行くということは、大人になったということだ。 |
-| ものだから | ものだから | Karena jalan sedang macet, saya tidak bisa datang tepat waktu. Maaf datang terlambat. | 道が渋滞していたものだから、時間通りに来られませんでした。遅れて来てすみません。 |
-| ないことには～ない | ないことにはない | Jika pasangan tidak saling akur, maka tidak akan berjalan dengan baik. | 夫婦では仲良くしないことには、うまくいかない。 |
-| には | には | """""""Dia masih terlalu kecil untuk bermain di ayunan,"""" kata anak laki-laki itu.""" | 「妹がブランコで遊ぶには、まだ小さすぎます。」と男の子は言いました。 |
-| 次第だ・次第で | だ・で | Keberhasilan biasanya tergantung pada usaha. | 成功は大抵努力次第だ。 |
-| それにしても | それにしても | Mereka sedang membantu menyelesaikan masalah, tetapi meskipun begitu, itu adalah masalah yang sulit. | 彼らは問題の解決に手を貸しているが、それにしてもそれは難問です。 |
-| 確かに | かに | Tentu saja, dia dapat dipercaya. | 確かに彼は信頼できます。 |
-| てこそ | てこそ | Hanya setelah pergi ke Jepang, saya bisa memahami daya tarik Kyoto. | 日本へ行ってこそ、京都の魅力が分かる。 |
-| てならない | てならない | Saya merasa seolah-olah telah menjadi korban penipuan. | 詐欺にあった気がしてならない。 |
-| ～を～に任せる | をにせる | Saya selalu mempercayakan presentasi yang penting kepada dia. | 大切な発表をいつも彼に任せる。 |
-| がある + kata benda | がある | Ruangan yang memiliki tempat tidur. | ベッドがある部屋。 |
-| って | って | Dia berkata, 'Dia sudah jadi cantik.' | 彼は「彼女が綺麗になった」って言った。 |
-| けっこう | けっこう | Tidak, terima kasih. | いいえ、けっこうです。 |
-| V + まで | まで | Sampai film dimulai, saya berbicara dengan teman-teman. | 映画が始まるまで、友達と話した。 |
-| けど・だけど | けど・だけど | Ini praktis, tetapi mahal. | 便利だけど、高い。 |
-| そういう | そういう | Ada orang seperti itu juga. | そういう人もいるよ。 |
-| ～のだろうか | のだろうか | Apakah dia mungkin sedang dalam keadaan sulit? | 彼の都合が悪い(の)だろうか。 |
-| そんな・こんな・あんな・どんな | そんな・こんな・あんな・どんな | Kira-kira, tatami seperti ini sangat nyaman untuk tidur. | 大体こんな畳が寝やすい。 |
-| だが | だが | Presiden berkata. Namun, saya tidak percaya. | 大統領が言いました。ですが、私は信じません。 |
-| てくれてありがとう | てくれてありがとう | Terima kasih telah selalu bersamaku. | いつも一緒にいてくれてありがとう。 |
-| まで | まで | Saya belajar tata bahasa Jepang sampai tengah malam. | 夜中まで日本語の文法を勉強している。 |
-| のように・のような | のように・のような | Sumpit digunakan dengan cara seperti ini. | お箸はこのように使います。 |
-| あまり～ない | あまりない | Kue ini tidak terlalu enak. | このケーキはあまり美味しくない。 |
-| ぜんぜん | ぜんぜん | Aku sama sekali tidak bisa berbicara bahasa Inggris. | 全然英語を話すことができない。 |
-| たとえば | たとえば | """Misalnya, """"Apakah Anda suka bahasa Inggris?""""""" | 例えば、「英語が好きですか。」と聞いてみたら？ |
-| ～ない～はない | ないはない | Di antara teman-teman saya, tidak ada satu pun yang tidak suka pizza. | 私の友達の中でピザが好きじゃない人は一人もいない。 |
-| ように～てほしい | ようにてほしい | Saya ingin anak kita menjadi seperti kamu. | 私たちの子供には君のようになってほしい。 |
-| だけでなく | だけでなく | Tidak hanya saya, tetapi teman saya juga bisa berbicara bahasa Jepang. | 私だけでなく、私の友達も日本語が喋れる。 |
-| すこしも～ない | すこしもない | Kamu tidak mendengarkan pembicaraan anak-anak sedikit pun. | あなたは子供の話をすこしも聞いてあげてない。 |
-| いか | いか | Rumah ini harganya 20 juta yen atau kurang. | この家は２０００万円以下です。 |
-| なるべく | なるべく | Jika kamu terkena flu, sebaiknya beristirahat sebaik mungkin. | インフルエンザにかかったら、なるべくゆっくり休むほうがいい。 |
-| ～ら | ら | Mereka sudah belajar dengan cukup, jadi ujian itu mudah. | 彼らは十分に勉強をしたから、試験が簡単だった。 |
-| ようにいう | ようにいう | Saya berkata agar Anda tidak lupa membawa makanan bento. | お弁当を持って行くことを忘れないように言った。 |
-| 〜でも 〜でも | でもでも | Baik ini, maupun itu, atau apapun juga tidak masalah! | これでも、それでも、何でもいいです！ |
-| ごとに | ごとに | Dia melihat ponselnya setiap kali lampu merah. | 彼女は運転中、赤信号ごとに、携帯を見る。 |
-| いがい | いがい | Kecuali Mary, tidak ada yang datang. | メアリー以外、誰も来なかった。 |
-| ～は～の一つだ | はのつだ | Honda adalah salah satu produsen mobil. | ホンダは車のメーカーの一つだ。 |
-| とかんがえられている | とかんがえられている | Bahasa Inggris diperkirakan digunakan tidak hanya di Amerika, tetapi di seluruh dunia. | 英語はアメリカだけでなく、世界中で使われる言語(だ)と考えられている。 |
-| なおす | なおす | Lebih baik kamu menulis ulang kalimat ini. | この文章を書き直した方がいいよ。 |
-| ま(っ) | まっ | Saya senang bisa melihat rusa yang ada di tengah jalan. | 道の真ん中に居る鹿を見てよかったです。 |
-| ほかに(も)・ほか(に)は | ほかにも・ほかには | Apakah ada tempat lain yang ingin kamu kunjungi? | 他に、行きたいところはありますか？ |
-| 上は | は | Setelah datang ke Jepang, saya berencana untuk belajar. | 日本に来た上は勉強するつもりです。 |
-| ざるを得ない | ざるをない | Karena Tanaka-san sangat sibuk, dia terpaksa menolak undangan golf. | 田中さんはとても忙しかったのでゴルフの誘いを断らざるを得なかった。 |
-| だけは | だけは | Hanya (makan) sebanyak yang bisa saya makan. Karena ini adalah sistem makan sepuasnya. | 食べられるだけは食べた。食べ放題だからさ。 |
-| が気になる | がになる | Akhir-akhir ini, saya tertarik dengan dunia hiburan. | 最近、芸能界が気になる。 |
-| としては | としては | Saya merasa dia adalah teman yang sangat baik, tetapi saya tidak bisa memikirkan dia sebagai pacar. | とてもいい友達だと思うけど、恋人としては考えられない。 |
-| からには | からには | Karena kita akan berumur dua puluh tahun, ayo pergi berkendara! | 二十歳になるからには、ドライブしに行こう！ |
-| なくはない | なくはない | Meskipun saya tidak bisa berkonsentrasi, namun saya merasa lebih mudah untuk berkhayal. | 集中ができなくはないが、空想する方がしやすい。 |
-| ことにはならない | ことにはならない | Meskipun ibu dikatakan cantik, itu bukan berarti bahwa putrinya pasti akan tumbuh menjadi seorang wanita cantik. | 母親が美しいと言われても、必ずその娘が成長して美人になるということにはならない。 |
-| ないわけにはいかない | ないわけにはいかない | Jangan berpikir bahwa kita tidak perlu melakukan rapat hanya karena merepotkan. | 面倒だからといって、打ち合わせをしないわけにはいかない。 |
-| ではないだろうか | ではないだろうか | Dia mungkin, tidak aneh jika dia merasa terkejut. | 彼はもしかして、あきれているのではないだろうか。 |
-| ものがある | ものがある | Dalam kesenian tradisional Jepang, ada sesuatu yang menggerakkan hati. | 日本の伝統芸能には、心を動かすものがある。 |
-| 何といっても | といっても | Beppu memiliki udara dan suasana yang baik. Yang terpenting, Anda bisa menikmati berbagai onsen. | 別府は空気や雰囲気がいい。何といってもいろんな温泉が楽しめることだ。 |
-| にて | にて | Besok, mari kita bertemu di Stasiun Tokyo. | 明日、東京駅にてお会いしましょう。 |
-| それなのに | それなのに | Saya pikir saya sedang berusaha. Meskipun begitu, kenapa tidak berhasil? | 私は努力していると思う。それなのにうまくいかないの？ |
-| てたまらない | てたまらない | Hari ini saya bekerja sangat keras, jadi saya sangat mengantuk. | 今日はたくさん仕事をしたので、眠くてたまらない。 |
-| といった | といった | Kamu tidak boleh melanggar janji tanpa alasan seperti ini. | これといった理由もないのに約束を破ってはいけない。 |
-| ところだった ② | ところだった | Saya hampir saja mengotori dengan cat. | 絵の具をつけてしまうところだった。 |
-| ようでは・ようじゃ | ようでは・ようじゃ | Jika kamu tidak bisa mengganti popok bayi, kamu tidak bisa disebut sebagai orang tua yang baik. | 赤ん坊のおむつを替えられないようでは、とてもイクメン[子育てする男性]とは呼べない。 |
-| ものですから・もので | ものですから・もので | Dilarang menghadiri kembang api di tempat ini, jadi kita harus mencari tempat lain. | この広場では花火が禁止なものですから、他の場所を探さなければなりません。 |
-| kata kerja | て | Makan | 食べる → 食べて |
-| その上 | その | Kemarin saya sampai larut malam mengerjakan kerajinan rajutan. Selain itu, saya terbangun pagi-pagi karena telepon, jadi saya sangat mengantuk. | 昨日は夜遅くまで編み物をしてしまった。その上、朝早くから電話で起こされたのでとても眠いです。 |
-| ないではいられない | ないではいられない | Tidak bisa menahan diri untuk tidak menangis setelah kalah di pertandingan perpisahan. | 引退試合に負けて、泣かないではいられません。 |
-| だけましだ | だけましだ | Karena kecelakaan besar seperti itu terjadi, setidaknya kita masih bisa bersyukur karena masih selamat. | あんな大事故が起きたのだから、命があるだけましだ。 |
-| というものだ | というものだ | """Apa yang kamu suka dan tidak suka adalah sesuatu yang disebut sebagai """"penilaian berdasarkan prasangka"""".""" | あなたの好き嫌いは食わず嫌いというものだ。 |
-| 〜ようではないか | ようではないか | Mari kita ciptakan dunia yang luar biasa bersama-sama. | 共に素晴らしい世界を創っていこうではないか。 |
-| どころではない | どころではない | Pekerjaanku terlalu sibuk, jadi aku bahkan tidak bisa mengambil cuti tahunan. | 仕事が忙しすぎて、年休を取るどころではない。 |
-| ふうに | ふうに | Saya tidak tahu bagaimana melakukannya. | どんなふうにやればいいのか分からない。 |
-| からして | からして | Sup ini tampaknya enak hanya dari baunya. | このスープは匂いからして美味しそうだ。 |
-| ところを見ると | ところをると | Melihat dia tidak membantah, saya yakin bahwa dia sedang berbohong. | 彼女が反論しないところを見ると、嘘をついていると私は確信した。 |
-| かと思ったら・かと思うと | かとったら・かとうと | Kira-kira dia sudah merasa sedih setelah dimarahi seperti itu, eh tiba-tiba dia tertawa. | 彼はあれだけ怒られて悲しんでいるかと思ったら、すぐに笑いだした。 |
-| ことなく | ことなく | Segala sesuatu berakhir tanpa dipahami. | 何ごとも理解されることなく終わる。 |
-| 中を | を | Di dalam rumah, kucing sedang berlarian. | 家の中を猫が駆け回っている。 |
-| に限って | にって | Orang-orang yang sering berbicara tentang menghemat cenderung membelanjakan uang mereka untuk pakaian yang tidak akan mereka pakai setelah menerima gaji. | よく節約を口にしている人に限って、給料を受け取っては、後で身につけもしない服など無駄遣いしがちだ。 |
-| てしょうがない | てしょうがない | Aku selalu lupa tentang hal yang sama dan tidak bisa menahannya. | いつも同じものを忘れてしょうがない。 |
-| て当然だ | てだ | Karena dia selalu menyusahkan semua orang, wajar jika dibenci. | 彼女はみんなに迷惑ばかりかけているから、嫌われて当然だ。 |
-| ようがない/ようもない | ようがないようもない | Rasa ini sungguh tidak bisa digambarkan. | 何とも言いようがない味だ。 |
-| ～である | である | Dia sangat tampan. | 彼はとてもハンサムである。 |
-| 全く～ない | くない | Dia sama sekali tidak belajar. | 彼はまったく勉強しない。 |
-| ～は～で有名 | はで | Dia terkenal karena pengetahuannya tentang konstitusi. | 彼は憲法に詳しいことで有名です。 |
-| なかなか～ない | なかなかない | Sistem ini tidak mudah diperbaiki. | このシステムはなかなか改善されない。 |
-| そうすると | そうすると | Tolong tingkatkan volumenya sedikit lagi. Jika tidak, semua orang tidak akan bisa mendengarnya. | もう少し音量を上げて。そうするとみんな聞こえるから。 |
-| からこそ | からこそ | Karena kamu yang mengantarkan, aku bisa menikmati perjalanan yang menyenangkan. | あなたが案内してくれたからこそ、楽しい旅行ができた。 |
-| そのため(に) | そのために | Saya adalah penggemar kereta api. Saya mengambil foto berbagai kereta, dan untuk itu, saya kadang-kadang begadang. | 私は鉄道オタクです。いろんな電車の写真を撮るのですが、そのために徹夜することもあります。 |
-| ところだった ① | ところだった | Hampir saja saya terjatuh dari perahu. | もう少しで船からおちるところだった。 |
-| では・それでは・じゃあ | では・それでは・じゃあ | Baiklah, mari kita bertemu lagi pada hari Selasa minggu depan. | では、また来週の火曜日に会いましょう。 |
-| ないうちに | ないうちに | Tanpa menyadari, kereta sudah berangkat. | 気づかないうちに、列車が出発してしまっていた。 |
-| と同時に | とに | Segera setelah pertunjukan selesai, tepuk tangan dari penonton pun terdengar. | 演技が終わると同時に、観客から拍手が起こった。 |
-| ～というのは事実だ | というのはだ | Dia adalah seorang aktor, itu adalah fakta. | 彼が俳優だというのは事実だ。 |
-| ～ても～なくても | てもなくても | Baik kamu lulus ujian atau tidak, jika kamu belajar, itu akan bermanfaat bagimu. | 試験に受かっても受からなくても、勉強していたら自分の身になる。 |
-| に合わせて・に合った | にわせて・にった | Silahkan mulai sesuai dengan sinyal. | 合図に合わせて、スタートしてください。 |
-| とても～ない | とてもない | Sama sekali tidak bisa dipikirkan. | とても考えられない。 |
-| 当たり | たり | Biaya per item adalah 1000 yen. | 一個当たりの代金は1000円です。 |
-| み | み | Sup ini memiliki rasa umami ikan, ya. | このスープは魚のうまみが感じられるね。 |
-| はもちろん | はもちろん | Tentu saja, selain kursi, kami juga menangani semua jenis perabotan. | 椅子はもちろん、家具全般取り扱っています。 |
-| 却って | って | Saya bermaksud untuk membuatnya tertawa, tetapi sebaliknya, saya justru membuatnya menangis. | 笑わせるつもりだったけど、かえって泣かせた。 |
-| 再び | び | Setelah pergi mengambil kopi sekali, saya mulai membaca kembali. | 一度コーヒーを取りに行って、ふたたび読書に取り掛かった。 |
-| 前者は・後者は | は・は | Saya bingung untuk memilih antara perusahaan A dan perusahaan B. Yang pertama memiliki gaji yang baik, sedangkan yang kedua memiliki lingkungan yang baik. | A社とB社、どちらに就職するか迷っています。前者は給料がよく、後者は環境がいいのです。 |
-| は～くらいです | はくらいです | Saya cukup mahir dalam memasak. | 私が得意なのは料理くらいです。 |
-| できれば・できたら | できれば・できたら | Jika memungkinkan, saya ingin kamu membuatkan saya makan siang bento. | できればお弁当を作って欲しいな。 |
-| に限る | にる | Jika ingin diet, tidak ada cara lain selain berolahraga. | ダイエットをしたいなら、運動をするに限る。 |
-| 直ちに | ちに | Efeknya tidak muncul serta-merta. | 効果は直ちに現れるわけではありません。 |
-| ではなくて・じゃなくて | ではなくて・じゃなくて | Dia bukan saudara laki-lakinya, melainkan sepupunya. | 彼は兄弟ではなく(て)従兄弟です。 |
-| でよければ | でよければ | """Virgilius: """"Jika kamu tidak keberatan, saya akan mengantarkan.""""""" | ウェルギリウス：「私でよければ案内しますが。」 |
-| あるいは | あるいは | Jika itu hari Senin atau Selasa, saya bisa ikut. | 月曜日あるいは火曜日であれば、参加できます。 |
-| おきに | おきに | Silakan ukur suhu setiap 1 jam. | 1時間おきに温度を測ってください。 |
-| 上がる・上げる | がる・げる | Omong-omong, akhirnya gambar ini sudah selesai dibuat. | ところで、やっと絵が描きあがったよ。 |
-| だけでなく(て)～も | だけでなくても | Saya membeli bukan hanya es krim, tetapi juga puding. | アイスクリームだけじゃなくて、プリンも買いました。 |
-| kata kerja + としたが | としたが | Aku dan dia berusaha melompat bersamaan, tetapi gagal. | 僕と彼は同時にジャンプしようとしたけれど、失敗した。 |
-| たて | たて | Makan ikan yang baru ditangkap itu sangat enak! | 釣りたての魚を食べるのは最高！ |
-| すでに | すでに | Anda mungkin sudah tahu, tetapi tolong tanyakan sekali lagi untuk konfirmasi. | すでに知っているかもしれませんが、確認のためもう一度聞いてください。 |
-| 遂に | に | Akhirnya, saya menyelesaikan tulisan saya. | ついに論文を書き上げた。 |
-| 必ずしも | ずしも | Seorang pria tidak selalu mahir mengemudi. | 男の人が必ずしも運転が上手とは限らない。 |
-| たものだ | たものだ | Ketika saya masih kecil, saya sering pergi berenang di laut. | 子供の頃はよく海に泳ぎに行ったものだ。 |
-| だけしか | だけしか | Pada waktu ini, hanya ada satu dokter. | この時間、医師は一人だけしかいません。 |
-| 即ち | ち | Dia adalah putra dari adik ibu saya, yaitu sepupu. | 彼は私の母の弟の息子、すなわち従兄弟です。 |
-| もしも~なら・もしも~でも | もしもなら・もしもでも | Seandainya Doraemon ada, aku pasti bisa dibantu. | もしもドラえもんがいたなら、助けてもらえるのに。 |
-| と同じで・と違って | とじで・とって | Berbeda dengan ibunya, dia sangat pandai memasak. | 母親と違って、彼女はとても料理が上手です。 |
-| にもとづいて | にもとづいて | Film yang dibuat berdasarkan fakta sejarah. | 歴史的事実に基づいて、作られた映画。 |
-| だけのことはある | だけのことはある | Anak laki-laki saya kemarin, ada pengumuman hasil ujian dan dia lulus. Memang, dia telah belajar selama dua bulan. | 息子は昨日、試験の結果発表があり合格した。さすがに二か月勉強しているだけのことはある。 |
-| てはいられない | てはいられない | Ono: Ayo pergi ke karaoke! Iwamoto: Maaf, saya harus menyelesaikan PR matematika sampai pagi besok, jadi saya tidak bisa karaoke. | 小野:カラオケに行こう！岩本:すみません、明日の朝までに数学の宿題をしなくちゃいけないから、カラオケしてはいられない。 |
-| からといって | からといって | Membedakan orang hanya karena mereka miskin adalah dilarang di sekolah ini. | 貧しいからといって人を差別することはこの学校で禁止されている。 |
-| ことは〜が | ことはが | Iwamura: Apakah kamu mengerti bahasa Jepang? Doi: Saya bisa mengerti, tetapi hanya kata-kata yang sederhana. | 岩村:日本語が分かりますか？ 土井: 分かることは分かりますが、簡単な言葉だけです。 |
-| ものか | ものか | Nagai: Kabarnya, Hasegawa sedang berpacaran dengan Ito. Hasegawa: Tidak benar! Apakah aku akan berpacaran dengan Ito?! | 永井：長谷川さんって伊藤と付き合っているらしい。長谷川：違うよ！伊藤さんと付き合うものか！ |
-| に限らず | にらず | Untuk mendapatkan tubuh yang proporsional, kita harus berolahraga tidak hanya di musim panas, tetapi juga sepanjang tahun. | 均整で良い姿になるために、夏に限らず、年中運動すべきです。 |
-| さらに | さらに | Pajak menjadi lebih tinggi lagi. | 税金はさらに高くなった。 |
-| てからでないと | てからでないと | Di perusahaan IT ini, Anda tidak bisa menjadi programmer senior kecuali Anda telah mendapatkan gelar magister. | このITコーポレーションでは、修士号を取得してからでないとシニアプログラマーになれない。 |
-| 途中に/途中で | にで | Saat saya tersesat di tengah perjalanan, seorang pejalan kaki menunjukkan jalan. | 旅の途中で迷っていたら、通行人が案内してくれた。 |
-| というものでもない | というものでもない | Tidak berarti bahwa jika ada cinta, maka bisa menikah. | 愛があれば結婚できるというものではない。 |
-| ～ところに/～ところへ | ところにところへ | Saat saya sedang mengunci pintu, tiba-tiba pintu terbuka dan adik perempuan saya masuk. | ドアに鍵をかけているところに、急にドアが開いて妹が入ってきた。 |
-| とも | とも | Meskipun siswa tidak hadir di kelas, guru harus melanjutkan pelajaran dengan baik. | 生徒が授業に出席しなくとも、教師はきちんと授業を進めていくべきだ。 |
-| 要するに | するに | Petugas bank: Singkatnya, jika uang tidak cukup, maka Anda tidak dapat menggunakan kartu debit. | 行員：要するにお金が足りない場合デビットカードを使えないということです。 |
-| 万が一 | が | Jika terjadi hal yang tidak diinginkan, saya akan menitipkan anak saya di rumah nenek. | 万が一のことがあったら、おばあちゃんの家に子どもを預けることになっている。 |
-| を通じて・を通して | をじて・をして | Istriku yang sekarang aku temui melalui teman. | 今の奥さんは友達を通じて出会った。 |
-| よりほかない | よりほかない | Kepala Departemen: Proyek itu sia-sia dalam hal waktu dan uang, jadi kita tidak punya pilihan lain selain menyerah pada pinjaman. | 部長：そのプロジェクトは時間とお金の無駄だったので、融資を諦めるよりほかはない。 |
-| てはならない | てはならない | Para remaja tidak boleh minum alkohol. | 十代はお酒を飲んではならない。 |
-| に気をつける | にをつける | Es licin, jadi harap hati-hati di sekitar kaki. | 氷は滑りやすいから、足もとに気をつけて。 |
-| を問わず | をわず | Kami akan merekrut pelamar yang memiliki motivasi, tanpa memandang latar belakang pendidikan atau pengalaman! | 学歴や経験を問わず、やる気のある応募者を雇う！ |
-| ものなら | ものなら | Kalau kamu bisa melakukannya lebih baik dariku, cobalah! | 私よりもっと上手くやれるものならやってみろ！ |
-| にあたり・にあたって | にあたり・にあたって | Ketika melakukan percobaan laser, harap pastikan untuk mengenakan kacamata pengaman. | レーザーの試験にあたり、必ず保護メガネを着用してください。 |
-| にかかわる | にかかわる | Pekerjaan dokter berhubungan dengan kehidupan. | 医師は命にかかわる仕事です。 |
-| に決まっている | にまっている | """Linux otaku: 2018 pasti akan menjadi """"tahun desktop Linux""""!""" | Linuxオタク：2018は「デスクトップLinuxの年」になるに決まっている！ |
-| に越したことはない | にしたことはない | Setelah dirawat di rumah sakit dalam waktu yang lama, tidak ada yang lebih baik daripada bisa pulang. | 長い間の入院の後では、退院できるに越したことはない。 |
-| にせよ・にしろ | にせよ・にしろ | Apa pun alasannya, tenggat waktu adalah minggu lalu. Seharusnya aku bisa mengumpulkan dokumen sebelum tenggat waktu. | どんな事情があったにしろ、締め切りは先週だった。もう少し締め切りよりも早く書類を提出してもよかった。 |
-| に相違ない | にない | Karena Dr. Tanaka adalah seorang dokter bedah kelas satu, pasti operasi itu akan berhasil. | 田中先生は一流の外科医だから、手術は成功するに相違ない。 |
-| につき | につき | Karena pembukaan, kami sedang mencari staf administrasi. | 開店につき、事務員を募集する。 |
-| お～願う | おう | Bagi Anda yang ingin bertemu, karena petugas sedang dalam rapat, bisakah Anda menunggu di ruang tunggu? | 面会をご希望の方は担当者が会議中ですので、待合室でお待ち願えますか？ |
-| を込めて | をめて | Saya ingin makan bento yang dibuat dengan penuh cinta! | 彼女の愛を込めて作った弁当を食べたい！ |
-| そうにない | そうにない | Sepertinya tidak mungkin saya akan menang lotere dua kali berturut-turut. | ２回連続で宝くじには当たりそうにない。 |
-| た末・の末 | た・の | Setelah melalui penderitaan, saya mulai hidup normal dengan menggantungkan senjata di dinding. | 苦難の末に銃を壁にかけて普通の生活を送りはじめた。 |
-| という風に | というに | """Detektif: """"Taku-san melihat saya seolah-olah dia tahu tentang kecelakaan itu.""""""" | 刑事： 「武さんはその事故のことを知っていたという風に私を見ていた。」 |
-| というわけではない | というわけではない | Ibu: Kenapa kamu tidak mau makan ini? Apakah kamu tidak suka masakanku? Anak: Bukan berarti aku tidak suka, tapi aku hanya tidak ingin makan sekarang. | 母: 何でこれを食べないの？あたしの料理、嫌いなの？ 息子: 嫌いだというわけではないけど、単に今は食べたくない。 |
-| にほかならない | にほかならない | Keuntungan besar perusahaan kami tahun ini tidak lain adalah berkat pelanggan. | わが社の今年度の多大な利益は顧客のおかげにほかなりません。 |
-| はたして | はたして | Bagaimana saya harus kembali, sebenarnya? | 迷子：果たしてどうやって帰るの？ |
-| 甲斐がある | がある | Setiap hari, saya belajar bahasa Jepang. Berkat itu, akhirnya saya lulus ujian kemampuan bahasa Jepang. Rasanya menyenangkan. | 毎日、日本語を勉強してたんだ。その甲斐(が)あって、とうとう日本語能力試験を合格した。気持ちがいい。 |
-| と考えられる | とえられる | Diperkirakan bahwa jika pertumbuhan ekonomi Tiongkok terus berlanjut, ia akan menjadi kekuatan besar yang baru. | 中国は経済成長が続いていけば新たな超大国となると考えられる。 |
-| かねる | かねる | Siswa: Saya pikir saya bisa melakukan perjalanan waktu. Guru: Saya sama sekali tidak setuju dengan pendapat seperti itu. | 生徒:時間旅行ができると思います。先生:そのような意見には、とうてい同意しかねます。 |
-| に反して | にして | Bertentangan dengan keinginan orang tua, saya meninggalkan kampung halaman dan pindah ke ibukota. | 父母の意志に反して、故郷を離れて首都に引っ越したんだ。 |
-| 限り | り | Selama tidak lupa melakukan pemanasan, kemungkinan terluka sangat rendah. | ウォーミングアップを忘れない限り、怪我する可能性は低い。 |
-| にかかわらず | にかかわらず | Terlepas dari cuaca, kami akan melakukan pemangkasan rumput di sekitar apartemen seperti biasa, meskipun cuaca hujan. | お天気に関わらず雨天でも、例年通り、マンション周辺の草取りを行います。 |
-| ものの | ものの | Tahun ini saya akhirnya mencoba untuk mengikuti ujian SIM, tetapi saya jarang mengemudi. | 今年ようやく運転免許の試験を受けてみたものの、めったに運転しない。 |
-| ねばならない | ねばならない | Jika ada seseorang yang pingsan di jalan, kamu harus segera menghubungi nomor darurat. | 通りがかりに意識を失った人がいたら、すぐに緊急用の番号に連絡せねばならない。 |
-| にしろ～にしろ | にしろにしろ | Baik itu desa maupun kota besar, saluran pembuangan adalah sesuatu yang sangat dibutuhkan di zaman modern ini. | 村にせよ大都市にせよ、近代では下水は絶対必要だ。 |
-| をもとに | をもとに | Manga romansa ini tampaknya dibuat berdasarkan kejadian yang benar-benar terjadi. | この恋愛漫画は実際に起こったことをもとに作られているらしい。 |
-| につけ | につけ | Setiap kali saya melihat lukisan ini, saya teringat masa kecil. | この絵を見るにつけ、子供の頃のことを思い出す。 |
-| を除いて | をいて | Kecuali staf rumah sakit, tidak boleh masuk. | 病院スタッフを除いて、入ってはならない。 |
-| にわたって | にわたって | Besok, salju yang kuat akan turun di seluruh wilayah Hokkaido. | 明日は北海道全域にわたって強い雪が降るでしょう。 |
-| 結果 / の結果 | の | Sebagai akibat dari penolakan publik, usulan kenaikan pajak dibatalkan. | 国民が反対した結果、増税の提案は破棄された。 |
-| て以来 | て | Sejak saya mulai belajar bahasa Jepang 8 tahun yang lalu, saya belajar dengan giat setiap hari. | 8年前に日本語を勉強し始めて以来、毎日、しっかり勉強してる。 |
-| か〜かのうちに | かかのうちに | Apakah saya mencuci mobil atau tidak, tiba-tiba hujan mulai turun. Saya sangat marah. | 車を洗いきるか洗いきらないかのうちに雨が降り出したんだ。とても怒ってた。 |
-| に加えて | にえて | Swedia adalah negara yang, selain kaya akan sumber daya alam, juga berkembang dalam industrinya berkat sistem pendidikan yang baik. | スウェーデンは天然資源の豊かさに加えて、立派な教育体制によって産業が発達している国でもある。 |
-| げ | げ | """Ketika seseorang mengatakan """"Jika kamu melakukan seperti yang saya katakan, pada saat yang tidak terduga kamu akan menjadi kaya"""", lampu merah menyala di kepala saya, dan saya mulai berpikir bahwa ini adalah tawaran untuk mendapatkan keuntungan yang mencurigakan. Saya harus selalu waspada terhadap orang-orang seperti itu.""" | 誰かに「私の言うとおりにすれば、いつの間にかお金持ちになれるんだ」と言われると、頭の中に赤ランプが点灯して、これはなにか怪しげな儲け話だと思うようになる。このような人には、いつも気を付けなければならない。 |
-| つつ | つつ | Burung layang-layang dapat terbang sambil tidur. | ツバメは飛行しつつ、寝ることができる。 |
-| ては | ては | Jika saya terus melakukan kesalahan seperti ini, saya tidak akan bisa menyelesaikan tugas liburan musim panas. | このような間違いを何回もしていては、夏休みの課題はやりきれない。 |
-| ては〜ては | てはては | Berjalan dan berlari, mengulangi (sebagai cara), ini adalah metode pelatihan yang baik bagi orang-orang yang ingin mencoba jogging tetapi merasa khawatir tentang daya tahan tubuh mereka. | 歩いては走り、走っては歩き、(を 繰り返すことは)、ジョギングしてみたいけれど体力に不安な人にとって、いいトレーニング方法です。 |
-| いわゆる | いわゆる | Obat yang tampak seperti yang asli, yang disebut sebagai obat palsu (plasebo), mungkin saja diresepkan oleh dokter dalam beberapa kasus. | 本物のように見えるが薬効成分のない薬、いわゆる偽薬(プラセボ)は場合によって医者に処方されているかもしれない。 |
-| かねない | かねない | Makanan yang melewati tanggal kedaluwarsa dapat menyebabkan diare. | 賞味期限切れの食品は、下痢の原因になりかねない。 |
-| なお① | なお | Kereta uap masih digunakan di daerah yang tidak memiliki listrik. | 蒸気機関車は今もなお、電気がない地域において使用されている。 |
-| なお② | なお | Pada tanggal 24 Juli 202X, kami akan melakukan penyiangan di sekitar apartemen. Selain itu, kami juga akan mengadakan acara untuk anak-anak penghuni. | ２０２X 年７月２４日にマンション周辺の草取りを行います。なお、同時に、住人の子供向きのイベントも行います。 |
-| に応えて | にえて | Menanggapi permohonan keterbukaan informasi, dokumen yang berkaitan dengan penyebab kecelakaan telah dibuka. | 情報公開請求に応えて、事故原因に関する書類が開示された。 |
-| つつ(も) | つつも | Meskipun ekspedisi ke Kutub Antartika sudah dipersiapkan dengan baik, tetap saja mengalami kegagalan. | 南極点遠征はよく備えつつも、失敗した。 |
-| にもかかわらず | にもかかわらず | Pada zaman Romawi Kuno, Galia ditaklukkan oleh Romawi, tetapi sebuah desa kecil masih terus bertarung. | 古代ローマ時代、ガリアはローマによって征服されたにもかかわらず、ある小さな村はなおも戦い続けた。 |
-| 抜く | く | Tim, meskipun tahu bahwa maju ke semifinal tidak mungkin bahkan jika menang dalam pertandingan, tetap berjuang sampai akhir. | チームは、たとえ試合に勝っても準決勝進出は不可能と知りつつも、最後まで頑張りぬいた。 |
-| 際に | に | Ketika bekerja di bawah terik matahari, harap bawa topi dan sejenisnya. | 炎天下で働く際には帽子などを持ってきてください。 |
-| 何しろ | しろ | Bunpo-chan: Kenapa kamu terlihat begitu sedih? Megane-kun: Sedih itu wajar. Lagipula, aku baru saja ditinggal pacar. | 文法ちゃん：どうしてそんなに悲しそうにしてるの？メガネくん：悲しいのも当然だろ。何しろガールフレンドにフラれたんだから。 |
-| たって | たって | Meskipun (saya) mengaku dengan serius, dia mungkin menganggapnya sebagai lelucon. | 真剣に告白したって、彼女は冗談だと思うかもしれない。 |
-| てでも | てでも | Saya ingin menjadi lancar berbahasa Jepang meskipun harus menghabiskan tenaga dan waktu. | 手間と時間をかけてでも、日本語がぺらぺらになりたい。 |
-| はともかく | はともかく | Bentuk smartphone ini, meskipun demikian, saya pikir performanya kelas satu. | このスマホの形はともかく、性能は一線級だと思ってる。 |
-| やら～やら | やらやら | Saya tidak tahu wajah seperti apa yang harus saya tunjukkan, karena saya merasa senang dan malu. | うれしいやらはずかしいやらで、どんな顔をしていれば良いのか、わからなかった。 |
-| にかけては | にかけては | Dalam hal bermain RPG, saya tidak kalah dari siapa pun. | RPGゲームをすることにかけては誰にも負けない。 |
-| よりしかたがない | よりしかたがない | Meskipun pajaknya tinggi, tidak ada pilihan lain selain membayarnya. | 税金は、高くとも納めるよりしかたがない。 |
-| にしたがって | にしたがって | Seiring dengan berjalannya waktu, sumber daya yang tidak terbarukan semakin menipis. | 年が経つにしたがって、非再生可能資源が枯渇する一方だ。 |
-| つつある | つつある | Sangat disayangkan bahwa jumlah hewan liar di Afrika sedang berkurang. | アフリカの野生動物の数が減りつつあるのは残念だ。 |
-| か何か | かか | """Bartender Hitomi: """"Bagaimana dengan minuman?"""" Pelanggan Nitta: """"Saya ingin bir atau sesuatu seperti itu.""""""" | バーテンのひとみさん：「お飲み物はいかがか？」顧客のにったさん：「ビールか何かがほしいな。」 |
-| っこない | っこない | Jika tidak berlatih banyak, tidak mungkin bisa memainkan alat musik. | 練習をたくさんしなくては、楽器の演奏なんかできっこない。 |
-| に応じて | にじて | Di gym, kita seharusnya dapat memilih latihan sesuai dengan kemampuan kita. | ジムでは実力に応じて練習を選べるべきだ。 |
-| に伴って・に伴い | にって・にい | Selama renovasi kastil, seiring dengan perbaikan lantai, dinding juga dicat ulang. | 城の改修中、床の修理に伴って、壁も塗りなおされた。 |
-| のみならず | のみならず | Anime dan manga tidak hanya sangat populer di dalam negeri Jepang, tetapi juga di tingkat internasional. | アニメや漫画は日本の国内のみならず国際的に絶大な人気を持つようになった。 |
-| 抜きで | きで | """Restoran sushi: """"Apa Anda sudah memutuskan pesanan?"""" Pelanggan: """"Ya, saya pesan sushi tuna tanpa wasabi, please.""""""" | お寿司屋さん：「ご注文はお決まりですか？」お客さん：「はい、マグロのにぎりをワサビ抜きでお願いします。」 |
-| をきっかけ | をきっかけ | """Ayah sedang menceritakan kenangan: """"Karena pindah saat di sekolah dasar, saya bisa bertemu dengan ibu.""""""" | 父は思い出を語っている：「小学校の時の引っ越しがきっかけで、母さんに出会えた。」 |
-| おそらく | おそらく | Dia mungkin tidak ada di sini. | おそらく彼はここにいないだろう。 |
-| に先立ち | にち | """Notifikasi dari sebuah permainan: """"Kumpulkan teman sebelum menghadapi petualangan.""""""" | あるゲームの通知：「冒険に挑むに先立って仲間を集めよ。」 |
-| あげく | あげく | Setelah berlari dan terjatuh, akhirnya saya menabrak dinding. | 走って転んだあげくに、壁に衝突した。 |
-| たまえ | たまえ | Silakan belajar! | 勉強をやりたまえ。 |
-| とっくに | とっくに | """Anak-anak tahun 90-an: """"Sebenarnya Carmen ada di mana?"""" Seseorang: """"Dia sudah melarikan diri jauh sejak lama.""""""" | 90年代の子供：「一体どこにカルメンがいるの？」誰か：「とっくに遠くへ逃げたぞ」 |
-| は別として | はとして | Mangsa yang sedang dimakan, terlepas dari itu sendiri, hewan pemangsa yang memakannya benar-benar bahagia. | 喰われている餌食自分では別として喰っている捕食動物は本当に幸せだ。 |
-| はもとより | はもとより | Leonardo da Vinci bukan hanya seorang pelukis besar, tetapi juga salah satu penemu terkemuka. | レオナルド・ダ・ヴィンチは偉大な画家はもとより一流の発明家のひとりである。 |
-| やがて | やがて | Saya akan segera menyelesaikan buku apapun. Namun, apakah itu benar? | どんな本でもはやがて読み終わります。けれど、果たしてそれは本当でしょうか？ |
-| いつの間にか | いつのにか | Setelah dirawat di rumah sakit untuk sementara waktu, ketika saya keluar setelah lama, saya menyadari bahwa tanpa saya sadari, sudah memasuki musim dingin. | しばらく入院していて、久しぶりに外に出ると、いつの間にか冬になっていたと見つけた。 |
-| でできる・からできる | でできる・からできる | Smartphone yang terbuat dari kaca di bagian belakang belakangan ini laku terjual dengan baik. | 裏面がガラスでできるスマホは最近売行きがいい。 |
-| 〜かは〜によって違う | かはによってう | Apakah suka atau tidak suka musik berbeda-beda tergantung orangnya. | 音楽が好きか嫌いかは人それぞれによって違う。 |
-| Particle + の | の | Ayo pergi ke acara handshake dengan A-chan! | あちゃんとの握手会に行こう！ |
-| なん + counter + か | なんか | Saya menyadari bahwa beberapa pemain telah cedera. | 選手の何人かが負傷したことに気が付いた。 |
-| がみられる | がみられる | Pada musim panas, kamu dapat melihat beruang di sini. | 夏には、ここでクマが見られます。 |
-| 又〜も | も | """""""から"""" menunjukkan alasan atau penyebab. Selain itu, dalam kalimat seperti """"Layar smartphone terbuat dari kaca,"""" juga dapat menunjukkan asal atau sumber dari sesuatu.""" | 「から」は理由や原因を表す。また、「スマホの画面はガラスからできている。」のように何かの起源やソースも表すこともある。 |
-| と同じくらい | とじくらい | Resep ini terlihat mudah. Tingkat kesulitannya sama dengan telur orak-arik. | このレシピは簡単そうです。難易度は炒り卵と同じぐらいです。 |
-| まい～のように | まいのように | Sebelum dia bertemu dengannya, dia sering bolos sekolah hampir setiap hari. | 彼女は彼に出会う前は、毎日のように高校をサボっていた。 |
-| 合う | う | """""""Saat teman sedang menderita, kita seharusnya saling membantu.""""""" | 「友達が苦しんでる時は、助け合うべきだね。」 |
-| ように | ように | Misalnya, agar tidak terkena flu, pakailah pakaian yang hangat. | 例えば風邪を引かないように、暖かい服装をする。 |
-| と言える | とえる | Jika dibandingkan dengan tahun anggaran sebelumnya, kita dapat mengatakan bahwa tahun ini adalah sukses. | 前会計年度に比べて、今年度は成功だと言えるでしょう。 |
-| ことなの | ことなの | """Apa yang dimaksud dengan """"kapal hantu"""" adalah kapal yang tidak memiliki awak yang hidup.""" | 幽霊船というのは生きた乗組員のいない船舶のことなのである。 |
-| んだけど・んですが | んだけど・んですが | """""""Apakah kamu tidak pergi ke bioskop besok?"""" """"Saya ingin pergi, tetapi karena ada ujian besok, saya tidak bisa.""""""" | 「明日映画館に行かない？」「行きたいんだけど (明日試験があるから、行けない) 。」 |
-| のはXの方だ | のはのだ | """""""Aku yang salah. Maaf!"""" """"Kamu tidak salah. Yang seharusnya minta maaf adalah aku.""""""" | 「あたしがわるいの。ごめんなさい！」「君が悪いんじゃないよ。謝るべきなのはぼくの方だ。」 |
-| Angka / Jumlah + は | は | Makanan ini tidak bisa dimakan karena telah jatuh di lantai setidaknya selama 3 detik. | この食べ物は少なくとも床に3秒は落ちていたから食べられない。 |
-| かする | かする | Itu terlihat seperti bahasa Inggris yang telah disederhanakan. | それは単純化した英語のように見える。 |
-| ～は～となっている | はとなっている | Di beberapa negara bagian, konsumsi alkohol oleh anak-anak dan remaja di bawah 21 tahun adalah ilegal. | いくつかの州では21才未満の子供たちや若者がアルコールを消費することは違法となっている。 |
-| らしい ② | らしい | """Ayah: """"Kehilangan keinginan untuk pergi ke sekolah itu sepertinya karakteristik anak-anak. Aku juga begitu.""""""" | 父親：「学校に行きたくなくなることは子供らしい。オレもそうだったよ。」 |
-| ようにいのる | ようにいのる | Aku berdoa agar bisa hidup dan keluar dari sini. | 生きてここを出れるように祈っているんだ。 |
-| に当たる | にたる | """Menurut seorang manga-ka, istilah dalam bahasa Polandia """"Zaksza in Love"""" kira-kira sama dengan bahasa Jepang """"Kasih Selamanya"""".""" | とある漫画家によるとポーランド語の「 ザクシャ・イン・ラブ 」はおおよそ日本の「愛を永遠に」に当たるらしい。 |
-| 傾向がある | がある | Permintaan untuk smartphone high-end baru-baru ini semakin menunjukkan kecenderungan penurunan. | ハイエンドスマホの需要は最近ますます低下の傾向にある。 |
-| 関係がある | がある | Mereka tampaknya memiliki hubungan yang tidak jelas dengan Aizawa-san masing-masing. | 彼らはそれぞれあいざわさんと不透明な関係があるように見える。 |
-| という理由で | というで | Mary mungkin akan dipecat karena alasan ia cenderung menonton film saat bekerja. | メアリーさんは仕事中に映画を見がちという理由で首になるかもしれない。 |
-| は言うまでもない ① | はうまでもない | Tentu saja kita harus membantu orang yang sedang kesulitan. | 困っている人を助けるべきというのは言うまでもない。 |
-| という点から考えると | というからえると | Jika kita mempertimbangkan dari segi kesehatan, semakin sering kita mengonsumsi makanan yang tinggi gula, semakin besar kemungkinan kita mengalami obesitas. | 健康の点から考えると砂糖の多い食べ物を食すればするほど肥満の可能性が高くなる。 |
-| ～かというと ① | かというと | Kenapa saya tidak ingin membeli smartphone merek itu? Karena sebelumnya saya pernah membelinya tetapi rusak dalam dua minggu. | どうしてそのブランドのスマホは買いたくないかっていうと、前に一回買ったけど二週間で壊れたんだよね. |
-| すくなくない | すくなくない | Orang yang suka anime dan manga itu tidak sedikit. | アニメと漫画が好きな人は少なくないですよ。 |
-| で言うと | でうと | Tahun 2019 Masehi, jika diungkapkan dalam istilah Reiwa, adalah tahun pertama. | 西暦の２０１９年は、令和で言うと元年に当たります。 |
-| ～ずつ | ずつ | Akibat pemanasan global, suhu meningkat sebesar 0,008 derajat setiap tahun. | 地球温暖化のため、気温は年ごとに０．００８度ずつ上がる。 |
-| に至るまで | にるまで | """Penginapan """"Hōshi"""" yang terletak di Prefektur Ishikawa telah beroperasi terus menerus selama lebih dari 1300 tahun sejak tahun 718 sampai sekarang.""" | 石川県にある「法師」旅館は718年から今に至るまで１３００年以上商いし続けている。 |
-| ぬ | ぬ | """""""Orang yang tidak boleh diremehkan"""" adalah orang yang """"tidak bisa diabaikan.""""""" | 「隅に置けぬ人」というのは「侮れない人」ということなのだ。 |
-| と並んで | とんで | Karya seni ini dihargai tinggi, setara dengan Mona Lisa. | この芸術作品はモナ・リザと並んで高く評価されている。 |
-| とされている | とされている | Dalam konteks orang Polandia, angka 13 dianggap sebagai angka yang sial. | 論文：「ポーランド人にとって13という数字は不吉な数字とされている。」 |
-| 考えられない | えられない | """Percakapan dengan teman: """"Tidak mungkin seorang anak dapat menyelesaikan soal matematika yang sekeras itu.""""""" | 友達との話：「子供がそんな難しい数学の問題を解くということは考えられない。」 |
-| 生かす | かす | """""""Saya ingin memanfaatkan kesempatan ini.""""""" | 友達との話：「ぼくはこのチャンスを生かしたい。」 |
-| なし | なし | """Label Produk: """"Minuman Diet Tanpa Gula""""""" | 商品ラベル：「砂糖なしのダイエットドリンク」 |
-| 込む ① | む | """""""Membawa Naga ke kelas tidak melanggar aturan, bukan?""""""" | ライトノベル、クラスメートとの話：「ドラゴンをクラスに持ち込むのはルール違反じゃないか？」 |
-| さ - Filler | さ | """""""Ini rahasia, tapi, dia telah memenangkan lotere.""""""" | 「内緒だけどさ、彼宝くじに当たったんだよ。」 |
-| でもある | でもある | Belajar bahasa itu menyenangkan. Namun, itu juga merupakan perjuangan melawan diri sendiri. | 語学を学ぶことは楽しい。しかし、自分との戦いでもある。 |
-| ずっと ① | ずっと | Saya sibuk dari pagi hingga sekarang. | 朝からずっと忙しいですよ。 |
-| ～(の)姿 | の | Saya suka cara Anda bergerak. | あなたの動く姿が好きです。 |
-| がけに | がけに | """A: """"Dia jatuh sakit."""" B: """"Kalau begitu, lebih baik kita berkunjung di jalan pulang. Dia pasti senang.""""""" | 友達との話、A：「彼女が病気になった。」B：「そうなら帰りがけに訪問したほうがいい。彼女も喜ぶだろう。」 |
-| も又 | も | """Tentang pengasuhan anak: """"Membiarkan anak yang lucu mencoba bepergian, itu juga adalah hal yang penting.""""""" | 子育てについての論文：「可愛い子に旅をさせてみること、それもまた大切なことです。」 |
-| だんだん | だんだん | """Kakak kelas sedang berbicara kepada adik kelas: """"Tapi tidak apa-apa, kamu akan mulai memahaminya sedikit demi sedikit.""""""" | 先輩が後輩に話している：「でも大丈夫、だんだん分かるようになるよ。」 |
-| だいたい | だいたい | """""""Saya kebanyakan mengerti bahasa Jepang.""""""" | 「日本語がだいたいわかる。」 |
-| しかしながら | しかしながら | """Artikel: """"Merupakan fakta bahwa orang tua sulit untuk mengamati anak mereka secara objektif. Namun, jika diperlukan, apakah tidak mungkin untuk melihat dari samping?""""""" | 記事：「親は自分の子供を客観視しにくいというのは事実である。しかしながら、必要がある場合は、脇から見ることもできるのではないだろうか。」 |
-| 左右する | する | """Situs tentang tren, judul artikel: """"Menggiling sepatu mempengaruhi umur dan keindahan sepatu""""""" | 流行についてのサイト、記事のタイトル：「靴磨きが靴の寿命と美しさを左右する」 |
-| ちゃんと・きちんと | ちゃんと・きちんと | """Ibu berkata kepada anaknya: """"Rapikan kamar dengan baik sebelum nenek datang!""""""" | 母親は子供に言う：「おばあちゃんが来る前に部屋をきちんと片付けしなさい！」 |
-| 後(の) kata benda | の | """Anak itu sedang berbicara dengan tetangga: """"Di rumah kami, kami punya 7 hewan. Ada 5 kucing, dan 2 yang lainnya adalah anjing.""""""" | 子供がお隣さんと話している：「うちでは７匹動物を飼ってるんです。猫が５匹、あとの２匹は犬です。」 |
-| 何から何まで | からまで | """Mengenai anak-anak, tetangga berkata: """"Ellen mirip sekali dengan ibunya dari segala segi.""""""" | 子供について、ご近所さんの話：「エレンは何から何まで母親そっくりだ。」 |
-| ～のうち(で) | のうちで | """Program televisi: """"Karena hal itu, Albert Einstein menjadi orang yang paling terkenal di antara para ilmuwan modern.""""""" | テレビ番組：「そのことにより、アルベルト・アインシュタインは近代科学者のうちで一番有名な人物になりました。」 |
-| かのようだ | かのようだ | Pada hari itu, saya bercakap sedikit dengan anak dari rumah sebelah. Meskipun dia baru berusia 10 tahun, cara bicaranya seolah-olah dia sudah dewasa. | その日、隣の家の子供とすこし話した。10才の子供でも喋り方はまるでもう大人であるかのようだった。 |
-| に際して | にして | Saya ingin mengungkapkan rasa terima kasih kepada keluarga dan teman-teman saya sehubungan dengan penerbitan buku pertama saya. | このたび初めての本の出版に際して、家族や友人に感謝申し上げたいと思います。 |
-| のももっともだ | のももっともだ | Mengacu pada situasi, tidak heran jika mereka berpikir demikian. | 状況からして、彼らがそう考えたのももっともだ。 |
-| のも当然だ | のもだ | Pasti wajar jika dia dipandang buruk oleh orang lain karena bersikap seperti itu. | 彼はあんな風に振舞っていたらほかの人からの受けが悪いのも当然だ。 |
-| の下で | ので | """Sebuah logam akan tiba-tiba memiliki hambatan listrik yang menjadi nol di bawah kondisi tertentu. Zat semacam itu di sebut bahan superkonduktor dalam bahasa Inggris sebagai """"superconductors.""""""" | ある金属は一定の状態のもとに電気抵抗が急にゼロになる。そういう物質を超伝導物質英語では「superconductors」と呼ばれている。 |
-| を中心に | をに | Mako sedang menjalani kehidupan yang berpusat pada komputer. | マコさんはコンピューターを中心とした生活をしている。 |
-| 恐れがある | れがある | """Ramalan cuaca: """"Besok, tampaknya ada tempat yang akan dilanda hujan lebat di sekitar Honshu. Terdapat kemungkinan adanya angin kencang dari Kanto hingga Tohoku.""""""" | 天気予報：「明日は、本州を中心に大雨の降る所がありそうです。関東から東北にかけては強風の恐れもあります。」 |
-| を契機に | をに | Kebijakan yang disebut sakoku adalah kebijakan yang memutuskan hubungan Jepang dengan negara asing. Akhir sakoku terjadi sebagai hasil dari kedatangan kapal hitam. | 鎖国とは、日本では海外との交流を遮断する政策であった。黒船の到着を契機に鎖国が終わった。 |
-| を巡って | をって | Hari ini, di parlemen, berlangsung perdebatan hebat mengenai apakah pajak harus dinaikkan atau tetap tidak berubah. | 今日、国会では増税するべきかそのまま据え置きするべきかをめぐって激論が生じた。 |
-| おまけに | おまけに | Saya sudah membersihkan rumah. Selain itu, saya juga sudah menyiapkan makan siang. | 家を掃除した。おまけにランチを作っといた。 |
-| に沿って | にって | Jika Anda pergi di sepanjang jalan, Anda akan melihat supermarket dalam waktu dekat. | 「道に沿っていったら、そのうちスーパーが見えてきますよ」 |
-| 陸に～ない | にない | Dia bahkan tidak bisa membuat masakan sederhana, apalagi memanggang kue. | 彼はケーキを焼くどころか、シンプルな料理さえろくにできない。 |
-| 幸い・幸いなことに | い・いなことに | Dia, beruntung, tidak mengalami cedera berkat airbags. | 彼は幸い、エアバッグのおかげで怪我をせずに済んだ。 |
-| ていては | ていては | Jika Anda terus menghabiskan uang seperti itu setiap hari, Anda akan bangkrut. | このまま毎日そんな風にお金を使っていては、破産してしまいますよ。 |
-| 僅かに | かに | Hanya ada 4 orang atlet yang maju ke semifinal dari kelompok itu. | そのグループの中から準決勝に進出する選手はわずかに４人です。 |
-| および | および | """Pemberitahuan: """"Seminar tentang pencarian pekerjaan untuk mahasiswa serta mengenai kewirausahaan.""""""" | お知らせ：「大学生のための職探し、および起業に関するセミナー。」 |
-| たちまち | たちまち | Di desa kecil, tidak heran jika rumor cepat menyebar! | 小さな村では噂はたちまち広がるのは当然だよ！ |
-| てくれない・てもらえない | てくれない・てもらえない | Bisakah kamu membuatkan teh? | お茶を入れてくれない？ |
-| 未だに | だに | """Artikel: """"Pemerintah sudah mengurangi pajak minyak, namun harga masih belum berubah.""""""" | 記事：「政府は既に石油の税金を減らしたにも関わらず、価格は未だに変わっていない。」 |
-| 何より | より | """Sudah lama tidak bertemu, saat mengucapkan salam: """"Senang rasanya melihat Anda baik-baik saja.""""""" | 久しぶりに挨拶する時：「お元気そうで何よりです。」 |
-| たった(の) | たったの | """Teman 1: """"Bisakah kamu meminjamkan saya seribu yen?"""" Teman 2: """"Saya hanya punya lima ratus yen.""""""" | 友達１：「千円を貸してくれる？」友達２：「たった５００円しかないよ。」 |
-| だれ | だれ | Siapa? | 誰ですか。 |
-| たくさん | たくさん | Ada banyak (makanan), silakan makan. | たくさんありますから。食べてください。 |
-| すき | すき | Suka? | 好き？ |
-| きらい | きらい | Apakah kamu tidak suka nanas? | パイナップルが嫌い？ |
-| なにか・なにも | なにか・なにも | Apakah saya melakukan sesuatu yang tidak menyenangkan? | 私が何か嫌なことをしましたか？ |
-| kata sifat + の(は) | のは | Yang baru itu adalah mobilnya. | 新しいのは彼の車だ。 |
-| 誰か・どこか・誰も・どこも | か・どこか・も・どこも | Apakah ada teman di suatu tempat? Tidak ada di mana pun. | 「どこかに友達がいるのですか。」「どこにもいません。」 |
-| Number + しか〜ない | しかない | Meskipun dia kaya, dia hanya memiliki 1000 yen tunai. | お金持ちなのに現金は1000円しか持っていない。 |
-| お〜する | おする | Saya akan menutup pintu. | ドアをお閉めします。 |
-| Question-phrase + か | か | Apakah kamu tahu di mana saya? | 僕がどこにいるかわかる？ |
-| ～にする・～くする | にする・くする | Silakan kecilkan bagian tersebut dengan baik. | 頑張って部品を小さくしてください。 |
-| かた | かた | Cara dia berenang aneh. | 彼の泳ぎ方は変だ。 |
-| たところで | たところで | Bahkan jika saya mengungkapkan perasaan, sepertinya dia tidak akan menjawab. | 私が告白したところで、彼女は応じないだろう。 |
-| ~るまでだ | るまでだ | Jika saya gagal JLPT, saya akan mencoba lagi. | もしJLPTに落ちたら、もう一度試してみるまで(のこと)だ。 |
-| 如く・如き・如し | く・き・し | Gerakannya seperti seorang balerina. | 彼女の動きはバレリーナの如し。 |
-| にあって | にあって | Di dalam situasi darurat yang berbahaya, memastikan keselamatan adalah yang paling penting. | 危険な非常時にあっては、安全確保がまず大事だ。 |
-| 極まりない・極まる | まりない・まる | Melakukan kejahatan adalah hal yang sangat bodoh. | 犯罪を犯すのは愚劣極まりないことだ。 |
-| に足る | にる | Saya diperkenalkan dengan dokter gigi yang hebat oleh teman yang dapat dipercaya. | 信頼に足る友達に、腕のいい歯医者を紹介してもらった。 |
-| といえども | といえども | Meskipun dalam operasi, kita tidak boleh lengah sesaat pun. | 手術中は一瞬といえど気が抜けない。 |
-| を余儀なくされる | をなくされる | Karena penurunan ekonomi, perusahaan terpaksa ditutup. | 景気悪化のため、会社は閉鎖を余儀なくされた。 |
-| きらいがある | きらいがある | Ada orang yang cenderung menilai karakter seseorang hanya berdasarkan etnis. | ある人は、民族だけで人の性格を判断してしまうきらいがある。 |
-| を以て | をて | Jenis baterai baru yang dibuat dengan menerapkan bahan grafena sebagai anoda direncanakan untuk diperkenalkan tahun depan. | 陽極のグラフェンという物質の塗布を以て作られる、新たな種類の電池は翌年導入される予定である。 |
-| までもない | までもない | Ngomong-ngomong, Son Goku tidak perlu dibandingkan dengan Krillin, bahkan lebih kuat dari Vegeta. | あのね……そんごくうはクリリンなんかとは比べるまでもなく、それどころかベジータよりもずっと強いんだから。 |
-| ならまだしも | ならまだしも | Maaf, jika hanya pacaran itu masih bisa diterima, tetapi pernikahan adalah permintaan yang tidak mungkin. | すみませんが、付き合うぐらいならまだしも、結婚は無理な注文です。 |
-| とは | とは | Saya tidak pernah membayangkan bahwa Tanaka, yang lemah dan pemalu, akan menjadi juara tinju! | 病弱で内気だった田中さんがボクシングチャンピオンになるとは夢にも思わなかったよ！ |
-| じゃあるまいし | じゃあるまいし | Jangan langsung makan semuanya begitu kamu menemukan permen, bukan anak kecil! | 子供じゃあるまいしお菓子を見つけた途端に全部食べるな！ |
-| 〜よう/〜おう + が/と | ようおうがと | Apa pun yang dikatakan orang, saya akan terus mencintaimu! | 人が何と言おうが、ずっとあなたを愛しています！ |
-| ともなく・ともなしに | ともなく・ともなしに | Ketika saya sedang makan malam dengan Yamada-san tanpa benar-benar memikirkan hal itu, tiba-tiba dia mengungkapkan perasaannya dan saya terkejut. | 山田さんと晩御飯を食べるともなく食べていたら、急に彼が告白してきて驚いた。 |
-| からというもの | からというもの | Setelah bayi lahir, saya mulai bekerja dengan lebih sungguh-sungguh. | 赤ちゃんが生まれてからというもの、もっと本気で働くようになった。 |
-| かたわら | かたわら | Bruce, siang hari mengelola konglomerat, sementara malam hari巡i sebagai bartender di daerah berbahaya. | ブルースは、昼は財閥を経営するかたわら、夜はバーマンとして危険地域を見回っている。 |
-| を皮切りに | をりに | Dari pemilihan Bapak Minagawa sebagai direktur, tim kami meraih sukses di berbagai cabang olahraga secara berturut-turut. | 皆川さんが監督として選ばれたのを皮切りにして、うちのチームは次々とスポーツの成功を掴んだ。 |
-| に至っては | にっては | Anak-anak zaman sekarang biasanya hanya tahu tentang CD, tetapi bukan hal yang aneh jika mereka sama sekali tidak tahu tentang floppy disk. | 最近の子供は、かろうじてCDは知っているが、フロッピーに至っては全く知らない場合が珍しくない。 |
-| 塗れ | れ | Pak Tanaka tergelincir di es dan jatuh terpuruk ke salju, dan menjadi penuh salju. | 先生の田中さんは氷で滑って雪の塊で転び、雪まみれになってしまった。 |
-| なり | なり | Segera setelah dia berhenti menari, dia tiba-tiba menciummu. Rasanya menyenangkan. | 踊りを止めるなり、彼女が急にキスしてくれたんだ。気持ちいい。 |
-| ともなると・にもなると | ともなると・にもなると | Tempat ini adalah desa nelayan biasa, tetapi ketika liburan musim panas tiba, banyak pengunjung datang dan suasananya menjadi ramai. | ここは普通の漁村だが、夏休みともなると大勢の客が来て、賑やかになります。 |
-| をいいことに | をいいことに | Di tengah liburan musim panas, semakin banyak pencuri yang memanfaatkan situasi ketika para penghuni tidak ada. | 夏休みのうちに住人の留守をいいことに泥棒が増えるばかりだ。 |
-| ～かというと ② | かというと | Mengapa ini bisa terjadi? Semua dimulai ketika saya pulang dari sekolah sekitar satu minggu yang lalu.... | 何でこんなことになったかというとすべてが始まったのは１週間ほど前に学校から帰る時.... |
-| 言うまでもない ② | うまでもない | """A: """"Apakah ada hewan yang tidak boleh didekati?"""" B: """"Hmm.... Tentu saja singa dan ular, tetapi bahkan kuda nil juga berbahaya.""""""" | A：「あのさ近づいちゃいけない動物っているの？」B:「う～ん....ライオンやヘビみたいなのは言うまでもないけどカバも危ないよ。」 |
-| ずっと ② | ずっと | Matahari jauh lebih besar daripada Bumi. | 太陽のほうが地球よりずっと大きいです。 |
-| さ - Casual よ | さよ | """""""Aku bisa menyelesaikan proyek ini sampai besok. Itu benar.""""""" | 「明日までにこのプロジェクトを終えることができるさ。本当さ。」 |
-| さ - Interjection | さ | Ayo, mari kita mulai bekerja. | 「さあ、仕事を始めよう。」 |
-| 込む ② | む | Semua orang terdiam secara bersamaan. | みんないっせいに黙り込んでいた。 |
-| ている② | ている | Bus sedang dalam perjalanan ke Osaka sekarang. | バスは今大阪に来ています。 |
-| ている③ | ている | Saya pergi ke supermarket setiap malam Jumat. | 俺は毎週金曜日の夜にスーパーに行っているのだ。 |
-| ないと | ないと | """""""Kita harus memenuhi janji!""""""" | 「約束を守らないといけません！」 |
-| 聞こえる | こえる | """""""Nishiyama-san sejak lahir tidak bisa mendengar.""""""" | 「西山さんは生まれつき耳が聞こえないんです。」 |
-| 見える | える | """""""Papan iklan itu besar, jadi terlihat jelas dari mana saja.""""""" | 「あの看板は大きいのでどこからでもよく見える。」 |
-| なくて | なくて | Menjadi tidak...dan... | なる → ならなくて |
-| kata kerja | ないで | """Kakak perempuan berkata kepada adiknya: """"Tolong, jangan katakan apa-apa kepada orang tua.""""""" | 姉が弟に言う：「頼むから、親には何も言わないで。」 |
-| からする | からする | Di sekitar sini sangat mahal. Biaya sewanya mulai dari 100.000 yen. | この辺りはとても高いよ。家賃は１０万円からする。 |
-| にして① | にして | Sekarang jika dipikir-pikir, menjual bitcoin seharga 5 dolar pada waktu itu mungkin adalah keputusan yang salah. | 今にして思えばあの頃５ドルでビットコインを売るのは間違った決定だったかも。 |
-| ものを | ものを | """Kamiiyama: """"Seandainya siswa nakal itu tidak memakan pensil saya, seharusnya dia mengikuti ujian masuk... (Karena dia memakannya, dia tidak bisa melakukan itu.)""""""" | かみやま：「その不良学生が僕の鉛筆を食わなかったら入学試験を受けるはずのもんを・・・(食ったから、受けられなかった。）」 |
-| であれ | であれ | Baik di rumah teman, saat berkunjung adalah dasar tata krama untuk melepas sepatu. | 友人の家であれ、訪問時は靴を脱ぐことが、基本的な礼儀です。 |
-| をおいてほかに〜ない | をおいてほかにない | """Presiden berkata kepada wakil presiden: """"Saya berpikir untuk pensiun. Tidak ada orang lain yang lebih cocok untuk menjadi presiden berikutnya selain kamu.""""""" | 社長は副社長に言う：「私は引退しようと思う。次期社長は君をおいて他にふさわしい人は思い浮かばない。」 |
-| をもちまして | をもちまして | Layanan untuk versi YBox720 dan PrayStation44 dari Primal Fantasy 7 akan dihentikan per 16 Juli 2020. | プライマルファンタジー7のYBox720版及びPrayStation44版のサービスは2020年7月16日）をもちまして終了させて頂くことになりました。 |
-| とはいえ | とはいえ | Meskipun pelaku sudah ditangkap, mungkin akan memakan waktu sebelum dijatuhi vonis bersalah. | 犯人は逮捕されたとはいえ有罪と宣告されるまで時間がかかるだろう。 |
-| ならでは | ならでは | Kualitas unik yang hanya ada di kafe kecil ini sangat melimpah. | 求人のサイト、求人情報：「小さいカフェならではの良さが溢れています。」 |
-| すら | すら | """""""Burung gagak bahkan menunjukkan kemampuan untuk menggunakan alat.""""""" | 記事：「カラスは道具を使用する能力を示したことすらあります。」 |
-| あっての | あっての | """""""Saya ada karena ada Anda. Tanpa Anda, hidup saya menjadi tidak berarti.""""""" | 「あなたあってのわたしです。あなたがいなければ私の人生は無意味ですよ。」 |
-| ~たまでだ | たまでだ | A: Terima kasih sudah membantu! B: Tidak, itu hanyalah sesuatu yang alami. | A: 助けてくれてありがとうございます！B: いや、自然のことをしたまで(のこと)です。 |
-| を経て | をて | Chitoge dan Raku akhirnya menikah setelah menjalin hubungan selama sekitar 10 tahun. | ちとげとらくは、約１０年の交際を経てやがて結婚した。 |
-| ながらに | ながらに | Kouta mengambil surat dari Kaede sambil menangis dan merasa senang. | コウタはカエデからの手紙を手に取りつつ、涙ながらに喜んだ。 |
-| たなり・なり | たなり・なり | Dia sedang duduk dan berpikir dengan seksama. | 彼は腰かけたなりでじっと考えていた。 |
-| の極み | のみ | """Novel: """"Raja Daimos, setelah mendengar laporan ini, mencapai puncak kejutan.""""""" | 小説：「ダイモス王はこの報道を聞いて、驚きの極みに達しました。」 |
-| にしてみれば | にしてみれば | Bagi Harry, menerima perlakuan baik adalah pengalaman yang baru baginya. | ハリーにしてみれば、優しくしてもらうなど、初めての経験だった。 |
-| だの | だの | Hina hanya mengeluh tentang hal-hal seperti 'bau' dan 'tidak enak'. | ヒナは「臭い」だの「まずい」だのと文句ばかりを言っている。 |
-| あくまでも | あくまでも | Saya akan berjuang melawan ketidakadilan hingga titik terakhir. | あくまでも、不正に立ち向かおうとします。 |
-| べく | べく | Dia telah berlatih di fakultas kedokteran selama lebih dari 5 tahun untuk menjadi dokter residen. | 彼は研修医となるべく、5年以上医科大学で修練しました。 |
-| ところを | ところを | Terima kasih atas balasan Anda meskipun Anda sedang sibuk. | 先生からの返信のお礼を言う：「お忙しいところを、ご返信ありがとうございます。」 |
-| からある | からある | Bagaimana cara mengusir setidaknya seratus tikus? | 百匹からいるネズミをどうやって退治するのか! |
-| にして② | にして | Ini adalah laut yang indah dan berwarna biru tua. | 紺碧にして美しい海である。 |
-| つ〜つ | つつ | Dia ragu-ragu berjalan bolak-balik di depan pintu, dan akhirnya memutuskan untuk masuk. | 彼はドアの前をしばらく不安げに行きつ戻りつしていたすえに入ることにした。 |
-| 飽くまで(も) | くまでも | """Perwakilan perusahaan berkata kepada mitra bisnis: """"Saya ingin Anda memahami bahwa apa yang akan saya sampaikan sekarang hanyalah pendapat pribadi saya, dan bukan pendapat resmi perusahaan...""""""" | 会社の代表はビジネスパートナーに：「今からお話しすることは、あくまで私の個人的な意見で、会社としての公式な意見ではないことをご了承いただきたいのですが、・・・」 |
-| であれ〜であれ | であれであれ | Baik seni rupa modern maupun kesenian tradisional, seni adalah seni. | 近代美術であれ伝統芸能であれ、芸術は芸術だ。 |
-| が最後 | が | Pacar saya, begitu dia mulai bermain game, tidak bisa berhenti sampai larut malam. | 私の彼氏はゲームをいったんやり始めたら最後、どうしても深夜までやめられない。 |
-| いかなる | いかなる | """Penelitian: """"Apa sebenarnya ikan yang disebut kura-kura?""""""" | 論文：「亀とはいかなる魚なのか？」 |
-| なりに | なりに | """Natsumi-chan: """"Di pedesaan memang benar-benar tidak praktis, ya."""" Komari-chan: """"Ada kalanya pedesaan tidak praktis, tetapi memiliki daya tarik tersendiri, lho.""""""" | なつみちゃん：「田舎って本当に不便だよね」こまりちゃん：「田舎は不便な時もあるけど、それなりに魅力もあるよ。」 |
-| kata kerja + ままに | ままに | Siswa mengulangi pengucapan itu sesuai dengan apa yang diajarkan oleh guru. | 先生に教えられるままに、生徒はその発音を繰り返した。 |
-| にまつわる | にまつわる | """Cerita ini berkaitan dengan """"Indeks Buku Terlarang Suatu Sihir"""".""" | この物語はとある魔術の禁書目録にまつわるものである。 |
-| たる | たる | Bagaimanapun juga, seorang guru memerlukan semangat. | なんと言っても教師たる者は、情熱が必要なのである。 |
-| なら〜で | ならで | """Atasan: """"Jika kamu mengecat, maka lakukanlah dengan lebih hati-hati.""""""" | 上司：「塗るなら塗るでもっと丁寧に仕上げなさい。」 |
-| をものともせず | をものともせず | Para relawan yang berani terus mencari anak anjing yang hilang meskipun suhu berada di bawah 30 derajat. | 勇敢なボランティアたちは零下30度の気温をものともせず、行方不明の子犬を探し続けた。 |
-| には当たらない | にはたらない | """Kagura: """"Ginchann, kemarin dia digigit anjing. Kasihan ya."""" Shimpachi: """"Tidak perlu merasa kasihan. Dia selalu menggoda anjing.""""""" | カグラ：「ギンちゃんは昨日、犬に噛まれたって。かわいそうね。」シンパ千：「同情にはあたらない。彼はいつも犬を挑発しているから。」 |
-| ものと思う | ものとう | """Yoshino: """"Kelinci tidak menghasilkan telur..."""" Shido: """"Tapi, pada kenyataannya banyak orang berpikir begitu.""""""" | よしの：「ウサギは卵を産まないわ・・・」しどう：「でも、実際には多くの人がそんな風に思うもんと思うよ。」 |
-| を踏まえて | をまえて | """Manajemen mengatakan kepada karyawan: """"Dalam beberapa bulan terakhir, kami telah melihat peningkatan yang stabil dalam jumlah klien. Dengan mempertimbangkan hal tersebut, kami memutuskan untuk memperpanjang jam operasional.""""""" | 経営陣は従業員に：「この数ヶ月でクライアント数の着実な増加が見られます。以上のことを踏まえて営業時間の延長を決定いたしました。」 |
-| ゆえに | ゆえに | """""""Kepercayaan diri dan kebodohan yang disebabkan oleh usia Benjamin, jika dilihat dari mata Nyonya Robinson, terlihat lucu.""""""" | 小説：「ベンジャミンの若さゆえの自信過剰も無知もミセス・ロビンソンの目からすれば、可愛らしい。」 |
-| にとどまらず | にとどまらず | Bidang penelitian Dr. Ma adalah tidak hanya di genetika, tetapi juga mencakup mikrobiologi. | 間博士の研究分野は遺伝学にとどまらず、微生物学にまで及ぶ。 |
-| と思いきや | といきや | Karena ruangan sangat tenang, saya pasti berpikir dia sedang tidur, tetapi yang mengejutkan, dia sedang belajar. | 娘は部屋がとても静かだからきっと寝ていると思いきや、意外にも勉強していた。 |
-| か否か | かか | """Narasi Novel: """"Raja Suwon sedang bingung apakah harus menekan pemberontakan dengan kekuatan atau tidak.""""""" | 小説、語り手：「スウォン王は武力で反乱を鎮圧すべきか否か、について迷っていた。」 |
-| たら〜で | たらで | """""""Aku ingin menikah."""" """"Jika aku menikah, itu akan sangat merepotkan.""""""" | 「結婚したい。」「結婚したらしたで大変だよ。」 |
-| べくして | べくして | """Judul: """"Cerita Cinta Masa Mudaku Sudah Menjadi Kesalahan Seharusnya.""""""" | タイトル：「俺の青春ラブコメはまちがいになるべくしてなった。」 |
-| かれ〜かれ | かれかれ | Jika terus merokok seperti ini, cepat atau lambat akan sakit. | 「こんなにタバコを吸い続けては遅かれ早かれ病気になるだろう。」 |
-| る〜に〜ない | るにない | Ketika saya di SMP, saya mengungkapkan perasaan kepada orang yang saya suka dan ditolak. Karena ada orang-orang di sekitar, saya berada dalam situasi di mana saya tidak bisa menangis, meskipun ingin. | 中学生の頃、好きな子に告白して断られた。周りに人がいたから泣くに泣けない状況だった。 |
-| なくして(は) | なくしては | Saya ingin mengucapkan terima kasih kepada teman saya Totoro. Tanpa dia, saya mungkin tidak akan berada di sini hari ini. | スピーチ：「何よりまず我が友人トトロに感謝します。彼なくしては今日の私はなかったと言えるでしょう。」 |
-| のなんのって | のなんのって | """A: """"Wajahmu terlihat lelah."""" B: """"Karena kemarin saya tidak bisa tidur karena kebisingan, saya sudah sangat mengantuk...""""""" | A：「疲れた顔だね。」B：「昨日は騒音で眠れなかったから、もう眠いのなんのって・・・」 |
-| にかかっている | にかかっている | """Homura: """"Semua ini tergantung pada pilihan seorang gadis.""""""" | ほむら：「すべてが一人の少女の選択にかかっている。」 |
-| てやまない | てやまない | """Dedikasi: """"Untuk istri dan anakku yang sangat ku cintai""""""" | 献辞：「愛してやまない妻と息子へ」 |
-| ぐらいなら | ぐらいなら | """A: """"Bagaimana kalau meminta bantuan darinya?"""" B: """"Sebaiknya saya berenang di kolam yang penuh dengan piranha daripada meminta bantuannya.""""""" | A：「彼に助けを求めたらどう？」B：「彼に助けを求めるくらいなら、むしろピラニアだらけの池を泳いだほうがましだぞ。」 |
-| ってば・ったら | ってば・ったら | """Anjing sedang menjilati pemiliknya, pemiliknya: """"Akamaru, berhenti!"""" ... setelah dijilati selama 1 menit pemiliknya: """"Tolong berhenti!""""""" | 犬が飼い主を舐めている、飼い主：「アカマル、やめろ！」・・・舐めまわされること1分後飼い主：「やめろってば！」 |
-| ずとも | ずとも | """Setelah lama tidak bertemu, teman saya, Masao, berkata: """"Hubunganmu dengan gadis cantik ini bagaimana? Bukankah dia pacarmu?"""" Aoshima menjawab: """"Ya, bisa dibilang hampir benar. Dia adalah istriku.""""""" | 久しぶりに会った友達の話、まさお：「こんな可愛い女の子とどういう関係だ？ まさかガールフレンドか？」あおしま：「まあ、当たらずとも遠からずなんだよ。我が妻だ。」 |
-| とあって | とあって | """""""Restoran Italia satu-satunya yang bisa dimakan di kota ini, sehingga secara alami menjadi sangat populer.""""""" | 記事：「この都市で唯一のイタリアンが食べれるレストランとあって、自然と大人気になった。」 |
-| でもなんでもない | でもなんでもない | """A: """"Hanya sekadar bermain..."""" B: """"Itu bukan permainan sama sekali, itu hanya sebuah tindakan mengganggu.""""""" | 《AがBをいじめている》A：「ただの遊びだ・・・」B：「遊びでもなんでもないよ、ただの嫌がらせじゃないか。」 |
-| に至って・に至り | にって・にり | Ketika ribuan pohon pisang mati, industri pisang akhirnya menyadari seriusnya penyakit Panama untuk pertama kalinya. | 《記事》何千ものバナナの木が枯れるに至って、バナナ産業は初めてパナマ病の深刻さに気が付いた。 |
-| だに + しない | だにしない | """Dari mulut Takagi, kata-kata yang tidak pernah terpikirkan—""""Aku sangat menyukai Nishikata!""""—tiba-tiba meluncur keluar.""" | 《小説》たかぎさん「にしかたさんのことが大好きよ。」たかぎの口からは想像だにしていなかった言葉がいきなり飛び出してきた。 |
-| がてら | がてら | Kebetulan saya akan pergi ke minimarket sedikit sambil berjalan-jalan. | 「イノシシの散歩がてら、ちょっとコンビニまで行ってきます。」 |
-| んがため(に) | んがために | Perusahaan itu memanfaatkan kelemahan orang tua untuk menjual barang cacat. | 《記事》その会社は不良品を売らんがために、高齢者の弱みにつけ込んだ。 |
-| いかん〜ず | いかんず | Dalam hal apapun, kami tidak bertanggung jawab atas kerugian yang mungkin timbul akibat penggunaan produk ini yang tidak tepat. | 《ライセンス契約》当社は事情のいかんに関わらず、本品の不適切な使用によって生じたいかなる損害については責任を負いません。 |
-| にも～ない | にもない | Saya tidak bisa melupakan senyuman istri yang telah tiada, tidak peduli seberapa keras saya berusaha. | 亡き妻の笑顔は忘れようにも忘れられない。 |
-| に至っても | にっても | Hari ini, lebih dari setengah bulan sejak kepergian Haruhi, dia masih belum ditemukan. | ハルヒさんの消失から半月以上が過ぎた今日に至っても、彼女の行方は未だに知れない。 |
-| kata kerja + だに | だに | """""""Bagi manusia, bahkan hanya berpikir untuk memakan tungau adalah sesuatu yang mengerikan.""""""" | 《記事》「人間にとってはダニを食べるのは考えるだにおぞましい。」 |
-| ないでもない | ないでもない | """Kakak: """"Lihat awan itu. Nampak seperti zebra, kan?"""" Junior: """"Ya, memang agak terlihat seperti zebra.""""""" | 先輩「あの雲を見ろよ。シマウマみたいに見えるぞ。」後輩「まあシマウマに見えないでもないですね。」 |
-| もさることながら | もさることながら | """Dalam rapat manajemen, Presiden berkata, """"Karena persaingan sangat ketat, mari kita tingkatkan anggaran pemasaran."""" Kepala departemen menjawab, """"Selain pemasaran, bukankah kualitas produk juga penting?""""""" | 《経営会議》社長「競争が激しいからマーケティング予算を上げよう。」部長「マーケティングもさることながら製品品質も重要なのではないでしょうか？」 |
-| ものと思っていた | ものとっていた | Saya mengira dia akan menolak, tetapi bertentangan dengan perkiraan saya, dia setuju. | 私は彼が拒否するものと思っていたが、予想とは逆に彼は賛成した。 |
-| でなくてなんだろう | でなくてなんだろう | """""""Saya yang dianggap tidak bisa mendengar lagi, berkat implan koklea saya bisa mendengar lagi. Kalau bukan ini sebuah keajaiban, lalu apa?""""""" | 《随筆》もう聞こえないと言われた私の耳は人工内耳のおかげでまた聞こえるようになった。これが奇跡でなくてなんだろう。 |
-| はさておき・はさておいて | はさておき・はさておいて | Itu di samping, mari kita masuk ke topik utama. | 「それはさておき、本題に入りましょう。」 |
-| 折には | には | Pada kesempatan pertamaku untuk perjalanan dinas ke Paris, aku singgah di Museum Louvre. | 《自伝》初めてのパリへの出張の折にはルーヴル美術館に立ち寄った。 |
-| を/も兼ねて | をもねて | Saya bermain game Jepang sambil belajar bahasa Jepang. | 日本語の勉強を兼ねて、日本のゲームをしています。 |
-| kata kerjaもの(だろう)か | ないものだろうか | Apakah harga mobil listrik tidak bisa lebih murah sedikit? | 電気自動車の値段はもう少し安くできないものだろうか。 |
-| kata kerja + みせる | てみせる | Tahun ini, aku pasti akan mendapatkan SIM. | 「今年こそ、必ず運転免許を取ってみせるよ。」 |
-| 相まって | まって | Artikel: Selai kacang berpadu dengan acar mentimun menghasilkan rasa yang unik dan tak terduga. | 記事：ピーナッツバターはキュウリの酢の物と相まって思いがけない独特な味をもたらす。 |
-| に足りない | にりない | Dari sudut pandang orang lain, itu hanyalah kerang kecil yang tidak berharga, tetapi bagi saya, itu adalah oleh-oleh dari hari itu. | 他人から見たら取るに足りない、小さな貝にすぎないが、私にとってはあの日のお土産だ。 |
-| べからず | べからず | Jangan membuang sampah di rumput. | 《公園の看板》芝生にゴミ捨てるべからず |
-| んばかりに | んばかりに | Ruangan dipenuhi dengan tepuk tangan seolah-olah akan pecah. | 《小説》割れんばかりの拍手に部屋は満たされた。 |
-| に則って・に則り | にって・にり | Takeshi selalu bertindak sesuai dengan semangat ksatria apapun yang terjadi di atas ring tinju. Oleh karena itu, ia menjadi sosok yang dihormati di dunia tinju. | 《記事》たけしさんはボクシングリングで何があろうと騎士道精神に則って行動してきた。そのため、ボクシング界では尊敬される立場となった。 |
-| kata sifat限りだ | りだ | Penampilan para siswa yang belajar dengan niat yang kuat untuk meningkatkan diri mereka adalah sangat meyakinkan bagi para guru. | 自分を高めたいという強い意志を持って学んでいる生徒たちの姿は、教師にとって心強い限りだ。 |
-| はおろか | はおろか | Teman sekamar tidak bisa membuat omurice, apalagi onigiri. | 「ルームメイトはオムライスはおろか、おにぎりさえ作れない。」 |
-| めく・めいた | めく・めいた | Saat bulan September tiba, langit dan angin semakin terasa seperti musim gugur. Apa kabar? | 《手紙の挨拶》九月になると空も風もだいぶ秋めいてまいりました。お変わりありませんか。 |
-| といわず | といわず | Lampu jalan itu terus menyala, baik malam maupun siang, di desa yang jauh di utara. | 《小説》街灯は、はるか北の村で、夜といわず昼といわずともりつづけた。 |
-| にもほどがある | にもほどがある | """Teman yang terlalu percaya diri 1: """"Cepat atau lambat aku pasti akan memenangkan Penghargaan Nobel."""" Reaksi teman 2 terhadap ucapan yang berlebihan: """"Memenangkan Penghargaan Nobel? Itu sudah berlebihan!""""""" | 自信を持ち過ぎている友達１:「遅かれ早かれノベール賞を受賞してみせるよ。」言い過ぎへの反応をする友達２:「ノベール賞を受賞なんて冗談にもほどがあるぞ。」 |
-| にもまして | にもまして | Pengguna harus lebih memperhatikan privasi mereka dalam era di mana perusahaan besar selalu mengumpulkan data dalam jumlah besar. | 利用者は大企業が常に大量のデータ収集する時代にこれまでにもまして自分プライバシーを気にせざるを得ない。 |
-| や否や | やや | Ketika saya melihat polisi, saya tiba-tiba berlari. | 《記事》警察官に気が付く や否や急に走り出した。 |
-| 次第です | です | """""""Saya menghubungi Anda agar Anda dapat memahami tentang kemajuan proyek.""""""" | 《取引先への説明メール》「プロジェックトの進捗状況についてご理解頂きたく、ご連絡差し上げた次第です。」 |
-| というところ | というところ | """Hanako: """"Bagaimana tingkat bahasa Jepang Olivia?"""" Kasumi: """"Setidaknya berada pada tingkat rata-rata.""""""" | はなこ「オリビアの日本語のレベルはどうですか？」かすみ「せいぜい平均といったところでしょう。」 |
 | 代かき | かき | Pengolahan tanah minggu ini sangat penting, jadi mari kita bekerja sama. | 今週の代かきは特に重要ですので、全員で協力して行いましょう。 |
 | すじまき | すじまき | Dalam pekerjaan minggu ini, kita akan melakukan penanaman berbaris dan mulai menanam sayuran baru. | 今週の作業で、すじまきを行って新しい野菜を育て始めます。 |
 | アブラナ科 | アブラナ | Tanaman dari keluarga Brassicaceae sangat populer di pasar, terutama pada musim semi, jadi mari kita mulai budidayanya lebih awal. | アブラナ科の植物は、特に春に市場で人気がありますので、早めに栽培を始めましょう。 |
@@ -11229,13 +10525,19 @@
 | 失礼 | しつれい | tidak sopan, permisi |  |
 | シンプル | しんぷる | sederhana |  |
 | もう～ | もう | ~ lagi |  |
+| あまり～ない | あまりない | tidak begitu ~ |  |
+| だいたい | だいたい | kurang lebih, kira-kira |  |
 | たいてい | たいてい | biasanya, hampir selalu |  |
 | たぶん | たぶん | mungkin |  |
+| だんだん | だんだん | semakin, berangsur-angsur |  |
 | 約～ | やく | kira-kira, sekitar |  |
 | すぐに | すぐに | segera |  |
+| あとで | あとで | setelah itu, nanti |  |
 | みんなで | みんなで | bersama-sama |  |
 | 全部で | ぜんぶで | secara keseluruhan |  |
 | ときどき | ときどき | kadang-kadang |  |
+| ぜんぜん | ぜんぜん | sama sekali tidak |  |
+| だれ | だれ | siapa |  |
 | どういう | どういう | bagaimana / seperti apa |  |
 | いくつ | いくつ | berapa (jumlah / usia) |  |
 | どのくらい | どのくらい | berapa banyak / seberapa lama |  |
@@ -11293,7 +10595,9 @@
 | ぶどう | ぶどう | anggur |  |
 | えび | えび | udang |  |
 | かに | かに | kepiting |  |
+| いか | いか | cumi-cumi |  |
 | たこ | たこ | gurita |  |
+| たい | たい | ikan kakap |  |
 | いわし | いわし | ikan sarden |  |
 | 貝 | かい | kerang |  |
 | ライス | らいす | nasi |  |
@@ -11644,6 +10948,7 @@
 | がんばる | がんばる | berusaha keras |  |
 | くさる | くさる | membusuk |  |
 | くださる | くださる | memberi (hormat) |  |
+| ございます | ございます | ada (sopan) |  |
 | ご覧になる | ごらんになる | melihat (hormat) |  |
 | しかる | しかる | memarahi |  |
 | つながる | つなげる | tersambung |  |
@@ -11656,6 +10961,7 @@
 | いただく | いただく | makan/menerima (hormat) |  |
 | 嘘を付く | うそをつく | berbohong |  |
 | 迎えに行く | むかえにいく | pergi menjemput |  |
+| いたす | いたす | melakukan (rendah hati) |  |
 | くり返す | くりかえす | mengulang |  |
 | ぬらす | ぬらす | membasahi |  |
 | 引越す | ひっこす | pindah rumah |  |
@@ -11776,6 +11082,7 @@
 | 連絡する | れんらくする | menghubungi |  |
 | 録音する | ろくおんする | merekam |  |
 | だいぶ | だいぶ | lumayan |  |
+| なるべく | なるべく | sebisa mungkin |  |
 | ほとんど～ない | ほとんどない | hampir tidak ~ |  |
 | ずいぶん | ずいぶん | amat, sangat, cukup |  |
 | すごく | すごく | luar biasa |  |
@@ -12324,6 +11631,7 @@
 | レベル | れべる | level |  |
 | 平均 | へいきん | rata-rata |  |
 | トップ | とっぷ | puncak / teratas |  |
+| こと | こと | hal |  |
 | 効きめ | ききめ | efektivitas |  |
 | メリット | めりっと | keuntungan |  |
 | バランス | ばらんす | keseimbangan |  |
