@@ -127,6 +127,24 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   行く, 座る ×3, 練習する), so the file moves 800 → **905**; the count advertised in
   `VocabModel.swift` (and mirrored in Android `ContentLevel.kt` / web `levels.js`)
   moves 800 → 905, enforced by `check_dataset_counts.py`.
+- **N3 vocabulary expanded on Android (+124, −2 duplicates).** Using the JLPT
+  Tango N3 word list as a **coverage checklist** only, 124 common N3 words missing
+  from the set were added to `android/app/src/main/assets/data/VocabN3.json`
+  (`N3_V1801`–`N3_V1924`) with **original** Indonesian meanings and hand-verified
+  readings. Coverage: family/people (父親, 母親, 長男/長女, 次男/次女, 姉妹, 甥, 姪,
+  親類, 先祖, 女性/男性, 主婦, 名字, 我々), relationships (遠慮, 出会う, 交際, 恋愛,
+  味方, 悪口, 内緒, 真似), give/receive & action verbs (頂く, 下さる, 差し上げる,
+  預ける, 握る, 塗る, 剥く, 割る, 沸く, 焦げる, 揃える/揃う, 撫でる, 捻る, 解く,
+  結ぶ, 支払う, 振り込む), time (本日, 前日, 翌日, 先日, 上旬/中旬/下旬, 真夜中, 日常),
+  food & kitchen (朝食/昼食/夕食, 包丁, まな板, 炊飯器, 食器, 味見, 冷凍, 塩辛い,
+  温い), home & cleaning (住まい, 物置, 座布団, 絨毯, 雑巾, 内部, 清潔/不潔, 臭い,
+  子育て), money & shopping (紙幣, 生活費, 光熱費, 贅沢, 割り勘, 預金, 送金,
+  合計, 請求書, 売り切れ, 品切れ, 半額, 割引券, 損/得, 定休日, 商店街) plus
+  common adverbs (少々, 暫く, しょっちゅう, 取り敢えず, わざと). Deduplicated by exact
+  kanji+reading and by reading against every shipped level; the same pass removed
+  two **pre-existing** exact duplicates (保存する at `N3_V428`, 見送る at `N3_V960`).
+  `ContentLevel.kt` moves the Android N3 count 1.800 → **1.922**. Android-first —
+  iOS/web stay at 1.800 until the later sync pass.
 - **N4 vocabulary expanded on Android (+126, −1 duplicate).** Using the JLPT
   Tango N4 word list as a **coverage checklist** only, 126 common N4 words missing
   from the set were added to `android/app/src/main/assets/data/VocabN4.json`

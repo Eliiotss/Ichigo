@@ -42,7 +42,9 @@ val vocabularyLevels: List<ContentLevel> = listOf(
     // N4 vocab expanded Android-first (Tango N4 coverage guide, original glosses);
     // iOS/web still at 700 until the later sync pass. Keep equal to VocabN4.json.
     ContentLevel("N4", "Elementary", "825 Kosakata Dasar", false, "VocabN4"),
-    ContentLevel("N3", "Intermediate", "1.800 Kosakata Menengah", false, "VocabN3"),
+    // N3 vocab expanded Android-first (Tango N3 coverage guide, original glosses);
+    // iOS/web still at 1.800 until the later sync pass. Keep equal to VocabN3.json.
+    ContentLevel("N3", "Intermediate", "1.922 Kosakata Menengah", false, "VocabN3"),
     ContentLevel("N2", "Pre-Advanced", "1.447 Kosakata Lanjutan", false, "VocabN2"),
     // N1 vocabulary ships Android-first as a growing, verified batch (see
     // assets/data/VocabN1.json); iOS/web catch up later. Kanji/Grammar N1 have no
