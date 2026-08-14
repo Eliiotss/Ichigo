@@ -25,7 +25,7 @@ struct VocabularyLevel: Identifiable {
 }
 
 let vocabularyLevels: [VocabularyLevel] = [
-    VocabularyLevel(id: "N5", name: "Beginner", description: "800 Kosakata Dasar", color: AppTheme.levelColor("N5"), bgColor: AppTheme.levelBackground("N5"), isLocked: false, jsonFile: "VocabN5"),
+    VocabularyLevel(id: "N5", name: "Beginner", description: "905 Kosakata Dasar", color: AppTheme.levelColor("N5"), bgColor: AppTheme.levelBackground("N5"), isLocked: false, jsonFile: "VocabN5"),
     VocabularyLevel(id: "N4", name: "Elementary", description: "700 Kosakata Dasar+", color: AppTheme.levelColor("N4"), bgColor: AppTheme.levelBackground("N4"), isLocked: false, jsonFile: "VocabN4"),
     VocabularyLevel(id: "N3", name: "Intermediate", description: "1.800 Kosakata Menengah", color: AppTheme.levelColor("N3"), bgColor: AppTheme.levelBackground("N3"), isLocked: false, jsonFile: "VocabN3"),
     VocabularyLevel(id: "N2", name: "Pre-Advanced", description: "1.447 Kosakata Lanjutan", color: AppTheme.levelColor("N2"), bgColor: AppTheme.levelBackground("N2"), isLocked: true, jsonFile: "VocabN2"),

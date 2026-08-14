@@ -107,6 +107,26 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   before insertion — a large share of candidates were already present, confirming
   the set is already broad. Deliberately kept to genuinely-known words rather than
   bulk-generating the long tail, to avoid shipping unverified data.
+- **118 core N5 vocabulary entries** (`VocabN5.json`, `N5_V801`–`N5_V918`) filling
+  gaps in categories a beginner set must cover: the seven days of the week
+  (月曜日〜日曜日), the twelve months (一月〜十二月), the native counting series
+  (一つ〜九つ, 十/とお, 二十歳), colour adjectives (赤い, 青い, 白い, 黒い, 黄色い),
+  the standalone 男/女 and extended family (お兄さん, お姉さん, 両親, おじさん,
+  おばさん, おじいさん, おばあさん, 夫, 妻), relative-time words (今朝, 今晩, 毎朝,
+  毎週, 先週/来週, 先月/来月, 去年/来年, 午前/午後, 一昨日, 明後日), question words
+  (なぜ, どちら, どんな, どの, いくつ, どうやって), core adverbs (もう, まだ, また,
+  すぐ, もっと, ちょっと, たいてい, 一緒に, 初めて, たぶん), common verbs (歌う,
+  走る, 選ぶ, 急ぐ, 貸す/借りる/返す, 探す, 並ぶ …), i-/na-adjectives (嬉しい,
+  悲しい, 怖い, 正しい, 若い; 簡単, 必要, 大切, 心配, 十分) and everyday concrete
+  nouns (薬, 風邪, 傘, 鍵, 財布, 眼鏡, 空港, 神社, 橋, 星 …). Each carries a reading,
+  an **original** Indonesian meaning (written from standard basic-Japanese
+  knowledge, not copied from any third-party deck) and a word type, and was
+  deduplicated by exact kanji+reading pair against the existing set — 108 of 226
+  candidates were already present and skipped. The same pass also **removed 13
+  exact-duplicate cards** (same word and reading that had slipped in twice, e.g.
+  行く, 座る ×3, 練習する), so the file moves 800 → **905**; the count advertised in
+  `VocabModel.swift` (and mirrored in Android `ContentLevel.kt` / web `levels.js`)
+  moves 800 → 905, enforced by `check_dataset_counts.py`.
 - **Editable username in Settings.** A new **PROFIL** section carries a **Nama
   Pengguna** field bound to `AccountStore.displayName`; it persists automatically
   and syncs live to the Home greeting and the Profile header (both observe the
