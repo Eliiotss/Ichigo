@@ -127,6 +127,25 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   行く, 座る ×3, 練習する), so the file moves 800 → **905**; the count advertised in
   `VocabModel.swift` (and mirrored in Android `ContentLevel.kt` / web `levels.js`)
   moves 800 → 905, enforced by `check_dataset_counts.py`.
+- **N1 vocabulary second batch on Android (+137).** Using the JLPT Tango N1 word
+  list as a **coverage checklist** only, 137 more advanced words were added to
+  `android/app/src/main/assets/data/VocabN1.json` (`N1_V168`–`N1_V304`) with
+  **original** Indonesian meanings and hand-verified readings — bringing the
+  Android N1 vocab set from 167 to **304**. Coverage: people/relationships/mind
+  (肉親, 亭主, 仕草, 指図, 反発, 再婚, 連中, 恐縮, 告白, 浮気, 発覚, 縁談, 敬遠, 陰口,
+  軽蔑, 人目, 眼差し), nuanced verbs (惑わす, 育む, 寄り添う, 踏み込む, 絡む, 開き直る,
+  割り切る, 立ち直る, 使いこなす, 使い分ける, 手掛ける, 出向く, 取り次ぐ, 突き詰める,
+  満たす, 見落とす, 潜る, 叶う, 心掛ける, 寛ぐ, 安らぐ, 面する, 嵩む, 掬う, 啜る,
+  据え付ける), home/property (外観, 設計, 所有, 表札, 扉, 物陰, 近隣, 物件, 荷造り,
+  手順), money/consumer (老後, 滞納, 値打ち, 正味, 名義, 換算, 代用, 吟味), study
+  (助言, 名称, 暗唱, 諺, 文房具, 口頭, 万全, 不正, 内心, 落胆, 取得, 不備, 首席,
+  最先端, 手引き, 変遷), work/business (情熱, 気合, 考慮, 雑談, 特許, 適性, 議題,
+  分担, 根回し, 代理, 弊社, 先方, 単身, 創立, 在籍, 手分け), na-adjectives (厳か,
+  丹念, 簡潔, 有望, 手近, 精神的, 自主的, 良心的), i-adjectives (愛しい,
+  決まり悪い, 焦げ臭い, 申し分ない) and adverbs (散々, 時折, 渋々, 極力, 自ら, 俄然,
+  所々, 程々, 強ち, 取り急ぎ, 先頃, 心底). Deduplicated by exact kanji+reading and by
+  reading against every shipped level. `ContentLevel.kt` moves the N1 count 167 →
+  **304**.
 - **N2 vocabulary expanded on Android (+141).** Using the JLPT Tango N2 word list
   as a **coverage checklist** only, 141 common N2 words missing from the set were
   added to `android/app/src/main/assets/data/VocabN2.json` (`N2_V1448`–`N2_V1588`)
