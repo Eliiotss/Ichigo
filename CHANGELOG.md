@@ -189,8 +189,20 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   (作家, 画家, 政治家, 学者, 美容師, 歌手, タレント), travel (日帰り, 滞在, ツアー, 観光客,
   集合, 解散, 満室, 近付く, 持ち物, スーツケース, 来日, 活躍), sport (前半/後半, 引き分け,
   運動会, 思い切る, 拍手, 握手, 惜しい, 体操, 日課, 得る) and connectives (そのため, なぜなら,
-  つまり, だけど, 是非とも, 全て). `ContentLevel.kt` N3 1.922 → **2.204** (finishing
-  pass continues in further rounds).
+  つまり, だけど, 是非とも, 全て). Rounds 4-5 (+277, `N3_V2207`–`N3_V2483`) then added transport/driving
+  (往復切符, 終電, 終点, 改札, 指定席, 自由席, 車掌, 線路, 踏切, 乗り遅れる, 高速道路,
+  運転免許証, 一方通行, 轢く, タイヤ, 助手席, シートベルト, 交通費, 払い戻す), school
+  (入学式, 卒業式, 通学, 学年, 学期, 居眠り, 給食, 体育館, 単語, 記憶力, 聞き取る,
+  聞き返す, 言い直す), body/health (汗, 息, 溜息, 虫歯, 裸, 白髪, 抜く, 花粉症, 鼻水,
+  掻く, 頭痛, 腹痛, 吐き気, 骨折, 検査, 内科/外科/小児科, 注射, 回復, 悪化, 包帯, 巻く,
+  長生き), fashion/appearance (水着, 上着, 化粧, 化粧品, 口紅, 睫毛, 眉毛, 香水, 半袖,
+  袖, 柄, 花柄, 水玉, 縞模様, 縦書き/横書き, 無地, 真っ赤/真っ黒/真っ青/真っ白, 美人,
+  大型/小型), nature/weather (草, 種, 浮かぶ, 掘る, 埋める, 丘, 吠える, 尻尾, 予想,
+  曇る, 強風, 大雨/小雨, 濡らす, 積もる, 輝く, 氷, 猛暑日, 暖冬/冷夏), holidays (祭日,
+  元日, 元旦, お年玉, 成人式, 雛祭り, 雛人形, 子供の日, 母の日, 父の日, 海の日,
+  敬老の日, 七五三) and emotion/personality (個性的, 働き者, 大人しい, 感動, 感心,
+  愛する, 微笑む, 悲しむ, 望む, 魅力的, 平気, 焦り, 自慢, 不機嫌). `ContentLevel.kt` N3
+  1.922 → **2.481** (finishing pass continues).
 - **N3 vocabulary expanded on Android (+124, −2 duplicates).** Using the JLPT
   Tango N3 word list as a **coverage checklist** only, 124 common N3 words missing
   from the set were added to `android/app/src/main/assets/data/VocabN3.json`
