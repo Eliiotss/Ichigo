@@ -25,12 +25,19 @@ data class ContentLevel(
     val bgColor: Color get() = IchigoPalette.levelBackground(id)
 }
 
-/** Mirrors `jlptLevels` in KanjiModel.swift. */
+/**
+ * Mirrors `jlptLevels` in KanjiModel.swift. Kanji counts grow Android-first as
+ * characters from the study material (materials/materi.md) that were missing from
+ * the original curated sets are added at their proper JLPT level (original
+ * on/kun/meaning + five verified compound examples each); iOS/web catch up in the
+ * later sync pass. Duplicate kanji entries were also removed. Keep each count
+ * equal to the matching KanjiN*.json length.
+ */
 val kanjiLevels: List<ContentLevel> = listOf(
-    ContentLevel("N5", "Beginner", "120 Essential Kanji", false, "KanjiN5"),
-    ContentLevel("N4", "Elementary", "181 Essential Kanji", false, "KanjiN4"),
-    ContentLevel("N3", "Intermediate", "367 Essential Kanji", false, "KanjiN3"),
-    ContentLevel("N2", "Pre-Advanced", "247 Complex Kanji", false, "KanjiN2"),
+    ContentLevel("N5", "Beginner", "129 Essential Kanji", false, "KanjiN5"),
+    ContentLevel("N4", "Elementary", "190 Essential Kanji", false, "KanjiN4"),
+    ContentLevel("N3", "Intermediate", "388 Essential Kanji", false, "KanjiN3"),
+    ContentLevel("N2", "Pre-Advanced", "252 Complex Kanji", false, "KanjiN2"),
     ContentLevel("N1", "Advanced", "2.000+ Master Kanji", true, "KanjiN1"),
 )
 

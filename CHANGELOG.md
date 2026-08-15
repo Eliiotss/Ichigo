@@ -116,6 +116,19 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   words that did not contain their own kanji — 熱 listed 体温, 程 listed the bare
   kana ほど, 働 listed 過労, 層 listed 大気圏. Each is replaced with a correct
   compound (熱中, 先程, 働き手, 断層); the level still ships 367 kanji × five examples.
+- **49 kanji from the study material added at their proper JLPT level (Android).**
+  Cross-checking `materials/materi.md` against the kanji datasets surfaced common
+  characters that were missing from the curated sets; the first batch adds them to
+  the level they belong to, each with original on/kun readings, an Indonesian
+  meaning and five verified compound examples (sourced from the app's own
+  vocabulary/kanji corpus). **N5 +10** (心, 立, 言, 風, 夜, 色, 楽, 早, 茶, 遠),
+  **N4 +11** (自, 道, 親, 頭, 元, 回, 数, 止, 仕, 画, 算), **N3 +23** (業, 直, 真,
+  記, 温, 公, 解, 保, 最, 連, 結, 信, 器, 割, 違, 息, 良, 覚, 首, 打, 失, 根, 士)
+  and **N2 +5** (素, 改, 害, 掛, 常). The same pass removed five pre-existing
+  duplicate kanji entries (気 in N5; 歌 and 急 in N4; 相 and 初 in N3). Android
+  `ContentLevel.kt` kanji counts move to **129 / 190 / 388 / 252** (N5–N2), kept
+  equal to the JSON lengths; iOS/web catch up in the later sync pass. This is the
+  first of several batches — remaining material kanji follow, most-frequent first.
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from
