@@ -210,6 +210,13 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     倣, 濫, 拐, 咳, 嬉, 俺, 扉, 唇, 諦, 綺, 叩, 掴, 撫, 璧, 膝, 唯, 謎, 舐, 溢, 呪,
     隙, 亭, 庇, 拳, 披, 罵, 蔑, 慕, 咎, 辿). Counts move to **142 / 280 / 617 / 590
     / 216** (N5–N1).
+  - **Batch 14 (+72).** Useful Jōyō kanji from the frequency-1 tail. **N4 +2** (卵,
+    緑), **N3 +5** (紀, 糖, 桜, 宮, 郡), **N2 +22** (欄, 洞, 旋, 竜, 閣, 慰, 誓, 矛,
+    津, 塗, 寮, 宴, 託, 峡, 拓, 塊, 併, 絹, 凶, 茎, 岳, 茂) and **N1 +43** (丹, 吟,
+    匿, 閑, 芳, 崇, 飢, 侮, 且, 憾, 憂, 悠, 妊, 尤, 厄, 戚, 叱, 餌, 鍋, 碗, 顎, 肘,
+    紐, 尼, 泰, 賓, 拉, 麺, 箸, 畏, 甥, 姪, 渦, 閲, 剖, 垣, 佳, 譜, 崖, 冠, 陵, 斬,
+    衡). Counts move to **142 / 282 / 622 / 612 / 259** (N5–N1) — **1,917 kanji
+    total** across the five levels.
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from
