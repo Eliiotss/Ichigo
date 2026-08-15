@@ -35,9 +35,11 @@ data class ContentLevel(
  */
 val kanjiLevels: List<ContentLevel> = listOf(
     ContentLevel("N5", "Beginner", "137 Essential Kanji", false, "KanjiN5"),
-    ContentLevel("N4", "Elementary", "224 Essential Kanji", false, "KanjiN4"),
-    ContentLevel("N3", "Intermediate", "455 Essential Kanji", false, "KanjiN3"),
-    ContentLevel("N2", "Pre-Advanced", "290 Complex Kanji", false, "KanjiN2"),
+    ContentLevel("N4", "Elementary", "233 Essential Kanji", false, "KanjiN4"),
+    ContentLevel("N3", "Intermediate", "482 Essential Kanji", false, "KanjiN3"),
+    ContentLevel("N2", "Pre-Advanced", "320 Complex Kanji", false, "KanjiN2"),
+    // N1 Kanji stays locked while KanjiN1.json accumulates material kanji across
+    // batches; the level is unlocked in one go once it holds a full set.
     ContentLevel("N1", "Advanced", "2.000+ Master Kanji", true, "KanjiN1"),
 )
 
