@@ -127,6 +127,19 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   行く, 座る ×3, 練習する), so the file moves 800 → **905**; the count advertised in
   `VocabModel.swift` (and mirrored in Android `ContentLevel.kt` / web `levels.js`)
   moves 800 → 905, enforced by `check_dataset_counts.py`.
+- **N1 vocabulary — finishing pass round 1 on Android (+157).** Working through the
+  large JLPT Tango N1 checklist, 157 clean advanced words were added
+  (`N1_V305`–`N1_V461`), 304 → **461**, with **original** meanings and verified
+  readings (exact kanji+reading dedup). Coverage: relations/mind (身内, 名付ける,
+  横取り, 家出, 健在, 他界, 身の上, 見栄っ張り, 一目惚れ, 片思い, 有頂天, 馴れ初め,
+  対人関係, 告げ口, 素っ気ない), money/household (家計, 手取り, 共働き, やりくり, ゆとり,
+  懐, 人並み, 甘口/辛口, 食わず嫌い, 嗜む), time (終日, 四六時中, 日夜, 夕闇, 日没,
+  夜更け, 更ける, 隔月/隔週/隔日, 来たる), home/objects (図案, 軋む, 補強, 改装, 構える,
+  細工, 豪邸, 山積み, 圧縮, 蕩ける, 憩う, 引き籠る, 日向, 見積もる, 嵩張る), study/work
+  (周年, 共学, 多数決, 漫然, 堪能, 主旨, 結び付く, 難易度, 度忘れ, 偏差値, 無闇, 以ての外,
+  身嗜み, 正規, 売買, 好調, 切り抜ける, 出社) and misc verbs/adverbs (目覚める, 捲る,
+  萎びる, 膨れる, 潤む, 張り合う, 残らず, 取り分け, 代わる代わる). `ContentLevel.kt` N1
+  304 → **461** (finishing pass continues in further rounds).
 - **N1 vocabulary second batch on Android (+137).** Using the JLPT Tango N1 word
   list as a **coverage checklist** only, 137 more advanced words were added to
   `android/app/src/main/assets/data/VocabN1.json` (`N1_V168`–`N1_V304`) with
