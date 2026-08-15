@@ -77,6 +77,23 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   furigana + Indonesian). The level count in `KanjiModel.swift` moves 214 → 367 —
   level with the widely-cited JLPT Sensei N3 kanji count — enforced by
   `check_dataset_counts.py`.
+- **Every N2 kanji now carries at least five worked examples (Android).**
+  `android/app/src/main/assets/data/KanjiN2.json` previously shipped its 247
+  kanji with only one to three example words each; this fills all of them to a
+  uniform **five examples per kanji (+704 examples)**. Each added example is a
+  real compound containing the kanji — drawn first from the app's own verified
+  vocabulary/kanji corpus and, for the ~180 advanced characters that corpus does
+  not cover (餓, 刈, 軌, 棋, 騎, 宜, 恭, 矯, 斤, 琴, 襟, 虞, 桑, 勲, 薫, 鯨, 弦, 呉,
+  娯, 碁, 孔, 洪, 郊, 綱, 坑, 侯, 溝, 獄, 墾, 昆, 紺, 斎, 搾, 桟, 雌, 慈, 漆, 芝, 蛇,
+  酌, 朱, 狩, 珠, 儒, 囚, 愁, 汁, 獣, 叔, 遵, 叙, 抄, 肖, 硝, 礁, 鐘, 冗, 嬢, 娠, 刃,
+  迅, 征, 姓, 仙, 遷, 薦, 禅, 荘, 捜, 挿, 僧, 霜, 藻, 堕 …), from a hand-authored
+  set of accurate word + hiragana-reading + original-Indonesian-meaning triples.
+  Sentences, furigana and Indonesian translations are generated from original
+  lexeme-style templates (e.g. 「〜という言葉を習いました」, 「〜の意味を調べました」),
+  keeping every example grammatical for nouns, verbs and adjectives alike. No
+  translation or example sentence is copied from any third-party deck. The kanji
+  *count* is unchanged (still "247 Complex Kanji"); readings were validated to be
+  all-hiragana and each word verified to contain its kanji.
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from
