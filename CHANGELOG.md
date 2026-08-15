@@ -94,6 +94,24 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   translation or example sentence is copied from any third-party deck. The kanji
   *count* is unchanged (still "247 Complex Kanji"); readings were validated to be
   all-hiragana and each word verified to contain its kanji.
+- **N5 and N4 kanji examples rebuilt to five real compounds each (Android).**
+  `KanjiN5.json` (120 kanji) and `KanjiN4.json` (181 kanji) previously padded
+  each character to five examples with low-quality single-character rows — some
+  had **empty example sentences** (180 in N5, 221 in N4: the bare kanji paired
+  with an isolated katakana on-reading), and others were **ungrammatical
+  okurigana-stripped verb/adjective stems** presented as standalone words (e.g.
+  泳／およ, 教／おし, which are not words). Both kinds are now dropped and every
+  kanji is filled to **five genuine multi-character compound examples, each with
+  a sentence** (+299 in N5, +387 in N4), matching the N3 gold-standard style.
+  Kept examples reuse the real compounds already present; the rest come from the
+  app's verified vocabulary/kanji corpus and a small hand-authored supplement
+  (kinship terms for 兄/姉/弟/妹, swimming compounds for 泳, and 港/林/秋/皮/歌/春
+  compounds, etc.). Two entries whose
+  original example did not even contain the character were corrected (才 had
+  二十歳→now 才能/天才/秀才…, 曲 had 音楽→now 作曲/曲線/戯曲…), and the variant glyph
+  步 (U+6B65) was normalised to the standard 歩 (U+6B69). Every example sentence,
+  furigana and Indonesian gloss is original; the level counts ("120/181 Essential
+  Kanji") are unchanged.
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from
