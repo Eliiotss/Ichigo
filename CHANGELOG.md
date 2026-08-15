@@ -136,6 +136,12 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     越, 極, 絶, 異, 盛, 舞, 護, 我, 雑, 講, 詞, 視, 除, 袋, 弁). Counts move to
     **132 / 204 / 415 / 276** (N5–N2). N1-level material kanji (e.g. 遣, 亜) are
     held back for a dedicated N1 launch so that level unlocks with a full set.
+  - **Batch 3 (+79).** **N5 +5** (草, 紙, 田, 声, 朝), **N4 +20** (鉄, 毛, 市, 曜,
+    両, 係, 園, 馬, 深, 量, 死, 血, 太, 歯, 船, 夫, 礼, 石, 夕, 登), **N3 +40** (散,
+    欠, 芸, 輪, 束, 包, 装, 球, 荷, 訳, 側, 録, 険, 養, 障, 団, 査, 丸, 領, 級, 離,
+    類, 許, 染, 祭, 降, 固, 若, 圧, 易, 労, 処, 辞, 義, 布, 商, 勢, 検, 健, 札) and
+    **N2 +14** (模, 携, 密, 頃, 更, 締, 弾, 補, 捕, 系, 倒, 搭, 駄, 快). Counts move
+    to **137 / 224 / 455 / 290** (N5–N2).
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from
