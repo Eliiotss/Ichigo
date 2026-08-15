@@ -149,7 +149,16 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   腹筋, 体脂肪, 脇, 擽る, 脳, 長寿, 老化, 老いる, 五感, 過労, 弱る, 物忘れ, 昏睡, 正気,
   発作, 全身, 痣, 貧血, 噎せる, 浮腫む, 捻挫, 抓る, 肺炎, 喘息, 鬱病, 認知症, 慢性,
   応急, 矯正, 面会, 安静, 手遅れ, 全快, 処方箋, 薬剤師, 容姿, 透き通る, 瞬き).
-  `ContentLevel.kt` N1 → **608** (finishing pass continues).
+  `ContentLevel.kt` N1 → **608**. Round 3 (+120, `N1_V609`–`N1_V728`, → **728**)
+  covered sport/competition (油断, 作戦, 戦力, 負かす, 獲得, 意気込む, 負けず嫌い,
+  健闘, 手加減, 補充, 反則, 抗議, お手上げ, 行進, 観戦, 声援, 育成, 実る, 転落, 栄光,
+  伝説), fashion (着飾る, 引き立てる, 粋, 気品, 目敏い, 見せびらかす, 今時, 淡い, 解ける,
+  束ねる, 見違える, 手芸, 編む, 織る, 縫う), hobbies/arts (盆栽, 和紙, 着付け, 手本,
+  高尚, 音色, 極める, 一期一会, 武道, 囲碁, 将棋, 書籍, 特集, 読者, 老若男女, 待望,
+  共感, 連載, 圧巻, 原稿, 著作権, 描写, 主題, 正体, 罠, 上演, 前売り, 視聴率, 知名度,
+  絶大, 巨匠, 押しかける, 惜しむ, 出演, 物真似, 滑稽, 芸, 見所, 穴場, 特典) and misc
+  (秘訣, 生まれ付き, 生まれ変わる, 引っ込む, 禿げる, 弛む, 瞑る, コンプレックス, エッセイ,
+  シナリオ). `ContentLevel.kt` N1 → **728** (finishing pass continues).
 - **N1 vocabulary second batch on Android (+137).** Using the JLPT Tango N1 word
   list as a **coverage checklist** only, 137 more advanced words were added to
   `android/app/src/main/assets/data/VocabN1.json` (`N1_V168`–`N1_V304`) with
