@@ -204,6 +204,12 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     髭, 吃, 蘭, 丼, 撲, 賑, 奢, 匙, 拭, 巾, 幣, 掌, 儲, 疾, 蹴, 袖, 倶, 痒, 眩, 痺,
     遍, 雛, 溺, 苛, 癖, 憧, 羨, 愉, 碑, 賭, 壇). Counts move to **142 / 274 / 607 /
     570 / 180** (N5–N1).
+  - **Batch 13 (+72).** **N4 +6** (械, 汽, 羊, 刀, 昔, 机), **N3 +10** (里, 冊, 揮,
+    票, 章, 隊, 批, 泣, 壁, 舌), **N2 +20** (脚, 嘆, 砕, 胞, 聖, 垂, 濁, 腸, 盟, 軒,
+    僕, 珍, 雰, 裕, 輝, 廊, 鋭, 殴, 鬼, 漂) and **N1 +36** (謡, 吏, 慨, 繕, 栓, 奉,
+    倣, 濫, 拐, 咳, 嬉, 俺, 扉, 唇, 諦, 綺, 叩, 掴, 撫, 璧, 膝, 唯, 謎, 舐, 溢, 呪,
+    隙, 亭, 庇, 拳, 披, 罵, 蔑, 慕, 咎, 辿). Counts move to **142 / 280 / 617 / 590
+    / 216** (N5–N1).
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from

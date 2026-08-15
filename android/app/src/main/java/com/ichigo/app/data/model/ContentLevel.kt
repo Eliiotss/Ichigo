@@ -35,9 +35,9 @@ data class ContentLevel(
  */
 val kanjiLevels: List<ContentLevel> = listOf(
     ContentLevel("N5", "Beginner", "142 Essential Kanji", false, "KanjiN5"),
-    ContentLevel("N4", "Elementary", "274 Essential Kanji", false, "KanjiN4"),
-    ContentLevel("N3", "Intermediate", "607 Essential Kanji", false, "KanjiN3"),
-    ContentLevel("N2", "Pre-Advanced", "570 Complex Kanji", false, "KanjiN2"),
+    ContentLevel("N4", "Elementary", "280 Essential Kanji", false, "KanjiN4"),
+    ContentLevel("N3", "Intermediate", "617 Essential Kanji", false, "KanjiN3"),
+    ContentLevel("N2", "Pre-Advanced", "590 Complex Kanji", false, "KanjiN2"),
     // N1 Kanji is now unlocked: KanjiN1.json ships a substantial verified set of
     // advanced/master kanji from the study material (Android-first, still growing
     // as the remaining tail is added). Keep this count equal to KanjiN1.json.
