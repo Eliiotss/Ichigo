@@ -129,6 +129,13 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `ContentLevel.kt` kanji counts move to **129 / 190 / 388 / 252** (N5–N2), kept
   equal to the JSON lengths; iOS/web catch up in the later sync pass. This is the
   first of several batches — remaining material kanji follow, most-frequent first.
+  - **Batch 2 (+68).** Next-most-frequent material kanji: **N5 +3** (海, 広, 字),
+    **N4 +14** (式, 図, 彼, 待, 昨, 神, 美, 洗, 住, 終, 答, 弱, 戸, 野), **N3 +27**
+    (婚, 治, 給, 居, 備, 適, 停, 座, 途, 並, 混, 非, 油, 師, 単, 残, 軽, 遅, 老, 管,
+    造, 勤, 規, 材, 製, 清, 乾) and **N2 +24** (御, 寄, 帯, 載, 突, 替, 片, 故, 修,
+    越, 極, 絶, 異, 盛, 舞, 護, 我, 雑, 講, 詞, 視, 除, 袋, 弁). Counts move to
+    **132 / 204 / 415 / 276** (N5–N2). N1-level material kanji (e.g. 遣, 亜) are
+    held back for a dedicated N1 launch so that level unlocks with a full set.
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from
