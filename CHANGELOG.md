@@ -160,15 +160,26 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   (秘訣, 生まれ付き, 生まれ変わる, 引っ込む, 禿げる, 弛む, 瞑る, コンプレックス, エッセイ,
   シナリオ). Round 4 (+183, `N1_V729`–`N1_V911`, → **911**) covered weather/disaster
   (豪雨, 暴風雨, 雨雲, 震源地, 猛烈, 浸水, 雪崩, 被災, 異変, 襲う, 荒らす, 一帯, 配給,
-  紫外線, 致命的, 増殖, 脱する, 頂上, 尖る, 連なる, 群れる, 星座, 満月, 謎, 希少, 巣,
+  紫外線, 致命的, 増殖, 脱する, 頂上, 尖る, 連なる, 群れる, 星座, 満月, 謎, 巣,
   翼, 操縦, 搬送), crime/law/news (轢き逃げ, 通報, 出動, 誤魔化す, 身元, 見抜く, 究明,
   自首, 再現, 脅す, 不審, 手口, 偽造, 目論む, 同一, 真実, 報じる, 引き起こす, 突き止める,
   杜撰, 手掛かり, 取り調べ, 追い詰める, 刑務所, 治安, 速報, 声明, 結成, 可決, 当選, 遺憾,
   背く, 過ち, 公表, 上昇, 運用, 外貨, 乗っ取る) and personality/emotion (大らか, 気さく,
   気立て, 情け深い, 強情, お節介, 横柄, 無神経, 爽快, 喜ばしい, 時めく, 待ち遠しい, 乗り気,
-  喜怒哀楽, やるせない, 心苦しい, 虚しい, 嫉む, 淑やか, 優雅, 健全, 恥じらう, 容易い,
-  嫌らしい, 月並み, 不細工, 萎む, 無礼, 気取る). `ContentLevel.kt` N1 → **911** (nearly
-  done).
+  喜怒哀楽, 遣る瀬無い, 心苦しい, 虚しい, 嫉む, 淑やか, 優雅, 健全, 恥じらう, 容易い,
+  嫌らしい, 月並み, 不細工, 萎む, 無礼, 気取る). Round 5 (+100, `N1_V912`–`N1_V1011`,
+  → **1.011**) finished the set with the remaining standalone words: nouns (大国,
+  万人, 国連, 親交, 振り出し, オゾン層, ダム, ハンデ, コネ, オファー, 目下, 無言, 緯度,
+  同郷, 感無量, 前途多難, 産出, 発病, 強行), advanced verbs (強請る, 拗ねる, 恋する,
+  引かれる, 振る舞う, 唱える, 説く, 脅える, 抜け出す, 打ち切る, 藻掻く, 消し去る, 淀む,
+  押さえる, 冒す, 断つ/絶つ, 彫る, 途切れる, 交わる/交える, 超す, 嵌まる, 相反する,
+  拗らせる, 気触れる), na-/i-adjectives (保守的, 誇大, 有耶無耶, 用心深い, 芳しくない,
+  手っ取り早い) and a batch of formal adverbs (依然として, 暫し, まんまと, 丸っきり,
+  第一, 増して, 努めて, 些か, 然程, 無論, 何分, とかく, 殊の外, 余程, 大層, 断固).
+  `ContentLevel.kt` N1 → **1.011**. **N1 vocab is complete** — and with it **every
+  JLPT tier N5–N1 is finished on Android**; the only Tango N1 entries left out are
+  idioms/four-character sayings, onomatopoeia, ～な grammar forms and archaic ateji,
+  which do not belong as standalone vocabulary cards.
 - **N1 vocabulary second batch on Android (+137).** Using the JLPT Tango N1 word
   list as a **coverage checklist** only, 137 more advanced words were added to
   `android/app/src/main/assets/data/VocabN1.json` (`N1_V168`–`N1_V304`) with
