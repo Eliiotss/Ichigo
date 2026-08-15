@@ -198,6 +198,12 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     (`ContentLevel.kt`: "137 Master Kanji", `isLocked = false`) and browsable in
     the app; it keeps growing Android-first as the remaining tail is added.
     `ContentLevelTest` now asserts N1 Kanji unlocked (N1 Grammar stays locked).
+  - **Batch 12 (+70).** **N5 +1** (糸), **N4 +1** (寺), **N3 +6** (舎, 胃, 豚, 賀,
+    誕, 童), **N2 +19** (宙, 俳, 渇, 湾, 墨, 班, 鉛, 帽, 沖, 縄, 涼, 銭, 稼, 裸, 患,
+    逮, 魅, 雄, 殻) and **N1 +43** (疹, 俯, 箋, 躊, 躇, 轢, 蒔, 凸, 醤, 漬, 蓋, 玩,
+    髭, 吃, 蘭, 丼, 撲, 賑, 奢, 匙, 拭, 巾, 幣, 掌, 儲, 疾, 蹴, 袖, 倶, 痒, 眩, 痺,
+    遍, 雛, 溺, 苛, 癖, 憧, 羨, 愉, 碑, 賭, 壇). Counts move to **142 / 274 / 607 /
+    570 / 180** (N5–N1).
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from

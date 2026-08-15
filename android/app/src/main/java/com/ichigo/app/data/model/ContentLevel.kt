@@ -34,14 +34,14 @@ data class ContentLevel(
  * equal to the matching KanjiN*.json length.
  */
 val kanjiLevels: List<ContentLevel> = listOf(
-    ContentLevel("N5", "Beginner", "141 Essential Kanji", false, "KanjiN5"),
-    ContentLevel("N4", "Elementary", "273 Essential Kanji", false, "KanjiN4"),
-    ContentLevel("N3", "Intermediate", "601 Essential Kanji", false, "KanjiN3"),
-    ContentLevel("N2", "Pre-Advanced", "551 Complex Kanji", false, "KanjiN2"),
+    ContentLevel("N5", "Beginner", "142 Essential Kanji", false, "KanjiN5"),
+    ContentLevel("N4", "Elementary", "274 Essential Kanji", false, "KanjiN4"),
+    ContentLevel("N3", "Intermediate", "607 Essential Kanji", false, "KanjiN3"),
+    ContentLevel("N2", "Pre-Advanced", "570 Complex Kanji", false, "KanjiN2"),
     // N1 Kanji is now unlocked: KanjiN1.json ships a substantial verified set of
     // advanced/master kanji from the study material (Android-first, still growing
     // as the remaining tail is added). Keep this count equal to KanjiN1.json.
-    ContentLevel("N1", "Advanced", "137 Master Kanji", false, "KanjiN1"),
+    ContentLevel("N1", "Advanced", "180 Master Kanji", false, "KanjiN1"),
 )
 
 /** Mirrors `vocabularyLevels` in VocabModel.swift. */
