@@ -158,7 +158,17 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   共感, 連載, 圧巻, 原稿, 著作権, 描写, 主題, 正体, 罠, 上演, 前売り, 視聴率, 知名度,
   絶大, 巨匠, 押しかける, 惜しむ, 出演, 物真似, 滑稽, 芸, 見所, 穴場, 特典) and misc
   (秘訣, 生まれ付き, 生まれ変わる, 引っ込む, 禿げる, 弛む, 瞑る, コンプレックス, エッセイ,
-  シナリオ). `ContentLevel.kt` N1 → **728** (finishing pass continues).
+  シナリオ). Round 4 (+183, `N1_V729`–`N1_V911`, → **911**) covered weather/disaster
+  (豪雨, 暴風雨, 雨雲, 震源地, 猛烈, 浸水, 雪崩, 被災, 異変, 襲う, 荒らす, 一帯, 配給,
+  紫外線, 致命的, 増殖, 脱する, 頂上, 尖る, 連なる, 群れる, 星座, 満月, 謎, 希少, 巣,
+  翼, 操縦, 搬送), crime/law/news (轢き逃げ, 通報, 出動, 誤魔化す, 身元, 見抜く, 究明,
+  自首, 再現, 脅す, 不審, 手口, 偽造, 目論む, 同一, 真実, 報じる, 引き起こす, 突き止める,
+  杜撰, 手掛かり, 取り調べ, 追い詰める, 刑務所, 治安, 速報, 声明, 結成, 可決, 当選, 遺憾,
+  背く, 過ち, 公表, 上昇, 運用, 外貨, 乗っ取る) and personality/emotion (大らか, 気さく,
+  気立て, 情け深い, 強情, お節介, 横柄, 無神経, 爽快, 喜ばしい, 時めく, 待ち遠しい, 乗り気,
+  喜怒哀楽, やるせない, 心苦しい, 虚しい, 嫉む, 淑やか, 優雅, 健全, 恥じらう, 容易い,
+  嫌らしい, 月並み, 不細工, 萎む, 無礼, 気取る). `ContentLevel.kt` N1 → **911** (nearly
+  done).
 - **N1 vocabulary second batch on Android (+137).** Using the JLPT Tango N1 word
   list as a **coverage checklist** only, 137 more advanced words were added to
   `android/app/src/main/assets/data/VocabN1.json` (`N1_V168`–`N1_V304`) with
