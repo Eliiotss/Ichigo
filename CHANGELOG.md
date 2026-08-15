@@ -168,6 +168,12 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     罰, 排, 頑, 緊, 絡, 炎, 悔, 鍵, 挟, 齢, 範, 徐, 濃, 粘, 没, 沸, 掲, 築, 削, 廃)
     and **N1 +12** (馴, 哀, 乏, 覆, 潰, 揃, 拗, 頻, 潤, 掻, 遂, 宛). Counts move to
     **139 / 254 / 556 / 426** (N5–N2); the locked `KanjiN1.json` now holds 33.
+  - **Batch 8 (+76).** **N5 +1** (町), **N4 +7** (皿, 康, 麦, 困, 令, 箱, 妻), **N3
+    +18** (財, 賃, 福, 漁, 刷, 針, 吹, 翌, 牧, 君, 徒, 穴, 罪, 訓, 香, 兵, 偉, 勇),
+    **N2 +35** (睡, 麻, 盆, 聴, 裂, 超, 盗, 励, 儀, 粗, 拡, 威, 芽, 磨, 履, 符, 旬,
+    燥, 徴, 畜, 鉱, 盤, 滴, 奴, 隠, 叫, 狙, 耐, 闘, 穏, 吐, 井, 宣, 祈, 寧) and **N1
+    +15** (是, 捻, 塞, 呂, 伯, 縞, 嘘, 頬, 匂, 随, 喉, 濡, 漏, 徹, 敢). Counts move
+    to **140 / 261 / 574 / 461** (N5–N2); the locked `KanjiN1.json` now holds 48.
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from
