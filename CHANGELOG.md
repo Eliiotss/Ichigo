@@ -112,6 +112,10 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   步 (U+6B65) was normalised to the standard 歩 (U+6B69). Every example sentence,
   furigana and Indonesian gloss is original; the level counts ("120/181 Essential
   Kanji") are unchanged.
+- **Four N3 kanji examples corrected (Android).** `KanjiN3.json` had four example
+  words that did not contain their own kanji — 熱 listed 体温, 程 listed the bare
+  kana ほど, 働 listed 過労, 層 listed 大気圏. Each is replaced with a correct
+  compound (熱中, 先程, 働き手, 断層); the level still ships 367 kanji × five examples.
 - **Grammar N5–N3 completed to the common reference counts.** 22 verified N3
   patterns (`GrammarN3.json`, `N3_G161`–`N3_G182`) and one core N4 pattern
   (`GrammarN4.json`, `N4_G132`: 〜てもいい / 〜てはいけない) that were missing from
