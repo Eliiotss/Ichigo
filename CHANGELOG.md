@@ -139,7 +139,17 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   (周年, 共学, 多数決, 漫然, 堪能, 主旨, 結び付く, 難易度, 度忘れ, 偏差値, 無闇, 以ての外,
   身嗜み, 正規, 売買, 好調, 切り抜ける, 出社) and misc verbs/adverbs (目覚める, 捲る,
   萎びる, 膨れる, 潤む, 張り合う, 残らず, 取り分け, 代わる代わる). `ContentLevel.kt` N1
-  304 → **461** (finishing pass continues in further rounds).
+  304 → **461** (finishing pass continues). Round 2 (+147, `N1_V462`–`N1_V608`,
+  → **608**) then covered work/business (立腹, 弱音, 教訓, 弁える, 気兼ね, 一目置く,
+  拝借, 仰ぐ, 準じる, 前置き, 理屈, 遜る, 事業, 起業, 実業家, 承知, 提示, 家業,
+  やり遂げる, 後押し, 引き継ぐ, 解雇), city/transport (街並み, 住人, 地下街, 埋め立てる,
+  着工, 趣, 追放, 条例, 現行, 事例, 立候補, 視察, 設置, 路線, 沿線, 最寄り, 先頭,
+  駆け込む, 乗り込む, 改定, 引き締める, 遠ざかる, 辿り着く, 時速, 立ち往生, 修復, 改良,
+  乗り切る, 電力, 出生, 青春, 母校, 過疎, 井戸, 澄む) and body/health (体付き, 逞しい,
+  腹筋, 体脂肪, 脇, 擽る, 脳, 長寿, 老化, 老いる, 五感, 過労, 弱る, 物忘れ, 昏睡, 正気,
+  発作, 全身, 痣, 貧血, 噎せる, 浮腫む, 捻挫, 抓る, 肺炎, 喘息, 鬱病, 認知症, 慢性,
+  応急, 矯正, 面会, 安静, 手遅れ, 全快, 処方箋, 薬剤師, 容姿, 透き通る, 瞬き).
+  `ContentLevel.kt` N1 → **608** (finishing pass continues).
 - **N1 vocabulary second batch on Android (+137).** Using the JLPT Tango N1 word
   list as a **coverage checklist** only, 137 more advanced words were added to
   `android/app/src/main/assets/data/VocabN1.json` (`N1_V168`–`N1_V304`) with
