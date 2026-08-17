@@ -100,10 +100,15 @@ N2/N1 terkunci (belum ada dataset), sama seperti aplikasi iOS.
   progres ke satu berkas `.json` lewat file picker (bisa diunggah manual ke Google
   Drive / dipindah ke HP lain), lalu Impor untuk memulihkan — di-*merge* pakai
   `BackupMerge` (tak ada yang hilang). **Tanpa setup Google apa pun.**
-- **Sinkronisasi Google Drive otomatis**: kode-nya tetap ada (`DriveSyncManager` +
-  `SyncSection`) tapi **UInya disembunyikan**, karena butuh setup satu kali di
-  Google Cloud Console (SHA-1 + Test user). Cara mengaktifkan kembali +
-  langkah setup: [`docs/GoogleDriveSync.md`](docs/GoogleDriveSync.md).
+- **Sinkronisasi Google Drive**: **aktif** di Pengaturan → "AKUN & SINKRONISASI".
+  Masuk dengan Google (scope `drive.appdata` saja — folder privat aplikasi, bukan
+  file Drive lain), lalu progres flashcard + hiragana/katakana tersinkron dua arah
+  (pull → merge → push) ke satu berkas `ichigo-backup.json`. Ada sakelar
+  **Sinkronisasi otomatis** (berjalan saat aplikasi dibuka) dan **Sinkronkan
+  sekarang** manual. Token akses tidak pernah disimpan (diambil segar tiap sync
+  via `GoogleAuthUtil`). Butuh setup satu kali di Google Cloud Console (SHA-1 +
+  package + Test user) — langkahnya: [`docs/GoogleDriveSync.md`](docs/GoogleDriveSync.md).
+  Kalau muncul "kode 10", itu berarti setup OAuth belum lengkap (bukan bug app).
 - **Penjadwalan notifikasi harian**: sakelar pengingat + izin sudah ada;
   penjadwalan latar (WorkManager) menyusul.
 - Dataset N2/N1 belum disertakan (mengikuti iOS).

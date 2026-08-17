@@ -75,12 +75,12 @@ import com.ichigo.app.ui.theme.Wt
 import com.ichigo.app.ui.theme.rounded
 
 /**
- * Port of `SettingsView`. Backup/restore uses [BackupFileSection] — export the
- * progress to a `.json` file and restore it later — which needs no Google setup
- * at all (the file can be uploaded to Google Drive manually). The Google Drive
- * auto-sync path ([SyncSection] + DriveSyncManager) stays in the codebase but is
- * not shown, since it requires a one-time Google Cloud registration (see
- * `docs/GoogleDriveSync.md`).
+ * Port of `SettingsView`. Two backup paths are offered: [BackupFileSection]
+ * exports/imports progress as a `.json` file (needs no Google setup), and
+ * [SyncSection] adds two-way **Google Drive** sync of learning progress through
+ * the app's private `appDataFolder` (scope `drive.appdata` only — never the
+ * user's other files). The Drive path needs a one-time Google Cloud registration
+ * (SHA-1 + package) — see `docs/GoogleDriveSync.md`.
  */
 @Composable
 fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
@@ -166,6 +166,10 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
 
         item {
             BackupFileSection()
+        }
+
+        item {
+            SyncSection()
         }
 
         item {
@@ -338,7 +342,7 @@ private fun BackupFileSection(vm: BackupFileViewModel = hiltViewModel()) {
 }
 
 @Composable
-private fun SyncSection(vm: SyncViewModel) {
+private fun SyncSection(vm: SyncViewModel = hiltViewModel()) {
     val c = IchigoTheme.colors
     val state by vm.state.collectAsStateWithLifecycle()
     val autoSync by vm.autoSync.collectAsStateWithLifecycle()

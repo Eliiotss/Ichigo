@@ -7,6 +7,25 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Google Drive progress sync is now live in the Android app.** The Settings
+  screen gains an **"AKUN & SINKRONISASI"** section (the existing `SyncSection`,
+  previously built but not rendered) that exposes the already-complete Drive sync
+  backend — no UI redesign, no new components, no dataset/FSRS changes. Users can
+  sign in with Google, toggle **automatic sync** (runs when the app comes to the
+  foreground), and **sync now** manually. Only **learning progress** is synced
+  (flashcard/FSRS state, hiragana/katakana counts, streak, daily target,
+  preferences) to the app's **private `appDataFolder`** using the minimal
+  `drive.appdata` scope — never the user's other Drive files, and never the
+  datasets. Conflicts resolve **per card by newest review** (`BackupMerge`), so
+  studying on one device shows up on the next without losing progress; the app
+  stays fully usable offline. Security: the OAuth access token is **never
+  persisted** — it is fetched fresh each sync via `GoogleAuthUtil` (Play Services
+  holds the account); DataStore keeps only the email, an auto-sync flag, the
+  last-sync time, and a random device id. Added `BackupSyncDataTest` (JSON
+  round-trip, local-/remote-only preservation, newer-review-wins both ways, empty
+  backup, corrupted payload, future-version/unknown-field tolerance). A one-time
+  Google Cloud registration (SHA-1 + package + Test user) is still required to
+  actually sign in — see `android/docs/GoogleDriveSync.md`.
 - **Web version of Ichigo (`web/`).** A standalone, build-free static site
   (HTML + CSS + vanilla ES modules) that ports the app to the browser, kept fully
   separate from the Swift sources so it never disturbs the iOS build. It includes
