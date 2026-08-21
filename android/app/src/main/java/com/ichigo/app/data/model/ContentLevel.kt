@@ -30,13 +30,14 @@ data class ContentLevel(
  * characters from the study material (materials/materi.md) that were missing from
  * the original curated sets are added at their proper JLPT level (original
  * on/kun/meaning + five verified compound examples each); iOS/web catch up in the
- * later sync pass. Duplicate kanji entries were also removed. Keep each count
- * equal to the matching KanjiN*.json length.
+ * later sync pass. Duplicate kanji entries — both within a level and the same
+ * character repeated across levels — were removed, keeping each kanji only at its
+ * most basic (lowest) level. Keep each count equal to the matching KanjiN*.json length.
  */
 val kanjiLevels: List<ContentLevel> = listOf(
     ContentLevel("N5", "Beginner", "142 Essential Kanji", false, "KanjiN5"),
-    ContentLevel("N4", "Elementary", "282 Essential Kanji", false, "KanjiN4"),
-    ContentLevel("N3", "Intermediate", "622 Essential Kanji", false, "KanjiN3"),
+    ContentLevel("N4", "Elementary", "269 Essential Kanji", false, "KanjiN4"),
+    ContentLevel("N3", "Intermediate", "587 Essential Kanji", false, "KanjiN3"),
     ContentLevel("N2", "Pre-Advanced", "612 Complex Kanji", false, "KanjiN2"),
     // N1 Kanji is now unlocked: KanjiN1.json ships a substantial verified set of
     // advanced/master kanji from the study material (Android-first, still growing
@@ -51,10 +52,10 @@ val vocabularyLevels: List<ContentLevel> = listOf(
     ContentLevel("N5", "Beginner", "1.087 Kosakata Dasar", false, "VocabN5"),
     // N4 vocab expanded Android-first (Tango N4 coverage guide, original glosses);
     // iOS/web still at 700 until the later sync pass. Keep equal to VocabN4.json.
-    ContentLevel("N4", "Elementary", "1.027 Kosakata Dasar", false, "VocabN4"),
+    ContentLevel("N4", "Elementary", "1.015 Kosakata Dasar", false, "VocabN4"),
     // N3 vocab expanded Android-first (Tango N3 coverage guide, original glosses);
     // iOS/web still at 1.800 until the later sync pass. Keep equal to VocabN3.json.
-    ContentLevel("N3", "Intermediate", "2.651 Kosakata Menengah", false, "VocabN3"),
+    ContentLevel("N3", "Intermediate", "2.642 Kosakata Menengah", false, "VocabN3"),
     // N2 vocab expanded Android-first (Tango N2 coverage guide, original glosses);
     // iOS/web still at 1.447 until the later sync pass. Keep equal to VocabN2.json.
     ContentLevel("N2", "Pre-Advanced", "2.122 Kosakata Lanjutan", false, "VocabN2"),
