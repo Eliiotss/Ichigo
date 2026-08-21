@@ -12,6 +12,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.CommonStatusCodes
 import com.google.android.gms.common.api.Scope
 import com.ichigo.app.data.local.AppPreferences
+import com.ichigo.app.util.SigningInfo
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -95,9 +96,19 @@ class DriveSyncManager @Inject constructor(
     /** Maps a Google Sign-In status code to a clear, actionable message (Indonesian). */
     private fun signInErrorMessage(code: Int): String = when (code) {
         CommonStatusCodes.DEVELOPER_ERROR -> // 10
-            "Gagal masuk (kode 10): konfigurasi OAuth belum lengkap. Daftarkan SHA-1 " +
-                "+ package \"com.ichigo.app\" pada OAuth Client ID (Android) di Google " +
-                "Cloud Console, dan tambahkan akunmu sebagai Test user. Lihat docs/GoogleDriveSync.md."
+            // Include the *running* APK's own signing SHA-1 + package so the user
+            // pastes exactly the right fingerprint — the usual code-10 cause is a
+            // debug SHA-1 registered while testing a release APK, or vice-versa.
+            buildString {
+                append("Gagal masuk (kode 10): konfigurasi OAuth belum lengkap. ")
+                append("Di Google Cloud Console → Credentials → OAuth Client ID (Android), ")
+                append("daftarkan TEPAT nilai berikut dari APK yang sedang kamu pakai:\n")
+                append("• Package: ${SigningInfo.packageName(context)}\n")
+                val sha1 = SigningInfo.sha1(context)
+                append("• SHA-1: ${sha1 ?: "(tidak terbaca)"}\n")
+                append("Lalu aktifkan Google Drive API dan tambahkan akun Google-mu sebagai ")
+                append("Test user di OAuth consent screen. Detail: docs/GoogleDriveSync.md.")
+            }
         GoogleSignInStatusCodes.SIGN_IN_CANCELLED -> // 12501
             "Masuk dibatalkan."
         GoogleSignInStatusCodes.SIGN_IN_CURRENTLY_IN_PROGRESS -> // 12502

@@ -15,6 +15,14 @@ Aplikasi ini **tidak** memakai `google-services.json` atau Web Client ID — sig
 hanya meminta email + scope `drive.appdata` (tanpa ID token). Jadi cukup membuat
 **OAuth Client ID tipe Android**.
 
+> **Tip paling penting (penyebab kode 10 tersering).** SHA-1 harus milik **APK
+> yang tepat sedang kamu pakai**. APK rilis (yang dikirim ke kamu) ditandatangani
+> keystore rilis; menjalankan dari Android Studio memakai keystore *debug* —
+> SHA-1-nya **berbeda**. Kalau salah daftar, sign-in selalu kena kode 10.
+> **Tak perlu menebak:** saat kode 10 muncul, aplikasi kini menampilkan sendiri
+> SHA-1 + package APK yang sedang berjalan di layar pesannya — tinggal salin nilai
+> itu ke Google Cloud Console.
+
 ## Data yang dibutuhkan
 
 - **Package name:** `com.ichigo.app`
