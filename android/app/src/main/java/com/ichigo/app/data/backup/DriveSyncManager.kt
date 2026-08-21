@@ -2,6 +2,8 @@ package com.ichigo.app.data.backup
 
 import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import com.google.android.gms.auth.GoogleAuthUtil
 import com.google.android.gms.auth.UserRecoverableAuthException
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -137,6 +139,18 @@ class DriveSyncManager @Inject constructor(
             _state.value = _state.value.copy(message = "Belum masuk / izin Drive belum diberikan.", isError = true)
             return
         }
+        // Sync is a cloud round-trip, so it needs the network. Check up front to
+        // give a clear message instead of a raw OkHttp "Unable to resolve host"
+        // exception — and, being offline-first, the local data is untouched and
+        // will sync on the next attempt once a connection is back.
+        if (!hasNetwork()) {
+            _state.value = _state.value.copy(
+                message = "Tidak ada koneksi internet. Sinkronisasi ke Google Drive butuh internet — " +
+                    "progresmu tetap aman tersimpan di perangkat dan akan tersinkron saat online lagi.",
+                isError = true,
+            )
+            return
+        }
         _state.value = _state.value.copy(busy = true, message = null, isError = false)
         try {
             withContext(Dispatchers.IO) {
@@ -191,7 +205,19 @@ class DriveSyncManager @Inject constructor(
         if (!prefs.autoSyncNow()) return
         val acc = GoogleSignIn.getLastSignedInAccount(context) ?: return
         if (!GoogleSignIn.hasPermissions(acc, driveScope)) return
+        // Offline on app-open is normal; skip quietly rather than flashing an
+        // error the user never asked for. Manual "Sinkronkan sekarang" still
+        // reports the offline state explicitly.
+        if (!hasNetwork()) return
         syncNow()
+    }
+
+    /** True when a validated, internet-capable network is currently active. */
+    private fun hasNetwork(): Boolean {
+        val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager ?: return false
+        val caps = cm.getNetworkCapabilities(cm.activeNetwork ?: return false) ?: return false
+        return caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) &&
+            caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
     }
 
     private fun fetchToken(acc: GoogleSignInAccount): String {
