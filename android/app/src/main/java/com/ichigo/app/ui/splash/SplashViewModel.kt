@@ -47,7 +47,10 @@ class SplashViewModel @Inject constructor(
             content.preloadCore()
             advance(0.5f)
             _state.value = _state.value.copy(statusText = "Menyiapkan deck…")
-            flashcards.preloadAllDecks()
+            // Progress map only (one DB read). Decoding all decks now runs in the
+            // background instead of holding the splash open for ~8 400 cards.
+            flashcards.ensureLoaded()
+            flashcards.warmDecksInBackground()
             advance(1f)
 
             _state.value = _state.value.copy(statusText = "Hampir selesai…")

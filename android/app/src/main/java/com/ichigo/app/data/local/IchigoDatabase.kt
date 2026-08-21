@@ -23,7 +23,10 @@ import com.ichigo.app.data.local.entity.ReviewLogEntity
         NewCardTodayEntity::class,
     ],
     version = 1,
-    exportSchema = false,
+    // Schemas are exported to app/schemas/ so a future version bump can ship a
+    // real Migration (verified against the committed JSON) instead of relying on
+    // a destructive fallback that would erase the user's progress.
+    exportSchema = true,
 )
 abstract class IchigoDatabase : RoomDatabase() {
     abstract fun progressDao(): ProgressDao

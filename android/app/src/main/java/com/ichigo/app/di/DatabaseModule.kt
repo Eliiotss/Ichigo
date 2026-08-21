@@ -23,7 +23,16 @@ object DatabaseModule {
     @Singleton
     fun provideDatabase(@ApplicationContext context: Context): IchigoDatabase =
         Room.databaseBuilder(context, IchigoDatabase::class.java, IchigoDatabase.NAME)
-            .fallbackToDestructiveMigration()
+            // NO destructive fallback on upgrade. `fallbackToDestructiveMigration()`
+            // used to be here: the first time the schema version was raised it
+            // would have silently wiped every card's FSRS progress. A future
+            // schema change must ship an explicit Migration and be registered
+            // with `.addMigrations(...)`; if one is missing the build/open fails
+            // loudly instead of destroying the user's data.
+            //
+            // Downgrade (a DB newer than the app, e.g. after installing an older
+            // APK) stays destructive — the alternative is a crash on every launch.
+            .fallbackToDestructiveMigrationOnDowngrade()
             .build()
 
     @Provides fun provideProgressDao(db: IchigoDatabase): ProgressDao = db.progressDao()

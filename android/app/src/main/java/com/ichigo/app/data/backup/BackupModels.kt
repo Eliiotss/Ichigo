@@ -23,6 +23,14 @@ data class BackupPayload(
     val newToday: List<BackupNewToday> = emptyList(),
     val kanaCounts: List<BackupKana> = emptyList(),
     val analytics: BackupAnalytics = BackupAnalytics(),
+    /**
+     * Epoch millis of the last "Reset progress" the user performed, or null if
+     * never. This is a **tombstone**: anything not studied since this moment is
+     * dropped by [BackupMerge], which is what makes a reset stick instead of
+     * being undone by the next sync. Optional, so backups written by older
+     * versions still decode (they simply carry no tombstone).
+     */
+    val resetAt: Long? = null,
     val userName: String? = null,
     val userEmail: String? = null,
     val dailyTarget: Int? = null,
@@ -69,7 +77,12 @@ data class BackupAnalytics(
  * app so progress is never lost.
  */
 object BackupMerge {
+
     fun merge(a: BackupPayload, b: BackupPayload): BackupPayload {
+        // The newest reset wins. Everything that was not studied since then is
+        // considered deleted on purpose — see [BackupPayload.resetAt].
+        val resetAt = maxOf(a.resetAt ?: 0L, b.resetAt ?: 0L)
+
         // Per-card: newer lastReview wins (null = never reviewed = loses to a real review).
         val byId = LinkedHashMap<String, BackupProgress>()
         for (p in a.progress) byId[p.id] = p
@@ -77,11 +90,18 @@ object BackupMerge {
             val existing = byId[p.id]
             byId[p.id] = if (existing == null || (p.lastReview ?: Long.MIN_VALUE) >= (existing.lastReview ?: Long.MIN_VALUE)) p else existing
         }
+        // A card survives a reset only if it was reviewed at or after it.
+        val progress = byId.values.filter { survivesReset(it.lastReview, resetAt) }
+        val keptIds = progress.mapTo(HashSet()) { it.id }
 
-        // New-today: union by (levelKey, day, cardId).
-        val newToday = (a.newToday + b.newToday).distinctBy { Triple(it.levelKey, it.day, it.cardId) }
+        // New-today: union by (levelKey, day, cardId), minus anything the reset removed.
+        val newToday = (a.newToday + b.newToday)
+            .distinctBy { Triple(it.levelKey, it.day, it.cardId) }
+            .filter { resetAt == 0L || it.cardId in keptIds }
 
-        // Kana: max count per (kana, script).
+        // Kana: max count per (kana, script). Reset does not clear kana progress
+        // (FlashcardRepository.resetAll leaves the kana_count table alone), so
+        // the tombstone deliberately does not apply here.
         val kanaMap = HashMap<Pair<String, String>, Int>()
         for (k in a.kanaCounts + b.kanaCounts) {
             val key = k.kana to k.script
@@ -89,8 +109,11 @@ object BackupMerge {
         }
         val kana = kanaMap.map { (k, v) -> BackupKana(k.first, k.second, v) }
 
-        // Analytics: whichever recorded more reviews (proxy for the more-studied device).
-        val analytics = if (a.analytics.totalReviews >= b.analytics.totalReviews) a.analytics else b.analytics
+        // Analytics / streak may only come from a side whose data post-dates the
+        // reset; otherwise a stale device would restore the old totals.
+        val liveSides = listOf(a, b).filter { isPostReset(it, resetAt) }
+        val analytics = liveSides.maxByOrNull { it.analytics.totalReviews }?.analytics ?: BackupAnalytics()
+        val streak = liveSides.maxOfOrNull { it.streak } ?: 0
 
         // Preferences + day keys: newer snapshot wins.
         val newer = if (a.createdAt >= b.createdAt) a else b
@@ -100,13 +123,14 @@ object BackupMerge {
             schemaVersion = maxOf(a.schemaVersion, b.schemaVersion),
             createdAt = maxOf(a.createdAt, b.createdAt),
             deviceId = newer.deviceId,
-            progress = byId.values.toList(),
-            streak = maxOf(a.streak, b.streak),
+            progress = progress,
+            streak = streak,
             lastStudyDayKey = newer.lastStudyDayKey ?: older.lastStudyDayKey,
             lastResetDayKey = newer.lastResetDayKey ?: older.lastResetDayKey,
             newToday = newToday,
             kanaCounts = kana,
             analytics = analytics,
+            resetAt = resetAt.takeIf { it > 0L },
             userName = newer.userName ?: older.userName,
             userEmail = newer.userEmail ?: older.userEmail,
             dailyTarget = newer.dailyTarget ?: older.dailyTarget,
@@ -115,4 +139,18 @@ object BackupMerge {
             appearance = newer.appearance ?: older.appearance,
         )
     }
+
+    /** No tombstone → keep everything. Otherwise: only cards studied since it. */
+    private fun survivesReset(lastReview: Long?, resetAt: Long): Boolean =
+        resetAt == 0L || (lastReview ?: Long.MIN_VALUE) >= resetAt
+
+    /**
+     * True when this snapshot's study data is at least as new as the reset —
+     * either because this is the device that reset, or because it has recorded a
+     * review since. Used to decide whose streak/analytics may survive.
+     */
+    private fun isPostReset(p: BackupPayload, resetAt: Long): Boolean =
+        resetAt == 0L ||
+            (p.resetAt ?: 0L) >= resetAt ||
+            (p.analytics.lastReviewedAt ?: Long.MIN_VALUE) >= resetAt
 }

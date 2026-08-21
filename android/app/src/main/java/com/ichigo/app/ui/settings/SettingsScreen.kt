@@ -210,7 +210,16 @@ fun SettingsScreen(viewModel: SettingsViewModel = hiltViewModel()) {
         AlertDialog(
             onDismissRequest = { showReset = false },
             title = { Text("Reset progress flashcard?", style = rounded(18, Wt.Bold), color = c.primaryText) },
-            text = { Text("Semua progres flashcard, streak, statistik, dan grafik belajar akan dihapus dan tidak bisa dibatalkan. Materi (Kanji/Grammar/Vocabulary) tidak dihapus.", style = rounded(14), color = c.secondaryText) },
+            text = {
+                Text(
+                    "Semua progres flashcard, streak, statistik, dan grafik belajar akan dihapus dan " +
+                        "tidak bisa dibatalkan. Materi (Kanji/Grammar/Vocabulary) tidak dihapus.\n\n" +
+                        "Jika sinkronisasi Google Drive aktif, reset ini juga berlaku di perangkat lain " +
+                        "yang memakai akun yang sama.",
+                    style = rounded(14),
+                    color = c.secondaryText,
+                )
+            },
             confirmButton = { TextButton(onClick = { viewModel.resetAll(); showReset = false }) { Text("Reset", color = IchigoPalette.Danger) } },
             dismissButton = { TextButton(onClick = { showReset = false }) { Text("Batal", color = c.secondaryText) } },
             containerColor = c.surface,

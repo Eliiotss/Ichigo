@@ -1,7 +1,7 @@
 package com.ichigo.app.util
 
-import android.content.Context
 import android.speech.tts.TextToSpeech
+import android.content.Context
 import androidx.compose.runtime.staticCompositionLocalOf
 import java.util.Locale
 
@@ -12,23 +12,41 @@ import java.util.Locale
  * of being clear for study. Provided app-wide via [LocalSpeech].
  */
 class SpeechHelper(context: Context) {
-    private var ready = false
-    private val tts: TextToSpeech = TextToSpeech(context.applicationContext) { status ->
-        if (status == TextToSpeech.SUCCESS) {
-            tts.language = Locale.JAPANESE
-            tts.setSpeechRate(0.9f)
-            ready = true
+
+    @Volatile private var ready = false
+    private var configured = false
+
+    // The engine is configured on first use, not inside the init callback: that
+    // callback can be delivered before the constructor has finished assigning
+    // this field, so touching it from there risks a NullPointerException.
+    private var engine: TextToSpeech? = null
+
+    init {
+        engine = TextToSpeech(context.applicationContext) { status ->
+            ready = status == TextToSpeech.SUCCESS
         }
     }
 
     /** Speaks Japanese text, interrupting anything already playing. */
     fun speak(text: String) {
         if (!ready || text.isEmpty()) return
+        val tts = engine ?: return
+        if (!configured) {
+            tts.setLanguage(Locale.JAPANESE)
+            tts.setSpeechRate(0.9f)
+            configured = true
+        }
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "ichigo-tts")
     }
 
     fun shutdown() {
-        runCatching { tts.stop(); tts.shutdown() }
+        runCatching {
+            engine?.stop()
+            engine?.shutdown()
+        }
+        engine = null
+        ready = false
+        configured = false
     }
 }
 

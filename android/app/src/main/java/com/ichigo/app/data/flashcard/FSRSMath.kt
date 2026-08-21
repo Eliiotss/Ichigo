@@ -4,11 +4,22 @@ import kotlin.math.exp
 import kotlin.math.pow
 
 /**
- * Direct port of `FSRSMath` — the official FSRS-6 spaced-repetition formulas.
- * Every formula, clamp and index matches the Swift source line for line, so a
- * card scheduled on Android lands on the same due date as on iOS.
+ * The official FSRS-6 spaced-repetition formulas.
+ *
+ * Reference implementation followed: `py-fsrs` / the FSRS wiki equations for
+ * FSRS-6 (21 weights, `w[20]` = trainable decay). Every formula below is the
+ * published one; where this app deliberately differs from the reference, the
+ * difference is documented at the call site in [FlashcardReviewEngine]
+ * ("cara A" graduation), never hidden inside the maths.
  */
 object FSRSMath {
+
+    /** Lower bound for stability. Kept at the value the app has always used. */
+    const val STABILITY_FLOOR = 0.1
+
+    /** Upper bound for stability (FSRS reference clamp, in days). */
+    const val STABILITY_CEILING = 36_500.0
+
     // FSRS-6: decay & factor are derived from w[20] (per-preset), not constants.
     private fun decay(w: List<Double>): Double {
         if (w.size <= 20) return -0.5 // fallback if the array is too short
@@ -28,7 +39,7 @@ object FSRSMath {
 
     /** Initial stability when a new card is first graded. */
     fun initialStability(grade: FlashcardGrade, w: List<Double>): Double =
-        maxOf(w[grade.value - 1], 0.1)
+        maxOf(w[grade.value - 1], STABILITY_FLOOR)
 
     /** Initial difficulty when a new card is first graded. */
     fun initialDifficulty(grade: FlashcardGrade, w: List<Double>): Double {
@@ -48,7 +59,7 @@ object FSRSMath {
         return clamp(reverted, 1.0, 10.0)
     }
 
-    /** Stability after a successful recall (Hard/Good/Easy). */
+    /** Stability after a successful recall (Hard/Good/Easy) on a later day. */
     fun nextStabilityOnRecall(
         stability: Double,
         difficulty: Double,
@@ -60,21 +71,51 @@ object FSRSMath {
         val easyBonus = if (grade == FlashcardGrade.EASY) w[16] else 1.0
         val increase = exp(w[8]) * (11 - difficulty) * stability.pow(-w[9]) *
             (exp((1 - retrievability) * w[10]) - 1) * hardPenalty * easyBonus
-        return maxOf(stability * (1 + increase), 0.1)
+        return clamp(stability * (1 + increase), STABILITY_FLOOR, STABILITY_CEILING)
     }
 
-    /** Stability after a lapse (Again from the review state). */
+    /**
+     * FSRS-6 short-term (same-day) stability:
+     *
+     *     S' = S · e^(w17 · (G − 3 + w18)) · S^(−w19)
+     *
+     * FSRS-6 additionally requires that a same-day Good/Easy never *lowers*
+     * stability, hence the `max(increase, 1)` guard for G ≥ 3.
+     *
+     * This is what a review inside the learning/relearning steps uses. Before
+     * this existed the engine reset stability to [initialStability] on every
+     * learning step, which threw away the card's history.
+     */
+    fun shortTermStability(stability: Double, grade: FlashcardGrade, w: List<Double>): Double {
+        val s = maxOf(stability, STABILITY_FLOOR)
+        // Presets shorter than 20 weights predate FSRS-6 short-term memory;
+        // leaving S untouched is the safe fallback (never NaN, never a jump).
+        if (w.size <= 19) return s
+        var increase = s.pow(-w[19]) * exp(w[17] * (grade.value - 3 + w[18]))
+        if (grade.value >= FlashcardGrade.GOOD.value) increase = maxOf(increase, 1.0)
+        return clamp(s * increase, STABILITY_FLOOR, STABILITY_CEILING)
+    }
+
+    /**
+     * Stability after a lapse (Again from the review state).
+     *
+     * FSRS-6 clamps the long-term post-lapse value with the short-term one,
+     * `min(S_forget, S / e^(w17·w18))`, so forgetting a card can never *raise*
+     * its stability. That clamp was missing here before.
+     */
     fun nextStabilityOnForget(
         stability: Double,
         difficulty: Double,
         retrievability: Double,
         w: List<Double>,
     ): Double {
-        val s = w[11] * difficulty.pow(-w[12]) * ((stability + 1).pow(w[13]) - 1) *
+        val longTerm = w[11] * difficulty.pow(-w[12]) * ((stability + 1).pow(w[13]) - 1) *
             exp((1 - retrievability) * w[14])
-        return maxOf(s, 0.1)
+        val shortTerm = if (w.size > 18) stability / exp(w[17] * w[18]) else Double.MAX_VALUE
+        return clamp(minOf(longTerm, shortTerm), STABILITY_FLOOR, STABILITY_CEILING)
     }
 
+    /** True when the review happens on the same day as the previous one. */
     fun isSameDayReview(elapsedDays: Double): Boolean = elapsedDays <= 0
 
     /** Next interval (days) for a target retention. */
@@ -87,6 +128,7 @@ object FSRSMath {
         val d = decay(w)
         val f = factor(w)
         val interval = (stability / f) * (desiredRetention.pow(1.0 / d) - 1)
+        if (interval.isNaN()) return 1
         return minOf(maxOf(Math.round(interval).toInt(), 1), maximumDays)
     }
 

@@ -63,7 +63,9 @@ class HomeViewModel @Inject constructor(
             prefs.learnedGrammarIds,
             flashcards.progress,
             prefs.onboardingDone,
-            refreshTrigger,
+            // Recompute on manual refresh AND as background deck warm-up lands,
+            // so "due hari ini" fills in instead of staying at its first value.
+            combine(refreshTrigger, flashcards.deckCatalogVersion) { a, b -> a to b },
         ) { (name, target, streak), learned, _, onboardingDone, _ ->
             flashcards.ensureLoaded()
             HomeUiState(
@@ -75,7 +77,7 @@ class HomeViewModel @Inject constructor(
                 due = flashcards.dailyDueTotal(target),
                 streak = streak,
                 // Mastered = flashcards mastered by FSRS + grammar marked as learned (star).
-                mastered = flashcards.masteredTotal + learned.size,
+                mastered = flashcards.masteredTotal() + learned.size,
                 showOnboarding = !onboardingDone,
             )
         }.onEach { _state.value = it }.launchIn(viewModelScope)

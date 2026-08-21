@@ -27,17 +27,41 @@ class DriveClient @Inject constructor() {
 
     private val jsonType = "application/json; charset=UTF-8".toMediaType()
 
-    /** Finds the backup file id in appDataFolder, or null if it doesn't exist yet. */
-    fun findBackupFileId(token: String): String? {
+    /**
+     * A backup file on Drive. [version] is Drive's monotonically increasing
+     * change counter for the file — it moves on **every** server-side change,
+     * so comparing it before writing detects another device having uploaded in
+     * the meantime. Drive v3 has no `If-Match` precondition on `files.update`,
+     * so a read-verify-write check is the only concurrency control available.
+     */
+    data class DriveFile(val id: String, val version: String)
+
+    /** Finds the backup file in appDataFolder, or null if it doesn't exist yet. */
+    fun findBackupFile(token: String): DriveFile? {
         val url = "https://www.googleapis.com/drive/v3/files" +
-            "?spaces=appDataFolder&fields=files(id,name)&q=" +
-            java.net.URLEncoder.encode("name = '$BACKUP_NAME'", "UTF-8")
+            "?spaces=appDataFolder&fields=files(id,name,version)&q=" +
+            // trashed = false: a backup the user deleted must not be resurrected
+            // as the sync target (which would silently drop newer progress).
+            java.net.URLEncoder.encode("name = '$BACKUP_NAME' and trashed = false", "UTF-8")
         val req = Request.Builder().url(url).header("Authorization", "Bearer $token").get().build()
         http.newCall(req).execute().use { resp ->
             val body = resp.body?.string().orEmpty()
             if (!resp.isSuccessful) throw IOException("Drive list gagal (${resp.code}): $body")
             val files = JSONObject(body).optJSONArray("files") ?: return null
-            return if (files.length() > 0) files.getJSONObject(0).getString("id") else null
+            if (files.length() == 0) return null
+            val f = files.getJSONObject(0)
+            return DriveFile(f.getString("id"), f.optString("version", ""))
+        }
+    }
+
+    /** Current version counter of a file, used to detect a concurrent write. */
+    fun fileVersion(token: String, fileId: String): String {
+        val url = "https://www.googleapis.com/drive/v3/files/$fileId?fields=version"
+        val req = Request.Builder().url(url).header("Authorization", "Bearer $token").get().build()
+        http.newCall(req).execute().use { resp ->
+            val body = resp.body?.string().orEmpty()
+            if (!resp.isSuccessful) throw IOException("Drive version gagal (${resp.code}): $body")
+            return JSONObject(body).optString("version", "")
         }
     }
 
@@ -58,7 +82,11 @@ class DriveClient @Inject constructor() {
             .put("name", BACKUP_NAME)
             .put("parents", org.json.JSONArray().put("appDataFolder"))
             .toString()
-        val body = MultipartBody.Builder().setType("related".toMediaType())
+        // MUST be the full "multipart/related" media type. A bare "related"
+        // has no subtype, so OkHttp's toMediaType() throws IllegalArgumentException
+        // and the very first sync (the only time this create path runs) always
+        // failed with "Gagal sinkron: No subtype found for: \"related\"".
+        val body = MultipartBody.Builder().setType("multipart/related".toMediaType())
             .addPart(metadata.toRequestBody(jsonType))
             .addPart(json.toRequestBody(jsonType))
             .build()

@@ -39,10 +39,12 @@ class FlashcardReviewEngine {
                 }
             }
 
-            // Learning card — step progression continues.
+            // Learning card — step progression continues. Stability/difficulty
+            // now follow FSRS-6 short-term memory instead of being reset to the
+            // first-review values on every step (which discarded the history).
             FlashcardCardState.LEARNING -> {
-                updated.stability = FSRSMath.initialStability(grade, w)
-                updated.difficulty = FSRSMath.initialDifficulty(grade, w)
+                updated.stability = FSRSMath.shortTermStability(card.stability, grade, w)
+                updated.difficulty = FSRSMath.nextDifficulty(card.difficulty, grade, w)
                 if (grade == FlashcardGrade.EASY) {
                     graduate(updated, settings.easyIntervalDays, settings, now)
                 } else {
@@ -60,14 +62,24 @@ class FlashcardReviewEngine {
                     updated.state = FlashcardCardState.RELEARNING
                     advanceStep(updated, currentIndex = -1, steps = settings.relearningStepsMinutes, grade = grade, settings = settings, now = now)
                 } else {
-                    updated.stability = FSRSMath.nextStabilityOnRecall(card.stability, card.difficulty, r, grade, w)
+                    // FSRS-6 uses short-term stability for a same-day repeat and
+                    // the recall formula only once a day has actually elapsed.
+                    updated.stability = if (FSRSMath.isSameDayReview(elapsedDays)) {
+                        FSRSMath.shortTermStability(card.stability, grade, w)
+                    } else {
+                        FSRSMath.nextStabilityOnRecall(card.stability, card.difficulty, r, grade, w)
+                    }
                     updated.difficulty = FSRSMath.nextDifficulty(card.difficulty, grade, w)
                     graduateWithStability(updated, settings, now)
                 }
             }
 
-            // Relearning card (red again after a lapse from review).
+            // Relearning card (red again after a lapse from review). Same-day
+            // steps update memory state through FSRS-6 short-term stability;
+            // before, a relearning review left stability/difficulty untouched.
             FlashcardCardState.RELEARNING -> {
+                updated.stability = FSRSMath.shortTermStability(card.stability, grade, w)
+                updated.difficulty = FSRSMath.nextDifficulty(card.difficulty, grade, w)
                 if (grade == FlashcardGrade.EASY) {
                     graduate(updated, settings.easyIntervalDays, settings, now)
                 } else {

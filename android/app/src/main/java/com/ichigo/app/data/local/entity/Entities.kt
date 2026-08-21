@@ -82,3 +82,13 @@ data class NewCardTodayEntity(
     val day: String,
     val cardId: String,
 )
+
+/**
+ * Query projection only (not a table): how many new cards were started today per
+ * deck. Lets the Home/Profile totals apply the **per-deck** daily quota with a
+ * single grouped query instead of one query per deck.
+ */
+data class NewCardDayCount(
+    val levelKey: String,
+    val total: Int,
+)

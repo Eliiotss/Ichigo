@@ -48,6 +48,7 @@ class BackupRepository @Inject constructor(
             lastResetDayKey = s.lastResetDayKey,
             newToday = newToday,
             kanaCounts = kana,
+            resetAt = prefs.lastResetAt().takeIf { it > 0L },
             analytics = BackupAnalytics(
                 totalReviews = s.analytics.totalReviews,
                 again = s.analytics.againCount,
@@ -65,8 +66,23 @@ class BackupRepository @Inject constructor(
         )
     }
 
-    /** Writes a (merged) payload back into the local database + preferences. */
+    /**
+     * Writes a (merged) payload back into the local database + preferences.
+     *
+     * If the payload carries a reset tombstone newer than the one this device
+     * knows about, the local flashcard tables are cleared first. Without that
+     * step a "Reset progress" performed on another device would never reach this
+     * one: [apply] only upserts, so every old row would simply stay behind.
+     * The payload has already been filtered by [BackupMerge], so what is written
+     * back afterwards is exactly the post-reset state.
+     */
     suspend fun apply(p: BackupPayload) {
+        val incomingReset = p.resetAt ?: 0L
+        if (incomingReset > prefs.lastResetAt()) {
+            progressDao.deleteAll()
+            newCardTodayDao.deleteAll()
+            prefs.setLastResetAt(incomingReset)
+        }
         p.progress.forEach {
             progressDao.upsert(
                 ProgressEntity(

@@ -130,18 +130,39 @@ class DriveSyncManager @Inject constructor(
         try {
             withContext(Dispatchers.IO) {
                 val token = fetchToken(acc)
-                val fileId = drive.findBackupFileId(token)
-                val local = backup.export(prefs.deviceId())
-                val merged = if (fileId != null) {
-                    val remoteJson = drive.download(token, fileId)
-                    val remote = runCatching { json.decodeFromString(BackupPayload.serializer(), remoteJson) }.getOrNull()
-                    if (remote != null) BackupMerge.merge(local, remote) else local
-                } else {
-                    local
+                // Read → merge → verify-nothing-changed → write. Drive v3 offers
+                // no If-Match precondition on files.update, so the version counter
+                // read back just before the upload is the only way to notice that
+                // another device wrote while we were merging. Without it the last
+                // writer silently overwrote the other device's newer progress.
+                var attempt = 0
+                while (true) {
+                    val file = drive.findBackupFile(token)
+                    val local = backup.export(prefs.deviceId())
+                    val merged = if (file != null) {
+                        val remoteJson = drive.download(token, file.id)
+                        val remote = runCatching { json.decodeFromString(BackupPayload.serializer(), remoteJson) }.getOrNull()
+                        if (remote != null) BackupMerge.merge(local, remote) else local
+                    } else {
+                        local
+                    }
+                    val out = json.encodeToString(BackupPayload.serializer(), merged)
+
+                    if (file == null) {
+                        drive.create(token, out)
+                    } else {
+                        val versionNow = runCatching { drive.fileVersion(token, file.id) }.getOrDefault(file.version)
+                        if (versionNow != file.version && attempt < MAX_MERGE_RETRIES) {
+                            attempt += 1
+                            continue // someone else uploaded mid-merge — redo with their data
+                        }
+                        drive.update(token, file.id, out)
+                    }
+                    // Only touch local storage once the upload has succeeded, so a
+                    // failed sync never leaves the device in a half-merged state.
+                    backup.apply(merged)
+                    break
                 }
-                backup.apply(merged)
-                val out = json.encodeToString(BackupPayload.serializer(), merged)
-                if (fileId != null) drive.update(token, fileId, out) else drive.create(token, out)
             }
             val now = System.currentTimeMillis()
             prefs.setDriveLastSync(now)
@@ -169,5 +190,8 @@ class DriveSyncManager @Inject constructor(
 
     companion object {
         private const val DRIVE_APPDATA = "https://www.googleapis.com/auth/drive.appdata"
+
+        /** How many times to redo the merge when Drive changed underneath us. */
+        private const val MAX_MERGE_RETRIES = 2
     }
 }

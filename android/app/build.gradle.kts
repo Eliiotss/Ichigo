@@ -33,6 +33,12 @@ val appVersionPatch = 3
 val appVersionName = "$appVersionMajor.$appVersionMinor.$appVersionPatch"
 val appVersionCode = appVersionMajor * 10000 + appVersionMinor * 100 + appVersionPatch
 
+// Room writes the schema of every database version here. Commit these files:
+// they are the reference a future Migration is written and tested against.
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
+}
+
 android {
     namespace = "com.ichigo.app"
     compileSdk = 35

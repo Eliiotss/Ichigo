@@ -20,16 +20,21 @@ import com.ichigo.app.data.local.entity.NewCardTodayEntity
 import com.ichigo.app.data.local.entity.ProgressEntity
 import com.ichigo.app.data.local.entity.ReviewLogEntity
 import com.ichigo.app.data.resource.ResourceLoader
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import java.time.Instant
 import java.time.ZoneId
+import java.util.concurrent.ConcurrentHashMap
+import java.util.concurrent.atomic.AtomicBoolean
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -62,9 +67,27 @@ class FlashcardRepository @Inject constructor(
     private val _progress = MutableStateFlow<Map<String, FlashcardProgress>>(emptyMap())
     val progress: StateFlow<Map<String, FlashcardProgress>> = _progress.asStateFlow()
 
-    private val deckCache = HashMap<String, List<FlashcardDeckCard>>()
+    // ConcurrentHashMap: the deck cache is read/written from several coroutines
+    // (splash preload, level list, an open session), so a plain HashMap would be
+    // one dispatcher change away from a corrupted map.
+    private val deckCache = ConcurrentHashMap<String, List<FlashcardDeckCard>>()
 
     @Volatile private var loaded = false
+
+    // Deck warming runs here, not in a ViewModel scope: the splash screen that
+    // used to trigger it is destroyed as soon as it fades out, which would
+    // cancel the work half-way.
+    private val warmScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+    private val warmStarted = AtomicBoolean(false)
+
+    private val _deckCatalogVersion = MutableStateFlow(0)
+
+    /**
+     * Bumps each time another deck finishes loading. Home/Profile observe it so
+     * their totals fill in as the background warm-up progresses, instead of the
+     * splash having to block until every deck is decoded.
+     */
+    val deckCatalogVersion: StateFlow<Int> = _deckCatalogVersion.asStateFlow()
 
     /** Loads the persisted progress map into memory once (Swift `progressStore.load()`). */
     suspend fun ensureLoaded() {
@@ -100,8 +123,6 @@ class FlashcardRepository @Inject constructor(
         return items
     }
 
-    fun cachedDeck(key: String): List<FlashcardDeckCard>? = deckCache[key]
-
     fun deckProgress(card: FlashcardDeckCard, levelKey: String): FlashcardProgress =
         _progress.value[card.id] ?: FlashcardProgress.newProgress(card, levelKey)
 
@@ -120,10 +141,15 @@ class FlashcardRepository @Inject constructor(
     /**
      * Builds the review queue for a session (Swift `FlashcardDeckQueueBuilder`).
      *
-     * The new-card quota is a **global** daily budget: "Target Harian" is the
-     * total number of new cards across all decks per day, not a per-deck quota.
-     * (The iOS app applied it per deck, which let a multi-deck learner exceed the
-     * target several times over and inflated the "due hari ini" count.)
+     * The new-card quota is **per deck** (mode + JLPT level): "Target Harian" is
+     * how many new cards each deck may introduce per day, not a single budget
+     * shared by every deck.
+     *
+     * This is the fix for N5–N1 blocking one another: with a shared budget,
+     * finishing the day's target in one level left every other level with a
+     * quota of zero, so an untouched deck rendered as "Belum ada kartu". Each
+     * level now schedules independently; its progress was already stored
+     * separately (`new_card_today.levelKey`), so no existing data changes shape.
      */
     suspend fun buildQueue(
         mode: FlashcardMode,
@@ -132,7 +158,7 @@ class FlashcardRepository @Inject constructor(
         dailyTarget: Int,
     ): List<FlashcardDeckCard> {
         val key = flashcardLevelKey(mode, levelId)
-        val usedToday = newCardStudiedTodayGlobal()
+        val usedToday = newCardStudiedToday(key)
         val sessionSettings = settings.copy(newCardsPerDay = maxOf(1, dailyTarget))
         return builder.build(key, items, _progress.value, sessionSettings, usedToday)
     }
@@ -192,13 +218,15 @@ class FlashcardRepository @Inject constructor(
         return newCardTodayDao.countByLevelDay(levelKey, day)
     }
 
-    /** New cards studied today across all decks (the global daily budget usage). */
-    suspend fun newCardStudiedTodayGlobal(now: Long = System.currentTimeMillis()): Int =
-        newCardTodayDao.countAllByDay(FlashcardDayKey.today(now).compact)
-
     // MARK: - Aggregate stats (Home / Profile)
 
-    val masteredTotal: Int get() = _progress.value.values.count { it.isMastered }
+    /**
+     * Cards the FSRS scheduler considers mastered — counted in SQL rather than
+     * by scanning the in-memory map, so it is correct before the decks (or even
+     * the progress map) have finished loading.
+     */
+    suspend fun masteredTotal(): Int =
+        progressDao.countMastered(FlashcardProgress.MASTERED_MIN_SCHEDULED_DAYS)
 
     suspend fun studiedTodayTotal(now: Long = System.currentTimeMillis()): Int {
         val (start, end) = dayRange(now)
@@ -210,36 +238,63 @@ class FlashcardRepository @Inject constructor(
 
     /**
      * Today's total card load across all loaded decks: due reviews plus the
-     * remaining new-card budget. The new-card part uses a **global** daily budget
-     * (`target − new studied today across all decks`), so a fresh install shows a
-     * number near the daily target instead of `target × number-of-decks`.
+     * new cards still available today.
+     *
+     * The new-card part is summed **per deck** (`target − new studied today in
+     * that deck`) so this number agrees with what [buildQueue] will actually
+     * hand out. With independent decks the figure is naturally larger than the
+     * daily target — that is the honest count of cards waiting, not a bug.
      */
     suspend fun dailyDueTotal(target: Int, now: Long = System.currentTimeMillis()): Int {
+        // Due reviews: one COUNT in SQL. This used to scan every cached deck on
+        // the main thread after each graded card, and it silently reported 0 for
+        // decks that had not been decoded yet.
+        val dueReviews = progressDao.countDue(now)
         val map = _progress.value
-        var dueReviews = 0
-        var totalUntouched = 0
-        for ((_, items) in deckCache) {
-            dueReviews += items.count { map[it.id]?.let { p -> p.dueDate <= now } ?: false }
-            totalUntouched += items.count { map[it.id] == null }
+        val usedPerDeck = newCardTodayDao
+            .countByDayGrouped(FlashcardDayKey.today(now).compact)
+            .associate { it.levelKey to it.total }
+        val newRemaining = withContext(Dispatchers.Default) {
+            var remaining = 0
+            for ((levelKey, items) in deckCache) {
+                val untouched = items.count { map[it.id] == null }
+                val used = usedPerDeck[levelKey] ?: 0
+                remaining += minOf(untouched, maxOf(0, target - used))
+            }
+            remaining
         }
-        val newStudied = newCardStudiedTodayGlobal(now)
-        val newRemaining = minOf(totalUntouched, maxOf(0, target - newStudied))
         return dueReviews + newRemaining
     }
 
-    /** Preloads all unlocked decks so Home/Profile totals are ready (Swift `preloadHomeStats`). */
-    suspend fun preloadAllDecks() {
-        ensureLoaded()
-        for (mode in FlashcardMode.allCases) {
-            for (level in mode.levels()) {
-                if (!level.isLocked) loadDeck(mode, level.id, level.jsonFile)
+    /**
+     * Warms every unlocked deck **in the background**, once per process.
+     *
+     * The splash screen used to await this: ~8 400 cards decoded before the app
+     * became usable. Home/Profile now get their due count straight from SQL and
+     * refine the new-card part as [deckCatalogVersion] ticks, so the warm-up no
+     * longer sits on the cold-start path.
+     */
+    fun warmDecksInBackground() {
+        if (!warmStarted.compareAndSet(false, true)) return
+        warmScope.launch {
+            ensureLoaded()
+            for (mode in FlashcardMode.allCases) {
+                for (level in mode.levels()) {
+                    if (level.isLocked) continue
+                    runCatching { loadDeck(mode, level.id, level.jsonFile) }
+                    _deckCatalogVersion.value += 1
+                }
             }
         }
     }
 
     // MARK: - Reset (Swift FlashcardDataResetter.resetAll)
 
-    suspend fun resetAll() {
+    suspend fun resetAll(now: Long = System.currentTimeMillis()) {
+        // Stamp the reset FIRST. This tombstone travels in the Drive backup and
+        // is what stops the next sync from pulling every deleted card back down
+        // (the merge is a union, so without it "Reset" was undone on next sync).
+        prefs.setLastResetAt(now)
         // Full reset: every visible progress stat goes back to zero.
         progressDao.deleteAll()
         reviewLogDao.deleteAll()

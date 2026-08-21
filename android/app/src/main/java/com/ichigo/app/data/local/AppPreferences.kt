@@ -48,6 +48,10 @@ class AppPreferences @Inject constructor(
         val lastStudyDayKey = stringPreferencesKey("flashcard_last_study_day_key_v1")
         val lastResetDayKey = stringPreferencesKey("flashcard_last_reset_day_key_v1")
         val lastStudyDate = longPreferencesKey("flashcard_last_study_date")
+
+        // When the user last pressed "Reset progress". Acts as a tombstone so a
+        // Drive backup written before that moment cannot resurrect the progress.
+        val resetAt = longPreferencesKey("flashcard_reset_at_v1")
         val firstInstall = longPreferencesKey("first_install_date_v1")
 
         val googleEmail = stringPreferencesKey("google_account_email")
@@ -166,6 +170,14 @@ class AppPreferences @Inject constructor(
     suspend fun setLastStudyDayKey(value: String) = ds.edit { it[Keys.lastStudyDayKey] = value }
     suspend fun setLastResetDayKey(value: String) = ds.edit { it[Keys.lastResetDayKey] = value }
     suspend fun setLastStudyDate(value: Long) = ds.edit { it[Keys.lastStudyDate] = value }
+
+    /** Epoch millis of the last local progress reset, or 0 if never reset. */
+    suspend fun lastResetAt(): Long = ds.data.map { it[Keys.resetAt] ?: 0L }.first()
+
+    /** Only ever moves forward — an older tombstone must not undo a newer one. */
+    suspend fun setLastResetAt(value: Long) = ds.edit {
+        if ((it[Keys.resetAt] ?: 0L) < value) it[Keys.resetAt] = value
+    }
 
     suspend fun registerFirstInstallIfNeeded(now: Long) = ds.edit {
         if (it[Keys.firstInstall] == null) it[Keys.firstInstall] = now

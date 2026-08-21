@@ -42,7 +42,9 @@ class ProfileViewModel @Inject constructor(
         prefs.analytics,
         prefs.learnedGrammarIds,
         flashcards.progress,
-        prefs.dailyStudy,
+        // Pair the chart data with the deck-warm-up counter so the totals refresh
+        // as background deck loading progresses.
+        combine(prefs.dailyStudy, flashcards.deckCatalogVersion) { daily, _ -> daily },
     ) { (name, target, streak), summary, learned, _, daily ->
         flashcards.ensureLoaded()
         ProfileUiState(
@@ -53,7 +55,7 @@ class ProfileViewModel @Inject constructor(
             due = flashcards.dailyDueTotal(target),
             streak = streak,
             // Mastered = flashcards mastered by FSRS + grammar marked as learned (star).
-            mastered = flashcards.masteredTotal + learned.size,
+            mastered = flashcards.masteredTotal() + learned.size,
             summary = summary,
             weeklyStudy = lastSevenDays(daily),
         )

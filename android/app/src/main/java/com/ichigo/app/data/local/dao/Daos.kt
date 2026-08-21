@@ -6,6 +6,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Upsert
 import com.ichigo.app.data.local.entity.KanaCountEntity
+import com.ichigo.app.data.local.entity.NewCardDayCount
 import com.ichigo.app.data.local.entity.NewCardTodayEntity
 import com.ichigo.app.data.local.entity.ProgressEntity
 import com.ichigo.app.data.local.entity.ReviewLogEntity
@@ -14,13 +15,21 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface ProgressDao {
     @Query("SELECT * FROM progress")
-    fun observeAll(): Flow<List<ProgressEntity>>
-
-    @Query("SELECT * FROM progress")
     suspend fun getAll(): List<ProgressEntity>
 
-    @Query("SELECT * FROM progress WHERE id = :id")
-    suspend fun getById(id: String): ProgressEntity?
+    /**
+     * Cards whose due date has passed. Counted in SQL so Home/Profile no longer
+     * need every deck decoded into memory just to show a number.
+     */
+    @Query("SELECT COUNT(*) FROM progress WHERE dueDate <= :now")
+    suspend fun countDue(now: Long): Int
+
+    /**
+     * Cards considered mastered. Mirrors `FlashcardProgress.isMastered`
+     * (state REVIEW and a scheduled interval of at least 21 days).
+     */
+    @Query("SELECT COUNT(*) FROM progress WHERE state = 'review' AND scheduledDays >= :minScheduledDays")
+    suspend fun countMastered(minScheduledDays: Int): Int
 
     @Upsert
     suspend fun upsert(entity: ProgressEntity)
@@ -34,13 +43,6 @@ interface ReviewLogDao {
     @Insert
     suspend fun insert(entity: ReviewLogEntity)
 
-    /** Same-day count for a level, matching `FlashcardReviewStore.todayCount`. */
-    @Query("SELECT COUNT(*) FROM review_logs WHERE levelId = :levelId AND reviewedAt >= :start AND reviewedAt < :end")
-    suspend fun countBetween(levelId: String, start: Long, end: Long): Int
-
-    @Query("SELECT COUNT(*) FROM review_logs")
-    suspend fun count(): Int
-
     /** Keeps the newest [keep] logs, mirroring the 20 000-entry suffix cap. */
     @Query("DELETE FROM review_logs WHERE seq NOT IN (SELECT seq FROM review_logs ORDER BY seq DESC LIMIT :keep)")
     suspend fun trimTo(keep: Int)
@@ -51,10 +53,6 @@ interface ReviewLogDao {
     /** Total reviews today across all levels (`studiedTodayTotal`). */
     @Query("SELECT COUNT(*) FROM review_logs WHERE reviewedAt >= :start AND reviewedAt < :end")
     suspend fun countAllBetween(start: Long, end: Long): Int
-
-    /** Reactive so Home/Profile "studied today" refreshes after each review. */
-    @Query("SELECT COUNT(*) FROM review_logs WHERE reviewedAt >= :start AND reviewedAt < :end")
-    fun observeCountBetween(start: Long, end: Long): Flow<Int>
 }
 
 @Dao
@@ -77,9 +75,12 @@ interface NewCardTodayDao {
     @Query("SELECT COUNT(*) FROM new_card_today WHERE levelKey = :levelKey AND day = :day")
     suspend fun countByLevelDay(levelKey: String, day: String): Int
 
-    /** New cards studied today across ALL decks — the global daily budget usage. */
-    @Query("SELECT COUNT(*) FROM new_card_today WHERE day = :day")
-    suspend fun countAllByDay(day: String): Int
+    /**
+     * Per-deck new-card usage for today, in one query. Used by the Home/Profile
+     * "due" total so it agrees with the per-deck quota the session queue applies.
+     */
+    @Query("SELECT levelKey, COUNT(*) AS total FROM new_card_today WHERE day = :day GROUP BY levelKey")
+    suspend fun countByDayGrouped(day: String): List<NewCardDayCount>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertIgnore(entity: NewCardTodayEntity)

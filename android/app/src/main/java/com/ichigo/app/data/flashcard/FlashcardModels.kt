@@ -95,9 +95,16 @@ data class FlashcardProgress(
     var learningStepIndex: Int,
 ) {
     fun isDue(now: Long = System.currentTimeMillis()): Boolean = dueDate <= now
-    val isMastered: Boolean get() = state == FlashcardCardState.REVIEW && scheduledDays >= 21
+    val isMastered: Boolean
+        get() = state == FlashcardCardState.REVIEW && scheduledDays >= MASTERED_MIN_SCHEDULED_DAYS
 
     companion object {
+        /**
+         * Interval at which a card counts as "hafal". Shared with the SQL in
+         * `ProgressDao.countMastered` — change both together.
+         */
+        const val MASTERED_MIN_SCHEDULED_DAYS = 21
+
         /** Fresh progress for an unseen card, equivalent to `init(deckCard:levelKey:)`. */
         fun newProgress(card: FlashcardDeckCard, levelKey: String, now: Long = System.currentTimeMillis()) =
             FlashcardProgress(
