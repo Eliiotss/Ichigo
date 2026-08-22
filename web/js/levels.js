@@ -1,7 +1,7 @@
 // Metadata for the iOS-style design: sidebar/tab nav lives in app.js; here are
 // the Home learning grid, JLPT level info per content type (colours from the
-// Claude Design mockup), and the flashcard modes. N5–N2 are real; only the N1
-// datasets stay locked (no data yet).
+// Claude Design mockup), and the flashcard modes. All five tiers (N5–N1) now
+// ship real datasets, synced to the Android app's counts; none stays locked.
 
 /// rgba() from a #RRGGBB hex + alpha (for tinted chips/backgrounds).
 export function alpha(hex, a) {
@@ -33,16 +33,16 @@ function lv(id, count, file, locked) {
 
 export const LEVELS = {
     kanji: [
-        lv("N5", 120, "KanjiN5", false), lv("N4", 181, "KanjiN4", false), lv("N3", 367, "KanjiN3", false),
-        lv("N2", 247, "KanjiN2", false), lv("N1", null, "KanjiN1", true),
+        lv("N5", 142, "KanjiN5", false), lv("N4", 269, "KanjiN4", false), lv("N3", 594, "KanjiN3", false),
+        lv("N2", 612, "KanjiN2", false), lv("N1", 305, "KanjiN1", false),
     ],
     vocab: [
-        lv("N5", 905, "VocabN5", false), lv("N4", 700, "VocabN4", false), lv("N3", 1800, "VocabN3", false),
-        lv("N2", 1447, "VocabN2", false), lv("N1", null, "VocabN1", true),
+        lv("N5", 1087, "VocabN5", false), lv("N4", 1015, "VocabN4", false), lv("N3", 2642, "VocabN3", false),
+        lv("N2", 2122, "VocabN2", false), lv("N1", 1011, "VocabN1", false),
     ],
     grammar: [
-        lv("N5", 84, "GrammarN5", false), lv("N4", 132, "GrammarN4", false), lv("N3", 182, "GrammarN3", false),
-        lv("N2", 141, "GrammarN2", false), lv("N1", null, "GrammarN1", true),
+        lv("N5", 87, "GrammarN5", false), lv("N4", 137, "GrammarN4", false), lv("N3", 191, "GrammarN3", false),
+        lv("N2", 155, "GrammarN2", false), lv("N1", 104, "GrammarN1", false),
     ],
 };
 
