@@ -31,6 +31,12 @@ data class BackupPayload(
      * versions still decode (they simply carry no tombstone).
      */
     val resetAt: Long? = null,
+    /**
+     * Per-word progress for the Vocab multiple-choice quiz. Optional (default
+     * empty) so older backups still decode; merged per-word by newer
+     * `lastAnswered`, and cleared by the same reset tombstone as [progress].
+     */
+    val quizResults: List<BackupQuizResult> = emptyList(),
     val userName: String? = null,
     val userEmail: String? = null,
     val dailyTarget: Int? = null,
@@ -61,6 +67,9 @@ data class BackupNewToday(val levelKey: String, val day: String, val cardId: Str
 
 @Serializable
 data class BackupKana(val kana: String, val script: String, val count: Int)
+
+@Serializable
+data class BackupQuizResult(val wordId: String, val score: Int, val lastAnswered: Long)
 
 @Serializable
 data class BackupAnalytics(
@@ -109,6 +118,16 @@ object BackupMerge {
         }
         val kana = kanaMap.map { (k, v) -> BackupKana(k.first, k.second, v) }
 
+        // Quiz results: newer lastAnswered wins per word; cleared by the same
+        // reset tombstone as flashcard progress (resetAll wipes quiz_result too).
+        val quizById = LinkedHashMap<String, BackupQuizResult>()
+        for (q in a.quizResults) quizById[q.wordId] = q
+        for (q in b.quizResults) {
+            val existing = quizById[q.wordId]
+            quizById[q.wordId] = if (existing == null || q.lastAnswered >= existing.lastAnswered) q else existing
+        }
+        val quizResults = quizById.values.filter { survivesReset(it.lastAnswered, resetAt) }
+
         // Analytics / streak may only come from a side whose data post-dates the
         // reset; otherwise a stale device would restore the old totals.
         val liveSides = listOf(a, b).filter { isPostReset(it, resetAt) }
@@ -131,6 +150,7 @@ object BackupMerge {
             kanaCounts = kana,
             analytics = analytics,
             resetAt = resetAt.takeIf { it > 0L },
+            quizResults = quizResults,
             userName = newer.userName ?: older.userName,
             userEmail = newer.userEmail ?: older.userEmail,
             dailyTarget = newer.dailyTarget ?: older.dailyTarget,

@@ -5,9 +5,11 @@ import com.ichigo.app.data.local.AppPreferences
 import com.ichigo.app.data.local.dao.KanaCountDao
 import com.ichigo.app.data.local.dao.NewCardTodayDao
 import com.ichigo.app.data.local.dao.ProgressDao
+import com.ichigo.app.data.local.dao.QuizResultDao
 import com.ichigo.app.data.local.entity.KanaCountEntity
 import com.ichigo.app.data.local.entity.NewCardTodayEntity
 import com.ichigo.app.data.local.entity.ProgressEntity
+import com.ichigo.app.data.local.entity.QuizResultEntity
 import com.ichigo.app.data.model.AppAppearance
 import com.ichigo.app.data.repository.FlashcardRepository
 import javax.inject.Inject
@@ -23,6 +25,7 @@ class BackupRepository @Inject constructor(
     private val progressDao: ProgressDao,
     private val newCardTodayDao: NewCardTodayDao,
     private val kanaCountDao: KanaCountDao,
+    private val quizResultDao: QuizResultDao,
     private val prefs: AppPreferences,
     private val flashcards: FlashcardRepository,
 ) {
@@ -37,6 +40,7 @@ class BackupRepository @Inject constructor(
         }
         val newToday = newCardTodayDao.getAll().map { BackupNewToday(it.levelKey, it.day, it.cardId) }
         val kana = kanaCountDao.getAll().map { BackupKana(it.kana, it.script, it.count) }
+        val quiz = quizResultDao.getAll().map { BackupQuizResult(it.wordId, it.score, it.lastAnswered) }
         val s = prefs.snapshot()
         return BackupPayload(
             schemaVersion = 1,
@@ -48,6 +52,7 @@ class BackupRepository @Inject constructor(
             lastResetDayKey = s.lastResetDayKey,
             newToday = newToday,
             kanaCounts = kana,
+            quizResults = quiz,
             resetAt = prefs.lastResetAt().takeIf { it > 0L },
             analytics = BackupAnalytics(
                 totalReviews = s.analytics.totalReviews,
@@ -81,6 +86,7 @@ class BackupRepository @Inject constructor(
         if (incomingReset > prefs.lastResetAt()) {
             progressDao.deleteAll()
             newCardTodayDao.deleteAll()
+            quizResultDao.deleteAll()
             prefs.setLastResetAt(incomingReset)
         }
         p.progress.forEach {
@@ -95,6 +101,7 @@ class BackupRepository @Inject constructor(
         }
         p.newToday.forEach { newCardTodayDao.insertIgnore(NewCardTodayEntity(it.levelKey, it.day, it.cardId)) }
         p.kanaCounts.forEach { kanaCountDao.upsert(KanaCountEntity(it.kana, it.script, it.count)) }
+        p.quizResults.forEach { quizResultDao.upsert(QuizResultEntity(it.wordId, it.score, it.lastAnswered)) }
 
         p.userName?.let { prefs.setUserName(it) }
         p.userEmail?.let { prefs.setUserEmail(it) }

@@ -5,7 +5,9 @@ import com.ichigo.app.data.backup.BackupMerge
 import com.ichigo.app.data.backup.BackupNewToday
 import com.ichigo.app.data.backup.BackupPayload
 import com.ichigo.app.data.backup.BackupProgress
+import com.ichigo.app.data.backup.BackupQuizResult
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /** Locks the merge rules so backup/restore never loses progress. Pure JVM. */
@@ -57,5 +59,21 @@ class BackupMergeTest {
         val m = BackupMerge.merge(a, b)
         assertEquals(2, m.newToday.size)
         assertEquals(5, m.kanaCounts.first { it.kana == "あ" }.count)
+    }
+
+    @Test
+    fun quizResult_newerLastAnsweredWins() {
+        val a = BackupPayload(quizResults = listOf(BackupQuizResult("w1", score = 1, lastAnswered = 100)))
+        val b = BackupPayload(quizResults = listOf(BackupQuizResult("w1", score = -1, lastAnswered = 200)))
+        assertEquals(-1, BackupMerge.merge(a, b).quizResults.single().score)
+        assertEquals(-1, BackupMerge.merge(b, a).quizResults.single().score)
+    }
+
+    @Test
+    fun quizResult_droppedByReset() {
+        val reset = 1_000L
+        val local = BackupPayload(createdAt = 2, resetAt = reset) // reset device, quiz wiped
+        val remote = BackupPayload(createdAt = 1, quizResults = listOf(BackupQuizResult("old", 3, lastAnswered = 500)))
+        assertTrue(BackupMerge.merge(local, remote).quizResults.isEmpty())
     }
 }
