@@ -42,6 +42,8 @@ class MainActivity : ComponentActivity() {
         installSplashScreen()
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+        // Auto-sync the moment internet returns after studying offline (idempotent).
+        driveSync.startNetworkWatcher()
         // Re-arm the daily reminder if it was enabled (covers reinstall/update).
         lifecycleScope.launch {
             if (prefs.notifEnabled.first()) {

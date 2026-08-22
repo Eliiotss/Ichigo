@@ -3,6 +3,7 @@ package com.ichigo.app.data.backup
 import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
+import android.net.Network
 import android.net.NetworkCapabilities
 import com.google.android.gms.auth.GoogleAuthUtil
 import com.google.android.gms.auth.UserRecoverableAuthException
@@ -16,12 +17,16 @@ import com.google.android.gms.common.api.Scope
 import com.ichigo.app.data.local.AppPreferences
 import com.ichigo.app.util.SigningInfo
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
+import java.util.concurrent.atomic.AtomicBoolean
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -56,6 +61,14 @@ class DriveSyncManager @Inject constructor(
     /** When non-null, the UI must launch this consent intent then retry the sync. */
     private val _recoveryIntent = MutableStateFlow<Intent?>(null)
     val recoveryIntent: StateFlow<Intent?> = _recoveryIntent.asStateFlow()
+
+    // App-lifetime scope for the reconnect watcher: the network callback fires on
+    // a binder thread and can't call the suspend sync directly.
+    private val appScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+    private val watcherStarted = AtomicBoolean(false)
+    // Tracks the last known "usable internet" state so we sync only on the
+    // offline→online edge, not on every capability change while already online.
+    @Volatile private var wasOnline = false
 
     private val driveScope = Scope(DRIVE_APPDATA)
 
@@ -210,6 +223,41 @@ class DriveSyncManager @Inject constructor(
         // reports the offline state explicitly.
         if (!hasNetwork()) return
         syncNow()
+    }
+
+    /**
+     * Starts watching connectivity so that regaining internet after studying
+     * offline triggers a sync automatically — no need to reopen the app or tap
+     * "Sinkronkan sekarang". Idempotent (safe to call on every activity create);
+     * the callback lives for the process, matching this singleton's lifetime.
+     *
+     * Only the offline→online transition fires a sync, and [autoSyncIfEnabled]
+     * still gates on the auto-sync toggle + sign-in, so nothing happens for a
+     * signed-out user or when auto-sync is off.
+     */
+    fun startNetworkWatcher() {
+        if (!watcherStarted.compareAndSet(false, true)) return
+        val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager ?: return
+        wasOnline = hasNetwork()
+        val callback = object : ConnectivityManager.NetworkCallback() {
+            override fun onCapabilitiesChanged(network: Network, caps: NetworkCapabilities) {
+                val online = caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) &&
+                    caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
+                if (online && !wasOnline) {
+                    wasOnline = true
+                    appScope.launch { runCatching { autoSyncIfEnabled() } }
+                } else if (!online) {
+                    wasOnline = false
+                }
+            }
+
+            override fun onLost(network: Network) {
+                wasOnline = false
+            }
+        }
+        // registerDefaultNetworkCallback (API 24+) tracks the network the app
+        // would actually use, so we don't sync over a captive/unvalidated link.
+        runCatching { cm.registerDefaultNetworkCallback(callback) }
     }
 
     /** True when a validated, internet-capable network is currently active. */
