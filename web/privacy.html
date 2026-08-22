@@ -35,7 +35,10 @@
       <h1>Kebijakan Privasi</h1>
       <p class="muted">Terakhir diperbarui: 2026</p>
       <p><strong>Ringkasan:</strong> Semua data belajarmu disimpan <strong>lokal</strong> di
-      perangkatmu. IchiGo tidak memiliki server dan tidak mengirim data pribadimu ke mana pun.</p>
+      perangkatmu. IchiGo <strong>tidak memiliki server</strong> dan tidak mengirim datamu ke
+      pengembang. Satu-satunya pengiriman data adalah <strong>opsional</strong>: bila kamu memilih
+      login Google, sebuah cadangan progres disimpan ke <strong>Google Drive milikmu sendiri</strong>
+      (folder privat aplikasi) — tetap di bawah kendali akun Google-mu.</p>
 
       <h2>Data yang disimpan (lokal)</h2>
       <ul>
@@ -49,10 +52,20 @@
       Ke mana berkas itu disimpan atau dibagikan (mis. diunggah ke Google Drive-mu) adalah
       pilihanmu; aplikasi tidak mengunggahnya otomatis.</p>
 
-      <h2>Google Drive (opsional)</h2>
-      <p>Bila sinkronisasi Google Drive diaktifkan, aplikasi hanya mengakses folder privat
-      miliknya sendiri di Drive-mu (<em>appDataFolder</em>) — bukan berkas Drive-mu yang lain.
-      Pengembang tidak dapat melihat data tersebut.</p>
+      <h2>Login &amp; Sinkronisasi Google Drive (opsional)</h2>
+      <p>Fitur ini <strong>mati secara default</strong>. Bila kamu memilih <em>Masuk dengan
+      Google</em>:</p>
+      <ul>
+        <li>Aplikasi menerima <strong>alamat email akun Google</strong>-mu — dipakai hanya untuk
+        menandai akun mana yang tersinkron dan ditampilkan di Pengaturan. Email ini
+        <strong>tidak</strong> dikirim ke pengembang.</li>
+        <li>Progres belajarmu dicadangkan ke <strong>folder privat aplikasi</strong> di Drive-mu
+        (<em>appDataFolder</em>, scope <code>drive.appdata</code>) — <strong>bukan</strong> berkas
+        Drive-mu yang lain, dan pengembang tidak bisa melihatnya.</li>
+        <li>Semua komunikasi ke Google Drive memakai <strong>HTTPS</strong>.</li>
+      </ul>
+      <p class="muted">Hentikan kapan saja: Keluar dari akun di Pengaturan, atau hapus berkas
+      <code>ichigo-backup.json</code> dari Drive-mu.</p>
 
       <h2>Izin</h2>
       <ul>
