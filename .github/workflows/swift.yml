@@ -36,12 +36,15 @@ jobs:
 
       - name: Check bracket balance
         run: python3 scripts/check_braces.py
+        working-directory: ios
 
       - name: Check symbol references
         run: python3 scripts/check_symbols.py
+        working-directory: ios
 
       - name: Check level counts against datasets
         run: python3 scripts/check_dataset_counts.py
+        working-directory: ios
 
   build-and-test:
     name: Build & Test (iOS Simulator)
@@ -70,6 +73,7 @@ jobs:
       # `-sdk iphonesimulator` pins the build to the iOS Simulator SDK; without it
       # xcodebuild can fall back to "My Mac", which fails on this iOS-only code.
       - name: Build
+        working-directory: ios
         run: |
           set -o pipefail
           xcodebuild build \
