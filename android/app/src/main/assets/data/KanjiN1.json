@@ -15618,5 +15618,1160 @@
         "sentenceMeaning": "Menghafal ungkapan 'napas tertahan'."
       }
     ]
+  },
+  {
+    "id": "N1_285",
+    "kanji": "桁",
+    "onyomi": "-",
+    "kunyomi": "けた",
+    "romaji": "Keta",
+    "meaning": "jumlah digit / gelagar",
+    "examples": [
+      {
+        "word": "桁",
+        "reading": "けた",
+        "romaji": "Keta",
+        "meaning": "digit / gelagar",
+        "sentence": "桁という言葉を習いました。",
+        "sentenceFurigana": "けたという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'digit / gelagar'."
+      },
+      {
+        "word": "桁数",
+        "reading": "けたすう",
+        "romaji": "Ketasuu",
+        "meaning": "jumlah digit",
+        "sentence": "桁数の意味を調べました。",
+        "sentenceFurigana": "けたすうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari jumlah digit."
+      },
+      {
+        "word": "桁違い",
+        "reading": "けたちがい",
+        "romaji": "Ketachigai",
+        "meaning": "berbeda jauh (berlipat-lipat)",
+        "sentence": "桁違いをノートに書きました。",
+        "sentenceFurigana": "けたちがいを ノートに かきました。",
+        "sentenceMeaning": "Menulis berbeda jauh (berlipat-lipat) di buku catatan."
+      },
+      {
+        "word": "橋桁",
+        "reading": "はしげた",
+        "romaji": "Hashigeta",
+        "meaning": "gelagar jembatan",
+        "sentence": "先生が橋桁について説明しました。",
+        "sentenceFurigana": "せんせいが はしげたについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang gelagar jembatan."
+      },
+      {
+        "word": "三桁",
+        "reading": "さんけた",
+        "romaji": "Sanketa",
+        "meaning": "tiga digit",
+        "sentence": "三桁という表現を覚えました。",
+        "sentenceFurigana": "さんけたという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'tiga digit'."
+      }
+    ]
+  },
+  {
+    "id": "N1_286",
+    "kanji": "枠",
+    "onyomi": "-",
+    "kunyomi": "わく",
+    "romaji": "Waku",
+    "meaning": "bingkai / batas",
+    "examples": [
+      {
+        "word": "枠",
+        "reading": "わく",
+        "romaji": "Waku",
+        "meaning": "bingkai",
+        "sentence": "枠という言葉を習いました。",
+        "sentenceFurigana": "わくという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'bingkai'."
+      },
+      {
+        "word": "枠組み",
+        "reading": "わくぐみ",
+        "romaji": "Wakugumi",
+        "meaning": "kerangka",
+        "sentence": "枠組みの意味を調べました。",
+        "sentenceFurigana": "わくぐみの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari kerangka."
+      },
+      {
+        "word": "窓枠",
+        "reading": "まどわく",
+        "romaji": "Madowaku",
+        "meaning": "bingkai jendela",
+        "sentence": "窓枠をノートに書きました。",
+        "sentenceFurigana": "まどわくを ノートに かきました。",
+        "sentenceMeaning": "Menulis bingkai jendela di buku catatan."
+      },
+      {
+        "word": "別枠",
+        "reading": "べつわく",
+        "romaji": "Betsuwaku",
+        "meaning": "kategori terpisah",
+        "sentence": "先生が別枠について説明しました。",
+        "sentenceFurigana": "せんせいが べつわくについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang kategori terpisah."
+      },
+      {
+        "word": "枠内",
+        "reading": "わくない",
+        "romaji": "Wakunai",
+        "meaning": "dalam batas",
+        "sentence": "枠内という表現を覚えました。",
+        "sentenceFurigana": "わくないという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'dalam batas'."
+      }
+    ]
+  },
+  {
+    "id": "N1_287",
+    "kanji": "脇",
+    "onyomi": "-",
+    "kunyomi": "わき",
+    "romaji": "Waki",
+    "meaning": "sisi / ketiak",
+    "examples": [
+      {
+        "word": "脇",
+        "reading": "わき",
+        "romaji": "Waki",
+        "meaning": "sisi / ketiak",
+        "sentence": "脇という言葉を習いました。",
+        "sentenceFurigana": "わきという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'sisi / ketiak'."
+      },
+      {
+        "word": "脇道",
+        "reading": "わきみち",
+        "romaji": "Wakimichi",
+        "meaning": "jalan samping",
+        "sentence": "脇道の意味を調べました。",
+        "sentenceFurigana": "わきみちの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari jalan samping."
+      },
+      {
+        "word": "脇役",
+        "reading": "わきやく",
+        "romaji": "Wakiyaku",
+        "meaning": "peran pendukung",
+        "sentence": "脇役をノートに書きました。",
+        "sentenceFurigana": "わきやくを ノートに かきました。",
+        "sentenceMeaning": "Menulis peran pendukung di buku catatan."
+      },
+      {
+        "word": "脇腹",
+        "reading": "わきばら",
+        "romaji": "Wakibara",
+        "meaning": "lambung (sisi perut)",
+        "sentence": "先生が脇腹について説明しました。",
+        "sentenceFurigana": "せんせいが わきばらについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang lambung (sisi perut)."
+      },
+      {
+        "word": "両脇",
+        "reading": "りょうわき",
+        "romaji": "Ryouwaki",
+        "meaning": "kedua sisi",
+        "sentence": "両脇という表現を覚えました。",
+        "sentenceFurigana": "りょうわきという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'kedua sisi'."
+      }
+    ]
+  },
+  {
+    "id": "N1_288",
+    "kanji": "稀",
+    "onyomi": "キ",
+    "kunyomi": "まれ",
+    "romaji": "Ki",
+    "meaning": "langka / jarang",
+    "examples": [
+      {
+        "word": "稀",
+        "reading": "まれ",
+        "romaji": "Mare",
+        "meaning": "langka",
+        "sentence": "稀という言葉を習いました。",
+        "sentenceFurigana": "まれという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'langka'."
+      },
+      {
+        "word": "稀有",
+        "reading": "けう",
+        "romaji": "Keu",
+        "meaning": "langka / luar biasa",
+        "sentence": "稀有の意味を調べました。",
+        "sentenceFurigana": "けうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari langka / luar biasa."
+      },
+      {
+        "word": "稀少",
+        "reading": "きしょう",
+        "romaji": "Kishou",
+        "meaning": "langka (jumlahnya sedikit)",
+        "sentence": "稀少をノートに書きました。",
+        "sentenceFurigana": "きしょうを ノートに かきました。",
+        "sentenceMeaning": "Menulis langka (jumlahnya sedikit) di buku catatan."
+      },
+      {
+        "word": "稀薄",
+        "reading": "きはく",
+        "romaji": "Kihaku",
+        "meaning": "tipis / renggang",
+        "sentence": "先生が稀薄について説明しました。",
+        "sentenceFurigana": "せんせいが きはくについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang tipis / renggang."
+      },
+      {
+        "word": "古稀",
+        "reading": "こき",
+        "romaji": "Koki",
+        "meaning": "usia tujuh puluh tahun",
+        "sentence": "古稀という表現を覚えました。",
+        "sentenceFurigana": "こきという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'usia tujuh puluh tahun'."
+      }
+    ]
+  },
+  {
+    "id": "N1_289",
+    "kanji": "鞄",
+    "onyomi": "-",
+    "kunyomi": "かばん",
+    "romaji": "Kaban",
+    "meaning": "tas",
+    "examples": [
+      {
+        "word": "鞄",
+        "reading": "かばん",
+        "romaji": "Kaban",
+        "meaning": "tas",
+        "sentence": "鞄という言葉を習いました。",
+        "sentenceFurigana": "かばんという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'tas'."
+      },
+      {
+        "word": "革鞄",
+        "reading": "かわかばん",
+        "romaji": "Kawakaban",
+        "meaning": "tas kulit",
+        "sentence": "革鞄の意味を調べました。",
+        "sentenceFurigana": "かわかばんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari tas kulit."
+      },
+      {
+        "word": "学生鞄",
+        "reading": "がくせいかばん",
+        "romaji": "Gakuseikaban",
+        "meaning": "tas sekolah",
+        "sentence": "学生鞄をノートに書きました。",
+        "sentenceFurigana": "がくせいかばんを ノートに かきました。",
+        "sentenceMeaning": "Menulis tas sekolah di buku catatan."
+      },
+      {
+        "word": "旅行鞄",
+        "reading": "りょこうかばん",
+        "romaji": "Ryokoukaban",
+        "meaning": "tas perjalanan",
+        "sentence": "先生が旅行鞄について説明しました。",
+        "sentenceFurigana": "せんせいが りょこうかばんについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang tas perjalanan."
+      },
+      {
+        "word": "鞄持ち",
+        "reading": "かばんもち",
+        "romaji": "Kabanmochi",
+        "meaning": "pembawa tas / ajudan",
+        "sentence": "鞄持ちという表現を覚えました。",
+        "sentenceFurigana": "かばんもちという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'pembawa tas / ajudan'."
+      }
+    ]
+  },
+  {
+    "id": "N1_290",
+    "kanji": "桐",
+    "onyomi": "トウ",
+    "kunyomi": "きり",
+    "romaji": "Tou",
+    "meaning": "pohon paulownia",
+    "examples": [
+      {
+        "word": "桐",
+        "reading": "きり",
+        "romaji": "Kiri",
+        "meaning": "pohon paulownia",
+        "sentence": "桐という言葉を習いました。",
+        "sentenceFurigana": "きりという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'pohon paulownia'."
+      },
+      {
+        "word": "桐箪笥",
+        "reading": "きりだんす",
+        "romaji": "Kiridansu",
+        "meaning": "lemari kayu paulownia",
+        "sentence": "桐箪笥の意味を調べました。",
+        "sentenceFurigana": "きりだんすの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari lemari kayu paulownia."
+      },
+      {
+        "word": "桐の木",
+        "reading": "きりのき",
+        "romaji": "Kirinoki",
+        "meaning": "pohon paulownia",
+        "sentence": "桐の木をノートに書きました。",
+        "sentenceFurigana": "きりのきを ノートに かきました。",
+        "sentenceMeaning": "Menulis pohon paulownia di buku catatan."
+      },
+      {
+        "word": "桐材",
+        "reading": "とうざい",
+        "romaji": "Touzai",
+        "meaning": "kayu paulownia",
+        "sentence": "先生が桐材について説明しました。",
+        "sentenceFurigana": "せんせいが とうざいについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang kayu paulownia."
+      },
+      {
+        "word": "桐紋",
+        "reading": "きりもん",
+        "romaji": "Kirimon",
+        "meaning": "lambang paulownia",
+        "sentence": "桐紋という表現を覚えました。",
+        "sentenceFurigana": "きりもんという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'lambang paulownia'."
+      }
+    ]
+  },
+  {
+    "id": "N1_291",
+    "kanji": "柵",
+    "onyomi": "サク",
+    "kunyomi": "しがらみ",
+    "romaji": "Saku",
+    "meaning": "pagar",
+    "examples": [
+      {
+        "word": "柵",
+        "reading": "さく",
+        "romaji": "Saku",
+        "meaning": "pagar",
+        "sentence": "柵という言葉を習いました。",
+        "sentenceFurigana": "さくという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'pagar'."
+      },
+      {
+        "word": "鉄柵",
+        "reading": "てっさく",
+        "romaji": "Tessaku",
+        "meaning": "pagar besi",
+        "sentence": "鉄柵の意味を調べました。",
+        "sentenceFurigana": "てっさくの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari pagar besi."
+      },
+      {
+        "word": "木柵",
+        "reading": "もくさく",
+        "romaji": "Mokusaku",
+        "meaning": "pagar kayu",
+        "sentence": "木柵をノートに書きました。",
+        "sentenceFurigana": "もくさくを ノートに かきました。",
+        "sentenceMeaning": "Menulis pagar kayu di buku catatan."
+      },
+      {
+        "word": "防護柵",
+        "reading": "ぼうごさく",
+        "romaji": "Bougosaku",
+        "meaning": "pagar pelindung",
+        "sentence": "先生が防護柵について説明しました。",
+        "sentenceFurigana": "せんせいが ぼうごさくについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang pagar pelindung."
+      },
+      {
+        "word": "柵越し",
+        "reading": "さくごし",
+        "romaji": "Sakugoshi",
+        "meaning": "melewati pagar",
+        "sentence": "柵越しという表現を覚えました。",
+        "sentenceFurigana": "さくごしという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'melewati pagar'."
+      }
+    ]
+  },
+  {
+    "id": "N1_292",
+    "kanji": "裾",
+    "onyomi": "-",
+    "kunyomi": "すそ",
+    "romaji": "Suso",
+    "meaning": "keliman / ujung bawah",
+    "examples": [
+      {
+        "word": "裾",
+        "reading": "すそ",
+        "romaji": "Suso",
+        "meaning": "keliman / ujung bawah",
+        "sentence": "裾という言葉を習いました。",
+        "sentenceFurigana": "すそという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'keliman / ujung bawah'."
+      },
+      {
+        "word": "裾野",
+        "reading": "すその",
+        "romaji": "Susono",
+        "meaning": "kaki gunung / dasar",
+        "sentence": "裾野の意味を調べました。",
+        "sentenceFurigana": "すそのの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari kaki gunung / dasar."
+      },
+      {
+        "word": "裾上げ",
+        "reading": "すそあげ",
+        "romaji": "Susoage",
+        "meaning": "mengecilkan keliman",
+        "sentence": "裾上げをノートに書きました。",
+        "sentenceFurigana": "すそあげを ノートに かきました。",
+        "sentenceMeaning": "Menulis mengecilkan keliman di buku catatan."
+      },
+      {
+        "word": "山裾",
+        "reading": "やますそ",
+        "romaji": "Yamasuso",
+        "meaning": "kaki gunung",
+        "sentence": "先生が山裾について説明しました。",
+        "sentenceFurigana": "せんせいが やますそについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang kaki gunung."
+      },
+      {
+        "word": "裾分け",
+        "reading": "すそわけ",
+        "romaji": "Susowake",
+        "meaning": "berbagi sebagian",
+        "sentence": "裾分けという表現を覚えました。",
+        "sentenceFurigana": "すそわけという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'berbagi sebagian'."
+      }
+    ]
+  },
+  {
+    "id": "N1_293",
+    "kanji": "膳",
+    "onyomi": "ゼン",
+    "kunyomi": "-",
+    "romaji": "Zen",
+    "meaning": "nampan makan / hidangan",
+    "examples": [
+      {
+        "word": "膳",
+        "reading": "ぜん",
+        "romaji": "Zen",
+        "meaning": "nampan makan",
+        "sentence": "膳という言葉を習いました。",
+        "sentenceFurigana": "ぜんという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'nampan makan'."
+      },
+      {
+        "word": "配膳",
+        "reading": "はいぜん",
+        "romaji": "Haizen",
+        "meaning": "menyajikan hidangan",
+        "sentence": "配膳の意味を調べました。",
+        "sentenceFurigana": "はいぜんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari menyajikan hidangan."
+      },
+      {
+        "word": "食膳",
+        "reading": "しょくぜん",
+        "romaji": "Shokuzen",
+        "meaning": "meja hidangan",
+        "sentence": "食膳をノートに書きました。",
+        "sentenceFurigana": "しょくぜんを ノートに かきました。",
+        "sentenceMeaning": "Menulis meja hidangan di buku catatan."
+      },
+      {
+        "word": "一膳",
+        "reading": "いちぜん",
+        "romaji": "Ichizen",
+        "meaning": "satu mangkuk (nasi)",
+        "sentence": "先生が一膳について説明しました。",
+        "sentenceFurigana": "せんせいが いちぜんについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang satu mangkuk (nasi)."
+      },
+      {
+        "word": "本膳",
+        "reading": "ほんぜん",
+        "romaji": "Honzen",
+        "meaning": "nampan utama",
+        "sentence": "本膳という表現を覚えました。",
+        "sentenceFurigana": "ほんぜんという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'nampan utama'."
+      }
+    ]
+  },
+  {
+    "id": "N1_294",
+    "kanji": "秤",
+    "onyomi": "ショウ",
+    "kunyomi": "はかり",
+    "romaji": "Shou",
+    "meaning": "timbangan",
+    "examples": [
+      {
+        "word": "秤",
+        "reading": "はかり",
+        "romaji": "Hakari",
+        "meaning": "timbangan",
+        "sentence": "秤という言葉を習いました。",
+        "sentenceFurigana": "はかりという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'timbangan'."
+      },
+      {
+        "word": "天秤",
+        "reading": "てんびん",
+        "romaji": "Tenbin",
+        "meaning": "timbangan neraca",
+        "sentence": "天秤の意味を調べました。",
+        "sentenceFurigana": "てんびんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari timbangan neraca."
+      },
+      {
+        "word": "台秤",
+        "reading": "だいばかり",
+        "romaji": "Daibakari",
+        "meaning": "timbangan lantai",
+        "sentence": "台秤をノートに書きました。",
+        "sentenceFurigana": "だいばかりを ノートに かきました。",
+        "sentenceMeaning": "Menulis timbangan lantai di buku catatan."
+      },
+      {
+        "word": "棒秤",
+        "reading": "ぼうばかり",
+        "romaji": "Boubakari",
+        "meaning": "timbangan batang",
+        "sentence": "先生が棒秤について説明しました。",
+        "sentenceFurigana": "せんせいが ぼうばかりについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang timbangan batang."
+      },
+      {
+        "word": "秤量",
+        "reading": "ひょうりょう",
+        "romaji": "Hyouryou",
+        "meaning": "kapasitas timbang",
+        "sentence": "秤量という表現を覚えました。",
+        "sentenceFurigana": "ひょうりょうという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'kapasitas timbang'."
+      }
+    ]
+  },
+  {
+    "id": "N1_295",
+    "kanji": "鋏",
+    "onyomi": "-",
+    "kunyomi": "はさみ",
+    "romaji": "Hasami",
+    "meaning": "gunting",
+    "examples": [
+      {
+        "word": "鋏",
+        "reading": "はさみ",
+        "romaji": "Hasami",
+        "meaning": "gunting",
+        "sentence": "鋏という言葉を習いました。",
+        "sentenceFurigana": "はさみという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'gunting'."
+      },
+      {
+        "word": "糸切り鋏",
+        "reading": "いときりばさみ",
+        "romaji": "Itokiribasami",
+        "meaning": "gunting benang",
+        "sentence": "糸切り鋏の意味を調べました。",
+        "sentenceFurigana": "いときりばさみの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari gunting benang."
+      },
+      {
+        "word": "剪定鋏",
+        "reading": "せんていばさみ",
+        "romaji": "Senteibasami",
+        "meaning": "gunting pangkas",
+        "sentence": "剪定鋏をノートに書きました。",
+        "sentenceFurigana": "せんていばさみを ノートに かきました。",
+        "sentenceMeaning": "Menulis gunting pangkas di buku catatan."
+      },
+      {
+        "word": "大鋏",
+        "reading": "おおばさみ",
+        "romaji": "Oobasami",
+        "meaning": "gunting besar",
+        "sentence": "先生が大鋏について説明しました。",
+        "sentenceFurigana": "せんせいが おおばさみについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang gunting besar."
+      },
+      {
+        "word": "鋏虫",
+        "reading": "はさみむし",
+        "romaji": "Hasamimushi",
+        "meaning": "cocopet (earwig)",
+        "sentence": "鋏虫という表現を覚えました。",
+        "sentenceFurigana": "はさみむしという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'cocopet (earwig)'."
+      }
+    ]
+  },
+  {
+    "id": "N1_296",
+    "kanji": "皺",
+    "onyomi": "-",
+    "kunyomi": "しわ",
+    "romaji": "Shiwa",
+    "meaning": "kerutan",
+    "examples": [
+      {
+        "word": "皺",
+        "reading": "しわ",
+        "romaji": "Shiwa",
+        "meaning": "kerutan",
+        "sentence": "皺という言葉を習いました。",
+        "sentenceFurigana": "しわという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'kerutan'."
+      },
+      {
+        "word": "小皺",
+        "reading": "こじわ",
+        "romaji": "Kojiwa",
+        "meaning": "kerutan halus",
+        "sentence": "小皺の意味を調べました。",
+        "sentenceFurigana": "こじわの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari kerutan halus."
+      },
+      {
+        "word": "皺くちゃ",
+        "reading": "しわくちゃ",
+        "romaji": "Shiwakucha",
+        "meaning": "kusut",
+        "sentence": "皺くちゃをノートに書きました。",
+        "sentenceFurigana": "しわくちゃを ノートに かきました。",
+        "sentenceMeaning": "Menulis kusut di buku catatan."
+      },
+      {
+        "word": "目尻の皺",
+        "reading": "めじりのしわ",
+        "romaji": "Mejirinoshiwa",
+        "meaning": "kerut di sudut mata",
+        "sentence": "先生が目尻の皺について説明しました。",
+        "sentenceFurigana": "せんせいが めじりのしわについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang kerut di sudut mata."
+      },
+      {
+        "word": "皺寄せ",
+        "reading": "しわよせ",
+        "romaji": "Shiwayose",
+        "meaning": "beban yang dialihkan",
+        "sentence": "皺寄せという表現を覚えました。",
+        "sentenceFurigana": "しわよせという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'beban yang dialihkan'."
+      }
+    ]
+  },
+  {
+    "id": "N1_297",
+    "kanji": "瞼",
+    "onyomi": "-",
+    "kunyomi": "まぶた",
+    "romaji": "Mabuta",
+    "meaning": "kelopak mata",
+    "examples": [
+      {
+        "word": "瞼",
+        "reading": "まぶた",
+        "romaji": "Mabuta",
+        "meaning": "kelopak mata",
+        "sentence": "瞼という言葉を習いました。",
+        "sentenceFurigana": "まぶたという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'kelopak mata'."
+      },
+      {
+        "word": "上瞼",
+        "reading": "うわまぶた",
+        "romaji": "Uwamabuta",
+        "meaning": "kelopak mata atas",
+        "sentence": "上瞼の意味を調べました。",
+        "sentenceFurigana": "うわまぶたの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari kelopak mata atas."
+      },
+      {
+        "word": "下瞼",
+        "reading": "したまぶた",
+        "romaji": "Shitamabuta",
+        "meaning": "kelopak mata bawah",
+        "sentence": "下瞼をノートに書きました。",
+        "sentenceFurigana": "したまぶたを ノートに かきました。",
+        "sentenceMeaning": "Menulis kelopak mata bawah di buku catatan."
+      },
+      {
+        "word": "一重瞼",
+        "reading": "ひとえまぶた",
+        "romaji": "Hitoemabuta",
+        "meaning": "kelopak mata tunggal",
+        "sentence": "先生が一重瞼について説明しました。",
+        "sentenceFurigana": "せんせいが ひとえまぶたについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang kelopak mata tunggal."
+      },
+      {
+        "word": "二重瞼",
+        "reading": "ふたえまぶた",
+        "romaji": "Futaemabuta",
+        "meaning": "kelopak mata ganda",
+        "sentence": "二重瞼という表現を覚えました。",
+        "sentenceFurigana": "ふたえまぶたという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'kelopak mata ganda'."
+      }
+    ]
+  },
+  {
+    "id": "N1_298",
+    "kanji": "箒",
+    "onyomi": "-",
+    "kunyomi": "ほうき",
+    "romaji": "Houki",
+    "meaning": "sapu",
+    "examples": [
+      {
+        "word": "箒",
+        "reading": "ほうき",
+        "romaji": "Houki",
+        "meaning": "sapu",
+        "sentence": "箒という言葉を習いました。",
+        "sentenceFurigana": "ほうきという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'sapu'."
+      },
+      {
+        "word": "竹箒",
+        "reading": "たけぼうき",
+        "romaji": "Takebouki",
+        "meaning": "sapu bambu",
+        "sentence": "竹箒の意味を調べました。",
+        "sentenceFurigana": "たけぼうきの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari sapu bambu."
+      },
+      {
+        "word": "座敷箒",
+        "reading": "ざしきぼうき",
+        "romaji": "Zashikibouki",
+        "meaning": "sapu ruangan",
+        "sentence": "座敷箒をノートに書きました。",
+        "sentenceFurigana": "ざしきぼうきを ノートに かきました。",
+        "sentenceMeaning": "Menulis sapu ruangan di buku catatan."
+      },
+      {
+        "word": "箒星",
+        "reading": "ほうきぼし",
+        "romaji": "Houkiboshi",
+        "meaning": "komet",
+        "sentence": "先生が箒星について説明しました。",
+        "sentenceFurigana": "せんせいが ほうきぼしについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang komet."
+      },
+      {
+        "word": "魔女の箒",
+        "reading": "まじょのほうき",
+        "romaji": "Majonohouki",
+        "meaning": "sapu penyihir",
+        "sentence": "魔女の箒という表現を覚えました。",
+        "sentenceFurigana": "まじょのほうきという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'sapu penyihir'."
+      }
+    ]
+  },
+  {
+    "id": "N1_299",
+    "kanji": "黴",
+    "onyomi": "バイ",
+    "kunyomi": "かび",
+    "romaji": "Bai",
+    "meaning": "jamur (kapang)",
+    "examples": [
+      {
+        "word": "黴",
+        "reading": "かび",
+        "romaji": "Kabi",
+        "meaning": "jamur (kapang)",
+        "sentence": "黴という言葉を習いました。",
+        "sentenceFurigana": "かびという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'jamur (kapang)'."
+      },
+      {
+        "word": "黴菌",
+        "reading": "ばいきん",
+        "romaji": "Baikin",
+        "meaning": "kuman",
+        "sentence": "黴菌の意味を調べました。",
+        "sentenceFurigana": "ばいきんの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari kuman."
+      },
+      {
+        "word": "黴臭い",
+        "reading": "かびくさい",
+        "romaji": "Kabikusai",
+        "meaning": "berbau apak",
+        "sentence": "黴臭いをノートに書きました。",
+        "sentenceFurigana": "かびくさいを ノートに かきました。",
+        "sentenceMeaning": "Menulis berbau apak di buku catatan."
+      },
+      {
+        "word": "白黴",
+        "reading": "しろかび",
+        "romaji": "Shirokabi",
+        "meaning": "jamur putih",
+        "sentence": "先生が白黴について説明しました。",
+        "sentenceFurigana": "せんせいが しろかびについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang jamur putih."
+      },
+      {
+        "word": "黒黴",
+        "reading": "くろかび",
+        "romaji": "Kurokabi",
+        "meaning": "jamur hitam",
+        "sentence": "黒黴という表現を覚えました。",
+        "sentenceFurigana": "くろかびという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'jamur hitam'."
+      }
+    ]
+  },
+  {
+    "id": "N1_300",
+    "kanji": "棟",
+    "onyomi": "トウ",
+    "kunyomi": "むね",
+    "romaji": "Tou",
+    "meaning": "bubungan / bangunan",
+    "examples": [
+      {
+        "word": "棟",
+        "reading": "むね",
+        "romaji": "Mune",
+        "meaning": "bubungan atap",
+        "sentence": "棟という言葉を習いました。",
+        "sentenceFurigana": "むねという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'bubungan atap'."
+      },
+      {
+        "word": "病棟",
+        "reading": "びょうとう",
+        "romaji": "Byoutou",
+        "meaning": "bangsal rumah sakit",
+        "sentence": "病棟の意味を調べました。",
+        "sentenceFurigana": "びょうとうの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari bangsal rumah sakit."
+      },
+      {
+        "word": "別棟",
+        "reading": "べつむね",
+        "romaji": "Betsumune",
+        "meaning": "bangunan terpisah",
+        "sentence": "別棟をノートに書きました。",
+        "sentenceFurigana": "べつむねを ノートに かきました。",
+        "sentenceMeaning": "Menulis bangunan terpisah di buku catatan."
+      },
+      {
+        "word": "棟上げ",
+        "reading": "むねあげ",
+        "romaji": "Muneage",
+        "meaning": "pemasangan bubungan",
+        "sentence": "先生が棟上げについて説明しました。",
+        "sentenceFurigana": "せんせいが むねあげについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang pemasangan bubungan."
+      },
+      {
+        "word": "一棟",
+        "reading": "いっとう",
+        "romaji": "Ittou",
+        "meaning": "satu bangunan",
+        "sentence": "一棟という表現を覚えました。",
+        "sentenceFurigana": "いっとうという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'satu bangunan'."
+      }
+    ]
+  },
+  {
+    "id": "N1_301",
+    "kanji": "斑",
+    "onyomi": "ハン",
+    "kunyomi": "まだら・ぶち",
+    "romaji": "Han",
+    "meaning": "totol / belang",
+    "examples": [
+      {
+        "word": "斑点",
+        "reading": "はんてん",
+        "romaji": "Hanten",
+        "meaning": "bintik / totol",
+        "sentence": "斑点という言葉を習いました。",
+        "sentenceFurigana": "はんてんという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'bintik / totol'."
+      },
+      {
+        "word": "斑",
+        "reading": "まだら",
+        "romaji": "Madara",
+        "meaning": "belang / totol",
+        "sentence": "斑の意味を調べました。",
+        "sentenceFurigana": "まだらの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari belang / totol."
+      },
+      {
+        "word": "斑模様",
+        "reading": "まだらもよう",
+        "romaji": "Madaramoyou",
+        "meaning": "pola totol",
+        "sentence": "斑模様をノートに書きました。",
+        "sentenceFurigana": "まだらもようを ノートに かきました。",
+        "sentenceMeaning": "Menulis pola totol di buku catatan."
+      },
+      {
+        "word": "白斑",
+        "reading": "はくはん",
+        "romaji": "Hakuhan",
+        "meaning": "bercak putih",
+        "sentence": "先生が白斑について説明しました。",
+        "sentenceFurigana": "せんせいが はくはんについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang bercak putih."
+      },
+      {
+        "word": "蒙古斑",
+        "reading": "もうこはん",
+        "romaji": "Moukohan",
+        "meaning": "bercak Mongolia",
+        "sentence": "蒙古斑という表現を覚えました。",
+        "sentenceFurigana": "もうこはんという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'bercak Mongolia'."
+      }
+    ]
+  },
+  {
+    "id": "N1_302",
+    "kanji": "穂",
+    "onyomi": "スイ",
+    "kunyomi": "ほ",
+    "romaji": "Sui",
+    "meaning": "bulir (tanaman)",
+    "examples": [
+      {
+        "word": "穂",
+        "reading": "ほ",
+        "romaji": "Ho",
+        "meaning": "bulir tanaman",
+        "sentence": "穂という言葉を習いました。",
+        "sentenceFurigana": "ほという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'bulir tanaman'."
+      },
+      {
+        "word": "稲穂",
+        "reading": "いなほ",
+        "romaji": "Inaho",
+        "meaning": "bulir padi",
+        "sentence": "稲穂の意味を調べました。",
+        "sentenceFurigana": "いなほの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari bulir padi."
+      },
+      {
+        "word": "穂先",
+        "reading": "ほさき",
+        "romaji": "Hosaki",
+        "meaning": "ujung (bulir / kuas)",
+        "sentence": "穂先をノートに書きました。",
+        "sentenceFurigana": "ほさきを ノートに かきました。",
+        "sentenceMeaning": "Menulis ujung (bulir / kuas) di buku catatan."
+      },
+      {
+        "word": "麦の穂",
+        "reading": "むぎのほ",
+        "romaji": "Muginoho",
+        "meaning": "bulir gandum",
+        "sentence": "先生が麦の穂について説明しました。",
+        "sentenceFurigana": "せんせいが むぎのほについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang bulir gandum."
+      },
+      {
+        "word": "穂波",
+        "reading": "ほなみ",
+        "romaji": "Honami",
+        "meaning": "gelombang bulir di sawah",
+        "sentence": "穂波という表現を覚えました。",
+        "sentenceFurigana": "ほなみという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'gelombang bulir di sawah'."
+      }
+    ]
+  },
+  {
+    "id": "N1_303",
+    "kanji": "枕",
+    "onyomi": "-",
+    "kunyomi": "まくら",
+    "romaji": "Makura",
+    "meaning": "bantal",
+    "examples": [
+      {
+        "word": "枕",
+        "reading": "まくら",
+        "romaji": "Makura",
+        "meaning": "bantal",
+        "sentence": "枕という言葉を習いました。",
+        "sentenceFurigana": "まくらという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'bantal'."
+      },
+      {
+        "word": "枕元",
+        "reading": "まくらもと",
+        "romaji": "Makuramoto",
+        "meaning": "sisi kepala (dekat bantal)",
+        "sentence": "枕元の意味を調べました。",
+        "sentenceFurigana": "まくらもとの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari sisi kepala (dekat bantal)."
+      },
+      {
+        "word": "枕木",
+        "reading": "まくらぎ",
+        "romaji": "Makuragi",
+        "meaning": "bantalan rel",
+        "sentence": "枕木をノートに書きました。",
+        "sentenceFurigana": "まくらぎを ノートに かきました。",
+        "sentenceMeaning": "Menulis bantalan rel di buku catatan."
+      },
+      {
+        "word": "抱き枕",
+        "reading": "だきまくら",
+        "romaji": "Dakimakura",
+        "meaning": "bantal guling",
+        "sentence": "先生が抱き枕について説明しました。",
+        "sentenceFurigana": "せんせいが だきまくらについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang bantal guling."
+      },
+      {
+        "word": "枕詞",
+        "reading": "まくらことば",
+        "romaji": "Makurakotoba",
+        "meaning": "kata pembuka klasik (makurakotoba)",
+        "sentence": "枕詞という表現を覚えました。",
+        "sentenceFurigana": "まくらことばという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'kata pembuka klasik (makurakotoba)'."
+      }
+    ]
+  },
+  {
+    "id": "N1_304",
+    "kanji": "餅",
+    "onyomi": "-",
+    "kunyomi": "もち",
+    "romaji": "Mochi",
+    "meaning": "kue ketan (mochi)",
+    "examples": [
+      {
+        "word": "餅",
+        "reading": "もち",
+        "romaji": "Mochi",
+        "meaning": "kue ketan (mochi)",
+        "sentence": "餅という言葉を習いました。",
+        "sentenceFurigana": "もちという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'kue ketan (mochi)'."
+      },
+      {
+        "word": "餅つき",
+        "reading": "もちつき",
+        "romaji": "Mochitsuki",
+        "meaning": "menumbuk mochi",
+        "sentence": "餅つきの意味を調べました。",
+        "sentenceFurigana": "もちつきの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari menumbuk mochi."
+      },
+      {
+        "word": "草餅",
+        "reading": "くさもち",
+        "romaji": "Kusamochi",
+        "meaning": "mochi mugwort",
+        "sentence": "草餅をノートに書きました。",
+        "sentenceFurigana": "くさもちを ノートに かきました。",
+        "sentenceMeaning": "Menulis mochi mugwort di buku catatan."
+      },
+      {
+        "word": "焼き餅",
+        "reading": "やきもち",
+        "romaji": "Yakimochi",
+        "meaning": "mochi bakar / cemburu",
+        "sentence": "先生が焼き餅について説明しました。",
+        "sentenceFurigana": "せんせいが やきもちについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang mochi bakar / cemburu."
+      },
+      {
+        "word": "鏡餅",
+        "reading": "かがみもち",
+        "romaji": "Kagamimochi",
+        "meaning": "mochi persembahan bundar",
+        "sentence": "鏡餅という表現を覚えました。",
+        "sentenceFurigana": "かがみもちという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'mochi persembahan bundar'."
+      }
+    ]
+  },
+  {
+    "id": "N1_305",
+    "kanji": "虎",
+    "onyomi": "コ",
+    "kunyomi": "とら",
+    "romaji": "Ko",
+    "meaning": "harimau",
+    "examples": [
+      {
+        "word": "虎",
+        "reading": "とら",
+        "romaji": "Tora",
+        "meaning": "harimau",
+        "sentence": "虎という言葉を習いました。",
+        "sentenceFurigana": "とらという ことばを ならいました。",
+        "sentenceMeaning": "Mempelajari kata 'harimau'."
+      },
+      {
+        "word": "虎穴",
+        "reading": "こけつ",
+        "romaji": "Koketsu",
+        "meaning": "sarang harimau",
+        "sentence": "虎穴の意味を調べました。",
+        "sentenceFurigana": "こけつの いみを しらべました。",
+        "sentenceMeaning": "Mencari arti dari sarang harimau."
+      },
+      {
+        "word": "白虎",
+        "reading": "びゃっこ",
+        "romaji": "Byakko",
+        "meaning": "harimau putih",
+        "sentence": "白虎をノートに書きました。",
+        "sentenceFurigana": "びゃっこを ノートに かきました。",
+        "sentenceMeaning": "Menulis harimau putih di buku catatan."
+      },
+      {
+        "word": "猛虎",
+        "reading": "もうこ",
+        "romaji": "Mouko",
+        "meaning": "harimau buas",
+        "sentence": "先生が猛虎について説明しました。",
+        "sentenceFurigana": "せんせいが もうこについて せつめいしました。",
+        "sentenceMeaning": "Guru menjelaskan tentang harimau buas."
+      },
+      {
+        "word": "虎の巻",
+        "reading": "とらのまき",
+        "romaji": "Toranomaki",
+        "meaning": "buku pegangan / kunci jawaban",
+        "sentence": "虎の巻という表現を覚えました。",
+        "sentenceFurigana": "とらのまきという ひょうげんを おぼえました。",
+        "sentenceMeaning": "Menghafal ungkapan 'buku pegangan / kunci jawaban'."
+      }
+    ]
   }
 ]
