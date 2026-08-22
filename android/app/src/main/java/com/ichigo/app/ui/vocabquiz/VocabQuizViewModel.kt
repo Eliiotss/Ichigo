@@ -3,6 +3,7 @@ package com.ichigo.app.ui.vocabquiz
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.ichigo.app.data.local.AppPreferences
 import com.ichigo.app.data.repository.VocabQuizRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -38,6 +39,7 @@ data class VocabQuizUiState(
 @HiltViewModel
 class VocabQuizViewModel @Inject constructor(
     private val repo: VocabQuizRepository,
+    private val prefs: AppPreferences,
     handle: SavedStateHandle,
 ) : ViewModel() {
 
@@ -59,7 +61,9 @@ class VocabQuizViewModel @Inject constructor(
     private fun load() {
         _state.value = VocabQuizUiState(loading = true)
         viewModelScope.launch {
-            deck = repo.buildRound(jsonFile, QUESTIONS_PER_ROUND)
+            // Round size follows "Target Harian" — the same knob the FSRS deck uses.
+            val count = maxOf(1, prefs.dailyTargetNow())
+            deck = repo.buildRound(jsonFile, count)
             currentIndex = 0; sessionCorrect = 0
             selectedAnswer = null; isAnswered = false; finished = false
             if (deck.isEmpty()) _state.value = VocabQuizUiState(loading = false, empty = true) else push()
@@ -103,10 +107,5 @@ class VocabQuizViewModel @Inject constructor(
             selectedAnswer = selectedAnswer,
             isAnswered = isAnswered,
         )
-    }
-
-    companion object {
-        /** Questions per round — adaptif, mudah diubah. */
-        const val QUESTIONS_PER_ROUND = 20
     }
 }
