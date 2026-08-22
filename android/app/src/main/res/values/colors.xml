@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light page background is plain white; pageDark (#12161F). -->
+    <color name="ichigo_page_light">#FFFFFF</color>
+    <color name="ichigo_page_dark">#12161F</color>
+    <!-- Cream of the Ichigo logo — used as the splash background on both themes. -->
+    <color name="ichigo_splash">#FCF9F4</color>
+</resources>

@@ -1,0 +1,17 @@
+# Android / Gradle build outputs
+.gradle/
+.kotlin/
+build/
+/local.properties
+
+# Signing — NEVER commit keystores or their passwords
+keystore.properties
+*.jks
+*.keystore
+/keystore/
+/.idea/
+*.iml
+.DS_Store
+/captures/
+.externalNativeBuild/
+.cxx/

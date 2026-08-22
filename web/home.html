@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2E7BFF" />
+  <title>IchiGo — Belajar bahasa Jepang JLPT</title>
+  <meta name="description" content="IchiGo adalah aplikasi belajar bahasa Jepang JLPT (Kanji, Kosakata, Tata Bahasa, Hiragana & Katakana) dengan flashcard berpenjadwalan cerdas FSRS. Progres bisa disinkronkan ke Google Drive milikmu sendiri." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink:#2B2029; --muted:#6b6470; --blue:#2E7BFF; --blue-light:#4F97FF;
+      --card:#ffffff; --bg:#f4f6fb; --line:#e7e2ee; --chip:#eef3ff;
+      --grad-a:#4F97FF; --grad-b:#2E7BFF; --grad-c:#7C5CFF; --grad-d:#12B5A6; --grad-e:#9B5CFF;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink:#EDEAF2; --muted:#a49db0; --blue:#4F97FF; --blue-light:#6aa8ff;
+        --card:#1b2130; --bg:#12161f; --line:#28303f; --chip:#1c2740;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family:"Baloo 2", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      line-height:1.6; -webkit-font-smoothing:antialiased;
+    }
+    .wrap { max-width: 960px; margin:0 auto; padding: 0 20px; }
+    a { color:var(--blue); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+
+    /* Nav */
+    nav {
+      display:flex; align-items:center; justify-content:space-between;
+      max-width:960px; margin:0 auto; padding:18px 20px;
+    }
+    .brand { font-size:24px; font-weight:800; letter-spacing:-.5px; }
+    .brand span { color:var(--blue); }
+    .brand .berry { font-weight:400; }
+    .nav-links a { color:var(--muted); font-weight:600; font-size:15px; margin-left:18px; }
+    .nav-links a:hover { color:var(--ink); text-decoration:none; }
+
+    /* Hero */
+    .hero { text-align:center; padding: 40px 0 20px; }
+    .hero .badge {
+      display:inline-block; background:var(--chip); color:var(--blue);
+      font-weight:700; font-size:13px; padding:6px 14px; border-radius:999px; margin-bottom:20px;
+    }
+    .hero h1 { font-size: clamp(30px, 6vw, 48px); line-height:1.12; margin:8px 0 14px; font-weight:800; letter-spacing:-1px; }
+    .hero h1 .accent { color:var(--blue); }
+    .hero p.lead { color:var(--muted); font-size: clamp(16px,2.4vw,19px); max-width:620px; margin: 0 auto 26px; }
+    .cta { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+    .btn {
+      display:inline-block; font-weight:700; font-size:16px; padding:13px 26px; border-radius:14px;
+      border:1.5px solid transparent;
+    }
+    .btn-primary { background:linear-gradient(135deg,var(--blue-light),var(--blue)); color:#fff; box-shadow:0 8px 20px rgba(46,123,255,.28); }
+    .btn-primary:hover { text-decoration:none; filter:brightness(1.04); }
+    .btn-ghost { background:var(--card); color:var(--ink); border-color:var(--line); }
+    .btn-ghost:hover { text-decoration:none; border-color:var(--blue); }
+    .soon { color:var(--muted); font-size:13px; margin-top:14px; }
+
+    /* Sections */
+    section.block { padding: 40px 0; }
+    h2.title { font-size: clamp(22px,4vw,28px); font-weight:800; text-align:center; margin:0 0 6px; letter-spacing:-.4px; }
+    p.subtitle { text-align:center; color:var(--muted); margin:0 auto 30px; max-width:560px; }
+
+    /* Feature grid */
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
+    .feature {
+      background:var(--card); border:1px solid var(--line); border-radius:18px; padding:22px;
+    }
+    .feature .ico {
+      width:46px; height:46px; border-radius:13px; display:flex; align-items:center; justify-content:center;
+      font-size:22px; margin-bottom:14px; color:#fff;
+    }
+    .feature h3 { font-size:17px; margin:0 0 6px; font-weight:700; }
+    .feature p { margin:0; color:var(--muted); font-size:14.5px; }
+
+    /* Drive / privacy callout */
+    .callout {
+      background:var(--card); border:1px solid var(--line); border-radius:20px; padding:28px;
+    }
+    .callout h2 { margin-top:0; font-size:22px; font-weight:800; }
+    .callout ul { margin:14px 0 0; padding-left:20px; }
+    .callout li { margin:8px 0; color:#4a4450; }
+    @media (prefers-color-scheme: dark) { .callout li { color:var(--ink); } }
+    .callout .pill { display:inline-block; background:var(--chip); color:var(--blue); font-weight:700; font-size:12.5px; padding:4px 10px; border-radius:999px; }
+
+    footer {
+      border-top:1px solid var(--line); margin-top:30px; padding:26px 0 40px; text-align:center;
+      color:var(--muted); font-size:14px;
+    }
+    footer a { font-weight:600; }
+    footer .links { margin:8px 0 14px; }
+    footer .links a { margin:0 10px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="brand">Ichi<span>Go</span> <span class="berry">🍓</span></div>
+    <div class="nav-links">
+      <a href="#fitur">Fitur</a>
+      <a href="#privasi">Privasi</a>
+      <a href="privacy.html">Kebijakan Privasi</a>
+    </div>
+  </nav>
+
+  <header class="hero wrap">
+    <div class="badge">Belajar bahasa Jepang JLPT · N5–N1</div>
+    <h1>Kuasai <span class="accent">Kanji, Kosakata &amp; Tata Bahasa</span><br />Jepang, sedikit demi sedikit.</h1>
+    <p class="lead">
+      IchiGo adalah aplikasi belajar mandiri untuk JLPT — Kanji, Kosakata, Tata Bahasa,
+      serta Hiragana &amp; Katakana — dengan flashcard berpenjadwalan cerdas (algoritme FSRS)
+      yang memunculkan kartu tepat sebelum kamu lupa.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#fitur">Lihat fitur</a>
+      <a class="btn btn-ghost" href="privacy.html">Kebijakan Privasi</a>
+    </div>
+    <p class="soon">📱 Segera hadir di Google Play</p>
+  </header>
+
+  <section class="block wrap" id="fitur">
+    <h2 class="title">Semua yang kamu butuhkan untuk JLPT</h2>
+    <p class="subtitle">Satu aplikasi ringan, tanpa iklan, tanpa gangguan.</p>
+    <div class="grid">
+      <div class="feature">
+        <div class="ico" style="background:linear-gradient(135deg,var(--grad-a),var(--grad-b))">🗂️</div>
+        <h3>Flashcard cerdas (FSRS)</h3>
+        <p>Penjadwalan berbasis memori — kartu kembali tepat waktu, jadi belajar lebih efisien.</p>
+      </div>
+      <div class="feature">
+        <div class="ico" style="background:linear-gradient(135deg,#7C5CFF,#5A3FE0)">🈶</div>
+        <h3>Kanji N5–N1</h3>
+        <p>Ribuan kanji dengan on'yomi/kun'yomi, arti, contoh kata, dan contoh kalimat.</p>
+      </div>
+      <div class="feature">
+        <div class="ico" style="background:linear-gradient(135deg,#12B5A6,#0E8E86)">📚</div>
+        <h3>Kosakata &amp; Tata Bahasa</h3>
+        <p>Kosakata bertingkat dan pola tata bahasa dengan penjelasan serta contoh.</p>
+      </div>
+      <div class="feature">
+        <div class="ico" style="background:linear-gradient(135deg,#4F97FF,#2E7BFF)">あ</div>
+        <h3>Hiragana &amp; Katakana</h3>
+        <p>Latihan huruf kana dari nol sampai lancar membaca.</p>
+      </div>
+      <div class="feature">
+        <div class="ico" style="background:linear-gradient(135deg,#9B5CFF,#6E3FD6)">🔥</div>
+        <h3>Target &amp; Streak</h3>
+        <p>Target harian, streak, dan statistik untuk menjaga motivasi.</p>
+      </div>
+      <div class="feature">
+        <div class="ico" style="background:linear-gradient(135deg,#2E7BFF,#1E63D8)">☁️</div>
+        <h3>Sinkron Google Drive</h3>
+        <p>Cadangkan progres ke Drive milikmu sendiri dan lanjutkan di perangkat lain.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap" id="privasi">
+    <div class="callout">
+      <span class="pill">Privasi diutamakan</span>
+      <h2>Sinkronisasi Google Drive — datamu tetap milikmu</h2>
+      <p style="color:var(--muted); margin:6px 0 0;">
+        Sinkronisasi bersifat <strong>opsional</strong> dan mati secara default. IchiGo
+        <strong>tidak memiliki server</strong> dan tidak pernah menerima data belajarmu.
+      </p>
+      <ul>
+        <li>Saat kamu memilih <strong>Masuk dengan Google</strong>, aplikasi hanya menggunakan
+          scope <strong><code>drive.appdata</code></strong> — sebuah <strong>folder privat aplikasi</strong>
+          di Google Drive-mu.</li>
+        <li>IchiGo <strong>tidak</strong> dapat melihat, membaca, atau mengubah berkas Drive-mu yang lain —
+          hanya berkas cadangannya sendiri (<code>ichigo-backup.json</code>).</li>
+        <li>Alamat email akun hanya dipakai untuk menandai akun yang tersinkron; <strong>tidak dikirim
+          ke pengembang</strong>. Semua koneksi memakai HTTPS.</li>
+        <li>Berhenti kapan saja: Keluar dari akun di app, atau hapus berkas cadangan dari Drive-mu.</li>
+      </ul>
+      <p style="margin:16px 0 0;">
+        Selengkapnya di <a href="privacy.html">Kebijakan Privasi</a>.
+      </p>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <div class="brand" style="font-size:20px;">Ichi<span>Go</span> 🍓</div>
+    <div class="links">
+      <a href="#fitur">Fitur</a>
+      <a href="#privasi">Privasi</a>
+      <a href="privacy.html">Kebijakan Privasi</a>
+    </div>
+    <div>Kontak: <a href="mailto:ichigogo1708@gmail.com">ichigogo1708@gmail.com</a></div>
+    <div style="margin-top:10px; font-size:12.5px;">© 2026 IchiGo · Aplikasi belajar bahasa Jepang JLPT</div>
+  </footer>
+</body>
+</html>

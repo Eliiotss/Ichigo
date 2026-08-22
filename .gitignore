@@ -60,3 +60,9 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Google Drive backup — user-specific OAuth client ID (do not commit)
+ios/Sources/AppFeature/Resources/GoogleOAuth.plist
+
+# Web Google Drive sync — user-specific OAuth Web client ID (do not commit)
+web/config.js

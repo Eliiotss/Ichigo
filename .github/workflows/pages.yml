@@ -1,0 +1,43 @@
+name: Deploy web to GitHub Pages
+
+# Publishes the static web app in web/ to GitHub Pages.
+#
+# PREREQUISITE: Pages must first be enabled in Settings -> Pages -> Build and
+# deployment -> Source: "GitHub Actions". Pages requires the repo to be PUBLIC on
+# a free plan (private repos need GitHub Pro/Team/Enterprise); the Actions token
+# cannot enable it automatically ("Resource not accessible by integration").
+#
+# This workflow is MANUAL ONLY (workflow_dispatch) so it never fails checks on
+# PRs before Pages is set up. Once Pages is enabled, run it from the Actions tab
+# ("Run workflow"), or add a `push` trigger on main.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload web/ as Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
