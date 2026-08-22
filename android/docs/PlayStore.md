@@ -143,7 +143,10 @@ Untuk publik:
    **verifikasi** agar layar peringatan "app belum diverifikasi" hilang dan tak
    ada batas ~100 pengguna. Syarat:
    - **Homepage** + **Privacy Policy** di **domain milikmu** yang diverifikasi
-     di Google Search Console (privacy policy-nya bisa pakai `web/privacy.html`).
+     di Google Search Console. Keduanya sudah disediakan di folder `web/`:
+     `web/home.html` (homepage) + `web/privacy.html`. Setelah GitHub Pages aktif:
+     Homepage `https://eliiotss.github.io/Ichigo/home.html`, Privacy
+     `https://eliiotss.github.io/Ichigo/privacy.html`.
    - Branding lengkap (nama, logo, email).
    - Ajukan verifikasi → ditinjau Google (beberapa hari–minggu).
 3. 💰 `drive.appdata` **sensitive, bukan restricted** → **tidak** perlu security
