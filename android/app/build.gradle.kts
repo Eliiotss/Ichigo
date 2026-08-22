@@ -29,7 +29,7 @@ val hasReleaseSigning = keystorePropsFile.exists()
 // versionCode lebih besar dari upload sebelumnya untuk tiap rilis ke Play Store.
 val appVersionMajor = 1
 val appVersionMinor = 5
-val appVersionPatch = 2
+val appVersionPatch = 3
 val appVersionName = "$appVersionMajor.$appVersionMinor.$appVersionPatch"
 val appVersionCode = appVersionMajor * 10000 + appVersionMinor * 100 + appVersionPatch
 

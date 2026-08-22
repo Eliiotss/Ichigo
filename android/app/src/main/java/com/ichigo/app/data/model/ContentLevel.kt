@@ -71,5 +71,8 @@ val grammarLevels: List<ContentLevel> = listOf(
     ContentLevel("N4", "Elementary", "132 Pola Tata Bahasa Dasar+", false, "GrammarN4"),
     ContentLevel("N3", "Intermediate", "182 Pola Tata Bahasa Menengah", false, "GrammarN3"),
     ContentLevel("N2", "Pre-Advanced", "141 Pola Tata Bahasa Lanjutan", false, "GrammarN2"),
-    ContentLevel("N1", "Advanced", "Pola Tata Bahasa Master", true, "GrammarN1"),
+    // N1 Grammar ships Android-first as a growing, verified set (original
+    // explanations + example sentences; pattern names taken as a checklist from
+    // materials/grammar.md). Keep this count equal to GrammarN1.json's length.
+    ContentLevel("N1", "Advanced", "25 Pola Tata Bahasa Master", false, "GrammarN1"),
 )

@@ -1,0 +1,1252 @@
+[
+  {
+    "id": "N1_G001",
+    "pattern": "〜を余儀なくされる",
+    "romaji": "wo yoginaku sareru",
+    "meaning": "terpaksa (harus) ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina + を余儀なくされる",
+    "tags": [
+      "N1",
+      "Keterpaksaan",
+      "Formal"
+    ],
+    "treeCategory": "Keterpaksaan",
+    "relatedGrammarIds": [],
+    "nuance": "Karena keadaan di luar kendali, seseorang terpaksa melakukan hal yang tak diinginkan. Nada formal/tertulis.",
+    "frequency": "Common",
+    "commonMistakes": [
+      "Subjek adalah pihak yang 'dipaksa keadaan', bukan yang memaksa.",
+      "Bentuk aktif 〜を余儀なくさせる = 'memaksa (pihak lain) ...'."
+    ],
+    "explanation": "Dipakai saat situasi memaksa seseorang mengambil langkah yang sebenarnya tidak diinginkan.",
+    "usage": [
+      "台風で登山は中止を余儀なくされた。",
+      "赤字が続き、店は閉店を余儀なくされた。"
+    ],
+    "examples": [
+      {
+        "japanese": "大雨のため、試合は延期を余儀なくされた。",
+        "romaji": "Ooame no tame, shiai wa enki wo yoginaku sareta.",
+        "translation": "Karena hujan deras, pertandingan terpaksa ditunda."
+      },
+      {
+        "japanese": "会社の経営悪化で、彼は退職を余儀なくされた。",
+        "romaji": "Kaisha no keiei akka de, kare wa taishoku wo yoginaku sareta.",
+        "translation": "Akibat kondisi perusahaan yang memburuk, ia terpaksa mengundurkan diri."
+      },
+      {
+        "japanese": "けがのため、選手は引退を余儀なくされた。",
+        "romaji": "Kega no tame, senshu wa intai wo yoginaku sareta.",
+        "translation": "Karena cedera, atlet itu terpaksa pensiun."
+      },
+      {
+        "japanese": "予算不足で計画の変更を余儀なくされた。",
+        "romaji": "Yosan busoku de keikaku no henkou wo yoginaku sareta.",
+        "translation": "Karena kekurangan anggaran, rencana terpaksa diubah."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G002",
+    "pattern": "〜きらいがある",
+    "romaji": "kirai ga aru",
+    "meaning": "cenderung (ke arah negatif)",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Verb (kamus) / Nomina の + きらいがある",
+    "tags": [
+      "N1",
+      "Kecenderungan",
+      "Negatif"
+    ],
+    "treeCategory": "Kecenderungan",
+    "relatedGrammarIds": [],
+    "nuance": "Menyatakan kecenderungan buruk yang cukup melekat. Selalu bernuansa negatif.",
+    "frequency": "Common",
+    "commonMistakes": [
+      "Hanya untuk kecenderungan negatif, bukan kebiasaan netral.",
+      "Bukan 嫌い (benci) — meski tulisannya mirip."
+    ],
+    "explanation": "Menunjukkan bahwa seseorang/sesuatu punya kecenderungan yang kurang baik.",
+    "usage": [
+      "彼は物事を悪く考えるきらいがある。",
+      "最近の若者は活字離れのきらいがある。"
+    ],
+    "examples": [
+      {
+        "japanese": "彼女は何でも一人で抱え込むきらいがある。",
+        "romaji": "Kanojo wa nandemo hitori de kakaekomu kirai ga aru.",
+        "translation": "Dia cenderung memikul semuanya sendirian."
+      },
+      {
+        "japanese": "この報告は事実を大げさに書くきらいがある。",
+        "romaji": "Kono houkoku wa jijitsu wo oogesa ni kaku kirai ga aru.",
+        "translation": "Laporan ini cenderung melebih-lebihkan fakta."
+      },
+      {
+        "japanese": "彼は都合の悪いことを忘れるきらいがある。",
+        "romaji": "Kare wa tsugou no warui koto wo wasureru kirai ga aru.",
+        "translation": "Dia cenderung melupakan hal-hal yang merugikan dirinya."
+      },
+      {
+        "japanese": "彼は結論を急ぐきらいがある。",
+        "romaji": "Kare wa ketsuron wo isogu kirai ga aru.",
+        "translation": "Dia cenderung terburu-buru mengambil kesimpulan."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G003",
+    "pattern": "〜に足る / 〜に足りない",
+    "romaji": "ni taru / ni tarinai",
+    "meaning": "layak / tidak layak untuk ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Verb (kamus) / Nomina + に足る（に足りない）",
+    "tags": [
+      "N1",
+      "Penilaian",
+      "Formal"
+    ],
+    "treeCategory": "Penilaian",
+    "relatedGrammarIds": [],
+    "nuance": "Menilai apakah sesuatu cukup bernilai/pantas untuk suatu tindakan. Nada formal.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "に足りない sering berarti 'tak pantas dianggap serius'.",
+      "Berbeda dari 〜に足る潜在… — ini soal 'kelayakan', bukan 'cukup jumlah'."
+    ],
+    "explanation": "Dipakai untuk menyatakan sesuatu pantas (atau tidak pantas) menerima suatu perlakuan/penilaian.",
+    "usage": [
+      "彼は信頼するに足る人物だ。",
+      "取るに足りない問題だ。"
+    ],
+    "examples": [
+      {
+        "japanese": "この作品は評価するに足る出来栄えだ。",
+        "romaji": "Kono sakuhin wa hyouka suru ni taru dekibae da.",
+        "translation": "Karya ini punya kualitas yang layak diapresiasi."
+      },
+      {
+        "japanese": "それは議論するに足る重要な問題だ。",
+        "romaji": "Sore wa giron suru ni taru juuyou na mondai da.",
+        "translation": "Itu masalah penting yang layak didiskusikan."
+      },
+      {
+        "japanese": "そんな噂は信じるに足りない。",
+        "romaji": "Sonna uwasa wa shinjiru ni tarinai.",
+        "translation": "Rumor semacam itu tidak layak dipercaya."
+      },
+      {
+        "japanese": "彼の功績は称賛するに足る。",
+        "romaji": "Kare no kouseki wa shousan suru ni taru.",
+        "translation": "Jasanya layak mendapat pujian."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G004",
+    "pattern": "〜といえども",
+    "romaji": "to iedomo",
+    "meaning": "meskipun (dikatakan) ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina / Verb・adj biasa + といえども",
+    "tags": [
+      "N1",
+      "Konsesif",
+      "Formal"
+    ],
+    "treeCategory": "Konsesif",
+    "relatedGrammarIds": [],
+    "nuance": "Bentuk formal/tertulis dari 〜でも. Sering dipakai untuk hal yang 'sekalipun begitu tetap ...'.",
+    "frequency": "Common",
+    "commonMistakes": [
+      "Lebih kaku daripada でも/けれど; cocok untuk teks resmi.",
+      "Sering berpola: 'sekalipun X (yang biasanya diharapkan Y), toh tetap ...'."
+    ],
+    "explanation": "Menyatakan bahwa meskipun premisnya benar, kesimpulan yang biasa diharapkan tidak berlaku.",
+    "usage": [
+      "専門家といえども間違うことはある。",
+      "いくら親しい仲といえども、礼儀は必要だ。"
+    ],
+    "examples": [
+      {
+        "japanese": "社長といえども、規則を破ることは許されない。",
+        "romaji": "Shachou to iedomo, kisoku wo yaburu koto wa yurusarenai.",
+        "translation": "Sekalipun direktur, melanggar aturan tetap tidak diperbolehkan."
+      },
+      {
+        "japanese": "子供といえども、その言葉の重みは分かっていた。",
+        "romaji": "Kodomo to iedomo, sono kotoba no omomi wa wakatte ita.",
+        "translation": "Meskipun masih anak-anak, ia paham beratnya kata-kata itu."
+      },
+      {
+        "japanese": "わずかといえども、進歩は進歩だ。",
+        "romaji": "Wazuka to iedomo, shinpo wa shinpo da.",
+        "translation": "Sekecil apa pun, kemajuan tetaplah kemajuan."
+      },
+      {
+        "japanese": "プロといえども、失敗することはある。",
+        "romaji": "Puro to iedomo, shippai suru koto wa aru.",
+        "translation": "Sekalipun profesional, tetap bisa gagal."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G005",
+    "pattern": "〜までもない",
+    "romaji": "made mo nai",
+    "meaning": "tak perlu sampai ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Verb (kamus) + までもない",
+    "tags": [
+      "N1",
+      "Penilaian",
+      "Ketidakperluan"
+    ],
+    "treeCategory": "Penilaian",
+    "relatedGrammarIds": [],
+    "nuance": "Menyatakan bahwa suatu tindakan tidak perlu dilakukan karena sudah jelas/sepele.",
+    "frequency": "Common",
+    "commonMistakes": [
+      "Beda dari 〜ことはない (tak usah) — ini menekankan 'sudah jelas, jadi tak perlu'.",
+      "言うまでもない = 'tak perlu dikatakan / sudah tentu'."
+    ],
+    "explanation": "Dipakai saat sesuatu begitu jelas sehingga langkah tertentu tak diperlukan.",
+    "usage": [
+      "言うまでもなく、健康が一番大切だ。",
+      "そんな簡単なことは確認するまでもない。"
+    ],
+    "examples": [
+      {
+        "japanese": "結果は見るまでもなく分かっていた。",
+        "romaji": "Kekka wa miru made mo naku wakatte ita.",
+        "translation": "Hasilnya sudah jelas tanpa perlu dilihat."
+      },
+      {
+        "japanese": "わざわざ電話するまでもない、メールで十分だ。",
+        "romaji": "Wazawaza denwa suru made mo nai, meeru de juubun da.",
+        "translation": "Tak perlu sampai menelepon, email sudah cukup."
+      },
+      {
+        "japanese": "言うまでもないが、締め切りは厳守してほしい。",
+        "romaji": "Iu made mo nai ga, shimekiri wa genshu shite hoshii.",
+        "translation": "Tak perlu dikatakan lagi, tolong patuhi tenggat waktu."
+      },
+      {
+        "japanese": "彼の実力は説明するまでもない。",
+        "romaji": "Kare no jitsuryoku wa setsumei suru made mo nai.",
+        "translation": "Kemampuannya tak perlu dijelaskan lagi."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G006",
+    "pattern": "〜とはいえ",
+    "romaji": "to wa ie",
+    "meaning": "meskipun demikian / walau begitu",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina / Verb・adj biasa + とはいえ",
+    "tags": [
+      "N1",
+      "Konsesif",
+      "Kontras"
+    ],
+    "treeCategory": "Konsesif",
+    "relatedGrammarIds": [],
+    "nuance": "Mengakui suatu fakta lalu menyampaikan hal yang bertentangan dengannya. Semi-formal.",
+    "frequency": "Common",
+    "commonMistakes": [
+      "Bisa di awal kalimat (とはいえ、…) sebagai konjungsi.",
+      "Mengakui premis dulu, baru membalikkannya."
+    ],
+    "explanation": "Menyatakan 'benar bahwa X, tetapi kenyataannya/tetap saja Y'.",
+    "usage": [
+      "春とはいえ、まだ寒い日が続く。",
+      "便利とはいえ、使いすぎには注意が必要だ。"
+    ],
+    "examples": [
+      {
+        "japanese": "プロとはいえ、彼もまだ学ぶことは多い。",
+        "romaji": "Puro to wa ie, kare mo mada manabu koto wa ooi.",
+        "translation": "Meski seorang profesional, ia pun masih banyak yang harus dipelajari."
+      },
+      {
+        "japanese": "休みとはいえ、やることが山ほどある。",
+        "romaji": "Yasumi to wa ie, yaru koto ga yama hodo aru.",
+        "translation": "Meski hari libur, tetap ada segunung pekerjaan."
+      },
+      {
+        "japanese": "安いとはいえ、質は悪くない。",
+        "romaji": "Yasui to wa ie, shitsu wa warukunai.",
+        "translation": "Meski murah, kualitasnya tidak buruk."
+      },
+      {
+        "japanese": "とはいえ、彼の努力は認めるべきだ。",
+        "romaji": "To wa ie, kare no doryoku wa mitomeru beki da.",
+        "translation": "Walau begitu, usahanya patut diakui."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G007",
+    "pattern": "〜ならではの",
+    "romaji": "naradewa no",
+    "meaning": "khas hanya milik ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina + ならではの + Nomina",
+    "tags": [
+      "N1",
+      "Kekhasan",
+      "Pujian"
+    ],
+    "treeCategory": "Kekhasan",
+    "relatedGrammarIds": [],
+    "nuance": "Menonjolkan sesuatu yang hanya bisa dihasilkan/dimiliki oleh pihak tertentu. Bernada positif.",
+    "frequency": "Common",
+    "commonMistakes": [
+      "Hampir selalu positif (memuji keunikan).",
+      "Pola: A ならではの B = 'B yang hanya A bisa'."
+    ],
+    "explanation": "Dipakai untuk memuji ciri khas yang unik dan tak tertandingi dari suatu pihak.",
+    "usage": [
+      "この味は老舗ならではだ。",
+      "彼女ならではの発想に驚いた。"
+    ],
+    "examples": [
+      {
+        "japanese": "これはこの地方ならではの料理です。",
+        "romaji": "Kore wa kono chihou naradewa no ryouri desu.",
+        "translation": "Ini masakan khas yang hanya ada di daerah ini."
+      },
+      {
+        "japanese": "プロならではの丁寧な仕事ぶりだ。",
+        "romaji": "Puro naradewa no teinei na shigotoburi da.",
+        "translation": "Cara kerja yang rapi, khas seorang profesional."
+      },
+      {
+        "japanese": "子供ならではの素直な感想だった。",
+        "romaji": "Kodomo naradewa no sunao na kansou datta.",
+        "translation": "Kesan polos yang hanya keluar dari seorang anak."
+      },
+      {
+        "japanese": "この臨場感は生の舞台ならではだ。",
+        "romaji": "Kono rinjoukan wa nama no butai naradewa da.",
+        "translation": "Sensasi nyata ini hanya bisa didapat dari panggung langsung."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G008",
+    "pattern": "〜をおいて（ほかに）〜ない",
+    "romaji": "wo oite (hoka ni) ... nai",
+    "meaning": "tiada lain selain ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina + をおいて（ほかに）… ない",
+    "tags": [
+      "N1",
+      "Keunikan",
+      "Penekanan"
+    ],
+    "treeCategory": "Keunikan",
+    "relatedGrammarIds": [],
+    "nuance": "Menegaskan bahwa hanya pihak/hal itulah yang memenuhi syarat; tidak ada penggantinya.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Selalu berpasangan dengan bentuk negatif di akhir.",
+      "Bernada memuji: 'dialah satu-satunya'."
+    ],
+    "explanation": "Dipakai untuk menyatakan bahwa selain X, tidak ada yang lain yang cocok.",
+    "usage": [
+      "この仕事を任せられるのは君をおいてほかにいない。",
+      "適任者は彼をおいてない。"
+    ],
+    "examples": [
+      {
+        "japanese": "この役を演じられるのは彼女をおいてほかにいない。",
+        "romaji": "Kono yaku wo enjirareru no wa kanojo wo oite hoka ni inai.",
+        "translation": "Tiada lain yang bisa memerankan peran ini selain dia."
+      },
+      {
+        "japanese": "相談できる相手は君をおいてほかにいない。",
+        "romaji": "Soudan dekiru aite wa kimi wo oite hoka ni inai.",
+        "translation": "Tak ada orang lain untuk kuajak berunding selain kamu."
+      },
+      {
+        "japanese": "リーダーは彼をおいて考えられない。",
+        "romaji": "Riidaa wa kare wo oite kangaerarenai.",
+        "translation": "Pemimpinnya tak terbayangkan selain dia."
+      },
+      {
+        "japanese": "これほどの技術者は彼をおいてほかにいないだろう。",
+        "romaji": "Kore hodo no gijutsusha wa kare wo oite hoka ni inai darou.",
+        "translation": "Insinyur sehebat ini mungkin tiada duanya selain dia."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G009",
+    "pattern": "〜をものともせず（に）",
+    "romaji": "wo mono to mo sezu (ni)",
+    "meaning": "tanpa gentar menghadapi ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina + をものともせず（に）",
+    "tags": [
+      "N1",
+      "Ketegaran",
+      "Pujian"
+    ],
+    "treeCategory": "Ketegaran",
+    "relatedGrammarIds": [],
+    "nuance": "Menghadapi kesulitan tanpa gentar; bergerak maju seolah rintangan itu bukan apa-apa. Bernada memuji.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Subjek biasanya orang yang gigih; tidak dipakai untuk diri sendiri secara sombong.",
+      "Bedakan dari 〜をよそに (mengabaikan/cuek)."
+    ],
+    "explanation": "Menyatakan seseorang tidak menyerah menghadapi rintangan besar.",
+    "usage": [
+      "逆境をものともせず、彼は前進した。",
+      "批判をものともせず、計画を続けた。"
+    ],
+    "examples": [
+      {
+        "japanese": "彼は大けがをものともせず、試合に出場した。",
+        "romaji": "Kare wa ookega wo mono to mo sezu, shiai ni shutsujou shita.",
+        "translation": "Tanpa gentar oleh cedera parah, ia tetap tampil dalam pertandingan."
+      },
+      {
+        "japanese": "嵐をものともせず、船は港を目指した。",
+        "romaji": "Arashi wo mono to mo sezu, fune wa minato wo mezashita.",
+        "translation": "Tanpa gentar oleh badai, kapal itu menuju pelabuhan."
+      },
+      {
+        "japanese": "周囲の反対をものともせず、彼女は夢を追った。",
+        "romaji": "Shuui no hantai wo mono to mo sezu, kanojo wa yume wo otta.",
+        "translation": "Tanpa gentar oleh tentangan sekitar, ia mengejar mimpinya."
+      },
+      {
+        "japanese": "困難をものともせずに、彼らは工事を完成させた。",
+        "romaji": "Konnan wo mono to mo sezu ni, karera wa kouji wo kansei saseta.",
+        "translation": "Tanpa gentar oleh kesulitan, mereka menyelesaikan pembangunan itu."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G010",
+    "pattern": "〜をよそに",
+    "romaji": "wo yoso ni",
+    "meaning": "mengabaikan / tak peduli akan ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina + をよそに",
+    "tags": [
+      "N1",
+      "Pengabaian",
+      "Kritik"
+    ],
+    "treeCategory": "Pengabaian",
+    "relatedGrammarIds": [],
+    "nuance": "Bertindak seolah tak peduli pada sesuatu (kekhawatiran/tentangan orang lain). Sering bernada mengkritik.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Berbeda dari をものともせず (positif/tegar); をよそに cenderung negatif.",
+      "Objeknya sering perasaan/kepentingan pihak lain."
+    ],
+    "explanation": "Dipakai saat seseorang cuek terhadap kekhawatiran atau harapan orang lain.",
+    "usage": [
+      "親の心配をよそに、彼は旅に出た。",
+      "住民の反対をよそに、工事が始まった。"
+    ],
+    "examples": [
+      {
+        "japanese": "周囲の不安をよそに、彼は平然としていた。",
+        "romaji": "Shuui no fuan wo yoso ni, kare wa heizen to shite ita.",
+        "translation": "Mengabaikan kecemasan sekitar, ia tetap tenang."
+      },
+      {
+        "japanese": "世間の批判をよそに、会社は方針を変えなかった。",
+        "romaji": "Seken no hihan wo yoso ni, kaisha wa houshin wo kaenakatta.",
+        "translation": "Tak peduli kritik publik, perusahaan tak mengubah kebijakannya."
+      },
+      {
+        "japanese": "親の期待をよそに、彼は別の道を選んだ。",
+        "romaji": "Oya no kitai wo yoso ni, kare wa betsu no michi wo eranda.",
+        "translation": "Mengabaikan harapan orang tua, ia memilih jalan lain."
+      },
+      {
+        "japanese": "渋滞をよそに、電車はすいすいと進んだ。",
+        "romaji": "Juutai wo yoso ni, densha wa suisui to susunda.",
+        "translation": "Tak peduli kemacetan, kereta melaju lancar."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G011",
+    "pattern": "〜べく",
+    "romaji": "beku",
+    "meaning": "demi / untuk (dengan niat) ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Verb (kamus) + べく（する〜はすべく）",
+    "tags": [
+      "N1",
+      "Tujuan",
+      "Formal"
+    ],
+    "treeCategory": "Tujuan",
+    "relatedGrammarIds": [],
+    "nuance": "Menyatakan tujuan/niat dengan nada formal-kesusastraan. 'Untuk melakukan X, maka ...'.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Untuk する biasanya menjadi すべく (bukan するべく, walau keduanya dipakai).",
+      "Lebih kaku daripada ために."
+    ],
+    "explanation": "Dipakai untuk menyatakan maksud/tujuan dari suatu tindakan secara formal.",
+    "usage": [
+      "真相を確かめるべく、調査を開始した。",
+      "夢を実現すべく、彼は努力を重ねた。"
+    ],
+    "examples": [
+      {
+        "japanese": "問題を解決すべく、専門家が集まった。",
+        "romaji": "Mondai wo kaiketsu subeku, senmonka ga atsumatta.",
+        "translation": "Demi menyelesaikan masalah, para ahli berkumpul."
+      },
+      {
+        "japanese": "優勝すべく、チームは猛練習を続けた。",
+        "romaji": "Yuushou subeku, chiimu wa mourenshuu wo tsuzuketa.",
+        "translation": "Demi menjadi juara, tim terus berlatih keras."
+      },
+      {
+        "japanese": "借金を返すべく、彼は昼夜働いた。",
+        "romaji": "Shakkin wo kaesu beku, kare wa chuuya hataraita.",
+        "translation": "Demi melunasi utang, ia bekerja siang malam."
+      },
+      {
+        "japanese": "誤解を解くべく、彼女は手紙を書いた。",
+        "romaji": "Gokai wo toku beku, kanojo wa tegami wo kaita.",
+        "translation": "Demi menghapus salah paham, ia menulis surat."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G012",
+    "pattern": "〜ずにはおかない / 〜ないではおかない",
+    "romaji": "zu ni wa okanai / nai de wa okanai",
+    "meaning": "pasti akan (menimbulkan) ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Verb (nai-stem) + ずにはおかない",
+    "tags": [
+      "N1",
+      "Kepastian",
+      "Formal"
+    ],
+    "treeCategory": "Kepastian",
+    "relatedGrammarIds": [],
+    "nuance": "Menegaskan bahwa sesuatu pasti terjadi/dilakukan — baik karena dorongan alami maupun tekad kuat.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Sering untuk efek yang 'tak terelakkan' pada perasaan (感動させずにはおかない).",
+      "する → せずにはおかない."
+    ],
+    "explanation": "Menyatakan bahwa suatu akibat pasti muncul, tidak mungkin dibiarkan begitu saja.",
+    "usage": [
+      "この映画は観る者を感動させずにはおかない。",
+      "彼の発言は波紋を呼ばずにはおかないだろう。"
+    ],
+    "examples": [
+      {
+        "japanese": "その知らせは人々を驚かせずにはおかなかった。",
+        "romaji": "Sono shirase wa hitobito wo odorokasezu ni wa okanakatta.",
+        "translation": "Kabar itu pasti mengejutkan orang banyak."
+      },
+      {
+        "japanese": "不正は必ず明るみに出さずにはおかない。",
+        "romaji": "Fusei wa kanarazu akarumi ni dasazu ni wa okanai.",
+        "translation": "Kecurangan itu pasti akan diungkap ke publik."
+      },
+      {
+        "japanese": "この小説は読者を考えさせずにはおかない。",
+        "romaji": "Kono shousetsu wa dokusha wo kangaesasezu ni wa okanai.",
+        "translation": "Novel ini pasti membuat pembacanya berpikir."
+      },
+      {
+        "japanese": "その一言は彼を怒らせないではおかなかった。",
+        "romaji": "Sono hitokoto wa kare wo okorasenai de wa okanakatta.",
+        "translation": "Ucapan itu pasti membuatnya marah."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G013",
+    "pattern": "〜を禁じ得ない",
+    "romaji": "wo kinjienai",
+    "meaning": "tak bisa menahan (perasaan) ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina (perasaan) + を禁じ得ない",
+    "tags": [
+      "N1",
+      "Emosi",
+      "Formal"
+    ],
+    "treeCategory": "Emosi",
+    "relatedGrammarIds": [],
+    "nuance": "Ungkapan formal untuk perasaan yang muncul spontan dan tak tertahankan (marah, haru, heran).",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Objeknya kata benda emosi: 怒り・涙・同情・驚き dsb.",
+      "Nada tertulis/resmi, jarang di percakapan santai."
+    ],
+    "explanation": "Dipakai saat perasaan tertentu muncul begitu kuat sampai tidak bisa ditahan.",
+    "usage": [
+      "彼の境遇に同情を禁じ得ない。",
+      "その光景に涙を禁じ得なかった。"
+    ],
+    "examples": [
+      {
+        "japanese": "あまりの理不尽さに怒りを禁じ得ない。",
+        "romaji": "Amari no rifujinsa ni ikari wo kinjienai.",
+        "translation": "Aku tak bisa menahan amarah atas ketidakadilan yang keterlaluan itu."
+      },
+      {
+        "japanese": "被災地の様子に涙を禁じ得なかった。",
+        "romaji": "Hisaichi no yousu ni namida wo kinjienakatta.",
+        "translation": "Aku tak bisa menahan air mata melihat keadaan daerah bencana."
+      },
+      {
+        "japanese": "その結末には驚きを禁じ得なかった。",
+        "romaji": "Sono ketsumatsu ni wa odoroki wo kinjienakatta.",
+        "translation": "Aku tak bisa menahan keterkejutan atas akhir cerita itu."
+      },
+      {
+        "japanese": "彼の勇気ある行動に感動を禁じ得ない。",
+        "romaji": "Kare no yuuki aru koudou ni kandou wo kinjienai.",
+        "translation": "Aku tak bisa menahan haru atas tindakan beraninya."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G014",
+    "pattern": "〜の極み",
+    "romaji": "no kiwami",
+    "meaning": "puncak / sangat teramat ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina + の極み",
+    "tags": [
+      "N1",
+      "Tingkat ekstrem",
+      "Formal"
+    ],
+    "treeCategory": "Tingkat ekstrem",
+    "relatedGrammarIds": [],
+    "nuance": "Menyatakan kondisi/perasaan pada titik paling ekstrem. Nada formal, bisa positif atau negatif.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Objek berupa kata benda abstrak: 感激・贅沢・痛恨 dsb.",
+      "感激の極み = 'sangat terharu'; 痛恨の極み = 'sangat menyesal'."
+    ],
+    "explanation": "Dipakai untuk menekankan bahwa sesuatu berada pada tingkat tertinggi/paling ekstrem.",
+    "usage": [
+      "こんな賞をいただき、感激の極みです。",
+      "毎日外食とは、贅沢の極みだ。"
+    ],
+    "examples": [
+      {
+        "japanese": "優勝を逃したのは痛恨の極みだ。",
+        "romaji": "Yuushou wo nogashita no wa tsuukon no kiwami da.",
+        "translation": "Gagal juara adalah penyesalan yang teramat dalam."
+      },
+      {
+        "japanese": "お招きいただき光栄の極みです。",
+        "romaji": "Omaneki itadaki kouei no kiwami desu.",
+        "translation": "Merupakan kehormatan tertinggi bisa diundang."
+      },
+      {
+        "japanese": "準備不足で臨むとは、無謀の極みだ。",
+        "romaji": "Junbi busoku de nozomu to wa, mubou no kiwami da.",
+        "translation": "Maju tanpa persiapan cukup adalah kenekatan yang keterlaluan."
+      },
+      {
+        "japanese": "彼の対応は失礼の極みだった。",
+        "romaji": "Kare no taiou wa shitsurei no kiwami datta.",
+        "translation": "Tanggapannya sungguh tidak sopan sampai ke puncaknya."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G015",
+    "pattern": "〜極まりない / 〜極まる",
+    "romaji": "kiwamarinai / kiwamaru",
+    "meaning": "sangat ... tak terkira",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Na-adj (語幹) + 極まりない",
+    "tags": [
+      "N1",
+      "Tingkat ekstrem",
+      "Emosi"
+    ],
+    "treeCategory": "Tingkat ekstrem",
+    "relatedGrammarIds": [],
+    "nuance": "Menyatakan derajat yang sangat tinggi dari suatu sifat (biasanya negatif). 極まりない dan 極まる sama-sama 'amat sangat'.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Meski ada 〜ない, artinya tetap 'sangat' (bukan negasi).",
+      "Umumnya untuk sifat negatif: 危険・失礼・退屈 dsb."
+    ],
+    "explanation": "Dipakai untuk menekankan bahwa suatu sifat mencapai batas ekstrem.",
+    "usage": [
+      "彼の態度は失礼極まりない。",
+      "退屈極まる会議だった。"
+    ],
+    "examples": [
+      {
+        "japanese": "あの運転は危険極まりない。",
+        "romaji": "Ano unten wa kiken kiwamarinai.",
+        "translation": "Cara menyetir itu berbahaya luar biasa."
+      },
+      {
+        "japanese": "準備もせず来るとは、無責任極まりない。",
+        "romaji": "Junbi mo sezu kuru to wa, musekinin kiwamarinai.",
+        "translation": "Datang tanpa persiapan sama sekali, sungguh tidak bertanggung jawab."
+      },
+      {
+        "japanese": "その光景は感動極まるものだった。",
+        "romaji": "Sono koukei wa kandou kiwamaru mono datta.",
+        "translation": "Pemandangan itu sungguh mengharukan tak terkira."
+      },
+      {
+        "japanese": "彼の言い分は身勝手極まりない。",
+        "romaji": "Kare no iibun wa migatte kiwamarinai.",
+        "translation": "Alasannya egois luar biasa."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G016",
+    "pattern": "〜に至るまで",
+    "romaji": "ni itaru made",
+    "meaning": "sampai (bahkan hingga) ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina + に至るまで",
+    "tags": [
+      "N1",
+      "Cakupan",
+      "Penekanan"
+    ],
+    "treeCategory": "Cakupan",
+    "relatedGrammarIds": [],
+    "nuance": "Menekankan rentang yang sangat luas — 'dari A sampai bahkan B yang tak terduga'.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Sering berpasangan: 〜から〜に至るまで.",
+      "Menonjolkan hal ekstrem/detail terkecil yang ikut tercakup."
+    ],
+    "explanation": "Dipakai untuk menegaskan cakupan yang menyeluruh hingga hal-hal detail sekalipun.",
+    "usage": [
+      "服装から髪型に至るまで、細かく指導された。",
+      "子供から大人に至るまで人気がある。"
+    ],
+    "examples": [
+      {
+        "japanese": "家具から食器に至るまで、すべて手作りだ。",
+        "romaji": "Kagu kara shokki ni itaru made, subete tezukuri da.",
+        "translation": "Dari perabot sampai peralatan makan, semuanya buatan tangan."
+      },
+      {
+        "japanese": "彼は歴史から経済に至るまで博識だ。",
+        "romaji": "Kare wa rekishi kara keizai ni itaru made hakushiki da.",
+        "translation": "Ia berpengetahuan luas, dari sejarah sampai ekonomi."
+      },
+      {
+        "japanese": "細部に至るまで丁寧に作られている。",
+        "romaji": "Saibu ni itaru made teinei ni tsukurarete iru.",
+        "translation": "Dibuat dengan teliti sampai ke detail terkecil."
+      },
+      {
+        "japanese": "経緯から結末に至るまで、すべて説明した。",
+        "romaji": "Keii kara ketsumatsu ni itaru made, subete setsumei shita.",
+        "translation": "Ia menjelaskan semuanya, dari latar belakang sampai akhir cerita."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G017",
+    "pattern": "〜に至っては",
+    "romaji": "ni itatte wa",
+    "meaning": "kalau soal ... (yang paling parah)",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina + に至っては",
+    "tags": [
+      "N1",
+      "Penekanan",
+      "Kritik"
+    ],
+    "treeCategory": "Penekanan",
+    "relatedGrammarIds": [],
+    "nuance": "Mengangkat satu contoh paling ekstrem/parah dari sederet hal. Sering bernada negatif/keluhan.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Menyoroti kasus terburuk di antara beberapa.",
+      "Bedakan dari に至るまで (cakupan luas) — ini menonjolkan satu kasus ekstrem."
+    ],
+    "explanation": "Dipakai untuk menunjuk contoh paling menonjol (biasanya buruk) sebagai penekanan.",
+    "usage": [
+      "成績が下がった。数学に至っては赤点だ。",
+      "皆遅刻したが、彼に至っては欠席だった。"
+    ],
+    "examples": [
+      {
+        "japanese": "みんな疲れていた。彼に至っては立てないほどだった。",
+        "romaji": "Minna tsukarete ita. Kare ni itatte wa tatenai hodo datta.",
+        "translation": "Semua kelelahan; bahkan dia sampai tak sanggup berdiri."
+      },
+      {
+        "japanese": "物価が上がり、野菜に至っては倍の値段だ。",
+        "romaji": "Bukka ga agari, yasai ni itatte wa bai no nedan da.",
+        "translation": "Harga naik; kalau sayuran malah jadi dua kali lipat."
+      },
+      {
+        "japanese": "彼らは非協力的で、部長に至っては会議にも来ない。",
+        "romaji": "Karera wa hikyouryokuteki de, buchou ni itatte wa kaigi ni mo konai.",
+        "translation": "Mereka tidak kooperatif; bahkan kepala bagian pun tak datang rapat."
+      },
+      {
+        "japanese": "準備が遅れ、資料に至ってはまだ白紙だ。",
+        "romaji": "Junbi ga okure, shiryou ni itatte wa mada hakushi da.",
+        "translation": "Persiapan terlambat; bahkan dokumennya pun masih kosong."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G018",
+    "pattern": "〜すら",
+    "romaji": "sura",
+    "meaning": "bahkan ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina (+助詞) + すら",
+    "tags": [
+      "N1",
+      "Penekanan",
+      "Ekstrem"
+    ],
+    "treeCategory": "Penekanan",
+    "relatedGrammarIds": [],
+    "nuance": "Mengangkat contoh ekstrem untuk menyiratkan 'apalagi yang lain'. Setara でも tapi lebih tegas/tertulis.",
+    "frequency": "Common",
+    "commonMistakes": [
+      "Sering dengan negatif: 'bahkan X pun tidak ...'.",
+      "Untuk subjek sering ですら/ですら."
+    ],
+    "explanation": "Dipakai untuk menekankan hal yang paling dasar sekalipun, guna menyiratkan sisanya.",
+    "usage": [
+      "忙しくて、食事する時間すらない。",
+      "専門家ですら答えられない問題だ。"
+    ],
+    "examples": [
+      {
+        "japanese": "疲れて、立っていることすら難しかった。",
+        "romaji": "Tsukarete, tatte iru koto sura muzukashikatta.",
+        "translation": "Saking lelahnya, berdiri saja pun susah."
+      },
+      {
+        "japanese": "彼は自分の名前すら書けなかった。",
+        "romaji": "Kare wa jibun no namae sura kakenakatta.",
+        "translation": "Bahkan menulis namanya sendiri pun ia tak bisa."
+      },
+      {
+        "japanese": "そんなことは子供ですら知っている。",
+        "romaji": "Sonna koto wa kodomo de sura shitte iru.",
+        "translation": "Hal seperti itu bahkan anak kecil pun tahu."
+      },
+      {
+        "japanese": "忙しくて水を飲む暇すらない。",
+        "romaji": "Isogashikute mizu wo nomu hima sura nai.",
+        "translation": "Sibuk sampai waktu untuk minum air saja tak ada."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G019",
+    "pattern": "〜あっての",
+    "romaji": "atte no",
+    "meaning": "(ada) berkat adanya ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina + あっての + Nomina",
+    "tags": [
+      "N1",
+      "Syarat",
+      "Ketergantungan"
+    ],
+    "treeCategory": "Syarat",
+    "relatedGrammarIds": [],
+    "nuance": "Menegaskan bahwa B ada/berarti hanya karena adanya A. 'Tanpa A, tak ada B'.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Pola: A あっての B = 'B yang bergantung sepenuhnya pada A'.",
+      "Sering untuk menekankan pentingnya A."
+    ],
+    "explanation": "Dipakai untuk menyatakan bahwa sesuatu hanya bisa terwujud karena keberadaan hal lain.",
+    "usage": [
+      "お客様あっての商売だ。",
+      "命あっての物種。"
+    ],
+    "examples": [
+      {
+        "japanese": "読者あっての作家だと、彼はいつも言う。",
+        "romaji": "Dokusha atte no sakka da to, kare wa itsumo iu.",
+        "translation": "Ia selalu bilang, penulis ada berkat adanya pembaca."
+      },
+      {
+        "japanese": "努力あっての成功であり、運だけではない。",
+        "romaji": "Doryoku atte no seikou de ari, un dake de wa nai.",
+        "translation": "Kesuksesan itu berkat usaha, bukan sekadar keberuntungan."
+      },
+      {
+        "japanese": "健康あっての仕事だから、無理はしないで。",
+        "romaji": "Kenkou atte no shigoto da kara, muri wa shinaide.",
+        "translation": "Pekerjaan ada berkat kesehatan, jadi jangan memaksakan diri."
+      },
+      {
+        "japanese": "支えてくれる家族あっての今の私です。",
+        "romaji": "Sasaete kureru kazoku atte no ima no watashi desu.",
+        "translation": "Diriku yang sekarang ada berkat keluarga yang mendukungku."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G020",
+    "pattern": "〜が最後 / 〜たら最後",
+    "romaji": "ga saigo / tara saigo",
+    "meaning": "sekali ... maka (habislah)",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Verb (ta-form) + が最後 / たら最後",
+    "tags": [
+      "N1",
+      "Konsekuensi",
+      "Peringatan"
+    ],
+    "treeCategory": "Konsekuensi",
+    "relatedGrammarIds": [],
+    "nuance": "Sekali suatu tindakan dilakukan, akibat buruk yang tak terhindarkan pasti menyusul.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Klausa akhir berupa akibat negatif/tak terelakkan.",
+      "たら最後 lebih umum di percakapan."
+    ],
+    "explanation": "Dipakai untuk memperingatkan bahwa begitu X terjadi, tak ada jalan mundur.",
+    "usage": [
+      "彼は寝たが最後、朝まで起きない。",
+      "この道に入ったら最後、後戻りはできない。"
+    ],
+    "examples": [
+      {
+        "japanese": "あの人に貸したが最後、二度と返ってこない。",
+        "romaji": "Ano hito ni kashita ga saigo, nido to kaette konai.",
+        "translation": "Sekali dipinjamkan pada orang itu, takkan pernah kembali."
+      },
+      {
+        "japanese": "秘密を話したら最後、すぐ広まってしまう。",
+        "romaji": "Himitsu wo hanashitara saigo, sugu hiromatte shimau.",
+        "translation": "Sekali rahasia diceritakan, langsung tersebar."
+      },
+      {
+        "japanese": "彼はしゃべり出したが最後、止まらない。",
+        "romaji": "Kare wa shaberidashita ga saigo, tomaranai.",
+        "translation": "Sekali dia mulai bicara, tak bisa berhenti."
+      },
+      {
+        "japanese": "怒らせたら最後、口をきいてくれない。",
+        "romaji": "Okorasetara saigo, kuchi wo kiite kurenai.",
+        "translation": "Sekali dibuat marah, dia takkan mau bicara lagi."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G021",
+    "pattern": "〜ではあるまいし / 〜じゃあるまいし",
+    "romaji": "de wa arumai shi / ja arumai shi",
+    "meaning": "kan bukan ... (jadi seharusnya)",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina / Verb (普通形)の + ではあるまいし",
+    "tags": [
+      "N1",
+      "Alasan",
+      "Teguran"
+    ],
+    "treeCategory": "Alasan",
+    "relatedGrammarIds": [],
+    "nuance": "Menyampaikan alasan dengan nada menegur: 'kan bukan X, jadi mestinya begini'.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Nada percakapan, agak menegur/menyindir.",
+      "Klausa akhir biasanya nasihat/kritik."
+    ],
+    "explanation": "Dipakai untuk menyanggah dengan menyatakan bahwa premisnya jelas tidak benar.",
+    "usage": [
+      "子供じゃあるまいし、それくらい自分でやりなさい。",
+      "神様ではあるまいし、未来は分からない。"
+    ],
+    "examples": [
+      {
+        "japanese": "初めてじゃあるまいし、そんなに緊張しないで。",
+        "romaji": "Hajimete ja arumai shi, sonna ni kinchou shinaide.",
+        "translation": "Kan bukan pertama kali, jangan segugup itu."
+      },
+      {
+        "japanese": "学生ではあるまいし、時間くらい守るべきだ。",
+        "romaji": "Gakusei de wa arumai shi, jikan kurai mamoru beki da.",
+        "translation": "Kan bukan pelajar lagi, setidaknya tepat waktu itu wajib."
+      },
+      {
+        "japanese": "遠くへ行くのじゃあるまいし、大きな荷物はいらない。",
+        "romaji": "Tooku e iku no ja arumai shi, ooki na nimotsu wa iranai.",
+        "translation": "Kan bukan mau pergi jauh, tak perlu bawa barang besar."
+      },
+      {
+        "japanese": "プロじゃあるまいし、完璧を求めすぎだ。",
+        "romaji": "Puro ja arumai shi, kanpeki wo motomesugi da.",
+        "translation": "Kan bukan profesional, terlalu menuntut kesempurnaan."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G022",
+    "pattern": "〜とあって",
+    "romaji": "to atte",
+    "meaning": "karena (situasi khusus) ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina / Verb・adj (普通形) + とあって",
+    "tags": [
+      "N1",
+      "Sebab",
+      "Situasional"
+    ],
+    "treeCategory": "Sebab",
+    "relatedGrammarIds": [],
+    "nuance": "Menyatakan sebab dari situasi khusus yang memicu reaksi wajar. Nada pelaporan/tertulis.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Akibatnya reaksi yang 'masuk akal' untuk situasi itu.",
+      "Sering di berita: 連休とあって、… ."
+    ],
+    "explanation": "Dipakai untuk menghubungkan situasi khusus dengan akibat yang sepadan.",
+    "usage": [
+      "久しぶりの晴天とあって、公園は家族連れでにぎわった。",
+      "有名店とあって、行列ができていた。"
+    ],
+    "examples": [
+      {
+        "japanese": "大型連休とあって、空港は大混雑だった。",
+        "romaji": "Oogata renkyuu to atte, kuukou wa daikonzatsu datta.",
+        "translation": "Karena libur panjang, bandara sangat padat."
+      },
+      {
+        "japanese": "優勝がかかった試合とあって、観客は熱狂した。",
+        "romaji": "Yuushou ga kakatta shiai to atte, kankyaku wa nekkyou shita.",
+        "translation": "Karena laga penentu juara, penonton sangat antusias."
+      },
+      {
+        "japanese": "無料公開とあって、多くの人が集まった。",
+        "romaji": "Muryou koukai to atte, ooku no hito ga atsumatta.",
+        "translation": "Karena dibuka gratis, banyak orang berdatangan."
+      },
+      {
+        "japanese": "初の来日公演とあって、チケットは即完売した。",
+        "romaji": "Hatsu no rainichi kouen to atte, chiketto wa soku kanbai shita.",
+        "translation": "Karena konser pertama di Jepang, tiket langsung ludes."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G023",
+    "pattern": "〜かたわら",
+    "romaji": "katawara",
+    "meaning": "sambil (di samping kegiatan utama) ...",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Verb (kamus) / Nomina の + かたわら",
+    "tags": [
+      "N1",
+      "Kesertaan",
+      "Formal"
+    ],
+    "treeCategory": "Kesertaan",
+    "relatedGrammarIds": [],
+    "nuance": "Melakukan kegiatan sampingan di samping kegiatan/peran utama. Nada formal-tertulis.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Kegiatan utama + かたわら + kegiatan sampingan yang berlangsung lama.",
+      "Bedakan dari ながら (dua aksi bersamaan seketika)."
+    ],
+    "explanation": "Dipakai untuk kegiatan sampingan yang dijalani berdampingan dengan kesibukan utama.",
+    "usage": [
+      "彼は会社勤めのかたわら、小説を書いている。",
+      "教師をするかたわら、ボランティアも続けた。"
+    ],
+    "examples": [
+      {
+        "japanese": "彼女は子育てのかたわら、翻訳の仕事をしている。",
+        "romaji": "Kanojo wa kosodate no katawara, honyaku no shigoto wo shite iru.",
+        "translation": "Di samping mengurus anak, ia bekerja sebagai penerjemah."
+      },
+      {
+        "japanese": "農業のかたわら、民宿を営んでいる。",
+        "romaji": "Nougyou no katawara, minshuku wo itonande iru.",
+        "translation": "Di samping bertani, ia mengelola penginapan."
+      },
+      {
+        "japanese": "研究のかたわら、後進の指導にも当たっている。",
+        "romaji": "Kenkyuu no katawara, koushin no shidou ni mo atatte iru.",
+        "translation": "Di samping meneliti, ia juga membimbing juniornya."
+      },
+      {
+        "japanese": "働くかたわら、夜間大学に通った。",
+        "romaji": "Hataraku katawara, yakan daigaku ni kayotta.",
+        "translation": "Sambil bekerja, ia kuliah malam."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G024",
+    "pattern": "〜ながらに（して）",
+    "romaji": "nagara ni (shite)",
+    "meaning": "dalam keadaan ... (tanpa berubah)",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Nomina / Verb (masu-stem) + ながらに(して)",
+    "tags": [
+      "N1",
+      "Keadaan",
+      "Formal"
+    ],
+    "treeCategory": "Keadaan",
+    "relatedGrammarIds": [],
+    "nuance": "Menyatakan keadaan yang tetap/alami sejak awal. Sering pada ungkapan tetap: 生まれながらに, 涙ながらに.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Banyak dipakai sebagai frasa tetap; tidak seproduktif pola lain.",
+      "居ながらにして = 'sambil tetap di tempat'."
+    ],
+    "explanation": "Dipakai untuk keadaan yang berlangsung tanpa berubah atau sejak lahir.",
+    "usage": [
+      "彼女は生まれながらに才能を持っていた。",
+      "涙ながらに事情を語った。"
+    ],
+    "examples": [
+      {
+        "japanese": "彼は生まれながらにしてリーダーの素質があった。",
+        "romaji": "Kare wa umarenagara ni shite riidaa no soshitsu ga atta.",
+        "translation": "Ia memiliki bakat pemimpin sejak lahir."
+      },
+      {
+        "japanese": "被害者は涙ながらに当時の状況を話した。",
+        "romaji": "Higaisha wa namida nagara ni touji no joukyou wo hanashita.",
+        "translation": "Korban menceritakan keadaan saat itu sambil menangis."
+      },
+      {
+        "japanese": "今は家に居ながらにして買い物ができる。",
+        "romaji": "Ima wa ie ni inagara ni shite kaimono ga dekiru.",
+        "translation": "Sekarang kita bisa berbelanja sambil tetap di rumah."
+      },
+      {
+        "japanese": "昔ながらの製法を守り続けている。",
+        "romaji": "Mukashi nagara no seihou wo mamoritsuzukete iru.",
+        "translation": "Mereka terus mempertahankan metode pembuatan yang sama sejak dulu."
+      }
+    ],
+    "bunpouPersamaan": []
+  },
+  {
+    "id": "N1_G025",
+    "pattern": "〜には当たらない",
+    "romaji": "ni wa ataranai",
+    "meaning": "tak perlu sampai (bereaksi begitu)",
+    "level": "N1",
+    "difficulty": 5,
+    "structure": "Verb (kamus) / Nomina + には当たらない",
+    "tags": [
+      "N1",
+      "Penilaian",
+      "Ketidakperluan"
+    ],
+    "treeCategory": "Penilaian",
+    "relatedGrammarIds": [],
+    "nuance": "Menyatakan bahwa suatu reaksi (kaget, memuji, marah) tidak sepadan/tidak perlu berlebihan.",
+    "frequency": "Uncommon",
+    "commonMistakes": [
+      "Objek sering kata kerja reaksi: 驚く・褒める・非難する.",
+      "Menenangkan: 'tak usah sampai segitunya'."
+    ],
+    "explanation": "Dipakai untuk meredam reaksi berlebihan karena hal itu tak seberapa/wajar.",
+    "usage": [
+      "その程度のミスは、非難するには当たらない。",
+      "彼が合格したのは驚くには当たらない。"
+    ],
+    "examples": [
+      {
+        "japanese": "努力の結果だから、褒めるには当たらない、当然だ。",
+        "romaji": "Doryoku no kekka da kara, homeru ni wa ataranai, touzen da.",
+        "translation": "Itu buah kerja keras, tak perlu dipuji berlebihan, sudah sewajarnya."
+      },
+      {
+        "japanese": "誰にでもある失敗で、気にするには当たらない。",
+        "romaji": "Dare ni demo aru shippai de, ki ni suru ni wa ataranai.",
+        "translation": "Kesalahan yang bisa dialami siapa saja, tak perlu terlalu dipikirkan."
+      },
+      {
+        "japanese": "予想通りの結果で、落胆するには当たらない。",
+        "romaji": "Yosou doori no kekka de, rakutan suru ni wa ataranai.",
+        "translation": "Hasil sesuai perkiraan, tak perlu sampai kecewa."
+      },
+      {
+        "japanese": "彼の遅刻は毎度のことで、驚くには当たらない。",
+        "romaji": "Kare no chikoku wa maido no koto de, odoroku ni wa ataranai.",
+        "translation": "Keterlambatannya sudah biasa, tak perlu heran."
+      }
+    ],
+    "bunpouPersamaan": []
+  }
+]
