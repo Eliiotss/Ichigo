@@ -9,6 +9,7 @@ import com.ichigo.app.data.local.entity.KanaCountEntity
 import com.ichigo.app.data.local.entity.NewCardDayCount
 import com.ichigo.app.data.local.entity.NewCardTodayEntity
 import com.ichigo.app.data.local.entity.ProgressEntity
+import com.ichigo.app.data.local.entity.QuizResultEntity
 import com.ichigo.app.data.local.entity.ReviewLogEntity
 import kotlinx.coroutines.flow.Flow
 
@@ -94,4 +95,21 @@ interface NewCardTodayDao {
 
     @Query("SELECT * FROM new_card_today")
     suspend fun getAll(): List<NewCardTodayEntity>
+}
+
+/** Per-word progress for the Vocab multiple-choice quiz (separate from FSRS). */
+@Dao
+interface QuizResultDao {
+    @Query("SELECT * FROM quiz_result")
+    suspend fun getAll(): List<QuizResultEntity>
+
+    @Query("SELECT * FROM quiz_result WHERE wordId = :wordId")
+    suspend fun get(wordId: String): QuizResultEntity?
+
+    @Upsert
+    suspend fun upsert(entity: QuizResultEntity)
+
+    /** Cleared by "Reset Semua Progress" alongside the FSRS tables. */
+    @Query("DELETE FROM quiz_result")
+    suspend fun deleteAll()
 }

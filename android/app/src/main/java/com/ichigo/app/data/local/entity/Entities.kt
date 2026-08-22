@@ -92,3 +92,18 @@ data class NewCardDayCount(
     val levelKey: String,
     val total: Int,
 )
+
+/**
+ * Per-word progress for the **Vocab multiple-choice quiz** — deliberately kept
+ * SEPARATE from the FSRS `progress` table so the quiz never touches spaced
+ * repetition, streaks or mastery. [score] drives the adaptive "focus on wrong"
+ * selection: a correct answer raises it (`max(score,0)+1`), a wrong answer sets
+ * it to `-1` ("needs review"); a word counts as quiz-mastered at
+ * `score >= MASTERED_THRESHOLD`. Added in DB version 2 (see Migration 1→2).
+ */
+@Entity(tableName = "quiz_result")
+data class QuizResultEntity(
+    @PrimaryKey val wordId: String,
+    val score: Int,
+    val lastAnswered: Long,
+)

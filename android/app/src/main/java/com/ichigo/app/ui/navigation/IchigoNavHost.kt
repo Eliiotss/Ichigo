@@ -56,6 +56,8 @@ import com.ichigo.app.ui.browse.VocabListScreen
 import com.ichigo.app.ui.flashcard.FlashcardLevelScreen
 import com.ichigo.app.ui.flashcard.FlashcardModeScreen
 import com.ichigo.app.ui.flashcard.FlashcardSessionScreen
+import com.ichigo.app.ui.vocabquiz.VocabQuizLevelScreen
+import com.ichigo.app.ui.vocabquiz.VocabQuizSessionScreen
 import com.ichigo.app.ui.hiragana.HiraganaScreen
 import com.ichigo.app.ui.hiragana.KanaFlashcardScreen
 import com.ichigo.app.ui.home.HomeScreen
@@ -210,9 +212,11 @@ private fun HomeNavHost(nav: NavHostController, onOpenProfile: () -> Unit) {
 
         // Flashcard
         composable(Routes.FLASHCARD) {
-            FlashcardModeScreen(onBack = { nav.popBackStack() }) { mode ->
-                nav.navigate(Routes.flashcardLevel(mode.raw))
-            }
+            FlashcardModeScreen(
+                onBack = { nav.popBackStack() },
+                onOpenMode = { mode -> nav.navigate(Routes.flashcardLevel(mode.raw)) },
+                onOpenQuiz = { nav.navigate(Routes.VOCAB_QUIZ) },
+            )
         }
         composable(Routes.FLASHCARD_LEVEL) {
             FlashcardLevelScreen(
@@ -221,6 +225,14 @@ private fun HomeNavHost(nav: NavHostController, onOpenProfile: () -> Unit) {
             )
         }
         composable(Routes.FLASHCARD_SESSION) { FlashcardSessionScreen(onBack = { nav.popBackStack() }) }
+
+        // Vocab multiple-choice quiz (standalone, separate from FSRS)
+        composable(Routes.VOCAB_QUIZ) {
+            VocabQuizLevelScreen(onBack = { nav.popBackStack() }) { level ->
+                nav.navigate(Routes.vocabQuizSession(level.id, level.jsonFile))
+            }
+        }
+        composable(Routes.VOCAB_QUIZ_SESSION) { VocabQuizSessionScreen(onBack = { nav.popBackStack() }) }
 
         // Hiragana / kana
         composable(Routes.HIRAGANA) {

@@ -23,6 +23,7 @@ import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.Quiz
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -58,7 +59,11 @@ private fun modeIcon(mode: FlashcardMode): ImageVector =
 
 /** Port of `FlashcardTypeSelectionView` — the mode picker. */
 @Composable
-fun FlashcardModeScreen(onBack: () -> Unit, onOpenMode: (FlashcardMode) -> Unit) {
+fun FlashcardModeScreen(
+    onBack: () -> Unit,
+    onOpenMode: (FlashcardMode) -> Unit,
+    onOpenQuiz: () -> Unit,
+) {
     val c = IchigoTheme.colors
     LargeScreen(title = "Flashcard", onBack = onBack) {
         Column(
@@ -70,6 +75,9 @@ fun FlashcardModeScreen(onBack: () -> Unit, onOpenMode: (FlashcardMode) -> Unit)
                     ModeCard(mode, Modifier.weight(1f)) { onOpenMode(mode) }
                 }
             }
+            // Standalone multiple-choice quiz for vocab (kanji → reading), separate
+            // from the FSRS decks above.
+            QuizModeCard(onClick = onOpenQuiz)
             Row(
                 Modifier.fillMaxWidth().clip(RoundedCornerShape(20.dp)).background(c.softTint(IchigoPalette.Accent)).padding(16.dp),
                 verticalAlignment = Alignment.Top,
@@ -125,6 +133,31 @@ private fun ModeCard(mode: FlashcardMode, modifier: Modifier, onClick: () -> Uni
         Text(mode.title, style = rounded(16, Wt.Bold), color = c.primaryText)
         Spacer(Modifier.height(3.dp))
         Text(mode.subtitle, style = rounded(12, Wt.Medium), color = c.secondaryText, textAlign = TextAlign.Center)
+    }
+}
+
+/** Full-width entry to the standalone Vocab multiple-choice quiz. */
+@Composable
+private fun QuizModeCard(onClick: () -> Unit) {
+    val c = IchigoTheme.colors
+    val grad = listOf(IchigoPalette.Teal, IchigoPalette.TealDeep)
+    Row(
+        Modifier.fillMaxWidth().ichigoCard(c.surface, c.cardShadow).clickable(onClick = onClick).padding(vertical = 16.dp, horizontal = 16.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Box(
+            Modifier.size(48.dp).softShadow(grad[1].copy(alpha = 0.34f), 9.dp, 15.dp, offsetY = 5.dp).clip(RoundedCornerShape(15.dp)).background(Brush.linearGradient(grad)),
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(Icons.Filled.Quiz, null, tint = Color.White, modifier = Modifier.size(24.dp))
+        }
+        Spacer(Modifier.width(14.dp))
+        Column(Modifier.weight(1f)) {
+            Text("Kuis Vocab", style = rounded(16, Wt.Bold), color = c.primaryText)
+            Spacer(Modifier.height(2.dp))
+            Text("Pilihan ganda: tebak bacaan kanji", style = rounded(12, Wt.Medium), color = c.secondaryText)
+        }
+        Icon(Icons.Filled.ChevronRight, null, tint = c.secondaryText, modifier = Modifier.size(22.dp))
     }
 }
 

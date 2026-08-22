@@ -15,6 +15,7 @@ import com.ichigo.app.data.flashcard.flashcardLevelKey
 import com.ichigo.app.data.local.AppPreferences
 import com.ichigo.app.data.local.dao.NewCardTodayDao
 import com.ichigo.app.data.local.dao.ProgressDao
+import com.ichigo.app.data.local.dao.QuizResultDao
 import com.ichigo.app.data.local.dao.ReviewLogDao
 import com.ichigo.app.data.local.entity.NewCardTodayEntity
 import com.ichigo.app.data.local.entity.ProgressEntity
@@ -52,6 +53,7 @@ class FlashcardRepository @Inject constructor(
     private val progressDao: ProgressDao,
     private val reviewLogDao: ReviewLogDao,
     private val newCardTodayDao: NewCardTodayDao,
+    private val quizResultDao: QuizResultDao,
     private val prefs: AppPreferences,
     private val loader: ResourceLoader,
 ) {
@@ -299,6 +301,7 @@ class FlashcardRepository @Inject constructor(
         progressDao.deleteAll()
         reviewLogDao.deleteAll()
         newCardTodayDao.deleteAll()      // "kartu belajar" today → 0
+        quizResultDao.deleteAll()        // skor Kuis Vocab → 0
         prefs.resetStudyScalars()        // streak → 0
         prefs.clearAnalytics()           // Ringkasan Jawaban → 0
         prefs.clearDailyStudy()          // grafik 7 hari → kosong

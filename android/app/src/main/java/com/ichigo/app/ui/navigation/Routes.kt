@@ -30,6 +30,8 @@ object Routes {
 
     const val FLASHCARD_LEVEL = "flashcard/level/{mode}"
     const val FLASHCARD_SESSION = "flashcard/session/{mode}/{levelId}/{jsonFile}"
+    const val VOCAB_QUIZ = "vocabquiz"
+    const val VOCAB_QUIZ_SESSION = "vocabquiz/session/{levelId}/{jsonFile}"
     const val KANA_FLASHCARD = "hiragana/flashcard/{isKatakana}"
     const val COMING_SOON = "coming/{feature}"
 
@@ -40,6 +42,7 @@ object Routes {
     fun grammarDetail(jsonFile: String, levelId: String, itemId: String) = "grammar/detail/$jsonFile/$levelId/$itemId"
     fun flashcardLevel(mode: String) = "flashcard/level/$mode"
     fun flashcardSession(mode: String, levelId: String, jsonFile: String) = "flashcard/session/$mode/$levelId/$jsonFile"
+    fun vocabQuizSession(levelId: String, jsonFile: String) = "vocabquiz/session/$levelId/$jsonFile"
     fun kanaFlashcard(isKatakana: Boolean) = "hiragana/flashcard/$isKatakana"
     fun comingSoon(feature: String) = "coming/$feature"
 

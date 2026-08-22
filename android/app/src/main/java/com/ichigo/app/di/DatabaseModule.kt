@@ -6,6 +6,7 @@ import com.ichigo.app.data.local.IchigoDatabase
 import com.ichigo.app.data.local.dao.KanaCountDao
 import com.ichigo.app.data.local.dao.NewCardTodayDao
 import com.ichigo.app.data.local.dao.ProgressDao
+import com.ichigo.app.data.local.dao.QuizResultDao
 import com.ichigo.app.data.local.dao.ReviewLogDao
 import dagger.Module
 import dagger.Provides
@@ -23,15 +24,15 @@ object DatabaseModule {
     @Singleton
     fun provideDatabase(@ApplicationContext context: Context): IchigoDatabase =
         Room.databaseBuilder(context, IchigoDatabase::class.java, IchigoDatabase.NAME)
-            // NO destructive fallback on upgrade. `fallbackToDestructiveMigration()`
-            // used to be here: the first time the schema version was raised it
-            // would have silently wiped every card's FSRS progress. A future
-            // schema change must ship an explicit Migration and be registered
-            // with `.addMigrations(...)`; if one is missing the build/open fails
-            // loudly instead of destroying the user's data.
+            // Explicit, non-destructive migrations only. `fallbackToDestructive
+            // Migration()` used to be here: the first time the schema version was
+            // raised it would have silently wiped every card's FSRS progress.
+            // Each version bump ships a Migration registered here; if one is
+            // missing the open fails loudly instead of destroying the user's data.
             //
             // Downgrade (a DB newer than the app, e.g. after installing an older
             // APK) stays destructive — the alternative is a crash on every launch.
+            .addMigrations(IchigoDatabase.MIGRATION_1_2)
             .fallbackToDestructiveMigrationOnDowngrade()
             .build()
 
@@ -39,4 +40,5 @@ object DatabaseModule {
     @Provides fun provideReviewLogDao(db: IchigoDatabase): ReviewLogDao = db.reviewLogDao()
     @Provides fun provideKanaCountDao(db: IchigoDatabase): KanaCountDao = db.kanaCountDao()
     @Provides fun provideNewCardTodayDao(db: IchigoDatabase): NewCardTodayDao = db.newCardTodayDao()
+    @Provides fun provideQuizResultDao(db: IchigoDatabase): QuizResultDao = db.quizResultDao()
 }
